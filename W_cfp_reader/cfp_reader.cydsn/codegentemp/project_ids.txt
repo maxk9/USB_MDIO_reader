@@ -1,0 +1,7 @@
+D:\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\cfp_reader.cyprj|050e8e4f-03eb-46d3-b70f-18343687d65d
+D:\pgm\Cypress MDIO\host MDIO AN83902\Firmware\MDIO_Host_v1_00.cylib\MDIO_Host_v1_00.cyprj|1f6baad4-47d1-4220-8159-47dc72aac0b2
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|0057d393-fea6-4052-a167-0480f22d1c80
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|8b9605ea-f837-4ea0-a96e-143a68e371ae
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|22abc01e-c8f4-46be-8277-108e71ee4cbd
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|6a53023a-7127-4698-b9a1-380f2c77da89
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|272a7a21-5973-4cb5-a692-52377b620fd6

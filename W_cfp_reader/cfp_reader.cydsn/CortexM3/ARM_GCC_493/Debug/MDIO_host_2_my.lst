@@ -1,0 +1,2322 @@
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"MDIO_host_2_my.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.MDIO_host_2_Stop,"ax",%progbits
+  19              		.align	2
+  20              		.global	MDIO_host_2_Stop
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	MDIO_host_2_Stop, %function
+  24              	MDIO_host_2_Stop:
+  25              	.LFB64:
+  26              		.file 1 "Generated_Source\\PSoC5\\MDIO_host_2_my.c"
+   1:Generated_Source\PSoC5/MDIO_host_2_my.c **** /* ========================================
+   2:Generated_Source\PSoC5/MDIO_host_2_my.c ****  *
+   3:Generated_Source\PSoC5/MDIO_host_2_my.c ****  * Copyright FiberTreid, 2017
+   4:Generated_Source\PSoC5/MDIO_host_2_my.c ****  * All Rights Reserved
+   5:Generated_Source\PSoC5/MDIO_host_2_my.c ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:Generated_Source\PSoC5/MDIO_host_2_my.c ****  *
+   7:Generated_Source\PSoC5/MDIO_host_2_my.c ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:Generated_Source\PSoC5/MDIO_host_2_my.c ****  * WHICH IS THE PROPERTY OF your company.
+   9:Generated_Source\PSoC5/MDIO_host_2_my.c ****  *
+  10:Generated_Source\PSoC5/MDIO_host_2_my.c ****  * ========================================
+  11:Generated_Source\PSoC5/MDIO_host_2_my.c **** */
+  12:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+  13:Generated_Source\PSoC5/MDIO_host_2_my.c **** //#include <device.h>
+  14:Generated_Source\PSoC5/MDIO_host_2_my.c **** #include <project.h>
+  15:Generated_Source\PSoC5/MDIO_host_2_my.c **** #include "cytypes.h"
+  16:Generated_Source\PSoC5/MDIO_host_2_my.c **** #include "cyfitter.h"
+  17:Generated_Source\PSoC5/MDIO_host_2_my.c **** #include "cypins.h"
+  18:Generated_Source\PSoC5/MDIO_host_2_my.c **** #include "MDIO_host_2_my.h"
+  19:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+  20:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+  21:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Variables
+  22:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************/
+  23:Generated_Source\PSoC5/MDIO_host_2_my.c **** uint8 MDIO_host_2_initVar = 0u;
+  24:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+  25:Generated_Source\PSoC5/MDIO_host_2_my.c **** /* Data received MDIO Host */
+  26:Generated_Source\PSoC5/MDIO_host_2_my.c **** volatile uint16 MDIO_host_2_data_bits=0u;	 
+  27:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+  28:Generated_Source\PSoC5/MDIO_host_2_my.c **** /* Internal Status Register */
+  29:Generated_Source\PSoC5/MDIO_host_2_my.c **** volatile uint8  MDIO_host_2_StatusRegister=0u;
+  30:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+  31:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 2
+
+
+  32:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Function Name: MDIO_host_2_Start
+  33:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************
+  34:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Summary:
+  35:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  Initializes the MDIO Host component.
+  36:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+  37:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Parameters:
+  38:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+  39:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+  40:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Return:
+  41:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+  42:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+  43:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Side Effects:
+  44:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+  45:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************/
+  46:Generated_Source\PSoC5/MDIO_host_2_my.c **** void MDIO_host_2_Start(void)
+  47:Generated_Source\PSoC5/MDIO_host_2_my.c **** { 
+  48:Generated_Source\PSoC5/MDIO_host_2_my.c ****     /* If not already initialized, then initialize hardware and software */
+  49:Generated_Source\PSoC5/MDIO_host_2_my.c ****     if(MDIO_host_2_initVar == 0u)
+  50:Generated_Source\PSoC5/MDIO_host_2_my.c ****     {
+  51:Generated_Source\PSoC5/MDIO_host_2_my.c ****         MDIO_host_2_Init();
+  52:Generated_Source\PSoC5/MDIO_host_2_my.c ****         MDIO_host_2_initVar = 1u;
+  53:Generated_Source\PSoC5/MDIO_host_2_my.c ****     }
+  54:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_Enable();
+  55:Generated_Source\PSoC5/MDIO_host_2_my.c **** }
+  56:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+  57:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+  58:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Function Name: MDIO_host_2_Stop
+  59:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************
+  60:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Summary:
+  61:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  Disable the MDIO Host component and the internal interrupt
+  62:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+  63:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Parameters:
+  64:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+  65:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+  66:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Return:
+  67:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+  68:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+  69:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Side Effects:
+  70:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  
+  71:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************/
+  72:Generated_Source\PSoC5/MDIO_host_2_my.c **** void MDIO_host_2_Stop(void)
+  73:Generated_Source\PSoC5/MDIO_host_2_my.c **** {
+  27              		.loc 1 73 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  74:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Disable the hardware component */
+  75:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_CONTROL_REG = 0u;	// Set Enable and Valid bits to zero
+  32              		.loc 1 75 0
+  33 0000 0022     		movs	r2, #0
+  34 0002 044B     		ldr	r3, .L2
+  35 0004 1A70     		strb	r2, [r3]
+  76:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+  77:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Disable Count7 hardware block */
+  78:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_CNT7_AUX_CTL_REG &= ~MDIO_host_2_COUNT7_EN;
+  36              		.loc 1 78 0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 3
+
+
+  37 0006 044A     		ldr	r2, .L2+4
+  38 0008 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  39 000a 03F0DF03 		and	r3, r3, #223
+  40 000e 1370     		strb	r3, [r2]
+  41 0010 7047     		bx	lr
+  42              	.L3:
+  43 0012 00BF     		.align	2
+  44              	.L2:
+  45 0014 76640040 		.word	1073767542
+  46 0018 96650040 		.word	1073767830
+  47              		.cfi_endproc
+  48              	.LFE64:
+  49              		.size	MDIO_host_2_Stop, .-MDIO_host_2_Stop
+  50              		.section	.text.MDIO_host_2_Enable,"ax",%progbits
+  51              		.align	2
+  52              		.global	MDIO_host_2_Enable
+  53              		.thumb
+  54              		.thumb_func
+  55              		.type	MDIO_host_2_Enable, %function
+  56              	MDIO_host_2_Enable:
+  57              	.LFB66:
+  79:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+  80:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Disable Interrupt */
+  81:Generated_Source\PSoC5/MDIO_host_2_my.c **** //	MDIO_host_2_DisableInt();
+  82:Generated_Source\PSoC5/MDIO_host_2_my.c **** }
+  83:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+  84:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+  85:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Function Name: MDIO_host_2_Init
+  86:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************
+  87:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Summary:
+  88:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  Initializes internal variables and resets the datapath FIFO.
+  89:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+  90:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Parameters:
+  91:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+  92:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+  93:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Return:
+  94:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+  95:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+  96:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Side Effects:
+  97:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  
+  98:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************/
+  99:Generated_Source\PSoC5/MDIO_host_2_my.c **** void MDIO_host_2_Init(void)
+ 100:Generated_Source\PSoC5/MDIO_host_2_my.c **** { 	
+ 101:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_Enable();
+ 102:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ 103:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Reset Internal FIFOs */
+ 104:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	MDIO_host_2_ClearInternalFIFOs();
+ 105:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 106:Generated_Source\PSoC5/MDIO_host_2_my.c ****     /* Initialize interrupts */
+ 107:Generated_Source\PSoC5/MDIO_host_2_my.c **** //	MDIO_host_2_EnableInt();
+ 108:Generated_Source\PSoC5/MDIO_host_2_my.c **** }
+ 109:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 110:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+ 111:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Function Name: MDIO_host_2_Enable()
+ 112:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************
+ 113:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Summary:
+ 114:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  Enables the hardware and internal interrupt.
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 4
+
+
+ 115:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+ 116:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Parameters:
+ 117:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ 118:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 119:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Return:
+ 120:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ 121:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+ 122:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Side Effects:
+ 123:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ 124:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************/
+ 125:Generated_Source\PSoC5/MDIO_host_2_my.c **** void MDIO_host_2_Enable(void) 
+ 126:Generated_Source\PSoC5/MDIO_host_2_my.c **** {
+  58              		.loc 1 126 0
+  59              		.cfi_startproc
+  60              		@ args = 0, pretend = 0, frame = 0
+  61              		@ frame_needed = 0, uses_anonymous_args = 0
+  62              		@ link register save eliminated.
+ 127:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Enable Count7 hardware block */
+ 128:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_CNT7_AUX_CTL_REG |= MDIO_host_2_COUNT7_EN;
+  63              		.loc 1 128 0
+  64 0000 064A     		ldr	r2, .L5
+  65 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  66 0004 43F02003 		orr	r3, r3, #32
+  67 0008 1370     		strb	r3, [r2]
+ 129:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 130:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Enable the block */
+ 131:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_CONTROL_REG = MDIO_host_2_ENABLE;
+  68              		.loc 1 131 0
+  69 000a 0122     		movs	r2, #1
+  70 000c 044B     		ldr	r3, .L5+4
+  71 000e 1A70     		strb	r2, [r3]
+ 132:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ 133:Generated_Source\PSoC5/MDIO_host_2_my.c ****     /*Reset counter */
+ 134:Generated_Source\PSoC5/MDIO_host_2_my.c ****    // MDIO_host_2_PERIOD_REG = 127;
+ 135:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_COUNT_REG = 0;
+  72              		.loc 1 135 0
+  73 0010 0022     		movs	r2, #0
+  74 0012 03F58073 		add	r3, r3, #256
+  75 0016 1A70     		strb	r2, [r3]
+  76 0018 7047     		bx	lr
+  77              	.L6:
+  78 001a 00BF     		.align	2
+  79              	.L5:
+  80 001c 96650040 		.word	1073767830
+  81 0020 76640040 		.word	1073767542
+  82              		.cfi_endproc
+  83              	.LFE66:
+  84              		.size	MDIO_host_2_Enable, .-MDIO_host_2_Enable
+  85              		.section	.text.MDIO_host_2_GetStatus,"ax",%progbits
+  86              		.align	2
+  87              		.global	MDIO_host_2_GetStatus
+  88              		.thumb
+  89              		.thumb_func
+  90              		.type	MDIO_host_2_GetStatus, %function
+  91              	MDIO_host_2_GetStatus:
+  92              	.LFB67:
+ 136:Generated_Source\PSoC5/MDIO_host_2_my.c ****     
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 5
+
+
+ 137:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Enable the interrupt */
+ 138:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	//CyIntEnable(MDIO_host_2_ISR_NUMBER);   
+ 139:Generated_Source\PSoC5/MDIO_host_2_my.c **** }
+ 140:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 141:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+ 142:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Function Name: MDIO_host_2_EnableInt
+ 143:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************
+ 144:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Summary:
+ 145:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  Enables and configure the interrupt from this component. 
+ 146:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+ 147:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Parameters:
+ 148:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ 149:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+ 150:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Return:
+ 151:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ 152:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+ 153:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Side Effects:
+ 154:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ 155:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************/
+ 156:Generated_Source\PSoC5/MDIO_host_2_my.c **** //void MDIO_host_2_EnableInt(void)
+ 157:Generated_Source\PSoC5/MDIO_host_2_my.c **** //{   
+ 158:Generated_Source\PSoC5/MDIO_host_2_my.c **** //    /* Enable interrupt handler service routine */
+ 159:Generated_Source\PSoC5/MDIO_host_2_my.c **** //	CyIntDisable(MDIO_host_2_ISR_NUMBER);
+ 160:Generated_Source\PSoC5/MDIO_host_2_my.c **** //	CyIntSetVector(MDIO_host_2_ISR_NUMBER, MDIO_host_2_ISR_InterruptHandler);
+ 161:Generated_Source\PSoC5/MDIO_host_2_my.c **** //	CyIntSetPriority(MDIO_host_2_ISR_NUMBER, MDIO_host_2_ISR_PRIORITY);
+ 162:Generated_Source\PSoC5/MDIO_host_2_my.c **** //	CyIntEnable(MDIO_host_2_ISR_NUMBER);        
+ 163:Generated_Source\PSoC5/MDIO_host_2_my.c **** //}
+ 164:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 165:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+ 166:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Function Name: MDIO_host_2_DisableInt
+ 167:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************
+ 168:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Summary:
+ 169:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  Disables interrupts from this component
+ 170:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 171:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Parameters:
+ 172:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ 173:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+ 174:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Return:
+ 175:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ 176:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+ 177:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Side Effects:
+ 178:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ 179:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************/
+ 180:Generated_Source\PSoC5/MDIO_host_2_my.c **** //void MDIO_host_2_DisableInt(void)
+ 181:Generated_Source\PSoC5/MDIO_host_2_my.c **** //{  
+ 182:Generated_Source\PSoC5/MDIO_host_2_my.c **** //    /* Disable interrupt handler service routine */
+ 183:Generated_Source\PSoC5/MDIO_host_2_my.c **** //	CyIntDisable(MDIO_host_2_ISR_NUMBER);
+ 184:Generated_Source\PSoC5/MDIO_host_2_my.c **** //}
+ 185:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 186:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+ 187:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Function Name: MDIO_host_2_GetStatus
+ 188:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************
+ 189:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Summary:
+ 190:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  Returns the internal status of the hardware.
+ 191:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 192:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Parameters:
+ 193:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 6
+
+
+ 194:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+ 195:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Return:
+ 196:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  uint8
+ 197:Generated_Source\PSoC5/MDIO_host_2_my.c **** *		b0   = Set when component is busy 
+ 198:Generated_Source\PSoC5/MDIO_host_2_my.c **** *		b1 	 = Set when PHY address matches in the right timing 
+ 199:Generated_Source\PSoC5/MDIO_host_2_my.c **** *		b7:2 = Reserved. Returns all zeros
+ 200:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 201:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Side Effects:
+ 202:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ 203:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************/
+ 204:Generated_Source\PSoC5/MDIO_host_2_my.c **** uint8 MDIO_host_2_GetStatus(void) CYREENTRANT
+ 205:Generated_Source\PSoC5/MDIO_host_2_my.c **** {
+  93              		.loc 1 205 0
+  94              		.cfi_startproc
+  95              		@ args = 0, pretend = 0, frame = 0
+  96              		@ frame_needed = 0, uses_anonymous_args = 0
+  97              		@ link register save eliminated.
+ 206:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	return MDIO_host_2_StatusRegister;
+  98              		.loc 1 206 0
+  99 0000 014B     		ldr	r3, .L8
+ 100 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 207:Generated_Source\PSoC5/MDIO_host_2_my.c **** }
+ 101              		.loc 1 207 0
+ 102 0004 7047     		bx	lr
+ 103              	.L9:
+ 104 0006 00BF     		.align	2
+ 105              	.L8:
+ 106 0008 00000000 		.word	.LANCHOR0
+ 107              		.cfi_endproc
+ 108              	.LFE67:
+ 109              		.size	MDIO_host_2_GetStatus, .-MDIO_host_2_GetStatus
+ 110              		.section	.text.MDIO_host_2_ClearInternalFIFOs,"ax",%progbits
+ 111              		.align	2
+ 112              		.global	MDIO_host_2_ClearInternalFIFOs
+ 113              		.thumb
+ 114              		.thumb_func
+ 115              		.type	MDIO_host_2_ClearInternalFIFOs, %function
+ 116              	MDIO_host_2_ClearInternalFIFOs:
+ 117              	.LFB68:
+ 208:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 209:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+ 210:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Function Name: MDIO_host_2_ClearInternalFIFOs
+ 211:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************
+ 212:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Summary:
+ 213:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  Clear the internal FIFOs from the data path 
+ 214:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 215:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Parameters:
+ 216:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  dataPtr: Pointer to the data buffer
+ 217:Generated_Source\PSoC5/MDIO_host_2_my.c **** * 
+ 218:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Return:
+ 219:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  None
+ 220:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 221:Generated_Source\PSoC5/MDIO_host_2_my.c **** * Side Effects:
+ 222:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  The size of this buffer should be at least 32 x 16 bits (64 bytes), otherwise
+ 223:Generated_Source\PSoC5/MDIO_host_2_my.c **** *  memory violation may occurs.
+ 224:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 225:Generated_Source\PSoC5/MDIO_host_2_my.c **** ********************************************************************************/
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 7
+
+
+ 226:Generated_Source\PSoC5/MDIO_host_2_my.c **** void MDIO_host_2_ClearInternalFIFOs(void)
+ 227:Generated_Source\PSoC5/MDIO_host_2_my.c **** {
+ 118              		.loc 1 227 0
+ 119              		.cfi_startproc
+ 120              		@ args = 0, pretend = 0, frame = 0
+ 121              		@ frame_needed = 0, uses_anonymous_args = 0
+ 122              		@ link register save eliminated.
+ 228:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Reset F0 FIFO  */
+ 229:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	CY_SET_REG16(MDIO_host_2_DP_AUX_CTL_PTR, (CY_GET_REG16(MDIO_host_2_DP_AUX_CTL_PTR) |  MDIO_host_2_
+ 123              		.loc 1 229 0
+ 124 0000 0B4A     		ldr	r2, .L11
+ 125 0002 1388     		ldrh	r3, [r2]
+ 126 0004 9BB2     		uxth	r3, r3
+ 127 0006 43F48073 		orr	r3, r3, #256
+ 128 000a 43F00103 		orr	r3, r3, #1
+ 129 000e 1380     		strh	r3, [r2]	@ movhi
+ 230:Generated_Source\PSoC5/MDIO_host_2_my.c ****     CY_SET_REG16(MDIO_host_2_DP_AUX_CTL_PTR, (CY_GET_REG16(MDIO_host_2_DP_AUX_CTL_PTR) & ~MDIO_host
+ 130              		.loc 1 230 0
+ 131 0010 1388     		ldrh	r3, [r2]
+ 132 0012 9BB2     		uxth	r3, r3
+ 133 0014 23F48073 		bic	r3, r3, #256
+ 134 0018 23F00103 		bic	r3, r3, #1
+ 135 001c 9BB2     		uxth	r3, r3
+ 136 001e 1380     		strh	r3, [r2]	@ movhi
+ 231:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ 232:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Reset F1 FIFO  */
+ 233:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	CY_SET_REG16(MDIO_host_2_DP_AUX_CTL_PTR, (CY_GET_REG16(MDIO_host_2_DP_AUX_CTL_PTR) |  MDIO_host_2_
+ 137              		.loc 1 233 0
+ 138 0020 1388     		ldrh	r3, [r2]
+ 139 0022 9BB2     		uxth	r3, r3
+ 140 0024 43F40073 		orr	r3, r3, #512
+ 141 0028 43F00203 		orr	r3, r3, #2
+ 142 002c 1380     		strh	r3, [r2]	@ movhi
+ 143 002e 7047     		bx	lr
+ 144              	.L12:
+ 145              		.align	2
+ 146              	.L11:
+ 147 0030 96650040 		.word	1073767830
+ 148              		.cfi_endproc
+ 149              	.LFE68:
+ 150              		.size	MDIO_host_2_ClearInternalFIFOs, .-MDIO_host_2_ClearInternalFIFOs
+ 151              		.section	.text.MDIO_host_2_Init,"ax",%progbits
+ 152              		.align	2
+ 153              		.global	MDIO_host_2_Init
+ 154              		.thumb
+ 155              		.thumb_func
+ 156              		.type	MDIO_host_2_Init, %function
+ 157              	MDIO_host_2_Init:
+ 158              	.LFB65:
+ 100:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_Enable();
+ 159              		.loc 1 100 0
+ 160              		.cfi_startproc
+ 161              		@ args = 0, pretend = 0, frame = 0
+ 162              		@ frame_needed = 0, uses_anonymous_args = 0
+ 163 0000 08B5     		push	{r3, lr}
+ 164              		.cfi_def_cfa_offset 8
+ 165              		.cfi_offset 3, -8
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 8
+
+
+ 166              		.cfi_offset 14, -4
+ 101:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ 167              		.loc 1 101 0
+ 168 0002 FFF7FEFF 		bl	MDIO_host_2_Enable
+ 169              	.LVL0:
+ 104:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 170              		.loc 1 104 0
+ 171 0006 FFF7FEFF 		bl	MDIO_host_2_ClearInternalFIFOs
+ 172              	.LVL1:
+ 173 000a 08BD     		pop	{r3, pc}
+ 174              		.cfi_endproc
+ 175              	.LFE65:
+ 176              		.size	MDIO_host_2_Init, .-MDIO_host_2_Init
+ 177              		.section	.text.MDIO_host_2_Start,"ax",%progbits
+ 178              		.align	2
+ 179              		.global	MDIO_host_2_Start
+ 180              		.thumb
+ 181              		.thumb_func
+ 182              		.type	MDIO_host_2_Start, %function
+ 183              	MDIO_host_2_Start:
+ 184              	.LFB63:
+  47:Generated_Source\PSoC5/MDIO_host_2_my.c ****     /* If not already initialized, then initialize hardware and software */
+ 185              		.loc 1 47 0
+ 186              		.cfi_startproc
+ 187              		@ args = 0, pretend = 0, frame = 0
+ 188              		@ frame_needed = 0, uses_anonymous_args = 0
+ 189 0000 08B5     		push	{r3, lr}
+ 190              		.cfi_def_cfa_offset 8
+ 191              		.cfi_offset 3, -8
+ 192              		.cfi_offset 14, -4
+  49:Generated_Source\PSoC5/MDIO_host_2_my.c ****     {
+ 193              		.loc 1 49 0
+ 194 0002 054B     		ldr	r3, .L18
+ 195 0004 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 196 0006 23B9     		cbnz	r3, .L16
+  51:Generated_Source\PSoC5/MDIO_host_2_my.c ****         MDIO_host_2_initVar = 1u;
+ 197              		.loc 1 51 0
+ 198 0008 FFF7FEFF 		bl	MDIO_host_2_Init
+ 199              	.LVL2:
+  52:Generated_Source\PSoC5/MDIO_host_2_my.c ****     }
+ 200              		.loc 1 52 0
+ 201 000c 0122     		movs	r2, #1
+ 202 000e 024B     		ldr	r3, .L18
+ 203 0010 5A70     		strb	r2, [r3, #1]
+ 204              	.L16:
+  54:Generated_Source\PSoC5/MDIO_host_2_my.c **** }
+ 205              		.loc 1 54 0
+ 206 0012 FFF7FEFF 		bl	MDIO_host_2_Enable
+ 207              	.LVL3:
+ 208 0016 08BD     		pop	{r3, pc}
+ 209              	.L19:
+ 210              		.align	2
+ 211              	.L18:
+ 212 0018 00000000 		.word	.LANCHOR0
+ 213              		.cfi_endproc
+ 214              	.LFE63:
+ 215              		.size	MDIO_host_2_Start, .-MDIO_host_2_Start
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 9
+
+
+ 216              		.section	.text.MDIO_host_2_WriteDataC45,"ax",%progbits
+ 217              		.align	2
+ 218              		.global	MDIO_host_2_WriteDataC45
+ 219              		.thumb
+ 220              		.thumb_func
+ 221              		.type	MDIO_host_2_WriteDataC45, %function
+ 222              	MDIO_host_2_WriteDataC45:
+ 223              	.LFB69:
+ 234:Generated_Source\PSoC5/MDIO_host_2_my.c ****     //CY_SET_REG16(MDIO_host_2_DP_AUX_CTL_PTR, (CY_GET_REG16(MDIO_host_2_DP_AUX_CTL_PTR) & ~MDIO_ho
+ 235:Generated_Source\PSoC5/MDIO_host_2_my.c **** }
+ 236:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 237:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+ 238:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 239:Generated_Source\PSoC5/MDIO_host_2_my.c **** * MDIO_host_2_WriteData_C45()
+ 240:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 241:Generated_Source\PSoC5/MDIO_host_2_my.c **** *******************************************************************************/
+ 242:Generated_Source\PSoC5/MDIO_host_2_my.c **** uint8 MDIO_host_2_WriteDataC45(uint8 op_mode, uint8 phy_addr, uint8 dev_addr, uint16 reg_data) // W
+ 243:Generated_Source\PSoC5/MDIO_host_2_my.c **** {
+ 224              		.loc 1 243 0
+ 225              		.cfi_startproc
+ 226              		@ args = 0, pretend = 0, frame = 0
+ 227              		@ frame_needed = 0, uses_anonymous_args = 0
+ 228              		@ link register save eliminated.
+ 229              	.LVL4:
+ 230 0000 30B4     		push	{r4, r5}
+ 231              		.cfi_def_cfa_offset 8
+ 232              		.cfi_offset 4, -8
+ 233              		.cfi_offset 5, -4
+ 244:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	uint16	control_bits;
+ 245:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	uint8   status_reg;
+ 246:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 247:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Clear and Set the control register for writing */
+ 248:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	MDIO_host_2_CONTROL_REG = MDIO_host_2_ENABLE |MDIO_host_2_WRITE;
+ 234              		.loc 1 248 0
+ 235 0002 134C     		ldr	r4, .L23
+ 236 0004 0125     		movs	r5, #1
+ 237 0006 2570     		strb	r5, [r4]
+ 249:Generated_Source\PSoC5/MDIO_host_2_my.c **** 		
+ 250:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	/* Set the control bits and write in the fifo f0 */
+ 251:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	control_bits = 0x0002+((uint16)op_mode<<12)+(((uint16)phy_addr)<<7)+(((uint16)dev_addr)<<2);
+ 238              		.loc 1 251 0
+ 239 0008 C901     		lsls	r1, r1, #7
+ 240              	.LVL5:
+ 241 000a 01EB0030 		add	r0, r1, r0, lsl #12
+ 242              	.LVL6:
+ 243 000e 00EB8202 		add	r2, r0, r2, lsl #2
+ 244              	.LVL7:
+ 245 0012 911C     		adds	r1, r2, #2
+ 246 0014 89B2     		uxth	r1, r1
+ 247              	.LVL8:
+ 252:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	CY_SET_REG16(MDIO_host_2_FIFO_F0_PTR, control_bits);
+ 248              		.loc 1 252 0
+ 249 0016 0F4A     		ldr	r2, .L23+4
+ 250 0018 1180     		strh	r1, [r2]	@ movhi
+ 253:Generated_Source\PSoC5/MDIO_host_2_my.c ****    
+ 254:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	/* Write data bits in the fifo f0 */
+ 255:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	CY_SET_REG16(MDIO_host_2_FIFO_F0_PTR, reg_data);
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 10
+
+
+ 251              		.loc 1 255 0
+ 252 001a 1380     		strh	r3, [r2]	@ movhi
+ 256:Generated_Source\PSoC5/MDIO_host_2_my.c ****     
+ 257:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	/* Start Transmission */
+ 258:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	MDIO_host_2_CONTROL_REG |= MDIO_host_2_START;
+ 253              		.loc 1 258 0
+ 254 001c 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 255              	.LVL9:
+ 256 001e 43F00203 		orr	r3, r3, #2
+ 257 0022 2370     		strb	r3, [r4]
+ 258              	.LVL10:
+ 259              	.L21:
+ 259:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ 260:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Wait till the transmission is completed */
+ 261:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	//while ( MDIO_host_2_StatusRegister != MDIO_host_2_MDIO_STS_CMPLT );
+ 262:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	while (!(MDIO_host_2_STATUS_REG & MDIO_host_2_MDIO_END_TRANSFER));
+ 260              		.loc 1 262 0 discriminator 1
+ 261 0024 0C4B     		ldr	r3, .L23+8
+ 262 0026 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 263 0028 13F0020F 		tst	r3, #2
+ 264 002c FAD0     		beq	.L21
+ 263:Generated_Source\PSoC5/MDIO_host_2_my.c ****     
+ 264:Generated_Source\PSoC5/MDIO_host_2_my.c ****     /* Stop Transmission */
+ 265:Generated_Source\PSoC5/MDIO_host_2_my.c ****     MDIO_host_2_CONTROL_REG &= ~MDIO_host_2_START;
+ 265              		.loc 1 265 0
+ 266 002e 084A     		ldr	r2, .L23
+ 267 0030 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 268 0032 03F0FD03 		and	r3, r3, #253
+ 269 0036 1370     		strb	r3, [r2]
+ 266:Generated_Source\PSoC5/MDIO_host_2_my.c ****     
+ 267:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Clear hardware status register */
+ 268:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	status_reg = MDIO_host_2_STATUS_REG;
+ 270              		.loc 1 268 0
+ 271 0038 074B     		ldr	r3, .L23+8
+ 272 003a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 273              	.LVL11:
+ 269:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ 270:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Clear software status register */
+ 271:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	MDIO_host_2_StatusRegister = 0x00u;
+ 274              		.loc 1 271 0
+ 275 003c 0021     		movs	r1, #0
+ 276              	.LVL12:
+ 277 003e 074A     		ldr	r2, .L23+12
+ 278 0040 1170     		strb	r1, [r2]
+ 272:Generated_Source\PSoC5/MDIO_host_2_my.c ****     
+ 273:Generated_Source\PSoC5/MDIO_host_2_my.c ****     return ((status_reg)? 0 : 1);
+ 279              		.loc 1 273 0
+ 280 0042 13F0FF0F 		tst	r3, #255
+ 274:Generated_Source\PSoC5/MDIO_host_2_my.c **** }
+ 281              		.loc 1 274 0
+ 282 0046 0CBF     		ite	eq
+ 283 0048 0120     		moveq	r0, #1
+ 284 004a 0846     		movne	r0, r1
+ 285 004c 30BC     		pop	{r4, r5}
+ 286              		.cfi_restore 5
+ 287              		.cfi_restore 4
+ 288              		.cfi_def_cfa_offset 0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 11
+
+
+ 289 004e 7047     		bx	lr
+ 290              	.L24:
+ 291              		.align	2
+ 292              	.L23:
+ 293 0050 76640040 		.word	1073767542
+ 294 0054 46650040 		.word	1073767750
+ 295 0058 66640040 		.word	1073767526
+ 296 005c 00000000 		.word	.LANCHOR0
+ 297              		.cfi_endproc
+ 298              	.LFE69:
+ 299              		.size	MDIO_host_2_WriteDataC45, .-MDIO_host_2_WriteDataC45
+ 300              		.section	.text.MDIO_host_2_ReadDataC45,"ax",%progbits
+ 301              		.align	2
+ 302              		.global	MDIO_host_2_ReadDataC45
+ 303              		.thumb
+ 304              		.thumb_func
+ 305              		.type	MDIO_host_2_ReadDataC45, %function
+ 306              	MDIO_host_2_ReadDataC45:
+ 307              	.LFB70:
+ 275:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 276:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+ 277:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 278:Generated_Source\PSoC5/MDIO_host_2_my.c **** * MDIO_host_2_ReadData_C45()
+ 279:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 280:Generated_Source\PSoC5/MDIO_host_2_my.c **** *******************************************************************************/
+ 281:Generated_Source\PSoC5/MDIO_host_2_my.c **** uint8 MDIO_host_2_ReadDataC45(uint8 op_mode, uint8 phy_addr, uint8 dev_addr, uint16 *regData) // Re
+ 282:Generated_Source\PSoC5/MDIO_host_2_my.c **** {
+ 308              		.loc 1 282 0
+ 309              		.cfi_startproc
+ 310              		@ args = 0, pretend = 0, frame = 0
+ 311              		@ frame_needed = 0, uses_anonymous_args = 0
+ 312              		@ link register save eliminated.
+ 313              	.LVL13:
+ 314 0000 30B4     		push	{r4, r5}
+ 315              		.cfi_def_cfa_offset 8
+ 316              		.cfi_offset 4, -8
+ 317              		.cfi_offset 5, -4
+ 283:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	uint16	control_bits;
+ 284:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	uint8 status_reg;
+ 285:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 286:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Clear and Set the control register for writing */
+ 287:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	MDIO_host_2_CONTROL_REG &= MDIO_host_2_ENABLE;
+ 318              		.loc 1 287 0
+ 319 0002 144C     		ldr	r4, .L28
+ 320 0004 2578     		ldrb	r5, [r4]	@ zero_extendqisi2
+ 321 0006 05F00105 		and	r5, r5, #1
+ 322 000a 2570     		strb	r5, [r4]
+ 288:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	MDIO_host_2_CONTROL_REG |= MDIO_host_2_READ;
+ 323              		.loc 1 288 0
+ 324 000c 2578     		ldrb	r5, [r4]	@ zero_extendqisi2
+ 325 000e 45F00405 		orr	r5, r5, #4
+ 326 0012 2570     		strb	r5, [r4]
+ 289:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ 290:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	/* Set the control bits and write in the fifo f0 */
+ 291:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	control_bits = 0x0003+((uint16)op_mode<<12)+(((uint16)phy_addr)<<7)+(((uint16)dev_addr)<<2);
+ 327              		.loc 1 291 0
+ 328 0014 C901     		lsls	r1, r1, #7
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 12
+
+
+ 329              	.LVL14:
+ 330 0016 01EB0030 		add	r0, r1, r0, lsl #12
+ 331              	.LVL15:
+ 332 001a 00EB8202 		add	r2, r0, r2, lsl #2
+ 333              	.LVL16:
+ 334 001e D11C     		adds	r1, r2, #3
+ 335 0020 89B2     		uxth	r1, r1
+ 336              	.LVL17:
+ 292:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	CY_SET_REG16(MDIO_host_2_FIFO_F0_PTR, control_bits);
+ 337              		.loc 1 292 0
+ 338 0022 0D4A     		ldr	r2, .L28+4
+ 339 0024 1180     		strh	r1, [r2]	@ movhi
+ 293:Generated_Source\PSoC5/MDIO_host_2_my.c ****     
+ 294:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	/* Start Transmission */
+ 295:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	MDIO_host_2_CONTROL_REG |= MDIO_host_2_START;
+ 340              		.loc 1 295 0
+ 341 0026 2278     		ldrb	r2, [r4]	@ zero_extendqisi2
+ 342 0028 42F00202 		orr	r2, r2, #2
+ 343 002c 2270     		strb	r2, [r4]
+ 344              	.L26:
+ 296:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ 297:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Wait till the transmission is completed */
+ 298:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	while ( MDIO_host_2_StatusRegister != MDIO_host_2_MDIO_STS_CMPLT );
+ 345              		.loc 1 298 0 discriminator 1
+ 346 002e 0B4A     		ldr	r2, .L28+8
+ 347 0030 1278     		ldrb	r2, [r2]	@ zero_extendqisi2
+ 348 0032 D2B2     		uxtb	r2, r2
+ 349 0034 082A     		cmp	r2, #8
+ 350 0036 FAD1     		bne	.L26
+ 299:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ 300:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Check if device acked */
+ 301:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	status_reg = MDIO_host_2_STATUS_REG;
+ 351              		.loc 1 301 0
+ 352 0038 094A     		ldr	r2, .L28+12
+ 353 003a 1178     		ldrb	r1, [r2]	@ zero_extendqisi2
+ 354              	.LVL18:
+ 302:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ 303:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	MDIO_host_2_StatusRegister = 0x00u;
+ 355              		.loc 1 303 0
+ 356 003c 074A     		ldr	r2, .L28+8
+ 357 003e 0020     		movs	r0, #0
+ 358 0040 1070     		strb	r0, [r2]
+ 304:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ 305:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	*regData = MDIO_host_2_data_bits;
+ 359              		.loc 1 305 0
+ 360 0042 5288     		ldrh	r2, [r2, #2]
+ 361 0044 1A80     		strh	r2, [r3]	@ movhi
+ 306:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ 307:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	return ((status_reg)? 0 : 1);
+ 362              		.loc 1 307 0
+ 363 0046 11F0FF0F 		tst	r1, #255
+ 308:Generated_Source\PSoC5/MDIO_host_2_my.c **** }
+ 364              		.loc 1 308 0
+ 365 004a 08BF     		it	eq
+ 366 004c 0120     		moveq	r0, #1
+ 367 004e 30BC     		pop	{r4, r5}
+ 368              		.cfi_restore 5
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 13
+
+
+ 369              		.cfi_restore 4
+ 370              		.cfi_def_cfa_offset 0
+ 371 0050 7047     		bx	lr
+ 372              	.L29:
+ 373 0052 00BF     		.align	2
+ 374              	.L28:
+ 375 0054 76640040 		.word	1073767542
+ 376 0058 46650040 		.word	1073767750
+ 377 005c 00000000 		.word	.LANCHOR0
+ 378 0060 66640040 		.word	1073767526
+ 379              		.cfi_endproc
+ 380              	.LFE70:
+ 381              		.size	MDIO_host_2_ReadDataC45, .-MDIO_host_2_ReadDataC45
+ 382              		.section	.text.MDIO_host_2_WriteDataC22,"ax",%progbits
+ 383              		.align	2
+ 384              		.global	MDIO_host_2_WriteDataC22
+ 385              		.thumb
+ 386              		.thumb_func
+ 387              		.type	MDIO_host_2_WriteDataC22, %function
+ 388              	MDIO_host_2_WriteDataC22:
+ 389              	.LFB71:
+ 309:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 310:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+ 311:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 312:Generated_Source\PSoC5/MDIO_host_2_my.c **** * MDIO_Host_WriteData_C22()
+ 313:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 314:Generated_Source\PSoC5/MDIO_host_2_my.c **** *******************************************************************************/
+ 315:Generated_Source\PSoC5/MDIO_host_2_my.c **** void 	MDIO_host_2_WriteDataC22(uint8 phy_addr, uint8 dev_addr, uint16 reg_data)
+ 316:Generated_Source\PSoC5/MDIO_host_2_my.c **** {
+ 390              		.loc 1 316 0
+ 391              		.cfi_startproc
+ 392              		@ args = 0, pretend = 0, frame = 0
+ 393              		@ frame_needed = 0, uses_anonymous_args = 0
+ 394              		@ link register save eliminated.
+ 395              	.LVL19:
+ 396 0000 10B4     		push	{r4}
+ 397              		.cfi_def_cfa_offset 4
+ 398              		.cfi_offset 4, -4
+ 317:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	uint16	control_bits;
+ 318:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 319:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Clear and Set the control register for writing */
+ 320:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	MDIO_host_2_CONTROL_REG &= MDIO_host_2_ENABLE;
+ 399              		.loc 1 320 0
+ 400 0002 0C4B     		ldr	r3, .L32
+ 401 0004 1C78     		ldrb	r4, [r3]	@ zero_extendqisi2
+ 402 0006 04F00104 		and	r4, r4, #1
+ 403 000a 1C70     		strb	r4, [r3]
+ 321:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	MDIO_host_2_CONTROL_REG |= MDIO_host_2_WRITE;
+ 404              		.loc 1 321 0
+ 405 000c 1C78     		ldrb	r4, [r3]	@ zero_extendqisi2
+ 406 000e E4B2     		uxtb	r4, r4
+ 407 0010 1C70     		strb	r4, [r3]
+ 322:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ 323:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	/* Set the control bits and write in the fifo f0 */
+ 324:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	control_bits = 0x5002+(((uint16)phy_addr)<<7)+(((uint16)dev_addr)<<2);
+ 408              		.loc 1 324 0
+ 409 0012 8900     		lsls	r1, r1, #2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 14
+
+
+ 410              	.LVL20:
+ 411 0014 01EBC010 		add	r0, r1, r0, lsl #7
+ 412              	.LVL21:
+ 413 0018 00F5A040 		add	r0, r0, #20480
+ 414 001c 0230     		adds	r0, r0, #2
+ 415 001e 80B2     		uxth	r0, r0
+ 416              	.LVL22:
+ 325:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	CY_SET_REG16(MDIO_host_2_FIFO_F0_PTR, control_bits);
+ 417              		.loc 1 325 0
+ 418 0020 0549     		ldr	r1, .L32+4
+ 419 0022 0880     		strh	r0, [r1]	@ movhi
+ 326:Generated_Source\PSoC5/MDIO_host_2_my.c ****    
+ 327:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	/* Write data bits in the fifo f0 */
+ 328:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	CY_SET_REG16(MDIO_host_2_FIFO_F0_PTR, reg_data);
+ 420              		.loc 1 328 0
+ 421 0024 0A80     		strh	r2, [r1]	@ movhi
+ 329:Generated_Source\PSoC5/MDIO_host_2_my.c ****     
+ 330:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	/* Start Transmission */
+ 331:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	MDIO_host_2_CONTROL_REG |= MDIO_host_2_START;
+ 422              		.loc 1 331 0
+ 423 0026 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 424              	.LVL23:
+ 425 0028 42F00202 		orr	r2, r2, #2
+ 426 002c 1A70     		strb	r2, [r3]
+ 427              	.LVL24:
+ 332:Generated_Source\PSoC5/MDIO_host_2_my.c **** }
+ 428              		.loc 1 332 0
+ 429 002e 5DF8044B 		ldr	r4, [sp], #4
+ 430              		.cfi_restore 4
+ 431              		.cfi_def_cfa_offset 0
+ 432 0032 7047     		bx	lr
+ 433              	.L33:
+ 434              		.align	2
+ 435              	.L32:
+ 436 0034 76640040 		.word	1073767542
+ 437 0038 46650040 		.word	1073767750
+ 438              		.cfi_endproc
+ 439              	.LFE71:
+ 440              		.size	MDIO_host_2_WriteDataC22, .-MDIO_host_2_WriteDataC22
+ 441              		.section	.text.MDIO_host_2_ReadDataC22,"ax",%progbits
+ 442              		.align	2
+ 443              		.global	MDIO_host_2_ReadDataC22
+ 444              		.thumb
+ 445              		.thumb_func
+ 446              		.type	MDIO_host_2_ReadDataC22, %function
+ 447              	MDIO_host_2_ReadDataC22:
+ 448              	.LFB72:
+ 333:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 334:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+ 335:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 336:Generated_Source\PSoC5/MDIO_host_2_my.c **** * MDIO_Host_ReadData_C22()
+ 337:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 338:Generated_Source\PSoC5/MDIO_host_2_my.c **** *******************************************************************************/
+ 339:Generated_Source\PSoC5/MDIO_host_2_my.c **** uint16 	MDIO_host_2_ReadDataC22(uint8 phy_addr, uint8 dev_addr)
+ 340:Generated_Source\PSoC5/MDIO_host_2_my.c **** {
+ 449              		.loc 1 340 0
+ 450              		.cfi_startproc
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 15
+
+
+ 451              		@ args = 0, pretend = 0, frame = 0
+ 452              		@ frame_needed = 0, uses_anonymous_args = 0
+ 453              		@ link register save eliminated.
+ 454              	.LVL25:
+ 341:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	uint16	control_bits;
+ 342:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 343:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	/* Clear and Set the control register for writing */
+ 344:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	MDIO_host_2_CONTROL_REG &= MDIO_host_2_ENABLE;
+ 455              		.loc 1 344 0
+ 456 0000 104B     		ldr	r3, .L36
+ 457 0002 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 458 0004 02F00102 		and	r2, r2, #1
+ 459 0008 1A70     		strb	r2, [r3]
+ 345:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	MDIO_host_2_CONTROL_REG |= MDIO_host_2_READ;
+ 460              		.loc 1 345 0
+ 461 000a 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 462 000c 42F00402 		orr	r2, r2, #4
+ 463 0010 1A70     		strb	r2, [r3]
+ 346:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ 347:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	/* Set the control bits and write in the fifo f0 */
+ 348:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	control_bits = 0x6003+(((uint16)phy_addr)<<7)+(((uint16)dev_addr)<<2);
+ 464              		.loc 1 348 0
+ 465 0012 8900     		lsls	r1, r1, #2
+ 466              	.LVL26:
+ 467 0014 01EBC010 		add	r0, r1, r0, lsl #7
+ 468              	.LVL27:
+ 469 0018 00F5C040 		add	r0, r0, #24576
+ 470 001c 0330     		adds	r0, r0, #3
+ 471 001e 80B2     		uxth	r0, r0
+ 472              	.LVL28:
+ 349:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	CY_SET_REG16(MDIO_host_2_FIFO_F0_PTR, control_bits);
+ 473              		.loc 1 349 0
+ 474 0020 094A     		ldr	r2, .L36+4
+ 475 0022 1080     		strh	r0, [r2]	@ movhi
+ 350:Generated_Source\PSoC5/MDIO_host_2_my.c ****     
+ 351:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	/* Start Transmission */
+ 352:Generated_Source\PSoC5/MDIO_host_2_my.c ****    	MDIO_host_2_CONTROL_REG |= MDIO_host_2_START;
+ 476              		.loc 1 352 0
+ 477 0024 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 478 0026 42F00202 		orr	r2, r2, #2
+ 479 002a 1A70     		strb	r2, [r3]
+ 480              	.L35:
+ 353:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ 354:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	while ( MDIO_host_2_StatusRegister != MDIO_host_2_MDIO_STS_CMPLT );
+ 481              		.loc 1 354 0 discriminator 1
+ 482 002c 074B     		ldr	r3, .L36+8
+ 483 002e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 484 0030 DBB2     		uxtb	r3, r3
+ 485 0032 082B     		cmp	r3, #8
+ 486 0034 FAD1     		bne	.L35
+ 355:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ 356:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	MDIO_host_2_StatusRegister = 0x00u;
+ 487              		.loc 1 356 0
+ 488 0036 054B     		ldr	r3, .L36+8
+ 489 0038 0022     		movs	r2, #0
+ 490 003a 1A70     		strb	r2, [r3]
+ 357:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 16
+
+
+ 358:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	return MDIO_host_2_data_bits;
+ 491              		.loc 1 358 0
+ 492 003c 5888     		ldrh	r0, [r3, #2]
+ 493              	.LVL29:
+ 359:Generated_Source\PSoC5/MDIO_host_2_my.c **** }
+ 494              		.loc 1 359 0
+ 495 003e 80B2     		uxth	r0, r0
+ 496 0040 7047     		bx	lr
+ 497              	.L37:
+ 498 0042 00BF     		.align	2
+ 499              	.L36:
+ 500 0044 76640040 		.word	1073767542
+ 501 0048 46650040 		.word	1073767750
+ 502 004c 00000000 		.word	.LANCHOR0
+ 503              		.cfi_endproc
+ 504              	.LFE72:
+ 505              		.size	MDIO_host_2_ReadDataC22, .-MDIO_host_2_ReadDataC22
+ 506              		.section	.text.MDIO_host_2_ClearStatus,"ax",%progbits
+ 507              		.align	2
+ 508              		.global	MDIO_host_2_ClearStatus
+ 509              		.thumb
+ 510              		.thumb_func
+ 511              		.type	MDIO_host_2_ClearStatus, %function
+ 512              	MDIO_host_2_ClearStatus:
+ 513              	.LFB73:
+ 360:Generated_Source\PSoC5/MDIO_host_2_my.c **** 
+ 361:Generated_Source\PSoC5/MDIO_host_2_my.c **** /*******************************************************************************
+ 362:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 363:Generated_Source\PSoC5/MDIO_host_2_my.c **** * MDIO_Host__ClearStatus()
+ 364:Generated_Source\PSoC5/MDIO_host_2_my.c **** *
+ 365:Generated_Source\PSoC5/MDIO_host_2_my.c **** *******************************************************************************/
+ 366:Generated_Source\PSoC5/MDIO_host_2_my.c **** void  MDIO_host_2_ClearStatus(void)
+ 367:Generated_Source\PSoC5/MDIO_host_2_my.c **** {
+ 514              		.loc 1 367 0
+ 515              		.cfi_startproc
+ 516              		@ args = 0, pretend = 0, frame = 0
+ 517              		@ frame_needed = 0, uses_anonymous_args = 0
+ 518              		@ link register save eliminated.
+ 368:Generated_Source\PSoC5/MDIO_host_2_my.c **** 	MDIO_host_2_StatusRegister = 0x00u;
+ 519              		.loc 1 368 0
+ 520 0000 0022     		movs	r2, #0
+ 521 0002 014B     		ldr	r3, .L39
+ 522 0004 1A70     		strb	r2, [r3]
+ 523 0006 7047     		bx	lr
+ 524              	.L40:
+ 525              		.align	2
+ 526              	.L39:
+ 527 0008 00000000 		.word	.LANCHOR0
+ 528              		.cfi_endproc
+ 529              	.LFE73:
+ 530              		.size	MDIO_host_2_ClearStatus, .-MDIO_host_2_ClearStatus
+ 531              		.global	MDIO_host_2_StatusRegister
+ 532              		.global	MDIO_host_2_data_bits
+ 533              		.global	MDIO_host_2_initVar
+ 534              		.bss
+ 535              		.align	1
+ 536              		.set	.LANCHOR0,. + 0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 17
+
+
+ 537              		.type	MDIO_host_2_StatusRegister, %object
+ 538              		.size	MDIO_host_2_StatusRegister, 1
+ 539              	MDIO_host_2_StatusRegister:
+ 540 0000 00       		.space	1
+ 541              		.type	MDIO_host_2_initVar, %object
+ 542              		.size	MDIO_host_2_initVar, 1
+ 543              	MDIO_host_2_initVar:
+ 544 0001 00       		.space	1
+ 545              		.type	MDIO_host_2_data_bits, %object
+ 546              		.size	MDIO_host_2_data_bits, 2
+ 547              	MDIO_host_2_data_bits:
+ 548 0002 0000     		.space	2
+ 549              		.text
+ 550              	.Letext0:
+ 551              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 552              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 553              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 554              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 555              		.section	.debug_info,"",%progbits
+ 556              	.Ldebug_info0:
+ 557 0000 51030000 		.4byte	0x351
+ 558 0004 0400     		.2byte	0x4
+ 559 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 560 000a 04       		.byte	0x4
+ 561 000b 01       		.uleb128 0x1
+ 562 000c 86010000 		.4byte	.LASF40
+ 563 0010 01       		.byte	0x1
+ 564 0011 51010000 		.4byte	.LASF41
+ 565 0015 F9020000 		.4byte	.LASF42
+ 566 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 567 001d 00000000 		.4byte	0
+ 568 0021 00000000 		.4byte	.Ldebug_line0
+ 569 0025 02       		.uleb128 0x2
+ 570 0026 01       		.byte	0x1
+ 571 0027 06       		.byte	0x6
+ 572 0028 ED020000 		.4byte	.LASF0
+ 573 002c 02       		.uleb128 0x2
+ 574 002d 01       		.byte	0x1
+ 575 002e 08       		.byte	0x8
+ 576 002f FD000000 		.4byte	.LASF1
+ 577 0033 02       		.uleb128 0x2
+ 578 0034 02       		.byte	0x2
+ 579 0035 05       		.byte	0x5
+ 580 0036 B5020000 		.4byte	.LASF2
+ 581 003a 02       		.uleb128 0x2
+ 582 003b 02       		.byte	0x2
+ 583 003c 07       		.byte	0x7
+ 584 003d 5F000000 		.4byte	.LASF3
+ 585 0041 03       		.uleb128 0x3
+ 586 0042 27000000 		.4byte	.LASF9
+ 587 0046 02       		.byte	0x2
+ 588 0047 3F       		.byte	0x3f
+ 589 0048 4C000000 		.4byte	0x4c
+ 590 004c 02       		.uleb128 0x2
+ 591 004d 04       		.byte	0x4
+ 592 004e 05       		.byte	0x5
+ 593 004f CE020000 		.4byte	.LASF4
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 18
+
+
+ 594 0053 02       		.uleb128 0x2
+ 595 0054 04       		.byte	0x4
+ 596 0055 07       		.byte	0x7
+ 597 0056 10010000 		.4byte	.LASF5
+ 598 005a 02       		.uleb128 0x2
+ 599 005b 08       		.byte	0x8
+ 600 005c 05       		.byte	0x5
+ 601 005d 8E020000 		.4byte	.LASF6
+ 602 0061 02       		.uleb128 0x2
+ 603 0062 08       		.byte	0x8
+ 604 0063 07       		.byte	0x7
+ 605 0064 3A020000 		.4byte	.LASF7
+ 606 0068 04       		.uleb128 0x4
+ 607 0069 04       		.byte	0x4
+ 608 006a 05       		.byte	0x5
+ 609 006b 696E7400 		.ascii	"int\000"
+ 610 006f 02       		.uleb128 0x2
+ 611 0070 04       		.byte	0x4
+ 612 0071 07       		.byte	0x7
+ 613 0072 14020000 		.4byte	.LASF8
+ 614 0076 03       		.uleb128 0x3
+ 615 0077 75020000 		.4byte	.LASF10
+ 616 007b 03       		.byte	0x3
+ 617 007c 2C       		.byte	0x2c
+ 618 007d 41000000 		.4byte	0x41
+ 619 0081 05       		.uleb128 0x5
+ 620 0082 BF020000 		.4byte	.LASF11
+ 621 0086 04       		.byte	0x4
+ 622 0087 9201     		.2byte	0x192
+ 623 0089 2C000000 		.4byte	0x2c
+ 624 008d 05       		.uleb128 0x5
+ 625 008e 4A010000 		.4byte	.LASF12
+ 626 0092 04       		.byte	0x4
+ 627 0093 9301     		.2byte	0x193
+ 628 0095 3A000000 		.4byte	0x3a
+ 629 0099 02       		.uleb128 0x2
+ 630 009a 04       		.byte	0x4
+ 631 009b 04       		.byte	0x4
+ 632 009c E5000000 		.4byte	.LASF13
+ 633 00a0 02       		.uleb128 0x2
+ 634 00a1 08       		.byte	0x8
+ 635 00a2 04       		.byte	0x4
+ 636 00a3 43010000 		.4byte	.LASF14
+ 637 00a7 02       		.uleb128 0x2
+ 638 00a8 01       		.byte	0x1
+ 639 00a9 08       		.byte	0x8
+ 640 00aa 9C020000 		.4byte	.LASF15
+ 641 00ae 05       		.uleb128 0x5
+ 642 00af 0B010000 		.4byte	.LASF16
+ 643 00b3 04       		.byte	0x4
+ 644 00b4 3C02     		.2byte	0x23c
+ 645 00b6 BA000000 		.4byte	0xba
+ 646 00ba 06       		.uleb128 0x6
+ 647 00bb 81000000 		.4byte	0x81
+ 648 00bf 05       		.uleb128 0x5
+ 649 00c0 00000000 		.4byte	.LASF17
+ 650 00c4 04       		.byte	0x4
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 19
+
+
+ 651 00c5 3D02     		.2byte	0x23d
+ 652 00c7 CB000000 		.4byte	0xcb
+ 653 00cb 06       		.uleb128 0x6
+ 654 00cc 8D000000 		.4byte	0x8d
+ 655 00d0 02       		.uleb128 0x2
+ 656 00d1 04       		.byte	0x4
+ 657 00d2 07       		.byte	0x7
+ 658 00d3 85020000 		.4byte	.LASF18
+ 659 00d7 07       		.uleb128 0x7
+ 660 00d8 46030000 		.4byte	.LASF19
+ 661 00dc 01       		.byte	0x1
+ 662 00dd 48       		.byte	0x48
+ 663 00de 00000000 		.4byte	.LFB64
+ 664 00e2 1C000000 		.4byte	.LFE64-.LFB64
+ 665 00e6 01       		.uleb128 0x1
+ 666 00e7 9C       		.byte	0x9c
+ 667 00e8 07       		.uleb128 0x7
+ 668 00e9 51020000 		.4byte	.LASF20
+ 669 00ed 01       		.byte	0x1
+ 670 00ee 7D       		.byte	0x7d
+ 671 00ef 00000000 		.4byte	.LFB66
+ 672 00f3 24000000 		.4byte	.LFE66-.LFB66
+ 673 00f7 01       		.uleb128 0x1
+ 674 00f8 9C       		.byte	0x9c
+ 675 00f9 08       		.uleb128 0x8
+ 676 00fa 06000000 		.4byte	.LASF43
+ 677 00fe 01       		.byte	0x1
+ 678 00ff CC       		.byte	0xcc
+ 679 0100 81000000 		.4byte	0x81
+ 680 0104 00000000 		.4byte	.LFB67
+ 681 0108 0C000000 		.4byte	.LFE67-.LFB67
+ 682 010c 01       		.uleb128 0x1
+ 683 010d 9C       		.byte	0x9c
+ 684 010e 07       		.uleb128 0x7
+ 685 010f A3000000 		.4byte	.LASF21
+ 686 0113 01       		.byte	0x1
+ 687 0114 E2       		.byte	0xe2
+ 688 0115 00000000 		.4byte	.LFB68
+ 689 0119 34000000 		.4byte	.LFE68-.LFB68
+ 690 011d 01       		.uleb128 0x1
+ 691 011e 9C       		.byte	0x9c
+ 692 011f 09       		.uleb128 0x9
+ 693 0120 64020000 		.4byte	.LASF22
+ 694 0124 01       		.byte	0x1
+ 695 0125 63       		.byte	0x63
+ 696 0126 00000000 		.4byte	.LFB65
+ 697 012a 0C000000 		.4byte	.LFE65-.LFB65
+ 698 012e 01       		.uleb128 0x1
+ 699 012f 9C       		.byte	0x9c
+ 700 0130 47010000 		.4byte	0x147
+ 701 0134 0A       		.uleb128 0xa
+ 702 0135 06000000 		.4byte	.LVL0
+ 703 0139 E8000000 		.4byte	0xe8
+ 704 013d 0A       		.uleb128 0xa
+ 705 013e 0A000000 		.4byte	.LVL1
+ 706 0142 0E010000 		.4byte	0x10e
+ 707 0146 00       		.byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 20
+
+
+ 708 0147 09       		.uleb128 0x9
+ 709 0148 EB000000 		.4byte	.LASF23
+ 710 014c 01       		.byte	0x1
+ 711 014d 2E       		.byte	0x2e
+ 712 014e 00000000 		.4byte	.LFB63
+ 713 0152 1C000000 		.4byte	.LFE63-.LFB63
+ 714 0156 01       		.uleb128 0x1
+ 715 0157 9C       		.byte	0x9c
+ 716 0158 6F010000 		.4byte	0x16f
+ 717 015c 0A       		.uleb128 0xa
+ 718 015d 0C000000 		.4byte	.LVL2
+ 719 0161 1F010000 		.4byte	0x11f
+ 720 0165 0A       		.uleb128 0xa
+ 721 0166 16000000 		.4byte	.LVL3
+ 722 016a E8000000 		.4byte	0xe8
+ 723 016e 00       		.byte	0
+ 724 016f 0B       		.uleb128 0xb
+ 725 0170 72000000 		.4byte	.LASF30
+ 726 0174 01       		.byte	0x1
+ 727 0175 F2       		.byte	0xf2
+ 728 0176 81000000 		.4byte	0x81
+ 729 017a 00000000 		.4byte	.LFB69
+ 730 017e 60000000 		.4byte	.LFE69-.LFB69
+ 731 0182 01       		.uleb128 0x1
+ 732 0183 9C       		.byte	0x9c
+ 733 0184 E1010000 		.4byte	0x1e1
+ 734 0188 0C       		.uleb128 0xc
+ 735 0189 7D020000 		.4byte	.LASF24
+ 736 018d 01       		.byte	0x1
+ 737 018e F2       		.byte	0xf2
+ 738 018f 81000000 		.4byte	0x81
+ 739 0193 00000000 		.4byte	.LLST0
+ 740 0197 0C       		.uleb128 0xc
+ 741 0198 D7020000 		.4byte	.LASF25
+ 742 019c 01       		.byte	0x1
+ 743 019d F2       		.byte	0xf2
+ 744 019e 81000000 		.4byte	0x81
+ 745 01a2 21000000 		.4byte	.LLST1
+ 746 01a6 0C       		.uleb128 0xc
+ 747 01a7 C5020000 		.4byte	.LASF26
+ 748 01ab 01       		.byte	0x1
+ 749 01ac F2       		.byte	0xf2
+ 750 01ad 81000000 		.4byte	0x81
+ 751 01b1 42000000 		.4byte	.LLST2
+ 752 01b5 0C       		.uleb128 0xc
+ 753 01b6 3A010000 		.4byte	.LASF27
+ 754 01ba 01       		.byte	0x1
+ 755 01bb F2       		.byte	0xf2
+ 756 01bc 8D000000 		.4byte	0x8d
+ 757 01c0 63000000 		.4byte	.LLST3
+ 758 01c4 0D       		.uleb128 0xd
+ 759 01c5 E0020000 		.4byte	.LASF28
+ 760 01c9 01       		.byte	0x1
+ 761 01ca F4       		.byte	0xf4
+ 762 01cb 8D000000 		.4byte	0x8d
+ 763 01cf 90000000 		.4byte	.LLST4
+ 764 01d3 0E       		.uleb128 0xe
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 21
+
+
+ 765 01d4 1C000000 		.4byte	.LASF29
+ 766 01d8 01       		.byte	0x1
+ 767 01d9 F5       		.byte	0xf5
+ 768 01da 81000000 		.4byte	0x81
+ 769 01de 01       		.uleb128 0x1
+ 770 01df 53       		.byte	0x53
+ 771 01e0 00       		.byte	0
+ 772 01e1 0F       		.uleb128 0xf
+ 773 01e2 31000000 		.4byte	.LASF31
+ 774 01e6 01       		.byte	0x1
+ 775 01e7 1901     		.2byte	0x119
+ 776 01e9 81000000 		.4byte	0x81
+ 777 01ed 00000000 		.4byte	.LFB70
+ 778 01f1 64000000 		.4byte	.LFE70-.LFB70
+ 779 01f5 01       		.uleb128 0x1
+ 780 01f6 9C       		.byte	0x9c
+ 781 01f7 58020000 		.4byte	0x258
+ 782 01fb 10       		.uleb128 0x10
+ 783 01fc 7D020000 		.4byte	.LASF24
+ 784 0200 01       		.byte	0x1
+ 785 0201 1901     		.2byte	0x119
+ 786 0203 81000000 		.4byte	0x81
+ 787 0207 A3000000 		.4byte	.LLST5
+ 788 020b 10       		.uleb128 0x10
+ 789 020c D7020000 		.4byte	.LASF25
+ 790 0210 01       		.byte	0x1
+ 791 0211 1901     		.2byte	0x119
+ 792 0213 81000000 		.4byte	0x81
+ 793 0217 C4000000 		.4byte	.LLST6
+ 794 021b 10       		.uleb128 0x10
+ 795 021c C5020000 		.4byte	.LASF26
+ 796 0220 01       		.byte	0x1
+ 797 0221 1901     		.2byte	0x119
+ 798 0223 81000000 		.4byte	0x81
+ 799 0227 E5000000 		.4byte	.LLST7
+ 800 022b 11       		.uleb128 0x11
+ 801 022c C2000000 		.4byte	.LASF32
+ 802 0230 01       		.byte	0x1
+ 803 0231 1901     		.2byte	0x119
+ 804 0233 58020000 		.4byte	0x258
+ 805 0237 01       		.uleb128 0x1
+ 806 0238 53       		.byte	0x53
+ 807 0239 12       		.uleb128 0x12
+ 808 023a E0020000 		.4byte	.LASF28
+ 809 023e 01       		.byte	0x1
+ 810 023f 1B01     		.2byte	0x11b
+ 811 0241 8D000000 		.4byte	0x8d
+ 812 0245 06010000 		.4byte	.LLST8
+ 813 0249 13       		.uleb128 0x13
+ 814 024a 1C000000 		.4byte	.LASF29
+ 815 024e 01       		.byte	0x1
+ 816 024f 1C01     		.2byte	0x11c
+ 817 0251 81000000 		.4byte	0x81
+ 818 0255 01       		.uleb128 0x1
+ 819 0256 51       		.byte	0x51
+ 820 0257 00       		.byte	0
+ 821 0258 14       		.uleb128 0x14
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 22
+
+
+ 822 0259 04       		.byte	0x4
+ 823 025a 8D000000 		.4byte	0x8d
+ 824 025e 15       		.uleb128 0x15
+ 825 025f 21020000 		.4byte	.LASF33
+ 826 0263 01       		.byte	0x1
+ 827 0264 3B01     		.2byte	0x13b
+ 828 0266 00000000 		.4byte	.LFB71
+ 829 026a 3C000000 		.4byte	.LFE71-.LFB71
+ 830 026e 01       		.uleb128 0x1
+ 831 026f 9C       		.byte	0x9c
+ 832 0270 B3020000 		.4byte	0x2b3
+ 833 0274 10       		.uleb128 0x10
+ 834 0275 D7020000 		.4byte	.LASF25
+ 835 0279 01       		.byte	0x1
+ 836 027a 3B01     		.2byte	0x13b
+ 837 027c 81000000 		.4byte	0x81
+ 838 0280 19010000 		.4byte	.LLST9
+ 839 0284 10       		.uleb128 0x10
+ 840 0285 C5020000 		.4byte	.LASF26
+ 841 0289 01       		.byte	0x1
+ 842 028a 3B01     		.2byte	0x13b
+ 843 028c 81000000 		.4byte	0x81
+ 844 0290 3A010000 		.4byte	.LLST10
+ 845 0294 10       		.uleb128 0x10
+ 846 0295 3A010000 		.4byte	.LASF27
+ 847 0299 01       		.byte	0x1
+ 848 029a 3B01     		.2byte	0x13b
+ 849 029c 8D000000 		.4byte	0x8d
+ 850 02a0 5B010000 		.4byte	.LLST11
+ 851 02a4 13       		.uleb128 0x13
+ 852 02a5 E0020000 		.4byte	.LASF28
+ 853 02a9 01       		.byte	0x1
+ 854 02aa 3D01     		.2byte	0x13d
+ 855 02ac 8D000000 		.4byte	0x8d
+ 856 02b0 01       		.uleb128 0x1
+ 857 02b1 50       		.byte	0x50
+ 858 02b2 00       		.byte	0
+ 859 02b3 0F       		.uleb128 0xf
+ 860 02b4 22010000 		.4byte	.LASF34
+ 861 02b8 01       		.byte	0x1
+ 862 02b9 5301     		.2byte	0x153
+ 863 02bb 8D000000 		.4byte	0x8d
+ 864 02bf 00000000 		.4byte	.LFB72
+ 865 02c3 50000000 		.4byte	.LFE72-.LFB72
+ 866 02c7 01       		.uleb128 0x1
+ 867 02c8 9C       		.byte	0x9c
+ 868 02c9 FE020000 		.4byte	0x2fe
+ 869 02cd 10       		.uleb128 0x10
+ 870 02ce D7020000 		.4byte	.LASF25
+ 871 02d2 01       		.byte	0x1
+ 872 02d3 5301     		.2byte	0x153
+ 873 02d5 81000000 		.4byte	0x81
+ 874 02d9 88010000 		.4byte	.LLST12
+ 875 02dd 10       		.uleb128 0x10
+ 876 02de C5020000 		.4byte	.LASF26
+ 877 02e2 01       		.byte	0x1
+ 878 02e3 5301     		.2byte	0x153
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 23
+
+
+ 879 02e5 81000000 		.4byte	0x81
+ 880 02e9 A9010000 		.4byte	.LLST13
+ 881 02ed 12       		.uleb128 0x12
+ 882 02ee E0020000 		.4byte	.LASF28
+ 883 02f2 01       		.byte	0x1
+ 884 02f3 5501     		.2byte	0x155
+ 885 02f5 8D000000 		.4byte	0x8d
+ 886 02f9 CA010000 		.4byte	.LLST14
+ 887 02fd 00       		.byte	0
+ 888 02fe 16       		.uleb128 0x16
+ 889 02ff 8B000000 		.4byte	.LASF35
+ 890 0303 01       		.byte	0x1
+ 891 0304 6E01     		.2byte	0x16e
+ 892 0306 00000000 		.4byte	.LFB73
+ 893 030a 0C000000 		.4byte	.LFE73-.LFB73
+ 894 030e 01       		.uleb128 0x1
+ 895 030f 9C       		.byte	0x9c
+ 896 0310 17       		.uleb128 0x17
+ 897 0311 79010000 		.4byte	.LASF36
+ 898 0315 05       		.byte	0x5
+ 899 0316 9606     		.2byte	0x696
+ 900 0318 1C030000 		.4byte	0x31c
+ 901 031c 06       		.uleb128 0x6
+ 902 031d 76000000 		.4byte	0x76
+ 903 0321 18       		.uleb128 0x18
+ 904 0322 A1020000 		.4byte	.LASF37
+ 905 0326 01       		.byte	0x1
+ 906 0327 17       		.byte	0x17
+ 907 0328 81000000 		.4byte	0x81
+ 908 032c 05       		.uleb128 0x5
+ 909 032d 03       		.byte	0x3
+ 910 032e 00000000 		.4byte	MDIO_host_2_initVar
+ 911 0332 18       		.uleb128 0x18
+ 912 0333 49000000 		.4byte	.LASF38
+ 913 0337 01       		.byte	0x1
+ 914 0338 1A       		.byte	0x1a
+ 915 0339 CB000000 		.4byte	0xcb
+ 916 033d 05       		.uleb128 0x5
+ 917 033e 03       		.byte	0x3
+ 918 033f 00000000 		.4byte	MDIO_host_2_data_bits
+ 919 0343 18       		.uleb128 0x18
+ 920 0344 CA000000 		.4byte	.LASF39
+ 921 0348 01       		.byte	0x1
+ 922 0349 1D       		.byte	0x1d
+ 923 034a BA000000 		.4byte	0xba
+ 924 034e 05       		.uleb128 0x5
+ 925 034f 03       		.byte	0x3
+ 926 0350 00000000 		.4byte	MDIO_host_2_StatusRegister
+ 927 0354 00       		.byte	0
+ 928              		.section	.debug_abbrev,"",%progbits
+ 929              	.Ldebug_abbrev0:
+ 930 0000 01       		.uleb128 0x1
+ 931 0001 11       		.uleb128 0x11
+ 932 0002 01       		.byte	0x1
+ 933 0003 25       		.uleb128 0x25
+ 934 0004 0E       		.uleb128 0xe
+ 935 0005 13       		.uleb128 0x13
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 24
+
+
+ 936 0006 0B       		.uleb128 0xb
+ 937 0007 03       		.uleb128 0x3
+ 938 0008 0E       		.uleb128 0xe
+ 939 0009 1B       		.uleb128 0x1b
+ 940 000a 0E       		.uleb128 0xe
+ 941 000b 55       		.uleb128 0x55
+ 942 000c 17       		.uleb128 0x17
+ 943 000d 11       		.uleb128 0x11
+ 944 000e 01       		.uleb128 0x1
+ 945 000f 10       		.uleb128 0x10
+ 946 0010 17       		.uleb128 0x17
+ 947 0011 00       		.byte	0
+ 948 0012 00       		.byte	0
+ 949 0013 02       		.uleb128 0x2
+ 950 0014 24       		.uleb128 0x24
+ 951 0015 00       		.byte	0
+ 952 0016 0B       		.uleb128 0xb
+ 953 0017 0B       		.uleb128 0xb
+ 954 0018 3E       		.uleb128 0x3e
+ 955 0019 0B       		.uleb128 0xb
+ 956 001a 03       		.uleb128 0x3
+ 957 001b 0E       		.uleb128 0xe
+ 958 001c 00       		.byte	0
+ 959 001d 00       		.byte	0
+ 960 001e 03       		.uleb128 0x3
+ 961 001f 16       		.uleb128 0x16
+ 962 0020 00       		.byte	0
+ 963 0021 03       		.uleb128 0x3
+ 964 0022 0E       		.uleb128 0xe
+ 965 0023 3A       		.uleb128 0x3a
+ 966 0024 0B       		.uleb128 0xb
+ 967 0025 3B       		.uleb128 0x3b
+ 968 0026 0B       		.uleb128 0xb
+ 969 0027 49       		.uleb128 0x49
+ 970 0028 13       		.uleb128 0x13
+ 971 0029 00       		.byte	0
+ 972 002a 00       		.byte	0
+ 973 002b 04       		.uleb128 0x4
+ 974 002c 24       		.uleb128 0x24
+ 975 002d 00       		.byte	0
+ 976 002e 0B       		.uleb128 0xb
+ 977 002f 0B       		.uleb128 0xb
+ 978 0030 3E       		.uleb128 0x3e
+ 979 0031 0B       		.uleb128 0xb
+ 980 0032 03       		.uleb128 0x3
+ 981 0033 08       		.uleb128 0x8
+ 982 0034 00       		.byte	0
+ 983 0035 00       		.byte	0
+ 984 0036 05       		.uleb128 0x5
+ 985 0037 16       		.uleb128 0x16
+ 986 0038 00       		.byte	0
+ 987 0039 03       		.uleb128 0x3
+ 988 003a 0E       		.uleb128 0xe
+ 989 003b 3A       		.uleb128 0x3a
+ 990 003c 0B       		.uleb128 0xb
+ 991 003d 3B       		.uleb128 0x3b
+ 992 003e 05       		.uleb128 0x5
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 25
+
+
+ 993 003f 49       		.uleb128 0x49
+ 994 0040 13       		.uleb128 0x13
+ 995 0041 00       		.byte	0
+ 996 0042 00       		.byte	0
+ 997 0043 06       		.uleb128 0x6
+ 998 0044 35       		.uleb128 0x35
+ 999 0045 00       		.byte	0
+ 1000 0046 49       		.uleb128 0x49
+ 1001 0047 13       		.uleb128 0x13
+ 1002 0048 00       		.byte	0
+ 1003 0049 00       		.byte	0
+ 1004 004a 07       		.uleb128 0x7
+ 1005 004b 2E       		.uleb128 0x2e
+ 1006 004c 00       		.byte	0
+ 1007 004d 3F       		.uleb128 0x3f
+ 1008 004e 19       		.uleb128 0x19
+ 1009 004f 03       		.uleb128 0x3
+ 1010 0050 0E       		.uleb128 0xe
+ 1011 0051 3A       		.uleb128 0x3a
+ 1012 0052 0B       		.uleb128 0xb
+ 1013 0053 3B       		.uleb128 0x3b
+ 1014 0054 0B       		.uleb128 0xb
+ 1015 0055 27       		.uleb128 0x27
+ 1016 0056 19       		.uleb128 0x19
+ 1017 0057 11       		.uleb128 0x11
+ 1018 0058 01       		.uleb128 0x1
+ 1019 0059 12       		.uleb128 0x12
+ 1020 005a 06       		.uleb128 0x6
+ 1021 005b 40       		.uleb128 0x40
+ 1022 005c 18       		.uleb128 0x18
+ 1023 005d 9742     		.uleb128 0x2117
+ 1024 005f 19       		.uleb128 0x19
+ 1025 0060 00       		.byte	0
+ 1026 0061 00       		.byte	0
+ 1027 0062 08       		.uleb128 0x8
+ 1028 0063 2E       		.uleb128 0x2e
+ 1029 0064 00       		.byte	0
+ 1030 0065 3F       		.uleb128 0x3f
+ 1031 0066 19       		.uleb128 0x19
+ 1032 0067 03       		.uleb128 0x3
+ 1033 0068 0E       		.uleb128 0xe
+ 1034 0069 3A       		.uleb128 0x3a
+ 1035 006a 0B       		.uleb128 0xb
+ 1036 006b 3B       		.uleb128 0x3b
+ 1037 006c 0B       		.uleb128 0xb
+ 1038 006d 27       		.uleb128 0x27
+ 1039 006e 19       		.uleb128 0x19
+ 1040 006f 49       		.uleb128 0x49
+ 1041 0070 13       		.uleb128 0x13
+ 1042 0071 11       		.uleb128 0x11
+ 1043 0072 01       		.uleb128 0x1
+ 1044 0073 12       		.uleb128 0x12
+ 1045 0074 06       		.uleb128 0x6
+ 1046 0075 40       		.uleb128 0x40
+ 1047 0076 18       		.uleb128 0x18
+ 1048 0077 9742     		.uleb128 0x2117
+ 1049 0079 19       		.uleb128 0x19
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 26
+
+
+ 1050 007a 00       		.byte	0
+ 1051 007b 00       		.byte	0
+ 1052 007c 09       		.uleb128 0x9
+ 1053 007d 2E       		.uleb128 0x2e
+ 1054 007e 01       		.byte	0x1
+ 1055 007f 3F       		.uleb128 0x3f
+ 1056 0080 19       		.uleb128 0x19
+ 1057 0081 03       		.uleb128 0x3
+ 1058 0082 0E       		.uleb128 0xe
+ 1059 0083 3A       		.uleb128 0x3a
+ 1060 0084 0B       		.uleb128 0xb
+ 1061 0085 3B       		.uleb128 0x3b
+ 1062 0086 0B       		.uleb128 0xb
+ 1063 0087 27       		.uleb128 0x27
+ 1064 0088 19       		.uleb128 0x19
+ 1065 0089 11       		.uleb128 0x11
+ 1066 008a 01       		.uleb128 0x1
+ 1067 008b 12       		.uleb128 0x12
+ 1068 008c 06       		.uleb128 0x6
+ 1069 008d 40       		.uleb128 0x40
+ 1070 008e 18       		.uleb128 0x18
+ 1071 008f 9742     		.uleb128 0x2117
+ 1072 0091 19       		.uleb128 0x19
+ 1073 0092 01       		.uleb128 0x1
+ 1074 0093 13       		.uleb128 0x13
+ 1075 0094 00       		.byte	0
+ 1076 0095 00       		.byte	0
+ 1077 0096 0A       		.uleb128 0xa
+ 1078 0097 898201   		.uleb128 0x4109
+ 1079 009a 00       		.byte	0
+ 1080 009b 11       		.uleb128 0x11
+ 1081 009c 01       		.uleb128 0x1
+ 1082 009d 31       		.uleb128 0x31
+ 1083 009e 13       		.uleb128 0x13
+ 1084 009f 00       		.byte	0
+ 1085 00a0 00       		.byte	0
+ 1086 00a1 0B       		.uleb128 0xb
+ 1087 00a2 2E       		.uleb128 0x2e
+ 1088 00a3 01       		.byte	0x1
+ 1089 00a4 3F       		.uleb128 0x3f
+ 1090 00a5 19       		.uleb128 0x19
+ 1091 00a6 03       		.uleb128 0x3
+ 1092 00a7 0E       		.uleb128 0xe
+ 1093 00a8 3A       		.uleb128 0x3a
+ 1094 00a9 0B       		.uleb128 0xb
+ 1095 00aa 3B       		.uleb128 0x3b
+ 1096 00ab 0B       		.uleb128 0xb
+ 1097 00ac 27       		.uleb128 0x27
+ 1098 00ad 19       		.uleb128 0x19
+ 1099 00ae 49       		.uleb128 0x49
+ 1100 00af 13       		.uleb128 0x13
+ 1101 00b0 11       		.uleb128 0x11
+ 1102 00b1 01       		.uleb128 0x1
+ 1103 00b2 12       		.uleb128 0x12
+ 1104 00b3 06       		.uleb128 0x6
+ 1105 00b4 40       		.uleb128 0x40
+ 1106 00b5 18       		.uleb128 0x18
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 27
+
+
+ 1107 00b6 9742     		.uleb128 0x2117
+ 1108 00b8 19       		.uleb128 0x19
+ 1109 00b9 01       		.uleb128 0x1
+ 1110 00ba 13       		.uleb128 0x13
+ 1111 00bb 00       		.byte	0
+ 1112 00bc 00       		.byte	0
+ 1113 00bd 0C       		.uleb128 0xc
+ 1114 00be 05       		.uleb128 0x5
+ 1115 00bf 00       		.byte	0
+ 1116 00c0 03       		.uleb128 0x3
+ 1117 00c1 0E       		.uleb128 0xe
+ 1118 00c2 3A       		.uleb128 0x3a
+ 1119 00c3 0B       		.uleb128 0xb
+ 1120 00c4 3B       		.uleb128 0x3b
+ 1121 00c5 0B       		.uleb128 0xb
+ 1122 00c6 49       		.uleb128 0x49
+ 1123 00c7 13       		.uleb128 0x13
+ 1124 00c8 02       		.uleb128 0x2
+ 1125 00c9 17       		.uleb128 0x17
+ 1126 00ca 00       		.byte	0
+ 1127 00cb 00       		.byte	0
+ 1128 00cc 0D       		.uleb128 0xd
+ 1129 00cd 34       		.uleb128 0x34
+ 1130 00ce 00       		.byte	0
+ 1131 00cf 03       		.uleb128 0x3
+ 1132 00d0 0E       		.uleb128 0xe
+ 1133 00d1 3A       		.uleb128 0x3a
+ 1134 00d2 0B       		.uleb128 0xb
+ 1135 00d3 3B       		.uleb128 0x3b
+ 1136 00d4 0B       		.uleb128 0xb
+ 1137 00d5 49       		.uleb128 0x49
+ 1138 00d6 13       		.uleb128 0x13
+ 1139 00d7 02       		.uleb128 0x2
+ 1140 00d8 17       		.uleb128 0x17
+ 1141 00d9 00       		.byte	0
+ 1142 00da 00       		.byte	0
+ 1143 00db 0E       		.uleb128 0xe
+ 1144 00dc 34       		.uleb128 0x34
+ 1145 00dd 00       		.byte	0
+ 1146 00de 03       		.uleb128 0x3
+ 1147 00df 0E       		.uleb128 0xe
+ 1148 00e0 3A       		.uleb128 0x3a
+ 1149 00e1 0B       		.uleb128 0xb
+ 1150 00e2 3B       		.uleb128 0x3b
+ 1151 00e3 0B       		.uleb128 0xb
+ 1152 00e4 49       		.uleb128 0x49
+ 1153 00e5 13       		.uleb128 0x13
+ 1154 00e6 02       		.uleb128 0x2
+ 1155 00e7 18       		.uleb128 0x18
+ 1156 00e8 00       		.byte	0
+ 1157 00e9 00       		.byte	0
+ 1158 00ea 0F       		.uleb128 0xf
+ 1159 00eb 2E       		.uleb128 0x2e
+ 1160 00ec 01       		.byte	0x1
+ 1161 00ed 3F       		.uleb128 0x3f
+ 1162 00ee 19       		.uleb128 0x19
+ 1163 00ef 03       		.uleb128 0x3
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 28
+
+
+ 1164 00f0 0E       		.uleb128 0xe
+ 1165 00f1 3A       		.uleb128 0x3a
+ 1166 00f2 0B       		.uleb128 0xb
+ 1167 00f3 3B       		.uleb128 0x3b
+ 1168 00f4 05       		.uleb128 0x5
+ 1169 00f5 27       		.uleb128 0x27
+ 1170 00f6 19       		.uleb128 0x19
+ 1171 00f7 49       		.uleb128 0x49
+ 1172 00f8 13       		.uleb128 0x13
+ 1173 00f9 11       		.uleb128 0x11
+ 1174 00fa 01       		.uleb128 0x1
+ 1175 00fb 12       		.uleb128 0x12
+ 1176 00fc 06       		.uleb128 0x6
+ 1177 00fd 40       		.uleb128 0x40
+ 1178 00fe 18       		.uleb128 0x18
+ 1179 00ff 9742     		.uleb128 0x2117
+ 1180 0101 19       		.uleb128 0x19
+ 1181 0102 01       		.uleb128 0x1
+ 1182 0103 13       		.uleb128 0x13
+ 1183 0104 00       		.byte	0
+ 1184 0105 00       		.byte	0
+ 1185 0106 10       		.uleb128 0x10
+ 1186 0107 05       		.uleb128 0x5
+ 1187 0108 00       		.byte	0
+ 1188 0109 03       		.uleb128 0x3
+ 1189 010a 0E       		.uleb128 0xe
+ 1190 010b 3A       		.uleb128 0x3a
+ 1191 010c 0B       		.uleb128 0xb
+ 1192 010d 3B       		.uleb128 0x3b
+ 1193 010e 05       		.uleb128 0x5
+ 1194 010f 49       		.uleb128 0x49
+ 1195 0110 13       		.uleb128 0x13
+ 1196 0111 02       		.uleb128 0x2
+ 1197 0112 17       		.uleb128 0x17
+ 1198 0113 00       		.byte	0
+ 1199 0114 00       		.byte	0
+ 1200 0115 11       		.uleb128 0x11
+ 1201 0116 05       		.uleb128 0x5
+ 1202 0117 00       		.byte	0
+ 1203 0118 03       		.uleb128 0x3
+ 1204 0119 0E       		.uleb128 0xe
+ 1205 011a 3A       		.uleb128 0x3a
+ 1206 011b 0B       		.uleb128 0xb
+ 1207 011c 3B       		.uleb128 0x3b
+ 1208 011d 05       		.uleb128 0x5
+ 1209 011e 49       		.uleb128 0x49
+ 1210 011f 13       		.uleb128 0x13
+ 1211 0120 02       		.uleb128 0x2
+ 1212 0121 18       		.uleb128 0x18
+ 1213 0122 00       		.byte	0
+ 1214 0123 00       		.byte	0
+ 1215 0124 12       		.uleb128 0x12
+ 1216 0125 34       		.uleb128 0x34
+ 1217 0126 00       		.byte	0
+ 1218 0127 03       		.uleb128 0x3
+ 1219 0128 0E       		.uleb128 0xe
+ 1220 0129 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 29
+
+
+ 1221 012a 0B       		.uleb128 0xb
+ 1222 012b 3B       		.uleb128 0x3b
+ 1223 012c 05       		.uleb128 0x5
+ 1224 012d 49       		.uleb128 0x49
+ 1225 012e 13       		.uleb128 0x13
+ 1226 012f 02       		.uleb128 0x2
+ 1227 0130 17       		.uleb128 0x17
+ 1228 0131 00       		.byte	0
+ 1229 0132 00       		.byte	0
+ 1230 0133 13       		.uleb128 0x13
+ 1231 0134 34       		.uleb128 0x34
+ 1232 0135 00       		.byte	0
+ 1233 0136 03       		.uleb128 0x3
+ 1234 0137 0E       		.uleb128 0xe
+ 1235 0138 3A       		.uleb128 0x3a
+ 1236 0139 0B       		.uleb128 0xb
+ 1237 013a 3B       		.uleb128 0x3b
+ 1238 013b 05       		.uleb128 0x5
+ 1239 013c 49       		.uleb128 0x49
+ 1240 013d 13       		.uleb128 0x13
+ 1241 013e 02       		.uleb128 0x2
+ 1242 013f 18       		.uleb128 0x18
+ 1243 0140 00       		.byte	0
+ 1244 0141 00       		.byte	0
+ 1245 0142 14       		.uleb128 0x14
+ 1246 0143 0F       		.uleb128 0xf
+ 1247 0144 00       		.byte	0
+ 1248 0145 0B       		.uleb128 0xb
+ 1249 0146 0B       		.uleb128 0xb
+ 1250 0147 49       		.uleb128 0x49
+ 1251 0148 13       		.uleb128 0x13
+ 1252 0149 00       		.byte	0
+ 1253 014a 00       		.byte	0
+ 1254 014b 15       		.uleb128 0x15
+ 1255 014c 2E       		.uleb128 0x2e
+ 1256 014d 01       		.byte	0x1
+ 1257 014e 3F       		.uleb128 0x3f
+ 1258 014f 19       		.uleb128 0x19
+ 1259 0150 03       		.uleb128 0x3
+ 1260 0151 0E       		.uleb128 0xe
+ 1261 0152 3A       		.uleb128 0x3a
+ 1262 0153 0B       		.uleb128 0xb
+ 1263 0154 3B       		.uleb128 0x3b
+ 1264 0155 05       		.uleb128 0x5
+ 1265 0156 27       		.uleb128 0x27
+ 1266 0157 19       		.uleb128 0x19
+ 1267 0158 11       		.uleb128 0x11
+ 1268 0159 01       		.uleb128 0x1
+ 1269 015a 12       		.uleb128 0x12
+ 1270 015b 06       		.uleb128 0x6
+ 1271 015c 40       		.uleb128 0x40
+ 1272 015d 18       		.uleb128 0x18
+ 1273 015e 9742     		.uleb128 0x2117
+ 1274 0160 19       		.uleb128 0x19
+ 1275 0161 01       		.uleb128 0x1
+ 1276 0162 13       		.uleb128 0x13
+ 1277 0163 00       		.byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 30
+
+
+ 1278 0164 00       		.byte	0
+ 1279 0165 16       		.uleb128 0x16
+ 1280 0166 2E       		.uleb128 0x2e
+ 1281 0167 00       		.byte	0
+ 1282 0168 3F       		.uleb128 0x3f
+ 1283 0169 19       		.uleb128 0x19
+ 1284 016a 03       		.uleb128 0x3
+ 1285 016b 0E       		.uleb128 0xe
+ 1286 016c 3A       		.uleb128 0x3a
+ 1287 016d 0B       		.uleb128 0xb
+ 1288 016e 3B       		.uleb128 0x3b
+ 1289 016f 05       		.uleb128 0x5
+ 1290 0170 27       		.uleb128 0x27
+ 1291 0171 19       		.uleb128 0x19
+ 1292 0172 11       		.uleb128 0x11
+ 1293 0173 01       		.uleb128 0x1
+ 1294 0174 12       		.uleb128 0x12
+ 1295 0175 06       		.uleb128 0x6
+ 1296 0176 40       		.uleb128 0x40
+ 1297 0177 18       		.uleb128 0x18
+ 1298 0178 9742     		.uleb128 0x2117
+ 1299 017a 19       		.uleb128 0x19
+ 1300 017b 00       		.byte	0
+ 1301 017c 00       		.byte	0
+ 1302 017d 17       		.uleb128 0x17
+ 1303 017e 34       		.uleb128 0x34
+ 1304 017f 00       		.byte	0
+ 1305 0180 03       		.uleb128 0x3
+ 1306 0181 0E       		.uleb128 0xe
+ 1307 0182 3A       		.uleb128 0x3a
+ 1308 0183 0B       		.uleb128 0xb
+ 1309 0184 3B       		.uleb128 0x3b
+ 1310 0185 05       		.uleb128 0x5
+ 1311 0186 49       		.uleb128 0x49
+ 1312 0187 13       		.uleb128 0x13
+ 1313 0188 3F       		.uleb128 0x3f
+ 1314 0189 19       		.uleb128 0x19
+ 1315 018a 3C       		.uleb128 0x3c
+ 1316 018b 19       		.uleb128 0x19
+ 1317 018c 00       		.byte	0
+ 1318 018d 00       		.byte	0
+ 1319 018e 18       		.uleb128 0x18
+ 1320 018f 34       		.uleb128 0x34
+ 1321 0190 00       		.byte	0
+ 1322 0191 03       		.uleb128 0x3
+ 1323 0192 0E       		.uleb128 0xe
+ 1324 0193 3A       		.uleb128 0x3a
+ 1325 0194 0B       		.uleb128 0xb
+ 1326 0195 3B       		.uleb128 0x3b
+ 1327 0196 0B       		.uleb128 0xb
+ 1328 0197 49       		.uleb128 0x49
+ 1329 0198 13       		.uleb128 0x13
+ 1330 0199 3F       		.uleb128 0x3f
+ 1331 019a 19       		.uleb128 0x19
+ 1332 019b 02       		.uleb128 0x2
+ 1333 019c 18       		.uleb128 0x18
+ 1334 019d 00       		.byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 31
+
+
+ 1335 019e 00       		.byte	0
+ 1336 019f 00       		.byte	0
+ 1337              		.section	.debug_loc,"",%progbits
+ 1338              	.Ldebug_loc0:
+ 1339              	.LLST0:
+ 1340 0000 00000000 		.4byte	.LVL4
+ 1341 0004 0E000000 		.4byte	.LVL6
+ 1342 0008 0100     		.2byte	0x1
+ 1343 000a 50       		.byte	0x50
+ 1344 000b 0E000000 		.4byte	.LVL6
+ 1345 000f 60000000 		.4byte	.LFE69
+ 1346 0013 0400     		.2byte	0x4
+ 1347 0015 F3       		.byte	0xf3
+ 1348 0016 01       		.uleb128 0x1
+ 1349 0017 50       		.byte	0x50
+ 1350 0018 9F       		.byte	0x9f
+ 1351 0019 00000000 		.4byte	0
+ 1352 001d 00000000 		.4byte	0
+ 1353              	.LLST1:
+ 1354 0021 00000000 		.4byte	.LVL4
+ 1355 0025 0A000000 		.4byte	.LVL5
+ 1356 0029 0100     		.2byte	0x1
+ 1357 002b 51       		.byte	0x51
+ 1358 002c 0A000000 		.4byte	.LVL5
+ 1359 0030 60000000 		.4byte	.LFE69
+ 1360 0034 0400     		.2byte	0x4
+ 1361 0036 F3       		.byte	0xf3
+ 1362 0037 01       		.uleb128 0x1
+ 1363 0038 51       		.byte	0x51
+ 1364 0039 9F       		.byte	0x9f
+ 1365 003a 00000000 		.4byte	0
+ 1366 003e 00000000 		.4byte	0
+ 1367              	.LLST2:
+ 1368 0042 00000000 		.4byte	.LVL4
+ 1369 0046 12000000 		.4byte	.LVL7
+ 1370 004a 0100     		.2byte	0x1
+ 1371 004c 52       		.byte	0x52
+ 1372 004d 12000000 		.4byte	.LVL7
+ 1373 0051 60000000 		.4byte	.LFE69
+ 1374 0055 0400     		.2byte	0x4
+ 1375 0057 F3       		.byte	0xf3
+ 1376 0058 01       		.uleb128 0x1
+ 1377 0059 52       		.byte	0x52
+ 1378 005a 9F       		.byte	0x9f
+ 1379 005b 00000000 		.4byte	0
+ 1380 005f 00000000 		.4byte	0
+ 1381              	.LLST3:
+ 1382 0063 00000000 		.4byte	.LVL4
+ 1383 0067 1E000000 		.4byte	.LVL9
+ 1384 006b 0100     		.2byte	0x1
+ 1385 006d 53       		.byte	0x53
+ 1386 006e 1E000000 		.4byte	.LVL9
+ 1387 0072 24000000 		.4byte	.LVL10
+ 1388 0076 0200     		.2byte	0x2
+ 1389 0078 72       		.byte	0x72
+ 1390 0079 00       		.sleb128 0
+ 1391 007a 24000000 		.4byte	.LVL10
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 32
+
+
+ 1392 007e 60000000 		.4byte	.LFE69
+ 1393 0082 0400     		.2byte	0x4
+ 1394 0084 F3       		.byte	0xf3
+ 1395 0085 01       		.uleb128 0x1
+ 1396 0086 53       		.byte	0x53
+ 1397 0087 9F       		.byte	0x9f
+ 1398 0088 00000000 		.4byte	0
+ 1399 008c 00000000 		.4byte	0
+ 1400              	.LLST4:
+ 1401 0090 16000000 		.4byte	.LVL8
+ 1402 0094 3E000000 		.4byte	.LVL12
+ 1403 0098 0100     		.2byte	0x1
+ 1404 009a 51       		.byte	0x51
+ 1405 009b 00000000 		.4byte	0
+ 1406 009f 00000000 		.4byte	0
+ 1407              	.LLST5:
+ 1408 00a3 00000000 		.4byte	.LVL13
+ 1409 00a7 1A000000 		.4byte	.LVL15
+ 1410 00ab 0100     		.2byte	0x1
+ 1411 00ad 50       		.byte	0x50
+ 1412 00ae 1A000000 		.4byte	.LVL15
+ 1413 00b2 64000000 		.4byte	.LFE70
+ 1414 00b6 0400     		.2byte	0x4
+ 1415 00b8 F3       		.byte	0xf3
+ 1416 00b9 01       		.uleb128 0x1
+ 1417 00ba 50       		.byte	0x50
+ 1418 00bb 9F       		.byte	0x9f
+ 1419 00bc 00000000 		.4byte	0
+ 1420 00c0 00000000 		.4byte	0
+ 1421              	.LLST6:
+ 1422 00c4 00000000 		.4byte	.LVL13
+ 1423 00c8 16000000 		.4byte	.LVL14
+ 1424 00cc 0100     		.2byte	0x1
+ 1425 00ce 51       		.byte	0x51
+ 1426 00cf 16000000 		.4byte	.LVL14
+ 1427 00d3 64000000 		.4byte	.LFE70
+ 1428 00d7 0400     		.2byte	0x4
+ 1429 00d9 F3       		.byte	0xf3
+ 1430 00da 01       		.uleb128 0x1
+ 1431 00db 51       		.byte	0x51
+ 1432 00dc 9F       		.byte	0x9f
+ 1433 00dd 00000000 		.4byte	0
+ 1434 00e1 00000000 		.4byte	0
+ 1435              	.LLST7:
+ 1436 00e5 00000000 		.4byte	.LVL13
+ 1437 00e9 1E000000 		.4byte	.LVL16
+ 1438 00ed 0100     		.2byte	0x1
+ 1439 00ef 52       		.byte	0x52
+ 1440 00f0 1E000000 		.4byte	.LVL16
+ 1441 00f4 64000000 		.4byte	.LFE70
+ 1442 00f8 0400     		.2byte	0x4
+ 1443 00fa F3       		.byte	0xf3
+ 1444 00fb 01       		.uleb128 0x1
+ 1445 00fc 52       		.byte	0x52
+ 1446 00fd 9F       		.byte	0x9f
+ 1447 00fe 00000000 		.4byte	0
+ 1448 0102 00000000 		.4byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 33
+
+
+ 1449              	.LLST8:
+ 1450 0106 22000000 		.4byte	.LVL17
+ 1451 010a 3C000000 		.4byte	.LVL18
+ 1452 010e 0100     		.2byte	0x1
+ 1453 0110 51       		.byte	0x51
+ 1454 0111 00000000 		.4byte	0
+ 1455 0115 00000000 		.4byte	0
+ 1456              	.LLST9:
+ 1457 0119 00000000 		.4byte	.LVL19
+ 1458 011d 18000000 		.4byte	.LVL21
+ 1459 0121 0100     		.2byte	0x1
+ 1460 0123 50       		.byte	0x50
+ 1461 0124 18000000 		.4byte	.LVL21
+ 1462 0128 3C000000 		.4byte	.LFE71
+ 1463 012c 0400     		.2byte	0x4
+ 1464 012e F3       		.byte	0xf3
+ 1465 012f 01       		.uleb128 0x1
+ 1466 0130 50       		.byte	0x50
+ 1467 0131 9F       		.byte	0x9f
+ 1468 0132 00000000 		.4byte	0
+ 1469 0136 00000000 		.4byte	0
+ 1470              	.LLST10:
+ 1471 013a 00000000 		.4byte	.LVL19
+ 1472 013e 14000000 		.4byte	.LVL20
+ 1473 0142 0100     		.2byte	0x1
+ 1474 0144 51       		.byte	0x51
+ 1475 0145 14000000 		.4byte	.LVL20
+ 1476 0149 3C000000 		.4byte	.LFE71
+ 1477 014d 0400     		.2byte	0x4
+ 1478 014f F3       		.byte	0xf3
+ 1479 0150 01       		.uleb128 0x1
+ 1480 0151 51       		.byte	0x51
+ 1481 0152 9F       		.byte	0x9f
+ 1482 0153 00000000 		.4byte	0
+ 1483 0157 00000000 		.4byte	0
+ 1484              	.LLST11:
+ 1485 015b 00000000 		.4byte	.LVL19
+ 1486 015f 28000000 		.4byte	.LVL23
+ 1487 0163 0100     		.2byte	0x1
+ 1488 0165 52       		.byte	0x52
+ 1489 0166 28000000 		.4byte	.LVL23
+ 1490 016a 2E000000 		.4byte	.LVL24
+ 1491 016e 0200     		.2byte	0x2
+ 1492 0170 71       		.byte	0x71
+ 1493 0171 00       		.sleb128 0
+ 1494 0172 2E000000 		.4byte	.LVL24
+ 1495 0176 3C000000 		.4byte	.LFE71
+ 1496 017a 0400     		.2byte	0x4
+ 1497 017c F3       		.byte	0xf3
+ 1498 017d 01       		.uleb128 0x1
+ 1499 017e 52       		.byte	0x52
+ 1500 017f 9F       		.byte	0x9f
+ 1501 0180 00000000 		.4byte	0
+ 1502 0184 00000000 		.4byte	0
+ 1503              	.LLST12:
+ 1504 0188 00000000 		.4byte	.LVL25
+ 1505 018c 18000000 		.4byte	.LVL27
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 34
+
+
+ 1506 0190 0100     		.2byte	0x1
+ 1507 0192 50       		.byte	0x50
+ 1508 0193 18000000 		.4byte	.LVL27
+ 1509 0197 50000000 		.4byte	.LFE72
+ 1510 019b 0400     		.2byte	0x4
+ 1511 019d F3       		.byte	0xf3
+ 1512 019e 01       		.uleb128 0x1
+ 1513 019f 50       		.byte	0x50
+ 1514 01a0 9F       		.byte	0x9f
+ 1515 01a1 00000000 		.4byte	0
+ 1516 01a5 00000000 		.4byte	0
+ 1517              	.LLST13:
+ 1518 01a9 00000000 		.4byte	.LVL25
+ 1519 01ad 14000000 		.4byte	.LVL26
+ 1520 01b1 0100     		.2byte	0x1
+ 1521 01b3 51       		.byte	0x51
+ 1522 01b4 14000000 		.4byte	.LVL26
+ 1523 01b8 50000000 		.4byte	.LFE72
+ 1524 01bc 0400     		.2byte	0x4
+ 1525 01be F3       		.byte	0xf3
+ 1526 01bf 01       		.uleb128 0x1
+ 1527 01c0 51       		.byte	0x51
+ 1528 01c1 9F       		.byte	0x9f
+ 1529 01c2 00000000 		.4byte	0
+ 1530 01c6 00000000 		.4byte	0
+ 1531              	.LLST14:
+ 1532 01ca 20000000 		.4byte	.LVL28
+ 1533 01ce 3E000000 		.4byte	.LVL29
+ 1534 01d2 0100     		.2byte	0x1
+ 1535 01d4 50       		.byte	0x50
+ 1536 01d5 00000000 		.4byte	0
+ 1537 01d9 00000000 		.4byte	0
+ 1538              		.section	.debug_aranges,"",%progbits
+ 1539 0000 6C000000 		.4byte	0x6c
+ 1540 0004 0200     		.2byte	0x2
+ 1541 0006 00000000 		.4byte	.Ldebug_info0
+ 1542 000a 04       		.byte	0x4
+ 1543 000b 00       		.byte	0
+ 1544 000c 0000     		.2byte	0
+ 1545 000e 0000     		.2byte	0
+ 1546 0010 00000000 		.4byte	.LFB64
+ 1547 0014 1C000000 		.4byte	.LFE64-.LFB64
+ 1548 0018 00000000 		.4byte	.LFB66
+ 1549 001c 24000000 		.4byte	.LFE66-.LFB66
+ 1550 0020 00000000 		.4byte	.LFB67
+ 1551 0024 0C000000 		.4byte	.LFE67-.LFB67
+ 1552 0028 00000000 		.4byte	.LFB68
+ 1553 002c 34000000 		.4byte	.LFE68-.LFB68
+ 1554 0030 00000000 		.4byte	.LFB65
+ 1555 0034 0C000000 		.4byte	.LFE65-.LFB65
+ 1556 0038 00000000 		.4byte	.LFB63
+ 1557 003c 1C000000 		.4byte	.LFE63-.LFB63
+ 1558 0040 00000000 		.4byte	.LFB69
+ 1559 0044 60000000 		.4byte	.LFE69-.LFB69
+ 1560 0048 00000000 		.4byte	.LFB70
+ 1561 004c 64000000 		.4byte	.LFE70-.LFB70
+ 1562 0050 00000000 		.4byte	.LFB71
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 35
+
+
+ 1563 0054 3C000000 		.4byte	.LFE71-.LFB71
+ 1564 0058 00000000 		.4byte	.LFB72
+ 1565 005c 50000000 		.4byte	.LFE72-.LFB72
+ 1566 0060 00000000 		.4byte	.LFB73
+ 1567 0064 0C000000 		.4byte	.LFE73-.LFB73
+ 1568 0068 00000000 		.4byte	0
+ 1569 006c 00000000 		.4byte	0
+ 1570              		.section	.debug_ranges,"",%progbits
+ 1571              	.Ldebug_ranges0:
+ 1572 0000 00000000 		.4byte	.LFB64
+ 1573 0004 1C000000 		.4byte	.LFE64
+ 1574 0008 00000000 		.4byte	.LFB66
+ 1575 000c 24000000 		.4byte	.LFE66
+ 1576 0010 00000000 		.4byte	.LFB67
+ 1577 0014 0C000000 		.4byte	.LFE67
+ 1578 0018 00000000 		.4byte	.LFB68
+ 1579 001c 34000000 		.4byte	.LFE68
+ 1580 0020 00000000 		.4byte	.LFB65
+ 1581 0024 0C000000 		.4byte	.LFE65
+ 1582 0028 00000000 		.4byte	.LFB63
+ 1583 002c 1C000000 		.4byte	.LFE63
+ 1584 0030 00000000 		.4byte	.LFB69
+ 1585 0034 60000000 		.4byte	.LFE69
+ 1586 0038 00000000 		.4byte	.LFB70
+ 1587 003c 64000000 		.4byte	.LFE70
+ 1588 0040 00000000 		.4byte	.LFB71
+ 1589 0044 3C000000 		.4byte	.LFE71
+ 1590 0048 00000000 		.4byte	.LFB72
+ 1591 004c 50000000 		.4byte	.LFE72
+ 1592 0050 00000000 		.4byte	.LFB73
+ 1593 0054 0C000000 		.4byte	.LFE73
+ 1594 0058 00000000 		.4byte	0
+ 1595 005c 00000000 		.4byte	0
+ 1596              		.section	.debug_line,"",%progbits
+ 1597              	.Ldebug_line0:
+ 1598 0000 49020000 		.section	.debug_str,"MS",%progbits,1
+ 1598      02005101 
+ 1598      00000201 
+ 1598      FB0E0D00 
+ 1598      01010101 
+ 1599              	.LASF17:
+ 1600 0000 72656731 		.ascii	"reg16\000"
+ 1600      3600
+ 1601              	.LASF43:
+ 1602 0006 4D44494F 		.ascii	"MDIO_host_2_GetStatus\000"
+ 1602      5F686F73 
+ 1602      745F325F 
+ 1602      47657453 
+ 1602      74617475 
+ 1603              	.LASF29:
+ 1604 001c 73746174 		.ascii	"status_reg\000"
+ 1604      75735F72 
+ 1604      656700
+ 1605              	.LASF9:
+ 1606 0027 5F5F696E 		.ascii	"__int32_t\000"
+ 1606      7433325F 
+ 1606      7400
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 36
+
+
+ 1607              	.LASF31:
+ 1608 0031 4D44494F 		.ascii	"MDIO_host_2_ReadDataC45\000"
+ 1608      5F686F73 
+ 1608      745F325F 
+ 1608      52656164 
+ 1608      44617461 
+ 1609              	.LASF38:
+ 1610 0049 4D44494F 		.ascii	"MDIO_host_2_data_bits\000"
+ 1610      5F686F73 
+ 1610      745F325F 
+ 1610      64617461 
+ 1610      5F626974 
+ 1611              	.LASF3:
+ 1612 005f 73686F72 		.ascii	"short unsigned int\000"
+ 1612      7420756E 
+ 1612      7369676E 
+ 1612      65642069 
+ 1612      6E7400
+ 1613              	.LASF30:
+ 1614 0072 4D44494F 		.ascii	"MDIO_host_2_WriteDataC45\000"
+ 1614      5F686F73 
+ 1614      745F325F 
+ 1614      57726974 
+ 1614      65446174 
+ 1615              	.LASF35:
+ 1616 008b 4D44494F 		.ascii	"MDIO_host_2_ClearStatus\000"
+ 1616      5F686F73 
+ 1616      745F325F 
+ 1616      436C6561 
+ 1616      72537461 
+ 1617              	.LASF21:
+ 1618 00a3 4D44494F 		.ascii	"MDIO_host_2_ClearInternalFIFOs\000"
+ 1618      5F686F73 
+ 1618      745F325F 
+ 1618      436C6561 
+ 1618      72496E74 
+ 1619              	.LASF32:
+ 1620 00c2 72656744 		.ascii	"regData\000"
+ 1620      61746100 
+ 1621              	.LASF39:
+ 1622 00ca 4D44494F 		.ascii	"MDIO_host_2_StatusRegister\000"
+ 1622      5F686F73 
+ 1622      745F325F 
+ 1622      53746174 
+ 1622      75735265 
+ 1623              	.LASF13:
+ 1624 00e5 666C6F61 		.ascii	"float\000"
+ 1624      7400
+ 1625              	.LASF23:
+ 1626 00eb 4D44494F 		.ascii	"MDIO_host_2_Start\000"
+ 1626      5F686F73 
+ 1626      745F325F 
+ 1626      53746172 
+ 1626      7400
+ 1627              	.LASF1:
+ 1628 00fd 756E7369 		.ascii	"unsigned char\000"
+ 1628      676E6564 
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 37
+
+
+ 1628      20636861 
+ 1628      7200
+ 1629              	.LASF16:
+ 1630 010b 72656738 		.ascii	"reg8\000"
+ 1630      00
+ 1631              	.LASF5:
+ 1632 0110 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1632      20756E73 
+ 1632      69676E65 
+ 1632      6420696E 
+ 1632      7400
+ 1633              	.LASF34:
+ 1634 0122 4D44494F 		.ascii	"MDIO_host_2_ReadDataC22\000"
+ 1634      5F686F73 
+ 1634      745F325F 
+ 1634      52656164 
+ 1634      44617461 
+ 1635              	.LASF27:
+ 1636 013a 7265675F 		.ascii	"reg_data\000"
+ 1636      64617461 
+ 1636      00
+ 1637              	.LASF14:
+ 1638 0143 646F7562 		.ascii	"double\000"
+ 1638      6C6500
+ 1639              	.LASF12:
+ 1640 014a 75696E74 		.ascii	"uint16\000"
+ 1640      313600
+ 1641              	.LASF41:
+ 1642 0151 47656E65 		.ascii	"Generated_Source\\PSoC5\\MDIO_host_2_my.c\000"
+ 1642      72617465 
+ 1642      645F536F 
+ 1642      75726365 
+ 1642      5C50536F 
+ 1643              	.LASF36:
+ 1644 0179 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1644      52784275 
+ 1644      66666572 
+ 1644      00
+ 1645              	.LASF40:
+ 1646 0186 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1646      4320342E 
+ 1646      392E3320 
+ 1646      32303135 
+ 1646      30333033 
+ 1647 01b9 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1647      20726576 
+ 1647      6973696F 
+ 1647      6E203232 
+ 1647      31323230 
+ 1648 01ec 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1648      66756E63 
+ 1648      74696F6E 
+ 1648      2D736563 
+ 1648      74696F6E 
+ 1649              	.LASF8:
+ 1650 0214 756E7369 		.ascii	"unsigned int\000"
+ 1650      676E6564 
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 38
+
+
+ 1650      20696E74 
+ 1650      00
+ 1651              	.LASF33:
+ 1652 0221 4D44494F 		.ascii	"MDIO_host_2_WriteDataC22\000"
+ 1652      5F686F73 
+ 1652      745F325F 
+ 1652      57726974 
+ 1652      65446174 
+ 1653              	.LASF7:
+ 1654 023a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1654      206C6F6E 
+ 1654      6720756E 
+ 1654      7369676E 
+ 1654      65642069 
+ 1655              	.LASF20:
+ 1656 0251 4D44494F 		.ascii	"MDIO_host_2_Enable\000"
+ 1656      5F686F73 
+ 1656      745F325F 
+ 1656      456E6162 
+ 1656      6C6500
+ 1657              	.LASF22:
+ 1658 0264 4D44494F 		.ascii	"MDIO_host_2_Init\000"
+ 1658      5F686F73 
+ 1658      745F325F 
+ 1658      496E6974 
+ 1658      00
+ 1659              	.LASF10:
+ 1660 0275 696E7433 		.ascii	"int32_t\000"
+ 1660      325F7400 
+ 1661              	.LASF24:
+ 1662 027d 6F705F6D 		.ascii	"op_mode\000"
+ 1662      6F646500 
+ 1663              	.LASF18:
+ 1664 0285 73697A65 		.ascii	"sizetype\000"
+ 1664      74797065 
+ 1664      00
+ 1665              	.LASF6:
+ 1666 028e 6C6F6E67 		.ascii	"long long int\000"
+ 1666      206C6F6E 
+ 1666      6720696E 
+ 1666      7400
+ 1667              	.LASF15:
+ 1668 029c 63686172 		.ascii	"char\000"
+ 1668      00
+ 1669              	.LASF37:
+ 1670 02a1 4D44494F 		.ascii	"MDIO_host_2_initVar\000"
+ 1670      5F686F73 
+ 1670      745F325F 
+ 1670      696E6974 
+ 1670      56617200 
+ 1671              	.LASF2:
+ 1672 02b5 73686F72 		.ascii	"short int\000"
+ 1672      7420696E 
+ 1672      7400
+ 1673              	.LASF11:
+ 1674 02bf 75696E74 		.ascii	"uint8\000"
+ 1674      3800
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccRLwHe6.s 			page 39
+
+
+ 1675              	.LASF26:
+ 1676 02c5 6465765F 		.ascii	"dev_addr\000"
+ 1676      61646472 
+ 1676      00
+ 1677              	.LASF4:
+ 1678 02ce 6C6F6E67 		.ascii	"long int\000"
+ 1678      20696E74 
+ 1678      00
+ 1679              	.LASF25:
+ 1680 02d7 7068795F 		.ascii	"phy_addr\000"
+ 1680      61646472 
+ 1680      00
+ 1681              	.LASF28:
+ 1682 02e0 636F6E74 		.ascii	"control_bits\000"
+ 1682      726F6C5F 
+ 1682      62697473 
+ 1682      00
+ 1683              	.LASF0:
+ 1684 02ed 7369676E 		.ascii	"signed char\000"
+ 1684      65642063 
+ 1684      68617200 
+ 1685              	.LASF42:
+ 1686 02f9 443A5C70 		.ascii	"D:\\pgm\\Cypress_dem_board\\CFP_reader\\cfp_reader\\"
+ 1686      676D5C43 
+ 1686      79707265 
+ 1686      73735F64 
+ 1686      656D5F62 
+ 1687 0328 575F6366 		.ascii	"W_cfp_reader\\cfp_reader.cydsn\000"
+ 1687      705F7265 
+ 1687      61646572 
+ 1687      5C636670 
+ 1687      5F726561 
+ 1688              	.LASF19:
+ 1689 0346 4D44494F 		.ascii	"MDIO_host_2_Stop\000"
+ 1689      5F686F73 
+ 1689      745F325F 
+ 1689      53746F70 
+ 1689      00
+ 1690              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

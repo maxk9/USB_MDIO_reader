@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>W_cfp_reader</v>
+<v>W_cfp_reader\cfp_reader</v>
+<v>W_cfp_reader\cfp_reader\TopDesign</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader.cydwr</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader.cydwr\Pins</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader.cydwr\Analog</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader.cydwr\Clocks</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader.cydwr\Interrupts</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader.cydwr\DMA</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader.cydwr\System</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader.cydwr\Directives</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader.cydwr\Flash Security</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader.cydwr\EEPROM</v>
+<v>W_cfp_reader\cfp_reader\Header Files</v>
+<v>W_cfp_reader\cfp_reader\Header Files\cyapicallbacks.h</v>
+<v>W_cfp_reader\cfp_reader\Source Files</v>
+<v>W_cfp_reader\cfp_reader\Source Files\main.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Clock_1\Clock_1.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Clock_1\Clock_1.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Clock_2\Clock_2.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Clock_2\Clock_2.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\Cm3Start.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\cmsis_armcc.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\cmsis_gcc.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\core_cm3.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\core_cm3_psoc5.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\core_cmFunc.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\core_cmInstr.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\CyBootAsmGnu.s</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\CyBootAsmIar.s</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\CyBootAsmRv.s</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\CyDmac.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\CyDmac.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\CyFlash.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\CyFlash.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\CyLib.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\CyLib.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\cypins.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\cyPm.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\cyPm.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\CySpc.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\CySpc.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\cytypes.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot\cyutils.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Debug_MDIO\Debug_MDIO.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Debug_MDIO\Debug_MDIO.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Debug_MDIO\Debug_MDIO_aliases.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\interrupt_MDIO\interrupt_MDIO.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\interrupt_MDIO\interrupt_MDIO.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\interrupt_MDIO\interrupt_MDIO_aliases.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\ISR\ISR.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\ISR\ISR.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LCD\LCD.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LCD\LCD.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LCD\LCD_PM.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LCD_LCDPort\LCD_LCDPort.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LCD_LCDPort\LCD_LCDPort.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LCD_LCDPort\LCD_LCDPort_aliases.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LED_1\LED_1.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LED_1\LED_1.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LED_1\LED_1_aliases.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LED_2\LED_2.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LED_2\LED_2.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LED_2\LED_2_aliases.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LED_3\LED_3.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LED_3\LED_3.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LED_3\LED_3_aliases.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDC_M\MDC_M.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDC_M\MDC_M.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDC_M\MDC_M_aliases.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDIO_host_2</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDIO_host_2\MDIO_host_2_my.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDIO_host_2\MDIO_host_2_my.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDIO_M\MDIO_M.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDIO_M\MDIO_M.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDIO_M\MDIO_M_aliases.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Opamp_1\Opamp_1.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Opamp_1\Opamp_1.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Opamp_1\Opamp_1_PM.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\PWM_1\PWM_1.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\PWM_1\PWM_1.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\PWM_1\PWM_1_PM.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\PWM_2\PWM_2.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\PWM_2\PWM_2.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\PWM_2\PWM_2_PM.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1_audio.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1_audio.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1_boot.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1_cdc.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1_cdc.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1_cdc.inf</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1_cls.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1_cydmac.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1_descr.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1_drv.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1_episr.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1_hid.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1_hid.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1_midi.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1_midi.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1_msc.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1_msc.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1_pm.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1_pvt.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1_std.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1\USBUART_1_vnd.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1_Dm\USBUART_1_Dm.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1_Dm\USBUART_1_Dm.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1_Dm\USBUART_1_Dm_aliases.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1_Dp\USBUART_1_Dp.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1_Dp\USBUART_1_Dp.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1_Dp\USBUART_1_Dp_aliases.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\VDAC8_1\VDAC8_1.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\VDAC8_1\VDAC8_1.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\VDAC8_1\VDAC8_1_PM.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\VRef_1V2\VRef_1V2.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\VRef_1V2\VRef_1V2.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\VRef_1V2\VRef_1V2_aliases.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cydevice.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cyfitter.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cyfitteriar.inc</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cyfitterrv.inc</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cymetadata.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\project.h</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>W_cfp_reader</v>
+<v>W_cfp_reader\cfp_reader</v>
+<v>W_cfp_reader\cfp_reader\TopDesign</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader.cydwr</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader.cydwr\Pins</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader.cydwr\Analog</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader.cydwr\Clocks</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader.cydwr\Interrupts</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader.cydwr\DMA</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader.cydwr\System</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader.cydwr\Directives</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader.cydwr\Flash Security</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader.cydwr\EEPROM</v>
+<v>W_cfp_reader\cfp_reader\Header Files</v>
+<v>W_cfp_reader\cfp_reader\Header Files\cyapicallbacks.h</v>
+<v>W_cfp_reader\cfp_reader\Source Files</v>
+<v>W_cfp_reader\cfp_reader\Source Files\main.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Clock_1</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Clock_2</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Debug_MDIO</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\interrupt_MDIO</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\ISR</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LCD</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LCD_LCDPort</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LED_1</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LED_2</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LED_3</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDC_M</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDIO_host_2</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDIO_host_2\MDIO_host_2_my.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDIO_host_2\MDIO_host_2_my.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDIO_M</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Opamp_1</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\PWM_1</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\PWM_2</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1_Dm</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\USBUART_1_Dp</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\VDAC8_1</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\VRef_1V2</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="W_cfp_reader\cfp_reader\MDIO_host_my_v\API\MDIO_host_my.h">
+<ExpandedNodeIds>
+<v>W_cfp_reader</v>
+<v>W_cfp_reader\cfp_reader</v>
+<v>W_cfp_reader\cfp_reader\MDIO_Host</v>
+<v>W_cfp_reader\cfp_reader\MDIO_Host\MDIO_Host.cysym</v>
+<v>W_cfp_reader\cfp_reader\MDIO_Host\MDIO_Host.cyudb</v>
+<v>W_cfp_reader\cfp_reader\MDIO_host_my_v</v>
+<v>W_cfp_reader\cfp_reader\MDIO_host_my_v\API</v>
+<v>W_cfp_reader\cfp_reader\MDIO_host_my_v\API\MDIO_host_my.c</v>
+<v>W_cfp_reader\cfp_reader\MDIO_host_my_v\API\MDIO_host_my.h</v>
+<v>W_cfp_reader\cfp_reader\MDIO_host_my_v\MDIO_host_my_v.cysym</v>
+<v>W_cfp_reader\cfp_reader\MDIO_host_my_v\MDIO_host_my_v.v</v>
+<v>W_cfp_reader\cfp_reader\TopDesign</v>
+<v>W_cfp_reader\cfp_reader\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>W_cfp_reader</v>
+<v>W_cfp_reader\cfp_reader</v>
+<v>W_cfp_reader\cfp_reader\MDIO_Host</v>
+<v>W_cfp_reader\cfp_reader\MDIO_Host\MDIO_Host.cysym</v>
+<v>W_cfp_reader\cfp_reader\MDIO_Host\MDIO_Host.cyudb</v>
+<v>W_cfp_reader\cfp_reader\MDIO_host_my_v</v>
+<v>W_cfp_reader\cfp_reader\MDIO_host_my_v\API</v>
+<v>W_cfp_reader\cfp_reader\MDIO_host_my_v\API\MDIO_host_my.c</v>
+<v>W_cfp_reader\cfp_reader\MDIO_host_my_v\API\MDIO_host_my.h</v>
+<v>W_cfp_reader\cfp_reader\MDIO_host_my_v\MDIO_host_my_v.cysym</v>
+<v>W_cfp_reader\cfp_reader\MDIO_host_my_v\MDIO_host_my_v.v</v>
+<v>W_cfp_reader\cfp_reader\TopDesign</v>
+<v>W_cfp_reader\cfp_reader\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>W_cfp_reader</v>
+<v>W_cfp_reader\cfp_reader</v>
+<v>W_cfp_reader\cfp_reader\CortexM3</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_1.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_2.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\Debug_MDIO.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\interrupt_MDIO.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\ISR.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_PM.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\LED_1.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\LED_2.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\LED_3.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\MDC_M.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\MDIO_host_2_my.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\MDIO_M.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\Opamp_1.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\Opamp_1_PM.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_1.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_1_PM.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_2.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_2_PM.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_audio.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_boot.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_cdc.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_cls.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_descr.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_Dm.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_Dp.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_drv.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_episr.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_hid.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_midi.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_msc.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_pm.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_std.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_vnd.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\VDAC8_1.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\VDAC8_1_PM.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\VRef_1V2.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\cfp_reader.elf</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\cfp_reader.hex</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\cfp_reader.map</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader.gpdsc</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader.rpt</v>
+<v>W_cfp_reader\cfp_reader\cfp_reader_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>W_cfp_reader</v>
+<v>W_cfp_reader\cfp_reader</v>
+<v>W_cfp_reader\cfp_reader\CortexM3</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_1.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_2.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\Debug_MDIO.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\interrupt_MDIO.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\ISR.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_PM.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\LED_1.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\LED_2.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\LED_3.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\MDC_M.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\MDIO_host_2_my.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\MDIO_M.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\Opamp_1.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\Opamp_1_PM.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_1.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_1_PM.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_2.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_2_PM.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_audio.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_boot.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_cdc.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_cls.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_descr.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_Dm.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_Dp.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1_drv.lst</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>W_cfp_reader</v>
+<v>W_cfp_reader\cfp_reader</v>
+<v>W_cfp_reader\cfp_reader\PSoC 5LP Architecture TRM</v>
+<v>W_cfp_reader\cfp_reader\CY8C58LP Family Datasheet</v>
+<v>W_cfp_reader\cfp_reader\System Reference Guides</v>
+<v>W_cfp_reader\cfp_reader\System Reference Guides\cy_boot_v5_50</v>
+<v>W_cfp_reader\cfp_reader\CharLCD_v2_20.pdf</v>
+<v>W_cfp_reader\cfp_reader\cy_bufoe_v1_10.pdf</v>
+<v>W_cfp_reader\cfp_reader\cy_clock_v2_20</v>
+<v>W_cfp_reader\cfp_reader\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>W_cfp_reader\cfp_reader\cy_constant_v1_0</v>
+<v>W_cfp_reader\cfp_reader\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
+<v>W_cfp_reader\cfp_reader\cy_isr_v1_70.pdf</v>
+<v>W_cfp_reader\cfp_reader\cy_pins_v2_20</v>
+<v>W_cfp_reader\cfp_reader\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>W_cfp_reader\cfp_reader\Gnd_v1_0</v>
+<v>W_cfp_reader\cfp_reader\Gnd_v1_0\Gnd_v1_0.pdf</v>
+<v>W_cfp_reader\cfp_reader\LED_v1_0</v>
+<v>W_cfp_reader\cfp_reader\LED_v1_0\LED_v1_0.pdf</v>
+<v>W_cfp_reader\cfp_reader\not_v1_0.pdf</v>
+<v>W_cfp_reader\cfp_reader\OpAmp_v1_90.pdf</v>
+<v>W_cfp_reader\cfp_reader\Power_v1_0.pdf</v>
+<v>W_cfp_reader\cfp_reader\PWM_v3_30</v>
+<v>W_cfp_reader\cfp_reader\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>W_cfp_reader\cfp_reader\Resistor_v1_0</v>
+<v>W_cfp_reader\cfp_reader\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>W_cfp_reader\cfp_reader\USBFS_v3_10.pdf</v>
+<v>W_cfp_reader\cfp_reader\VDAC8_v1_90.pdf</v>
+<v>W_cfp_reader\cfp_reader\xor_v1_0.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>W_cfp_reader</v>
+<v>W_cfp_reader\cfp_reader</v>
+<v>W_cfp_reader\cfp_reader\PSoC 5LP Architecture TRM</v>
+<v>W_cfp_reader\cfp_reader\CY8C58LP Family Datasheet</v>
+<v>W_cfp_reader\cfp_reader\System Reference Guides</v>
+<v>W_cfp_reader\cfp_reader\System Reference Guides\cy_boot_v5_50</v>
+<v>W_cfp_reader\cfp_reader\CharLCD_v2_20.pdf</v>
+<v>W_cfp_reader\cfp_reader\cy_bufoe_v1_10.pdf</v>
+<v>W_cfp_reader\cfp_reader\cy_clock_v2_20</v>
+<v>W_cfp_reader\cfp_reader\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>W_cfp_reader\cfp_reader\cy_constant_v1_0</v>
+<v>W_cfp_reader\cfp_reader\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
+<v>W_cfp_reader\cfp_reader\cy_isr_v1_70.pdf</v>
+<v>W_cfp_reader\cfp_reader\cy_pins_v2_20</v>
+<v>W_cfp_reader\cfp_reader\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>W_cfp_reader\cfp_reader\Gnd_v1_0</v>
+<v>W_cfp_reader\cfp_reader\Gnd_v1_0\Gnd_v1_0.pdf</v>
+<v>W_cfp_reader\cfp_reader\LED_v1_0</v>
+<v>W_cfp_reader\cfp_reader\LED_v1_0\LED_v1_0.pdf</v>
+<v>W_cfp_reader\cfp_reader\not_v1_0.pdf</v>
+<v>W_cfp_reader\cfp_reader\OpAmp_v1_90.pdf</v>
+<v>W_cfp_reader\cfp_reader\Power_v1_0.pdf</v>
+<v>W_cfp_reader\cfp_reader\PWM_v3_30</v>
+<v>W_cfp_reader\cfp_reader\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>W_cfp_reader\cfp_reader\Resistor_v1_0</v>
+<v>W_cfp_reader\cfp_reader\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>W_cfp_reader\cfp_reader\USBFS_v3_10.pdf</v>
+<v>W_cfp_reader\cfp_reader\VDAC8_v1_90.pdf</v>
+<v>W_cfp_reader\cfp_reader\xor_v1_0.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="6c335137-fa19-46ce-bc2d-2fbeb6d5f2a2">
+<CyGuid_70084457-cd6a-4593-9ed0-7f6eeb432dc2 type_name="CyDesigner.Common.ProjMgmt.GUI.CyDependenciesCustomData" version="1">
+<dictName v=".\cfp_reader.cydsn\cfp_reader.cyprj">
+<listName />
+</dictName>
+</CyGuid_70084457-cd6a-4593-9ed0-7f6eeb432dc2>
+</dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="120" DocumentName=".\cfp_reader.cydsn\main.c" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+</indicators>
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\cfp_reader.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\cfp_reader.cydsn\main.c" />
+<name v=".\cfp_reader.cydsn\Generated_Source\PSoC5\MDIO_host_2_my.h" />
+<name v=".\cfp_reader.cydsn\Generated_Source\PSoC5\MDIO_host_2_my.c" />
+<name v=".\cfp_reader.cydsn\MDIO_host_my_v\API\MDIO_host_my.c" />
+<name v=".\cfp_reader.cydsn\MDIO_host_my_v\API\MDIO_host_my.h" />
+<name v=".\cfp_reader.cydsn\MDIO_host_my_v\MDIO_host_my_v.v" />
+<name v=".\cfp_reader.cydsn\cfp_reader.cydwr" />
+<name v=".\cfp_reader.cydsn\Generated_Source\PSoC5\cyfitter.h" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1367, 678" SelectedTabbedMdiWindow="2ada9199-1366-49e8-94c5-3ab98d4bc8d6"><DocumentWindow Key="b1bdde3d-2a2a-4151-8a3a-5e2969b15b4a" Guid="4d16d465-e38e-4f87-8f8b-e3de85d0f911" /><DocumentWindow Key="651d3d7f-7421-4427-a5c6-9ea17868f734" Guid="c809fb01-0c22-4448-a6c6-04c46059872a" /><DocumentWindow Key="a0725afd-522f-4886-a420-1d1a23d7a59c" Guid="814d9b9b-3580-4fc5-808c-fcc06167555e" /><DocumentWindow Key="c51eea59-1f1f-4cc4-8856-9f3ab8029fc2" Guid="369dcbe2-b799-406d-9990-91a9ce0dd92e" /><DocumentWindow Key="bd0f59cd-b238-4d3f-940f-5143bf607832" Guid="4c8ce07e-455d-4a2e-8ab7-a1ed6a789681" /><DocumentWindow Key="1fd11c70-fb8f-4432-ac38-8b0a3c3ad1eb" Guid="0b8d0ffc-ccc9-4380-b64f-aecb373c80c7" /><DocumentWindow Key="b2e9a486-fb7c-4965-a30a-1babbcdf1c0d" Guid="2ada9199-1366-49e8-94c5-3ab98d4bc8d6" /><DocumentWindow Key="2c9d9acd-7035-4a93-8cc4-eb533cfb4414" Guid="ba5ba78c-8e64-42a1-860d-aa608029951b" /><DocumentWindow Key="a2608464-6cd0-4b5b-9472-614e88c0c1c8" Guid="6cd75113-5a7c-42fe-9f36-4da5cd5a7b49" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>
