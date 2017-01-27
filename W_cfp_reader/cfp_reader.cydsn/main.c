@@ -119,16 +119,16 @@ int main(void)
                     /* Send address frame */
 MDIO_host_2_WriteDataC45( MDIO_host_2_C45_ADDR, MdioPhyAddr, MdioDevAddr, HostAddress );
                        	/* Start Transmission */
-                    if(test)
-                    {
- //  	MDIO_host_2_CONTROL_REG |= MDIO_host_2_START;
-                    }
-                    else
-                    {
- //  MDIO_host_2_CONTROL_REG &= ~MDIO_host_2_START;
-                    }
-                    test =~test;
-                    LED_3_Write(test);
+//                    if(test)
+//                    {
+// //  	MDIO_host_2_CONTROL_REG |= MDIO_host_2_START;
+//                    }
+//                    else
+//                    {
+// //  MDIO_host_2_CONTROL_REG &= ~MDIO_host_2_START;
+//                    }
+//                    test =~test;
+//                    LED_3_Write(test);
                     /* If the last sent packet is exactly the maximum packet 
                     *  size, it is followed by a zero-length packet to assure
                     *  that the end of the segment is properly identified by 

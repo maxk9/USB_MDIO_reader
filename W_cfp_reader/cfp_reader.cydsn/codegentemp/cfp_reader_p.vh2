@@ -1,5 +1,5 @@
 -- Project:   cfp_reader
--- Generated: 01/16/2017 17:44:02
+-- Generated: 01/27/2017 17:21:29
 -- PSoC Creator  4.0
 
 ENTITY cfp_reader IS
@@ -73,15 +73,12 @@ ARCHITECTURE __DEFAULT__ OF cfp_reader IS
     SIGNAL \\\LCD:LCDPort(4)\\__PA\ : bit;
     SIGNAL \\\LCD:LCDPort(5)\\__PA\ : bit;
     SIGNAL \\\LCD:LCDPort(6)\\__PA\ : bit;
-    SIGNAL \MDIO_host_2:busy_d\ : bit;
-    SIGNAL \MDIO_host_2:control_0\ : bit;
-    SIGNAL \MDIO_host_2:control_1\ : bit;
-    SIGNAL \MDIO_host_2:control_2\ : bit;
-    SIGNAL \MDIO_host_2:control_3\ : bit;
-    SIGNAL \MDIO_host_2:control_4\ : bit;
-    SIGNAL \MDIO_host_2:control_5\ : bit;
-    SIGNAL \MDIO_host_2:control_6\ : bit;
-    SIGNAL \MDIO_host_2:control_7\ : bit;
+    SIGNAL \MDIO_host_2:State_0\ : bit;
+    SIGNAL \MDIO_host_2:State_1\ : bit;
+    SIGNAL \MDIO_host_2:State_2\ : bit;
+    SIGNAL \MDIO_host_2:cfg_0\ : bit;
+    SIGNAL \MDIO_host_2:cfg_1\ : bit;
+    SIGNAL \MDIO_host_2:cfg_2\ : bit;
     SIGNAL \MDIO_host_2:counter_0\ : bit;
     SIGNAL \MDIO_host_2:counter_1\ : bit;
     SIGNAL \MDIO_host_2:counter_2\ : bit;
@@ -89,16 +86,13 @@ ARCHITECTURE __DEFAULT__ OF cfp_reader IS
     SIGNAL \MDIO_host_2:counter_4\ : bit;
     SIGNAL \MDIO_host_2:counter_5\ : bit;
     SIGNAL \MDIO_host_2:counter_6\ : bit;
-    SIGNAL \MDIO_host_2:data_bits\ : bit;
     SIGNAL \MDIO_host_2:en_count\ : bit;
+    SIGNAL \MDIO_host_2:f0_blk_stat\ : bit;
     SIGNAL \MDIO_host_2:f1_load\ : bit;
-    SIGNAL \MDIO_host_2:ld_count\ : bit;
-    SIGNAL \MDIO_host_2:mdio_start_d\ : bit;
-    SIGNAL \MDIO_host_2:send_preamb\ : bit;
     SIGNAL \MDIO_host_2:so\ : bit;
-    SIGNAL \MDIO_host_2:start_frame_d\ : bit;
-    SIGNAL \MDIO_host_2:status_0\ : bit;
-    SIGNAL \MDIO_host_2:status_1\ : bit;
+    SIGNAL \MDIO_host_2:status_val_1\ : bit;
+    SIGNAL \MDIO_host_2:status_val_2\ : bit;
+    SIGNAL \MDIO_host_2:tc\ : bit;
     SIGNAL \PWM_1:PWMUDB:cmp1_less\ : bit;
     SIGNAL \PWM_1:PWMUDB:runmode_enable\ : bit;
     SIGNAL \PWM_1:PWMUDB:tc_i\ : bit;
@@ -172,30 +166,29 @@ ARCHITECTURE __DEFAULT__ OF cfp_reader IS
     ATTRIBUTE Location OF LED_3(0) : LABEL IS "P6[2]";
     ATTRIBUTE lib_model OF Net_785 : LABEL IS "macrocell1";
     ATTRIBUTE lib_model OF Net_789 : LABEL IS "macrocell2";
-    ATTRIBUTE lib_model OF \MDIO_host_2:status_0\ : LABEL IS "macrocell3";
-    ATTRIBUTE lib_model OF \MDIO_host_2:ld_count\ : LABEL IS "macrocell4";
+    ATTRIBUTE lib_model OF \MDIO_host_2:status_val_1\ : LABEL IS "macrocell3";
+    ATTRIBUTE lib_model OF \MDIO_host_2:status_val_2\ : LABEL IS "macrocell4";
+    ATTRIBUTE lib_model OF \MDIO_host_2:en_count\ : LABEL IS "macrocell5";
     ATTRIBUTE lib_model OF \PWM_1:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "datapathcell1";
     ATTRIBUTE Location OF \VDAC8_1:viDAC8\ : LABEL IS "F(VIDAC,1)";
     ATTRIBUTE Location OF \Opamp_1:ABuf\ : LABEL IS "F(OpAmp,3)";
     ATTRIBUTE Location OF \USBUART_1:USB\ : LABEL IS "F(USB,0)";
     ATTRIBUTE lib_model OF \PWM_2:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "datapathcell2";
     ATTRIBUTE lib_model OF \MDIO_host_2:MdioStatusReg\ : LABEL IS "statuscell1";
-    ATTRIBUTE lib_model OF \MDIO_host_2:SyncCtl:MdioControlReg\ : LABEL IS "controlcell1";
     ATTRIBUTE lib_model OF \MDIO_host_2:cntrl16:u0\ : LABEL IS "datapathcell3";
     ATTRIBUTE lib_model OF \MDIO_host_2:cntrl16:u1\ : LABEL IS "datapathcell4";
-    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:runmode_enable\ : LABEL IS "macrocell5";
-    ATTRIBUTE lib_model OF Net_1881 : LABEL IS "macrocell6";
-    ATTRIBUTE lib_model OF Net_184 : LABEL IS "macrocell7";
+    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:runmode_enable\ : LABEL IS "macrocell6";
+    ATTRIBUTE lib_model OF Net_1881 : LABEL IS "macrocell7";
+    ATTRIBUTE lib_model OF Net_184 : LABEL IS "macrocell8";
     ATTRIBUTE lib_model OF Dedicated_Output : LABEL IS "iocell11";
     ATTRIBUTE Location OF Dedicated_Output : LABEL IS "P3[7]";
-    ATTRIBUTE lib_model OF Net_1882 : LABEL IS "macrocell8";
-    ATTRIBUTE lib_model OF \MDIO_host_2:status_1\ : LABEL IS "macrocell9";
-    ATTRIBUTE lib_model OF \MDIO_host_2:data_bits\ : LABEL IS "macrocell10";
-    ATTRIBUTE lib_model OF \MDIO_host_2:en_count\ : LABEL IS "macrocell11";
-    ATTRIBUTE lib_model OF \MDIO_host_2:mdio_start_d\ : LABEL IS "macrocell12";
-    ATTRIBUTE lib_model OF \MDIO_host_2:start_frame_d\ : LABEL IS "macrocell13";
-    ATTRIBUTE lib_model OF \MDIO_host_2:send_preamb\ : LABEL IS "macrocell14";
-    ATTRIBUTE lib_model OF \MDIO_host_2:busy_d\ : LABEL IS "macrocell15";
+    ATTRIBUTE lib_model OF Net_1882 : LABEL IS "macrocell9";
+    ATTRIBUTE lib_model OF \MDIO_host_2:State_2\ : LABEL IS "macrocell10";
+    ATTRIBUTE lib_model OF \MDIO_host_2:State_1\ : LABEL IS "macrocell11";
+    ATTRIBUTE lib_model OF \MDIO_host_2:State_0\ : LABEL IS "macrocell12";
+    ATTRIBUTE lib_model OF \MDIO_host_2:cfg_2\ : LABEL IS "macrocell13";
+    ATTRIBUTE lib_model OF \MDIO_host_2:cfg_1\ : LABEL IS "macrocell14";
+    ATTRIBUTE lib_model OF \MDIO_host_2:cfg_0\ : LABEL IS "macrocell15";
     ATTRIBUTE lib_model OF Net_1900 : LABEL IS "macrocell16";
     ATTRIBUTE lib_model OF \MDIO_host_2:f1_load\ : LABEL IS "macrocell17";
     COMPONENT abufcell
@@ -280,24 +273,6 @@ ARCHITECTURE __DEFAULT__ OF cfp_reader IS
             dclk_glb_ff_6 : OUT std_ulogic;
             dclk_glb_ff_7 : OUT std_ulogic);
     END COMPONENT;
-    COMPONENT controlcell
-        PORT (
-            control_0 : OUT std_ulogic;
-            control_1 : OUT std_ulogic;
-            control_2 : OUT std_ulogic;
-            control_3 : OUT std_ulogic;
-            control_4 : OUT std_ulogic;
-            control_5 : OUT std_ulogic;
-            control_6 : OUT std_ulogic;
-            control_7 : OUT std_ulogic;
-            clock : IN std_ulogic;
-            reset : IN std_ulogic;
-            clk_en : IN std_ulogic;
-            busclk : IN std_ulogic);
-    END COMPONENT;
-    ATTRIBUTE udb_clk OF controlcell : COMPONENT IS "clock";
-    ATTRIBUTE udb_clken OF controlcell : COMPONENT IS "clk_en";
-    ATTRIBUTE udb_reset OF controlcell : COMPONENT IS "reset";
     COMPONENT count7cell
         PORT (
             clock : IN std_ulogic;
@@ -1722,29 +1697,45 @@ BEGIN
             main_0 => Net_1881,
             main_1 => Net_1882);
 
-    \MDIO_host_2:status_0\:macrocell
+    \MDIO_host_2:status_val_1\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * main_1 * main_2 * main_3 * main_4 * !main_5 * main_6)",
+            eqn_main => "(!main_0 * !main_1 * !main_2)",
             regmode => 0,
             clken_mode => 1)
         PORT MAP(
-            q => \MDIO_host_2:status_0\,
-            main_0 => Net_1901,
-            main_1 => \MDIO_host_2:counter_4\,
-            main_2 => \MDIO_host_2:counter_3\,
-            main_3 => \MDIO_host_2:counter_2\,
-            main_4 => \MDIO_host_2:counter_1\,
-            main_5 => \MDIO_host_2:counter_0\,
-            main_6 => \MDIO_host_2:data_bits\);
+            q => \MDIO_host_2:status_val_1\,
+            main_0 => \MDIO_host_2:State_2\,
+            main_1 => \MDIO_host_2:State_1\,
+            main_2 => \MDIO_host_2:State_0\);
 
-    \MDIO_host_2:ld_count\:macrocell
+    \MDIO_host_2:status_val_2\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0)",
+            eqn_main => "(!main_0 * main_1 * main_2 * !main_3 * !main_4 * main_5 * main_6 * main_7 * main_8 * main_9)",
             regmode => 0,
             clken_mode => 1)
         PORT MAP(
-            q => \MDIO_host_2:ld_count\,
-            main_0 => \MDIO_host_2:control_1\);
+            q => \MDIO_host_2:status_val_2\,
+            main_0 => \MDIO_host_2:State_2\,
+            main_1 => \MDIO_host_2:State_1\,
+            main_2 => \MDIO_host_2:State_0\,
+            main_3 => \MDIO_host_2:counter_6\,
+            main_4 => \MDIO_host_2:counter_5\,
+            main_5 => \MDIO_host_2:counter_4\,
+            main_6 => \MDIO_host_2:counter_3\,
+            main_7 => \MDIO_host_2:counter_2\,
+            main_8 => \MDIO_host_2:counter_1\,
+            main_9 => \MDIO_host_2:counter_0\);
+
+    \MDIO_host_2:en_count\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1 * !main_2)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => \MDIO_host_2:en_count\,
+            main_0 => \MDIO_host_2:State_2\,
+            main_1 => \MDIO_host_2:State_1\,
+            main_2 => \MDIO_host_2:State_0\);
 
     \PWM_1:PWMUDB:sP8:pwmdp:u0\:datapathcell
         GENERIC MAP(
@@ -1934,43 +1925,22 @@ BEGIN
             status_5 => open,
             status_4 => open,
             status_3 => open,
-            status_2 => open,
-            status_1 => \MDIO_host_2:status_1\,
-            status_0 => \MDIO_host_2:status_0\);
-
-    \MDIO_host_2:SyncCtl:MdioControlReg\:controlcell
-        GENERIC MAP(
-            cy_ctrl_mode_0 => "11111111",
-            cy_ctrl_mode_1 => "00000000",
-            cy_ext_reset => 0,
-            cy_force_order => 1,
-            cy_init_value => "00000000",
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            clock => Net_5,
-            control_7 => \MDIO_host_2:control_7\,
-            control_6 => \MDIO_host_2:control_6\,
-            control_5 => \MDIO_host_2:control_5\,
-            control_4 => \MDIO_host_2:control_4\,
-            control_3 => \MDIO_host_2:control_3\,
-            control_2 => \MDIO_host_2:control_2\,
-            control_1 => \MDIO_host_2:control_1\,
-            control_0 => \MDIO_host_2:control_0\,
-            busclk => ClockBlock_BUS_CLK);
+            status_2 => \MDIO_host_2:status_val_2\,
+            status_1 => \MDIO_host_2:status_val_1\,
+            status_0 => Net_1924);
 
     \MDIO_host_2:MdioCounter\:count7cell
         GENERIC MAP(
             cy_alt_mode => 0,
             cy_init_value => "0000000",
-            cy_period => "0111101",
+            cy_period => "0111111",
             cy_route_en => 1,
             cy_route_ld => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
             clock => Net_5,
-            load => \MDIO_host_2:ld_count\,
+            load => \MDIO_host_2:status_val_1\,
             enable => \MDIO_host_2:en_count\,
             count_6 => \MDIO_host_2:counter_6\,
             count_5 => \MDIO_host_2:counter_5\,
@@ -1979,7 +1949,7 @@ BEGIN
             count_2 => \MDIO_host_2:counter_2\,
             count_1 => \MDIO_host_2:counter_1\,
             count_0 => \MDIO_host_2:counter_0\,
-            tc => Net_1924);
+            tc => \MDIO_host_2:tc\);
 
     \MDIO_host_2:cntrl16:u0\:datapathcell
         GENERIC MAP(
@@ -1991,7 +1961,7 @@ BEGIN
             cl1_sync => 1,
             cmsb_sync => 1,
             co_msb_sync => 1,
-            cy_dpconfig => "0000000000000000000000010100000000000000110000000000000011000000000000000000000000000000000000000000000000000000000000000000000011111111000000001111111111111111001000000000001000000100011100000000000000001000",
+            cy_dpconfig => "0000000000000000000000001100000000000001010000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111000000001111111111111111001000000000001000000100011100000000000000001000",
             d0_init => "00000000",
             d1_init => "00000000",
             f0_blk_sync => 1,
@@ -2010,11 +1980,13 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             clock => Net_5,
-            cs_addr_2 => open,
-            cs_addr_1 => open,
-            cs_addr_0 => open,
+            cs_addr_2 => \MDIO_host_2:cfg_2\,
+            cs_addr_1 => \MDIO_host_2:cfg_1\,
+            cs_addr_0 => \MDIO_host_2:cfg_0\,
             route_si => Net_1901,
             f1_load => \MDIO_host_2:f1_load\,
+            f0_bus_stat_comb => Net_1924,
+            f0_blk_stat_comb => \MDIO_host_2:f0_blk_stat\,
             busclk => ClockBlock_BUS_CLK,
             ce0 => \MDIO_host_2:cntrl16:u0.ce0__sig\,
             cl0 => \MDIO_host_2:cntrl16:u0.cl0__sig\,
@@ -2040,7 +2012,7 @@ BEGIN
             cl1_sync => 1,
             cmsb_sync => 1,
             co_msb_sync => 1,
-            cy_dpconfig => "0000000000000000000000010100000000000000110000000000000011000000000000000000000000000000000000000000000000000000000000000000000011111111000000001111111111111111001000000000001100000100011100110000000000001000",
+            cy_dpconfig => "0000000000000000000000001100000000000001010000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111000000001111111111111111001000000000001100000100011100000000000000001000",
             d0_init => "00000000",
             d1_init => "00000000",
             f0_blk_sync => 1,
@@ -2059,9 +2031,9 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             clock => Net_5,
-            cs_addr_2 => open,
-            cs_addr_1 => open,
-            cs_addr_0 => open,
+            cs_addr_2 => \MDIO_host_2:cfg_2\,
+            cs_addr_1 => \MDIO_host_2:cfg_1\,
+            cs_addr_0 => \MDIO_host_2:cfg_0\,
             route_si => Net_1901,
             f1_load => \MDIO_host_2:f1_load\,
             so_comb => \MDIO_host_2:so\,
@@ -2104,7 +2076,7 @@ BEGIN
 
     Net_184:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * main_2)",
+            eqn_main => "(!main_0 * !main_1 * main_2) + (!main_0 * !main_1 * main_3)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
@@ -2112,8 +2084,9 @@ BEGIN
             q => Net_184,
             clock_0 => Net_5,
             main_0 => Net_184,
-            main_1 => \MDIO_host_2:status_1\,
-            main_2 => \MDIO_host_2:control_1\);
+            main_1 => \MDIO_host_2:State_2\,
+            main_2 => \MDIO_host_2:State_1\,
+            main_3 => \MDIO_host_2:State_0\);
 
     Dedicated_Output:iocell
         GENERIC MAP(
@@ -2142,126 +2115,130 @@ BEGIN
             main_0 => \PWM_1:PWMUDB:runmode_enable\,
             main_1 => \PWM_2:PWMUDB:cmp1_less\);
 
-    \MDIO_host_2:status_1\:macrocell
+    \MDIO_host_2:State_2\:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0 * main_1) + (main_1 * main_2 * main_3)",
+            eqn_main => "(!main_0 * main_1 * main_2 * main_3)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            q => \MDIO_host_2:status_1\,
+            q => \MDIO_host_2:State_2\,
             clock_0 => Net_5,
-            main_0 => \MDIO_host_2:status_1\,
-            main_1 => \MDIO_host_2:control_1\,
-            main_2 => Net_1924,
-            main_3 => \MDIO_host_2:send_preamb\);
+            main_0 => \MDIO_host_2:State_2\,
+            main_1 => \MDIO_host_2:State_1\,
+            main_2 => \MDIO_host_2:State_0\,
+            main_3 => \MDIO_host_2:tc\);
 
-    \MDIO_host_2:data_bits\:macrocell
+    \MDIO_host_2:State_1\:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0 * main_1 * !main_3) + (main_1 * main_2 * !main_3)",
+            eqn_main => "(!main_0 * main_1) + (!main_0 * main_2)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            q => \MDIO_host_2:data_bits\,
+            q => \MDIO_host_2:State_1\,
             clock_0 => Net_5,
-            main_0 => \MDIO_host_2:data_bits\,
-            main_1 => \MDIO_host_2:en_count\,
-            main_2 => Net_1924,
-            main_3 => \MDIO_host_2:f1_load\);
+            main_0 => \MDIO_host_2:State_2\,
+            main_1 => \MDIO_host_2:State_1\,
+            main_2 => \MDIO_host_2:State_0\);
 
-    \MDIO_host_2:en_count\:macrocell
+    \MDIO_host_2:State_0\:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0 * !main_2) + (!main_1 * !main_2) + (main_1 * main_3 * main_4)",
+            eqn_main => "(!main_0 * !main_1 * !main_2 * !main_4) + (!main_0 * main_1 * main_2) + (!main_0 * main_1 * main_3) + (main_1 * main_2 * !main_4)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            q => \MDIO_host_2:en_count\,
+            q => \MDIO_host_2:State_0\,
             clock_0 => Net_5,
-            main_0 => \MDIO_host_2:status_1\,
-            main_1 => \MDIO_host_2:control_1\,
-            main_2 => \MDIO_host_2:en_count\,
-            main_3 => Net_1924,
-            main_4 => \MDIO_host_2:send_preamb\);
+            main_0 => \MDIO_host_2:State_2\,
+            main_1 => \MDIO_host_2:State_1\,
+            main_2 => \MDIO_host_2:State_0\,
+            main_3 => \MDIO_host_2:tc\,
+            main_4 => \MDIO_host_2:f0_blk_stat\);
 
-    \MDIO_host_2:mdio_start_d\:macrocell
+    \MDIO_host_2:cfg_2\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * main_2) + (main_0 * main_1)",
+            eqn_main => "(!main_0 * !main_2 * main_4) + (main_0 * main_1 * main_2 * !main_3 * main_4)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            q => \MDIO_host_2:mdio_start_d\,
+            q => \MDIO_host_2:cfg_2\,
             clock_0 => Net_5,
-            main_0 => Net_184,
-            main_1 => \MDIO_host_2:control_1\,
-            main_2 => \MDIO_host_2:mdio_start_d\);
+            main_0 => \MDIO_host_2:State_2\,
+            main_1 => \MDIO_host_2:State_1\,
+            main_2 => \MDIO_host_2:State_0\,
+            main_3 => \MDIO_host_2:f0_blk_stat\,
+            main_4 => \MDIO_host_2:cfg_2\);
 
-    \MDIO_host_2:start_frame_d\:macrocell
+    \MDIO_host_2:cfg_1\:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0 * main_1 * !main_2)",
+            eqn_main => "(!main_0 * main_1 * main_2 * main_3 * !main_9) + (!main_0 * main_1 * main_2 * !main_4 * !main_9) + (!main_0 * main_1 * main_2 * main_5 * !main_9) + (!main_0 * main_1 * main_2 * main_6 * !main_9) + (!main_0 * main_1 * main_2 * main_7 * !main_9) + (!main_0 * main_1 * main_2 * main_8 * !main_9) + (!main_0 * !main_2 * main_11) + (main_0 * main_1 * main_2 * !main_10 * main_11)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            q => \MDIO_host_2:start_frame_d\,
+            q => \MDIO_host_2:cfg_1\,
             clock_0 => Net_5,
-            main_0 => Net_184,
-            main_1 => \MDIO_host_2:control_1\,
-            main_2 => \MDIO_host_2:mdio_start_d\);
+            main_0 => \MDIO_host_2:State_2\,
+            main_1 => \MDIO_host_2:State_1\,
+            main_2 => \MDIO_host_2:State_0\,
+            main_3 => \MDIO_host_2:counter_6\,
+            main_4 => \MDIO_host_2:counter_5\,
+            main_5 => \MDIO_host_2:counter_4\,
+            main_6 => \MDIO_host_2:counter_3\,
+            main_7 => \MDIO_host_2:counter_2\,
+            main_8 => \MDIO_host_2:counter_1\,
+            main_9 => \MDIO_host_2:counter_0\,
+            main_10 => \MDIO_host_2:f0_blk_stat\,
+            main_11 => \MDIO_host_2:cfg_1\);
 
-    \MDIO_host_2:send_preamb\:macrocell
+    \MDIO_host_2:cfg_0\:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0 * main_1) + (main_0 * main_2)",
+            eqn_main => "(!main_0 * !main_1 * main_2) + (!main_0 * !main_2 * main_11) + (!main_0 * main_2 * !main_3 * main_4 * !main_5 * !main_6 * !main_7 * !main_8 * !main_9) + (main_0 * main_1 * main_2 * !main_10 * main_11)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            q => \MDIO_host_2:send_preamb\,
+            q => \MDIO_host_2:cfg_0\,
             clock_0 => Net_5,
-            main_0 => \MDIO_host_2:control_1\,
-            main_1 => Net_1924,
-            main_2 => \MDIO_host_2:send_preamb\);
-
-    \MDIO_host_2:busy_d\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => \MDIO_host_2:busy_d\,
-            clock_0 => Net_5,
-            main_0 => \MDIO_host_2:en_count\);
+            main_0 => \MDIO_host_2:State_2\,
+            main_1 => \MDIO_host_2:State_1\,
+            main_2 => \MDIO_host_2:State_0\,
+            main_3 => \MDIO_host_2:counter_6\,
+            main_4 => \MDIO_host_2:counter_5\,
+            main_5 => \MDIO_host_2:counter_4\,
+            main_6 => \MDIO_host_2:counter_3\,
+            main_7 => \MDIO_host_2:counter_2\,
+            main_8 => \MDIO_host_2:counter_1\,
+            main_9 => \MDIO_host_2:counter_0\,
+            main_10 => \MDIO_host_2:f0_blk_stat\,
+            main_11 => \MDIO_host_2:cfg_0\);
 
     Net_1900:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * !main_2 * main_3 * main_4 * !main_5) + (!main_1 * !main_2 * main_3 * main_4 * !main_5)",
+            eqn_main => "(!main_0 * main_1 * main_2 * !main_3)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
             q => Net_1900,
             clock_0 => Net_5,
-            main_0 => \MDIO_host_2:data_bits\,
-            main_1 => \MDIO_host_2:control_2\,
-            main_2 => \MDIO_host_2:start_frame_d\,
-            main_3 => \MDIO_host_2:send_preamb\,
-            main_4 => \MDIO_host_2:busy_d\,
-            main_5 => \MDIO_host_2:so\);
+            main_0 => \MDIO_host_2:State_2\,
+            main_1 => \MDIO_host_2:State_1\,
+            main_2 => \MDIO_host_2:State_0\,
+            main_3 => \MDIO_host_2:so\);
 
     \MDIO_host_2:f1_load\:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0 * main_1 * main_2)",
+            eqn_main => "(main_0)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
             q => \MDIO_host_2:f1_load\,
             clock_0 => Net_5,
-            main_0 => \MDIO_host_2:data_bits\,
-            main_1 => \MDIO_host_2:en_count\,
-            main_2 => Net_1924);
+            main_0 => \MDIO_host_2:tc\);
 
 END __DEFAULT__;

@@ -1,6 +1,6 @@
 // ======================================================================
 // cfp_reader.v generated from TopDesign.cysch
-// 01/16/2017 at 17:44
+// 01/27/2017 at 17:21
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1053,7 +1053,7 @@ module top ;
 		#(.id("d6ea1ea9-8e91-44e7-92b5-e30c87bc4254"),
 		  .source_clock_id(""),
 		  .divisor(0),
-		  .period("125000000"),
+		  .period("1000000000"),
 		  .is_direct(0),
 		  .is_digital(1))
 		Clock_1

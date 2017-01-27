@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
   29:Generated_Source\PSoC5/USBUART_1.c **** ***************************************/
   30:Generated_Source\PSoC5/USBUART_1.c **** 
   31:Generated_Source\PSoC5/USBUART_1.c **** /** Indicates whether the USBFS has been initialized. The variable is
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 2
 
 
   32:Generated_Source\PSoC5/USBUART_1.c **** * initialized to 0 after device reset and set to 1 the first time USBFS_Start()
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
   86:Generated_Source\PSoC5/USBUART_1.c ****         USBUART_1_ep3_dma__TR_OUTPUT,
   87:Generated_Source\PSoC5/USBUART_1.c ****         0u,
   88:Generated_Source\PSoC5/USBUART_1.c ****         0u,
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 3
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 3
 
 
   89:Generated_Source\PSoC5/USBUART_1.c ****         0u,
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  143:Generated_Source\PSoC5/USBUART_1.c **** *   required for USBFS component operation.
  144:Generated_Source\PSoC5/USBUART_1.c **** *
  145:Generated_Source\PSoC5/USBUART_1.c **** *   PSoC 4200L devices: when USBFS component configured to DMA with Automatic
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 4
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 4
 
 
  146:Generated_Source\PSoC5/USBUART_1.c **** *   Buffer Management, the DMA interrupt priority is changed to the highest
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  200:Generated_Source\PSoC5/USBUART_1.c **** ****************************************************************************//**
  201:Generated_Source\PSoC5/USBUART_1.c **** *
  202:Generated_Source\PSoC5/USBUART_1.c **** * This function initializes or restores the component according to the
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 5
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 5
 
 
  203:Generated_Source\PSoC5/USBUART_1.c **** * customizer Configure dialog settings. It is not necessary to call
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  245:Generated_Source\PSoC5/USBUART_1.c **** 
  246:Generated_Source\PSoC5/USBUART_1.c ****     /* Configure interrupt sources from: SOF, Bus Reset and EP0. */
  247:Generated_Source\PSoC5/USBUART_1.c ****     USBUART_1_INTR_SIE_MASK_REG = USBUART_1_DEFAULT_INTR_SIE_MASK;
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 6
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 6
 
 
  248:Generated_Source\PSoC5/USBUART_1.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
   71              	.LVL2:
  270:Generated_Source\PSoC5/USBUART_1.c ****     /* Disable USBIO by asserting PM.USB_CR0.fsusbio_pd_n(Inverted.
  271:Generated_Source\PSoC5/USBUART_1.c ****     *  high. These bits will be set low by the power manager out-of-reset.
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 7
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 7
 
 
  272:Generated_Source\PSoC5/USBUART_1.c ****     *  Also confirm USBIO pull-up is disabled.
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  106 0078 2370     		strb	r3, [r4]
  292:Generated_Source\PSoC5/USBUART_1.c ****     CyDelayUs(USBUART_1_WAIT_PD_PULLUP_N_ENABLE);
  107              		.loc 1 292 0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 8
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 8
 
 
  108 007a 2846     		mov	r0, r5
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  329:Generated_Source\PSoC5/USBUART_1.c **** #else
  330:Generated_Source\PSoC5/USBUART_1.c ****     /* Set bus reset interrupt. */
  331:Generated_Source\PSoC5/USBUART_1.c ****     CyIntSetPriority(USBUART_1_BUS_RESET_VECT_NUM, USBUART_1_BUS_RESET_PRIOR);
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 9
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 9
 
 
  126              		.loc 1 331 0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  164 00d4 FFF7FEFF 		bl	CyIntSetVector
  165              	.LVL14:
  348:Generated_Source\PSoC5/USBUART_1.c ****     #endif /* (USBUART_1_EP1_ISR_ACTIVE) */
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 10
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 10
 
 
  349:Generated_Source\PSoC5/USBUART_1.c **** 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  383:Generated_Source\PSoC5/USBUART_1.c ****         (void) CyIntSetVector(USBUART_1_EP_7_VECT_NUM, &USBUART_1_EP_7_ISR);
  384:Generated_Source\PSoC5/USBUART_1.c ****     #endif /* (USBUART_1_EP7_ISR_ACTIVE) */
  385:Generated_Source\PSoC5/USBUART_1.c **** 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 11
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 11
 
 
  386:Generated_Source\PSoC5/USBUART_1.c ****     /* Set Data Endpoint 8 Interrupt. */
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  223              	USBUART_1_InitComponent:
  224              	.LFB2:
  403:Generated_Source\PSoC5/USBUART_1.c **** #endif /* (USBUART_1_DP_ISR_ACTIVE) */
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 12
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 12
 
 
  404:Generated_Source\PSoC5/USBUART_1.c **** 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  458:Generated_Source\PSoC5/USBUART_1.c **** *
  459:Generated_Source\PSoC5/USBUART_1.c **** *******************************************************************************/
  460:Generated_Source\PSoC5/USBUART_1.c **** void USBUART_1_InitComponent(uint8 device, uint8 mode) 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 13
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 13
 
 
  461:Generated_Source\PSoC5/USBUART_1.c **** {
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  255 001e 1370     		strb	r3, [r2]
  485:Generated_Source\PSoC5/USBUART_1.c ****     USBUART_1_lastPacketSize  = 0u;
  256              		.loc 1 485 0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 14
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 14
 
 
  257 0020 204A     		ldr	r2, .L12+28
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  519:Generated_Source\PSoC5/USBUART_1.c **** 
  520:Generated_Source\PSoC5/USBUART_1.c ****     #if (USBUART_1_EP6_ISR_ACTIVE)
  521:Generated_Source\PSoC5/USBUART_1.c ****         CyIntEnable(USBUART_1_EP_6_VECT_NUM);
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 15
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 15
 
 
  522:Generated_Source\PSoC5/USBUART_1.c ****     #endif /* USBUART_1_EP6_ISR_REMOVE */
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  280 0046 0129     		cmp	r1, #1
  281 0048 06D0     		beq	.L8
  282 004a 0BE0     		b	.L10
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 16
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 16
 
 
  283              	.L7:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  605:Generated_Source\PSoC5/USBUART_1.c **** 
  606:Generated_Source\PSoC5/USBUART_1.c ****     #if (USBUART_1_LPM_ACTIVE)
  607:Generated_Source\PSoC5/USBUART_1.c ****         if (NULL != USBUART_1_GetBOSPtr())
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 17
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 17
 
 
  608:Generated_Source\PSoC5/USBUART_1.c ****         {
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  332 009c 00000000 		.word	USBUART_1_deviceAddress
  333 00a0 00000000 		.word	USBUART_1_deviceStatus
  334 00a4 00000000 		.word	USBUART_1_lastPacketSize
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 18
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 18
 
 
  335 00a8 00E100E0 		.word	-536813312
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  384 0020 00000000 		.word	.LANCHOR0
  385              		.cfi_endproc
  386              	.LFE0:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 19
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 19
 
 
  387              		.size	USBUART_1_Start, .-USBUART_1_Start
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  676:Generated_Source\PSoC5/USBUART_1.c **** #if defined(USBUART_1_ENABLE_HID_CLASS)
  677:Generated_Source\PSoC5/USBUART_1.c ****     uint8 i;
  678:Generated_Source\PSoC5/USBUART_1.c **** 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 20
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 20
 
 
  679:Generated_Source\PSoC5/USBUART_1.c ****     for (i = 0u; i < USBUART_1_MAX_INTERFACES_NUMBER; i++)
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  430 0028 1A70     		strb	r2, [r3]
  431 002a 7047     		bx	lr
  432              	.L21:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 21
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 21
 
 
  433              		.align	2
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  460              		.cfi_offset 3, -8
  461              		.cfi_offset 14, -4
  731:Generated_Source\PSoC5/USBUART_1.c ****     uint8 enableInterrupts;
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 22
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 22
 
 
  732:Generated_Source\PSoC5/USBUART_1.c **** 
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  757:Generated_Source\PSoC5/USBUART_1.c ****     USBUART_1_DP_INP_DIS_REG |= (uint8) USBUART_1_DP_MASK;
  491              		.loc 1 757 0
  492 003c 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 23
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 23
 
 
  493 003e 42F04002 		orr	r2, r2, #64
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  788:Generated_Source\PSoC5/USBUART_1.c **** 
  789:Generated_Source\PSoC5/USBUART_1.c ****     #if (USBUART_1_EP4_ISR_ACTIVE)
  790:Generated_Source\PSoC5/USBUART_1.c ****         CyIntDisable(USBUART_1_EP_4_VECT_NUM);
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 24
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 24
 
 
  791:Generated_Source\PSoC5/USBUART_1.c ****     #endif /* (USBUART_1_EP4_ISR_ACTIVE) */
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  539 0088 1370     		strb	r3, [r2]
  823:Generated_Source\PSoC5/USBUART_1.c **** 
  824:Generated_Source\PSoC5/USBUART_1.c ****     /* It is mandatory for correct device startup. */
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 25
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 25
 
 
  825:Generated_Source\PSoC5/USBUART_1.c ****     USBUART_1_initVar = 0u;
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  568              		.loc 1 850 0
  569              		.cfi_startproc
  570              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 26
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 26
 
 
  571              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  871:Generated_Source\PSoC5/USBUART_1.c **** *******************************************************************************/
  872:Generated_Source\PSoC5/USBUART_1.c **** uint8 USBUART_1_GetConfiguration(void) 
  873:Generated_Source\PSoC5/USBUART_1.c **** {
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 27
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 27
 
 
  605              		.loc 1 873 0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  633              		@ frame_needed = 0, uses_anonymous_args = 0
  634              		@ link register save eliminated.
  635              	.LVL33:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 28
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 28
 
 
  900:Generated_Source\PSoC5/USBUART_1.c ****     uint8 res = 0u;
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  917:Generated_Source\PSoC5/USBUART_1.c **** *  It is useful to identify which alternate settings are active in the specified 
  918:Generated_Source\PSoC5/USBUART_1.c **** *  interface.
  919:Generated_Source\PSoC5/USBUART_1.c **** *
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 29
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 29
 
 
  920:Generated_Source\PSoC5/USBUART_1.c **** *  \param
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  947:Generated_Source\PSoC5/USBUART_1.c **** *
  948:Generated_Source\PSoC5/USBUART_1.c **** *  Return Value           | Description
  949:Generated_Source\PSoC5/USBUART_1.c **** *  -----------------------|-----------------------------------------------------
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 30
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 30
 
 
  950:Generated_Source\PSoC5/USBUART_1.c **** *  USBFS_NO_EVENT_PENDING |The endpoint is awaiting SIE action
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  974:Generated_Source\PSoC5/USBUART_1.c **** *  \param epNumber Data Endpoint Number.
  975:Generated_Source\PSoC5/USBUART_1.c **** *                   Valid values are between 1 and 8.
  976:Generated_Source\PSoC5/USBUART_1.c **** *
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 31
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 31
 
 
  977:Generated_Source\PSoC5/USBUART_1.c **** * \return
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  763              		.loc 1 995 0
  764 0022 7047     		bx	lr
  765              	.L48:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 32
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 32
 
 
  766              		.align	2
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 1036:Generated_Source\PSoC5/USBUART_1.c ****     #endif /* (USBUART_1_DMA7_ACTIVE) */
 1037:Generated_Source\PSoC5/USBUART_1.c **** 
 1038:Generated_Source\PSoC5/USBUART_1.c ****     #if (USBUART_1_DMA8_ACTIVE)
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 33
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 33
 
 
 1039:Generated_Source\PSoC5/USBUART_1.c ****         CYDMA_CH_CTL_BASE.ctl[USBUART_1_ep8_dma_CHANNEL] = USBUART_1_ep8_dma_CHANNEL_CFG;
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 1093:Generated_Source\PSoC5/USBUART_1.c ****     *  \param *pData Pointer to a data array that is related to the EP transfers.
 1094:Generated_Source\PSoC5/USBUART_1.c ****     *
 1095:Generated_Source\PSoC5/USBUART_1.c ****     * \reentrant No.
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 34
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 34
 
 
 1096:Generated_Source\PSoC5/USBUART_1.c ****     *
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 1150:Generated_Source\PSoC5/USBUART_1.c ****             break;
 1151:Generated_Source\PSoC5/USBUART_1.c ****     #endif /* (USBUART_1_DMA4_ACTIVE) */
 1152:Generated_Source\PSoC5/USBUART_1.c **** 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 35
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 35
 
 
 1153:Generated_Source\PSoC5/USBUART_1.c ****     #if (USBUART_1_DMA5_ACTIVE)
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 1207:Generated_Source\PSoC5/USBUART_1.c ****     *  \param epNumber: The data endpoint number for which associated DMA 
 1208:Generated_Source\PSoC5/USBUART_1.c ****     *  channel is stopped. The range of valid values is between 1 and 8. To stop 
 1209:Generated_Source\PSoC5/USBUART_1.c ****     *  all DMAs associated with endpoints call this function with 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 36
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 36
 
 
 1210:Generated_Source\PSoC5/USBUART_1.c ****     *  USBUART_1_MAX_EP argument.
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 1264:Generated_Source\PSoC5/USBUART_1.c ****     *  epNumber: Contains the data endpoint number.
 1265:Generated_Source\PSoC5/USBUART_1.c ****     *  mode:   0 - Configure DMA to send the the rest of data.
 1266:Generated_Source\PSoC5/USBUART_1.c ****     *          1 - Configure DMA to repeat 2 last bytes of the first burst.
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 37
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 37
 
 
 1267:Generated_Source\PSoC5/USBUART_1.c ****     *
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 1321:Generated_Source\PSoC5/USBUART_1.c **** *
 1322:Generated_Source\PSoC5/USBUART_1.c **** *  *DMA with Automatic Buffer Management:*
 1323:Generated_Source\PSoC5/USBUART_1.c **** *  Configures DMA. This is required only once, so it is done only when parameter
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 38
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 38
 
 
 1324:Generated_Source\PSoC5/USBUART_1.c **** *  pData is not NULL. When the pData pointer is NULL, the function skips this
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  807 001e 9A42     		cmp	r2, r3
  808 0020 07D9     		bls	.L51
 1350:Generated_Source\PSoC5/USBUART_1.c ****         {
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 39
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 39
 
 
 1351:Generated_Source\PSoC5/USBUART_1.c ****             length = USBUART_1_EPX_DATA_BUF_MAX - USBUART_1_EP[epNumber].buffOffset;
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  846              	.LVL53:
  847 005c 9BB2     		uxth	r3, r3
  848              	.LVL54:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 40
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 40
 
 
  849 005e 00E0     		b	.L52
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 1390:Generated_Source\PSoC5/USBUART_1.c ****             if ((pData != NULL) && (length > 0u))
 1391:Generated_Source\PSoC5/USBUART_1.c ****             {
 1392:Generated_Source\PSoC5/USBUART_1.c ****             #if (CY_PSOC4)
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 41
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 41
 
 
 1393:Generated_Source\PSoC5/USBUART_1.c ****                 uint32 channelNum = (uint32) USBUART_1_DmaChan[epNumber];
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 1447:Generated_Source\PSoC5/USBUART_1.c **** 
 1448:Generated_Source\PSoC5/USBUART_1.c ****                 /* Set destination address. */
 1449:Generated_Source\PSoC5/USBUART_1.c ****                 USBUART_1_CyDmaSetDstAddress(channelNum, USBUART_1_DMA_DESCR0, (void*) &USBUART_1_A
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 42
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 42
 
 
 1450:Generated_Source\PSoC5/USBUART_1.c ****                 USBUART_1_CyDmaSetDstAddress(channelNum, USBUART_1_DMA_DESCR1, (void*) &USBUART_1_A
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 1504:Generated_Source\PSoC5/USBUART_1.c ****                 (void) CyDmaChEnable(USBUART_1_DmaChan[epNumber], 1u);
 1505:Generated_Source\PSoC5/USBUART_1.c ****             #endif /* (CY_PSOC4) */
 1506:Generated_Source\PSoC5/USBUART_1.c ****             }
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 43
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 43
 
 
 1507:Generated_Source\PSoC5/USBUART_1.c ****             else
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 1561:Generated_Source\PSoC5/USBUART_1.c ****                     }                   
 1562:Generated_Source\PSoC5/USBUART_1.c **** 
 1563:Generated_Source\PSoC5/USBUART_1.c ****                     /* Adjust burst counter taking to account: 2 valid descriptors and interrupt tr
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 44
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 44
 
 
 1564:Generated_Source\PSoC5/USBUART_1.c ****                     USBUART_1_DmaEpBurstCnt[epNumber] = USBUART_1_DMA_GET_BURST_CNT(USBUART_1_DmaEp
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  892 0088 FC5F0040 		.word	1073766396
  893 008c 78600040 		.word	1073766520
  894 0090 FE5F0040 		.word	1073766398
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 45
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 45
 
 
  895              		.cfi_endproc
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 1648:Generated_Source\PSoC5/USBUART_1.c **** *
 1649:Generated_Source\PSoC5/USBUART_1.c **** * \reentrant
 1650:Generated_Source\PSoC5/USBUART_1.c **** *  No.
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 46
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 46
 
 
 1651:Generated_Source\PSoC5/USBUART_1.c **** *
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 1705:Generated_Source\PSoC5/USBUART_1.c ****             USBUART_1_CyDmaChEnable(channelNum);
 1706:Generated_Source\PSoC5/USBUART_1.c ****         }
 1707:Generated_Source\PSoC5/USBUART_1.c ****         #else
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 47
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 47
 
 
 1708:Generated_Source\PSoC5/USBUART_1.c ****             /* Configure DMA to transfer data. */
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 1762:Generated_Source\PSoC5/USBUART_1.c **** 
 1763:Generated_Source\PSoC5/USBUART_1.c ****             /* Adjust burst counter taking to account: 2 valid descriptors and interrupt trigger af
 1764:Generated_Source\PSoC5/USBUART_1.c ****             USBUART_1_DmaEpBurstCnt[epNumber] = USBUART_1_DMA_GET_BURST_CNT(USBUART_1_DmaEpBurstCnt
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 48
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 48
 
 
 1765:Generated_Source\PSoC5/USBUART_1.c **** 
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 1819:Generated_Source\PSoC5/USBUART_1.c ****     {
 1820:Generated_Source\PSoC5/USBUART_1.c ****         length = 0u;
 1821:Generated_Source\PSoC5/USBUART_1.c ****     }
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 49
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 49
 
 
 1822:Generated_Source\PSoC5/USBUART_1.c **** 
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 1876:Generated_Source\PSoC5/USBUART_1.c ****             length = USBUART_1_EPX_DATA_BUF_MAX - USBUART_1_EP[epNumber].buffOffset;
 1877:Generated_Source\PSoC5/USBUART_1.c ****         }
 1878:Generated_Source\PSoC5/USBUART_1.c ****     #endif /* (!USBUART_1_EP_MANAGEMENT_DMA_AUTO) */
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 50
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 50
 
 
 1879:Generated_Source\PSoC5/USBUART_1.c **** 
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 1933:Generated_Source\PSoC5/USBUART_1.c ****                 USBUART_1_CyDmaChEnable(channelNum);
 1934:Generated_Source\PSoC5/USBUART_1.c **** 
 1935:Generated_Source\PSoC5/USBUART_1.c ****                 /* Generate DMA request. */
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 51
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 51
 
 
 1936:Generated_Source\PSoC5/USBUART_1.c ****                 USBUART_1_ARB_EP_BASE.arbEp[epNumber].epCfg |=  (uint32)  USBUART_1_ARB_EPX_CFG_DMA
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 1990:Generated_Source\PSoC5/USBUART_1.c ****                     /* Get number of elements in the last burst. */
 1991:Generated_Source\PSoC5/USBUART_1.c ****                     USBUART_1_DmaEpLastBurstEl[epNumber] = (uint8) (length % USBUART_1_DMA_BYTES_PE
 1992:Generated_Source\PSoC5/USBUART_1.c **** 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 52
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 52
 
 
 1993:Generated_Source\PSoC5/USBUART_1.c ****                     /* Get total number of bursts. */
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 2047:Generated_Source\PSoC5/USBUART_1.c ****                     USBUART_1_SIE_EP_BASE.sieEp[epNumber].epCr0 = USBUART_1_EP[epNumber].epMode;
 2048:Generated_Source\PSoC5/USBUART_1.c ****                 }
 2049:Generated_Source\PSoC5/USBUART_1.c ****             }
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 53
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 53
 
 
 2050:Generated_Source\PSoC5/USBUART_1.c ****         #endif /* (USBUART_1_EP_MANAGEMENT_DMA_AUTO) */
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 2104:Generated_Source\PSoC5/USBUART_1.c **** uint16 USBUART_1_ReadOutEP16(uint8 epNumber, uint8 pData[], uint16 length)
 2105:Generated_Source\PSoC5/USBUART_1.c **** {
 2106:Generated_Source\PSoC5/USBUART_1.c ****     uint32 adjLength;
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 54
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 54
 
 
 2107:Generated_Source\PSoC5/USBUART_1.c **** 
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 2161:Generated_Source\PSoC5/USBUART_1.c ****             USBUART_1_ARB_EP_BASE.arbEp[epNumber].epCfg &=  (uint32) ~USBUART_1_ARB_EPX_CFG_DMA_REQ
 2162:Generated_Source\PSoC5/USBUART_1.c **** 
 2163:Generated_Source\PSoC5/USBUART_1.c ****             /* OUT endpoint has to be armed again by user when DMA transfers have been completed.
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 55
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 55
 
 
 2164:Generated_Source\PSoC5/USBUART_1.c ****             * NO_EVENT_PENDING: notifies that data has been copied from endpoint buffer.
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 2218:Generated_Source\PSoC5/USBUART_1.c **** 
 2219:Generated_Source\PSoC5/USBUART_1.c ****             /* Configure DMA descriptor 0. */
 2220:Generated_Source\PSoC5/USBUART_1.c ****             USBUART_1_CyDmaSetConfiguration(channelNum, USBUART_1_DMA_DESCR0, USBUART_1_DMA_COMMON_
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 56
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 56
 
 
 2221:Generated_Source\PSoC5/USBUART_1.c ****                                                     CYDMA_HALFWORD | CYDMA_WORD_ELEMENT | CYDMA_INC
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 2275:Generated_Source\PSoC5/USBUART_1.c **** *******************************************************************************/
 2276:Generated_Source\PSoC5/USBUART_1.c **** void USBUART_1_EnableOutEP(uint8 epNumber) 
 2277:Generated_Source\PSoC5/USBUART_1.c **** {
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 57
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 57
 
 
  906              		.loc 1 2277 0
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  953              		@ frame_needed = 0, uses_anonymous_args = 0
  954              	.LVL62:
  955 0000 70B5     		push	{r4, r5, r6, lr}
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 58
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 58
 
 
  956              		.cfi_def_cfa_offset 16
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  1001 0030 A342     		cmp	r3, r4
  1002 0032 F7D3     		bcc	.L69
  1003              	.LBE4:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 59
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 59
 
 
 1674:Generated_Source\PSoC5/USBUART_1.c ****     #else
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 2299:Generated_Source\PSoC5/USBUART_1.c **** *******************************************************************************/
 2300:Generated_Source\PSoC5/USBUART_1.c **** void USBUART_1_DisableOutEP(uint8 epNumber) 
 2301:Generated_Source\PSoC5/USBUART_1.c **** {
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 60
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 60
 
 
  1040              		.loc 1 2301 0
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 2322:Generated_Source\PSoC5/USBUART_1.c **** *    ---------------------------|----------------------------------------------
 2323:Generated_Source\PSoC5/USBUART_1.c **** *    USBUART_1_FORCE_J   | Force a J State onto the D+/D– lines
 2324:Generated_Source\PSoC5/USBUART_1.c **** *    USBUART_1_FORCE_K   | Force a K State onto the D+/D– lines
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 61
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 61
 
 
 2325:Generated_Source\PSoC5/USBUART_1.c **** *    USBUART_1_FORCE_SE0 | Force a Single Ended 0 onto the D+/D– lines
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 2354:Generated_Source\PSoC5/USBUART_1.c **** *******************************************************************************/
 2355:Generated_Source\PSoC5/USBUART_1.c **** uint8 USBUART_1_GetEPAckState(uint8 epNumber) 
 2356:Generated_Source\PSoC5/USBUART_1.c **** {
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 62
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 62
 
 
  1099              		.loc 1 2356 0
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 2368:Generated_Source\PSoC5/USBUART_1.c **** /*******************************************************************************
 2369:Generated_Source\PSoC5/USBUART_1.c **** * Function Name: USBUART_1_SetPowerStatus
 2370:Generated_Source\PSoC5/USBUART_1.c **** ****************************************************************************//**
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 63
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 63
 
 
 2371:Generated_Source\PSoC5/USBUART_1.c **** *
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  1161 0018 7047     		bx	lr
  1162              	.L92:
  1163 001a 00BF     		.align	2
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 64
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 64
 
 
  1164              	.L91:
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 2446:Generated_Source\PSoC5/USBUART_1.c **** * \return
 2447:Generated_Source\PSoC5/USBUART_1.c **** *  Returns non-zero value if remote wakeup is enabled and zero otherwise.
 2448:Generated_Source\PSoC5/USBUART_1.c **** *
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 65
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 65
 
 
 2449:Generated_Source\PSoC5/USBUART_1.c **** * \globalvars
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 2467:Generated_Source\PSoC5/USBUART_1.c **** * Function Name: USBUART_1_GetDeviceAddress
 2468:Generated_Source\PSoC5/USBUART_1.c **** ****************************************************************************//**
 2469:Generated_Source\PSoC5/USBUART_1.c **** *
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 66
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 66
 
 
 2470:Generated_Source\PSoC5/USBUART_1.c **** *  This function returns the currently assigned address for the USB device.
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
 2493:Generated_Source\PSoC5/USBUART_1.c **** #if (CY_PSOC4)
 2494:Generated_Source\PSoC5/USBUART_1.c ****     /* Enable SOF interrupt interrupt source. */
 2495:Generated_Source\PSoC5/USBUART_1.c ****     USBUART_1_INTR_SIE_MASK_REG |= (uint32) USBUART_1_INTR_SIE_SOF_INTR;
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 67
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 67
 
 
 2496:Generated_Source\PSoC5/USBUART_1.c **** #else
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  1271 0006 1A60     		str	r2, [r3]
  1272 0008 7047     		bx	lr
  1273              	.L106:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 68
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 68
 
 
  1274 000a 00BF     		.align	2
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  1328 0048 02       		.uleb128 0x2
  1329 0049 04       		.byte	0x4
  1330 004a 07       		.byte	0x7
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 69
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 69
 
 
  1331 004b 1B020000 		.4byte	.LASF5
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  1385 00bb 3E02     		.2byte	0x23e
  1386 00bd C1000000 		.4byte	0xc1
  1387 00c1 05       		.uleb128 0x5
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 70
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 70
 
 
  1388 00c2 83000000 		.4byte	0x83
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  1442 012f 05       		.byte	0x5
  1443 0130 09       		.uleb128 0x9
  1444 0131 13050000 		.4byte	.LASF25
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 71
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 71
 
 
  1445 0135 03       		.byte	0x3
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  1499 019e A9010000 		.4byte	0x1a9
  1500 01a2 0D       		.uleb128 0xd
  1501 01a3 D9000000 		.4byte	0xd9
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 72
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 72
 
 
  1502 01a7 0C       		.byte	0xc
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  1556 0210 09       		.uleb128 0x9
  1557 0211 74030000 		.4byte	.LASF40
  1558 0215 03       		.byte	0x3
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 73
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 73
 
 
  1559 0216 EF       		.byte	0xef
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  1613 0285 03       		.byte	0x3
  1614 0286 1401     		.2byte	0x114
  1615 0288 9A020000 		.4byte	0x29a
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 74
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 74
 
 
  1616 028c 0F       		.uleb128 0xf
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  1670 0306 02       		.uleb128 0x2
  1671 0307 76       		.byte	0x76
  1672 0308 00       		.sleb128 0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 75
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 75
 
 
  1673 0309 00       		.byte	0
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  1727 036c 01       		.uleb128 0x1
  1728 036d 50       		.byte	0x50
  1729 036e 01       		.uleb128 0x1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 76
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 76
 
 
  1730 036f 47       		.byte	0x47
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  1784 03cc 7B090000 		.4byte	0x97b
  1785 03d0 E0030000 		.4byte	0x3e0
  1786 03d4 14       		.uleb128 0x14
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 77
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 77
 
 
  1787 03d5 01       		.uleb128 0x1
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  1841 042f 01       		.uleb128 0x1
  1842 0430 51       		.byte	0x51
  1843 0431 01       		.uleb128 0x1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 78
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 78
 
 
  1844 0432 37       		.byte	0x37
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  1898 048d E5000000 		.4byte	.LASF49
  1899 0491 01       		.byte	0x1
  1900 0492 CC01     		.2byte	0x1cc
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 79
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 79
 
 
  1901 0494 6B000000 		.4byte	0x6b
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  1955 050a 02       		.uleb128 0x2
  1956 050b 75       		.byte	0x75
  1957 050c 00       		.sleb128 0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 80
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 80
 
 
  1958 050d 00       		.byte	0
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  2012 0593 01       		.byte	0x1
  2013 0594 6803     		.2byte	0x368
  2014 0596 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 81
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 81
 
 
  2015 059a 00000000 		.4byte	.LFB6
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  2069 0624 00       		.byte	0
  2070 0625 1B       		.uleb128 0x1b
  2071 0626 C3020000 		.4byte	.LASF61
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 82
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 82
 
 
  2072 062a 01       		.byte	0x1
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  2126 06ad 5305     		.2byte	0x553
  2127 06af 77000000 		.4byte	0x77
  2128 06b3 0A020000 		.4byte	.LLST14
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 83
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 83
 
 
  2129 06b7 00       		.byte	0
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  2183 073e 51070000 		.4byte	0x751
  2184 0742 1D       		.uleb128 0x1d
  2185 0743 6900     		.ascii	"i\000"
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 84
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 84
 
 
  2186 0745 01       		.byte	0x1
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  2240 07ae 6B000000 		.4byte	0x6b
  2241 07b2 31030000 		.4byte	.LLST20
  2242 07b6 00       		.byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 85
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 85
 
 
  2243 07b7 16       		.uleb128 0x16
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  2297 0838 01       		.uleb128 0x1
  2298 0839 50       		.byte	0x50
  2299 083a 00       		.byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 86
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 86
 
 
  2300 083b 1B       		.uleb128 0x1b
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  2354 08b9 B0000000 		.4byte	0xb0
  2355 08bd 23       		.uleb128 0x23
  2356 08be 4A060000 		.4byte	.LASF83
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 87
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 87
 
 
  2357 08c2 03       		.byte	0x3
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  2411 093e 05       		.uleb128 0x5
  2412 093f 23090000 		.4byte	0x923
  2413 0943 24       		.uleb128 0x24
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 88
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 88
 
 
  2414 0944 AA020000 		.4byte	.LASF91
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  2468 09bc 25       		.uleb128 0x25
  2469 09bd 2D020000 		.4byte	.LASF97
  2470 09c1 06       		.byte	0x6
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 89
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 89
 
 
  2471 09c2 2B       		.byte	0x2b
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  2525 0031 05       		.uleb128 0x5
  2526 0032 49       		.uleb128 0x49
  2527 0033 13       		.uleb128 0x13
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 90
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 90
 
 
  2528 0034 00       		.byte	0
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  2582 006a 16       		.uleb128 0x16
  2583 006b 00       		.byte	0
  2584 006c 03       		.uleb128 0x3
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 91
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 91
 
 
  2585 006d 0E       		.uleb128 0xe
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  2639 00a3 00       		.byte	0
  2640 00a4 0F       		.uleb128 0xf
  2641 00a5 0D       		.uleb128 0xd
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 92
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 92
 
 
  2642 00a6 00       		.byte	0
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  2696 00dd 898201   		.uleb128 0x4109
  2697 00e0 00       		.byte	0
  2698 00e1 11       		.uleb128 0x11
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 93
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 93
 
 
  2699 00e2 01       		.uleb128 0x1
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  2753 0120 19       		.uleb128 0x19
  2754 0121 01       		.uleb128 0x1
  2755 0122 13       		.uleb128 0x13
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 94
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 94
 
 
  2756 0123 00       		.byte	0
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  2810 015a 00       		.byte	0
  2811 015b 1A       		.uleb128 0x1a
  2812 015c 34       		.uleb128 0x34
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 95
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 95
 
 
  2813 015d 00       		.byte	0
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  2867 0194 13       		.uleb128 0x13
  2868 0195 11       		.uleb128 0x11
  2869 0196 01       		.uleb128 0x1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 96
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 96
 
 
  2870 0197 12       		.uleb128 0x12
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  2924 01ce 01       		.byte	0x1
  2925 01cf 11       		.uleb128 0x11
  2926 01d0 01       		.uleb128 0x1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 97
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 97
 
 
  2927 01d1 12       		.uleb128 0x12
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  2981 0207 19       		.uleb128 0x19
  2982 0208 00       		.byte	0
  2983 0209 00       		.byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 98
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 98
 
 
  2984 020a 25       		.uleb128 0x25
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  3038 0240 3B       		.uleb128 0x3b
  3039 0241 0B       		.uleb128 0xb
  3040 0242 27       		.uleb128 0x27
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 99
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 99
 
 
  3041 0243 19       		.uleb128 0x19
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  3095 0068 0400     		.2byte	0x4
  3096 006a F3       		.byte	0xf3
  3097 006b 01       		.uleb128 0x1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 100
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 100
 
 
  3098 006c 50       		.byte	0x50
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  3152 00f3 00000000 		.4byte	.LVL37
  3153 00f7 04000000 		.4byte	.LVL38
  3154 00fb 0100     		.2byte	0x1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 101
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 101
 
 
  3155 00fd 50       		.byte	0x50
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  3209 017a 9F       		.byte	0x9f
  3210 017b 14000000 		.4byte	.LVL43
  3211 017f 1C000000 		.4byte	.LVL45
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 102
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 102
 
 
  3212 0183 0100     		.2byte	0x1
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  3266 0206 00000000 		.4byte	0
  3267              	.LLST14:
  3268 020a 52000000 		.4byte	.LVL52
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 103
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 103
 
 
  3269 020e 5C000000 		.4byte	.LVL53
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  3323 0292 13000000 		.4byte	.LVL63-1
  3324 0296 0100     		.2byte	0x1
  3325 0298 51       		.byte	0x51
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 104
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 104
 
 
  3326 0299 13000000 		.4byte	.LVL63-1
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  3380 0322 39000000 		.4byte	.LVL69-1
  3381 0326 0100     		.2byte	0x1
  3382 0328 53       		.byte	0x53
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 105
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 105
 
 
  3383 0329 00000000 		.4byte	0
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  3437 03ad 30       		.byte	0x30
  3438 03ae 9F       		.byte	0x9f
  3439 03af 18000000 		.4byte	.LVL80
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 106
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 106
 
 
  3440 03b3 20000000 		.4byte	.LFE16
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  3494 0084 18000000 		.4byte	.LFE14-.LFB14
  3495 0088 00000000 		.4byte	.LFB15
  3496 008c 0C000000 		.4byte	.LFE15-.LFB15
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 107
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 107
 
 
  3497 0090 00000000 		.4byte	.LFB16
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  3551 0098 00000000 		.4byte	.LFB16
  3552 009c 20000000 		.4byte	.LFE16
  3553 00a0 00000000 		.4byte	.LFB17
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 108
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 108
 
 
  3554 00a4 20000000 		.4byte	.LFE17
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  3583 007c 65704366 		.ascii	"epCfg\000"
  3583      6700
  3584              	.LASF99:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 109
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 109
 
 
  3585 0082 47656E65 		.ascii	"Generated_Source\\PSoC5\\USBUART_1.c\000"
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  3607      3800
  3608              	.LASF22:
  3609 014a 6570546F 		.ascii	"epToggle\000"
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 110
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 110
 
 
  3609      67676C65 
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  3635      625F6570 
  3635      735F7374 
  3636              	.LASF86:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 111
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 111
 
 
  3637 01f7 55534255 		.ascii	"USBUART_1_deviceStatus\000"
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  3655      315F6C61 
  3655      73745061 
  3655      636B6574 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 112
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 112
 
 
  3656              	.LASF61:
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  3681      315F636F 
  3681      6E666967 
  3681      75726174 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 113
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 113
 
 
  3682              	.LASF40:
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  3707      7200
  3708              	.LASF52:
  3709 040e 55534255 		.ascii	"USBUART_1_Stop\000"
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 114
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 114
 
 
  3709      4152545F 
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  3733              	.LASF17:
  3734 04e0 63796973 		.ascii	"cyisraddress\000"
  3734      72616464 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 115
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 115
 
 
  3734      72657373 
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 1
  3754      392E3320 
  3754      32303135 
  3754      30333033 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0XAPWj.s 			page 116
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccDKkCM9.s 			page 116
 
 
  3755 05cf 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"

@@ -31,9 +31,12 @@
 #define MDIO_host_2_START				(0x02u)
 #define MDIO_host_2_RW					(0x04u)
 
-/* Bit field definitions for the Status Register */
-#define MDIO_host_2_MDIO_STS_CMPLT		0x08
-#define MDIO_host_2_MDIO_END_TRANSFER  0x02
+/***************************************
+*           API Constants               
+***************************************/
+#define MDIO_host_2_NOT_FULL   (0x01u)
+#define MDIO_host_2_IDLE       (0x02u)
+#define MDIO_host_2_SEND_16    (0x03u)
 
 /* Bit field definitions for the UDB registers */
 #define MDIO_host_2_F0_CLR         	(0x0101u)
@@ -62,8 +65,8 @@
 /***************************************************** 
 * UDB Registers
 ******************************************************/
-#define MDIO_host_2_CONTROL_REG                (*(reg8 *) 	MDIO_host_2_SyncCtl_MdioControlReg__CONTROL_REG)
-#define MDIO_host_2_CONTROL_PTR                ( (reg8 *) 	MDIO_host_2_SyncCtl_MdioControlReg__CONTROL_REG)
+//#define MDIO_host_2_CONTROL_REG                (*(reg8 *) 	MDIO_host_2_MdioControlReg__CONTROL_REG)
+//#define MDIO_host_2_CONTROL_PTR                ( (reg8 *) 	MDIO_host_2_MdioControlReg__CONTROL_REG)
 #define MDIO_host_2_STATUS_REG                 (*(reg8 *) 	MDIO_host_2_MdioStatusReg__STATUS_REG)
 #define MDIO_host_2_STATUS_PTR                 ( (reg8 *) 	MDIO_host_2_MdioStatusReg__STATUS_REG)
 #define MDIO_host_2_CNT7_AUX_CTL_REG   		(*(reg8 *)  MDIO_host_2_MdioCounter__CONTROL_AUX_CTL_REG)

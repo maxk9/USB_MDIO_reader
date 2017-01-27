@@ -2,7 +2,7 @@
 --	Conversion of cfp_reader.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Jan 16 17:44:01 2017
+--	Fri Jan 27 17:21:28 2017
 --
 
 USE cypress.cypress.all;
@@ -795,54 +795,38 @@ SIGNAL \PWM_2:Net_113\ : bit;
 SIGNAL \PWM_2:Net_107\ : bit;
 SIGNAL \PWM_2:Net_114\ : bit;
 SIGNAL \MDIO_host_2:synced_clock\ : bit;
-SIGNAL \MDIO_host_2:status_7\ : bit;
-SIGNAL \MDIO_host_2:status_6\ : bit;
-SIGNAL \MDIO_host_2:status_5\ : bit;
-SIGNAL \MDIO_host_2:status_4\ : bit;
-SIGNAL \MDIO_host_2:status_3\ : bit;
-SIGNAL \MDIO_host_2:status_2\ : bit;
-SIGNAL \MDIO_host_2:status_1\ : bit;
-SIGNAL \MDIO_host_2:status_0\ : bit;
-SIGNAL \MDIO_host_2:ack_detect\ : bit;
-SIGNAL \MDIO_host_2:end_transfer\ : bit;
-SIGNAL Net_1901 : bit;
+SIGNAL \MDIO_host_2:status_val_0\ : bit;
+SIGNAL \MDIO_host_2:f0_bus_stat\ : bit;
+SIGNAL \MDIO_host_2:status_val_1\ : bit;
+SIGNAL \MDIO_host_2:State_2\ : bit;
+SIGNAL \MDIO_host_2:State_1\ : bit;
+SIGNAL \MDIO_host_2:State_0\ : bit;
+SIGNAL \MDIO_host_2:status_val_2\ : bit;
+SIGNAL \MDIO_host_2:counter_6\ : bit;
+SIGNAL \MDIO_host_2:counter_5\ : bit;
 SIGNAL \MDIO_host_2:counter_4\ : bit;
 SIGNAL \MDIO_host_2:counter_3\ : bit;
 SIGNAL \MDIO_host_2:counter_2\ : bit;
 SIGNAL \MDIO_host_2:counter_1\ : bit;
 SIGNAL \MDIO_host_2:counter_0\ : bit;
-SIGNAL \MDIO_host_2:data_bits\ : bit;
-SIGNAL \MDIO_host_2:control_7\ : bit;
-SIGNAL \MDIO_host_2:control_6\ : bit;
-SIGNAL \MDIO_host_2:control_5\ : bit;
-SIGNAL \MDIO_host_2:control_4\ : bit;
-SIGNAL \MDIO_host_2:control_3\ : bit;
-SIGNAL \MDIO_host_2:control_2\ : bit;
-SIGNAL \MDIO_host_2:control_1\ : bit;
-SIGNAL \MDIO_host_2:control_0\ : bit;
-SIGNAL \MDIO_host_2:mdio_enable\ : bit;
-SIGNAL \MDIO_host_2:mdio_start\ : bit;
-SIGNAL \MDIO_host_2:mdio_rw\ : bit;
-SIGNAL \MDIO_host_2:stop_frame\ : bit;
-SIGNAL \MDIO_host_2:counter_5\ : bit;
+SIGNAL \MDIO_host_2:status_val_7\ : bit;
+SIGNAL \MDIO_host_2:status_val_6\ : bit;
+SIGNAL \MDIO_host_2:status_val_5\ : bit;
+SIGNAL \MDIO_host_2:status_val_4\ : bit;
+SIGNAL \MDIO_host_2:status_val_3\ : bit;
 SIGNAL \MDIO_host_2:ld_count\ : bit;
 SIGNAL \MDIO_host_2:en_count\ : bit;
-SIGNAL \MDIO_host_2:counter_6\ : bit;
 SIGNAL \MDIO_host_2:tc\ : bit;
-SIGNAL \MDIO_host_2:busy\ : bit;
 SIGNAL Net_1924 : bit;
-SIGNAL \MDIO_host_2:mdio_start_d\ : bit;
-SIGNAL \MDIO_host_2:start_frame\ : bit;
-SIGNAL \MDIO_host_2:start_frame_d\ : bit;
-SIGNAL \MDIO_host_2:send_preamb\ : bit;
-SIGNAL \MDIO_host_2:busy_d\ : bit;
+SIGNAL \MDIO_host_2:f0_blk_stat\ : bit;
+SIGNAL \MDIO_host_2:cfg_2\ : bit;
+SIGNAL \MDIO_host_2:cfg_1\ : bit;
+SIGNAL \MDIO_host_2:cfg_0\ : bit;
 SIGNAL Net_1900 : bit;
 SIGNAL \MDIO_host_2:so\ : bit;
 SIGNAL \MDIO_host_2:f1_load\ : bit;
 SIGNAL Net_1898 : bit;
-SIGNAL \MDIO_host_2:cs_addr_2\ : bit;
-SIGNAL \MDIO_host_2:cs_addr_1\ : bit;
-SIGNAL \MDIO_host_2:cs_addr_0\ : bit;
+SIGNAL Net_1901 : bit;
 SIGNAL \MDIO_host_2:ce0_0\ : bit;
 SIGNAL \MDIO_host_2:cntrl16:cl0_0\ : bit;
 ATTRIBUTE port_state_att of \MDIO_host_2:cntrl16:cl0_0\:SIGNAL IS 2;
@@ -864,10 +848,6 @@ ATTRIBUTE port_state_att of \MDIO_host_2:cntrl16:co_msb_0\:SIGNAL IS 2;
 SIGNAL \MDIO_host_2:cntrl16:cmsb_0\ : bit;
 ATTRIBUTE port_state_att of \MDIO_host_2:cntrl16:cmsb_0\:SIGNAL IS 2;
 SIGNAL \MDIO_host_2:nc2\ : bit;
-SIGNAL \MDIO_host_2:cntrl16:f0_bus_stat_0\ : bit;
-ATTRIBUTE port_state_att of \MDIO_host_2:cntrl16:f0_bus_stat_0\:SIGNAL IS 2;
-SIGNAL \MDIO_host_2:cntrl16:f0_blk_stat_0\ : bit;
-ATTRIBUTE port_state_att of \MDIO_host_2:cntrl16:f0_blk_stat_0\:SIGNAL IS 2;
 SIGNAL \MDIO_host_2:cntrl16:f1_bus_stat_0\ : bit;
 ATTRIBUTE port_state_att of \MDIO_host_2:cntrl16:f1_bus_stat_0\:SIGNAL IS 2;
 SIGNAL \MDIO_host_2:cntrl16:f1_blk_stat_0\ : bit;
@@ -1024,18 +1004,14 @@ SIGNAL \PWM_2:PWMUDB:pwm_i_reg\\D\ : bit;
 SIGNAL \PWM_2:PWMUDB:pwm1_i_reg\\D\ : bit;
 SIGNAL \PWM_2:PWMUDB:pwm2_i_reg\\D\ : bit;
 SIGNAL \PWM_2:PWMUDB:tc_i_reg\\D\ : bit;
-SIGNAL \MDIO_host_2:end_transfer\\D\ : bit;
-SIGNAL \MDIO_host_2:data_bits\\D\ : bit;
-SIGNAL \MDIO_host_2:busy\\D\ : bit;
-SIGNAL \MDIO_host_2:mdio_start_d\\D\ : bit;
-SIGNAL \MDIO_host_2:start_frame_d\\D\ : bit;
-SIGNAL \MDIO_host_2:send_preamb\\D\ : bit;
-SIGNAL \MDIO_host_2:busy_d\\D\ : bit;
+SIGNAL \MDIO_host_2:State_2\\D\ : bit;
+SIGNAL \MDIO_host_2:State_1\\D\ : bit;
+SIGNAL \MDIO_host_2:State_0\\D\ : bit;
+SIGNAL \MDIO_host_2:cfg_2\\D\ : bit;
+SIGNAL \MDIO_host_2:cfg_1\\D\ : bit;
+SIGNAL \MDIO_host_2:cfg_0\\D\ : bit;
 SIGNAL Net_1900D : bit;
 SIGNAL \MDIO_host_2:f1_load\\D\ : bit;
-SIGNAL \MDIO_host_2:cs_addr_2\\D\ : bit;
-SIGNAL \MDIO_host_2:cs_addr_1\\D\ : bit;
-SIGNAL \MDIO_host_2:cs_addr_0\\D\ : bit;
 BEGIN
 
 zero <=  ('0') ;
@@ -1074,39 +1050,48 @@ Net_785 <= ((not Net_1881 and not Net_1882)
 Net_789 <= ((not Net_1882 and Net_1881)
 	OR (not Net_1881 and Net_1882));
 
-\MDIO_host_2:status_0\ <= ((not Net_1901 and not \MDIO_host_2:counter_0\ and \MDIO_host_2:counter_4\ and \MDIO_host_2:counter_3\ and \MDIO_host_2:counter_2\ and \MDIO_host_2:counter_1\ and \MDIO_host_2:data_bits\));
+\MDIO_host_2:status_val_1\ <= ((not \MDIO_host_2:State_2\ and not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\));
 
-\MDIO_host_2:ld_count\ <= (not \MDIO_host_2:control_1\);
+\MDIO_host_2:status_val_2\ <= ((not \MDIO_host_2:State_2\ and not \MDIO_host_2:counter_6\ and not \MDIO_host_2:counter_5\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:counter_4\ and \MDIO_host_2:counter_3\ and \MDIO_host_2:counter_2\ and \MDIO_host_2:counter_1\ and \MDIO_host_2:counter_0\));
 
-\MDIO_host_2:mdio_start_d\\D\ <= ((not Net_184 and \MDIO_host_2:mdio_start_d\)
-	OR (Net_184 and \MDIO_host_2:control_1\));
+\MDIO_host_2:en_count\ <= (\MDIO_host_2:State_0\
+	OR \MDIO_host_2:State_1\
+	OR \MDIO_host_2:State_2\);
 
-\MDIO_host_2:start_frame\ <= ((not \MDIO_host_2:mdio_start_d\ and Net_184 and \MDIO_host_2:control_1\));
+\MDIO_host_2:State_2\\D\ <= ((not \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:tc\));
 
-Net_184D <= ((not Net_184 and not \MDIO_host_2:status_1\ and \MDIO_host_2:control_1\));
+\MDIO_host_2:State_1\\D\ <= ((not \MDIO_host_2:State_2\ and \MDIO_host_2:State_0\)
+	OR (not \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\));
 
-\MDIO_host_2:end_transfer\\D\ <= ((\MDIO_host_2:control_1\ and Net_1924 and \MDIO_host_2:send_preamb\)
-	OR (\MDIO_host_2:status_1\ and \MDIO_host_2:control_1\));
+\MDIO_host_2:State_0\\D\ <= ((not \MDIO_host_2:State_2\ and not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and not \MDIO_host_2:f0_blk_stat\)
+	OR (not \MDIO_host_2:f0_blk_stat\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\)
+	OR (not \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:tc\)
+	OR (not \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\));
 
-\MDIO_host_2:send_preamb\\D\ <= ((\MDIO_host_2:control_1\ and \MDIO_host_2:send_preamb\)
-	OR (\MDIO_host_2:control_1\ and Net_1924));
+\MDIO_host_2:cfg_2\\D\ <= ((not \MDIO_host_2:f0_blk_stat\ and \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:cfg_2\)
+	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:State_0\ and \MDIO_host_2:cfg_2\));
 
-\MDIO_host_2:busy\\D\ <= ((not \MDIO_host_2:status_1\ and not \MDIO_host_2:send_preamb\ and \MDIO_host_2:control_1\)
-	OR (not \MDIO_host_2:status_1\ and not Net_1924 and \MDIO_host_2:control_1\)
-	OR (not \MDIO_host_2:control_1\ and \MDIO_host_2:en_count\)
-	OR (not \MDIO_host_2:send_preamb\ and \MDIO_host_2:en_count\)
-	OR (not Net_1924 and \MDIO_host_2:en_count\));
+\MDIO_host_2:cfg_1\\D\ <= ((not \MDIO_host_2:f0_blk_stat\ and \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:cfg_1\)
+	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:State_0\ and \MDIO_host_2:cfg_1\)
+	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:counter_0\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:counter_1\)
+	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:counter_0\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:counter_2\)
+	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:counter_0\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:counter_3\)
+	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:counter_0\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:counter_4\)
+	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:counter_5\ and not \MDIO_host_2:counter_0\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\)
+	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:counter_0\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:counter_6\));
 
-Net_1900D <= ((\MDIO_host_2:data_bits\ and \MDIO_host_2:control_2\)
-	OR \MDIO_host_2:so\
-	OR not \MDIO_host_2:busy_d\
-	OR not \MDIO_host_2:send_preamb\
-	OR \MDIO_host_2:start_frame_d\);
+\MDIO_host_2:cfg_0\\D\ <= ((not \MDIO_host_2:State_2\ and not \MDIO_host_2:counter_6\ and not \MDIO_host_2:counter_4\ and not \MDIO_host_2:counter_3\ and not \MDIO_host_2:counter_2\ and not \MDIO_host_2:counter_1\ and not \MDIO_host_2:counter_0\ and \MDIO_host_2:State_0\ and \MDIO_host_2:counter_5\)
+	OR (not \MDIO_host_2:f0_blk_stat\ and \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:cfg_0\)
+	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:State_0\ and \MDIO_host_2:cfg_0\)
+	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\));
 
-\MDIO_host_2:data_bits\\D\ <= ((not \MDIO_host_2:f1_load\ and \MDIO_host_2:en_count\ and Net_1924)
-	OR (not \MDIO_host_2:f1_load\ and \MDIO_host_2:data_bits\ and \MDIO_host_2:en_count\));
+Net_1900D <= (\MDIO_host_2:so\
+	OR not \MDIO_host_2:State_0\
+	OR not \MDIO_host_2:State_1\
+	OR \MDIO_host_2:State_2\);
 
-\MDIO_host_2:f1_load\\D\ <= ((\MDIO_host_2:data_bits\ and \MDIO_host_2:en_count\ and Net_1924));
+Net_184D <= ((not Net_184 and not \MDIO_host_2:State_2\ and \MDIO_host_2:State_0\)
+	OR (not Net_184 and not \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\));
 
 VRef_1V2:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"cc3bcd7e-5dc0-48ea-9bf6-6aa082be1ada",
@@ -1183,7 +1168,7 @@ Clock_1:cy_clock_v1_0
 		id=>"d6ea1ea9-8e91-44e7-92b5-e30c87bc4254",
 		source_clock_id=>"",
 		divisor=>0,
-		period=>"125000000",
+		period=>"1000000000",
 		is_direct=>'0',
 		is_digital=>'1')
 	PORT MAP(clock_out=>Net_5,
@@ -2011,32 +1996,22 @@ PWR_1:cy_annotation_universal_v1_0
 	PORT MAP(reset=>zero,
 		clock=>\MDIO_host_2:synced_clock\,
 		status=>(zero, zero, zero, zero,
-			zero, zero, \MDIO_host_2:status_1\, \MDIO_host_2:status_0\));
-\MDIO_host_2:SyncCtl:MdioControlReg\:cy_psoc3_control
-	GENERIC MAP(cy_init_value=>"00000000",
-		cy_force_order=>'1',
-		cy_ctrl_mode_1=>"00000000",
-		cy_ctrl_mode_0=>"11111111",
-		cy_ext_reset=>'0')
-	PORT MAP(reset=>zero,
-		clock=>\MDIO_host_2:synced_clock\,
-		control=>(\MDIO_host_2:control_7\, \MDIO_host_2:control_6\, \MDIO_host_2:control_5\, \MDIO_host_2:control_4\,
-			\MDIO_host_2:control_3\, \MDIO_host_2:control_2\, \MDIO_host_2:control_1\, \MDIO_host_2:control_0\));
+			zero, \MDIO_host_2:status_val_2\, \MDIO_host_2:status_val_1\, Net_1924));
 \MDIO_host_2:MdioCounter\:cy_psoc3_count7
-	GENERIC MAP(cy_period=>"0111101",
+	GENERIC MAP(cy_period=>"0111111",
 		cy_init_value=>"0000000",
 		cy_route_ld=>'1',
 		cy_route_en=>'1',
 		cy_alt_mode=>'0')
 	PORT MAP(clock=>\MDIO_host_2:synced_clock\,
 		reset=>zero,
-		load=>\MDIO_host_2:ld_count\,
+		load=>\MDIO_host_2:status_val_1\,
 		enable=>\MDIO_host_2:en_count\,
 		count=>(\MDIO_host_2:counter_6\, \MDIO_host_2:counter_5\, \MDIO_host_2:counter_4\, \MDIO_host_2:counter_3\,
 			\MDIO_host_2:counter_2\, \MDIO_host_2:counter_1\, \MDIO_host_2:counter_0\),
-		tc=>Net_1924);
+		tc=>\MDIO_host_2:tc\);
 \MDIO_host_2:cntrl16:u0\:cy_psoc3_dp
-	GENERIC MAP(cy_dpconfig=>"0000000000000000000000010100000000000000110000000000000011000000000000000000000000000000000000000000000000000000000000000000000011111111000000001111111111111111001000000000001000000100011100000000000000001000",
+	GENERIC MAP(cy_dpconfig=>"0000000000000000000000001100000000000001010000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111000000001111111111111111001000000000001000000100011100000000000000001000",
 		d0_init=>"00000000",
 		d1_init=>"00000000",
 		a0_init=>"00000000",
@@ -2059,7 +2034,7 @@ PWR_1:cy_annotation_universal_v1_0
 		f1_blk_sync=>'1')
 	PORT MAP(reset=>zero,
 		clk=>\MDIO_host_2:synced_clock\,
-		cs_addr=>(\MDIO_host_2:cs_addr_2\, \MDIO_host_2:cs_addr_1\, \MDIO_host_2:cs_addr_0\),
+		cs_addr=>(\MDIO_host_2:cfg_2\, \MDIO_host_2:cfg_1\, \MDIO_host_2:cfg_0\),
 		route_si=>Net_1901,
 		route_ci=>zero,
 		f0_load=>zero,
@@ -2078,8 +2053,8 @@ PWR_1:cy_annotation_universal_v1_0
 		co_msb=>open,
 		cmsb=>open,
 		so=>\MDIO_host_2:nc2\,
-		f0_bus_stat=>open,
-		f0_blk_stat=>open,
+		f0_bus_stat=>Net_1924,
+		f0_blk_stat=>\MDIO_host_2:f0_blk_stat\,
 		f1_bus_stat=>open,
 		f1_blk_stat=>open,
 		ce0_reg=>open,
@@ -2122,7 +2097,7 @@ PWR_1:cy_annotation_universal_v1_0
 			zero, zero, zero, zero),
 		po=>open);
 \MDIO_host_2:cntrl16:u1\:cy_psoc3_dp
-	GENERIC MAP(cy_dpconfig=>"0000000000000000000000010100000000000000110000000000000011000000000000000000000000000000000000000000000000000000000000000000000011111111000000001111111111111111001000000000001100000100011100110000000000001000",
+	GENERIC MAP(cy_dpconfig=>"0000000000000000000000001100000000000001010000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111000000001111111111111111001000000000001100000100011100000000000000001000",
 		d0_init=>"00000000",
 		d1_init=>"00000000",
 		a0_init=>"00000000",
@@ -2145,7 +2120,7 @@ PWR_1:cy_annotation_universal_v1_0
 		f1_blk_sync=>'1')
 	PORT MAP(reset=>zero,
 		clk=>\MDIO_host_2:synced_clock\,
-		cs_addr=>(\MDIO_host_2:cs_addr_2\, \MDIO_host_2:cs_addr_1\, \MDIO_host_2:cs_addr_0\),
+		cs_addr=>(\MDIO_host_2:cfg_2\, \MDIO_host_2:cfg_1\, \MDIO_host_2:cfg_0\),
 		route_si=>Net_1901,
 		route_ci=>zero,
 		f0_load=>zero,
@@ -2561,53 +2536,37 @@ Net_184:cy_dff
 	PORT MAP(d=>\PWM_2:PWMUDB:tc_i_reg\\D\,
 		clk=>\PWM_2:PWMUDB:ClockOutFromEnBlock\,
 		q=>\PWM_2:PWMUDB:tc_i_reg\);
-\MDIO_host_2:end_transfer\:cy_dff
-	PORT MAP(d=>\MDIO_host_2:end_transfer\\D\,
+\MDIO_host_2:State_2\:cy_dff
+	PORT MAP(d=>\MDIO_host_2:State_2\\D\,
 		clk=>\MDIO_host_2:synced_clock\,
-		q=>\MDIO_host_2:status_1\);
-\MDIO_host_2:data_bits\:cy_dff
-	PORT MAP(d=>\MDIO_host_2:data_bits\\D\,
+		q=>\MDIO_host_2:State_2\);
+\MDIO_host_2:State_1\:cy_dff
+	PORT MAP(d=>\MDIO_host_2:State_1\\D\,
 		clk=>\MDIO_host_2:synced_clock\,
-		q=>\MDIO_host_2:data_bits\);
-\MDIO_host_2:busy\:cy_dff
-	PORT MAP(d=>\MDIO_host_2:busy\\D\,
+		q=>\MDIO_host_2:State_1\);
+\MDIO_host_2:State_0\:cy_dff
+	PORT MAP(d=>\MDIO_host_2:State_0\\D\,
 		clk=>\MDIO_host_2:synced_clock\,
-		q=>\MDIO_host_2:en_count\);
-\MDIO_host_2:mdio_start_d\:cy_dff
-	PORT MAP(d=>\MDIO_host_2:mdio_start_d\\D\,
+		q=>\MDIO_host_2:State_0\);
+\MDIO_host_2:cfg_2\:cy_dff
+	PORT MAP(d=>\MDIO_host_2:cfg_2\\D\,
 		clk=>\MDIO_host_2:synced_clock\,
-		q=>\MDIO_host_2:mdio_start_d\);
-\MDIO_host_2:start_frame_d\:cy_dff
-	PORT MAP(d=>\MDIO_host_2:start_frame\,
+		q=>\MDIO_host_2:cfg_2\);
+\MDIO_host_2:cfg_1\:cy_dff
+	PORT MAP(d=>\MDIO_host_2:cfg_1\\D\,
 		clk=>\MDIO_host_2:synced_clock\,
-		q=>\MDIO_host_2:start_frame_d\);
-\MDIO_host_2:send_preamb\:cy_dff
-	PORT MAP(d=>\MDIO_host_2:send_preamb\\D\,
+		q=>\MDIO_host_2:cfg_1\);
+\MDIO_host_2:cfg_0\:cy_dff
+	PORT MAP(d=>\MDIO_host_2:cfg_0\\D\,
 		clk=>\MDIO_host_2:synced_clock\,
-		q=>\MDIO_host_2:send_preamb\);
-\MDIO_host_2:busy_d\:cy_dff
-	PORT MAP(d=>\MDIO_host_2:en_count\,
-		clk=>\MDIO_host_2:synced_clock\,
-		q=>\MDIO_host_2:busy_d\);
+		q=>\MDIO_host_2:cfg_0\);
 Net_1900:cy_dff
 	PORT MAP(d=>Net_1900D,
 		clk=>\MDIO_host_2:synced_clock\,
 		q=>Net_1900);
 \MDIO_host_2:f1_load\:cy_dff
-	PORT MAP(d=>\MDIO_host_2:f1_load\\D\,
+	PORT MAP(d=>\MDIO_host_2:tc\,
 		clk=>\MDIO_host_2:synced_clock\,
 		q=>\MDIO_host_2:f1_load\);
-\MDIO_host_2:cs_addr_2\:cy_dff
-	PORT MAP(d=>zero,
-		clk=>\MDIO_host_2:synced_clock\,
-		q=>\MDIO_host_2:cs_addr_2\);
-\MDIO_host_2:cs_addr_1\:cy_dff
-	PORT MAP(d=>zero,
-		clk=>\MDIO_host_2:synced_clock\,
-		q=>\MDIO_host_2:cs_addr_1\);
-\MDIO_host_2:cs_addr_0\:cy_dff
-	PORT MAP(d=>zero,
-		clk=>\MDIO_host_2:synced_clock\,
-		q=>\MDIO_host_2:cs_addr_0\);
 
 END R_T_L;

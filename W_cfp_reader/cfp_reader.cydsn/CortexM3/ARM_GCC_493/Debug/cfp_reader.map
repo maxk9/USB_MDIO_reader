@@ -38,8 +38,6 @@ Archive member included because of file (symbol)
                               .\CortexM3\ARM_GCC_493\Debug\main.o (MDIO_host_2_Init)
 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_1.o)
                               .\CortexM3\ARM_GCC_493\Debug\main.o (Clock_1_Start)
-.\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LED_3.o)
-                              .\CortexM3\ARM_GCC_493\Debug\main.o (LED_3_Write)
 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyBootAsmGnu.o)
                               .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o) (CyDelayCycles)
 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyFlash.o)
@@ -498,17 +496,17 @@ Discarded input sections
  .text          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
  .data          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
  .text.MDIO_host_2_Stop
-                0x00000000       0x1c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
+                0x00000000       0x10 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
  .text.MDIO_host_2_GetStatus
                 0x00000000        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
  .text.MDIO_host_2_Start
                 0x00000000       0x1c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
  .text.MDIO_host_2_ReadDataC45
-                0x00000000       0x64 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
+                0x00000000       0x34 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
  .text.MDIO_host_2_WriteDataC22
-                0x00000000       0x3c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
+                0x00000000       0x1c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
  .text.MDIO_host_2_ReadDataC22
-                0x00000000       0x50 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
+                0x00000000       0x28 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
  .text.MDIO_host_2_ClearStatus
                 0x00000000        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
  .text          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_1.o)
@@ -534,15 +532,6 @@ Discarded input sections
                 0x00000000       0xd8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_1.o)
  .text.Clock_1_SetSourceRegister
                 0x00000000       0x5c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_1.o)
- .text          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LED_3.o)
- .data          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LED_3.o)
- .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LED_3.o)
- .text.LED_3_SetDriveMode
-                0x00000000       0x18 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LED_3.o)
- .text.LED_3_Read
-                0x00000000       0x10 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LED_3.o)
- .text.LED_3_ReadDataReg
-                0x00000000       0x10 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LED_3.o)
  .data          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyBootAsmGnu.o)
  .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyBootAsmGnu.o)
  .text          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyFlash.o)
@@ -697,7 +686,7 @@ END GROUP
                 0x00000800                ee_size = (CY_APPL_LOADABLE && ! (CY_EE_IN_BTLDR))?(CY_EE_SIZE / CY_APPL_MAX):CY_EE_SIZE
                 0x00000000                PROVIDE (CY_ECC_OFFSET, ecc_offset)
 
-.text           0x00000000     0x224e
+.text           0x00000000     0x222e
  CREATE_OBJECT_SYMBOLS
                 0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
  *(.romvectors)
@@ -714,348 +703,346 @@ END GROUP
                 0x00000001                ASSERT ((((appl_start + .) <= 0x10000) || 0x1), DMA Init must be within the first 64k of flash)
  *(.text .text.* .gnu.linkonce.t.*)
  .text          0x00000028       0x5c c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .text.main     0x00000084       0xe8 .\CortexM3\ARM_GCC_493\Debug\main.o
+ .text.main     0x00000084       0xdc .\CortexM3\ARM_GCC_493\Debug\main.o
                 0x00000084                main
  .text.IntDefaultHandler
-                0x0000016c       0x10 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
-                0x0000016c                IntDefaultHandler
- .text.Start_c  0x0000017c       0x4c .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
-                0x0000017c                Start_c
+                0x00000160       0x10 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+                0x00000160                IntDefaultHandler
+ .text.Start_c  0x00000170       0x4c .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+                0x00000170                Start_c
  .text.initialize_psoc
-                0x000001c8       0x74 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
-                0x000001c8                initialize_psoc
+                0x000001bc       0x74 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+                0x000001bc                initialize_psoc
  .text.CyClockStartupError
-                0x0000023c        0x4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
+                0x00000230        0x4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
  .text.cfg_write_bytes32
-                0x00000240       0x34 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
+                0x00000234       0x34 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
  .text.AnalogSetDefault
-                0x00000274       0x54 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
+                0x00000268       0x54 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
  .text.CYMEMZERO
-                0x000002c8        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
+                0x000002bc        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
  .text.ClockSetup
-                0x000002d4       0xfc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
+                0x000002c8       0xfc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
  .text.CYCONFIGCPY
-                0x000003d0        0x8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
+                0x000003c4        0x8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
  .text.cyfitter_cfg
-                0x000003d8      0x140 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
-                0x000003d8                cyfitter_cfg
+                0x000003cc      0x160 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
+                0x000003cc                cyfitter_cfg
  .text.VDAC8_1_Enable
-                0x00000518       0x1c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
-                0x00000518                VDAC8_1_Enable
+                0x0000052c       0x1c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
+                0x0000052c                VDAC8_1_Enable
  .text.VDAC8_1_SetSpeed
-                0x00000534       0x1c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
-                0x00000534                VDAC8_1_SetSpeed
+                0x00000548       0x1c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
+                0x00000548                VDAC8_1_SetSpeed
  .text.VDAC8_1_SetValue
-                0x00000550        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
-                0x00000550                VDAC8_1_SetValue
+                0x00000564        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
+                0x00000564                VDAC8_1_SetValue
  .text.VDAC8_1_DacTrim
-                0x0000055c       0x24 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
-                0x0000055c                VDAC8_1_DacTrim
+                0x00000570       0x24 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
+                0x00000570                VDAC8_1_DacTrim
  .text.VDAC8_1_SetRange
-                0x00000580       0x20 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
-                0x00000580                VDAC8_1_SetRange
+                0x00000594       0x20 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
+                0x00000594                VDAC8_1_SetRange
  .text.VDAC8_1_Init
-                0x000005a0       0x20 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
-                0x000005a0                VDAC8_1_Init
+                0x000005b4       0x20 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
+                0x000005b4                VDAC8_1_Init
  .text.VDAC8_1_Start
-                0x000005c0       0x24 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
-                0x000005c0                VDAC8_1_Start
+                0x000005d4       0x24 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
+                0x000005d4                VDAC8_1_Start
  .text.Opamp_1_Enable
-                0x000005e4       0x28 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Opamp_1.o)
-                0x000005e4                Opamp_1_Enable
+                0x000005f8       0x28 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Opamp_1.o)
+                0x000005f8                Opamp_1_Enable
  .text.Opamp_1_SetPower
-                0x0000060c       0x1c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Opamp_1.o)
-                0x0000060c                Opamp_1_SetPower
+                0x00000620       0x1c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Opamp_1.o)
+                0x00000620                Opamp_1_SetPower
  .text.Opamp_1_Init
-                0x00000628        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Opamp_1.o)
-                0x00000628                Opamp_1_Init
+                0x0000063c        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Opamp_1.o)
+                0x0000063c                Opamp_1_Init
  .text.Opamp_1_Start
-                0x00000634       0x1c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Opamp_1.o)
-                0x00000634                Opamp_1_Start
- .text.CyHalt   0x00000650        0x4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
-                0x00000650                CyHalt
- .text.CyDelay  0x00000654       0x2c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
-                0x00000654                CyDelay
+                0x00000648       0x1c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Opamp_1.o)
+                0x00000648                Opamp_1_Start
+ .text.CyHalt   0x00000664        0x4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
+                0x00000664                CyHalt
+ .text.CyDelay  0x00000668       0x2c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
+                0x00000668                CyDelay
  .text.CyDelayUs
-                0x00000680       0x14 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
-                0x00000680                CyDelayUs
+                0x00000694       0x14 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
+                0x00000694                CyDelayUs
  .text.CyIntSetVector
-                0x00000694       0x28 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
-                0x00000694                CyIntSetVector
+                0x000006a8       0x28 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
+                0x000006a8                CyIntSetVector
  .text.CyIntSetPriority
-                0x000006bc       0x30 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
-                0x000006bc                CyIntSetPriority
+                0x000006d0       0x30 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
+                0x000006d0                CyIntSetPriority
  .text.CyGetUniqueId
-                0x000006ec       0x70 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
-                0x000006ec                CyGetUniqueId
+                0x00000700       0x70 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
+                0x00000700                CyGetUniqueId
  .text.Clock_2_Start
-                0x0000075c       0x1c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_2.o)
-                0x0000075c                Clock_2_Start
+                0x00000770       0x1c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_2.o)
+                0x00000770                Clock_2_Start
  .text.PWM_1_WriteCounter
-                0x00000778        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_1.o)
-                0x00000778                PWM_1_WriteCounter
+                0x0000078c        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_1.o)
+                0x0000078c                PWM_1_WriteCounter
  .text.PWM_1_WritePeriod
-                0x00000784        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_1.o)
-                0x00000784                PWM_1_WritePeriod
+                0x00000798        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_1.o)
+                0x00000798                PWM_1_WritePeriod
  .text.PWM_1_WriteCompare
-                0x00000790        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_1.o)
-                0x00000790                PWM_1_WriteCompare
+                0x000007a4        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_1.o)
+                0x000007a4                PWM_1_WriteCompare
  .text.PWM_1_Init
-                0x0000079c       0x24 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_1.o)
-                0x0000079c                PWM_1_Init
+                0x000007b0       0x24 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_1.o)
+                0x000007b0                PWM_1_Init
  .text.PWM_1_Start
-                0x000007c0       0x18 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_1.o)
-                0x000007c0                PWM_1_Start
+                0x000007d4       0x18 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_1.o)
+                0x000007d4                PWM_1_Start
  .text.USBUART_1_Init
-                0x000007d8      0x140 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
-                0x000007d8                USBUART_1_Init
+                0x000007ec      0x140 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
+                0x000007ec                USBUART_1_Init
  .text.USBUART_1_InitComponent
-                0x00000918       0xb8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
-                0x00000918                USBUART_1_InitComponent
+                0x0000092c       0xb8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
+                0x0000092c                USBUART_1_InitComponent
  .text.USBUART_1_Start
-                0x000009d0       0x24 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
-                0x000009d0                USBUART_1_Start
+                0x000009e4       0x24 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
+                0x000009e4                USBUART_1_Start
  .text.USBUART_1_ReInitComponent
-                0x000009f4       0x4c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
-                0x000009f4                USBUART_1_ReInitComponent
+                0x00000a08       0x4c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
+                0x00000a08                USBUART_1_ReInitComponent
  .text.USBUART_1_GetConfiguration
-                0x00000a40        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
-                0x00000a40                USBUART_1_GetConfiguration
+                0x00000a54        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
+                0x00000a54                USBUART_1_GetConfiguration
  .text.USBUART_1_IsConfigurationChanged
-                0x00000a4c       0x20 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
-                0x00000a4c                USBUART_1_IsConfigurationChanged
+                0x00000a60       0x20 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
+                0x00000a60                USBUART_1_IsConfigurationChanged
  .text.USBUART_1_GetEPState
-                0x00000a6c       0x14 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
-                0x00000a6c                USBUART_1_GetEPState
+                0x00000a80       0x14 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
+                0x00000a80                USBUART_1_GetEPState
  .text.USBUART_1_GetEPCount
-                0x00000a80       0x28 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
-                0x00000a80                USBUART_1_GetEPCount
+                0x00000a94       0x28 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
+                0x00000a94                USBUART_1_GetEPCount
  .text.USBUART_1_LoadInEP
-                0x00000aa8       0x94 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
-                0x00000aa8                USBUART_1_LoadInEP
+                0x00000abc       0x94 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
+                0x00000abc                USBUART_1_LoadInEP
  .text.USBUART_1_EnableOutEP
-                0x00000b3c       0x2c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
-                0x00000b3c                USBUART_1_EnableOutEP
+                0x00000b50       0x2c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
+                0x00000b50                USBUART_1_EnableOutEP
  .text.USBUART_1_ReadOutEP
-                0x00000b68       0x50 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
-                0x00000b68                USBUART_1_ReadOutEP
+                0x00000b7c       0x50 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
+                0x00000b7c                USBUART_1_ReadOutEP
  .text.USBUART_1_StrLen
-                0x00000bb8       0x14 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
+                0x00000bcc       0x14 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
  .text.USBUART_1_GetInterfaceComPort
-                0x00000bcc       0x3c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
-                0x00000bcc                USBUART_1_GetInterfaceComPort
+                0x00000be0       0x3c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
+                0x00000be0                USBUART_1_GetInterfaceComPort
  .text.USBUART_1_DispatchCDCClassRqst
-                0x00000c08       0x98 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
-                0x00000c08                USBUART_1_DispatchCDCClassRqst
+                0x00000c1c       0x98 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
+                0x00000c1c                USBUART_1_DispatchCDCClassRqst
  .text.USBUART_1_CDC_Init
-                0x00000ca0       0x98 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
-                0x00000ca0                USBUART_1_CDC_Init
+                0x00000cb4       0x98 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
+                0x00000cb4                USBUART_1_CDC_Init
  .text.USBUART_1_PutData
-                0x00000d38       0x4c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
-                0x00000d38                USBUART_1_PutData
+                0x00000d4c       0x4c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
+                0x00000d4c                USBUART_1_PutData
  .text.USBUART_1_PutString
-                0x00000d84       0x9c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
-                0x00000d84                USBUART_1_PutString
+                0x00000d98       0x9c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
+                0x00000d98                USBUART_1_PutString
  .text.USBUART_1_DataIsReady
-                0x00000e20       0x18 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
-                0x00000e20                USBUART_1_DataIsReady
+                0x00000e34       0x18 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
+                0x00000e34                USBUART_1_DataIsReady
  .text.USBUART_1_CDCIsReady
-                0x00000e38       0x18 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
-                0x00000e38                USBUART_1_CDCIsReady
+                0x00000e4c       0x18 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
+                0x00000e4c                USBUART_1_CDCIsReady
  .text.USBUART_1_GetAll
-                0x00000e50       0x30 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
-                0x00000e50                USBUART_1_GetAll
+                0x00000e64       0x30 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
+                0x00000e64                USBUART_1_GetAll
  .text.USBUART_1_IsLineChanged
-                0x00000e80       0x38 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
-                0x00000e80                USBUART_1_IsLineChanged
+                0x00000e94       0x38 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
+                0x00000e94                USBUART_1_IsLineChanged
  .text.USBUART_1_GetLineControl
-                0x00000eb8       0x18 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
-                0x00000eb8                USBUART_1_GetLineControl
+                0x00000ecc       0x18 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
+                0x00000ecc                USBUART_1_GetLineControl
  .text.USBUART_1_Cdc_EpInit
-                0x00000ed0       0x50 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
-                0x00000ed0                USBUART_1_Cdc_EpInit
+                0x00000ee4       0x50 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
+                0x00000ee4                USBUART_1_Cdc_EpInit
  .text.USBUART_1_LoadEP0
-                0x00000f20       0x94 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
-                0x00000f20                USBUART_1_LoadEP0
+                0x00000f34       0x94 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
+                0x00000f34                USBUART_1_LoadEP0
  .text.USBUART_1_InitZeroLengthControlTransfer
-                0x00000fb4       0x34 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
-                0x00000fb4                USBUART_1_InitZeroLengthControlTransfer
+                0x00000fc8       0x34 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
+                0x00000fc8                USBUART_1_InitZeroLengthControlTransfer
  .text.USBUART_1_ControlReadDataStage
-                0x00000fe8        0x8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
-                0x00000fe8                USBUART_1_ControlReadDataStage
+                0x00000ffc        0x8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
+                0x00000ffc                USBUART_1_ControlReadDataStage
  .text.USBUART_1_ControlWriteDataStage
-                0x00000ff0       0x80 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
-                0x00000ff0                USBUART_1_ControlWriteDataStage
+                0x00001004       0x80 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
+                0x00001004                USBUART_1_ControlWriteDataStage
  .text.USBUART_1_InitNoDataControlTransfer
-                0x00001070       0x2c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
-                0x00001070                USBUART_1_InitNoDataControlTransfer
+                0x00001084       0x2c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
+                0x00001084                USBUART_1_InitNoDataControlTransfer
  .text.USBUART_1_UpdateStatusBlock
-                0x0000109c       0x24 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
-                0x0000109c                USBUART_1_UpdateStatusBlock
+                0x000010b0       0x24 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
+                0x000010b0                USBUART_1_UpdateStatusBlock
  .text.USBUART_1_HandleSetup
-                0x000010c0       0x5c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
-                0x000010c0                USBUART_1_HandleSetup
+                0x000010d4       0x5c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
+                0x000010d4                USBUART_1_HandleSetup
  .text.USBUART_1_ControlReadStatusStage
-                0x0000111c       0x34 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
-                0x0000111c                USBUART_1_ControlReadStatusStage
+                0x00001130       0x34 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
+                0x00001130                USBUART_1_ControlReadStatusStage
  .text.USBUART_1_HandleOUT
-                0x00001150       0x38 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
-                0x00001150                USBUART_1_HandleOUT
+                0x00001164       0x38 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
+                0x00001164                USBUART_1_HandleOUT
  .text.USBUART_1_ControlWriteStatusStage
-                0x00001188       0x20 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
-                0x00001188                USBUART_1_ControlWriteStatusStage
+                0x0000119c       0x20 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
+                0x0000119c                USBUART_1_ControlWriteStatusStage
  .text.USBUART_1_NoDataControlStatusStage
-                0x000011a8       0x40 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
-                0x000011a8                USBUART_1_NoDataControlStatusStage
+                0x000011bc       0x40 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
+                0x000011bc                USBUART_1_NoDataControlStatusStage
  .text.USBUART_1_HandleIN
-                0x000011e8       0x2c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
-                0x000011e8                USBUART_1_HandleIN
+                0x000011fc       0x2c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
+                0x000011fc                USBUART_1_HandleIN
  .text.USBUART_1_EP_0_ISR
-                0x00001214       0xb8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
-                0x00001214                USBUART_1_EP_0_ISR
+                0x00001228       0xb8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
+                0x00001228                USBUART_1_EP_0_ISR
  .text.USBUART_1_InitializeStatusBlock
-                0x000012cc       0x24 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
-                0x000012cc                USBUART_1_InitializeStatusBlock
+                0x000012e0       0x24 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
+                0x000012e0                USBUART_1_InitializeStatusBlock
  .text.USBUART_1_InitControlRead
-                0x000012f0       0x50 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
-                0x000012f0                USBUART_1_InitControlRead
+                0x00001304       0x50 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
+                0x00001304                USBUART_1_InitControlRead
  .text.USBUART_1_InitControlWrite
-                0x00001340       0x48 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
-                0x00001340                USBUART_1_InitControlWrite
+                0x00001354       0x48 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
+                0x00001354                USBUART_1_InitControlWrite
  .text.USBUART_1_EP_1_ISR
-                0x00001388       0x30 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_episr.o)
-                0x00001388                USBUART_1_EP_1_ISR
+                0x0000139c       0x30 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_episr.o)
+                0x0000139c                USBUART_1_EP_1_ISR
  .text.USBUART_1_EP_2_ISR
-                0x000013b8       0x34 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_episr.o)
-                0x000013b8                USBUART_1_EP_2_ISR
+                0x000013cc       0x34 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_episr.o)
+                0x000013cc                USBUART_1_EP_2_ISR
  .text.USBUART_1_EP_3_ISR
-                0x000013ec       0x3c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_episr.o)
-                0x000013ec                USBUART_1_EP_3_ISR
+                0x00001400       0x3c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_episr.o)
+                0x00001400                USBUART_1_EP_3_ISR
  .text.USBUART_1_SOF_ISR
-                0x00001428        0x4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_episr.o)
-                0x00001428                USBUART_1_SOF_ISR
+                0x0000143c        0x4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_episr.o)
+                0x0000143c                USBUART_1_SOF_ISR
  .text.USBUART_1_BUS_RESET_ISR
-                0x0000142c        0x8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_episr.o)
-                0x0000142c                USBUART_1_BUS_RESET_ISR
+                0x00001440        0x8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_episr.o)
+                0x00001440                USBUART_1_BUS_RESET_ISR
  .text.USBUART_1_DP_ISR
-                0x00001434        0x8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_pm.o)
-                0x00001434                USBUART_1_DP_ISR
+                0x00001448        0x8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_pm.o)
+                0x00001448                USBUART_1_DP_ISR
  .text.USBUART_1_ReadDieID
-                0x0000143c       0x6c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
-                0x0000143c                USBUART_1_ReadDieID
+                0x00001450       0x6c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
+                0x00001450                USBUART_1_ReadDieID
  .text.USBUART_1_ConfigReg
-                0x000014a8       0xa4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
-                0x000014a8                USBUART_1_ConfigReg
+                0x000014bc       0xa4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
+                0x000014bc                USBUART_1_ConfigReg
  .text.USBUART_1_GetConfigTablePtr
-                0x0000154c       0x28 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
-                0x0000154c                USBUART_1_GetConfigTablePtr
+                0x00001560       0x28 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
+                0x00001560                USBUART_1_GetConfigTablePtr
  .text.USBUART_1_ConfigAltChanged
-                0x00001574      0x11c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
-                0x00001574                USBUART_1_ConfigAltChanged
+                0x00001588      0x11c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
+                0x00001588                USBUART_1_ConfigAltChanged
  .text.USBUART_1_GetDeviceTablePtr
-                0x00001690       0x18 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
-                0x00001690                USBUART_1_GetDeviceTablePtr
+                0x000016a4       0x18 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
+                0x000016a4                USBUART_1_GetDeviceTablePtr
  .text.USBUART_1_GetInterfaceClassTablePtr
-                0x000016a8       0x24 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
-                0x000016a8                USBUART_1_GetInterfaceClassTablePtr
+                0x000016bc       0x24 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
+                0x000016bc                USBUART_1_GetInterfaceClassTablePtr
  .text.USBUART_1_Config
-                0x000016cc      0x1e4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
-                0x000016cc                USBUART_1_Config
+                0x000016e0      0x1e4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
+                0x000016e0                USBUART_1_Config
  .text.USBUART_1_SetEndpointHalt
-                0x000018b0       0x64 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
-                0x000018b0                USBUART_1_SetEndpointHalt
+                0x000018c4       0x64 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
+                0x000018c4                USBUART_1_SetEndpointHalt
  .text.USBUART_1_ClearEndpointHalt
-                0x00001914       0xa8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
-                0x00001914                USBUART_1_ClearEndpointHalt
+                0x00001928       0xa8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
+                0x00001928                USBUART_1_ClearEndpointHalt
  .text.USBUART_1_ValidateAlternateSetting
-                0x000019bc       0x4c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
-                0x000019bc                USBUART_1_ValidateAlternateSetting
+                0x000019d0       0x4c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
+                0x000019d0                USBUART_1_ValidateAlternateSetting
  .text.USBUART_1_HandleStandardRqst
-                0x00001a08      0x350 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
-                0x00001a08                USBUART_1_HandleStandardRqst
+                0x00001a1c      0x350 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
+                0x00001a1c                USBUART_1_HandleStandardRqst
  .text.USBUART_1_HandleVendorRqst
-                0x00001d58       0x18 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_vnd.o)
-                0x00001d58                USBUART_1_HandleVendorRqst
+                0x00001d6c       0x18 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_vnd.o)
+                0x00001d6c                USBUART_1_HandleVendorRqst
  .text.USBUART_1_Dp_ClearInterrupt
-                0x00001d70       0x10 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_Dp.o)
-                0x00001d70                USBUART_1_Dp_ClearInterrupt
+                0x00001d84       0x10 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_Dp.o)
+                0x00001d84                USBUART_1_Dp_ClearInterrupt
  .text.LCD_WrCntrlNib
-                0x00001d80       0x34 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
+                0x00001d94       0x34 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
  .text.LCD_WrDatNib
-                0x00001db4       0x44 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
+                0x00001dc8       0x44 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
  .text.LCD_IsReady
-                0x00001df8       0xe4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
-                0x00001df8                LCD_IsReady
+                0x00001e0c       0xe4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
+                0x00001e0c                LCD_IsReady
  .text.LCD_WriteData
-                0x00001edc       0x18 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
-                0x00001edc                LCD_WriteData
+                0x00001ef0       0x18 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
+                0x00001ef0                LCD_WriteData
  .text.LCD_PrintString
-                0x00001ef4       0x1c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
-                0x00001ef4                LCD_PrintString
+                0x00001f08       0x1c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
+                0x00001f08                LCD_PrintString
  .text.LCD_WriteControl
-                0x00001f10       0x18 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
-                0x00001f10                LCD_WriteControl
+                0x00001f24       0x18 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
+                0x00001f24                LCD_WriteControl
  .text.LCD_Init
-                0x00001f28       0x6c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
-                0x00001f28                LCD_Init
+                0x00001f3c       0x6c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
+                0x00001f3c                LCD_Init
  .text.LCD_Enable
-                0x00001f94       0x14 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
-                0x00001f94                LCD_Enable
+                0x00001fa8       0x14 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
+                0x00001fa8                LCD_Enable
  .text.LCD_Start
-                0x00001fa8       0x1c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
-                0x00001fa8                LCD_Start
+                0x00001fbc       0x1c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
+                0x00001fbc                LCD_Start
  .text.LCD_Position
-                0x00001fc4       0x3c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
-                0x00001fc4                LCD_Position
+                0x00001fd8       0x3c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
+                0x00001fd8                LCD_Position
  .text.PWM_2_WriteCounter
-                0x00002000        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_2.o)
-                0x00002000                PWM_2_WriteCounter
+                0x00002014        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_2.o)
+                0x00002014                PWM_2_WriteCounter
  .text.PWM_2_WritePeriod
-                0x0000200c        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_2.o)
-                0x0000200c                PWM_2_WritePeriod
+                0x00002020        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_2.o)
+                0x00002020                PWM_2_WritePeriod
  .text.PWM_2_WriteCompare
-                0x00002018        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_2.o)
-                0x00002018                PWM_2_WriteCompare
+                0x0000202c        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_2.o)
+                0x0000202c                PWM_2_WriteCompare
  .text.PWM_2_Init
-                0x00002024       0x24 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_2.o)
-                0x00002024                PWM_2_Init
+                0x00002038       0x24 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_2.o)
+                0x00002038                PWM_2_Init
  .text.PWM_2_Start
-                0x00002048       0x18 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_2.o)
-                0x00002048                PWM_2_Start
+                0x0000205c       0x18 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_2.o)
+                0x0000205c                PWM_2_Start
  .text.MDIO_host_2_Enable
-                0x00002060       0x24 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
-                0x00002060                MDIO_host_2_Enable
+                0x00002074       0x1c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
+                0x00002074                MDIO_host_2_Enable
  .text.MDIO_host_2_ClearInternalFIFOs
-                0x00002084       0x34 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
-                0x00002084                MDIO_host_2_ClearInternalFIFOs
+                0x00002090       0x34 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
+                0x00002090                MDIO_host_2_ClearInternalFIFOs
  .text.MDIO_host_2_Init
-                0x000020b8        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
-                0x000020b8                MDIO_host_2_Init
+                0x000020c4        0xc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
+                0x000020c4                MDIO_host_2_Init
  .text.MDIO_host_2_WriteDataC45
-                0x000020c4       0x60 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
-                0x000020c4                MDIO_host_2_WriteDataC45
+                0x000020d0       0x48 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
+                0x000020d0                MDIO_host_2_WriteDataC45
  .text.Clock_1_Start
-                0x00002124       0x1c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_1.o)
-                0x00002124                Clock_1_Start
- .text.LED_3_Write
-                0x00002140       0x18 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LED_3.o)
-                0x00002140                LED_3_Write
- .text          0x00002158       0x20 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyBootAsmGnu.o)
-                0x00002158                CyDelayCycles
-                0x00002168                CyEnterCriticalSection
-                0x00002170                CyExitCriticalSection
+                0x00002118       0x1c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_1.o)
+                0x00002118                Clock_1_Start
+ *fill*         0x00002134        0x4 
+ .text          0x00002138       0x20 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyBootAsmGnu.o)
+                0x00002138                CyDelayCycles
+                0x00002148                CyEnterCriticalSection
+                0x00002150                CyExitCriticalSection
  .text.USBUART_1_DispatchClassRqst
-                0x00002178       0x58 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cls.o)
-                0x00002178                USBUART_1_DispatchClassRqst
- .text.__errno  0x000021d0        0xc c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
-                0x000021d0                __errno
+                0x00002158       0x58 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cls.o)
+                0x00002158                USBUART_1_DispatchClassRqst
+ .text.__errno  0x000021b0        0xc c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+                0x000021b0                __errno
  .text.__libc_init_array
-                0x000021dc       0x4c c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
-                0x000021dc                __libc_init_array
- .text.memcpy   0x00002228       0x16 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
-                0x00002228                memcpy
- .text.memset   0x0000223e       0x10 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
-                0x0000223e                memset
+                0x000021bc       0x4c c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+                0x000021bc                __libc_init_array
+ .text.memcpy   0x00002208       0x16 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
+                0x00002208                memcpy
+ .text.memset   0x0000221e       0x10 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+                0x0000221e                memset
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
@@ -1068,94 +1055,95 @@ END GROUP
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
 
-.v4_bx          0x00002250        0x0
+.v4_bx          0x00002230        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00002250        0x0
+.iplt           0x00002230        0x0
  .iplt          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x00002250        0x4
+.eh_frame       0x00002230        0x4
  *(.eh_frame)
- .eh_frame      0x00002250        0x0 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .eh_frame      0x00002250        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
-                0x00002254                PROVIDE (__exidx_start, .)
+ .eh_frame      0x00002230        0x0 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .eh_frame      0x00002230        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
+                0x00002234                PROVIDE (__exidx_start, .)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00002254                __exidx_end = .
+                0x00002234                __exidx_end = .
 
-.rodata         0x00002254      0x1fc
+.rodata         0x00002234      0x20c
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.str1.4
-                0x00002254       0x2c .\CortexM3\ARM_GCC_493\Debug\main.o
- .rodata        0x00002280       0x24 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
+                0x00002234       0x2c .\CortexM3\ARM_GCC_493\Debug\main.o
+ .rodata        0x00002260       0x30 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
  .rodata.str1.4
-                0x000022a4       0x14 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
- .rodata        0x000022b8      0x160 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_descr.o)
-                0x000022b8                USBUART_1_TABLE
-                0x000022c0                USBUART_1_DEVICE0_TABLE
-                0x000022d8                USBUART_1_DEVICE0_CONFIGURATION0_TABLE
-                0x00002300                USBUART_1_DEVICE0_CONFIGURATION0_INTERFACE_CLASS
-                0x00002304                USBUART_1_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
-                0x0000231c                USBUART_1_SN_STRING_DESCRIPTOR
-                0x00002320                USBUART_1_STRING_DESCRIPTORS
-                0x000023c0                USBUART_1_DEVICE0_CONFIGURATION0_DESCR
-                0x00002404                USBUART_1_DEVICE0_DESCR
+                0x00002290       0x14 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
+ .rodata        0x000022a4      0x160 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_descr.o)
+                0x000022a4                USBUART_1_TABLE
+                0x000022ac                USBUART_1_DEVICE0_TABLE
+                0x000022c4                USBUART_1_DEVICE0_CONFIGURATION0_TABLE
+                0x000022ec                USBUART_1_DEVICE0_CONFIGURATION0_INTERFACE_CLASS
+                0x000022f0                USBUART_1_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
+                0x00002308                USBUART_1_SN_STRING_DESCRIPTOR
+                0x0000230c                USBUART_1_STRING_DESCRIPTORS
+                0x000023ac                USBUART_1_DEVICE0_CONFIGURATION0_DESCR
+                0x000023f0                USBUART_1_DEVICE0_DESCR
  .rodata.str1.1
-                0x00002418        0x2 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
-                0x0000241c                . = ALIGN (0x4)
- *fill*         0x0000241a        0x2 
+                0x00002404        0x2 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x00002408                . = ALIGN (0x4)
+ *fill*         0x00002406        0x2 
  *(.init)
- .init          0x0000241c        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
-                0x0000241c                _init
- .init          0x00002420        0x8 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
-                0x00002428                . = ALIGN (0x4)
-                0x00002428                __preinit_array_start = .
+ .init          0x00002408        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+                0x00002408                _init
+ .init          0x0000240c        0x8 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+                0x00002414                . = ALIGN (0x4)
+                0x00002414                __preinit_array_start = .
  *(.preinit_array)
-                0x00002428                __preinit_array_end = .
-                0x00002428                . = ALIGN (0x4)
-                0x00002428                __init_array_start = .
+                0x00002414                __preinit_array_end = .
+                0x00002414                . = ALIGN (0x4)
+                0x00002414                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x00002428        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .init_array    0x0000242c        0x4 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
-                0x00002430                __init_array_end = .
-                0x00002430                . = ALIGN (0x4)
+ .init_array    0x00002414        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .init_array    0x00002418        0x4 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+                0x0000241c                __init_array_end = .
+                0x0000241c                . = ALIGN (0x4)
  *(.fini)
- .fini          0x00002430        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
-                0x00002430                _fini
- .fini          0x00002434        0x8 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
-                0x0000243c                . = ALIGN (0x4)
-                0x0000243c                __fini_array_start = .
+ .fini          0x0000241c        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+                0x0000241c                _fini
+ .fini          0x00002420        0x8 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+                0x00002428                . = ALIGN (0x4)
+                0x00002428                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x0000243c        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .fini_array    0x00002428        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x00002440                __fini_array_end = .
-                0x00002440                . = ALIGN (0x4)
+                0x0000242c                __fini_array_end = .
+                0x0000242c                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x00002440                . = ALIGN (0x4)
+                0x0000242c                . = ALIGN (0x4)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x00002440                . = ALIGN (0x4)
-                0x00002440                __cy_regions = .
-                0x00002440        0x4 LONG 0x2450 __cy_region_init_ram
-                0x00002444        0x4 LONG 0x1fff8108 __cy_region_start_data
-                0x00002448        0x4 LONG 0x98 __cy_region_init_size_ram
-                0x0000244c        0x4 LONG 0x108 __cy_region_zero_size_ram
-                0x00002450                __cy_regions_end = .
-                0x00002450                . = ALIGN (0x8)
-                0x00002450                _etext = .
+                0x0000242c                . = ALIGN (0x4)
+                0x0000242c                __cy_regions = .
+                0x0000242c        0x4 LONG 0x2440 __cy_region_init_ram
+                0x00002430        0x4 LONG 0x1fff8108 __cy_region_start_data
+                0x00002434        0x4 LONG 0x98 __cy_region_init_size_ram
+                0x00002438        0x4 LONG 0x108 __cy_region_zero_size_ram
+                0x0000243c                __cy_regions_end = .
+                0x00002440                . = ALIGN (0x8)
+ *fill*         0x0000243c        0x4 
+                0x00002440                _etext = .
 
 .cy_checksum_exclude
-                0x00002450        0x0
+                0x00002440        0x0
  *(.cy_checksum_exclude)
 
 .ramvectors     0x1fff8000      0x100
@@ -1170,7 +1158,7 @@ END GROUP
  .noinit        0x1fff8104        0x1 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
                 0x1fff8104                CyResetStatus
 
-.data           0x1fff8108       0x98 load address 0x00002450
+.data           0x1fff8108       0x98 load address 0x00002440
                 0x1fff8108                __cy_region_start_data = .
  *(.jcr)
  .jcr           0x1fff8108        0x0 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
@@ -1198,10 +1186,10 @@ END GROUP
  *(.ram)
                 0x1fff81a0                _edata = .
 
-.igot.plt       0x1fff81a0        0x0 load address 0x000024e8
+.igot.plt       0x1fff81a0        0x0 load address 0x000024d8
  .igot.plt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
-.bss            0x1fff81a0      0x108 load address 0x000024e8
+.bss            0x1fff81a0      0x108 load address 0x000024d8
                 0x1fff81a0                PROVIDE (__bss_start__, .)
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
@@ -1264,11 +1252,11 @@ END GROUP
                 0x1fff82a8                __end = .
                 0x1fff82a8                PROVIDE (end, .)
                 0x1fff82a8                PROVIDE (__bss_end__, .)
-                0x00002450                __cy_region_init_ram = LOADADDR (.data)
+                0x00002440                __cy_region_init_ram = LOADADDR (.data)
                 0x00000098                __cy_region_init_size_ram = (_edata - ADDR (.data))
                 0x00000108                __cy_region_zero_size_ram = (_end - _edata)
 
-.heap           0x1fff82a8       0x80 load address 0x000024e8
+.heap           0x1fff82a8       0x80 load address 0x000024d8
                 0x1fff82a8                . = _end
                 0x1fff8328                . = (. + 0x80)
  *fill*         0x1fff82a8       0x80 
@@ -1288,9 +1276,9 @@ END GROUP
 .cyloadablemeta
  *(.cyloadablemeta)
 
-.cyconfigecc    0x80000000      0x39c
+.cyconfigecc    0x80000000      0x3b8
  *(.cyconfigecc)
- .cyconfigecc   0x80000000      0x39c .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
+ .cyconfigecc   0x80000000      0x3b8 .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
                 0x80000000                cy_meta_configecc
 
 .cycustnvl      0x90000000        0x4
@@ -1319,7 +1307,7 @@ END GROUP
  .cymeta        0x90500000        0xc .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
                 0x90500000                cy_metadata
 
-.rel.dyn        0x000024e8        0x0 load address 0x9050000c
+.rel.dyn        0x000024d8        0x0 load address 0x9050000c
  .rel.iplt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
 .stab
@@ -1340,7 +1328,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0xca8
+.debug_aranges  0x00000000      0xc70
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x20 .\CortexM3\ARM_GCC_493\Debug\main.o
@@ -1387,232 +1375,223 @@ END GROUP
  .debug_aranges
                 0x00000ab0       0x70 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_1.o)
  .debug_aranges
-                0x00000b20       0x38 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LED_3.o)
+                0x00000b20       0x20 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyBootAsmGnu.o)
  .debug_aranges
-                0x00000b58       0x20 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyBootAsmGnu.o)
+                0x00000b40       0x80 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyFlash.o)
  .debug_aranges
-                0x00000b78       0x80 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyFlash.o)
+                0x00000bc0       0x78 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CySpc.o)
  .debug_aranges
-                0x00000bf8       0x78 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CySpc.o)
+                0x00000c38       0x20 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cls.o)
  .debug_aranges
-                0x00000c70       0x20 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cls.o)
- .debug_aranges
-                0x00000c90       0x18 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_descr.o)
+                0x00000c58       0x18 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_descr.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x8262
+.debug_info     0x00000000     0x81e1
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x451 .\CortexM3\ARM_GCC_493\Debug\main.o
- .debug_info    0x00000451      0x13b .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
- .debug_info    0x0000058c      0x3b3 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
- .debug_info    0x0000093f      0x5a1 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
- .debug_info    0x00000ee0      0x1df .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
- .debug_info    0x000010bf      0x14a .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Opamp_1.o)
- .debug_info    0x00001209     0x1385 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
- .debug_info    0x0000258e      0xa57 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyPm.o)
- .debug_info    0x00002fe5      0x283 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_2.o)
- .debug_info    0x00003268      0x20c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_1.o)
- .debug_info    0x00003474      0x9c8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
- .debug_info    0x00003e3c      0xb16 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
- .debug_info    0x00004952      0x649 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
- .debug_info    0x00004f9b      0x244 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_episr.o)
- .debug_info    0x000051df      0x2ef .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_pm.o)
- .debug_info    0x000054ce      0xb35 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
- .debug_info    0x00006003       0xe6 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_vnd.o)
- .debug_info    0x000060e9      0x174 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_Dp.o)
- .debug_info    0x0000625d      0x716 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
- .debug_info    0x00006973      0x20c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_2.o)
- .debug_info    0x00006b7f      0x355 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
- .debug_info    0x00006ed4      0x283 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_1.o)
- .debug_info    0x00007157      0x11f .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LED_3.o)
- .debug_info    0x00007276       0x9b .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyBootAsmGnu.o)
- .debug_info    0x00007311      0x608 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyFlash.o)
- .debug_info    0x00007919      0x4ea .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CySpc.o)
- .debug_info    0x00007e03      0x1d2 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cls.o)
- .debug_info    0x00007fd5      0x28d .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_descr.o)
+ .debug_info    0x00000000      0x429 .\CortexM3\ARM_GCC_493\Debug\main.o
+ .debug_info    0x00000429      0x13b .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
+ .debug_info    0x00000564      0x3b3 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_info    0x00000917      0x66c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
+ .debug_info    0x00000f83      0x1df .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
+ .debug_info    0x00001162      0x14a .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Opamp_1.o)
+ .debug_info    0x000012ac     0x1385 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
+ .debug_info    0x00002631      0xa57 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyPm.o)
+ .debug_info    0x00003088      0x283 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_2.o)
+ .debug_info    0x0000330b      0x20c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_1.o)
+ .debug_info    0x00003517      0x9c8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
+ .debug_info    0x00003edf      0xb16 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
+ .debug_info    0x000049f5      0x649 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
+ .debug_info    0x0000503e      0x244 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_episr.o)
+ .debug_info    0x00005282      0x2ef .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_pm.o)
+ .debug_info    0x00005571      0xb35 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
+ .debug_info    0x000060a6       0xe6 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_vnd.o)
+ .debug_info    0x0000618c      0x174 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_Dp.o)
+ .debug_info    0x00006300      0x716 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
+ .debug_info    0x00006a16      0x20c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_2.o)
+ .debug_info    0x00006c22      0x350 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
+ .debug_info    0x00006f72      0x283 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_1.o)
+ .debug_info    0x000071f5       0x9b .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyBootAsmGnu.o)
+ .debug_info    0x00007290      0x608 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyFlash.o)
+ .debug_info    0x00007898      0x4ea .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CySpc.o)
+ .debug_info    0x00007d82      0x1d2 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cls.o)
+ .debug_info    0x00007f54      0x28d .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_descr.o)
 
-.debug_abbrev   0x00000000     0x259b
+.debug_abbrev   0x00000000     0x2527
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x191 .\CortexM3\ARM_GCC_493\Debug\main.o
  .debug_abbrev  0x00000191       0x66 .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
  .debug_abbrev  0x000001f7      0x1f7 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
- .debug_abbrev  0x000003ee      0x203 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
- .debug_abbrev  0x000005f1       0xf7 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
- .debug_abbrev  0x000006e8       0xb2 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Opamp_1.o)
- .debug_abbrev  0x0000079a      0x296 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
- .debug_abbrev  0x00000a30      0x1ed .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyPm.o)
- .debug_abbrev  0x00000c1d      0x139 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_2.o)
- .debug_abbrev  0x00000d56       0xf3 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_1.o)
- .debug_abbrev  0x00000e49      0x24d .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
- .debug_abbrev  0x00001096      0x28b .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
- .debug_abbrev  0x00001321      0x18b .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
- .debug_abbrev  0x000014ac      0x11b .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_episr.o)
- .debug_abbrev  0x000015c7      0x146 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_pm.o)
- .debug_abbrev  0x0000170d      0x23d .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
- .debug_abbrev  0x0000194a       0x9b .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_vnd.o)
- .debug_abbrev  0x000019e5       0x90 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_Dp.o)
- .debug_abbrev  0x00001a75      0x171 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
- .debug_abbrev  0x00001be6       0xf3 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_2.o)
- .debug_abbrev  0x00001cd9      0x1a0 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
- .debug_abbrev  0x00001e79      0x139 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_1.o)
- .debug_abbrev  0x00001fb2       0x90 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LED_3.o)
- .debug_abbrev  0x00002042       0x14 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyBootAsmGnu.o)
- .debug_abbrev  0x00002056      0x1ed .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyFlash.o)
- .debug_abbrev  0x00002243      0x1c1 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CySpc.o)
- .debug_abbrev  0x00002404       0xe3 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cls.o)
- .debug_abbrev  0x000024e7       0xb4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_descr.o)
+ .debug_abbrev  0x000003ee      0x212 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
+ .debug_abbrev  0x00000600       0xf7 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
+ .debug_abbrev  0x000006f7       0xb2 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Opamp_1.o)
+ .debug_abbrev  0x000007a9      0x296 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
+ .debug_abbrev  0x00000a3f      0x1ed .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyPm.o)
+ .debug_abbrev  0x00000c2c      0x139 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_2.o)
+ .debug_abbrev  0x00000d65       0xf3 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_1.o)
+ .debug_abbrev  0x00000e58      0x24d .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
+ .debug_abbrev  0x000010a5      0x28b .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
+ .debug_abbrev  0x00001330      0x18b .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
+ .debug_abbrev  0x000014bb      0x11b .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_episr.o)
+ .debug_abbrev  0x000015d6      0x146 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_pm.o)
+ .debug_abbrev  0x0000171c      0x23d .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
+ .debug_abbrev  0x00001959       0x9b .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_vnd.o)
+ .debug_abbrev  0x000019f4       0x90 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_Dp.o)
+ .debug_abbrev  0x00001a84      0x171 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
+ .debug_abbrev  0x00001bf5       0xf3 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_2.o)
+ .debug_abbrev  0x00001ce8      0x1ad .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
+ .debug_abbrev  0x00001e95      0x139 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_1.o)
+ .debug_abbrev  0x00001fce       0x14 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x00001fe2      0x1ed .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyFlash.o)
+ .debug_abbrev  0x000021cf      0x1c1 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CySpc.o)
+ .debug_abbrev  0x00002390       0xe3 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cls.o)
+ .debug_abbrev  0x00002473       0xb4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_descr.o)
 
-.debug_line     0x00000000     0x324e
+.debug_line     0x00000000     0x31bd
  *(.debug_line)
- .debug_line    0x00000000      0x232 .\CortexM3\ARM_GCC_493\Debug\main.o
- .debug_line    0x00000232       0x51 .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
- .debug_line    0x00000283      0x24f .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
- .debug_line    0x000004d2      0x203 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
- .debug_line    0x000006d5       0xe4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
- .debug_line    0x000007b9       0xaa .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Opamp_1.o)
- .debug_line    0x00000863      0x816 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
- .debug_line    0x00001079      0x364 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyPm.o)
- .debug_line    0x000013dd      0x176 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_2.o)
- .debug_line    0x00001553      0x110 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_1.o)
- .debug_line    0x00001663      0x2e4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
- .debug_line    0x00001947      0x2f8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
- .debug_line    0x00001c3f      0x227 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
- .debug_line    0x00001e66       0xec .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_episr.o)
- .debug_line    0x00001f52      0x116 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_pm.o)
- .debug_line    0x00002068      0x3e8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
- .debug_line    0x00002450       0x77 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_vnd.o)
- .debug_line    0x000024c7       0xbd .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_Dp.o)
- .debug_line    0x00002584      0x1dc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
- .debug_line    0x00002760      0x110 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_2.o)
- .debug_line    0x00002870      0x24d .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
- .debug_line    0x00002abd      0x176 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_1.o)
- .debug_line    0x00002c33       0x92 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LED_3.o)
- .debug_line    0x00002cc5       0x66 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyBootAsmGnu.o)
- .debug_line    0x00002d2b      0x1ea .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyFlash.o)
- .debug_line    0x00002f15      0x23c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CySpc.o)
- .debug_line    0x00003151       0x98 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cls.o)
- .debug_line    0x000031e9       0x65 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_descr.o)
+ .debug_line    0x00000000      0x224 .\CortexM3\ARM_GCC_493\Debug\main.o
+ .debug_line    0x00000224       0x51 .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
+ .debug_line    0x00000275      0x24f .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_line    0x000004c4      0x21f .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
+ .debug_line    0x000006e3       0xe4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
+ .debug_line    0x000007c7       0xaa .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Opamp_1.o)
+ .debug_line    0x00000871      0x816 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
+ .debug_line    0x00001087      0x364 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyPm.o)
+ .debug_line    0x000013eb      0x176 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_2.o)
+ .debug_line    0x00001561      0x110 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_1.o)
+ .debug_line    0x00001671      0x2e4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
+ .debug_line    0x00001955      0x2f8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
+ .debug_line    0x00001c4d      0x227 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
+ .debug_line    0x00001e74       0xec .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_episr.o)
+ .debug_line    0x00001f60      0x116 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_pm.o)
+ .debug_line    0x00002076      0x3e8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
+ .debug_line    0x0000245e       0x77 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_vnd.o)
+ .debug_line    0x000024d5       0xbd .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_Dp.o)
+ .debug_line    0x00002592      0x1dc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
+ .debug_line    0x0000276e      0x110 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_2.o)
+ .debug_line    0x0000287e      0x240 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
+ .debug_line    0x00002abe      0x176 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_1.o)
+ .debug_line    0x00002c34       0x66 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyBootAsmGnu.o)
+ .debug_line    0x00002c9a      0x1ea .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyFlash.o)
+ .debug_line    0x00002e84      0x23c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CySpc.o)
+ .debug_line    0x000030c0       0x98 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cls.o)
+ .debug_line    0x00003158       0x65 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_descr.o)
 
-.debug_frame    0x00000000     0x1f90
+.debug_frame    0x00000000     0x1f10
  *(.debug_frame)
- .debug_frame   0x00000000       0x34 .\CortexM3\ARM_GCC_493\Debug\main.o
- .debug_frame   0x00000034       0xb8 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
- .debug_frame   0x000000ec       0xe4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
- .debug_frame   0x000001d0       0xb4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
- .debug_frame   0x00000284       0x78 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Opamp_1.o)
- .debug_frame   0x000002fc      0x738 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
- .debug_frame   0x00000a34      0x1f8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyPm.o)
- .debug_frame   0x00000c2c       0xe0 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_2.o)
- .debug_frame   0x00000d0c       0xd8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_1.o)
- .debug_frame   0x00000de4      0x1dc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
- .debug_frame   0x00000fc0      0x278 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
- .debug_frame   0x00001238      0x194 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
- .debug_frame   0x000013cc       0x6c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_episr.o)
- .debug_frame   0x00001438       0xa0 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_pm.o)
- .debug_frame   0x000014d8      0x17c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
- .debug_frame   0x00001654       0x20 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_vnd.o)
- .debug_frame   0x00001674       0x70 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_Dp.o)
- .debug_frame   0x000016e4      0x1e4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
- .debug_frame   0x000018c8       0xd8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_2.o)
- .debug_frame   0x000019a0      0x104 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
- .debug_frame   0x00001aa4       0xe0 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_1.o)
- .debug_frame   0x00001b84       0x50 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LED_3.o)
- .debug_frame   0x00001bd4      0x174 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyFlash.o)
- .debug_frame   0x00001d48      0x160 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CySpc.o)
- .debug_frame   0x00001ea8       0x2c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cls.o)
- .debug_frame   0x00001ed4       0x20 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
- .debug_frame   0x00001ef4       0x28 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
- .debug_frame   0x00001f1c       0x2c c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
- .debug_frame   0x00001f48       0x28 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
- .debug_frame   0x00001f70       0x20 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x00000000       0x30 .\CortexM3\ARM_GCC_493\Debug\main.o
+ .debug_frame   0x00000030       0xb8 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_frame   0x000000e8       0xe4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
+ .debug_frame   0x000001cc       0xb4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
+ .debug_frame   0x00000280       0x78 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Opamp_1.o)
+ .debug_frame   0x000002f8      0x738 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
+ .debug_frame   0x00000a30      0x1f8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyPm.o)
+ .debug_frame   0x00000c28       0xe0 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_2.o)
+ .debug_frame   0x00000d08       0xd8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_1.o)
+ .debug_frame   0x00000de0      0x1dc .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
+ .debug_frame   0x00000fbc      0x278 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
+ .debug_frame   0x00001234      0x194 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
+ .debug_frame   0x000013c8       0x6c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_episr.o)
+ .debug_frame   0x00001434       0xa0 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_pm.o)
+ .debug_frame   0x000014d4      0x17c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
+ .debug_frame   0x00001650       0x20 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_vnd.o)
+ .debug_frame   0x00001670       0x70 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_Dp.o)
+ .debug_frame   0x000016e0      0x1e4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
+ .debug_frame   0x000018c4       0xd8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_2.o)
+ .debug_frame   0x0000199c       0xd8 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
+ .debug_frame   0x00001a74       0xe0 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_1.o)
+ .debug_frame   0x00001b54      0x174 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyFlash.o)
+ .debug_frame   0x00001cc8      0x160 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CySpc.o)
+ .debug_frame   0x00001e28       0x2c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cls.o)
+ .debug_frame   0x00001e54       0x20 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x00001e74       0x28 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x00001e9c       0x2c c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x00001ec8       0x28 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
+ .debug_frame   0x00001ef0       0x20 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0x2e76
+.debug_str      0x00000000     0x2e50
  *(.debug_str)
- .debug_str     0x00000000      0x367 .\CortexM3\ARM_GCC_493\Debug\main.o
-                                0x3a8 (size before relaxing)
- .debug_str     0x00000367       0x75 .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
+ .debug_str     0x00000000      0x35b .\CortexM3\ARM_GCC_493\Debug\main.o
+                                0x39c (size before relaxing)
+ .debug_str     0x0000035b       0x75 .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
                                 0x1f5 (size before relaxing)
- .debug_str     0x000003dc      0x164 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_str     0x000003d0      0x164 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
                                 0x309 (size before relaxing)
- .debug_str     0x00000540      0x154 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
-                                0x30e (size before relaxing)
- .debug_str     0x00000694       0xa9 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
+ .debug_str     0x00000534      0x189 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
+                                0x343 (size before relaxing)
+ .debug_str     0x000006bd       0xa9 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
                                 0x23e (size before relaxing)
- .debug_str     0x0000073d       0x71 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Opamp_1.o)
+ .debug_str     0x00000766       0x71 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Opamp_1.o)
                                 0x204 (size before relaxing)
- .debug_str     0x000007ae      0x849 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
+ .debug_str     0x000007d7      0x849 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
                                 0xa46 (size before relaxing)
- .debug_str     0x00000ff7      0x359 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyPm.o)
+ .debug_str     0x00001020      0x359 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyPm.o)
                                 0x726 (size before relaxing)
- .debug_str     0x00001350      0x154 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_2.o)
+ .debug_str     0x00001379      0x154 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_2.o)
                                 0x2f9 (size before relaxing)
- .debug_str     0x000014a4       0xe6 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_1.o)
+ .debug_str     0x000014cd       0xe6 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_1.o)
                                 0x277 (size before relaxing)
- .debug_str     0x0000158a      0x448 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
+ .debug_str     0x000015b3      0x448 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
                                 0x6c6 (size before relaxing)
- .debug_str     0x000019d2      0x4da .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
+ .debug_str     0x000019fb      0x4da .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
                                 0x83a (size before relaxing)
- .debug_str     0x00001eac      0x2c1 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
+ .debug_str     0x00001ed5      0x2c1 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
                                 0x69b (size before relaxing)
- .debug_str     0x0000216d       0x8c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_episr.o)
+ .debug_str     0x00002196       0x8c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_episr.o)
                                 0x2f4 (size before relaxing)
- .debug_str     0x000021f9       0xda .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_pm.o)
+ .debug_str     0x00002222       0xda .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_pm.o)
                                 0x30e (size before relaxing)
- .debug_str     0x000022d3      0x27b .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
+ .debug_str     0x000022fc      0x27b .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
                                 0x810 (size before relaxing)
- .debug_str     0x0000254e       0x27 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_vnd.o)
+ .debug_str     0x00002577       0x27 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_vnd.o)
                                 0x1f2 (size before relaxing)
- .debug_str     0x00002575       0xb0 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_Dp.o)
+ .debug_str     0x0000259e       0xb0 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_Dp.o)
                                 0x25a (size before relaxing)
- .debug_str     0x00002625      0x134 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
+ .debug_str     0x0000264e      0x134 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
                                 0x32a (size before relaxing)
- .debug_str     0x00002759       0xcf .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_2.o)
+ .debug_str     0x00002782       0xcf .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_2.o)
                                 0x277 (size before relaxing)
- .debug_str     0x00002828      0x17c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
+ .debug_str     0x00002851      0x17c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
                                 0x357 (size before relaxing)
- .debug_str     0x000029a4      0x109 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_1.o)
+ .debug_str     0x000029cd      0x109 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_1.o)
                                 0x2f9 (size before relaxing)
- .debug_str     0x00002aad       0x4f .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LED_3.o)
-                                0x1ed (size before relaxing)
- .debug_str     0x00002afc      0x195 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyFlash.o)
+ .debug_str     0x00002ad6      0x195 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyFlash.o)
                                 0x3a0 (size before relaxing)
- .debug_str     0x00002c91       0xac .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CySpc.o)
+ .debug_str     0x00002c6b       0xac .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CySpc.o)
                                 0x329 (size before relaxing)
- .debug_str     0x00002d3d       0x27 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cls.o)
+ .debug_str     0x00002d17       0x27 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cls.o)
                                 0x2b9 (size before relaxing)
- .debug_str     0x00002d64      0x112 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_descr.o)
+ .debug_str     0x00002d3e      0x112 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_descr.o)
                                 0x372 (size before relaxing)
 
-.debug_loc      0x00000000     0x36c7
+.debug_loc      0x00000000     0x367f
  *(.debug_loc)
- .debug_loc     0x00000000       0x91 .\CortexM3\ARM_GCC_493\Debug\main.o
- .debug_loc     0x00000091      0x144 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
- .debug_loc     0x000001d5      0x1f0 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
- .debug_loc     0x000003c5       0x79 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
- .debug_loc     0x0000043e       0x21 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Opamp_1.o)
- .debug_loc     0x0000045f      0xa11 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
- .debug_loc     0x00000e70      0x1e4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyPm.o)
- .debug_loc     0x00001054      0x128 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_2.o)
- .debug_loc     0x0000117c      0x3e1 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
- .debug_loc     0x0000155d      0x56b .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
- .debug_loc     0x00001ac8      0x171 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
- .debug_loc     0x00001c39       0x26 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_pm.o)
- .debug_loc     0x00001c5f      0x93f .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
- .debug_loc     0x0000259e       0x84 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_Dp.o)
- .debug_loc     0x00002622      0x3c6 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
- .debug_loc     0x000029e8      0x1dd .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
- .debug_loc     0x00002bc5      0x12c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_1.o)
- .debug_loc     0x00002cf1       0x42 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LED_3.o)
- .debug_loc     0x00002d33      0x300 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyFlash.o)
- .debug_loc     0x00003033      0x64d .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CySpc.o)
- .debug_loc     0x00003680       0x47 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cls.o)
+ .debug_loc     0x00000000       0x67 .\CortexM3\ARM_GCC_493\Debug\main.o
+ .debug_loc     0x00000067      0x144 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_loc     0x000001ab      0x272 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyfitter_cfg.o)
+ .debug_loc     0x0000041d       0x79 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(VDAC8_1.o)
+ .debug_loc     0x00000496       0x21 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Opamp_1.o)
+ .debug_loc     0x000004b7      0xa11 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyLib.o)
+ .debug_loc     0x00000ec8      0x1e4 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(cyPm.o)
+ .debug_loc     0x000010ac      0x128 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_2.o)
+ .debug_loc     0x000011d4      0x3e1 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1.o)
+ .debug_loc     0x000015b5      0x56b .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cdc.o)
+ .debug_loc     0x00001b20      0x171 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_drv.o)
+ .debug_loc     0x00001c91       0x26 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_pm.o)
+ .debug_loc     0x00001cb7      0x93f .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_std.o)
+ .debug_loc     0x000025f6       0x84 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_Dp.o)
+ .debug_loc     0x0000267a      0x3c6 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LCD.o)
+ .debug_loc     0x00002a40      0x17f .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
+ .debug_loc     0x00002bbf      0x12c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_1.o)
+ .debug_loc     0x00002ceb      0x300 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyFlash.o)
+ .debug_loc     0x00002feb      0x64d .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CySpc.o)
+ .debug_loc     0x00003638       0x47 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cls.o)
 
 .debug_macinfo
  *(.debug_macinfo)
 
-.debug_ranges   0x00000000      0xae0
+.debug_ranges   0x00000000      0xab8
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x10 .\CortexM3\ARM_GCC_493\Debug\main.o
  .debug_ranges  0x00000010       0x38 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
@@ -1635,10 +1614,9 @@ END GROUP
  .debug_ranges  0x000008b0       0x60 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_2.o)
  .debug_ranges  0x00000910       0x60 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
  .debug_ranges  0x00000970       0x60 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_1.o)
- .debug_ranges  0x000009d0       0x28 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LED_3.o)
- .debug_ranges  0x000009f8       0x70 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyFlash.o)
- .debug_ranges  0x00000a68       0x68 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CySpc.o)
- .debug_ranges  0x00000ad0       0x10 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cls.o)
+ .debug_ranges  0x000009d0       0x70 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyFlash.o)
+ .debug_ranges  0x00000a40       0x68 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CySpc.o)
+ .debug_ranges  0x00000aa8       0x10 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cls.o)
 
 .comment        0x00000000       0x70
  .comment       0x00000000       0x70 .\CortexM3\ARM_GCC_493\Debug\main.o
@@ -1664,7 +1642,6 @@ END GROUP
  .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(PWM_2.o)
  .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_host_2_my.o)
  .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_1.o)
- .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LED_3.o)
  .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyFlash.o)
  .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CySpc.o)
  .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cls.o)
@@ -1739,33 +1716,31 @@ END GROUP
  .ARM.attributes
                 0x00000494       0x33 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(Clock_1.o)
  .ARM.attributes
-                0x000004c7       0x33 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(LED_3.o)
+                0x000004c7       0x21 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyBootAsmGnu.o)
  .ARM.attributes
-                0x000004fa       0x21 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyBootAsmGnu.o)
+                0x000004e8       0x33 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyFlash.o)
  .ARM.attributes
-                0x0000051b       0x33 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CyFlash.o)
+                0x0000051b       0x33 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CySpc.o)
  .ARM.attributes
-                0x0000054e       0x33 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(CySpc.o)
+                0x0000054e       0x33 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cls.o)
  .ARM.attributes
-                0x00000581       0x33 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_cls.o)
+                0x00000581       0x33 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_descr.o)
  .ARM.attributes
-                0x000005b4       0x33 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(USBUART_1_descr.o)
+                0x000005b4       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
  .ARM.attributes
-                0x000005e7       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+                0x000005e1       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
  .ARM.attributes
-                0x00000614       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+                0x0000060e       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
  .ARM.attributes
-                0x00000641       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x0000063b       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
  .ARM.attributes
-                0x0000066e       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+                0x00000668       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
  .ARM.attributes
-                0x0000069b       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
+                0x00000695       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
  .ARM.attributes
-                0x000006c8       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+                0x000006c2       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
  .ARM.attributes
-                0x000006f5       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
- .ARM.attributes
-                0x00000722       0x1d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+                0x000006ef       0x1d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
 
 /DISCARD/
  *(.note.GNU-stack)

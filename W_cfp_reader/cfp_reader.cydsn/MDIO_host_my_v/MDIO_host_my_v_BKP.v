@@ -10,20 +10,6 @@
 // WHICH IS THE PROPERTY OF your company.
 //
 // ========================================
-/*
-*  Status Register Definition
-*  +=======+---------+------+------+------+-----+---------+---------+---------+
-*  |  Bit  |    7    |  6   |  5   |  4   |  3  |    2    |    1    |    0    |
-*  +=======+---------+------+------+------+-----+---------+---------+---------+
-*  | Desc  |interrupt|                unused              |  idle   |  n_full |
-*  +=======+---------+------+------+------+-----+---------+---------+---------+
-*
-*    n_full        =>  0 = FIFO not full event has not occured 
-*                      1 = FIFO not full event has occured
-*
-*    idle          =>  0 = Transmitter is not in the idle state
-*                      1 = Transmitter is in the idle state
-*/
 `include "cypress.v"
 //`#end` -- edit above this line, do not edit this line
 // Generated on 01/10/2017 at 15:56
@@ -44,13 +30,20 @@ module MDIO_host_my_v (
     /**************************************************************************/
     /* Internal Signals                                                       */
     /**************************************************************************/
-    reg [2:0] 	State;				/* 8 states requires 3-bits */
+    reg		    send_preamb;
+    reg		    busy;		    	/* Busy condition when processing a frame */ 
+    reg         busy_d;             /* Busy delay reg */
+    reg         data_bits;          /* Set when data bits are driving */
+    reg			mdio_start_d;		/* Delay control start bit */
+	wire		start_frame;		/* Start frame pulse */
+	reg			end_transfer;
+    wire        ack_detect;         /* Set if a ACK is detected */
     reg         f1_load;            /* Loads FIFO F1 from the datapath ALU */
-   // reg         busy_d;       	   /* Busy delay reg */
+  //  reg         f1_load_p;          /* Pre f1_load */
   //  reg         f1_load_pp;         /* Pre Pre f1_load */
 	wire		stop_frame;		/* Stop frame pulse */
     reg         start_frame_d;      /* Delay start_frame */
-  //  wire      rising_mdc;	        /* MDC rising edge detected */
+  //  wire        rising_mdc;	        /* MDC rising edge detected */
   //  wire		falling_mdc;	    /* MDC falling edge detected */
   //  wire	    ta_bits;		    /* Set when turning around bits drive the MDIO */
     wire		ld_count;			/* Load the counter */
@@ -60,28 +53,16 @@ module MDIO_host_my_v (
     wire	    so;			    	/* Shift out */
     wire [1:0]  ce0;		    	/* A0 == D0 */
     wire [1:0]  ce1;		    	/* A0 == D1 */
-    reg  [2:0]  cfg;            	/* Datapath control store address */
+    reg  [2:0]  cs_addr;            /* Datapath control store address */
     wire [6:0]  counter;            /* Count7 counter output */
     wire [7:0]  control;		    /* MDIO component control register */
-   // wire [7:0]	status;				/* MDIO component status register */
+    wire [7:0]	status;				/* MDIO component status register */
     //wire        nc1, nc2, nc3, nc4; /* nc bits connected to unused datapath output flags */
 	wire        nc2; /* nc bits connected to unused datapath output flags */
 	wire f0_blk_stat;	/* Set to 1 if the FIFO is empty */
 	wire f0_bus_stat;	/* Set to 1 if the FIFO is not full */
 
-  
-
- 	localparam MDIO_STATE_IDLE 		= 3'd0;
-	localparam MDIO_STATE_START 	= 3'd1;
-	localparam MDIO_STATE_SEND_PRMB = 3'd2;
-	localparam MDIO_STATE_SEND_DATA = 3'd3;
-// localparam MDIO_STATE_BIT2 	= 4'd4;
-// localparam MDIO_STATE_BIT3 	= 4'd5;
-// localparam MDIO_STATE_BIT4 	= 4'd6;
-// localparam MDIO_STATE_BIT5 	= 4'd7;
-// localparam MDIO_STATE_BIT6 	= 4'd8;
-// localparam MDIO_STATE_BIT7 	= 4'd9;
-	localparam MDIO_STATE_STOP 	= 3'd7;  
+    
     
     /**************************************************************************/
     /* Clock Synchronization                                                  */
@@ -92,49 +73,61 @@ module MDIO_host_my_v (
         /* input  */    .enable(1'b1),
         /* output */    .clock_out(synced_clock)
     );  
-    /***************************************************************************
-    *       Status Register Implementation                                      
-    ***************************************************************************/   
-    /*    RX Status Register bit location (bits 6-2 unused)    */
-    localparam MDIO_NOT_FULL    = 3'd0;
-    localparam MDIO_IDLE        = 3'd1;
-	localparam MDIO_SEND_16     = 3'd2;
+    
+    
+     
+   
 
-    wire [7:0] status_val;
-    assign status_val[MDIO_NOT_FULL]	= f0_bus_stat; 
-    assign status_val[MDIO_IDLE]		= (State == MDIO_STATE_IDLE);
-	assign status_val[MDIO_SEND_16]		= ((State == MDIO_STATE_SEND_DATA) & (counter == 7'd31));
-    assign status_val[7:3] = 5'b0;      /* Unused bits of status */    
-	
     /**************************************************************************/
     /* General Purpose Control and Status Registers                           */
     /**************************************************************************/
     /* MDIO Status Register */
 	cy_psoc3_status #(.cy_force_order(`TRUE), .cy_md_select(8'b11111111)) MdioStatusReg (
-	/* input [07:00] */ .status(status_val), // Status Bits
+	/* input [07:00] */ .status(status), // Status Bits
 	/* input */ .reset(1'b0), // Reset from interconnect
 	/* input */ .clock(synced_clock) // Clock used for registering data
 	);
-
+	assign status[7:2] = 6'b000000;
 	
-	/**************************************************************************/
+	/* Stick only if the device acks to the host */
+	assign status[0] = ack_detect;
+	
+	assign status[1] = end_transfer;
+	
+	assign ack_detect = ~mdio_in & counter[4] & counter[3] & counter[2] & counter[1] & ~counter[0] & data_bits;
+	
+	
+	
+	
 	/* MDIO Control Register */
-	/**************************************************************************/
-	// cy_psoc3_control #(.cy_init_value (8'b00000000), .cy_force_order(`TRUE), 
-					   	   // .cy_ctrl_mode_1(8'h00), .cy_ctrl_mode_0(8'hFF)) MdioControlReg
-    	// (
-		// /* input          */  .clock(synced_clock),
-		// /* output [07:00] */  .control(control)
-    	// );
+    if ( 0 )
+	begin: AsyncCtl
+		cy_psoc3_control #(.cy_init_value (8'b00000000), .cy_force_order(`TRUE)) MdioControlReg
+    	(
+		/* output [07:00] */  .control(control)
+    	);
 
-	// wire mdio_enable = control[0];     	/* Component enable */
-    // wire mdio_start  = control[1];	   	/* Start Transmission */
-    // wire mdio_rw     = control[2];	   	/* Read = 1, Write = 0 */
+	end
+	else
+	begin: SyncCtl
+		cy_psoc3_control #(.cy_init_value (8'b00000000), .cy_force_order(`TRUE), 
+					   	   .cy_ctrl_mode_1(8'h00), .cy_ctrl_mode_0(8'hFF)) MdioControlReg
+    	(
+		/* input          */  .clock(synced_clock),
+		/* output [07:00] */  .control(control)
+    	);	
+	end
+
+	wire mdio_enable = control[0];     	/* Component enable */
+    wire mdio_start  = control[1];	   	/* Start Transmission */
+    wire mdio_rw     = control[2];	   	/* Read = 1, Write = 0 */
     
+assign stop_frame = counter[5] & ~counter[4] & ~counter[3] & ~counter[2] & ~counter[1] & ~counter[0] & mdio_start;
+	
 	/**************************************************************************/
     /* Count7 block used to count bits on the MDIO frame                      */
     /**************************************************************************/
-    cy_psoc3_count7 #(.cy_period(7'd63),.cy_route_ld(`TRUE),.cy_route_en(`TRUE),.cy_alt_mode(`FALSE)) MdioCounter
+    cy_psoc3_count7 #(.cy_period(7'd61),.cy_route_ld(`TRUE),.cy_route_en(`TRUE),.cy_alt_mode(`FALSE)) MdioCounter
     (
         /*  input          */  .clock(synced_clock),
         /*  input          */  .reset(1'b0),
@@ -142,118 +135,177 @@ module MDIO_host_my_v (
         /*  input          */  .enable(en_count),   	
         /*  output [06:00] */  .count(counter),
         /*  output         */  .tc(tc)
-    );
+     );
 
-	assign ld_count = (State == MDIO_STATE_IDLE);	// Load the counter
-	assign en_count = ~(State == MDIO_STATE_IDLE);	// enable the counter
-	
-	/* Datapath Configuration addresses */
-	localparam MDIO_CONFIG_IDLE   	= 3'd0;		/* Load from the FIFO */
-	localparam MDIO_CONFIG_LOAD   	= 3'd1;		/* Load from the FIFO */
-	localparam MDIO_CONFIG_SHIFT 	= 3'd2;		/* Shift a bit out (also used when idle) */
-	
-	assign debug = f0_bus_stat;
-	
-	
-	always @(posedge synced_clock) 
-	begin
-		case (State) 
-			MDIO_STATE_IDLE:
-				if (~f0_blk_stat) 
-					State <= MDIO_STATE_START;
-				
-			MDIO_STATE_START:
-				begin
-				State <= MDIO_STATE_SEND_PRMB;
-				cfg <= MDIO_CONFIG_LOAD;
-				end
-				
-			MDIO_STATE_SEND_PRMB: 
-				begin
-					if(tc)
-					begin
-						State <= MDIO_STATE_SEND_DATA;
-					end
-				end
-			
-			MDIO_STATE_SEND_DATA: 
-				begin
-				
-				if(counter == 7'd32)
-					cfg <= MDIO_CONFIG_LOAD;
-				else
-					cfg <= (counter[0])? MDIO_CONFIG_IDLE : MDIO_CONFIG_SHIFT;
-					
-				if(tc)
-					State <= MDIO_STATE_STOP;
-				end		
-				
-			MDIO_STATE_STOP:
-				begin
-					if (~f0_blk_stat) 
-						State <= MDIO_STATE_START;
-					else 
-						begin
-						State <= MDIO_STATE_IDLE;
-						cfg <= MDIO_CONFIG_IDLE;
-						end
-				end
-			
-			default: 
-				begin
-				State <= MDIO_STATE_IDLE;
-				cfg <= MDIO_CONFIG_IDLE;
-				end
-				
-		endcase
-	end
+    assign ld_count = ~mdio_start;// | start_frame | tc;	// Load the counter
+    assign en_count = busy;// | start_frame;		// Enable the counter
 	
 	
 	
-	always @(posedge synced_clock) begin
-		case (State)
-			MDIO_STATE_IDLE,
-			MDIO_STATE_STOP: 
-				begin
-					mdio_out <= 1'b1;
-					mdc <= 1'b0;
-				end
-			MDIO_STATE_START,
-			MDIO_STATE_SEND_PRMB:
-				begin
-					mdio_out <= 1'b1;
-					mdc <= ~mdc;
-				end
-			// MDIO_STATE_BIT0,
-			// MDIO_STATE_BIT1,
-			// MDIO_STATE_BIT2,
-			// MDIO_STATE_BIT3,
-			// MDIO_STATE_BIT4,
-			// MDIO_STATE_BIT5,
-			// MDIO_STATE_BIT6,
-			MDIO_STATE_SEND_DATA:
-				begin
-					mdio_out <= so; 
-					mdc <= ~mdc;
-				end
-			default: 
-				begin
-					mdio_out <= 1'b1;
-					mdc <= 1'b0;
-				end
-		endcase
-	end
+	//assign debug = so;
+	
 	
 	always @(posedge synced_clock)
 	begin
-        f1_load <= tc;
+		if ( mdc )
+			mdio_start_d <= mdio_start;
+		else
+			mdio_start_d <= mdio_start_d;
+	end 
+	
+	assign start_frame = mdio_start & ~mdio_start_d & mdc;
+	
+    always @(posedge synced_clock)
+    begin
+       start_frame_d <= start_frame;
+    end
+	
+	
+    /**************************************************************************/
+    /* MDC Clock generation                                                   */
+    /**************************************************************************/
+	always @(posedge synced_clock)
+	begin
+		if ( ~mdio_start )
+			begin
+				mdc <= 1'b0;
+				end_transfer <= 1'b0;				
+			end
+		else
+		begin
+			//if(~end_transfer & ~tc)
+			if(~end_transfer)
+				begin
+					mdc <= ~mdc;
+					busy <= 1'b1;
+				end	
+			else
+				begin
+					send_preamb <= 1'b0;
+					mdc <= 1'b0;
+				end
+				
+			if(tc)
+				begin
+					if(send_preamb)
+						begin
+						end_transfer <= 1'b1;
+						busy <= 1'b0;
+						end
+					else
+						begin 
+							send_preamb <= 1'b1;
+						end
+				end
+		end	
 	end
 	
+	/**************************************************************************/
+    /* Frame busy bit				                                          */
+    /**************************************************************************/	
 
+	always @(posedge synced_clock)
+	begin
+	    busy_d <= busy;
+	end
+
+	
+
+
+    // /**************************************************************************/
+    // /* MDC bus clock edge detection					     					 */
+    // /**************************************************************************/
+    // always @(posedge synced_clock)
+    // begin
+		// mdc_d <= mdc;					/* Delay MDC */
+    // end
+	
+	// assign rising_mdc = mdc & ~mdc_d;	/* Detect rising edge of MDC */
+	// assign falling_mdc = ~mdc & mdc_d;	/* Detect falling edge of MDC */
+
+    /**************************************************************************/
+    /* MDIO bus drive logic						      						  */
+    /**************************************************************************/
+	 always @(posedge synced_clock)
+	  begin
+		if(~send_preamb)
+		   mdio_out <= 1'b1;
+		else
+			mdio_out <= so;
+	  end
+	
+   
+	// /**************************************************************************/
+    // /* Frame busy bit					                                     */
+    // /**************************************************************************/	
+	// always @(posedge synced_clock)
+	// begin
+		// if ( ~mdio_enable )
+			// busy <= 1'b0;
+		// else if ( start_frame )
+			// busy <= 1'b1;
+		// else
+			// busy <= busy & ~(tc & data_bits);
+	// end
+	
+
+	/**************************************************************************/
+    /* Data bits					                                          */
+    /**************************************************************************/
+	always @(posedge synced_clock)
+	begin
+		if ( ~busy )
+			data_bits <= 1'b0;
+		else
+		/* It is set at the first counter tc */
+			data_bits <= (data_bits | tc) & ~f1_load;
+	end
+	
     /**************************************************************************/
     /* Interrupt generation logic                                             */
     /**************************************************************************/
+	// always @(posedge synced_clock)
+	// begin
+		// interrupt <= f1_load;
+       // // interrupt <= mdio_start;
+	// end
+	//assign interrupt = tc & f1_load; 
 	assign interrupt = 1'b0; 
+    // /**************************************************************************/
+    // /* Control Bits for the datapath                                          */
+    // /**************************************************************************/
+
+    /* Capture shift register data into F1 (receive FIFO) */
+	always @(posedge synced_clock)
+	begin
+        f1_load <= tc & data_bits & busy;
+	end
+      
+    // always @(posedge synced_clock)
+	// begin
+       // f1_load_p <= f1_load_pp;
+	// end
+
+    // always @(posedge synced_clock)
+    // begin
+        // f1_load_pp <= tc & data_bits & busy;
+    // end
+
+    // /* Assign the data_path control address bits */
+    always @(posedge synced_clock)
+    begin
+		if(send_preamb)
+			begin
+				cs_addr <= { 1'b0, 1'b1, counter[0] & busy | tc & mdio_rw }; 
+			end
+		else
+			begin
+				cs_addr <=  1'b0;
+			end
+    end
+	
+	
+	
 	
 	
     /**************************************************************************/
@@ -267,103 +319,103 @@ cy_psoc3_dp16 #(.cy_dpconfig_a(
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP_PASS, `CS_A0_SRC_NONE, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM0:   Idle*/
-    `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
-    `CS_SHFT_OP_PASS, `CS_A0_SRC___F0, `CS_A1_SRC_NONE,
-    `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM1:      Load F0 - A0*/
+    `CS_CMP_SEL_CFGA, /*CFGRAM0: Idle*/
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP___SL, `CS_A0_SRC__ALU, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM2:       Shift A0*/
+    `CS_CMP_SEL_CFGA, /*CFGRAM1: Shift A0*/
+    `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
+    `CS_SHFT_OP_PASS, `CS_A0_SRC___F0, `CS_A1_SRC_NONE,
+    `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
+    `CS_CMP_SEL_CFGA, /*CFGRAM2: Load F0 to A0*/
+    `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
+    `CS_SHFT_OP_PASS, `CS_A0_SRC___F0, `CS_A1_SRC_NONE,
+    `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
+    `CS_CMP_SEL_CFGA, /*CFGRAM3: Load F0 to A0*/
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP_PASS, `CS_A0_SRC_NONE, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM3:   Idle*/
+    `CS_CMP_SEL_CFGA, /*CFGRAM4:                          */
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP_PASS, `CS_A0_SRC_NONE, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM4:                                */
+    `CS_CMP_SEL_CFGA, /*CFGRAM5:                          */
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP_PASS, `CS_A0_SRC_NONE, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM5:                                */
+    `CS_CMP_SEL_CFGA, /*CFGRAM6:                          */
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP_PASS, `CS_A0_SRC_NONE, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM6:                                */
-    `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
-    `CS_SHFT_OP_PASS, `CS_A0_SRC_NONE, `CS_A1_SRC_NONE,
-    `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM7:                                */
-    8'hFF, 8'h00,  /*CFG9:                                */
-    8'hFF, 8'hFF,  /*CFG11-10:                             Phy Address Match*/
+    `CS_CMP_SEL_CFGA, /*CFGRAM7:                          */
+    8'hFF, 8'h00,  /*CFG9:                          */
+    8'hFF, 8'hFF,  /*CFG11-10:                       Phy Address Match*/
     `SC_CMPB_A1_D1, `SC_CMPA_A0_D1, `SC_CI_B_ARITH,
     `SC_CI_A_ARITH, `SC_C1_MASK_DSBL, `SC_C0_MASK_DSBL,
     `SC_A_MASK_DSBL, `SC_DEF_SI_0, `SC_SI_B_DEFSI,
-    `SC_SI_A_ROUTE, /*CFG13-12:                                */
+    `SC_SI_A_ROUTE, /*CFG13-12:                          */
     `SC_A0_SRC_ACC, `SC_SHIFT_SL, 1'h0,
     1'h0, `SC_FIFO1__A0, `SC_FIFO0_BUS,
     `SC_MSB_DSBL, `SC_MSB_BIT7, `SC_MSB_NOCHN,
     `SC_FB_NOCHN, `SC_CMP1_NOCHN,
-    `SC_CMP0_NOCHN, /*CFG15-14:                                */
+    `SC_CMP0_NOCHN, /*CFG15-14:                          */
     10'h00, `SC_FIFO_CLK__DP,`SC_FIFO_CAP_AX,
     `SC_FIFO__EDGE,`SC_FIFO__SYNC,`SC_EXTCRC_DSBL,
-    `SC_WRK16CAT_DSBL /*CFG17-16:                                */
+    `SC_WRK16CAT_DSBL /*CFG17-16:                          */
 }
 ), .cy_dpconfig_b(
 {
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP_PASS, `CS_A0_SRC_NONE, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM0:   Idle*/
-    `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
-    `CS_SHFT_OP_PASS, `CS_A0_SRC___F0, `CS_A1_SRC_NONE,
-    `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM1:      Load F0 - A0*/
+    `CS_CMP_SEL_CFGA, /*CFGRAM0: Idle*/
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP___SL, `CS_A0_SRC__ALU, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM2:       Shift A0*/
+    `CS_CMP_SEL_CFGA, /*CFGRAM1: Shift A0*/
+    `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
+    `CS_SHFT_OP_PASS, `CS_A0_SRC___F0, `CS_A1_SRC_NONE,
+    `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
+    `CS_CMP_SEL_CFGA, /*CFGRAM2: Load F0 to A0*/
+    `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
+    `CS_SHFT_OP_PASS, `CS_A0_SRC___F0, `CS_A1_SRC_NONE,
+    `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
+    `CS_CMP_SEL_CFGA, /*CFGRAM3: Load F0 to A0*/
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP_PASS, `CS_A0_SRC_NONE, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM3:   Idle*/
+    `CS_CMP_SEL_CFGA, /*CFGRAM4:                          */
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP_PASS, `CS_A0_SRC_NONE, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM4:                                */
+    `CS_CMP_SEL_CFGA, /*CFGRAM5:                          */
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP_PASS, `CS_A0_SRC_NONE, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM5:                                */
+    `CS_CMP_SEL_CFGA, /*CFGRAM6:                          */
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP_PASS, `CS_A0_SRC_NONE, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM6:                                */
-    `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
-    `CS_SHFT_OP_PASS, `CS_A0_SRC_NONE, `CS_A1_SRC_NONE,
-    `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM7:                                */
-    8'hFF, 8'h00,  /*CFG9:                                */
-    8'hFF, 8'hFF,  /*CFG11-10:                             Phy Address Match*/
+    `CS_CMP_SEL_CFGA, /*CFGRAM7:                          */
+    8'hFF, 8'h00,  /*CFG9:                          */
+    8'hFF, 8'hFF,  /*CFG11-10:                       Phy Address Match*/
     `SC_CMPB_A1_D1, `SC_CMPA_A0_D1, `SC_CI_B_ARITH,
     `SC_CI_A_ARITH, `SC_C1_MASK_DSBL, `SC_C0_MASK_DSBL,
     `SC_A_MASK_DSBL, `SC_DEF_SI_0, `SC_SI_B_DEFSI,
-    `SC_SI_A_CHAIN, /*CFG13-12:                                */
+    `SC_SI_A_CHAIN, /*CFG13-12:                          */
     `SC_A0_SRC_ACC, `SC_SHIFT_SL, 1'h0,
     1'h0, `SC_FIFO1__A0, `SC_FIFO0_BUS,
     `SC_MSB_DSBL, `SC_MSB_BIT7, `SC_MSB_NOCHN,
-    `SC_FB_NOCHN, `SC_CMP1_NOCHN,
-    `SC_CMP0_NOCHN, /*CFG15-14:                                */
+    `SC_FB_NOCHN, `SC_CMP1_CHNED,
+    `SC_CMP0_CHNED, /*CFG15-14:                          */
     10'h00, `SC_FIFO_CLK__DP,`SC_FIFO_CAP_AX,
     `SC_FIFO__EDGE,`SC_FIFO__SYNC,`SC_EXTCRC_DSBL,
-    `SC_WRK16CAT_DSBL /*CFG17-16:                                */
+    `SC_WRK16CAT_DSBL /*CFG17-16:                          */
 }
 )) cntrl16(
         /*  input                   */  .reset(1'b0),
         /*  input                   */  .clk(synced_clock),
-        /*  input   [02:00]         */  .cs_addr(cfg),
+        /*  input   [02:00]         */  .cs_addr(cs_addr),
         /*  input                   */  .route_si(mdio_in),/* MDIO input to the shift register */
         /*  input                   */  .route_ci(1'b0),
         /*  input                   */  .f0_load(1'b0),
@@ -391,11 +443,5 @@ cy_psoc3_dp16 #(.cy_dpconfig_a(
 endmodule
 //`#start footer` -- edit after this line, do not edit this line
 //`#end` -- edit above this line, do not edit this line
-
-
-
-
-
-
 
 

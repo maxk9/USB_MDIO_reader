@@ -3,28 +3,28 @@ dont_use_io iocell 1 1
 dont_use_io iocell 1 3
 dont_use_io iocell 15 0
 dont_use_io iocell 15 1
+set_location "\MDIO_host_2:cntrl16:u1\" datapathcell 2 1 2 
 set_location "\PWM_1:PWMUDB:sP8:pwmdp:u0\" datapathcell 2 2 2 
 set_location "\PWM_2:PWMUDB:sP8:pwmdp:u0\" datapathcell 3 2 2 
-set_location "\MDIO_host_2:status_1\" macrocell 3 1 0 2
-set_location "\MDIO_host_2:ld_count\" macrocell 2 2 1 1
-set_location "\MDIO_host_2:status_0\" macrocell 3 2 0 2
-set_location "Net_184" macrocell 3 1 1 1
-set_location "\MDIO_host_2:f1_load\" macrocell 3 1 0 0
-set_location "\MDIO_host_2:data_bits\" macrocell 3 1 1 3
-set_location "Net_785" macrocell 2 2 0 3
-set_location "Net_789" macrocell 2 2 1 3
-set_location "\MDIO_host_2:MdioCounter\" count7cell 3 1 7 
-set_location "\MDIO_host_2:mdio_start_d\" macrocell 2 1 0 0
-set_location "\MDIO_host_2:cntrl16:u1\" datapathcell 2 1 2 
-set_location "\MDIO_host_2:en_count\" macrocell 3 2 0 0
+set_location "\MDIO_host_2:cfg_2\" macrocell 3 1 0 0
+set_location "\MDIO_host_2:State_0\" macrocell 3 1 0 1
+set_location "\MDIO_host_2:status_val_2\" macrocell 3 2 1 1
 set_location "\MDIO_host_2:cntrl16:u0\" datapathcell 3 1 2 
-set_location "\MDIO_host_2:busy_d\" macrocell 3 2 1 3
-set_location "\MDIO_host_2:send_preamb\" macrocell 3 2 1 2
-set_location "Net_1882" macrocell 2 2 0 2
-set_location "\PWM_1:PWMUDB:runmode_enable\" macrocell 2 2 0 1
-set_location "\MDIO_host_2:start_frame_d\" macrocell 2 1 1 2
-set_location "Net_1900" macrocell 3 1 1 0
-set_location "Net_1881" macrocell 2 2 0 0
+set_location "\MDIO_host_2:State_1\" macrocell 3 1 1 2
+set_location "\MDIO_host_2:State_2\" macrocell 3 1 0 2
+set_location "\MDIO_host_2:cfg_0\" macrocell 3 1 1 3
+set_location "\MDIO_host_2:f1_load\" macrocell 2 1 0 0
+set_location "\MDIO_host_2:cfg_1\" macrocell 3 2 0 0
+set_location "\MDIO_host_2:en_count\" macrocell 3 1 0 3
+set_location "Net_184" macrocell 2 2 0 1
+set_location "\MDIO_host_2:status_val_1\" macrocell 3 2 1 3
+set_location "Net_1900" macrocell 2 2 0 0
+set_location "Net_785" macrocell 2 2 0 3
+set_location "Net_1882" macrocell 2 2 1 2
+set_location "\PWM_1:PWMUDB:runmode_enable\" macrocell 2 2 1 1
+set_location "Net_789" macrocell 2 2 0 2
+set_location "\MDIO_host_2:MdioCounter\" count7cell 3 1 7 
+set_location "Net_1881" macrocell 2 2 1 0
 set_location "\USBUART_1:bus_reset\" interrupt -1 -1 23
 set_io "\LCD:LCDPort(6)\" iocell 2 6
 set_io "\LCD:LCDPort(5)\" iocell 2 5
@@ -32,23 +32,22 @@ set_io "\LCD:LCDPort(3)\" iocell 2 3
 # Note: port 12 is the logical name for port 7
 set_io "MDC_M(0)" iocell 12 1
 set_io "\LCD:LCDPort(4)\" iocell 2 4
-set_location "\USBUART_1:USB\" usbcell -1 -1 0
-set_location "\USBUART_1:sof_int\" interrupt -1 -1 21
-set_location "\MDIO_host_2:SyncCtl:MdioControlReg\" controlcell 3 2 6 
-set_io "LED_1(0)" iocell 0 0
-set_io "Dedicated_Output" iocell 3 7
-set_location "ClockBlock" clockblockcell -1 -1 0
-set_location "\VDAC8_1:viDAC8\" vidaccell -1 -1 1
 # Note: port 12 is the logical name for port 7
 set_io "MDIO_M(0)" iocell 12 0
+set_io "Debug_MDIO(0)" iocell 0 7
+set_location "\USBUART_1:USB\" usbcell -1 -1 0
+set_location "\USBUART_1:sof_int\" interrupt -1 -1 21
+set_io "LED_1(0)" iocell 0 0
+set_io "Dedicated_Output" iocell 3 7
+set_location "\VDAC8_1:viDAC8\" vidaccell -1 -1 1
 set_location "\USBUART_1:arb_int\" interrupt -1 -1 22
 set_location "\Opamp_1:ABuf\" abufcell -1 -1 3
+set_location "\MDIO_host_2:MdioStatusReg\" statuscell 3 2 3 
 # Note: port 15 is the logical name for port 8
 set_io "\USBUART_1:Dp(0)\" iocell 15 6
-set_io "Debug_MDIO(0)" iocell 0 7
+set_location "ClockBlock" clockblockcell -1 -1 0
 set_io "LED_2(0)" iocell 6 3
 set_location "\USBUART_1:Dp\" logicalport -1 -1 8
-set_location "\MDIO_host_2:MdioStatusReg\" statuscell 3 2 3 
 set_location "\USBUART_1:ep_1\" interrupt -1 -1 0
 set_location "\USBUART_1:ep_2\" interrupt -1 -1 1
 set_location "\USBUART_1:ep_0\" interrupt -1 -1 24

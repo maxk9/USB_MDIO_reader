@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 1
   29:main.c        **** 
   30:main.c        **** /* Enable/Disable the MDIO Host */
   31:main.c        **** /* This might be disable in case an external MDIO Host is used */
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 2
 
 
   32:main.c        **** #define MDIO_HOST_ENABLE 1
@@ -82,23 +82,22 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 1
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 64
   30              		@ frame_needed = 0, uses_anonymous_args = 0
-  31 0000 70B5     		push	{r4, r5, r6, lr}
-  32              		.cfi_def_cfa_offset 16
-  33              		.cfi_offset 4, -16
-  34              		.cfi_offset 5, -12
-  35              		.cfi_offset 6, -8
-  36              		.cfi_offset 14, -4
-  37 0002 90B0     		sub	sp, sp, #64
-  38              		.cfi_def_cfa_offset 80
-  39              	.LVL0:
+  31 0000 30B5     		push	{r4, r5, lr}
+  32              		.cfi_def_cfa_offset 12
+  33              		.cfi_offset 4, -12
+  34              		.cfi_offset 5, -8
+  35              		.cfi_offset 14, -4
+  36 0002 91B0     		sub	sp, sp, #68
+  37              		.cfi_def_cfa_offset 80
+  38              	.LVL0:
   49:main.c        ****     CYBIT  first_enter = 0;
   50:main.c        ****     CYBIT test=0;
   51:main.c        ****     
   52:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
-  40              		.loc 1 52 0
-  41              	@ 52 "main.c" 1
-  42 0004 62B6     		CPSIE   i
-  43              	@ 0 "" 2
+  39              		.loc 1 52 0
+  40              	@ 52 "main.c" 1
+  41 0004 62B6     		CPSIE   i
+  42              	@ 0 "" 2
   53:main.c        **** 
   54:main.c        ****     uint16 count;
   55:main.c        ****     uint8 buffer[USBUART_BUFFER_SIZE];
@@ -108,90 +107,87 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 1
   59:main.c        ****     //char8 lineStr[LINE_STR_LENGTH];
   60:main.c        ****     
   61:main.c        ****     LCD_Start();
-  44              		.loc 1 61 0
-  45              		.thumb
-  46 0006 FFF7FEFF 		bl	LCD_Start
-  47              	.LVL1:
+  43              		.loc 1 61 0
+  44              		.thumb
+  45 0006 FFF7FEFF 		bl	LCD_Start
+  46              	.LVL1:
   62:main.c        **** 
   63:main.c        ****     VDAC8_1_Start();
-  48              		.loc 1 63 0
-  49 000a FFF7FEFF 		bl	VDAC8_1_Start
-  50              	.LVL2:
+  47              		.loc 1 63 0
+  48 000a FFF7FEFF 		bl	VDAC8_1_Start
+  49              	.LVL2:
   64:main.c        ****     Opamp_1_Start();
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 3
+  50              		.loc 1 64 0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 3
 
 
-  51              		.loc 1 64 0
-  52 000e FFF7FEFF 		bl	Opamp_1_Start
-  53              	.LVL3:
+  51 000e FFF7FEFF 		bl	Opamp_1_Start
+  52              	.LVL3:
   65:main.c        ****     CyGlobalIntEnable;
-  54              		.loc 1 65 0
-  55              	@ 65 "main.c" 1
-  56 0012 62B6     		CPSIE   i
-  57              	@ 0 "" 2
+  53              		.loc 1 65 0
+  54              	@ 65 "main.c" 1
+  55 0012 62B6     		CPSIE   i
+  56              	@ 0 "" 2
   66:main.c        **** 
   67:main.c        ****     
   68:main.c        ****      /* Start USBFS operation with 5-V operation. */
   69:main.c        ****     USBUART_1_Start(USBFS_DEVICE, USBUART_1_5V_OPERATION);
-  58              		.loc 1 69 0
-  59              		.thumb
-  60 0014 0020     		movs	r0, #0
-  61 0016 0121     		movs	r1, #1
-  62 0018 FFF7FEFF 		bl	USBUART_1_Start
-  63              	.LVL4:
+  57              		.loc 1 69 0
+  58              		.thumb
+  59 0014 0020     		movs	r0, #0
+  60 0016 0121     		movs	r1, #1
+  61 0018 FFF7FEFF 		bl	USBUART_1_Start
+  62              	.LVL4:
   70:main.c        ****     
   71:main.c        ****     #if MDIO_HOST_ENABLE    
   72:main.c        ****     MDIO_host_2_Init(); 	
-  64              		.loc 1 72 0
-  65 001c FFF7FEFF 		bl	MDIO_host_2_Init
-  66              	.LVL5:
+  63              		.loc 1 72 0
+  64 001c FFF7FEFF 		bl	MDIO_host_2_Init
+  65              	.LVL5:
   73:main.c        ****     #endif
   74:main.c        ****     
   75:main.c        ****    /* Place your initialization/startup code here (e.g. MyInst_Start()) */
   76:main.c        ****     Clock_2_Enable();
-  67              		.loc 1 76 0
-  68 0020 FFF7FEFF 		bl	Clock_2_Start
-  69              	.LVL6:
+  66              		.loc 1 76 0
+  67 0020 FFF7FEFF 		bl	Clock_2_Start
+  68              	.LVL6:
   77:main.c        ****     Clock_1_Enable();
-  70              		.loc 1 77 0
-  71 0024 FFF7FEFF 		bl	Clock_1_Start
-  72              	.LVL7:
+  69              		.loc 1 77 0
+  70 0024 FFF7FEFF 		bl	Clock_1_Start
+  71              	.LVL7:
   78:main.c        ****     PWM_1_Start();
-  73              		.loc 1 78 0
-  74 0028 FFF7FEFF 		bl	PWM_1_Start
-  75              	.LVL8:
+  72              		.loc 1 78 0
+  73 0028 FFF7FEFF 		bl	PWM_1_Start
+  74              	.LVL8:
   79:main.c        ****     PWM_2_Start();
-  76              		.loc 1 79 0
-  77 002c FFF7FEFF 		bl	PWM_2_Start
-  78              	.LVL9:
+  75              		.loc 1 79 0
+  76 002c FFF7FEFF 		bl	PWM_2_Start
+  77              	.LVL9:
   80:main.c        ****    LCD_PrintString("TEST");
-  79              		.loc 1 80 0
-  80 0030 2948     		ldr	r0, .L11
-  81 0032 FFF7FEFF 		bl	LCD_PrintString
-  82              	.LVL10:
+  78              		.loc 1 80 0
+  79 0030 2648     		ldr	r0, .L11
+  80 0032 FFF7FEFF 		bl	LCD_PrintString
+  81              	.LVL10:
   81:main.c        ****     LCD_Position(1u, 0u);
-  83              		.loc 1 81 0
-  84 0036 0120     		movs	r0, #1
-  85 0038 0021     		movs	r1, #0
-  86 003a FFF7FEFF 		bl	LCD_Position
-  87              	.LVL11:
+  82              		.loc 1 81 0
+  83 0036 0120     		movs	r0, #1
+  84 0038 0021     		movs	r1, #0
+  85 003a FFF7FEFF 		bl	LCD_Position
+  86              	.LVL11:
   82:main.c        ****     LCD_PrintString("MDIO host");
-  88              		.loc 1 82 0
-  89 003e 2748     		ldr	r0, .L11+4
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 4
+  87              		.loc 1 82 0
+  88 003e 2448     		ldr	r0, .L11+4
+  89 0040 FFF7FEFF 		bl	LCD_PrintString
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 4
 
 
-  90 0040 FFF7FEFF 		bl	LCD_PrintString
-  91              	.LVL12:
-  50:main.c        ****     
-  92              		.loc 1 50 0
-  93 0044 0024     		movs	r4, #0
+  90              	.LVL12:
   49:main.c        ****     CYBIT test=0;
-  94              		.loc 1 49 0
-  95 0046 2646     		mov	r6, r4
-  96 0048 00E0     		b	.L4
-  97              	.LVL13:
-  98              	.L9:
+  91              		.loc 1 49 0
+  92 0044 0025     		movs	r5, #0
+  93 0046 00E0     		b	.L4
+  94              	.LVL13:
+  95              	.L9:
   83:main.c        **** //   ISR_Start();
   84:main.c        ****     
   85:main.c        ****     for(;;)
@@ -231,20 +227,20 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 1
  119:main.c        ****                     /* Send address frame */
  120:main.c        **** MDIO_host_2_WriteDataC45( MDIO_host_2_C45_ADDR, MdioPhyAddr, MdioDevAddr, HostAddress );
  121:main.c        ****                        	/* Start Transmission */
- 122:main.c        ****                     if(test)
- 123:main.c        ****                     {
- 124:main.c        ****  //  	MDIO_host_2_CONTROL_REG |= MDIO_host_2_START;
- 125:main.c        ****                     }
- 126:main.c        ****                     else
- 127:main.c        ****                     {
- 128:main.c        ****  //  MDIO_host_2_CONTROL_REG &= ~MDIO_host_2_START;
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 5
-
-
- 129:main.c        ****                     }
- 130:main.c        ****                     test =~test;
- 131:main.c        ****                     LED_3_Write(test);
+ 122:main.c        **** //                    if(test)
+ 123:main.c        **** //                    {
+ 124:main.c        **** // //  	MDIO_host_2_CONTROL_REG |= MDIO_host_2_START;
+ 125:main.c        **** //                    }
+ 126:main.c        **** //                    else
+ 127:main.c        **** //                    {
+ 128:main.c        **** // //  MDIO_host_2_CONTROL_REG &= ~MDIO_host_2_START;
+ 129:main.c        **** //                    }
+ 130:main.c        **** //                    test =~test;
+ 131:main.c        **** //                    LED_3_Write(test);
  132:main.c        ****                     /* If the last sent packet is exactly the maximum packet 
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 5
+
+
  133:main.c        ****                     *  size, it is followed by a zero-length packet to assure
  134:main.c        ****                     *  that the end of the segment is properly identified by 
  135:main.c        ****                     *  the terminal.
@@ -298,1538 +294,1484 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 1
  183:main.c        ****                           first_enter = 1;  
  184:main.c        ****                           USBUART_1_PutString("\r\nHello from Cypress!\r\n");
  185:main.c        ****                         } 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 6
-
-
  186:main.c        ****                     }
  187:main.c        ****                     else    //disconnect terminal
  188:main.c        ****                     {
  189:main.c        ****                         first_enter = 0;
-  99              		.loc 1 189 0
- 100 004a 0026     		movs	r6, #0
- 101              	.LVL14:
- 102              	.L4:
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 6
+
+
+  96              		.loc 1 189 0
+  97 0048 0025     		movs	r5, #0
+  98              	.LVL14:
+  99              	.L4:
   89:main.c        ****         {
- 103              		.loc 1 89 0
- 104 004c FFF7FEFF 		bl	USBUART_1_IsConfigurationChanged
- 105              	.LVL15:
- 106 0050 20B1     		cbz	r0, .L3
+ 100              		.loc 1 89 0
+ 101 004a FFF7FEFF 		bl	USBUART_1_IsConfigurationChanged
+ 102              	.LVL15:
+ 103 004e 20B1     		cbz	r0, .L3
   92:main.c        ****             {
- 107              		.loc 1 92 0
- 108 0052 FFF7FEFF 		bl	USBUART_1_GetConfiguration
- 109              	.LVL16:
- 110 0056 08B1     		cbz	r0, .L3
+ 104              		.loc 1 92 0
+ 105 0050 FFF7FEFF 		bl	USBUART_1_GetConfiguration
+ 106              	.LVL16:
+ 107 0054 08B1     		cbz	r0, .L3
   96:main.c        ****             }
- 111              		.loc 1 96 0
- 112 0058 FFF7FEFF 		bl	USBUART_1_CDC_Init
- 113              	.LVL17:
- 114              	.L3:
+ 108              		.loc 1 96 0
+ 109 0056 FFF7FEFF 		bl	USBUART_1_CDC_Init
+ 110              	.LVL17:
+ 111              	.L3:
  101:main.c        ****         {
- 115              		.loc 1 101 0
- 116 005c FFF7FEFF 		bl	USBUART_1_GetConfiguration
- 117              	.LVL18:
- 118 0060 0028     		cmp	r0, #0
- 119 0062 F3D0     		beq	.L4
+ 112              		.loc 1 101 0
+ 113 005a FFF7FEFF 		bl	USBUART_1_GetConfiguration
+ 114              	.LVL18:
+ 115 005e 0028     		cmp	r0, #0
+ 116 0060 F3D0     		beq	.L4
  104:main.c        ****             {
- 120              		.loc 1 104 0
- 121 0064 FFF7FEFF 		bl	USBUART_1_DataIsReady
- 122              	.LVL19:
- 123 0068 10B3     		cbz	r0, .L5
+ 117              		.loc 1 104 0
+ 118 0062 FFF7FEFF 		bl	USBUART_1_DataIsReady
+ 119              	.LVL19:
+ 120 0066 E8B1     		cbz	r0, .L5
  107:main.c        **** 
- 124              		.loc 1 107 0
- 125 006a 6846     		mov	r0, sp
- 126 006c FFF7FEFF 		bl	USBUART_1_GetAll
- 127              	.LVL20:
+ 121              		.loc 1 107 0
+ 122 0068 6846     		mov	r0, sp
+ 123 006a FFF7FEFF 		bl	USBUART_1_GetAll
+ 124              	.LVL20:
  109:main.c        ****                 {
- 128              		.loc 1 109 0
- 129 0070 0546     		mov	r5, r0
- 130 0072 E8B1     		cbz	r0, .L5
- 131              	.LVL21:
- 132              	.L6:
+ 125              		.loc 1 109 0
+ 126 006e 0446     		mov	r4, r0
+ 127 0070 C0B1     		cbz	r0, .L5
+ 128              	.LVL21:
+ 129              	.L6:
  112:main.c        ****                     {
- 133              		.loc 1 112 0 discriminator 1
- 134 0074 FFF7FEFF 		bl	USBUART_1_CDCIsReady
- 135              	.LVL22:
- 136 0078 0028     		cmp	r0, #0
- 137 007a FBD0     		beq	.L6
+ 130              		.loc 1 112 0 discriminator 1
+ 131 0072 FFF7FEFF 		bl	USBUART_1_CDCIsReady
+ 132              	.LVL22:
+ 133 0076 0028     		cmp	r0, #0
+ 134 0078 FBD0     		beq	.L6
  117:main.c        **** 
- 138              		.loc 1 117 0
- 139 007c 6846     		mov	r0, sp
- 140 007e 2946     		mov	r1, r5
- 141 0080 FFF7FEFF 		bl	USBUART_1_PutData
- 142              	.LVL23:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 7
-
-
+ 135              		.loc 1 117 0
+ 136 007a 6846     		mov	r0, sp
+ 137 007c 2146     		mov	r1, r4
+ 138 007e FFF7FEFF 		bl	USBUART_1_PutData
+ 139              	.LVL23:
  120:main.c        ****                        	/* Start Transmission */
- 143              		.loc 1 120 0
- 144 0084 0020     		movs	r0, #0
- 145 0086 1F21     		movs	r1, #31
- 146 0088 0122     		movs	r2, #1
- 147 008a 154B     		ldr	r3, .L11+8
- 148 008c 1B88     		ldrh	r3, [r3]
- 149 008e FFF7FEFF 		bl	MDIO_host_2_WriteDataC45
- 150              	.LVL24:
- 130:main.c        ****                     LED_3_Write(test);
- 151              		.loc 1 130 0
- 152 0092 E443     		mvns	r4, r4
- 153              	.LVL25:
- 154 0094 E4B2     		uxtb	r4, r4
- 155              	.LVL26:
- 131:main.c        ****                     /* If the last sent packet is exactly the maximum packet 
- 156              		.loc 1 131 0
- 157 0096 2046     		mov	r0, r4
- 158 0098 FFF7FEFF 		bl	LED_3_Write
- 159              	.LVL27:
+ 140              		.loc 1 120 0
+ 141 0082 0020     		movs	r0, #0
+ 142 0084 1F21     		movs	r1, #31
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 7
+
+
+ 143 0086 0122     		movs	r2, #1
+ 144 0088 124B     		ldr	r3, .L11+8
+ 145 008a 1B88     		ldrh	r3, [r3]
+ 146 008c FFF7FEFF 		bl	MDIO_host_2_WriteDataC45
+ 147              	.LVL24:
  137:main.c        ****                     {
- 160              		.loc 1 137 0
- 161 009c 402D     		cmp	r5, #64
- 162 009e 07D1     		bne	.L5
- 163              	.L7:
+ 148              		.loc 1 137 0
+ 149 0090 402C     		cmp	r4, #64
+ 150 0092 07D1     		bne	.L5
+ 151              	.L7:
  140:main.c        ****                         {
- 164              		.loc 1 140 0 discriminator 1
- 165 00a0 FFF7FEFF 		bl	USBUART_1_CDCIsReady
- 166              	.LVL28:
- 167 00a4 0028     		cmp	r0, #0
- 168 00a6 FBD0     		beq	.L7
+ 152              		.loc 1 140 0 discriminator 1
+ 153 0094 FFF7FEFF 		bl	USBUART_1_CDCIsReady
+ 154              	.LVL25:
+ 155 0098 0028     		cmp	r0, #0
+ 156 009a FBD0     		beq	.L7
  145:main.c        ****                     }
- 169              		.loc 1 145 0
- 170 00a8 0020     		movs	r0, #0
- 171 00aa 0146     		mov	r1, r0
- 172 00ac FFF7FEFF 		bl	USBUART_1_PutData
- 173              	.LVL29:
- 174              	.L5:
+ 157              		.loc 1 145 0
+ 158 009c 0020     		movs	r0, #0
+ 159 009e 0146     		mov	r1, r0
+ 160 00a0 FFF7FEFF 		bl	USBUART_1_PutData
+ 161              	.LVL26:
+ 162              	.L5:
  152:main.c        ****             if (0u != state)
- 175              		.loc 1 152 0
- 176 00b0 FFF7FEFF 		bl	USBUART_1_IsLineChanged
- 177              	.LVL30:
+ 163              		.loc 1 152 0
+ 164 00a4 FFF7FEFF 		bl	USBUART_1_IsLineChanged
+ 165              	.LVL27:
  153:main.c        ****             {
- 178              		.loc 1 153 0
- 179 00b4 0028     		cmp	r0, #0
- 180 00b6 C9D0     		beq	.L4
+ 166              		.loc 1 153 0
+ 167 00a8 0028     		cmp	r0, #0
+ 168 00aa CED0     		beq	.L4
  174:main.c        ****                 {                   
- 181              		.loc 1 174 0
- 182 00b8 10F0020F 		tst	r0, #2
- 183 00bc C6D0     		beq	.L4
+ 169              		.loc 1 174 0
+ 170 00ac 10F0020F 		tst	r0, #2
+ 171 00b0 CBD0     		beq	.L4
  177:main.c        ****                     
- 184              		.loc 1 177 0
- 185 00be FFF7FEFF 		bl	USBUART_1_GetLineControl
- 186              	.LVL31:
+ 172              		.loc 1 177 0
+ 173 00b2 FFF7FEFF 		bl	USBUART_1_GetLineControl
+ 174              	.LVL28:
  179:main.c        ****                     {
- 187              		.loc 1 179 0
- 188 00c2 10F0010F 		tst	r0, #1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 8
-
-
- 189 00c6 C0D0     		beq	.L9
+ 175              		.loc 1 179 0
+ 176 00b6 10F0010F 		tst	r0, #1
+ 177 00ba C5D0     		beq	.L9
  181:main.c        ****                         {
- 190              		.loc 1 181 0
- 191 00c8 002E     		cmp	r6, #0
- 192 00ca BFD1     		bne	.L4
- 193              	.LVL32:
+ 178              		.loc 1 181 0
+ 179 00bc 002D     		cmp	r5, #0
+ 180 00be C4D1     		bne	.L4
+ 181              	.LVL29:
  184:main.c        ****                         } 
- 194              		.loc 1 184 0
- 195 00cc 0548     		ldr	r0, .L11+12
- 196              	.LVL33:
- 197 00ce FFF7FEFF 		bl	USBUART_1_PutString
- 198              	.LVL34:
+ 182              		.loc 1 184 0
+ 183 00c0 0548     		ldr	r0, .L11+12
+ 184              	.LVL30:
+ 185 00c2 FFF7FEFF 		bl	USBUART_1_PutString
+ 186              	.LVL31:
  183:main.c        ****                           USBUART_1_PutString("\r\nHello from Cypress!\r\n");
- 199              		.loc 1 183 0
- 200 00d2 0126     		movs	r6, #1
- 201 00d4 BAE7     		b	.L4
- 202              	.L12:
- 203 00d6 00BF     		.align	2
- 204              	.L11:
- 205 00d8 00000000 		.word	.LC0
- 206 00dc 08000000 		.word	.LC1
- 207 00e0 00000000 		.word	.LANCHOR0
- 208 00e4 14000000 		.word	.LC2
- 209              		.cfi_endproc
- 210              	.LFE63:
- 211              		.size	main, .-main
- 212              		.global	HostData
- 213              		.global	HostAddress
- 214              		.data
- 215              		.align	1
- 216              		.set	.LANCHOR0,. + 0
- 217              		.type	HostAddress, %object
- 218              		.size	HostAddress, 2
- 219              	HostAddress:
- 220 0000 0080     		.short	-32768
- 221              		.section	.rodata.str1.4,"aMS",%progbits,1
- 222              		.align	2
- 223              	.LC0:
- 224 0000 54455354 		.ascii	"TEST\000"
- 224      00
- 225 0005 000000   		.space	3
- 226              	.LC1:
- 227 0008 4D44494F 		.ascii	"MDIO host\000"
- 227      20686F73 
- 227      7400
- 228 0012 0000     		.space	2
- 229              	.LC2:
- 230 0014 0D0A4865 		.ascii	"\015\012Hello from Cypress!\015\012\000"
- 230      6C6C6F20 
- 230      66726F6D 
- 230      20437970 
- 230      72657373 
- 231              		.bss
- 232              		.align	1
- 233              		.type	HostData, %object
- 234              		.size	HostData, 2
- 235              	HostData:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 9
+ 187              		.loc 1 183 0
+ 188 00c6 0125     		movs	r5, #1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 8
 
 
- 236 0000 0000     		.space	2
- 237              		.text
- 238              	.Letext0:
- 239              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
- 240              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
- 241              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
- 242              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
- 243              		.file 6 "Generated_Source\\PSoC5/LCD.h"
- 244              		.file 7 "Generated_Source\\PSoC5/VDAC8_1.h"
- 245              		.file 8 "Generated_Source\\PSoC5/Opamp_1.h"
- 246              		.file 9 "Generated_Source\\PSoC5/MDIO_host_2_my.h"
- 247              		.file 10 "Generated_Source\\PSoC5/Clock_2.h"
- 248              		.file 11 "Generated_Source\\PSoC5/Clock_1.h"
- 249              		.file 12 "Generated_Source\\PSoC5/PWM_1.h"
- 250              		.file 13 "Generated_Source\\PSoC5/PWM_2.h"
- 251              		.file 14 "Generated_Source\\PSoC5/USBUART_1.h"
- 252              		.file 15 "Generated_Source\\PSoC5/USBUART_1_cdc.h"
- 253              		.file 16 "Generated_Source\\PSoC5/LED_3.h"
- 254              		.section	.debug_info,"",%progbits
- 255              	.Ldebug_info0:
- 256 0000 4D040000 		.4byte	0x44d
- 257 0004 0400     		.2byte	0x4
- 258 0006 00000000 		.4byte	.Ldebug_abbrev0
- 259 000a 04       		.byte	0x4
- 260 000b 01       		.uleb128 0x1
- 261 000c 5D010000 		.4byte	.LASF50
- 262 0010 01       		.byte	0x1
- 263 0011 9F020000 		.4byte	.LASF51
- 264 0015 48030000 		.4byte	.LASF52
- 265 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 266 001d 00000000 		.4byte	0
- 267 0021 00000000 		.4byte	.Ldebug_line0
- 268 0025 02       		.uleb128 0x2
- 269 0026 01       		.byte	0x1
- 270 0027 06       		.byte	0x6
- 271 0028 24030000 		.4byte	.LASF0
- 272 002c 02       		.uleb128 0x2
- 273 002d 01       		.byte	0x1
- 274 002e 08       		.byte	0x8
- 275 002f AA000000 		.4byte	.LASF1
- 276 0033 02       		.uleb128 0x2
- 277 0034 02       		.byte	0x2
- 278 0035 05       		.byte	0x5
- 279 0036 BD020000 		.4byte	.LASF2
- 280 003a 02       		.uleb128 0x2
- 281 003b 02       		.byte	0x2
- 282 003c 07       		.byte	0x7
- 283 003d 68000000 		.4byte	.LASF3
- 284 0041 03       		.uleb128 0x3
- 285 0042 44000000 		.4byte	.LASF9
- 286 0046 02       		.byte	0x2
- 287 0047 3F       		.byte	0x3f
- 288 0048 4C000000 		.4byte	0x4c
- 289 004c 02       		.uleb128 0x2
- 290 004d 04       		.byte	0x4
- 291 004e 05       		.byte	0x5
- 292 004f 05030000 		.4byte	.LASF4
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 10
+ 189 00c8 BFE7     		b	.L4
+ 190              	.L12:
+ 191 00ca 00BF     		.align	2
+ 192              	.L11:
+ 193 00cc 00000000 		.word	.LC0
+ 194 00d0 08000000 		.word	.LC1
+ 195 00d4 00000000 		.word	.LANCHOR0
+ 196 00d8 14000000 		.word	.LC2
+ 197              		.cfi_endproc
+ 198              	.LFE63:
+ 199              		.size	main, .-main
+ 200              		.global	HostData
+ 201              		.global	HostAddress
+ 202              		.data
+ 203              		.align	1
+ 204              		.set	.LANCHOR0,. + 0
+ 205              		.type	HostAddress, %object
+ 206              		.size	HostAddress, 2
+ 207              	HostAddress:
+ 208 0000 0080     		.short	-32768
+ 209              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 210              		.align	2
+ 211              	.LC0:
+ 212 0000 54455354 		.ascii	"TEST\000"
+ 212      00
+ 213 0005 000000   		.space	3
+ 214              	.LC1:
+ 215 0008 4D44494F 		.ascii	"MDIO host\000"
+ 215      20686F73 
+ 215      7400
+ 216 0012 0000     		.space	2
+ 217              	.LC2:
+ 218 0014 0D0A4865 		.ascii	"\015\012Hello from Cypress!\015\012\000"
+ 218      6C6C6F20 
+ 218      66726F6D 
+ 218      20437970 
+ 218      72657373 
+ 219              		.bss
+ 220              		.align	1
+ 221              		.type	HostData, %object
+ 222              		.size	HostData, 2
+ 223              	HostData:
+ 224 0000 0000     		.space	2
+ 225              		.text
+ 226              	.Letext0:
+ 227              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 228              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 229              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 230              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 231              		.file 6 "Generated_Source\\PSoC5/LCD.h"
+ 232              		.file 7 "Generated_Source\\PSoC5/VDAC8_1.h"
+ 233              		.file 8 "Generated_Source\\PSoC5/Opamp_1.h"
+ 234              		.file 9 "Generated_Source\\PSoC5/MDIO_host_2_my.h"
+ 235              		.file 10 "Generated_Source\\PSoC5/Clock_2.h"
+ 236              		.file 11 "Generated_Source\\PSoC5/Clock_1.h"
+ 237              		.file 12 "Generated_Source\\PSoC5/PWM_1.h"
+ 238              		.file 13 "Generated_Source\\PSoC5/PWM_2.h"
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 9
 
 
- 293 0053 02       		.uleb128 0x2
- 294 0054 04       		.byte	0x4
- 295 0055 07       		.byte	0x7
- 296 0056 CF000000 		.4byte	.LASF5
- 297 005a 02       		.uleb128 0x2
- 298 005b 08       		.byte	0x8
- 299 005c 05       		.byte	0x5
- 300 005d 91020000 		.4byte	.LASF6
- 301 0061 02       		.uleb128 0x2
- 302 0062 08       		.byte	0x8
- 303 0063 07       		.byte	0x7
- 304 0064 16020000 		.4byte	.LASF7
- 305 0068 04       		.uleb128 0x4
- 306 0069 04       		.byte	0x4
- 307 006a 05       		.byte	0x5
- 308 006b 696E7400 		.ascii	"int\000"
- 309 006f 02       		.uleb128 0x2
- 310 0070 04       		.byte	0x4
- 311 0071 07       		.byte	0x7
- 312 0072 F0010000 		.4byte	.LASF8
- 313 0076 03       		.uleb128 0x3
- 314 0077 5F020000 		.4byte	.LASF10
- 315 007b 03       		.byte	0x3
- 316 007c 2C       		.byte	0x2c
- 317 007d 41000000 		.4byte	0x41
- 318 0081 05       		.uleb128 0x5
- 319 0082 CE020000 		.4byte	.LASF11
- 320 0086 04       		.byte	0x4
- 321 0087 9201     		.2byte	0x192
- 322 0089 2C000000 		.4byte	0x2c
- 323 008d 05       		.uleb128 0x5
- 324 008e 56010000 		.4byte	.LASF12
- 325 0092 04       		.byte	0x4
- 326 0093 9301     		.2byte	0x193
- 327 0095 3A000000 		.4byte	0x3a
- 328 0099 02       		.uleb128 0x2
- 329 009a 04       		.byte	0x4
- 330 009b 04       		.byte	0x4
- 331 009c 9A000000 		.4byte	.LASF13
- 332 00a0 02       		.uleb128 0x2
- 333 00a1 08       		.byte	0x8
- 334 00a2 04       		.byte	0x4
- 335 00a3 1C010000 		.4byte	.LASF14
- 336 00a7 05       		.uleb128 0x5
- 337 00a8 16010000 		.4byte	.LASF15
- 338 00ac 04       		.byte	0x4
- 339 00ad A301     		.2byte	0x1a3
- 340 00af B3000000 		.4byte	0xb3
- 341 00b3 02       		.uleb128 0x2
- 342 00b4 01       		.byte	0x1
- 343 00b5 08       		.byte	0x8
- 344 00b6 A6020000 		.4byte	.LASF16
- 345 00ba 02       		.uleb128 0x2
- 346 00bb 04       		.byte	0x4
- 347 00bc 07       		.byte	0x7
- 348 00bd 67020000 		.4byte	.LASF17
- 349 00c1 06       		.uleb128 0x6
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 11
+ 239              		.file 14 "Generated_Source\\PSoC5/USBUART_1.h"
+ 240              		.file 15 "Generated_Source\\PSoC5/USBUART_1_cdc.h"
+ 241              		.section	.debug_info,"",%progbits
+ 242              	.Ldebug_info0:
+ 243 0000 25040000 		.4byte	0x425
+ 244 0004 0400     		.2byte	0x4
+ 245 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 246 000a 04       		.byte	0x4
+ 247 000b 01       		.uleb128 0x1
+ 248 000c 5D010000 		.4byte	.LASF49
+ 249 0010 01       		.byte	0x1
+ 250 0011 9F020000 		.4byte	.LASF50
+ 251 0015 3C030000 		.4byte	.LASF51
+ 252 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 253 001d 00000000 		.4byte	0
+ 254 0021 00000000 		.4byte	.Ldebug_line0
+ 255 0025 02       		.uleb128 0x2
+ 256 0026 01       		.byte	0x1
+ 257 0027 06       		.byte	0x6
+ 258 0028 24030000 		.4byte	.LASF0
+ 259 002c 02       		.uleb128 0x2
+ 260 002d 01       		.byte	0x1
+ 261 002e 08       		.byte	0x8
+ 262 002f AA000000 		.4byte	.LASF1
+ 263 0033 02       		.uleb128 0x2
+ 264 0034 02       		.byte	0x2
+ 265 0035 05       		.byte	0x5
+ 266 0036 BD020000 		.4byte	.LASF2
+ 267 003a 02       		.uleb128 0x2
+ 268 003b 02       		.byte	0x2
+ 269 003c 07       		.byte	0x7
+ 270 003d 68000000 		.4byte	.LASF3
+ 271 0041 03       		.uleb128 0x3
+ 272 0042 44000000 		.4byte	.LASF9
+ 273 0046 02       		.byte	0x2
+ 274 0047 3F       		.byte	0x3f
+ 275 0048 4C000000 		.4byte	0x4c
+ 276 004c 02       		.uleb128 0x2
+ 277 004d 04       		.byte	0x4
+ 278 004e 05       		.byte	0x5
+ 279 004f 05030000 		.4byte	.LASF4
+ 280 0053 02       		.uleb128 0x2
+ 281 0054 04       		.byte	0x4
+ 282 0055 07       		.byte	0x7
+ 283 0056 CF000000 		.4byte	.LASF5
+ 284 005a 02       		.uleb128 0x2
+ 285 005b 08       		.byte	0x8
+ 286 005c 05       		.byte	0x5
+ 287 005d 91020000 		.4byte	.LASF6
+ 288 0061 02       		.uleb128 0x2
+ 289 0062 08       		.byte	0x8
+ 290 0063 07       		.byte	0x7
+ 291 0064 16020000 		.4byte	.LASF7
+ 292 0068 04       		.uleb128 0x4
+ 293 0069 04       		.byte	0x4
+ 294 006a 05       		.byte	0x5
+ 295 006b 696E7400 		.ascii	"int\000"
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 10
 
 
- 350 00c2 41010000 		.4byte	.LASF53
- 351 00c6 01       		.byte	0x1
- 352 00c7 2F       		.byte	0x2f
- 353 00c8 68000000 		.4byte	0x68
- 354 00cc 00000000 		.4byte	.LFB63
- 355 00d0 E8000000 		.4byte	.LFE63-.LFB63
- 356 00d4 01       		.uleb128 0x1
- 357 00d5 9C       		.byte	0x9c
- 358 00d6 A7020000 		.4byte	0x2a7
- 359 00da 07       		.uleb128 0x7
- 360 00db AB020000 		.4byte	.LASF18
- 361 00df 01       		.byte	0x1
- 362 00e0 31       		.byte	0x31
- 363 00e1 81000000 		.4byte	0x81
- 364 00e5 00000000 		.4byte	.LLST0
- 365 00e9 07       		.uleb128 0x7
- 366 00ea EB010000 		.4byte	.LASF19
- 367 00ee 01       		.byte	0x1
- 368 00ef 32       		.byte	0x32
- 369 00f0 81000000 		.4byte	0x81
- 370 00f4 2B000000 		.4byte	.LLST1
- 371 00f8 07       		.uleb128 0x7
- 372 00f9 B7020000 		.4byte	.LASF20
- 373 00fd 01       		.byte	0x1
- 374 00fe 36       		.byte	0x36
- 375 00ff 8D000000 		.4byte	0x8d
- 376 0103 55000000 		.4byte	.LLST2
- 377 0107 08       		.uleb128 0x8
- 378 0108 C7020000 		.4byte	.LASF21
- 379 010c 01       		.byte	0x1
- 380 010d 37       		.byte	0x37
- 381 010e A7020000 		.4byte	0x2a7
- 382 0112 03       		.uleb128 0x3
- 383 0113 91       		.byte	0x91
- 384 0114 B07F     		.sleb128 -80
- 385 0116 07       		.uleb128 0x7
- 386 0117 94000000 		.4byte	.LASF22
- 387 011b 01       		.byte	0x1
- 388 011c 3A       		.byte	0x3a
- 389 011d 81000000 		.4byte	0x81
- 390 0121 68000000 		.4byte	.LLST3
- 391 0125 09       		.uleb128 0x9
- 392 0126 0A000000 		.4byte	.LVL1
- 393 012a 07030000 		.4byte	0x307
- 394 012e 09       		.uleb128 0x9
- 395 012f 0E000000 		.4byte	.LVL2
- 396 0133 0E030000 		.4byte	0x30e
- 397 0137 09       		.uleb128 0x9
- 398 0138 12000000 		.4byte	.LVL3
- 399 013c 15030000 		.4byte	0x315
- 400 0140 0A       		.uleb128 0xa
- 401 0141 1C000000 		.4byte	.LVL4
- 402 0145 1C030000 		.4byte	0x31c
- 403 0149 58010000 		.4byte	0x158
- 404 014d 0B       		.uleb128 0xb
- 405 014e 01       		.uleb128 0x1
- 406 014f 51       		.byte	0x51
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 12
+ 296 006f 02       		.uleb128 0x2
+ 297 0070 04       		.byte	0x4
+ 298 0071 07       		.byte	0x7
+ 299 0072 F0010000 		.4byte	.LASF8
+ 300 0076 03       		.uleb128 0x3
+ 301 0077 5F020000 		.4byte	.LASF10
+ 302 007b 03       		.byte	0x3
+ 303 007c 2C       		.byte	0x2c
+ 304 007d 41000000 		.4byte	0x41
+ 305 0081 05       		.uleb128 0x5
+ 306 0082 CE020000 		.4byte	.LASF11
+ 307 0086 04       		.byte	0x4
+ 308 0087 9201     		.2byte	0x192
+ 309 0089 2C000000 		.4byte	0x2c
+ 310 008d 05       		.uleb128 0x5
+ 311 008e 56010000 		.4byte	.LASF12
+ 312 0092 04       		.byte	0x4
+ 313 0093 9301     		.2byte	0x193
+ 314 0095 3A000000 		.4byte	0x3a
+ 315 0099 02       		.uleb128 0x2
+ 316 009a 04       		.byte	0x4
+ 317 009b 04       		.byte	0x4
+ 318 009c 9A000000 		.4byte	.LASF13
+ 319 00a0 02       		.uleb128 0x2
+ 320 00a1 08       		.byte	0x8
+ 321 00a2 04       		.byte	0x4
+ 322 00a3 1C010000 		.4byte	.LASF14
+ 323 00a7 05       		.uleb128 0x5
+ 324 00a8 16010000 		.4byte	.LASF15
+ 325 00ac 04       		.byte	0x4
+ 326 00ad A301     		.2byte	0x1a3
+ 327 00af B3000000 		.4byte	0xb3
+ 328 00b3 02       		.uleb128 0x2
+ 329 00b4 01       		.byte	0x1
+ 330 00b5 08       		.byte	0x8
+ 331 00b6 A6020000 		.4byte	.LASF16
+ 332 00ba 02       		.uleb128 0x2
+ 333 00bb 04       		.byte	0x4
+ 334 00bc 07       		.byte	0x7
+ 335 00bd 67020000 		.4byte	.LASF17
+ 336 00c1 06       		.uleb128 0x6
+ 337 00c2 41010000 		.4byte	.LASF52
+ 338 00c6 01       		.byte	0x1
+ 339 00c7 2F       		.byte	0x2f
+ 340 00c8 68000000 		.4byte	0x68
+ 341 00cc 00000000 		.4byte	.LFB63
+ 342 00d0 DC000000 		.4byte	.LFE63-.LFB63
+ 343 00d4 01       		.uleb128 0x1
+ 344 00d5 9C       		.byte	0x9c
+ 345 00d6 90020000 		.4byte	0x290
+ 346 00da 07       		.uleb128 0x7
+ 347 00db AB020000 		.4byte	.LASF18
+ 348 00df 01       		.byte	0x1
+ 349 00e0 31       		.byte	0x31
+ 350 00e1 81000000 		.4byte	0x81
+ 351 00e5 00000000 		.4byte	.LLST0
+ 352 00e9 08       		.uleb128 0x8
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 11
 
 
- 407 0150 01       		.uleb128 0x1
- 408 0151 31       		.byte	0x31
- 409 0152 0B       		.uleb128 0xb
- 410 0153 01       		.uleb128 0x1
- 411 0154 50       		.byte	0x50
- 412 0155 01       		.uleb128 0x1
- 413 0156 30       		.byte	0x30
- 414 0157 00       		.byte	0
- 415 0158 09       		.uleb128 0x9
- 416 0159 20000000 		.4byte	.LVL5
- 417 015d 33030000 		.4byte	0x333
- 418 0161 09       		.uleb128 0x9
- 419 0162 24000000 		.4byte	.LVL6
- 420 0166 3A030000 		.4byte	0x33a
- 421 016a 09       		.uleb128 0x9
- 422 016b 28000000 		.4byte	.LVL7
- 423 016f 41030000 		.4byte	0x341
- 424 0173 09       		.uleb128 0x9
- 425 0174 2C000000 		.4byte	.LVL8
- 426 0178 48030000 		.4byte	0x348
- 427 017c 09       		.uleb128 0x9
- 428 017d 30000000 		.4byte	.LVL9
- 429 0181 4F030000 		.4byte	0x34f
- 430 0185 0A       		.uleb128 0xa
- 431 0186 36000000 		.4byte	.LVL10
- 432 018a 56030000 		.4byte	0x356
- 433 018e 9C010000 		.4byte	0x19c
- 434 0192 0B       		.uleb128 0xb
- 435 0193 01       		.uleb128 0x1
- 436 0194 50       		.byte	0x50
- 437 0195 05       		.uleb128 0x5
- 438 0196 03       		.byte	0x3
- 439 0197 00000000 		.4byte	.LC0
- 440 019b 00       		.byte	0
- 441 019c 0A       		.uleb128 0xa
- 442 019d 3E000000 		.4byte	.LVL11
- 443 01a1 72030000 		.4byte	0x372
- 444 01a5 B4010000 		.4byte	0x1b4
- 445 01a9 0B       		.uleb128 0xb
- 446 01aa 01       		.uleb128 0x1
- 447 01ab 51       		.byte	0x51
- 448 01ac 01       		.uleb128 0x1
- 449 01ad 30       		.byte	0x30
- 450 01ae 0B       		.uleb128 0xb
- 451 01af 01       		.uleb128 0x1
- 452 01b0 50       		.byte	0x50
- 453 01b1 01       		.uleb128 0x1
- 454 01b2 31       		.byte	0x31
- 455 01b3 00       		.byte	0
- 456 01b4 0A       		.uleb128 0xa
- 457 01b5 44000000 		.4byte	.LVL12
- 458 01b9 56030000 		.4byte	0x356
- 459 01bd CB010000 		.4byte	0x1cb
- 460 01c1 0B       		.uleb128 0xb
- 461 01c2 01       		.uleb128 0x1
- 462 01c3 50       		.byte	0x50
- 463 01c4 05       		.uleb128 0x5
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 13
+ 353 00ea EB010000 		.4byte	.LASF19
+ 354 00ee 01       		.byte	0x1
+ 355 00ef 32       		.byte	0x32
+ 356 00f0 81000000 		.4byte	0x81
+ 357 00f4 00       		.byte	0
+ 358 00f5 07       		.uleb128 0x7
+ 359 00f6 B7020000 		.4byte	.LASF20
+ 360 00fa 01       		.byte	0x1
+ 361 00fb 36       		.byte	0x36
+ 362 00fc 8D000000 		.4byte	0x8d
+ 363 0100 2B000000 		.4byte	.LLST1
+ 364 0104 09       		.uleb128 0x9
+ 365 0105 C7020000 		.4byte	.LASF21
+ 366 0109 01       		.byte	0x1
+ 367 010a 37       		.byte	0x37
+ 368 010b 90020000 		.4byte	0x290
+ 369 010f 03       		.uleb128 0x3
+ 370 0110 91       		.byte	0x91
+ 371 0111 B07F     		.sleb128 -80
+ 372 0113 07       		.uleb128 0x7
+ 373 0114 94000000 		.4byte	.LASF22
+ 374 0118 01       		.byte	0x1
+ 375 0119 3A       		.byte	0x3a
+ 376 011a 81000000 		.4byte	0x81
+ 377 011e 3E000000 		.4byte	.LLST2
+ 378 0122 0A       		.uleb128 0xa
+ 379 0123 0A000000 		.4byte	.LVL1
+ 380 0127 F0020000 		.4byte	0x2f0
+ 381 012b 0A       		.uleb128 0xa
+ 382 012c 0E000000 		.4byte	.LVL2
+ 383 0130 F7020000 		.4byte	0x2f7
+ 384 0134 0A       		.uleb128 0xa
+ 385 0135 12000000 		.4byte	.LVL3
+ 386 0139 FE020000 		.4byte	0x2fe
+ 387 013d 0B       		.uleb128 0xb
+ 388 013e 1C000000 		.4byte	.LVL4
+ 389 0142 05030000 		.4byte	0x305
+ 390 0146 55010000 		.4byte	0x155
+ 391 014a 0C       		.uleb128 0xc
+ 392 014b 01       		.uleb128 0x1
+ 393 014c 51       		.byte	0x51
+ 394 014d 01       		.uleb128 0x1
+ 395 014e 31       		.byte	0x31
+ 396 014f 0C       		.uleb128 0xc
+ 397 0150 01       		.uleb128 0x1
+ 398 0151 50       		.byte	0x50
+ 399 0152 01       		.uleb128 0x1
+ 400 0153 30       		.byte	0x30
+ 401 0154 00       		.byte	0
+ 402 0155 0A       		.uleb128 0xa
+ 403 0156 20000000 		.4byte	.LVL5
+ 404 015a 1C030000 		.4byte	0x31c
+ 405 015e 0A       		.uleb128 0xa
+ 406 015f 24000000 		.4byte	.LVL6
+ 407 0163 23030000 		.4byte	0x323
+ 408 0167 0A       		.uleb128 0xa
+ 409 0168 28000000 		.4byte	.LVL7
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 12
 
 
- 464 01c5 03       		.byte	0x3
- 465 01c6 08000000 		.4byte	.LC1
- 466 01ca 00       		.byte	0
- 467 01cb 09       		.uleb128 0x9
- 468 01cc 50000000 		.4byte	.LVL15
- 469 01d0 88030000 		.4byte	0x388
- 470 01d4 09       		.uleb128 0x9
- 471 01d5 56000000 		.4byte	.LVL16
- 472 01d9 94030000 		.4byte	0x394
- 473 01dd 09       		.uleb128 0x9
- 474 01de 5C000000 		.4byte	.LVL17
- 475 01e2 A0030000 		.4byte	0x3a0
- 476 01e6 09       		.uleb128 0x9
- 477 01e7 60000000 		.4byte	.LVL18
- 478 01eb 94030000 		.4byte	0x394
- 479 01ef 09       		.uleb128 0x9
- 480 01f0 68000000 		.4byte	.LVL19
- 481 01f4 AB030000 		.4byte	0x3ab
- 482 01f8 0A       		.uleb128 0xa
- 483 01f9 70000000 		.4byte	.LVL20
- 484 01fd B6030000 		.4byte	0x3b6
- 485 0201 0C020000 		.4byte	0x20c
- 486 0205 0B       		.uleb128 0xb
- 487 0206 01       		.uleb128 0x1
- 488 0207 50       		.byte	0x50
- 489 0208 02       		.uleb128 0x2
- 490 0209 7D       		.byte	0x7d
- 491 020a 00       		.sleb128 0
- 492 020b 00       		.byte	0
- 493 020c 09       		.uleb128 0x9
- 494 020d 78000000 		.4byte	.LVL22
- 495 0211 D1030000 		.4byte	0x3d1
- 496 0215 0A       		.uleb128 0xa
- 497 0216 84000000 		.4byte	.LVL23
- 498 021a DC030000 		.4byte	0x3dc
- 499 021e 2F020000 		.4byte	0x22f
- 500 0222 0B       		.uleb128 0xb
- 501 0223 01       		.uleb128 0x1
- 502 0224 51       		.byte	0x51
- 503 0225 02       		.uleb128 0x2
- 504 0226 75       		.byte	0x75
- 505 0227 00       		.sleb128 0
- 506 0228 0B       		.uleb128 0xb
- 507 0229 01       		.uleb128 0x1
- 508 022a 50       		.byte	0x50
- 509 022b 02       		.uleb128 0x2
- 510 022c 7D       		.byte	0x7d
- 511 022d 00       		.sleb128 0
- 512 022e 00       		.byte	0
- 513 022f 0A       		.uleb128 0xa
- 514 0230 92000000 		.4byte	.LVL24
- 515 0234 F8030000 		.4byte	0x3f8
- 516 0238 4C020000 		.4byte	0x24c
- 517 023c 0B       		.uleb128 0xb
- 518 023d 01       		.uleb128 0x1
- 519 023e 52       		.byte	0x52
- 520 023f 01       		.uleb128 0x1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 14
+ 410 016c 2A030000 		.4byte	0x32a
+ 411 0170 0A       		.uleb128 0xa
+ 412 0171 2C000000 		.4byte	.LVL8
+ 413 0175 31030000 		.4byte	0x331
+ 414 0179 0A       		.uleb128 0xa
+ 415 017a 30000000 		.4byte	.LVL9
+ 416 017e 38030000 		.4byte	0x338
+ 417 0182 0B       		.uleb128 0xb
+ 418 0183 36000000 		.4byte	.LVL10
+ 419 0187 3F030000 		.4byte	0x33f
+ 420 018b 99010000 		.4byte	0x199
+ 421 018f 0C       		.uleb128 0xc
+ 422 0190 01       		.uleb128 0x1
+ 423 0191 50       		.byte	0x50
+ 424 0192 05       		.uleb128 0x5
+ 425 0193 03       		.byte	0x3
+ 426 0194 00000000 		.4byte	.LC0
+ 427 0198 00       		.byte	0
+ 428 0199 0B       		.uleb128 0xb
+ 429 019a 3E000000 		.4byte	.LVL11
+ 430 019e 5B030000 		.4byte	0x35b
+ 431 01a2 B1010000 		.4byte	0x1b1
+ 432 01a6 0C       		.uleb128 0xc
+ 433 01a7 01       		.uleb128 0x1
+ 434 01a8 51       		.byte	0x51
+ 435 01a9 01       		.uleb128 0x1
+ 436 01aa 30       		.byte	0x30
+ 437 01ab 0C       		.uleb128 0xc
+ 438 01ac 01       		.uleb128 0x1
+ 439 01ad 50       		.byte	0x50
+ 440 01ae 01       		.uleb128 0x1
+ 441 01af 31       		.byte	0x31
+ 442 01b0 00       		.byte	0
+ 443 01b1 0B       		.uleb128 0xb
+ 444 01b2 44000000 		.4byte	.LVL12
+ 445 01b6 3F030000 		.4byte	0x33f
+ 446 01ba C8010000 		.4byte	0x1c8
+ 447 01be 0C       		.uleb128 0xc
+ 448 01bf 01       		.uleb128 0x1
+ 449 01c0 50       		.byte	0x50
+ 450 01c1 05       		.uleb128 0x5
+ 451 01c2 03       		.byte	0x3
+ 452 01c3 08000000 		.4byte	.LC1
+ 453 01c7 00       		.byte	0
+ 454 01c8 0A       		.uleb128 0xa
+ 455 01c9 4E000000 		.4byte	.LVL15
+ 456 01cd 71030000 		.4byte	0x371
+ 457 01d1 0A       		.uleb128 0xa
+ 458 01d2 54000000 		.4byte	.LVL16
+ 459 01d6 7D030000 		.4byte	0x37d
+ 460 01da 0A       		.uleb128 0xa
+ 461 01db 5A000000 		.4byte	.LVL17
+ 462 01df 89030000 		.4byte	0x389
+ 463 01e3 0A       		.uleb128 0xa
+ 464 01e4 5E000000 		.4byte	.LVL18
+ 465 01e8 7D030000 		.4byte	0x37d
+ 466 01ec 0A       		.uleb128 0xa
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 13
 
 
- 521 0240 31       		.byte	0x31
- 522 0241 0B       		.uleb128 0xb
- 523 0242 01       		.uleb128 0x1
- 524 0243 51       		.byte	0x51
- 525 0244 01       		.uleb128 0x1
- 526 0245 4F       		.byte	0x4f
- 527 0246 0B       		.uleb128 0xb
- 528 0247 01       		.uleb128 0x1
- 529 0248 50       		.byte	0x50
- 530 0249 01       		.uleb128 0x1
- 531 024a 30       		.byte	0x30
- 532 024b 00       		.byte	0
- 533 024c 0A       		.uleb128 0xa
- 534 024d 9C000000 		.4byte	.LVL27
- 535 0251 1C040000 		.4byte	0x41c
- 536 0255 60020000 		.4byte	0x260
- 537 0259 0B       		.uleb128 0xb
- 538 025a 01       		.uleb128 0x1
- 539 025b 50       		.byte	0x50
- 540 025c 02       		.uleb128 0x2
- 541 025d 74       		.byte	0x74
- 542 025e 00       		.sleb128 0
- 543 025f 00       		.byte	0
- 544 0260 09       		.uleb128 0x9
- 545 0261 A4000000 		.4byte	.LVL28
- 546 0265 D1030000 		.4byte	0x3d1
- 547 0269 0A       		.uleb128 0xa
- 548 026a B0000000 		.4byte	.LVL29
- 549 026e DC030000 		.4byte	0x3dc
- 550 0272 81020000 		.4byte	0x281
- 551 0276 0B       		.uleb128 0xb
- 552 0277 01       		.uleb128 0x1
- 553 0278 51       		.byte	0x51
- 554 0279 01       		.uleb128 0x1
- 555 027a 30       		.byte	0x30
- 556 027b 0B       		.uleb128 0xb
- 557 027c 01       		.uleb128 0x1
- 558 027d 50       		.byte	0x50
- 559 027e 01       		.uleb128 0x1
- 560 027f 30       		.byte	0x30
- 561 0280 00       		.byte	0
- 562 0281 09       		.uleb128 0x9
- 563 0282 B4000000 		.4byte	.LVL30
- 564 0286 2D040000 		.4byte	0x42d
- 565 028a 09       		.uleb128 0x9
- 566 028b C2000000 		.4byte	.LVL31
- 567 028f 38040000 		.4byte	0x438
- 568 0293 0C       		.uleb128 0xc
- 569 0294 D2000000 		.4byte	.LVL34
- 570 0298 43040000 		.4byte	0x443
- 571 029c 0B       		.uleb128 0xb
- 572 029d 01       		.uleb128 0x1
- 573 029e 50       		.byte	0x50
- 574 029f 05       		.uleb128 0x5
- 575 02a0 03       		.byte	0x3
- 576 02a1 14000000 		.4byte	.LC2
- 577 02a5 00       		.byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 15
+ 467 01ed 66000000 		.4byte	.LVL19
+ 468 01f1 94030000 		.4byte	0x394
+ 469 01f5 0B       		.uleb128 0xb
+ 470 01f6 6E000000 		.4byte	.LVL20
+ 471 01fa 9F030000 		.4byte	0x39f
+ 472 01fe 09020000 		.4byte	0x209
+ 473 0202 0C       		.uleb128 0xc
+ 474 0203 01       		.uleb128 0x1
+ 475 0204 50       		.byte	0x50
+ 476 0205 02       		.uleb128 0x2
+ 477 0206 7D       		.byte	0x7d
+ 478 0207 00       		.sleb128 0
+ 479 0208 00       		.byte	0
+ 480 0209 0A       		.uleb128 0xa
+ 481 020a 76000000 		.4byte	.LVL22
+ 482 020e BA030000 		.4byte	0x3ba
+ 483 0212 0B       		.uleb128 0xb
+ 484 0213 82000000 		.4byte	.LVL23
+ 485 0217 C5030000 		.4byte	0x3c5
+ 486 021b 2C020000 		.4byte	0x22c
+ 487 021f 0C       		.uleb128 0xc
+ 488 0220 01       		.uleb128 0x1
+ 489 0221 51       		.byte	0x51
+ 490 0222 02       		.uleb128 0x2
+ 491 0223 74       		.byte	0x74
+ 492 0224 00       		.sleb128 0
+ 493 0225 0C       		.uleb128 0xc
+ 494 0226 01       		.uleb128 0x1
+ 495 0227 50       		.byte	0x50
+ 496 0228 02       		.uleb128 0x2
+ 497 0229 7D       		.byte	0x7d
+ 498 022a 00       		.sleb128 0
+ 499 022b 00       		.byte	0
+ 500 022c 0B       		.uleb128 0xb
+ 501 022d 90000000 		.4byte	.LVL24
+ 502 0231 E1030000 		.4byte	0x3e1
+ 503 0235 49020000 		.4byte	0x249
+ 504 0239 0C       		.uleb128 0xc
+ 505 023a 01       		.uleb128 0x1
+ 506 023b 52       		.byte	0x52
+ 507 023c 01       		.uleb128 0x1
+ 508 023d 31       		.byte	0x31
+ 509 023e 0C       		.uleb128 0xc
+ 510 023f 01       		.uleb128 0x1
+ 511 0240 51       		.byte	0x51
+ 512 0241 01       		.uleb128 0x1
+ 513 0242 4F       		.byte	0x4f
+ 514 0243 0C       		.uleb128 0xc
+ 515 0244 01       		.uleb128 0x1
+ 516 0245 50       		.byte	0x50
+ 517 0246 01       		.uleb128 0x1
+ 518 0247 30       		.byte	0x30
+ 519 0248 00       		.byte	0
+ 520 0249 0A       		.uleb128 0xa
+ 521 024a 98000000 		.4byte	.LVL25
+ 522 024e BA030000 		.4byte	0x3ba
+ 523 0252 0B       		.uleb128 0xb
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 14
 
 
- 578 02a6 00       		.byte	0
- 579 02a7 0D       		.uleb128 0xd
- 580 02a8 81000000 		.4byte	0x81
- 581 02ac B7020000 		.4byte	0x2b7
- 582 02b0 0E       		.uleb128 0xe
- 583 02b1 BA000000 		.4byte	0xba
- 584 02b5 3F       		.byte	0x3f
- 585 02b6 00       		.byte	0
- 586 02b7 0F       		.uleb128 0xf
- 587 02b8 5C000000 		.4byte	.LASF23
- 588 02bc 01       		.byte	0x1
- 589 02bd 2A       		.byte	0x2a
- 590 02be C3020000 		.4byte	0x2c3
- 591 02c2 01       		.byte	0x1
- 592 02c3 10       		.uleb128 0x10
- 593 02c4 81000000 		.4byte	0x81
- 594 02c8 0F       		.uleb128 0xf
- 595 02c9 3C030000 		.4byte	.LASF24
- 596 02cd 01       		.byte	0x1
- 597 02ce 2B       		.byte	0x2b
- 598 02cf C3020000 		.4byte	0x2c3
- 599 02d3 1F       		.byte	0x1f
- 600 02d4 11       		.uleb128 0x11
- 601 02d5 FB000000 		.4byte	.LASF25
- 602 02d9 05       		.byte	0x5
- 603 02da 9606     		.2byte	0x696
- 604 02dc E0020000 		.4byte	0x2e0
- 605 02e0 12       		.uleb128 0x12
- 606 02e1 76000000 		.4byte	0x76
- 607 02e5 13       		.uleb128 0x13
- 608 02e6 E4020000 		.4byte	.LASF26
- 609 02ea 01       		.byte	0x1
- 610 02eb 1B       		.byte	0x1b
- 611 02ec 8D000000 		.4byte	0x8d
- 612 02f0 05       		.uleb128 0x5
- 613 02f1 03       		.byte	0x3
- 614 02f2 00000000 		.4byte	HostAddress
- 615 02f6 13       		.uleb128 0x13
- 616 02f7 C6000000 		.4byte	.LASF27
- 617 02fb 01       		.byte	0x1
- 618 02fc 1C       		.byte	0x1c
- 619 02fd 8D000000 		.4byte	0x8d
- 620 0301 05       		.uleb128 0x5
- 621 0302 03       		.byte	0x3
- 622 0303 00000000 		.4byte	HostData
- 623 0307 14       		.uleb128 0x14
- 624 0308 A0000000 		.4byte	.LASF28
- 625 030c 06       		.byte	0x6
- 626 030d 38       		.byte	0x38
- 627 030e 14       		.uleb128 0x14
- 628 030f ED000000 		.4byte	.LASF29
- 629 0313 07       		.byte	0x7
- 630 0314 33       		.byte	0x33
- 631 0315 14       		.uleb128 0x14
- 632 0316 4E000000 		.4byte	.LASF30
- 633 031a 08       		.byte	0x8
- 634 031b 33       		.byte	0x33
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 16
+ 524 0253 A4000000 		.4byte	.LVL26
+ 525 0257 C5030000 		.4byte	0x3c5
+ 526 025b 6A020000 		.4byte	0x26a
+ 527 025f 0C       		.uleb128 0xc
+ 528 0260 01       		.uleb128 0x1
+ 529 0261 51       		.byte	0x51
+ 530 0262 01       		.uleb128 0x1
+ 531 0263 30       		.byte	0x30
+ 532 0264 0C       		.uleb128 0xc
+ 533 0265 01       		.uleb128 0x1
+ 534 0266 50       		.byte	0x50
+ 535 0267 01       		.uleb128 0x1
+ 536 0268 30       		.byte	0x30
+ 537 0269 00       		.byte	0
+ 538 026a 0A       		.uleb128 0xa
+ 539 026b A8000000 		.4byte	.LVL27
+ 540 026f 05040000 		.4byte	0x405
+ 541 0273 0A       		.uleb128 0xa
+ 542 0274 B6000000 		.4byte	.LVL28
+ 543 0278 10040000 		.4byte	0x410
+ 544 027c 0D       		.uleb128 0xd
+ 545 027d C6000000 		.4byte	.LVL31
+ 546 0281 1B040000 		.4byte	0x41b
+ 547 0285 0C       		.uleb128 0xc
+ 548 0286 01       		.uleb128 0x1
+ 549 0287 50       		.byte	0x50
+ 550 0288 05       		.uleb128 0x5
+ 551 0289 03       		.byte	0x3
+ 552 028a 14000000 		.4byte	.LC2
+ 553 028e 00       		.byte	0
+ 554 028f 00       		.byte	0
+ 555 0290 0E       		.uleb128 0xe
+ 556 0291 81000000 		.4byte	0x81
+ 557 0295 A0020000 		.4byte	0x2a0
+ 558 0299 0F       		.uleb128 0xf
+ 559 029a BA000000 		.4byte	0xba
+ 560 029e 3F       		.byte	0x3f
+ 561 029f 00       		.byte	0
+ 562 02a0 08       		.uleb128 0x8
+ 563 02a1 5C000000 		.4byte	.LASF23
+ 564 02a5 01       		.byte	0x1
+ 565 02a6 2A       		.byte	0x2a
+ 566 02a7 AC020000 		.4byte	0x2ac
+ 567 02ab 01       		.byte	0x1
+ 568 02ac 10       		.uleb128 0x10
+ 569 02ad 81000000 		.4byte	0x81
+ 570 02b1 08       		.uleb128 0x8
+ 571 02b2 30030000 		.4byte	.LASF24
+ 572 02b6 01       		.byte	0x1
+ 573 02b7 2B       		.byte	0x2b
+ 574 02b8 AC020000 		.4byte	0x2ac
+ 575 02bc 1F       		.byte	0x1f
+ 576 02bd 11       		.uleb128 0x11
+ 577 02be FB000000 		.4byte	.LASF25
+ 578 02c2 05       		.byte	0x5
+ 579 02c3 9606     		.2byte	0x696
+ 580 02c5 C9020000 		.4byte	0x2c9
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 15
 
 
- 635 031c 15       		.uleb128 0x15
- 636 031d D4020000 		.4byte	.LASF36
- 637 0321 0E       		.byte	0xe
- 638 0322 2A01     		.2byte	0x12a
- 639 0324 33030000 		.4byte	0x333
- 640 0328 16       		.uleb128 0x16
- 641 0329 81000000 		.4byte	0x81
- 642 032d 16       		.uleb128 0x16
- 643 032e 81000000 		.4byte	0x81
- 644 0332 00       		.byte	0
- 645 0333 14       		.uleb128 0x14
- 646 0334 4E020000 		.4byte	.LASF31
- 647 0338 09       		.byte	0x9
- 648 0339 57       		.byte	0x57
- 649 033a 14       		.uleb128 0x14
- 650 033b 08010000 		.4byte	.LASF32
- 651 033f 0A       		.byte	0xa
- 652 0340 27       		.byte	0x27
- 653 0341 14       		.uleb128 0x14
- 654 0342 B8000000 		.4byte	.LASF33
- 655 0346 0B       		.byte	0xb
- 656 0347 27       		.byte	0x27
- 657 0348 14       		.uleb128 0x14
- 658 0349 E1000000 		.4byte	.LASF34
- 659 034d 0C       		.byte	0xc
- 660 034e 92       		.byte	0x92
- 661 034f 14       		.uleb128 0x14
- 662 0350 23010000 		.4byte	.LASF35
- 663 0354 0D       		.byte	0xd
- 664 0355 92       		.byte	0x92
- 665 0356 17       		.uleb128 0x17
- 666 0357 46010000 		.4byte	.LASF37
- 667 035b 06       		.byte	0x6
- 668 035c 3C       		.byte	0x3c
- 669 035d 67030000 		.4byte	0x367
- 670 0361 16       		.uleb128 0x16
- 671 0362 67030000 		.4byte	0x367
- 672 0366 00       		.byte	0
- 673 0367 18       		.uleb128 0x18
- 674 0368 04       		.byte	0x4
- 675 0369 6D030000 		.4byte	0x36d
- 676 036d 10       		.uleb128 0x10
- 677 036e A7000000 		.4byte	0xa7
- 678 0372 17       		.uleb128 0x17
- 679 0373 41020000 		.4byte	.LASF38
- 680 0377 06       		.byte	0x6
- 681 0378 3D       		.byte	0x3d
- 682 0379 88030000 		.4byte	0x388
- 683 037d 16       		.uleb128 0x16
- 684 037e 81000000 		.4byte	0x81
- 685 0382 16       		.uleb128 0x16
- 686 0383 81000000 		.4byte	0x81
- 687 0387 00       		.byte	0
- 688 0388 19       		.uleb128 0x19
- 689 0389 70020000 		.4byte	.LASF39
- 690 038d 0E       		.byte	0xe
- 691 038e 2E01     		.2byte	0x12e
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 17
+ 581 02c9 12       		.uleb128 0x12
+ 582 02ca 76000000 		.4byte	0x76
+ 583 02ce 13       		.uleb128 0x13
+ 584 02cf E4020000 		.4byte	.LASF26
+ 585 02d3 01       		.byte	0x1
+ 586 02d4 1B       		.byte	0x1b
+ 587 02d5 8D000000 		.4byte	0x8d
+ 588 02d9 05       		.uleb128 0x5
+ 589 02da 03       		.byte	0x3
+ 590 02db 00000000 		.4byte	HostAddress
+ 591 02df 13       		.uleb128 0x13
+ 592 02e0 C6000000 		.4byte	.LASF27
+ 593 02e4 01       		.byte	0x1
+ 594 02e5 1C       		.byte	0x1c
+ 595 02e6 8D000000 		.4byte	0x8d
+ 596 02ea 05       		.uleb128 0x5
+ 597 02eb 03       		.byte	0x3
+ 598 02ec 00000000 		.4byte	HostData
+ 599 02f0 14       		.uleb128 0x14
+ 600 02f1 A0000000 		.4byte	.LASF28
+ 601 02f5 06       		.byte	0x6
+ 602 02f6 38       		.byte	0x38
+ 603 02f7 14       		.uleb128 0x14
+ 604 02f8 ED000000 		.4byte	.LASF29
+ 605 02fc 07       		.byte	0x7
+ 606 02fd 33       		.byte	0x33
+ 607 02fe 14       		.uleb128 0x14
+ 608 02ff 4E000000 		.4byte	.LASF30
+ 609 0303 08       		.byte	0x8
+ 610 0304 33       		.byte	0x33
+ 611 0305 15       		.uleb128 0x15
+ 612 0306 D4020000 		.4byte	.LASF36
+ 613 030a 0E       		.byte	0xe
+ 614 030b 2A01     		.2byte	0x12a
+ 615 030d 1C030000 		.4byte	0x31c
+ 616 0311 16       		.uleb128 0x16
+ 617 0312 81000000 		.4byte	0x81
+ 618 0316 16       		.uleb128 0x16
+ 619 0317 81000000 		.4byte	0x81
+ 620 031b 00       		.byte	0
+ 621 031c 14       		.uleb128 0x14
+ 622 031d 4E020000 		.4byte	.LASF31
+ 623 0321 09       		.byte	0x9
+ 624 0322 5A       		.byte	0x5a
+ 625 0323 14       		.uleb128 0x14
+ 626 0324 08010000 		.4byte	.LASF32
+ 627 0328 0A       		.byte	0xa
+ 628 0329 27       		.byte	0x27
+ 629 032a 14       		.uleb128 0x14
+ 630 032b B8000000 		.4byte	.LASF33
+ 631 032f 0B       		.byte	0xb
+ 632 0330 27       		.byte	0x27
+ 633 0331 14       		.uleb128 0x14
+ 634 0332 E1000000 		.4byte	.LASF34
+ 635 0336 0C       		.byte	0xc
+ 636 0337 92       		.byte	0x92
+ 637 0338 14       		.uleb128 0x14
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 16
 
 
- 692 0390 81000000 		.4byte	0x81
- 693 0394 19       		.uleb128 0x19
- 694 0395 00000000 		.4byte	.LASF40
- 695 0399 0E       		.byte	0xe
- 696 039a 2D01     		.2byte	0x12d
- 697 039c 81000000 		.4byte	0x81
- 698 03a0 1A       		.uleb128 0x1a
- 699 03a1 95030000 		.4byte	.LASF41
- 700 03a5 0F       		.byte	0xf
- 701 03a6 22       		.byte	0x22
- 702 03a7 81000000 		.4byte	0x81
- 703 03ab 1A       		.uleb128 0x1a
- 704 03ac 0E030000 		.4byte	.LASF42
- 705 03b0 0F       		.byte	0xf
- 706 03b1 29       		.byte	0x29
- 707 03b2 81000000 		.4byte	0x81
- 708 03b6 1B       		.uleb128 0x1b
- 709 03b7 1B000000 		.4byte	.LASF45
- 710 03bb 0F       		.byte	0xf
- 711 03bc 2B       		.byte	0x2b
- 712 03bd 8D000000 		.4byte	0x8d
- 713 03c1 CB030000 		.4byte	0x3cb
- 714 03c5 16       		.uleb128 0x16
- 715 03c6 CB030000 		.4byte	0x3cb
- 716 03ca 00       		.byte	0
- 717 03cb 18       		.uleb128 0x18
- 718 03cc 04       		.byte	0x4
- 719 03cd 81000000 		.4byte	0x81
- 720 03d1 1A       		.uleb128 0x1a
- 721 03d2 F0020000 		.4byte	.LASF43
- 722 03d6 0F       		.byte	0xf
- 723 03d7 28       		.byte	0x28
- 724 03d8 81000000 		.4byte	0x81
- 725 03dc 17       		.uleb128 0x17
- 726 03dd 2F010000 		.4byte	.LASF44
- 727 03e1 0F       		.byte	0xf
- 728 03e2 23       		.byte	0x23
- 729 03e3 F2030000 		.4byte	0x3f2
- 730 03e7 16       		.uleb128 0x16
- 731 03e8 F2030000 		.4byte	0x3f2
- 732 03ec 16       		.uleb128 0x16
- 733 03ed 8D000000 		.4byte	0x8d
- 734 03f1 00       		.byte	0
- 735 03f2 18       		.uleb128 0x18
- 736 03f3 04       		.byte	0x4
- 737 03f4 C3020000 		.4byte	0x2c3
- 738 03f8 1B       		.uleb128 0x1b
- 739 03f9 7B000000 		.4byte	.LASF46
- 740 03fd 09       		.byte	0x9
- 741 03fe 5D       		.byte	0x5d
- 742 03ff 81000000 		.4byte	0x81
- 743 0403 1C040000 		.4byte	0x41c
- 744 0407 16       		.uleb128 0x16
- 745 0408 81000000 		.4byte	0x81
- 746 040c 16       		.uleb128 0x16
- 747 040d 81000000 		.4byte	0x81
- 748 0411 16       		.uleb128 0x16
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 18
+ 638 0339 23010000 		.4byte	.LASF35
+ 639 033d 0D       		.byte	0xd
+ 640 033e 92       		.byte	0x92
+ 641 033f 17       		.uleb128 0x17
+ 642 0340 46010000 		.4byte	.LASF37
+ 643 0344 06       		.byte	0x6
+ 644 0345 3C       		.byte	0x3c
+ 645 0346 50030000 		.4byte	0x350
+ 646 034a 16       		.uleb128 0x16
+ 647 034b 50030000 		.4byte	0x350
+ 648 034f 00       		.byte	0
+ 649 0350 18       		.uleb128 0x18
+ 650 0351 04       		.byte	0x4
+ 651 0352 56030000 		.4byte	0x356
+ 652 0356 10       		.uleb128 0x10
+ 653 0357 A7000000 		.4byte	0xa7
+ 654 035b 17       		.uleb128 0x17
+ 655 035c 41020000 		.4byte	.LASF38
+ 656 0360 06       		.byte	0x6
+ 657 0361 3D       		.byte	0x3d
+ 658 0362 71030000 		.4byte	0x371
+ 659 0366 16       		.uleb128 0x16
+ 660 0367 81000000 		.4byte	0x81
+ 661 036b 16       		.uleb128 0x16
+ 662 036c 81000000 		.4byte	0x81
+ 663 0370 00       		.byte	0
+ 664 0371 19       		.uleb128 0x19
+ 665 0372 70020000 		.4byte	.LASF39
+ 666 0376 0E       		.byte	0xe
+ 667 0377 2E01     		.2byte	0x12e
+ 668 0379 81000000 		.4byte	0x81
+ 669 037d 19       		.uleb128 0x19
+ 670 037e 00000000 		.4byte	.LASF40
+ 671 0382 0E       		.byte	0xe
+ 672 0383 2D01     		.2byte	0x12d
+ 673 0385 81000000 		.4byte	0x81
+ 674 0389 1A       		.uleb128 0x1a
+ 675 038a 89030000 		.4byte	.LASF41
+ 676 038e 0F       		.byte	0xf
+ 677 038f 22       		.byte	0x22
+ 678 0390 81000000 		.4byte	0x81
+ 679 0394 1A       		.uleb128 0x1a
+ 680 0395 0E030000 		.4byte	.LASF42
+ 681 0399 0F       		.byte	0xf
+ 682 039a 29       		.byte	0x29
+ 683 039b 81000000 		.4byte	0x81
+ 684 039f 1B       		.uleb128 0x1b
+ 685 03a0 1B000000 		.4byte	.LASF45
+ 686 03a4 0F       		.byte	0xf
+ 687 03a5 2B       		.byte	0x2b
+ 688 03a6 8D000000 		.4byte	0x8d
+ 689 03aa B4030000 		.4byte	0x3b4
+ 690 03ae 16       		.uleb128 0x16
+ 691 03af B4030000 		.4byte	0x3b4
+ 692 03b3 00       		.byte	0
+ 693 03b4 18       		.uleb128 0x18
+ 694 03b5 04       		.byte	0x4
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 17
 
 
- 749 0412 81000000 		.4byte	0x81
- 750 0416 16       		.uleb128 0x16
- 751 0417 8D000000 		.4byte	0x8d
- 752 041b 00       		.byte	0
- 753 041c 17       		.uleb128 0x17
- 754 041d 30030000 		.4byte	.LASF47
- 755 0421 10       		.byte	0x10
- 756 0422 26       		.byte	0x26
- 757 0423 2D040000 		.4byte	0x42d
- 758 0427 16       		.uleb128 0x16
- 759 0428 81000000 		.4byte	0x81
- 760 042c 00       		.byte	0
- 761 042d 1A       		.uleb128 0x1a
- 762 042e 2C000000 		.4byte	.LASF48
- 763 0432 0F       		.byte	0xf
- 764 0433 2D       		.byte	0x2d
- 765 0434 81000000 		.4byte	0x81
- 766 0438 1A       		.uleb128 0x1a
- 767 0439 FD010000 		.4byte	.LASF49
- 768 043d 0F       		.byte	0xf
- 769 043e 32       		.byte	0x32
- 770 043f 8D000000 		.4byte	0x8d
- 771 0443 1C       		.uleb128 0x1c
- 772 0444 2D020000 		.4byte	.LASF54
- 773 0448 0F       		.byte	0xf
- 774 0449 24       		.byte	0x24
- 775 044a 16       		.uleb128 0x16
- 776 044b 67030000 		.4byte	0x367
- 777 044f 00       		.byte	0
- 778 0450 00       		.byte	0
- 779              		.section	.debug_abbrev,"",%progbits
- 780              	.Ldebug_abbrev0:
- 781 0000 01       		.uleb128 0x1
- 782 0001 11       		.uleb128 0x11
- 783 0002 01       		.byte	0x1
- 784 0003 25       		.uleb128 0x25
- 785 0004 0E       		.uleb128 0xe
- 786 0005 13       		.uleb128 0x13
- 787 0006 0B       		.uleb128 0xb
- 788 0007 03       		.uleb128 0x3
- 789 0008 0E       		.uleb128 0xe
- 790 0009 1B       		.uleb128 0x1b
- 791 000a 0E       		.uleb128 0xe
- 792 000b 55       		.uleb128 0x55
- 793 000c 17       		.uleb128 0x17
- 794 000d 11       		.uleb128 0x11
- 795 000e 01       		.uleb128 0x1
- 796 000f 10       		.uleb128 0x10
- 797 0010 17       		.uleb128 0x17
- 798 0011 00       		.byte	0
- 799 0012 00       		.byte	0
- 800 0013 02       		.uleb128 0x2
- 801 0014 24       		.uleb128 0x24
- 802 0015 00       		.byte	0
- 803 0016 0B       		.uleb128 0xb
- 804 0017 0B       		.uleb128 0xb
- 805 0018 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 19
+ 695 03b6 81000000 		.4byte	0x81
+ 696 03ba 1A       		.uleb128 0x1a
+ 697 03bb F0020000 		.4byte	.LASF43
+ 698 03bf 0F       		.byte	0xf
+ 699 03c0 28       		.byte	0x28
+ 700 03c1 81000000 		.4byte	0x81
+ 701 03c5 17       		.uleb128 0x17
+ 702 03c6 2F010000 		.4byte	.LASF44
+ 703 03ca 0F       		.byte	0xf
+ 704 03cb 23       		.byte	0x23
+ 705 03cc DB030000 		.4byte	0x3db
+ 706 03d0 16       		.uleb128 0x16
+ 707 03d1 DB030000 		.4byte	0x3db
+ 708 03d5 16       		.uleb128 0x16
+ 709 03d6 8D000000 		.4byte	0x8d
+ 710 03da 00       		.byte	0
+ 711 03db 18       		.uleb128 0x18
+ 712 03dc 04       		.byte	0x4
+ 713 03dd AC020000 		.4byte	0x2ac
+ 714 03e1 1B       		.uleb128 0x1b
+ 715 03e2 7B000000 		.4byte	.LASF46
+ 716 03e6 09       		.byte	0x9
+ 717 03e7 60       		.byte	0x60
+ 718 03e8 81000000 		.4byte	0x81
+ 719 03ec 05040000 		.4byte	0x405
+ 720 03f0 16       		.uleb128 0x16
+ 721 03f1 81000000 		.4byte	0x81
+ 722 03f5 16       		.uleb128 0x16
+ 723 03f6 81000000 		.4byte	0x81
+ 724 03fa 16       		.uleb128 0x16
+ 725 03fb 81000000 		.4byte	0x81
+ 726 03ff 16       		.uleb128 0x16
+ 727 0400 8D000000 		.4byte	0x8d
+ 728 0404 00       		.byte	0
+ 729 0405 1A       		.uleb128 0x1a
+ 730 0406 2C000000 		.4byte	.LASF47
+ 731 040a 0F       		.byte	0xf
+ 732 040b 2D       		.byte	0x2d
+ 733 040c 81000000 		.4byte	0x81
+ 734 0410 1A       		.uleb128 0x1a
+ 735 0411 FD010000 		.4byte	.LASF48
+ 736 0415 0F       		.byte	0xf
+ 737 0416 32       		.byte	0x32
+ 738 0417 8D000000 		.4byte	0x8d
+ 739 041b 1C       		.uleb128 0x1c
+ 740 041c 2D020000 		.4byte	.LASF53
+ 741 0420 0F       		.byte	0xf
+ 742 0421 24       		.byte	0x24
+ 743 0422 16       		.uleb128 0x16
+ 744 0423 50030000 		.4byte	0x350
+ 745 0427 00       		.byte	0
+ 746 0428 00       		.byte	0
+ 747              		.section	.debug_abbrev,"",%progbits
+ 748              	.Ldebug_abbrev0:
+ 749 0000 01       		.uleb128 0x1
+ 750 0001 11       		.uleb128 0x11
+ 751 0002 01       		.byte	0x1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 18
 
 
- 806 0019 0B       		.uleb128 0xb
- 807 001a 03       		.uleb128 0x3
- 808 001b 0E       		.uleb128 0xe
- 809 001c 00       		.byte	0
- 810 001d 00       		.byte	0
- 811 001e 03       		.uleb128 0x3
- 812 001f 16       		.uleb128 0x16
- 813 0020 00       		.byte	0
- 814 0021 03       		.uleb128 0x3
- 815 0022 0E       		.uleb128 0xe
- 816 0023 3A       		.uleb128 0x3a
- 817 0024 0B       		.uleb128 0xb
- 818 0025 3B       		.uleb128 0x3b
- 819 0026 0B       		.uleb128 0xb
- 820 0027 49       		.uleb128 0x49
- 821 0028 13       		.uleb128 0x13
- 822 0029 00       		.byte	0
- 823 002a 00       		.byte	0
- 824 002b 04       		.uleb128 0x4
- 825 002c 24       		.uleb128 0x24
- 826 002d 00       		.byte	0
- 827 002e 0B       		.uleb128 0xb
- 828 002f 0B       		.uleb128 0xb
- 829 0030 3E       		.uleb128 0x3e
- 830 0031 0B       		.uleb128 0xb
- 831 0032 03       		.uleb128 0x3
- 832 0033 08       		.uleb128 0x8
- 833 0034 00       		.byte	0
- 834 0035 00       		.byte	0
- 835 0036 05       		.uleb128 0x5
- 836 0037 16       		.uleb128 0x16
- 837 0038 00       		.byte	0
- 838 0039 03       		.uleb128 0x3
- 839 003a 0E       		.uleb128 0xe
- 840 003b 3A       		.uleb128 0x3a
- 841 003c 0B       		.uleb128 0xb
- 842 003d 3B       		.uleb128 0x3b
- 843 003e 05       		.uleb128 0x5
- 844 003f 49       		.uleb128 0x49
- 845 0040 13       		.uleb128 0x13
- 846 0041 00       		.byte	0
- 847 0042 00       		.byte	0
- 848 0043 06       		.uleb128 0x6
- 849 0044 2E       		.uleb128 0x2e
- 850 0045 01       		.byte	0x1
- 851 0046 3F       		.uleb128 0x3f
- 852 0047 19       		.uleb128 0x19
- 853 0048 03       		.uleb128 0x3
- 854 0049 0E       		.uleb128 0xe
- 855 004a 3A       		.uleb128 0x3a
- 856 004b 0B       		.uleb128 0xb
- 857 004c 3B       		.uleb128 0x3b
- 858 004d 0B       		.uleb128 0xb
- 859 004e 27       		.uleb128 0x27
- 860 004f 19       		.uleb128 0x19
- 861 0050 49       		.uleb128 0x49
- 862 0051 13       		.uleb128 0x13
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 20
+ 752 0003 25       		.uleb128 0x25
+ 753 0004 0E       		.uleb128 0xe
+ 754 0005 13       		.uleb128 0x13
+ 755 0006 0B       		.uleb128 0xb
+ 756 0007 03       		.uleb128 0x3
+ 757 0008 0E       		.uleb128 0xe
+ 758 0009 1B       		.uleb128 0x1b
+ 759 000a 0E       		.uleb128 0xe
+ 760 000b 55       		.uleb128 0x55
+ 761 000c 17       		.uleb128 0x17
+ 762 000d 11       		.uleb128 0x11
+ 763 000e 01       		.uleb128 0x1
+ 764 000f 10       		.uleb128 0x10
+ 765 0010 17       		.uleb128 0x17
+ 766 0011 00       		.byte	0
+ 767 0012 00       		.byte	0
+ 768 0013 02       		.uleb128 0x2
+ 769 0014 24       		.uleb128 0x24
+ 770 0015 00       		.byte	0
+ 771 0016 0B       		.uleb128 0xb
+ 772 0017 0B       		.uleb128 0xb
+ 773 0018 3E       		.uleb128 0x3e
+ 774 0019 0B       		.uleb128 0xb
+ 775 001a 03       		.uleb128 0x3
+ 776 001b 0E       		.uleb128 0xe
+ 777 001c 00       		.byte	0
+ 778 001d 00       		.byte	0
+ 779 001e 03       		.uleb128 0x3
+ 780 001f 16       		.uleb128 0x16
+ 781 0020 00       		.byte	0
+ 782 0021 03       		.uleb128 0x3
+ 783 0022 0E       		.uleb128 0xe
+ 784 0023 3A       		.uleb128 0x3a
+ 785 0024 0B       		.uleb128 0xb
+ 786 0025 3B       		.uleb128 0x3b
+ 787 0026 0B       		.uleb128 0xb
+ 788 0027 49       		.uleb128 0x49
+ 789 0028 13       		.uleb128 0x13
+ 790 0029 00       		.byte	0
+ 791 002a 00       		.byte	0
+ 792 002b 04       		.uleb128 0x4
+ 793 002c 24       		.uleb128 0x24
+ 794 002d 00       		.byte	0
+ 795 002e 0B       		.uleb128 0xb
+ 796 002f 0B       		.uleb128 0xb
+ 797 0030 3E       		.uleb128 0x3e
+ 798 0031 0B       		.uleb128 0xb
+ 799 0032 03       		.uleb128 0x3
+ 800 0033 08       		.uleb128 0x8
+ 801 0034 00       		.byte	0
+ 802 0035 00       		.byte	0
+ 803 0036 05       		.uleb128 0x5
+ 804 0037 16       		.uleb128 0x16
+ 805 0038 00       		.byte	0
+ 806 0039 03       		.uleb128 0x3
+ 807 003a 0E       		.uleb128 0xe
+ 808 003b 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 19
 
 
- 863 0052 11       		.uleb128 0x11
- 864 0053 01       		.uleb128 0x1
- 865 0054 12       		.uleb128 0x12
- 866 0055 06       		.uleb128 0x6
- 867 0056 40       		.uleb128 0x40
- 868 0057 18       		.uleb128 0x18
- 869 0058 9742     		.uleb128 0x2117
- 870 005a 19       		.uleb128 0x19
- 871 005b 01       		.uleb128 0x1
- 872 005c 13       		.uleb128 0x13
- 873 005d 00       		.byte	0
- 874 005e 00       		.byte	0
- 875 005f 07       		.uleb128 0x7
- 876 0060 34       		.uleb128 0x34
- 877 0061 00       		.byte	0
- 878 0062 03       		.uleb128 0x3
- 879 0063 0E       		.uleb128 0xe
- 880 0064 3A       		.uleb128 0x3a
- 881 0065 0B       		.uleb128 0xb
- 882 0066 3B       		.uleb128 0x3b
- 883 0067 0B       		.uleb128 0xb
- 884 0068 49       		.uleb128 0x49
- 885 0069 13       		.uleb128 0x13
- 886 006a 02       		.uleb128 0x2
- 887 006b 17       		.uleb128 0x17
- 888 006c 00       		.byte	0
- 889 006d 00       		.byte	0
- 890 006e 08       		.uleb128 0x8
- 891 006f 34       		.uleb128 0x34
- 892 0070 00       		.byte	0
- 893 0071 03       		.uleb128 0x3
- 894 0072 0E       		.uleb128 0xe
- 895 0073 3A       		.uleb128 0x3a
- 896 0074 0B       		.uleb128 0xb
- 897 0075 3B       		.uleb128 0x3b
- 898 0076 0B       		.uleb128 0xb
- 899 0077 49       		.uleb128 0x49
- 900 0078 13       		.uleb128 0x13
- 901 0079 02       		.uleb128 0x2
- 902 007a 18       		.uleb128 0x18
- 903 007b 00       		.byte	0
- 904 007c 00       		.byte	0
- 905 007d 09       		.uleb128 0x9
- 906 007e 898201   		.uleb128 0x4109
- 907 0081 00       		.byte	0
- 908 0082 11       		.uleb128 0x11
- 909 0083 01       		.uleb128 0x1
- 910 0084 31       		.uleb128 0x31
- 911 0085 13       		.uleb128 0x13
- 912 0086 00       		.byte	0
- 913 0087 00       		.byte	0
- 914 0088 0A       		.uleb128 0xa
- 915 0089 898201   		.uleb128 0x4109
- 916 008c 01       		.byte	0x1
- 917 008d 11       		.uleb128 0x11
- 918 008e 01       		.uleb128 0x1
- 919 008f 31       		.uleb128 0x31
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 21
+ 809 003c 0B       		.uleb128 0xb
+ 810 003d 3B       		.uleb128 0x3b
+ 811 003e 05       		.uleb128 0x5
+ 812 003f 49       		.uleb128 0x49
+ 813 0040 13       		.uleb128 0x13
+ 814 0041 00       		.byte	0
+ 815 0042 00       		.byte	0
+ 816 0043 06       		.uleb128 0x6
+ 817 0044 2E       		.uleb128 0x2e
+ 818 0045 01       		.byte	0x1
+ 819 0046 3F       		.uleb128 0x3f
+ 820 0047 19       		.uleb128 0x19
+ 821 0048 03       		.uleb128 0x3
+ 822 0049 0E       		.uleb128 0xe
+ 823 004a 3A       		.uleb128 0x3a
+ 824 004b 0B       		.uleb128 0xb
+ 825 004c 3B       		.uleb128 0x3b
+ 826 004d 0B       		.uleb128 0xb
+ 827 004e 27       		.uleb128 0x27
+ 828 004f 19       		.uleb128 0x19
+ 829 0050 49       		.uleb128 0x49
+ 830 0051 13       		.uleb128 0x13
+ 831 0052 11       		.uleb128 0x11
+ 832 0053 01       		.uleb128 0x1
+ 833 0054 12       		.uleb128 0x12
+ 834 0055 06       		.uleb128 0x6
+ 835 0056 40       		.uleb128 0x40
+ 836 0057 18       		.uleb128 0x18
+ 837 0058 9742     		.uleb128 0x2117
+ 838 005a 19       		.uleb128 0x19
+ 839 005b 01       		.uleb128 0x1
+ 840 005c 13       		.uleb128 0x13
+ 841 005d 00       		.byte	0
+ 842 005e 00       		.byte	0
+ 843 005f 07       		.uleb128 0x7
+ 844 0060 34       		.uleb128 0x34
+ 845 0061 00       		.byte	0
+ 846 0062 03       		.uleb128 0x3
+ 847 0063 0E       		.uleb128 0xe
+ 848 0064 3A       		.uleb128 0x3a
+ 849 0065 0B       		.uleb128 0xb
+ 850 0066 3B       		.uleb128 0x3b
+ 851 0067 0B       		.uleb128 0xb
+ 852 0068 49       		.uleb128 0x49
+ 853 0069 13       		.uleb128 0x13
+ 854 006a 02       		.uleb128 0x2
+ 855 006b 17       		.uleb128 0x17
+ 856 006c 00       		.byte	0
+ 857 006d 00       		.byte	0
+ 858 006e 08       		.uleb128 0x8
+ 859 006f 34       		.uleb128 0x34
+ 860 0070 00       		.byte	0
+ 861 0071 03       		.uleb128 0x3
+ 862 0072 0E       		.uleb128 0xe
+ 863 0073 3A       		.uleb128 0x3a
+ 864 0074 0B       		.uleb128 0xb
+ 865 0075 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 20
 
 
- 920 0090 13       		.uleb128 0x13
- 921 0091 01       		.uleb128 0x1
- 922 0092 13       		.uleb128 0x13
- 923 0093 00       		.byte	0
- 924 0094 00       		.byte	0
- 925 0095 0B       		.uleb128 0xb
- 926 0096 8A8201   		.uleb128 0x410a
- 927 0099 00       		.byte	0
- 928 009a 02       		.uleb128 0x2
- 929 009b 18       		.uleb128 0x18
- 930 009c 9142     		.uleb128 0x2111
- 931 009e 18       		.uleb128 0x18
- 932 009f 00       		.byte	0
- 933 00a0 00       		.byte	0
- 934 00a1 0C       		.uleb128 0xc
- 935 00a2 898201   		.uleb128 0x4109
- 936 00a5 01       		.byte	0x1
- 937 00a6 11       		.uleb128 0x11
- 938 00a7 01       		.uleb128 0x1
- 939 00a8 31       		.uleb128 0x31
- 940 00a9 13       		.uleb128 0x13
- 941 00aa 00       		.byte	0
- 942 00ab 00       		.byte	0
- 943 00ac 0D       		.uleb128 0xd
- 944 00ad 01       		.uleb128 0x1
- 945 00ae 01       		.byte	0x1
- 946 00af 49       		.uleb128 0x49
- 947 00b0 13       		.uleb128 0x13
- 948 00b1 01       		.uleb128 0x1
- 949 00b2 13       		.uleb128 0x13
- 950 00b3 00       		.byte	0
- 951 00b4 00       		.byte	0
- 952 00b5 0E       		.uleb128 0xe
- 953 00b6 21       		.uleb128 0x21
- 954 00b7 00       		.byte	0
- 955 00b8 49       		.uleb128 0x49
- 956 00b9 13       		.uleb128 0x13
- 957 00ba 2F       		.uleb128 0x2f
- 958 00bb 0B       		.uleb128 0xb
- 959 00bc 00       		.byte	0
- 960 00bd 00       		.byte	0
- 961 00be 0F       		.uleb128 0xf
- 962 00bf 34       		.uleb128 0x34
- 963 00c0 00       		.byte	0
- 964 00c1 03       		.uleb128 0x3
- 965 00c2 0E       		.uleb128 0xe
- 966 00c3 3A       		.uleb128 0x3a
- 967 00c4 0B       		.uleb128 0xb
- 968 00c5 3B       		.uleb128 0x3b
- 969 00c6 0B       		.uleb128 0xb
- 970 00c7 49       		.uleb128 0x49
- 971 00c8 13       		.uleb128 0x13
- 972 00c9 1C       		.uleb128 0x1c
- 973 00ca 0B       		.uleb128 0xb
- 974 00cb 00       		.byte	0
- 975 00cc 00       		.byte	0
- 976 00cd 10       		.uleb128 0x10
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 22
+ 866 0076 0B       		.uleb128 0xb
+ 867 0077 49       		.uleb128 0x49
+ 868 0078 13       		.uleb128 0x13
+ 869 0079 1C       		.uleb128 0x1c
+ 870 007a 0B       		.uleb128 0xb
+ 871 007b 00       		.byte	0
+ 872 007c 00       		.byte	0
+ 873 007d 09       		.uleb128 0x9
+ 874 007e 34       		.uleb128 0x34
+ 875 007f 00       		.byte	0
+ 876 0080 03       		.uleb128 0x3
+ 877 0081 0E       		.uleb128 0xe
+ 878 0082 3A       		.uleb128 0x3a
+ 879 0083 0B       		.uleb128 0xb
+ 880 0084 3B       		.uleb128 0x3b
+ 881 0085 0B       		.uleb128 0xb
+ 882 0086 49       		.uleb128 0x49
+ 883 0087 13       		.uleb128 0x13
+ 884 0088 02       		.uleb128 0x2
+ 885 0089 18       		.uleb128 0x18
+ 886 008a 00       		.byte	0
+ 887 008b 00       		.byte	0
+ 888 008c 0A       		.uleb128 0xa
+ 889 008d 898201   		.uleb128 0x4109
+ 890 0090 00       		.byte	0
+ 891 0091 11       		.uleb128 0x11
+ 892 0092 01       		.uleb128 0x1
+ 893 0093 31       		.uleb128 0x31
+ 894 0094 13       		.uleb128 0x13
+ 895 0095 00       		.byte	0
+ 896 0096 00       		.byte	0
+ 897 0097 0B       		.uleb128 0xb
+ 898 0098 898201   		.uleb128 0x4109
+ 899 009b 01       		.byte	0x1
+ 900 009c 11       		.uleb128 0x11
+ 901 009d 01       		.uleb128 0x1
+ 902 009e 31       		.uleb128 0x31
+ 903 009f 13       		.uleb128 0x13
+ 904 00a0 01       		.uleb128 0x1
+ 905 00a1 13       		.uleb128 0x13
+ 906 00a2 00       		.byte	0
+ 907 00a3 00       		.byte	0
+ 908 00a4 0C       		.uleb128 0xc
+ 909 00a5 8A8201   		.uleb128 0x410a
+ 910 00a8 00       		.byte	0
+ 911 00a9 02       		.uleb128 0x2
+ 912 00aa 18       		.uleb128 0x18
+ 913 00ab 9142     		.uleb128 0x2111
+ 914 00ad 18       		.uleb128 0x18
+ 915 00ae 00       		.byte	0
+ 916 00af 00       		.byte	0
+ 917 00b0 0D       		.uleb128 0xd
+ 918 00b1 898201   		.uleb128 0x4109
+ 919 00b4 01       		.byte	0x1
+ 920 00b5 11       		.uleb128 0x11
+ 921 00b6 01       		.uleb128 0x1
+ 922 00b7 31       		.uleb128 0x31
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 21
 
 
- 977 00ce 26       		.uleb128 0x26
- 978 00cf 00       		.byte	0
- 979 00d0 49       		.uleb128 0x49
- 980 00d1 13       		.uleb128 0x13
- 981 00d2 00       		.byte	0
- 982 00d3 00       		.byte	0
- 983 00d4 11       		.uleb128 0x11
- 984 00d5 34       		.uleb128 0x34
- 985 00d6 00       		.byte	0
- 986 00d7 03       		.uleb128 0x3
- 987 00d8 0E       		.uleb128 0xe
- 988 00d9 3A       		.uleb128 0x3a
- 989 00da 0B       		.uleb128 0xb
- 990 00db 3B       		.uleb128 0x3b
- 991 00dc 05       		.uleb128 0x5
- 992 00dd 49       		.uleb128 0x49
- 993 00de 13       		.uleb128 0x13
- 994 00df 3F       		.uleb128 0x3f
- 995 00e0 19       		.uleb128 0x19
- 996 00e1 3C       		.uleb128 0x3c
- 997 00e2 19       		.uleb128 0x19
- 998 00e3 00       		.byte	0
- 999 00e4 00       		.byte	0
- 1000 00e5 12       		.uleb128 0x12
- 1001 00e6 35       		.uleb128 0x35
- 1002 00e7 00       		.byte	0
- 1003 00e8 49       		.uleb128 0x49
- 1004 00e9 13       		.uleb128 0x13
- 1005 00ea 00       		.byte	0
- 1006 00eb 00       		.byte	0
- 1007 00ec 13       		.uleb128 0x13
- 1008 00ed 34       		.uleb128 0x34
- 1009 00ee 00       		.byte	0
- 1010 00ef 03       		.uleb128 0x3
- 1011 00f0 0E       		.uleb128 0xe
- 1012 00f1 3A       		.uleb128 0x3a
- 1013 00f2 0B       		.uleb128 0xb
- 1014 00f3 3B       		.uleb128 0x3b
- 1015 00f4 0B       		.uleb128 0xb
- 1016 00f5 49       		.uleb128 0x49
- 1017 00f6 13       		.uleb128 0x13
- 1018 00f7 3F       		.uleb128 0x3f
- 1019 00f8 19       		.uleb128 0x19
- 1020 00f9 02       		.uleb128 0x2
- 1021 00fa 18       		.uleb128 0x18
- 1022 00fb 00       		.byte	0
- 1023 00fc 00       		.byte	0
- 1024 00fd 14       		.uleb128 0x14
- 1025 00fe 2E       		.uleb128 0x2e
- 1026 00ff 00       		.byte	0
- 1027 0100 3F       		.uleb128 0x3f
- 1028 0101 19       		.uleb128 0x19
- 1029 0102 03       		.uleb128 0x3
- 1030 0103 0E       		.uleb128 0xe
- 1031 0104 3A       		.uleb128 0x3a
- 1032 0105 0B       		.uleb128 0xb
- 1033 0106 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 23
+ 923 00b8 13       		.uleb128 0x13
+ 924 00b9 00       		.byte	0
+ 925 00ba 00       		.byte	0
+ 926 00bb 0E       		.uleb128 0xe
+ 927 00bc 01       		.uleb128 0x1
+ 928 00bd 01       		.byte	0x1
+ 929 00be 49       		.uleb128 0x49
+ 930 00bf 13       		.uleb128 0x13
+ 931 00c0 01       		.uleb128 0x1
+ 932 00c1 13       		.uleb128 0x13
+ 933 00c2 00       		.byte	0
+ 934 00c3 00       		.byte	0
+ 935 00c4 0F       		.uleb128 0xf
+ 936 00c5 21       		.uleb128 0x21
+ 937 00c6 00       		.byte	0
+ 938 00c7 49       		.uleb128 0x49
+ 939 00c8 13       		.uleb128 0x13
+ 940 00c9 2F       		.uleb128 0x2f
+ 941 00ca 0B       		.uleb128 0xb
+ 942 00cb 00       		.byte	0
+ 943 00cc 00       		.byte	0
+ 944 00cd 10       		.uleb128 0x10
+ 945 00ce 26       		.uleb128 0x26
+ 946 00cf 00       		.byte	0
+ 947 00d0 49       		.uleb128 0x49
+ 948 00d1 13       		.uleb128 0x13
+ 949 00d2 00       		.byte	0
+ 950 00d3 00       		.byte	0
+ 951 00d4 11       		.uleb128 0x11
+ 952 00d5 34       		.uleb128 0x34
+ 953 00d6 00       		.byte	0
+ 954 00d7 03       		.uleb128 0x3
+ 955 00d8 0E       		.uleb128 0xe
+ 956 00d9 3A       		.uleb128 0x3a
+ 957 00da 0B       		.uleb128 0xb
+ 958 00db 3B       		.uleb128 0x3b
+ 959 00dc 05       		.uleb128 0x5
+ 960 00dd 49       		.uleb128 0x49
+ 961 00de 13       		.uleb128 0x13
+ 962 00df 3F       		.uleb128 0x3f
+ 963 00e0 19       		.uleb128 0x19
+ 964 00e1 3C       		.uleb128 0x3c
+ 965 00e2 19       		.uleb128 0x19
+ 966 00e3 00       		.byte	0
+ 967 00e4 00       		.byte	0
+ 968 00e5 12       		.uleb128 0x12
+ 969 00e6 35       		.uleb128 0x35
+ 970 00e7 00       		.byte	0
+ 971 00e8 49       		.uleb128 0x49
+ 972 00e9 13       		.uleb128 0x13
+ 973 00ea 00       		.byte	0
+ 974 00eb 00       		.byte	0
+ 975 00ec 13       		.uleb128 0x13
+ 976 00ed 34       		.uleb128 0x34
+ 977 00ee 00       		.byte	0
+ 978 00ef 03       		.uleb128 0x3
+ 979 00f0 0E       		.uleb128 0xe
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 22
 
 
- 1034 0107 0B       		.uleb128 0xb
- 1035 0108 27       		.uleb128 0x27
- 1036 0109 19       		.uleb128 0x19
- 1037 010a 3C       		.uleb128 0x3c
- 1038 010b 19       		.uleb128 0x19
- 1039 010c 00       		.byte	0
- 1040 010d 00       		.byte	0
- 1041 010e 15       		.uleb128 0x15
- 1042 010f 2E       		.uleb128 0x2e
- 1043 0110 01       		.byte	0x1
- 1044 0111 3F       		.uleb128 0x3f
- 1045 0112 19       		.uleb128 0x19
- 1046 0113 03       		.uleb128 0x3
- 1047 0114 0E       		.uleb128 0xe
- 1048 0115 3A       		.uleb128 0x3a
- 1049 0116 0B       		.uleb128 0xb
- 1050 0117 3B       		.uleb128 0x3b
- 1051 0118 05       		.uleb128 0x5
- 1052 0119 27       		.uleb128 0x27
- 1053 011a 19       		.uleb128 0x19
- 1054 011b 3C       		.uleb128 0x3c
- 1055 011c 19       		.uleb128 0x19
- 1056 011d 01       		.uleb128 0x1
- 1057 011e 13       		.uleb128 0x13
- 1058 011f 00       		.byte	0
- 1059 0120 00       		.byte	0
- 1060 0121 16       		.uleb128 0x16
- 1061 0122 05       		.uleb128 0x5
- 1062 0123 00       		.byte	0
- 1063 0124 49       		.uleb128 0x49
- 1064 0125 13       		.uleb128 0x13
- 1065 0126 00       		.byte	0
- 1066 0127 00       		.byte	0
- 1067 0128 17       		.uleb128 0x17
- 1068 0129 2E       		.uleb128 0x2e
- 1069 012a 01       		.byte	0x1
- 1070 012b 3F       		.uleb128 0x3f
- 1071 012c 19       		.uleb128 0x19
- 1072 012d 03       		.uleb128 0x3
- 1073 012e 0E       		.uleb128 0xe
- 1074 012f 3A       		.uleb128 0x3a
- 1075 0130 0B       		.uleb128 0xb
- 1076 0131 3B       		.uleb128 0x3b
- 1077 0132 0B       		.uleb128 0xb
- 1078 0133 27       		.uleb128 0x27
- 1079 0134 19       		.uleb128 0x19
- 1080 0135 3C       		.uleb128 0x3c
- 1081 0136 19       		.uleb128 0x19
- 1082 0137 01       		.uleb128 0x1
- 1083 0138 13       		.uleb128 0x13
- 1084 0139 00       		.byte	0
- 1085 013a 00       		.byte	0
- 1086 013b 18       		.uleb128 0x18
- 1087 013c 0F       		.uleb128 0xf
- 1088 013d 00       		.byte	0
- 1089 013e 0B       		.uleb128 0xb
- 1090 013f 0B       		.uleb128 0xb
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 24
+ 980 00f1 3A       		.uleb128 0x3a
+ 981 00f2 0B       		.uleb128 0xb
+ 982 00f3 3B       		.uleb128 0x3b
+ 983 00f4 0B       		.uleb128 0xb
+ 984 00f5 49       		.uleb128 0x49
+ 985 00f6 13       		.uleb128 0x13
+ 986 00f7 3F       		.uleb128 0x3f
+ 987 00f8 19       		.uleb128 0x19
+ 988 00f9 02       		.uleb128 0x2
+ 989 00fa 18       		.uleb128 0x18
+ 990 00fb 00       		.byte	0
+ 991 00fc 00       		.byte	0
+ 992 00fd 14       		.uleb128 0x14
+ 993 00fe 2E       		.uleb128 0x2e
+ 994 00ff 00       		.byte	0
+ 995 0100 3F       		.uleb128 0x3f
+ 996 0101 19       		.uleb128 0x19
+ 997 0102 03       		.uleb128 0x3
+ 998 0103 0E       		.uleb128 0xe
+ 999 0104 3A       		.uleb128 0x3a
+ 1000 0105 0B       		.uleb128 0xb
+ 1001 0106 3B       		.uleb128 0x3b
+ 1002 0107 0B       		.uleb128 0xb
+ 1003 0108 27       		.uleb128 0x27
+ 1004 0109 19       		.uleb128 0x19
+ 1005 010a 3C       		.uleb128 0x3c
+ 1006 010b 19       		.uleb128 0x19
+ 1007 010c 00       		.byte	0
+ 1008 010d 00       		.byte	0
+ 1009 010e 15       		.uleb128 0x15
+ 1010 010f 2E       		.uleb128 0x2e
+ 1011 0110 01       		.byte	0x1
+ 1012 0111 3F       		.uleb128 0x3f
+ 1013 0112 19       		.uleb128 0x19
+ 1014 0113 03       		.uleb128 0x3
+ 1015 0114 0E       		.uleb128 0xe
+ 1016 0115 3A       		.uleb128 0x3a
+ 1017 0116 0B       		.uleb128 0xb
+ 1018 0117 3B       		.uleb128 0x3b
+ 1019 0118 05       		.uleb128 0x5
+ 1020 0119 27       		.uleb128 0x27
+ 1021 011a 19       		.uleb128 0x19
+ 1022 011b 3C       		.uleb128 0x3c
+ 1023 011c 19       		.uleb128 0x19
+ 1024 011d 01       		.uleb128 0x1
+ 1025 011e 13       		.uleb128 0x13
+ 1026 011f 00       		.byte	0
+ 1027 0120 00       		.byte	0
+ 1028 0121 16       		.uleb128 0x16
+ 1029 0122 05       		.uleb128 0x5
+ 1030 0123 00       		.byte	0
+ 1031 0124 49       		.uleb128 0x49
+ 1032 0125 13       		.uleb128 0x13
+ 1033 0126 00       		.byte	0
+ 1034 0127 00       		.byte	0
+ 1035 0128 17       		.uleb128 0x17
+ 1036 0129 2E       		.uleb128 0x2e
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 23
 
 
- 1091 0140 49       		.uleb128 0x49
- 1092 0141 13       		.uleb128 0x13
- 1093 0142 00       		.byte	0
- 1094 0143 00       		.byte	0
- 1095 0144 19       		.uleb128 0x19
- 1096 0145 2E       		.uleb128 0x2e
- 1097 0146 00       		.byte	0
- 1098 0147 3F       		.uleb128 0x3f
- 1099 0148 19       		.uleb128 0x19
- 1100 0149 03       		.uleb128 0x3
- 1101 014a 0E       		.uleb128 0xe
- 1102 014b 3A       		.uleb128 0x3a
- 1103 014c 0B       		.uleb128 0xb
- 1104 014d 3B       		.uleb128 0x3b
- 1105 014e 05       		.uleb128 0x5
- 1106 014f 27       		.uleb128 0x27
- 1107 0150 19       		.uleb128 0x19
- 1108 0151 49       		.uleb128 0x49
- 1109 0152 13       		.uleb128 0x13
- 1110 0153 3C       		.uleb128 0x3c
- 1111 0154 19       		.uleb128 0x19
- 1112 0155 00       		.byte	0
- 1113 0156 00       		.byte	0
- 1114 0157 1A       		.uleb128 0x1a
- 1115 0158 2E       		.uleb128 0x2e
- 1116 0159 00       		.byte	0
- 1117 015a 3F       		.uleb128 0x3f
- 1118 015b 19       		.uleb128 0x19
- 1119 015c 03       		.uleb128 0x3
- 1120 015d 0E       		.uleb128 0xe
- 1121 015e 3A       		.uleb128 0x3a
- 1122 015f 0B       		.uleb128 0xb
- 1123 0160 3B       		.uleb128 0x3b
- 1124 0161 0B       		.uleb128 0xb
- 1125 0162 27       		.uleb128 0x27
- 1126 0163 19       		.uleb128 0x19
- 1127 0164 49       		.uleb128 0x49
- 1128 0165 13       		.uleb128 0x13
- 1129 0166 3C       		.uleb128 0x3c
- 1130 0167 19       		.uleb128 0x19
- 1131 0168 00       		.byte	0
- 1132 0169 00       		.byte	0
- 1133 016a 1B       		.uleb128 0x1b
- 1134 016b 2E       		.uleb128 0x2e
- 1135 016c 01       		.byte	0x1
- 1136 016d 3F       		.uleb128 0x3f
- 1137 016e 19       		.uleb128 0x19
- 1138 016f 03       		.uleb128 0x3
- 1139 0170 0E       		.uleb128 0xe
- 1140 0171 3A       		.uleb128 0x3a
- 1141 0172 0B       		.uleb128 0xb
- 1142 0173 3B       		.uleb128 0x3b
- 1143 0174 0B       		.uleb128 0xb
- 1144 0175 27       		.uleb128 0x27
- 1145 0176 19       		.uleb128 0x19
- 1146 0177 49       		.uleb128 0x49
- 1147 0178 13       		.uleb128 0x13
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 25
+ 1037 012a 01       		.byte	0x1
+ 1038 012b 3F       		.uleb128 0x3f
+ 1039 012c 19       		.uleb128 0x19
+ 1040 012d 03       		.uleb128 0x3
+ 1041 012e 0E       		.uleb128 0xe
+ 1042 012f 3A       		.uleb128 0x3a
+ 1043 0130 0B       		.uleb128 0xb
+ 1044 0131 3B       		.uleb128 0x3b
+ 1045 0132 0B       		.uleb128 0xb
+ 1046 0133 27       		.uleb128 0x27
+ 1047 0134 19       		.uleb128 0x19
+ 1048 0135 3C       		.uleb128 0x3c
+ 1049 0136 19       		.uleb128 0x19
+ 1050 0137 01       		.uleb128 0x1
+ 1051 0138 13       		.uleb128 0x13
+ 1052 0139 00       		.byte	0
+ 1053 013a 00       		.byte	0
+ 1054 013b 18       		.uleb128 0x18
+ 1055 013c 0F       		.uleb128 0xf
+ 1056 013d 00       		.byte	0
+ 1057 013e 0B       		.uleb128 0xb
+ 1058 013f 0B       		.uleb128 0xb
+ 1059 0140 49       		.uleb128 0x49
+ 1060 0141 13       		.uleb128 0x13
+ 1061 0142 00       		.byte	0
+ 1062 0143 00       		.byte	0
+ 1063 0144 19       		.uleb128 0x19
+ 1064 0145 2E       		.uleb128 0x2e
+ 1065 0146 00       		.byte	0
+ 1066 0147 3F       		.uleb128 0x3f
+ 1067 0148 19       		.uleb128 0x19
+ 1068 0149 03       		.uleb128 0x3
+ 1069 014a 0E       		.uleb128 0xe
+ 1070 014b 3A       		.uleb128 0x3a
+ 1071 014c 0B       		.uleb128 0xb
+ 1072 014d 3B       		.uleb128 0x3b
+ 1073 014e 05       		.uleb128 0x5
+ 1074 014f 27       		.uleb128 0x27
+ 1075 0150 19       		.uleb128 0x19
+ 1076 0151 49       		.uleb128 0x49
+ 1077 0152 13       		.uleb128 0x13
+ 1078 0153 3C       		.uleb128 0x3c
+ 1079 0154 19       		.uleb128 0x19
+ 1080 0155 00       		.byte	0
+ 1081 0156 00       		.byte	0
+ 1082 0157 1A       		.uleb128 0x1a
+ 1083 0158 2E       		.uleb128 0x2e
+ 1084 0159 00       		.byte	0
+ 1085 015a 3F       		.uleb128 0x3f
+ 1086 015b 19       		.uleb128 0x19
+ 1087 015c 03       		.uleb128 0x3
+ 1088 015d 0E       		.uleb128 0xe
+ 1089 015e 3A       		.uleb128 0x3a
+ 1090 015f 0B       		.uleb128 0xb
+ 1091 0160 3B       		.uleb128 0x3b
+ 1092 0161 0B       		.uleb128 0xb
+ 1093 0162 27       		.uleb128 0x27
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 24
 
 
- 1148 0179 3C       		.uleb128 0x3c
- 1149 017a 19       		.uleb128 0x19
- 1150 017b 01       		.uleb128 0x1
- 1151 017c 13       		.uleb128 0x13
- 1152 017d 00       		.byte	0
- 1153 017e 00       		.byte	0
- 1154 017f 1C       		.uleb128 0x1c
- 1155 0180 2E       		.uleb128 0x2e
- 1156 0181 01       		.byte	0x1
- 1157 0182 3F       		.uleb128 0x3f
- 1158 0183 19       		.uleb128 0x19
- 1159 0184 03       		.uleb128 0x3
- 1160 0185 0E       		.uleb128 0xe
- 1161 0186 3A       		.uleb128 0x3a
- 1162 0187 0B       		.uleb128 0xb
- 1163 0188 3B       		.uleb128 0x3b
- 1164 0189 0B       		.uleb128 0xb
- 1165 018a 27       		.uleb128 0x27
- 1166 018b 19       		.uleb128 0x19
- 1167 018c 3C       		.uleb128 0x3c
- 1168 018d 19       		.uleb128 0x19
- 1169 018e 00       		.byte	0
- 1170 018f 00       		.byte	0
- 1171 0190 00       		.byte	0
- 1172              		.section	.debug_loc,"",%progbits
- 1173              	.Ldebug_loc0:
- 1174              	.LLST0:
- 1175 0000 04000000 		.4byte	.LVL0
- 1176 0004 4A000000 		.4byte	.LVL13
- 1177 0008 0200     		.2byte	0x2
- 1178 000a 30       		.byte	0x30
- 1179 000b 9F       		.byte	0x9f
- 1180 000c 4A000000 		.4byte	.LVL13
- 1181 0010 CC000000 		.4byte	.LVL32
- 1182 0014 0100     		.2byte	0x1
- 1183 0016 56       		.byte	0x56
- 1184 0017 CC000000 		.4byte	.LVL32
- 1185 001b E8000000 		.4byte	.LFE63
- 1186 001f 0200     		.2byte	0x2
- 1187 0021 31       		.byte	0x31
- 1188 0022 9F       		.byte	0x9f
- 1189 0023 00000000 		.4byte	0
- 1190 0027 00000000 		.4byte	0
- 1191              	.LLST1:
- 1192 002b 04000000 		.4byte	.LVL0
- 1193 002f 4A000000 		.4byte	.LVL13
- 1194 0033 0200     		.2byte	0x2
- 1195 0035 30       		.byte	0x30
- 1196 0036 9F       		.byte	0x9f
- 1197 0037 4A000000 		.4byte	.LVL13
- 1198 003b 94000000 		.4byte	.LVL25
- 1199 003f 0100     		.2byte	0x1
- 1200 0041 54       		.byte	0x54
- 1201 0042 96000000 		.4byte	.LVL26
- 1202 0046 E8000000 		.4byte	.LFE63
- 1203 004a 0100     		.2byte	0x1
- 1204 004c 54       		.byte	0x54
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 26
+ 1094 0163 19       		.uleb128 0x19
+ 1095 0164 49       		.uleb128 0x49
+ 1096 0165 13       		.uleb128 0x13
+ 1097 0166 3C       		.uleb128 0x3c
+ 1098 0167 19       		.uleb128 0x19
+ 1099 0168 00       		.byte	0
+ 1100 0169 00       		.byte	0
+ 1101 016a 1B       		.uleb128 0x1b
+ 1102 016b 2E       		.uleb128 0x2e
+ 1103 016c 01       		.byte	0x1
+ 1104 016d 3F       		.uleb128 0x3f
+ 1105 016e 19       		.uleb128 0x19
+ 1106 016f 03       		.uleb128 0x3
+ 1107 0170 0E       		.uleb128 0xe
+ 1108 0171 3A       		.uleb128 0x3a
+ 1109 0172 0B       		.uleb128 0xb
+ 1110 0173 3B       		.uleb128 0x3b
+ 1111 0174 0B       		.uleb128 0xb
+ 1112 0175 27       		.uleb128 0x27
+ 1113 0176 19       		.uleb128 0x19
+ 1114 0177 49       		.uleb128 0x49
+ 1115 0178 13       		.uleb128 0x13
+ 1116 0179 3C       		.uleb128 0x3c
+ 1117 017a 19       		.uleb128 0x19
+ 1118 017b 01       		.uleb128 0x1
+ 1119 017c 13       		.uleb128 0x13
+ 1120 017d 00       		.byte	0
+ 1121 017e 00       		.byte	0
+ 1122 017f 1C       		.uleb128 0x1c
+ 1123 0180 2E       		.uleb128 0x2e
+ 1124 0181 01       		.byte	0x1
+ 1125 0182 3F       		.uleb128 0x3f
+ 1126 0183 19       		.uleb128 0x19
+ 1127 0184 03       		.uleb128 0x3
+ 1128 0185 0E       		.uleb128 0xe
+ 1129 0186 3A       		.uleb128 0x3a
+ 1130 0187 0B       		.uleb128 0xb
+ 1131 0188 3B       		.uleb128 0x3b
+ 1132 0189 0B       		.uleb128 0xb
+ 1133 018a 27       		.uleb128 0x27
+ 1134 018b 19       		.uleb128 0x19
+ 1135 018c 3C       		.uleb128 0x3c
+ 1136 018d 19       		.uleb128 0x19
+ 1137 018e 00       		.byte	0
+ 1138 018f 00       		.byte	0
+ 1139 0190 00       		.byte	0
+ 1140              		.section	.debug_loc,"",%progbits
+ 1141              	.Ldebug_loc0:
+ 1142              	.LLST0:
+ 1143 0000 04000000 		.4byte	.LVL0
+ 1144 0004 48000000 		.4byte	.LVL13
+ 1145 0008 0200     		.2byte	0x2
+ 1146 000a 30       		.byte	0x30
+ 1147 000b 9F       		.byte	0x9f
+ 1148 000c 48000000 		.4byte	.LVL13
+ 1149 0010 C0000000 		.4byte	.LVL29
+ 1150 0014 0100     		.2byte	0x1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 25
 
 
- 1205 004d 00000000 		.4byte	0
- 1206 0051 00000000 		.4byte	0
- 1207              	.LLST2:
- 1208 0055 70000000 		.4byte	.LVL20
- 1209 0059 74000000 		.4byte	.LVL21
- 1210 005d 0100     		.2byte	0x1
- 1211 005f 50       		.byte	0x50
- 1212 0060 00000000 		.4byte	0
- 1213 0064 00000000 		.4byte	0
- 1214              	.LLST3:
- 1215 0068 4A000000 		.4byte	.LVL13
- 1216 006c 4C000000 		.4byte	.LVL14
- 1217 0070 0100     		.2byte	0x1
- 1218 0072 50       		.byte	0x50
- 1219 0073 B4000000 		.4byte	.LVL30
- 1220 0077 C1000000 		.4byte	.LVL31-1
- 1221 007b 0100     		.2byte	0x1
- 1222 007d 50       		.byte	0x50
- 1223 007e C2000000 		.4byte	.LVL31
- 1224 0082 CE000000 		.4byte	.LVL33
- 1225 0086 0100     		.2byte	0x1
- 1226 0088 50       		.byte	0x50
- 1227 0089 00000000 		.4byte	0
- 1228 008d 00000000 		.4byte	0
- 1229              		.section	.debug_aranges,"",%progbits
- 1230 0000 1C000000 		.4byte	0x1c
- 1231 0004 0200     		.2byte	0x2
- 1232 0006 00000000 		.4byte	.Ldebug_info0
- 1233 000a 04       		.byte	0x4
- 1234 000b 00       		.byte	0
- 1235 000c 0000     		.2byte	0
- 1236 000e 0000     		.2byte	0
- 1237 0010 00000000 		.4byte	.LFB63
- 1238 0014 E8000000 		.4byte	.LFE63-.LFB63
- 1239 0018 00000000 		.4byte	0
- 1240 001c 00000000 		.4byte	0
- 1241              		.section	.debug_ranges,"",%progbits
- 1242              	.Ldebug_ranges0:
- 1243 0000 00000000 		.4byte	.LFB63
- 1244 0004 E8000000 		.4byte	.LFE63
- 1245 0008 00000000 		.4byte	0
- 1246 000c 00000000 		.4byte	0
- 1247              		.section	.debug_line,"",%progbits
- 1248              	.Ldebug_line0:
- 1249 0000 2E020000 		.section	.debug_str,"MS",%progbits,1
- 1249      0200DB01 
- 1249      00000201 
- 1249      FB0E0D00 
- 1249      01010101 
- 1250              	.LASF40:
- 1251 0000 55534255 		.ascii	"USBUART_1_GetConfiguration\000"
- 1251      4152545F 
- 1251      315F4765 
- 1251      74436F6E 
- 1251      66696775 
- 1252              	.LASF45:
- 1253 001b 55534255 		.ascii	"USBUART_1_GetAll\000"
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 27
+ 1151 0016 55       		.byte	0x55
+ 1152 0017 C0000000 		.4byte	.LVL29
+ 1153 001b DC000000 		.4byte	.LFE63
+ 1154 001f 0200     		.2byte	0x2
+ 1155 0021 31       		.byte	0x31
+ 1156 0022 9F       		.byte	0x9f
+ 1157 0023 00000000 		.4byte	0
+ 1158 0027 00000000 		.4byte	0
+ 1159              	.LLST1:
+ 1160 002b 6E000000 		.4byte	.LVL20
+ 1161 002f 72000000 		.4byte	.LVL21
+ 1162 0033 0100     		.2byte	0x1
+ 1163 0035 50       		.byte	0x50
+ 1164 0036 00000000 		.4byte	0
+ 1165 003a 00000000 		.4byte	0
+ 1166              	.LLST2:
+ 1167 003e 48000000 		.4byte	.LVL13
+ 1168 0042 4A000000 		.4byte	.LVL14
+ 1169 0046 0100     		.2byte	0x1
+ 1170 0048 50       		.byte	0x50
+ 1171 0049 A8000000 		.4byte	.LVL27
+ 1172 004d B5000000 		.4byte	.LVL28-1
+ 1173 0051 0100     		.2byte	0x1
+ 1174 0053 50       		.byte	0x50
+ 1175 0054 B6000000 		.4byte	.LVL28
+ 1176 0058 C2000000 		.4byte	.LVL30
+ 1177 005c 0100     		.2byte	0x1
+ 1178 005e 50       		.byte	0x50
+ 1179 005f 00000000 		.4byte	0
+ 1180 0063 00000000 		.4byte	0
+ 1181              		.section	.debug_aranges,"",%progbits
+ 1182 0000 1C000000 		.4byte	0x1c
+ 1183 0004 0200     		.2byte	0x2
+ 1184 0006 00000000 		.4byte	.Ldebug_info0
+ 1185 000a 04       		.byte	0x4
+ 1186 000b 00       		.byte	0
+ 1187 000c 0000     		.2byte	0
+ 1188 000e 0000     		.2byte	0
+ 1189 0010 00000000 		.4byte	.LFB63
+ 1190 0014 DC000000 		.4byte	.LFE63-.LFB63
+ 1191 0018 00000000 		.4byte	0
+ 1192 001c 00000000 		.4byte	0
+ 1193              		.section	.debug_ranges,"",%progbits
+ 1194              	.Ldebug_ranges0:
+ 1195 0000 00000000 		.4byte	.LFB63
+ 1196 0004 DC000000 		.4byte	.LFE63
+ 1197 0008 00000000 		.4byte	0
+ 1198 000c 00000000 		.4byte	0
+ 1199              		.section	.debug_line,"",%progbits
+ 1200              	.Ldebug_line0:
+ 1201 0000 20020000 		.section	.debug_str,"MS",%progbits,1
+ 1201      0200D001 
+ 1201      00000201 
+ 1201      FB0E0D00 
+ 1201      01010101 
+ 1202              	.LASF40:
+ 1203 0000 55534255 		.ascii	"USBUART_1_GetConfiguration\000"
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 26
 
 
- 1253      4152545F 
- 1253      315F4765 
- 1253      74416C6C 
- 1253      00
- 1254              	.LASF48:
- 1255 002c 55534255 		.ascii	"USBUART_1_IsLineChanged\000"
- 1255      4152545F 
- 1255      315F4973 
- 1255      4C696E65 
- 1255      4368616E 
- 1256              	.LASF9:
- 1257 0044 5F5F696E 		.ascii	"__int32_t\000"
- 1257      7433325F 
- 1257      7400
- 1258              	.LASF30:
- 1259 004e 4F70616D 		.ascii	"Opamp_1_Start\000"
- 1259      705F315F 
- 1259      53746172 
- 1259      7400
- 1260              	.LASF23:
- 1261 005c 4D64696F 		.ascii	"MdioDevAddr\000"
- 1261      44657641 
- 1261      64647200 
- 1262              	.LASF3:
- 1263 0068 73686F72 		.ascii	"short unsigned int\000"
- 1263      7420756E 
- 1263      7369676E 
- 1263      65642069 
- 1263      6E7400
- 1264              	.LASF46:
- 1265 007b 4D44494F 		.ascii	"MDIO_host_2_WriteDataC45\000"
- 1265      5F686F73 
- 1265      745F325F 
- 1265      57726974 
- 1265      65446174 
- 1266              	.LASF22:
- 1267 0094 73746174 		.ascii	"state\000"
- 1267      6500
- 1268              	.LASF13:
- 1269 009a 666C6F61 		.ascii	"float\000"
- 1269      7400
- 1270              	.LASF28:
- 1271 00a0 4C43445F 		.ascii	"LCD_Start\000"
- 1271      53746172 
- 1271      7400
- 1272              	.LASF1:
- 1273 00aa 756E7369 		.ascii	"unsigned char\000"
- 1273      676E6564 
- 1273      20636861 
- 1273      7200
- 1274              	.LASF33:
- 1275 00b8 436C6F63 		.ascii	"Clock_1_Start\000"
- 1275      6B5F315F 
- 1275      53746172 
- 1275      7400
- 1276              	.LASF27:
- 1277 00c6 486F7374 		.ascii	"HostData\000"
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 28
+ 1203      4152545F 
+ 1203      315F4765 
+ 1203      74436F6E 
+ 1203      66696775 
+ 1204              	.LASF45:
+ 1205 001b 55534255 		.ascii	"USBUART_1_GetAll\000"
+ 1205      4152545F 
+ 1205      315F4765 
+ 1205      74416C6C 
+ 1205      00
+ 1206              	.LASF47:
+ 1207 002c 55534255 		.ascii	"USBUART_1_IsLineChanged\000"
+ 1207      4152545F 
+ 1207      315F4973 
+ 1207      4C696E65 
+ 1207      4368616E 
+ 1208              	.LASF9:
+ 1209 0044 5F5F696E 		.ascii	"__int32_t\000"
+ 1209      7433325F 
+ 1209      7400
+ 1210              	.LASF30:
+ 1211 004e 4F70616D 		.ascii	"Opamp_1_Start\000"
+ 1211      705F315F 
+ 1211      53746172 
+ 1211      7400
+ 1212              	.LASF23:
+ 1213 005c 4D64696F 		.ascii	"MdioDevAddr\000"
+ 1213      44657641 
+ 1213      64647200 
+ 1214              	.LASF3:
+ 1215 0068 73686F72 		.ascii	"short unsigned int\000"
+ 1215      7420756E 
+ 1215      7369676E 
+ 1215      65642069 
+ 1215      6E7400
+ 1216              	.LASF46:
+ 1217 007b 4D44494F 		.ascii	"MDIO_host_2_WriteDataC45\000"
+ 1217      5F686F73 
+ 1217      745F325F 
+ 1217      57726974 
+ 1217      65446174 
+ 1218              	.LASF22:
+ 1219 0094 73746174 		.ascii	"state\000"
+ 1219      6500
+ 1220              	.LASF13:
+ 1221 009a 666C6F61 		.ascii	"float\000"
+ 1221      7400
+ 1222              	.LASF28:
+ 1223 00a0 4C43445F 		.ascii	"LCD_Start\000"
+ 1223      53746172 
+ 1223      7400
+ 1224              	.LASF1:
+ 1225 00aa 756E7369 		.ascii	"unsigned char\000"
+ 1225      676E6564 
+ 1225      20636861 
+ 1225      7200
+ 1226              	.LASF33:
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 27
 
 
- 1277      44617461 
- 1277      00
- 1278              	.LASF5:
- 1279 00cf 6C6F6E67 		.ascii	"long unsigned int\000"
- 1279      20756E73 
- 1279      69676E65 
- 1279      6420696E 
+ 1227 00b8 436C6F63 		.ascii	"Clock_1_Start\000"
+ 1227      6B5F315F 
+ 1227      53746172 
+ 1227      7400
+ 1228              	.LASF27:
+ 1229 00c6 486F7374 		.ascii	"HostData\000"
+ 1229      44617461 
+ 1229      00
+ 1230              	.LASF5:
+ 1231 00cf 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1231      20756E73 
+ 1231      69676E65 
+ 1231      6420696E 
+ 1231      7400
+ 1232              	.LASF34:
+ 1233 00e1 50574D5F 		.ascii	"PWM_1_Start\000"
+ 1233      315F5374 
+ 1233      61727400 
+ 1234              	.LASF29:
+ 1235 00ed 56444143 		.ascii	"VDAC8_1_Start\000"
+ 1235      385F315F 
+ 1235      53746172 
+ 1235      7400
+ 1236              	.LASF25:
+ 1237 00fb 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1237      52784275 
+ 1237      66666572 
+ 1237      00
+ 1238              	.LASF32:
+ 1239 0108 436C6F63 		.ascii	"Clock_2_Start\000"
+ 1239      6B5F325F 
+ 1239      53746172 
+ 1239      7400
+ 1240              	.LASF15:
+ 1241 0116 63686172 		.ascii	"char8\000"
+ 1241      3800
+ 1242              	.LASF14:
+ 1243 011c 646F7562 		.ascii	"double\000"
+ 1243      6C6500
+ 1244              	.LASF35:
+ 1245 0123 50574D5F 		.ascii	"PWM_2_Start\000"
+ 1245      325F5374 
+ 1245      61727400 
+ 1246              	.LASF44:
+ 1247 012f 55534255 		.ascii	"USBUART_1_PutData\000"
+ 1247      4152545F 
+ 1247      315F5075 
+ 1247      74446174 
+ 1247      6100
+ 1248              	.LASF52:
+ 1249 0141 6D61696E 		.ascii	"main\000"
+ 1249      00
+ 1250              	.LASF37:
+ 1251 0146 4C43445F 		.ascii	"LCD_PrintString\000"
+ 1251      5072696E 
+ 1251      74537472 
+ 1251      696E6700 
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 28
+
+
+ 1252              	.LASF12:
+ 1253 0156 75696E74 		.ascii	"uint16\000"
+ 1253      313600
+ 1254              	.LASF49:
+ 1255 015d 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1255      4320342E 
+ 1255      392E3320 
+ 1255      32303135 
+ 1255      30333033 
+ 1256 0190 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1256      20726576 
+ 1256      6973696F 
+ 1256      6E203232 
+ 1256      31323230 
+ 1257 01c3 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1257      66756E63 
+ 1257      74696F6E 
+ 1257      2D736563 
+ 1257      74696F6E 
+ 1258              	.LASF19:
+ 1259 01eb 74657374 		.ascii	"test\000"
+ 1259      00
+ 1260              	.LASF8:
+ 1261 01f0 756E7369 		.ascii	"unsigned int\000"
+ 1261      676E6564 
+ 1261      20696E74 
+ 1261      00
+ 1262              	.LASF48:
+ 1263 01fd 55534255 		.ascii	"USBUART_1_GetLineControl\000"
+ 1263      4152545F 
+ 1263      315F4765 
+ 1263      744C696E 
+ 1263      65436F6E 
+ 1264              	.LASF7:
+ 1265 0216 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1265      206C6F6E 
+ 1265      6720756E 
+ 1265      7369676E 
+ 1265      65642069 
+ 1266              	.LASF53:
+ 1267 022d 55534255 		.ascii	"USBUART_1_PutString\000"
+ 1267      4152545F 
+ 1267      315F5075 
+ 1267      74537472 
+ 1267      696E6700 
+ 1268              	.LASF38:
+ 1269 0241 4C43445F 		.ascii	"LCD_Position\000"
+ 1269      506F7369 
+ 1269      74696F6E 
+ 1269      00
+ 1270              	.LASF31:
+ 1271 024e 4D44494F 		.ascii	"MDIO_host_2_Init\000"
+ 1271      5F686F73 
+ 1271      745F325F 
+ 1271      496E6974 
+ 1271      00
+ 1272              	.LASF10:
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 29
+
+
+ 1273 025f 696E7433 		.ascii	"int32_t\000"
+ 1273      325F7400 
+ 1274              	.LASF17:
+ 1275 0267 73697A65 		.ascii	"sizetype\000"
+ 1275      74797065 
+ 1275      00
+ 1276              	.LASF39:
+ 1277 0270 55534255 		.ascii	"USBUART_1_IsConfigurationChanged\000"
+ 1277      4152545F 
+ 1277      315F4973 
+ 1277      436F6E66 
+ 1277      69677572 
+ 1278              	.LASF6:
+ 1279 0291 6C6F6E67 		.ascii	"long long int\000"
+ 1279      206C6F6E 
+ 1279      6720696E 
  1279      7400
- 1280              	.LASF34:
- 1281 00e1 50574D5F 		.ascii	"PWM_1_Start\000"
- 1281      315F5374 
- 1281      61727400 
- 1282              	.LASF29:
- 1283 00ed 56444143 		.ascii	"VDAC8_1_Start\000"
- 1283      385F315F 
- 1283      53746172 
- 1283      7400
- 1284              	.LASF25:
- 1285 00fb 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 1285      52784275 
- 1285      66666572 
- 1285      00
- 1286              	.LASF32:
- 1287 0108 436C6F63 		.ascii	"Clock_2_Start\000"
- 1287      6B5F325F 
- 1287      53746172 
+ 1280              	.LASF50:
+ 1281 029f 6D61696E 		.ascii	"main.c\000"
+ 1281      2E6300
+ 1282              	.LASF16:
+ 1283 02a6 63686172 		.ascii	"char\000"
+ 1283      00
+ 1284              	.LASF18:
+ 1285 02ab 66697273 		.ascii	"first_enter\000"
+ 1285      745F656E 
+ 1285      74657200 
+ 1286              	.LASF20:
+ 1287 02b7 636F756E 		.ascii	"count\000"
  1287      7400
- 1288              	.LASF15:
- 1289 0116 63686172 		.ascii	"char8\000"
- 1289      3800
- 1290              	.LASF14:
- 1291 011c 646F7562 		.ascii	"double\000"
- 1291      6C6500
- 1292              	.LASF35:
- 1293 0123 50574D5F 		.ascii	"PWM_2_Start\000"
- 1293      325F5374 
- 1293      61727400 
- 1294              	.LASF44:
- 1295 012f 55534255 		.ascii	"USBUART_1_PutData\000"
+ 1288              	.LASF2:
+ 1289 02bd 73686F72 		.ascii	"short int\000"
+ 1289      7420696E 
+ 1289      7400
+ 1290              	.LASF21:
+ 1291 02c7 62756666 		.ascii	"buffer\000"
+ 1291      657200
+ 1292              	.LASF11:
+ 1293 02ce 75696E74 		.ascii	"uint8\000"
+ 1293      3800
+ 1294              	.LASF36:
+ 1295 02d4 55534255 		.ascii	"USBUART_1_Start\000"
  1295      4152545F 
- 1295      315F5075 
- 1295      74446174 
- 1295      6100
- 1296              	.LASF53:
- 1297 0141 6D61696E 		.ascii	"main\000"
- 1297      00
- 1298              	.LASF37:
- 1299 0146 4C43445F 		.ascii	"LCD_PrintString\000"
- 1299      5072696E 
- 1299      74537472 
- 1299      696E6700 
- 1300              	.LASF12:
- 1301 0156 75696E74 		.ascii	"uint16\000"
- 1301      313600
- 1302              	.LASF50:
- 1303 015d 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 1303      4320342E 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 29
+ 1295      315F5374 
+ 1295      61727400 
+ 1296              	.LASF26:
+ 1297 02e4 486F7374 		.ascii	"HostAddress\000"
+ 1297      41646472 
+ 1297      65737300 
+ 1298              	.LASF43:
+ 1299 02f0 55534255 		.ascii	"USBUART_1_CDCIsReady\000"
+ 1299      4152545F 
+ 1299      315F4344 
+ 1299      43497352 
+ 1299      65616479 
+ 1300              	.LASF4:
+ 1301 0305 6C6F6E67 		.ascii	"long int\000"
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccp3E9ob.s 			page 30
 
 
- 1303      392E3320 
- 1303      32303135 
- 1303      30333033 
- 1304 0190 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 1304      20726576 
- 1304      6973696F 
- 1304      6E203232 
- 1304      31323230 
- 1305 01c3 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1305      66756E63 
- 1305      74696F6E 
- 1305      2D736563 
- 1305      74696F6E 
- 1306              	.LASF19:
- 1307 01eb 74657374 		.ascii	"test\000"
- 1307      00
- 1308              	.LASF8:
- 1309 01f0 756E7369 		.ascii	"unsigned int\000"
- 1309      676E6564 
- 1309      20696E74 
- 1309      00
- 1310              	.LASF49:
- 1311 01fd 55534255 		.ascii	"USBUART_1_GetLineControl\000"
- 1311      4152545F 
- 1311      315F4765 
- 1311      744C696E 
- 1311      65436F6E 
- 1312              	.LASF7:
- 1313 0216 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1313      206C6F6E 
- 1313      6720756E 
- 1313      7369676E 
- 1313      65642069 
- 1314              	.LASF54:
- 1315 022d 55534255 		.ascii	"USBUART_1_PutString\000"
- 1315      4152545F 
- 1315      315F5075 
- 1315      74537472 
- 1315      696E6700 
- 1316              	.LASF38:
- 1317 0241 4C43445F 		.ascii	"LCD_Position\000"
- 1317      506F7369 
- 1317      74696F6E 
- 1317      00
- 1318              	.LASF31:
- 1319 024e 4D44494F 		.ascii	"MDIO_host_2_Init\000"
- 1319      5F686F73 
- 1319      745F325F 
- 1319      496E6974 
- 1319      00
- 1320              	.LASF10:
- 1321 025f 696E7433 		.ascii	"int32_t\000"
- 1321      325F7400 
- 1322              	.LASF17:
- 1323 0267 73697A65 		.ascii	"sizetype\000"
- 1323      74797065 
- 1323      00
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 30
-
-
- 1324              	.LASF39:
- 1325 0270 55534255 		.ascii	"USBUART_1_IsConfigurationChanged\000"
- 1325      4152545F 
- 1325      315F4973 
- 1325      436F6E66 
- 1325      69677572 
- 1326              	.LASF6:
- 1327 0291 6C6F6E67 		.ascii	"long long int\000"
- 1327      206C6F6E 
- 1327      6720696E 
- 1327      7400
- 1328              	.LASF51:
- 1329 029f 6D61696E 		.ascii	"main.c\000"
- 1329      2E6300
- 1330              	.LASF16:
- 1331 02a6 63686172 		.ascii	"char\000"
- 1331      00
- 1332              	.LASF18:
- 1333 02ab 66697273 		.ascii	"first_enter\000"
- 1333      745F656E 
- 1333      74657200 
- 1334              	.LASF20:
- 1335 02b7 636F756E 		.ascii	"count\000"
- 1335      7400
- 1336              	.LASF2:
- 1337 02bd 73686F72 		.ascii	"short int\000"
- 1337      7420696E 
- 1337      7400
- 1338              	.LASF21:
- 1339 02c7 62756666 		.ascii	"buffer\000"
- 1339      657200
- 1340              	.LASF11:
- 1341 02ce 75696E74 		.ascii	"uint8\000"
- 1341      3800
- 1342              	.LASF36:
- 1343 02d4 55534255 		.ascii	"USBUART_1_Start\000"
- 1343      4152545F 
- 1343      315F5374 
- 1343      61727400 
- 1344              	.LASF26:
- 1345 02e4 486F7374 		.ascii	"HostAddress\000"
- 1345      41646472 
- 1345      65737300 
- 1346              	.LASF43:
- 1347 02f0 55534255 		.ascii	"USBUART_1_CDCIsReady\000"
- 1347      4152545F 
- 1347      315F4344 
- 1347      43497352 
- 1347      65616479 
- 1348              	.LASF4:
- 1349 0305 6C6F6E67 		.ascii	"long int\000"
- 1349      20696E74 
- 1349      00
- 1350              	.LASF42:
- 1351 030e 55534255 		.ascii	"USBUART_1_DataIsReady\000"
- 1351      4152545F 
- 1351      315F4461 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cctW827O.s 			page 31
-
-
- 1351      74614973 
- 1351      52656164 
- 1352              	.LASF0:
- 1353 0324 7369676E 		.ascii	"signed char\000"
- 1353      65642063 
- 1353      68617200 
- 1354              	.LASF47:
- 1355 0330 4C45445F 		.ascii	"LED_3_Write\000"
- 1355      335F5772 
- 1355      69746500 
- 1356              	.LASF24:
- 1357 033c 4D64696F 		.ascii	"MdioPhyAddr\000"
- 1357      50687941 
- 1357      64647200 
- 1358              	.LASF52:
- 1359 0348 443A5C70 		.ascii	"D:\\pgm\\Cypress_dem_board\\CFP_reader\\cfp_reader\\"
- 1359      676D5C43 
- 1359      79707265 
- 1359      73735F64 
- 1359      656D5F62 
- 1360 0377 575F6366 		.ascii	"W_cfp_reader\\cfp_reader.cydsn\000"
- 1360      705F7265 
- 1360      61646572 
- 1360      5C636670 
- 1360      5F726561 
- 1361              	.LASF41:
- 1362 0395 55534255 		.ascii	"USBUART_1_CDC_Init\000"
- 1362      4152545F 
- 1362      315F4344 
- 1362      435F496E 
- 1362      697400
- 1363              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 1301      20696E74 
+ 1301      00
+ 1302              	.LASF42:
+ 1303 030e 55534255 		.ascii	"USBUART_1_DataIsReady\000"
+ 1303      4152545F 
+ 1303      315F4461 
+ 1303      74614973 
+ 1303      52656164 
+ 1304              	.LASF0:
+ 1305 0324 7369676E 		.ascii	"signed char\000"
+ 1305      65642063 
+ 1305      68617200 
+ 1306              	.LASF24:
+ 1307 0330 4D64696F 		.ascii	"MdioPhyAddr\000"
+ 1307      50687941 
+ 1307      64647200 
+ 1308              	.LASF51:
+ 1309 033c 443A5C70 		.ascii	"D:\\pgm\\Cypress_dem_board\\CFP_reader\\cfp_reader\\"
+ 1309      676D5C43 
+ 1309      79707265 
+ 1309      73735F64 
+ 1309      656D5F62 
+ 1310 036b 575F6366 		.ascii	"W_cfp_reader\\cfp_reader.cydsn\000"
+ 1310      705F7265 
+ 1310      61646572 
+ 1310      5C636670 
+ 1310      5F726561 
+ 1311              	.LASF41:
+ 1312 0389 55534255 		.ascii	"USBUART_1_CDC_Init\000"
+ 1312      4152545F 
+ 1312      315F4344 
+ 1312      435F496E 
+ 1312      697400
+ 1313              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

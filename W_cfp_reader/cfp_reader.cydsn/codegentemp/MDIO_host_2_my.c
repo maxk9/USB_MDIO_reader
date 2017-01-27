@@ -72,7 +72,7 @@ void MDIO_host_2_Start(void)
 void MDIO_host_2_Stop(void)
 {
 	/* Disable the hardware component */
-    MDIO_host_2_CONTROL_REG = 0u;	// Set Enable and Valid bits to zero
+ //   MDIO_host_2_CONTROL_REG = 0u;	// Set Enable and Valid bits to zero
 	
 	/* Disable Count7 hardware block */
     MDIO_host_2_CNT7_AUX_CTL_REG &= ~MDIO_host_2_COUNT7_EN;
@@ -128,11 +128,11 @@ void MDIO_host_2_Enable(void)
     MDIO_host_2_CNT7_AUX_CTL_REG |= MDIO_host_2_COUNT7_EN;
 
 	/* Enable the block */
-    MDIO_host_2_CONTROL_REG = MDIO_host_2_ENABLE;
+    //  MDIO_host_2_CONTROL_REG = MDIO_host_2_ENABLE;
 	
     /*Reset counter */
-   // MDIO_host_2_PERIOD_REG = 127;
-    MDIO_host_2_COUNT_REG = 0;
+    // MDIO_host_2_PERIOD_REG = 127;
+    MDIO_host_2_COUNT_REG = 61;
     
 	/* Enable the interrupt */
 	//CyIntEnable(MDIO_host_2_ISR_NUMBER);   
@@ -245,24 +245,29 @@ uint8 MDIO_host_2_WriteDataC45(uint8 op_mode, uint8 phy_addr, uint8 dev_addr, ui
 	uint8   status_reg;
 
 	/* Clear and Set the control register for writing */
-	MDIO_host_2_CONTROL_REG = MDIO_host_2_ENABLE |MDIO_host_2_WRITE;
+	//MDIO_host_2_CONTROL_REG = MDIO_host_2_ENABLE |MDIO_host_2_WRITE;
 		
    	/* Set the control bits and write in the fifo f0 */
-   	control_bits = 0x0002+((uint16)op_mode<<12)+(((uint16)phy_addr)<<7)+(((uint16)dev_addr)<<2);
-   	CY_SET_REG16(MDIO_host_2_FIFO_F0_PTR, control_bits);
+   //control_bits = 0x0002+((uint16)op_mode<<12)+(((uint16)phy_addr)<<7)+(((uint16)dev_addr)<<2);
+   	//CY_SET_REG16(MDIO_host_2_FIFO_F0_PTR, control_bits);
+    while ((MDIO_host_2_STATUS_REG & MDIO_host_2_NOT_FULL) == 0) ;	/* Wait for space available */
+    CY_SET_REG16(MDIO_host_2_FIFO_F0_PTR, (uint16)0x0001);
+   while ((MDIO_host_2_STATUS_REG & MDIO_host_2_SEND_16) != 1);	/* Wait for space available */
+    CY_SET_REG16(MDIO_host_2_FIFO_F0_PTR,(uint16)0x0AA0);
    
    	/* Write data bits in the fifo f0 */
-   	CY_SET_REG16(MDIO_host_2_FIFO_F0_PTR, reg_data);
+//    while ((MDIO_host_2_STATUS_REG & MDIO_host_2_NOT_FULL) == 0) ;	/* Wait for space available */
+//    CY_SET_REG16(MDIO_host_2_FIFO_F0_PTR, 0xA00A);
     
    	/* Start Transmission */
-   	MDIO_host_2_CONTROL_REG |= MDIO_host_2_START;
+   	//MDIO_host_2_CONTROL_REG |= MDIO_host_2_START;
 	
 	/* Wait till the transmission is completed */
 	//while ( MDIO_host_2_StatusRegister != MDIO_host_2_MDIO_STS_CMPLT );
-	while (!(MDIO_host_2_STATUS_REG & MDIO_host_2_MDIO_END_TRANSFER));
+	//while (!(MDIO_host_2_STATUS_REG & MDIO_host_2_MDIO_END_TRANSFER));
     
     /* Stop Transmission */
-    MDIO_host_2_CONTROL_REG &= ~MDIO_host_2_START;
+    //MDIO_host_2_CONTROL_REG &= ~MDIO_host_2_START;
     
 	/* Clear hardware status register */
 	status_reg = MDIO_host_2_STATUS_REG;
@@ -284,18 +289,18 @@ uint8 MDIO_host_2_ReadDataC45(uint8 op_mode, uint8 phy_addr, uint8 dev_addr, uin
 	uint8 status_reg;
 
 	/* Clear and Set the control register for writing */
-	MDIO_host_2_CONTROL_REG &= MDIO_host_2_ENABLE;
-	MDIO_host_2_CONTROL_REG |= MDIO_host_2_READ;
+//	MDIO_host_2_CONTROL_REG &= MDIO_host_2_ENABLE;
+//	MDIO_host_2_CONTROL_REG |= MDIO_host_2_READ;
 	
    	/* Set the control bits and write in the fifo f0 */
    	control_bits = 0x0003+((uint16)op_mode<<12)+(((uint16)phy_addr)<<7)+(((uint16)dev_addr)<<2);
    	CY_SET_REG16(MDIO_host_2_FIFO_F0_PTR, control_bits);
     
    	/* Start Transmission */
-   	MDIO_host_2_CONTROL_REG |= MDIO_host_2_START;
+  // 	MDIO_host_2_CONTROL_REG |= MDIO_host_2_START;
 	
 	/* Wait till the transmission is completed */
-	while ( MDIO_host_2_StatusRegister != MDIO_host_2_MDIO_STS_CMPLT );
+//	while ( MDIO_host_2_StatusRegister != MDIO_host_2_MDIO_STS_CMPLT );
 	
 	/* Check if device acked */
 	status_reg = MDIO_host_2_STATUS_REG;
@@ -317,8 +322,8 @@ void 	MDIO_host_2_WriteDataC22(uint8 phy_addr, uint8 dev_addr, uint16 reg_data)
    	uint16	control_bits;
 
 	/* Clear and Set the control register for writing */
-	MDIO_host_2_CONTROL_REG &= MDIO_host_2_ENABLE;
-	MDIO_host_2_CONTROL_REG |= MDIO_host_2_WRITE;
+//	MDIO_host_2_CONTROL_REG &= MDIO_host_2_ENABLE;
+//	MDIO_host_2_CONTROL_REG |= MDIO_host_2_WRITE;
 	
    	/* Set the control bits and write in the fifo f0 */
    	control_bits = 0x5002+(((uint16)phy_addr)<<7)+(((uint16)dev_addr)<<2);
@@ -328,7 +333,7 @@ void 	MDIO_host_2_WriteDataC22(uint8 phy_addr, uint8 dev_addr, uint16 reg_data)
    	CY_SET_REG16(MDIO_host_2_FIFO_F0_PTR, reg_data);
     
    	/* Start Transmission */
-   	MDIO_host_2_CONTROL_REG |= MDIO_host_2_START;
+   //	MDIO_host_2_CONTROL_REG |= MDIO_host_2_START;
 }
 
 /*******************************************************************************
@@ -341,17 +346,17 @@ uint16 	MDIO_host_2_ReadDataC22(uint8 phy_addr, uint8 dev_addr)
    	uint16	control_bits;
 
 	/* Clear and Set the control register for writing */
-	MDIO_host_2_CONTROL_REG &= MDIO_host_2_ENABLE;
-	MDIO_host_2_CONTROL_REG |= MDIO_host_2_READ;
+//	MDIO_host_2_CONTROL_REG &= MDIO_host_2_ENABLE;
+//	MDIO_host_2_CONTROL_REG |= MDIO_host_2_READ;
 	
    	/* Set the control bits and write in the fifo f0 */
    	control_bits = 0x6003+(((uint16)phy_addr)<<7)+(((uint16)dev_addr)<<2);
    	CY_SET_REG16(MDIO_host_2_FIFO_F0_PTR, control_bits);
     
    	/* Start Transmission */
-   	MDIO_host_2_CONTROL_REG |= MDIO_host_2_START;
+  // 	MDIO_host_2_CONTROL_REG |= MDIO_host_2_START;
 	
-	while ( MDIO_host_2_StatusRegister != MDIO_host_2_MDIO_STS_CMPLT );
+//	while ( MDIO_host_2_StatusRegister != MDIO_host_2_MDIO_STS_CMPLT );
 	
 	MDIO_host_2_StatusRegister = 0x00u;
 	

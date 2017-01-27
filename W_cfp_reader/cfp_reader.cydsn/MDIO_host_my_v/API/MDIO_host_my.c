@@ -72,7 +72,7 @@ void `$INSTANCE_NAME`_Start(void)
 void `$INSTANCE_NAME`_Stop(void)
 {
 	/* Disable the hardware component */
-    `$INSTANCE_NAME`_CONTROL_REG = 0u;	// Set Enable and Valid bits to zero
+ //   `$INSTANCE_NAME`_CONTROL_REG = 0u;	// Set Enable and Valid bits to zero
 	
 	/* Disable Count7 hardware block */
     `$INSTANCE_NAME`_CNT7_AUX_CTL_REG &= ~`$INSTANCE_NAME`_COUNT7_EN;
@@ -128,11 +128,11 @@ void `$INSTANCE_NAME`_Enable(void) `=ReentrantKeil($INSTANCE_NAME . "_Enable")`
     `$INSTANCE_NAME`_CNT7_AUX_CTL_REG |= `$INSTANCE_NAME`_COUNT7_EN;
 
 	/* Enable the block */
-    `$INSTANCE_NAME`_CONTROL_REG = `$INSTANCE_NAME`_ENABLE;
+    //  `$INSTANCE_NAME`_CONTROL_REG = `$INSTANCE_NAME`_ENABLE;
 	
     /*Reset counter */
-   // `$INSTANCE_NAME`_PERIOD_REG = 127;
-    `$INSTANCE_NAME`_COUNT_REG = 0;
+    // `$INSTANCE_NAME`_PERIOD_REG = 127;
+    `$INSTANCE_NAME`_COUNT_REG = 61;
     
 	/* Enable the interrupt */
 	//CyIntEnable(`$INSTANCE_NAME`_ISR_NUMBER);   
@@ -245,24 +245,29 @@ uint8 `$INSTANCE_NAME`_WriteDataC45(uint8 op_mode, uint8 phy_addr, uint8 dev_add
 	uint8   status_reg;
 
 	/* Clear and Set the control register for writing */
-	`$INSTANCE_NAME`_CONTROL_REG = `$INSTANCE_NAME`_ENABLE |`$INSTANCE_NAME`_WRITE;
+	//`$INSTANCE_NAME`_CONTROL_REG = `$INSTANCE_NAME`_ENABLE |`$INSTANCE_NAME`_WRITE;
 		
    	/* Set the control bits and write in the fifo f0 */
-   	control_bits = 0x0002+((uint16)op_mode<<12)+(((uint16)phy_addr)<<7)+(((uint16)dev_addr)<<2);
-   	CY_SET_REG16(`$INSTANCE_NAME`_FIFO_F0_PTR, control_bits);
+   //control_bits = 0x0002+((uint16)op_mode<<12)+(((uint16)phy_addr)<<7)+(((uint16)dev_addr)<<2);
+   	//CY_SET_REG16(`$INSTANCE_NAME`_FIFO_F0_PTR, control_bits);
+    while ((`$INSTANCE_NAME`_STATUS_REG & `$INSTANCE_NAME`_NOT_FULL) == 0) ;	/* Wait for space available */
+    CY_SET_REG16(`$INSTANCE_NAME`_FIFO_F0_PTR, (uint16)0x0001);
+   while ((`$INSTANCE_NAME`_STATUS_REG & `$INSTANCE_NAME`_SEND_16) != 1);	/* Wait for space available */
+    CY_SET_REG16(`$INSTANCE_NAME`_FIFO_F0_PTR,(uint16)0x0AA0);
    
    	/* Write data bits in the fifo f0 */
-   	CY_SET_REG16(`$INSTANCE_NAME`_FIFO_F0_PTR, reg_data);
+//    while ((`$INSTANCE_NAME`_STATUS_REG & `$INSTANCE_NAME`_NOT_FULL) == 0) ;	/* Wait for space available */
+//    CY_SET_REG16(`$INSTANCE_NAME`_FIFO_F0_PTR, 0xA00A);
     
    	/* Start Transmission */
-   	`$INSTANCE_NAME`_CONTROL_REG |= `$INSTANCE_NAME`_START;
+   	//`$INSTANCE_NAME`_CONTROL_REG |= `$INSTANCE_NAME`_START;
 	
 	/* Wait till the transmission is completed */
 	//while ( `$INSTANCE_NAME`_StatusRegister != `$INSTANCE_NAME`_MDIO_STS_CMPLT );
-	while (!(`$INSTANCE_NAME`_STATUS_REG & `$INSTANCE_NAME`_MDIO_END_TRANSFER));
+	//while (!(`$INSTANCE_NAME`_STATUS_REG & `$INSTANCE_NAME`_MDIO_END_TRANSFER));
     
     /* Stop Transmission */
-    `$INSTANCE_NAME`_CONTROL_REG &= ~`$INSTANCE_NAME`_START;
+    //`$INSTANCE_NAME`_CONTROL_REG &= ~`$INSTANCE_NAME`_START;
     
 	/* Clear hardware status register */
 	status_reg = `$INSTANCE_NAME`_STATUS_REG;
@@ -284,18 +289,18 @@ uint8 `$INSTANCE_NAME`_ReadDataC45(uint8 op_mode, uint8 phy_addr, uint8 dev_addr
 	uint8 status_reg;
 
 	/* Clear and Set the control register for writing */
-	`$INSTANCE_NAME`_CONTROL_REG &= `$INSTANCE_NAME`_ENABLE;
-	`$INSTANCE_NAME`_CONTROL_REG |= `$INSTANCE_NAME`_READ;
+//	`$INSTANCE_NAME`_CONTROL_REG &= `$INSTANCE_NAME`_ENABLE;
+//	`$INSTANCE_NAME`_CONTROL_REG |= `$INSTANCE_NAME`_READ;
 	
    	/* Set the control bits and write in the fifo f0 */
    	control_bits = 0x0003+((uint16)op_mode<<12)+(((uint16)phy_addr)<<7)+(((uint16)dev_addr)<<2);
    	CY_SET_REG16(`$INSTANCE_NAME`_FIFO_F0_PTR, control_bits);
     
    	/* Start Transmission */
-   	`$INSTANCE_NAME`_CONTROL_REG |= `$INSTANCE_NAME`_START;
+  // 	`$INSTANCE_NAME`_CONTROL_REG |= `$INSTANCE_NAME`_START;
 	
 	/* Wait till the transmission is completed */
-	while ( `$INSTANCE_NAME`_StatusRegister != `$INSTANCE_NAME`_MDIO_STS_CMPLT );
+//	while ( `$INSTANCE_NAME`_StatusRegister != `$INSTANCE_NAME`_MDIO_STS_CMPLT );
 	
 	/* Check if device acked */
 	status_reg = `$INSTANCE_NAME`_STATUS_REG;
@@ -317,8 +322,8 @@ void 	`$INSTANCE_NAME`_WriteDataC22(uint8 phy_addr, uint8 dev_addr, uint16 reg_d
    	uint16	control_bits;
 
 	/* Clear and Set the control register for writing */
-	`$INSTANCE_NAME`_CONTROL_REG &= `$INSTANCE_NAME`_ENABLE;
-	`$INSTANCE_NAME`_CONTROL_REG |= `$INSTANCE_NAME`_WRITE;
+//	`$INSTANCE_NAME`_CONTROL_REG &= `$INSTANCE_NAME`_ENABLE;
+//	`$INSTANCE_NAME`_CONTROL_REG |= `$INSTANCE_NAME`_WRITE;
 	
    	/* Set the control bits and write in the fifo f0 */
    	control_bits = 0x5002+(((uint16)phy_addr)<<7)+(((uint16)dev_addr)<<2);
@@ -328,7 +333,7 @@ void 	`$INSTANCE_NAME`_WriteDataC22(uint8 phy_addr, uint8 dev_addr, uint16 reg_d
    	CY_SET_REG16(`$INSTANCE_NAME`_FIFO_F0_PTR, reg_data);
     
    	/* Start Transmission */
-   	`$INSTANCE_NAME`_CONTROL_REG |= `$INSTANCE_NAME`_START;
+   //	`$INSTANCE_NAME`_CONTROL_REG |= `$INSTANCE_NAME`_START;
 }
 
 /*******************************************************************************
@@ -341,17 +346,17 @@ uint16 	`$INSTANCE_NAME`_ReadDataC22(uint8 phy_addr, uint8 dev_addr)
    	uint16	control_bits;
 
 	/* Clear and Set the control register for writing */
-	`$INSTANCE_NAME`_CONTROL_REG &= `$INSTANCE_NAME`_ENABLE;
-	`$INSTANCE_NAME`_CONTROL_REG |= `$INSTANCE_NAME`_READ;
+//	`$INSTANCE_NAME`_CONTROL_REG &= `$INSTANCE_NAME`_ENABLE;
+//	`$INSTANCE_NAME`_CONTROL_REG |= `$INSTANCE_NAME`_READ;
 	
    	/* Set the control bits and write in the fifo f0 */
    	control_bits = 0x6003+(((uint16)phy_addr)<<7)+(((uint16)dev_addr)<<2);
    	CY_SET_REG16(`$INSTANCE_NAME`_FIFO_F0_PTR, control_bits);
     
    	/* Start Transmission */
-   	`$INSTANCE_NAME`_CONTROL_REG |= `$INSTANCE_NAME`_START;
+  // 	`$INSTANCE_NAME`_CONTROL_REG |= `$INSTANCE_NAME`_START;
 	
-	while ( `$INSTANCE_NAME`_StatusRegister != `$INSTANCE_NAME`_MDIO_STS_CMPLT );
+//	while ( `$INSTANCE_NAME`_StatusRegister != `$INSTANCE_NAME`_MDIO_STS_CMPLT );
 	
 	`$INSTANCE_NAME`_StatusRegister = 0x00u;
 	

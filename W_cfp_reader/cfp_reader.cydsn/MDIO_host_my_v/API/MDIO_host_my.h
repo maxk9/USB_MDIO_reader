@@ -31,9 +31,12 @@
 #define `$INSTANCE_NAME`_START				(0x02u)
 #define `$INSTANCE_NAME`_RW					(0x04u)
 
-/* Bit field definitions for the Status Register */
-#define `$INSTANCE_NAME`_MDIO_STS_CMPLT		0x08
-#define `$INSTANCE_NAME`_MDIO_END_TRANSFER  0x02
+/***************************************
+*           API Constants               
+***************************************/
+#define `$INSTANCE_NAME`_NOT_FULL   (0x01u)
+#define `$INSTANCE_NAME`_IDLE       (0x02u)
+#define `$INSTANCE_NAME`_SEND_16    (0x03u)
 
 /* Bit field definitions for the UDB registers */
 #define `$INSTANCE_NAME`_F0_CLR         	(0x0101u)
@@ -62,8 +65,8 @@
 /***************************************************** 
 * UDB Registers
 ******************************************************/
-#define `$INSTANCE_NAME`_CONTROL_REG                (*(reg8 *) 	`$INSTANCE_NAME`_SyncCtl_MdioControlReg__CONTROL_REG)
-#define `$INSTANCE_NAME`_CONTROL_PTR                ( (reg8 *) 	`$INSTANCE_NAME`_SyncCtl_MdioControlReg__CONTROL_REG)
+//#define `$INSTANCE_NAME`_CONTROL_REG                (*(reg8 *) 	`$INSTANCE_NAME`_MdioControlReg__CONTROL_REG)
+//#define `$INSTANCE_NAME`_CONTROL_PTR                ( (reg8 *) 	`$INSTANCE_NAME`_MdioControlReg__CONTROL_REG)
 #define `$INSTANCE_NAME`_STATUS_REG                 (*(reg8 *) 	`$INSTANCE_NAME`_MdioStatusReg__STATUS_REG)
 #define `$INSTANCE_NAME`_STATUS_PTR                 ( (reg8 *) 	`$INSTANCE_NAME`_MdioStatusReg__STATUS_REG)
 #define `$INSTANCE_NAME`_CNT7_AUX_CTL_REG   		(*(reg8 *)  `$INSTANCE_NAME`_MdioCounter__CONTROL_AUX_CTL_REG)
