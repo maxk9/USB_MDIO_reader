@@ -36,7 +36,8 @@
 ***************************************/
 #define `$INSTANCE_NAME`_NOT_FULL   (0x01u)
 #define `$INSTANCE_NAME`_IDLE       (0x02u)
-#define `$INSTANCE_NAME`_SEND_16    (0x03u)
+#define `$INSTANCE_NAME`_SEND_16    (0x04u)
+#define `$INSTANCE_NAME`_CMPLT      (0x08u)
 
 /* Bit field definitions for the UDB registers */
 #define `$INSTANCE_NAME`_F0_CLR         	(0x0101u)
@@ -44,7 +45,7 @@
 #define `$INSTANCE_NAME`_COUNT7_EN          (0x20u)
 
 /* Definition for Write/Read bits */
-#define	`$INSTANCE_NAME`_READ				(0x04u)
+#define	`$INSTANCE_NAME`_READ				(0x01u)
 #define	`$INSTANCE_NAME`_WRITE				(0x00u)
 
 #define `$INSTANCE_NAME`_POS_READ_PATTERN	(0x02u)
@@ -65,8 +66,8 @@
 /***************************************************** 
 * UDB Registers
 ******************************************************/
-//#define `$INSTANCE_NAME`_CONTROL_REG                (*(reg8 *) 	`$INSTANCE_NAME`_MdioControlReg__CONTROL_REG)
-//#define `$INSTANCE_NAME`_CONTROL_PTR                ( (reg8 *) 	`$INSTANCE_NAME`_MdioControlReg__CONTROL_REG)
+#define `$INSTANCE_NAME`_CONTROL_REG                (*(reg8 *) 	`$INSTANCE_NAME`_MdioControlReg__CONTROL_REG)
+#define `$INSTANCE_NAME`_CONTROL_PTR                ( (reg8 *) 	`$INSTANCE_NAME`_MdioControlReg__CONTROL_REG)
 #define `$INSTANCE_NAME`_STATUS_REG                 (*(reg8 *) 	`$INSTANCE_NAME`_MdioStatusReg__STATUS_REG)
 #define `$INSTANCE_NAME`_STATUS_PTR                 ( (reg8 *) 	`$INSTANCE_NAME`_MdioStatusReg__STATUS_REG)
 #define `$INSTANCE_NAME`_CNT7_AUX_CTL_REG   		(*(reg8 *)  `$INSTANCE_NAME`_MdioCounter__CONTROL_AUX_CTL_REG)
@@ -93,10 +94,9 @@ void    `$INSTANCE_NAME`_EnableInt(void);
 void    `$INSTANCE_NAME`_DisableInt(void);
 uint8  	`$INSTANCE_NAME`_GetStatus(void) CYREENTRANT;
 void 	`$INSTANCE_NAME`_ClearInternalFIFOs(void);
-uint8 	`$INSTANCE_NAME`_WriteDataC45(uint8 op_mode, uint8 phy_addr, uint8 dev_addr, uint16 reg_data); // Writes data to the bus (C45)
-uint8 	`$INSTANCE_NAME`_ReadDataC45(uint8 op_mode, uint8 phy_addr, uint8 dev_addr, uint16 *regData);  // Reads data from the bus (C45)
-void 	`$INSTANCE_NAME`_WriteDataC22(uint8 phy_addr, uint8 dev_addr, uint16 reg_data); // Writes data to the bus (C22)
-uint16 	`$INSTANCE_NAME`_ReadDataC22(uint8 phy_addr, uint8 dev_addr); // Read data from the bus (C22)
+uint8   `$INSTANCE_NAME`_SetAddrC45(uint8 phy_addr, uint8 dev_addr, uint16 reg_data); // Set Addr reg
+uint8 	`$INSTANCE_NAME`_WriteDataC45(uint8 phy_addr, uint8 dev_addr, uint16 reg_data); // Writes data to the bus (C45)
+uint8 	`$INSTANCE_NAME`_ReadDataC45(uint8 phy_addr, uint8 dev_addr, uint16 *regData);  // Reads data from the bus (C45)
 void  	`$INSTANCE_NAME`_ClearStatus(void);	
 
 /* Interrupt prototype */

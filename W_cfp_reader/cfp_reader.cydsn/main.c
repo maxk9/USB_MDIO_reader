@@ -13,6 +13,17 @@
 #include "stdio.h"
 
 
+
+/* Firmware Constants */
+#define SPECIAL_COR_REGISTER    0xA000  /* Special COR Register address */
+#define SPECIAL_COR_MODIFIER    0xA200  /* Special address to modify the COR Register */
+#define BASE_MDIO_ADDRESS       0x8000  /* Start address for the incremental address variable */
+#define MAX_MDIO_ADDRESS        0xA500  /* Maximum address supported in this firmware */
+#define INC_ADDRESS             0x0100  /* Incremental value for the adddress */
+#define RANDOM_CONST            0xDEAD  /* Random value to generate write/read data */
+#define ENABLE_MDIO             0x20    /* Enable bit for the MDIO Component */
+
+
 #define USBFS_DEVICE    (0u)
 /* The buffer size is equal to the maximum packet size of the IN and OUT bulk
 * endpoints.
@@ -22,6 +33,11 @@
 
 #define BASE_MDIO_ADDRESS       0x8000  /* Start address for the incremental address variable */
 
+volatile uint16 myAddress = 0;          /* Current address variable */
+         uint16 myData = 0;             /* Register value in current address */
+volatile uint8 dataFlag = 0;           /* Internal data flag for ISR*/
+volatile uint8 corFlag = 0;            /* Internal COR flag for ISR */
+static   uint8 status = 0;                 /* Status of API calls */
 
 /* MDIO Host Variables */
 uint16 HostAddress    = BASE_MDIO_ADDRESS;    /* Address data for the MDIO frames */
@@ -39,10 +55,12 @@ uint16 HostData       = 0x0000;               /* Read data for the MDIO frames *
 //static   uint16 myCounter = 0;          /* Global counter incremented in main loop */
 //static   uint8  myState = STATE_READ;  /* State variable. Default state is WRITE */
 /* Device Address of MDIO Interface (constant) */
-static const uint8  MdioDevAddr = 0x01; 
-static const uint8  MdioPhyAddr = 0x1f;
+static const uint8  MdioDevAddr = 0x01; //PMA/PMD
+static const uint8  MdioPhyAddr = 0x04;
+/* Local prototypes */
+void fillUpReadOnlyRegisters(void);
 
-
+uint16 read_MDIO_data=0;
 
 int main(void)
 {
@@ -52,7 +70,7 @@ int main(void)
     CyGlobalIntEnable; /* Enable global interrupts. */
 
     uint16 count;
-    uint8 buffer[USBUART_BUFFER_SIZE];
+    uint8 buffer[USBUART_BUFFER_SIZE], strk[10];
     
 
     uint8 state;
@@ -75,6 +93,7 @@ int main(void)
    /* Place your initialization/startup code here (e.g. MyInst_Start()) */
     Clock_2_Enable();
     Clock_1_Enable();
+    Clock_3_Enable();
     PWM_1_Start();
     PWM_2_Start();
    LCD_PrintString("TEST");
@@ -82,9 +101,29 @@ int main(void)
     LCD_PrintString("MDIO host");
 //   ISR_Start();
     
+    /* Start MDIO Components */
+    MDIO_Interface_Start();
+
+
+    /* Start ISRs */
+//    DAT_ISR_StartEx (DAT_ISR_Handler);
+//    ADDR_ISR_StartEx(ADDR_ISR_Handler);
+//    COR_ISR_StartEx (COR_ISR_Handler);
+
+    /* Set read only registers */
+    fillUpReadOnlyRegisters();
+    
+    
     for(;;)
     {
-      //  CyDelay(2000);
+        /* Get the data from the current address */
+        status = MDIO_Interface_GetData(myAddress, &myData, 1);
+    
+        if (status)
+        {   /* Invalid data or address not supported */
+            myData = 0x0000;
+        }  
+        
         /* Host can send double SET_INTERFACE request. */
         if (0u != USBUART_1_IsConfigurationChanged())
         {
@@ -114,21 +153,31 @@ int main(void)
                     }
                     
                     /* Send data back to host. */
-                    USBUART_1_PutData(buffer, count);
-
-                    /* Send address frame */
-MDIO_host_2_WriteDataC45( MDIO_host_2_C45_ADDR, MdioPhyAddr, MdioDevAddr, HostAddress );
-                       	/* Start Transmission */
-//                    if(test)
-//                    {
-// //  	MDIO_host_2_CONTROL_REG |= MDIO_host_2_START;
-//                    }
-//                    else
-//                    {
-// //  MDIO_host_2_CONTROL_REG &= ~MDIO_host_2_START;
-//                    }
-//                    test =~test;
-//                    LED_3_Write(test);
+   //                 USBUART_1_PutData( buffer, count);
+                    
+                    if(buffer[0] == 'q')/* Send address frame */                    
+                    {
+                         USBUART_1_PutString("SET MDIO address: 0x8000\n\r");
+                        MDIO_host_2_SetAddrC45( MdioPhyAddr, MdioDevAddr, BASE_MDIO_ADDRESS );
+                        LCD_Position(0,0);
+                        LCD_PrintString("ADR:");
+                        LCD_PrintInt16(BASE_MDIO_ADDRESS);
+                    }
+                    else
+                    if(buffer[0] == 'w')/* Send address frame */                    
+                    {
+                         USBUART_1_PutString("Read MDIO:");
+                        MDIO_host_2_ReadDataC45( MdioPhyAddr, MdioDevAddr, &read_MDIO_data );
+                        LCD_Position(1,0);
+                        LCD_PrintString("RD:");
+                        LCD_PrintInt16(read_MDIO_data);
+                        sprintf((char *)strk,"0x%04X\n\r",read_MDIO_data);
+                         USBUART_1_PutString((const char *)strk);
+                    }
+                    else
+                    {
+                         USBUART_1_PutString("unknown data (only 'q', 'w' implemented)\n\r");
+                    }
                     /* If the last sent packet is exactly the maximum packet 
                     *  size, it is followed by a zero-length packet to assure
                     *  that the end of the segment is properly identified by 
@@ -152,23 +201,6 @@ MDIO_host_2_WriteDataC45( MDIO_host_2_C45_ADDR, MdioPhyAddr, MdioDevAddr, HostAd
             state = USBUART_1_IsLineChanged();
             if (0u != state)
             {
-                /* Output on LCD Line Coding settings. */
-                if (0u != (state & USBUART_1_LINE_CODING_CHANGED))
-                {                  
-                    /* Get string to output. */
-//                    sprintf(lineStr,"BR:%4ld %d%c%s", USBUART_1_GetDTERate(),\
-//                                   (uint16) USBUART_1_GetDataBits(),\
-//                                   parity[(uint16) USBUART_1_GetParityType()][0],\
-//                                   stop[(uint16) USBUART_1_GetCharFormat()]);
-
-//                    /* Clear LCD line. */
-//                    LCD_Position(0u, 0u);
-//                    LCD_PrintString("                    ");
-//
-//                    /* Output string on LCD. */
-//                    LCD_Position(0u, 0u);
-//                    LCD_PrintString(lineStr);
-                }
 
                 /* Output on LCD Line Control settings. */
                 if (0u != (state & USBUART_1_LINE_CONTROL_CHANGED))
@@ -255,5 +287,97 @@ MDIO_host_2_WriteDataC45( MDIO_host_2_C45_ADDR, MdioPhyAddr, MdioDevAddr, HostAd
        // myState = !myState;
     }
 }
+
+/*******************************************************************************
+* Function Name: fillUpReadOnlyRegisters
+********************************************************************************
+* Summary:
+*  Fill all the the read only registers from the CFP Register Allocation table.
+*  The values are generated based on the initial RANDOM_CONST
+* 
+* Parameters:
+*  None
+*
+* Return:
+*  None
+*
+********************************************************************************/
+void fillUpReadOnlyRegisters(void)
+{
+    uint16 index;
+    uint16 randomData = RANDOM_CONST;
+    
+    /* Fill up CFP NVR Register set */
+    for (index=0; index < (MDIO_Interface_REG_PAGE_1_SIZE-1); index+=2)
+    {
+        MDIO_Interface_SetData(MDIO_Interface_CFP_NVR_START+index, &randomData, 1);    
+        randomData = randomData + index;
+        CyDelayUs(10);
+    }
+    
+    /* Fill up Vendor NVR Register set */
+    for (index=0; index < (MDIO_Interface_REG_PAGE_2_SIZE-1); index+=2)
+    {
+        MDIO_Interface_SetData(MDIO_Interface_VENDOR_NVR_START+index, &randomData, 1);    
+        randomData = randomData + index;
+        CyDelayUs(10);
+    }   
+}
+
+/*******************************************************************************
+* Function Name: DAT_ISR_Handler
+********************************************************************************
+* Summary:
+*  The interrupt handler for DAT_ISR. It only sets an internal data flag.
+* 
+* Parameters:
+*  None
+*
+* Return:
+*  None
+*
+********************************************************************************/
+CY_ISR(DAT_ISR_Handler)
+{
+    dataFlag = 1;
+}
+
+/*******************************************************************************
+* Function Name: ADR_ISR_Handler
+********************************************************************************
+* Summary:
+*  The interrupt handler for ADR_ISR. It updates the current address.
+* 
+* Parameters:
+*  None
+*
+* Return:
+*  None
+*
+********************************************************************************/
+CY_ISR(ADDR_ISR_Handler)
+{
+    /* Get Current address */
+    myAddress = MDIO_Interface_GetAddress(); 
+}
+
+/*******************************************************************************
+* Function Name: COR_ISR_Handler
+********************************************************************************
+* Summary:
+*  Interrupt handler for COR_ISR. It only sets an internal COR flag.
+* 
+* Parameters:
+*  None
+*
+* Return:
+*  None
+*
+********************************************************************************/
+CY_ISR(COR_ISR_Handler)
+{
+    corFlag = 1;
+}
+
 
 /* [] END OF FILE */

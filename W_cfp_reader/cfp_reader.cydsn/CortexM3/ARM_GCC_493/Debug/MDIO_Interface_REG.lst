@@ -1,0 +1,3211 @@
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"MDIO_Interface_REG.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global	MDIO_Interface_pageInfoPtr
+  19              		.global	MDIO_Interface_registerConfig_6
+  20              		.global	MDIO_Interface_registerConfig_5
+  21              		.global	MDIO_Interface_registerConfig_4
+  22              		.global	MDIO_Interface_registerConfig_3
+  23              		.global	MDIO_Interface_registerConfig_2
+  24              		.global	MDIO_Interface_registerConfig_1
+  25              		.comm	MDIO_Interface_registerPage_6,256,4
+  26              		.comm	MDIO_Interface_registerPage_5,512,4
+  27              		.comm	MDIO_Interface_registerPage_4,256,4
+  28              		.comm	MDIO_Interface_registerPage_3,256,4
+  29              		.comm	MDIO_Interface_registerPage_2,256,4
+  30              		.comm	MDIO_Interface_registerPage_1,512,4
+  31              		.section	.rodata
+  32              		.align	2
+  33              		.type	MDIO_Interface_pageInfoPtr, %object
+  34              		.size	MDIO_Interface_pageInfoPtr, 48
+  35              	MDIO_Interface_pageInfoPtr:
+  36 0000 00000000 		.word	MDIO_Interface_registerPage_1
+  37 0004 00000000 		.word	MDIO_Interface_registerConfig_1
+  38 0008 00000000 		.word	MDIO_Interface_registerPage_2
+  39 000c 00000000 		.word	MDIO_Interface_registerConfig_2
+  40 0010 00000000 		.word	MDIO_Interface_registerPage_3
+  41 0014 00000000 		.word	MDIO_Interface_registerConfig_3
+  42 0018 00000000 		.word	MDIO_Interface_registerPage_4
+  43 001c 00000000 		.word	MDIO_Interface_registerConfig_4
+  44 0020 00000000 		.word	MDIO_Interface_registerPage_5
+  45 0024 00000000 		.word	MDIO_Interface_registerConfig_5
+  46 0028 00000000 		.word	MDIO_Interface_registerPage_6
+  47 002c 00000000 		.word	MDIO_Interface_registerConfig_6
+  48              		.type	MDIO_Interface_registerConfig_4, %object
+  49              		.size	MDIO_Interface_registerConfig_4, 512
+  50              	MDIO_Interface_registerConfig_4:
+  51 0030 0000     		.short	0
+  52 0032 08       		.byte	8
+  53 0033 00       		.byte	0
+  54 0034 FF00     		.short	255
+  55 0036 02       		.byte	2
+  56 0037 00       		.byte	0
+  57 0038 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 2
+
+
+  58 003a 02       		.byte	2
+  59 003b 00       		.byte	0
+  60 003c FF00     		.short	255
+  61 003e 02       		.byte	2
+  62 003f 00       		.byte	0
+  63 0040 FF00     		.short	255
+  64 0042 02       		.byte	2
+  65 0043 00       		.byte	0
+  66 0044 FF00     		.short	255
+  67 0046 02       		.byte	2
+  68 0047 00       		.byte	0
+  69 0048 FF00     		.short	255
+  70 004a 02       		.byte	2
+  71 004b 00       		.byte	0
+  72 004c FF00     		.short	255
+  73 004e 02       		.byte	2
+  74 004f 00       		.byte	0
+  75 0050 FF00     		.short	255
+  76 0052 02       		.byte	2
+  77 0053 00       		.byte	0
+  78 0054 FF00     		.short	255
+  79 0056 02       		.byte	2
+  80 0057 00       		.byte	0
+  81 0058 FF00     		.short	255
+  82 005a 02       		.byte	2
+  83 005b 00       		.byte	0
+  84 005c FF00     		.short	255
+  85 005e 02       		.byte	2
+  86 005f 00       		.byte	0
+  87 0060 FF00     		.short	255
+  88 0062 02       		.byte	2
+  89 0063 00       		.byte	0
+  90 0064 FF00     		.short	255
+  91 0066 02       		.byte	2
+  92 0067 00       		.byte	0
+  93 0068 FF00     		.short	255
+  94 006a 02       		.byte	2
+  95 006b 00       		.byte	0
+  96 006c FF00     		.short	255
+  97 006e 02       		.byte	2
+  98 006f 00       		.byte	0
+  99 0070 FF00     		.short	255
+ 100 0072 02       		.byte	2
+ 101 0073 00       		.byte	0
+ 102 0074 FF00     		.short	255
+ 103 0076 02       		.byte	2
+ 104 0077 00       		.byte	0
+ 105 0078 FF00     		.short	255
+ 106 007a 02       		.byte	2
+ 107 007b 00       		.byte	0
+ 108 007c FF00     		.short	255
+ 109 007e 02       		.byte	2
+ 110 007f 00       		.byte	0
+ 111 0080 FF00     		.short	255
+ 112 0082 02       		.byte	2
+ 113 0083 00       		.byte	0
+ 114 0084 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 3
+
+
+ 115 0086 02       		.byte	2
+ 116 0087 00       		.byte	0
+ 117 0088 FF00     		.short	255
+ 118 008a 02       		.byte	2
+ 119 008b 00       		.byte	0
+ 120 008c FF00     		.short	255
+ 121 008e 02       		.byte	2
+ 122 008f 00       		.byte	0
+ 123 0090 FF00     		.short	255
+ 124 0092 02       		.byte	2
+ 125 0093 00       		.byte	0
+ 126 0094 FF00     		.short	255
+ 127 0096 02       		.byte	2
+ 128 0097 00       		.byte	0
+ 129 0098 FF00     		.short	255
+ 130 009a 02       		.byte	2
+ 131 009b 00       		.byte	0
+ 132 009c FF00     		.short	255
+ 133 009e 02       		.byte	2
+ 134 009f 00       		.byte	0
+ 135 00a0 FF00     		.short	255
+ 136 00a2 02       		.byte	2
+ 137 00a3 00       		.byte	0
+ 138 00a4 FF00     		.short	255
+ 139 00a6 02       		.byte	2
+ 140 00a7 00       		.byte	0
+ 141 00a8 FF00     		.short	255
+ 142 00aa 02       		.byte	2
+ 143 00ab 00       		.byte	0
+ 144 00ac FF00     		.short	255
+ 145 00ae 02       		.byte	2
+ 146 00af 00       		.byte	0
+ 147 00b0 FF00     		.short	255
+ 148 00b2 02       		.byte	2
+ 149 00b3 00       		.byte	0
+ 150 00b4 FF00     		.short	255
+ 151 00b6 02       		.byte	2
+ 152 00b7 00       		.byte	0
+ 153 00b8 FF00     		.short	255
+ 154 00ba 02       		.byte	2
+ 155 00bb 00       		.byte	0
+ 156 00bc FF00     		.short	255
+ 157 00be 02       		.byte	2
+ 158 00bf 00       		.byte	0
+ 159 00c0 FF00     		.short	255
+ 160 00c2 02       		.byte	2
+ 161 00c3 00       		.byte	0
+ 162 00c4 FF00     		.short	255
+ 163 00c6 02       		.byte	2
+ 164 00c7 00       		.byte	0
+ 165 00c8 FF00     		.short	255
+ 166 00ca 02       		.byte	2
+ 167 00cb 00       		.byte	0
+ 168 00cc FF00     		.short	255
+ 169 00ce 02       		.byte	2
+ 170 00cf 00       		.byte	0
+ 171 00d0 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 4
+
+
+ 172 00d2 02       		.byte	2
+ 173 00d3 00       		.byte	0
+ 174 00d4 FF00     		.short	255
+ 175 00d6 02       		.byte	2
+ 176 00d7 00       		.byte	0
+ 177 00d8 FF00     		.short	255
+ 178 00da 02       		.byte	2
+ 179 00db 00       		.byte	0
+ 180 00dc FF00     		.short	255
+ 181 00de 02       		.byte	2
+ 182 00df 00       		.byte	0
+ 183 00e0 FF00     		.short	255
+ 184 00e2 02       		.byte	2
+ 185 00e3 00       		.byte	0
+ 186 00e4 FF00     		.short	255
+ 187 00e6 02       		.byte	2
+ 188 00e7 00       		.byte	0
+ 189 00e8 FF00     		.short	255
+ 190 00ea 02       		.byte	2
+ 191 00eb 00       		.byte	0
+ 192 00ec FF00     		.short	255
+ 193 00ee 02       		.byte	2
+ 194 00ef 00       		.byte	0
+ 195 00f0 FF00     		.short	255
+ 196 00f2 02       		.byte	2
+ 197 00f3 00       		.byte	0
+ 198 00f4 FF00     		.short	255
+ 199 00f6 02       		.byte	2
+ 200 00f7 00       		.byte	0
+ 201 00f8 FF00     		.short	255
+ 202 00fa 02       		.byte	2
+ 203 00fb 00       		.byte	0
+ 204 00fc FF00     		.short	255
+ 205 00fe 02       		.byte	2
+ 206 00ff 00       		.byte	0
+ 207 0100 FF00     		.short	255
+ 208 0102 02       		.byte	2
+ 209 0103 00       		.byte	0
+ 210 0104 FF00     		.short	255
+ 211 0106 02       		.byte	2
+ 212 0107 00       		.byte	0
+ 213 0108 FF00     		.short	255
+ 214 010a 02       		.byte	2
+ 215 010b 00       		.byte	0
+ 216 010c FF00     		.short	255
+ 217 010e 02       		.byte	2
+ 218 010f 00       		.byte	0
+ 219 0110 FF00     		.short	255
+ 220 0112 02       		.byte	2
+ 221 0113 00       		.byte	0
+ 222 0114 FF00     		.short	255
+ 223 0116 02       		.byte	2
+ 224 0117 00       		.byte	0
+ 225 0118 FF00     		.short	255
+ 226 011a 02       		.byte	2
+ 227 011b 00       		.byte	0
+ 228 011c FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 5
+
+
+ 229 011e 02       		.byte	2
+ 230 011f 00       		.byte	0
+ 231 0120 FF00     		.short	255
+ 232 0122 02       		.byte	2
+ 233 0123 00       		.byte	0
+ 234 0124 FF00     		.short	255
+ 235 0126 02       		.byte	2
+ 236 0127 00       		.byte	0
+ 237 0128 FF00     		.short	255
+ 238 012a 02       		.byte	2
+ 239 012b 00       		.byte	0
+ 240 012c FF00     		.short	255
+ 241 012e 02       		.byte	2
+ 242 012f 00       		.byte	0
+ 243 0130 FF00     		.short	255
+ 244 0132 02       		.byte	2
+ 245 0133 00       		.byte	0
+ 246 0134 FF00     		.short	255
+ 247 0136 02       		.byte	2
+ 248 0137 00       		.byte	0
+ 249 0138 FF00     		.short	255
+ 250 013a 02       		.byte	2
+ 251 013b 00       		.byte	0
+ 252 013c FF00     		.short	255
+ 253 013e 02       		.byte	2
+ 254 013f 00       		.byte	0
+ 255 0140 FF00     		.short	255
+ 256 0142 02       		.byte	2
+ 257 0143 00       		.byte	0
+ 258 0144 FF00     		.short	255
+ 259 0146 02       		.byte	2
+ 260 0147 00       		.byte	0
+ 261 0148 FF00     		.short	255
+ 262 014a 02       		.byte	2
+ 263 014b 00       		.byte	0
+ 264 014c FF00     		.short	255
+ 265 014e 02       		.byte	2
+ 266 014f 00       		.byte	0
+ 267 0150 FF00     		.short	255
+ 268 0152 02       		.byte	2
+ 269 0153 00       		.byte	0
+ 270 0154 FF00     		.short	255
+ 271 0156 02       		.byte	2
+ 272 0157 00       		.byte	0
+ 273 0158 FF00     		.short	255
+ 274 015a 02       		.byte	2
+ 275 015b 00       		.byte	0
+ 276 015c FF00     		.short	255
+ 277 015e 02       		.byte	2
+ 278 015f 00       		.byte	0
+ 279 0160 FF00     		.short	255
+ 280 0162 02       		.byte	2
+ 281 0163 00       		.byte	0
+ 282 0164 FF00     		.short	255
+ 283 0166 02       		.byte	2
+ 284 0167 00       		.byte	0
+ 285 0168 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 6
+
+
+ 286 016a 02       		.byte	2
+ 287 016b 00       		.byte	0
+ 288 016c FF00     		.short	255
+ 289 016e 02       		.byte	2
+ 290 016f 00       		.byte	0
+ 291 0170 FF00     		.short	255
+ 292 0172 02       		.byte	2
+ 293 0173 00       		.byte	0
+ 294 0174 FF00     		.short	255
+ 295 0176 02       		.byte	2
+ 296 0177 00       		.byte	0
+ 297 0178 FF00     		.short	255
+ 298 017a 02       		.byte	2
+ 299 017b 00       		.byte	0
+ 300 017c FF00     		.short	255
+ 301 017e 02       		.byte	2
+ 302 017f 00       		.byte	0
+ 303 0180 FF00     		.short	255
+ 304 0182 02       		.byte	2
+ 305 0183 00       		.byte	0
+ 306 0184 FF00     		.short	255
+ 307 0186 02       		.byte	2
+ 308 0187 00       		.byte	0
+ 309 0188 FF00     		.short	255
+ 310 018a 02       		.byte	2
+ 311 018b 00       		.byte	0
+ 312 018c FF00     		.short	255
+ 313 018e 02       		.byte	2
+ 314 018f 00       		.byte	0
+ 315 0190 FF00     		.short	255
+ 316 0192 02       		.byte	2
+ 317 0193 00       		.byte	0
+ 318 0194 FF00     		.short	255
+ 319 0196 02       		.byte	2
+ 320 0197 00       		.byte	0
+ 321 0198 FF00     		.short	255
+ 322 019a 02       		.byte	2
+ 323 019b 00       		.byte	0
+ 324 019c FF00     		.short	255
+ 325 019e 02       		.byte	2
+ 326 019f 00       		.byte	0
+ 327 01a0 FF00     		.short	255
+ 328 01a2 02       		.byte	2
+ 329 01a3 00       		.byte	0
+ 330 01a4 FF00     		.short	255
+ 331 01a6 02       		.byte	2
+ 332 01a7 00       		.byte	0
+ 333 01a8 FF00     		.short	255
+ 334 01aa 02       		.byte	2
+ 335 01ab 00       		.byte	0
+ 336 01ac FF00     		.short	255
+ 337 01ae 02       		.byte	2
+ 338 01af 00       		.byte	0
+ 339 01b0 FF00     		.short	255
+ 340 01b2 02       		.byte	2
+ 341 01b3 00       		.byte	0
+ 342 01b4 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 7
+
+
+ 343 01b6 02       		.byte	2
+ 344 01b7 00       		.byte	0
+ 345 01b8 FF00     		.short	255
+ 346 01ba 02       		.byte	2
+ 347 01bb 00       		.byte	0
+ 348 01bc FF00     		.short	255
+ 349 01be 02       		.byte	2
+ 350 01bf 00       		.byte	0
+ 351 01c0 FF00     		.short	255
+ 352 01c2 02       		.byte	2
+ 353 01c3 00       		.byte	0
+ 354 01c4 FF00     		.short	255
+ 355 01c6 02       		.byte	2
+ 356 01c7 00       		.byte	0
+ 357 01c8 FF00     		.short	255
+ 358 01ca 02       		.byte	2
+ 359 01cb 00       		.byte	0
+ 360 01cc FF00     		.short	255
+ 361 01ce 02       		.byte	2
+ 362 01cf 00       		.byte	0
+ 363 01d0 FF00     		.short	255
+ 364 01d2 02       		.byte	2
+ 365 01d3 00       		.byte	0
+ 366 01d4 FF00     		.short	255
+ 367 01d6 02       		.byte	2
+ 368 01d7 00       		.byte	0
+ 369 01d8 FF00     		.short	255
+ 370 01da 02       		.byte	2
+ 371 01db 00       		.byte	0
+ 372 01dc FF00     		.short	255
+ 373 01de 02       		.byte	2
+ 374 01df 00       		.byte	0
+ 375 01e0 FF00     		.short	255
+ 376 01e2 02       		.byte	2
+ 377 01e3 00       		.byte	0
+ 378 01e4 FF00     		.short	255
+ 379 01e6 02       		.byte	2
+ 380 01e7 00       		.byte	0
+ 381 01e8 FF00     		.short	255
+ 382 01ea 02       		.byte	2
+ 383 01eb 00       		.byte	0
+ 384 01ec FF00     		.short	255
+ 385 01ee 02       		.byte	2
+ 386 01ef 00       		.byte	0
+ 387 01f0 FF00     		.short	255
+ 388 01f2 02       		.byte	2
+ 389 01f3 00       		.byte	0
+ 390 01f4 FF00     		.short	255
+ 391 01f6 02       		.byte	2
+ 392 01f7 00       		.byte	0
+ 393 01f8 FF00     		.short	255
+ 394 01fa 02       		.byte	2
+ 395 01fb 00       		.byte	0
+ 396 01fc FF00     		.short	255
+ 397 01fe 02       		.byte	2
+ 398 01ff 00       		.byte	0
+ 399 0200 FF00     		.short	255
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 8
+
+
+ 400 0202 02       		.byte	2
+ 401 0203 00       		.byte	0
+ 402 0204 FF00     		.short	255
+ 403 0206 02       		.byte	2
+ 404 0207 00       		.byte	0
+ 405 0208 FF00     		.short	255
+ 406 020a 02       		.byte	2
+ 407 020b 00       		.byte	0
+ 408 020c FF00     		.short	255
+ 409 020e 02       		.byte	2
+ 410 020f 00       		.byte	0
+ 411 0210 FF00     		.short	255
+ 412 0212 02       		.byte	2
+ 413 0213 00       		.byte	0
+ 414 0214 FF00     		.short	255
+ 415 0216 02       		.byte	2
+ 416 0217 00       		.byte	0
+ 417 0218 FF00     		.short	255
+ 418 021a 02       		.byte	2
+ 419 021b 00       		.byte	0
+ 420 021c FF00     		.short	255
+ 421 021e 02       		.byte	2
+ 422 021f 00       		.byte	0
+ 423 0220 FF00     		.short	255
+ 424 0222 02       		.byte	2
+ 425 0223 00       		.byte	0
+ 426 0224 FF00     		.short	255
+ 427 0226 02       		.byte	2
+ 428 0227 00       		.byte	0
+ 429 0228 FF00     		.short	255
+ 430 022a 02       		.byte	2
+ 431 022b 00       		.byte	0
+ 432 022c FF00     		.short	255
+ 433 022e 02       		.byte	2
+ 434 022f 00       		.byte	0
+ 435              		.type	MDIO_Interface_registerConfig_3, %object
+ 436              		.size	MDIO_Interface_registerConfig_3, 1024
+ 437              	MDIO_Interface_registerConfig_3:
+ 438 0230 FFFF     		.short	-1
+ 439 0232 02       		.byte	2
+ 440 0233 00       		.byte	0
+ 441 0234 FFFF     		.short	-1
+ 442 0236 02       		.byte	2
+ 443 0237 00       		.byte	0
+ 444 0238 FFFF     		.short	-1
+ 445 023a 02       		.byte	2
+ 446 023b 00       		.byte	0
+ 447 023c FFFF     		.short	-1
+ 448 023e 02       		.byte	2
+ 449 023f 00       		.byte	0
+ 450 0240 FFFF     		.short	-1
+ 451 0242 02       		.byte	2
+ 452 0243 00       		.byte	0
+ 453 0244 FFFF     		.short	-1
+ 454 0246 02       		.byte	2
+ 455 0247 00       		.byte	0
+ 456 0248 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 9
+
+
+ 457 024a 02       		.byte	2
+ 458 024b 00       		.byte	0
+ 459 024c FFFF     		.short	-1
+ 460 024e 02       		.byte	2
+ 461 024f 00       		.byte	0
+ 462 0250 FFFF     		.short	-1
+ 463 0252 02       		.byte	2
+ 464 0253 00       		.byte	0
+ 465 0254 FFFF     		.short	-1
+ 466 0256 02       		.byte	2
+ 467 0257 00       		.byte	0
+ 468 0258 FFFF     		.short	-1
+ 469 025a 02       		.byte	2
+ 470 025b 00       		.byte	0
+ 471 025c FFFF     		.short	-1
+ 472 025e 02       		.byte	2
+ 473 025f 00       		.byte	0
+ 474 0260 FFFF     		.short	-1
+ 475 0262 02       		.byte	2
+ 476 0263 00       		.byte	0
+ 477 0264 FFFF     		.short	-1
+ 478 0266 02       		.byte	2
+ 479 0267 00       		.byte	0
+ 480 0268 FFFF     		.short	-1
+ 481 026a 02       		.byte	2
+ 482 026b 00       		.byte	0
+ 483 026c FFFF     		.short	-1
+ 484 026e 02       		.byte	2
+ 485 026f 00       		.byte	0
+ 486 0270 FFFF     		.short	-1
+ 487 0272 02       		.byte	2
+ 488 0273 00       		.byte	0
+ 489 0274 FFFF     		.short	-1
+ 490 0276 02       		.byte	2
+ 491 0277 00       		.byte	0
+ 492 0278 FFFF     		.short	-1
+ 493 027a 02       		.byte	2
+ 494 027b 00       		.byte	0
+ 495 027c FFFF     		.short	-1
+ 496 027e 02       		.byte	2
+ 497 027f 00       		.byte	0
+ 498 0280 FFFF     		.short	-1
+ 499 0282 02       		.byte	2
+ 500 0283 00       		.byte	0
+ 501 0284 FFFF     		.short	-1
+ 502 0286 02       		.byte	2
+ 503 0287 00       		.byte	0
+ 504 0288 FFFF     		.short	-1
+ 505 028a 02       		.byte	2
+ 506 028b 00       		.byte	0
+ 507 028c FFFF     		.short	-1
+ 508 028e 02       		.byte	2
+ 509 028f 00       		.byte	0
+ 510 0290 FFFF     		.short	-1
+ 511 0292 02       		.byte	2
+ 512 0293 00       		.byte	0
+ 513 0294 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 10
+
+
+ 514 0296 02       		.byte	2
+ 515 0297 00       		.byte	0
+ 516 0298 FFFF     		.short	-1
+ 517 029a 02       		.byte	2
+ 518 029b 00       		.byte	0
+ 519 029c FFFF     		.short	-1
+ 520 029e 02       		.byte	2
+ 521 029f 00       		.byte	0
+ 522 02a0 FFFF     		.short	-1
+ 523 02a2 02       		.byte	2
+ 524 02a3 00       		.byte	0
+ 525 02a4 FFFF     		.short	-1
+ 526 02a6 02       		.byte	2
+ 527 02a7 00       		.byte	0
+ 528 02a8 FFFF     		.short	-1
+ 529 02aa 02       		.byte	2
+ 530 02ab 00       		.byte	0
+ 531 02ac FFFF     		.short	-1
+ 532 02ae 02       		.byte	2
+ 533 02af 00       		.byte	0
+ 534 02b0 FFFF     		.short	-1
+ 535 02b2 02       		.byte	2
+ 536 02b3 00       		.byte	0
+ 537 02b4 FFFF     		.short	-1
+ 538 02b6 02       		.byte	2
+ 539 02b7 00       		.byte	0
+ 540 02b8 FFFF     		.short	-1
+ 541 02ba 02       		.byte	2
+ 542 02bb 00       		.byte	0
+ 543 02bc FFFF     		.short	-1
+ 544 02be 02       		.byte	2
+ 545 02bf 00       		.byte	0
+ 546 02c0 FFFF     		.short	-1
+ 547 02c2 02       		.byte	2
+ 548 02c3 00       		.byte	0
+ 549 02c4 FFFF     		.short	-1
+ 550 02c6 02       		.byte	2
+ 551 02c7 00       		.byte	0
+ 552 02c8 FFFF     		.short	-1
+ 553 02ca 02       		.byte	2
+ 554 02cb 00       		.byte	0
+ 555 02cc FFFF     		.short	-1
+ 556 02ce 02       		.byte	2
+ 557 02cf 00       		.byte	0
+ 558 02d0 FFFF     		.short	-1
+ 559 02d2 02       		.byte	2
+ 560 02d3 00       		.byte	0
+ 561 02d4 FFFF     		.short	-1
+ 562 02d6 02       		.byte	2
+ 563 02d7 00       		.byte	0
+ 564 02d8 FFFF     		.short	-1
+ 565 02da 02       		.byte	2
+ 566 02db 00       		.byte	0
+ 567 02dc FFFF     		.short	-1
+ 568 02de 02       		.byte	2
+ 569 02df 00       		.byte	0
+ 570 02e0 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 11
+
+
+ 571 02e2 02       		.byte	2
+ 572 02e3 00       		.byte	0
+ 573 02e4 FFFF     		.short	-1
+ 574 02e6 02       		.byte	2
+ 575 02e7 00       		.byte	0
+ 576 02e8 FFFF     		.short	-1
+ 577 02ea 02       		.byte	2
+ 578 02eb 00       		.byte	0
+ 579 02ec FFFF     		.short	-1
+ 580 02ee 02       		.byte	2
+ 581 02ef 00       		.byte	0
+ 582 02f0 FFFF     		.short	-1
+ 583 02f2 02       		.byte	2
+ 584 02f3 00       		.byte	0
+ 585 02f4 FFFF     		.short	-1
+ 586 02f6 02       		.byte	2
+ 587 02f7 00       		.byte	0
+ 588 02f8 FFFF     		.short	-1
+ 589 02fa 02       		.byte	2
+ 590 02fb 00       		.byte	0
+ 591 02fc FFFF     		.short	-1
+ 592 02fe 02       		.byte	2
+ 593 02ff 00       		.byte	0
+ 594 0300 FFFF     		.short	-1
+ 595 0302 02       		.byte	2
+ 596 0303 00       		.byte	0
+ 597 0304 FFFF     		.short	-1
+ 598 0306 02       		.byte	2
+ 599 0307 00       		.byte	0
+ 600 0308 FFFF     		.short	-1
+ 601 030a 02       		.byte	2
+ 602 030b 00       		.byte	0
+ 603 030c FFFF     		.short	-1
+ 604 030e 02       		.byte	2
+ 605 030f 00       		.byte	0
+ 606 0310 FFFF     		.short	-1
+ 607 0312 02       		.byte	2
+ 608 0313 00       		.byte	0
+ 609 0314 FFFF     		.short	-1
+ 610 0316 02       		.byte	2
+ 611 0317 00       		.byte	0
+ 612 0318 FFFF     		.short	-1
+ 613 031a 02       		.byte	2
+ 614 031b 00       		.byte	0
+ 615 031c FFFF     		.short	-1
+ 616 031e 02       		.byte	2
+ 617 031f 00       		.byte	0
+ 618 0320 FFFF     		.short	-1
+ 619 0322 02       		.byte	2
+ 620 0323 00       		.byte	0
+ 621 0324 FFFF     		.short	-1
+ 622 0326 02       		.byte	2
+ 623 0327 00       		.byte	0
+ 624 0328 FFFF     		.short	-1
+ 625 032a 02       		.byte	2
+ 626 032b 00       		.byte	0
+ 627 032c FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 12
+
+
+ 628 032e 02       		.byte	2
+ 629 032f 00       		.byte	0
+ 630 0330 FFFF     		.short	-1
+ 631 0332 02       		.byte	2
+ 632 0333 00       		.byte	0
+ 633 0334 FFFF     		.short	-1
+ 634 0336 02       		.byte	2
+ 635 0337 00       		.byte	0
+ 636 0338 FFFF     		.short	-1
+ 637 033a 02       		.byte	2
+ 638 033b 00       		.byte	0
+ 639 033c FFFF     		.short	-1
+ 640 033e 02       		.byte	2
+ 641 033f 00       		.byte	0
+ 642 0340 FFFF     		.short	-1
+ 643 0342 02       		.byte	2
+ 644 0343 00       		.byte	0
+ 645 0344 FFFF     		.short	-1
+ 646 0346 02       		.byte	2
+ 647 0347 00       		.byte	0
+ 648 0348 FFFF     		.short	-1
+ 649 034a 02       		.byte	2
+ 650 034b 00       		.byte	0
+ 651 034c FFFF     		.short	-1
+ 652 034e 02       		.byte	2
+ 653 034f 00       		.byte	0
+ 654 0350 FFFF     		.short	-1
+ 655 0352 02       		.byte	2
+ 656 0353 00       		.byte	0
+ 657 0354 FFFF     		.short	-1
+ 658 0356 02       		.byte	2
+ 659 0357 00       		.byte	0
+ 660 0358 FFFF     		.short	-1
+ 661 035a 02       		.byte	2
+ 662 035b 00       		.byte	0
+ 663 035c FFFF     		.short	-1
+ 664 035e 02       		.byte	2
+ 665 035f 00       		.byte	0
+ 666 0360 FFFF     		.short	-1
+ 667 0362 02       		.byte	2
+ 668 0363 00       		.byte	0
+ 669 0364 FFFF     		.short	-1
+ 670 0366 02       		.byte	2
+ 671 0367 00       		.byte	0
+ 672 0368 FFFF     		.short	-1
+ 673 036a 02       		.byte	2
+ 674 036b 00       		.byte	0
+ 675 036c FFFF     		.short	-1
+ 676 036e 02       		.byte	2
+ 677 036f 00       		.byte	0
+ 678 0370 FFFF     		.short	-1
+ 679 0372 02       		.byte	2
+ 680 0373 00       		.byte	0
+ 681 0374 FFFF     		.short	-1
+ 682 0376 02       		.byte	2
+ 683 0377 00       		.byte	0
+ 684 0378 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 13
+
+
+ 685 037a 02       		.byte	2
+ 686 037b 00       		.byte	0
+ 687 037c FFFF     		.short	-1
+ 688 037e 02       		.byte	2
+ 689 037f 00       		.byte	0
+ 690 0380 FFFF     		.short	-1
+ 691 0382 02       		.byte	2
+ 692 0383 00       		.byte	0
+ 693 0384 FFFF     		.short	-1
+ 694 0386 02       		.byte	2
+ 695 0387 00       		.byte	0
+ 696 0388 FFFF     		.short	-1
+ 697 038a 02       		.byte	2
+ 698 038b 00       		.byte	0
+ 699 038c FFFF     		.short	-1
+ 700 038e 02       		.byte	2
+ 701 038f 00       		.byte	0
+ 702 0390 FFFF     		.short	-1
+ 703 0392 02       		.byte	2
+ 704 0393 00       		.byte	0
+ 705 0394 FFFF     		.short	-1
+ 706 0396 02       		.byte	2
+ 707 0397 00       		.byte	0
+ 708 0398 FFFF     		.short	-1
+ 709 039a 02       		.byte	2
+ 710 039b 00       		.byte	0
+ 711 039c FFFF     		.short	-1
+ 712 039e 02       		.byte	2
+ 713 039f 00       		.byte	0
+ 714 03a0 FFFF     		.short	-1
+ 715 03a2 02       		.byte	2
+ 716 03a3 00       		.byte	0
+ 717 03a4 FFFF     		.short	-1
+ 718 03a6 02       		.byte	2
+ 719 03a7 00       		.byte	0
+ 720 03a8 FFFF     		.short	-1
+ 721 03aa 02       		.byte	2
+ 722 03ab 00       		.byte	0
+ 723 03ac FFFF     		.short	-1
+ 724 03ae 02       		.byte	2
+ 725 03af 00       		.byte	0
+ 726 03b0 FFFF     		.short	-1
+ 727 03b2 02       		.byte	2
+ 728 03b3 00       		.byte	0
+ 729 03b4 FFFF     		.short	-1
+ 730 03b6 02       		.byte	2
+ 731 03b7 00       		.byte	0
+ 732 03b8 FFFF     		.short	-1
+ 733 03ba 02       		.byte	2
+ 734 03bb 00       		.byte	0
+ 735 03bc FFFF     		.short	-1
+ 736 03be 02       		.byte	2
+ 737 03bf 00       		.byte	0
+ 738 03c0 FFFF     		.short	-1
+ 739 03c2 02       		.byte	2
+ 740 03c3 00       		.byte	0
+ 741 03c4 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 14
+
+
+ 742 03c6 02       		.byte	2
+ 743 03c7 00       		.byte	0
+ 744 03c8 FFFF     		.short	-1
+ 745 03ca 02       		.byte	2
+ 746 03cb 00       		.byte	0
+ 747 03cc FFFF     		.short	-1
+ 748 03ce 02       		.byte	2
+ 749 03cf 00       		.byte	0
+ 750 03d0 FFFF     		.short	-1
+ 751 03d2 02       		.byte	2
+ 752 03d3 00       		.byte	0
+ 753 03d4 FFFF     		.short	-1
+ 754 03d6 02       		.byte	2
+ 755 03d7 00       		.byte	0
+ 756 03d8 FFFF     		.short	-1
+ 757 03da 02       		.byte	2
+ 758 03db 00       		.byte	0
+ 759 03dc FFFF     		.short	-1
+ 760 03de 02       		.byte	2
+ 761 03df 00       		.byte	0
+ 762 03e0 FFFF     		.short	-1
+ 763 03e2 02       		.byte	2
+ 764 03e3 00       		.byte	0
+ 765 03e4 FFFF     		.short	-1
+ 766 03e6 02       		.byte	2
+ 767 03e7 00       		.byte	0
+ 768 03e8 FFFF     		.short	-1
+ 769 03ea 02       		.byte	2
+ 770 03eb 00       		.byte	0
+ 771 03ec FFFF     		.short	-1
+ 772 03ee 02       		.byte	2
+ 773 03ef 00       		.byte	0
+ 774 03f0 FFFF     		.short	-1
+ 775 03f2 02       		.byte	2
+ 776 03f3 00       		.byte	0
+ 777 03f4 FFFF     		.short	-1
+ 778 03f6 02       		.byte	2
+ 779 03f7 00       		.byte	0
+ 780 03f8 FFFF     		.short	-1
+ 781 03fa 02       		.byte	2
+ 782 03fb 00       		.byte	0
+ 783 03fc FFFF     		.short	-1
+ 784 03fe 02       		.byte	2
+ 785 03ff 00       		.byte	0
+ 786 0400 FFFF     		.short	-1
+ 787 0402 02       		.byte	2
+ 788 0403 00       		.byte	0
+ 789 0404 FFFF     		.short	-1
+ 790 0406 02       		.byte	2
+ 791 0407 00       		.byte	0
+ 792 0408 FFFF     		.short	-1
+ 793 040a 02       		.byte	2
+ 794 040b 00       		.byte	0
+ 795 040c FFFF     		.short	-1
+ 796 040e 02       		.byte	2
+ 797 040f 00       		.byte	0
+ 798 0410 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 15
+
+
+ 799 0412 02       		.byte	2
+ 800 0413 00       		.byte	0
+ 801 0414 FFFF     		.short	-1
+ 802 0416 02       		.byte	2
+ 803 0417 00       		.byte	0
+ 804 0418 FFFF     		.short	-1
+ 805 041a 02       		.byte	2
+ 806 041b 00       		.byte	0
+ 807 041c FFFF     		.short	-1
+ 808 041e 02       		.byte	2
+ 809 041f 00       		.byte	0
+ 810 0420 FFFF     		.short	-1
+ 811 0422 02       		.byte	2
+ 812 0423 00       		.byte	0
+ 813 0424 FFFF     		.short	-1
+ 814 0426 02       		.byte	2
+ 815 0427 00       		.byte	0
+ 816 0428 FFFF     		.short	-1
+ 817 042a 02       		.byte	2
+ 818 042b 00       		.byte	0
+ 819 042c FFFF     		.short	-1
+ 820 042e 02       		.byte	2
+ 821 042f 00       		.byte	0
+ 822 0430 FFFF     		.short	-1
+ 823 0432 02       		.byte	2
+ 824 0433 00       		.byte	0
+ 825 0434 FFFF     		.short	-1
+ 826 0436 02       		.byte	2
+ 827 0437 00       		.byte	0
+ 828 0438 FFFF     		.short	-1
+ 829 043a 02       		.byte	2
+ 830 043b 00       		.byte	0
+ 831 043c FFFF     		.short	-1
+ 832 043e 02       		.byte	2
+ 833 043f 00       		.byte	0
+ 834 0440 FFFF     		.short	-1
+ 835 0442 02       		.byte	2
+ 836 0443 00       		.byte	0
+ 837 0444 FFFF     		.short	-1
+ 838 0446 02       		.byte	2
+ 839 0447 00       		.byte	0
+ 840 0448 FFFF     		.short	-1
+ 841 044a 02       		.byte	2
+ 842 044b 00       		.byte	0
+ 843 044c FFFF     		.short	-1
+ 844 044e 02       		.byte	2
+ 845 044f 00       		.byte	0
+ 846 0450 FFFF     		.short	-1
+ 847 0452 02       		.byte	2
+ 848 0453 00       		.byte	0
+ 849 0454 FFFF     		.short	-1
+ 850 0456 02       		.byte	2
+ 851 0457 00       		.byte	0
+ 852 0458 FFFF     		.short	-1
+ 853 045a 02       		.byte	2
+ 854 045b 00       		.byte	0
+ 855 045c FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 16
+
+
+ 856 045e 02       		.byte	2
+ 857 045f 00       		.byte	0
+ 858 0460 FFFF     		.short	-1
+ 859 0462 02       		.byte	2
+ 860 0463 00       		.byte	0
+ 861 0464 FFFF     		.short	-1
+ 862 0466 02       		.byte	2
+ 863 0467 00       		.byte	0
+ 864 0468 FFFF     		.short	-1
+ 865 046a 02       		.byte	2
+ 866 046b 00       		.byte	0
+ 867 046c FFFF     		.short	-1
+ 868 046e 02       		.byte	2
+ 869 046f 00       		.byte	0
+ 870 0470 FFFF     		.short	-1
+ 871 0472 02       		.byte	2
+ 872 0473 00       		.byte	0
+ 873 0474 FFFF     		.short	-1
+ 874 0476 02       		.byte	2
+ 875 0477 00       		.byte	0
+ 876 0478 FFFF     		.short	-1
+ 877 047a 02       		.byte	2
+ 878 047b 00       		.byte	0
+ 879 047c FFFF     		.short	-1
+ 880 047e 02       		.byte	2
+ 881 047f 00       		.byte	0
+ 882 0480 FFFF     		.short	-1
+ 883 0482 02       		.byte	2
+ 884 0483 00       		.byte	0
+ 885 0484 FFFF     		.short	-1
+ 886 0486 02       		.byte	2
+ 887 0487 00       		.byte	0
+ 888 0488 FFFF     		.short	-1
+ 889 048a 02       		.byte	2
+ 890 048b 00       		.byte	0
+ 891 048c FFFF     		.short	-1
+ 892 048e 02       		.byte	2
+ 893 048f 00       		.byte	0
+ 894 0490 FFFF     		.short	-1
+ 895 0492 02       		.byte	2
+ 896 0493 00       		.byte	0
+ 897 0494 FFFF     		.short	-1
+ 898 0496 02       		.byte	2
+ 899 0497 00       		.byte	0
+ 900 0498 FFFF     		.short	-1
+ 901 049a 02       		.byte	2
+ 902 049b 00       		.byte	0
+ 903 049c FFFF     		.short	-1
+ 904 049e 02       		.byte	2
+ 905 049f 00       		.byte	0
+ 906 04a0 FFFF     		.short	-1
+ 907 04a2 02       		.byte	2
+ 908 04a3 00       		.byte	0
+ 909 04a4 FFFF     		.short	-1
+ 910 04a6 02       		.byte	2
+ 911 04a7 00       		.byte	0
+ 912 04a8 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 17
+
+
+ 913 04aa 02       		.byte	2
+ 914 04ab 00       		.byte	0
+ 915 04ac FFFF     		.short	-1
+ 916 04ae 02       		.byte	2
+ 917 04af 00       		.byte	0
+ 918 04b0 FFFF     		.short	-1
+ 919 04b2 02       		.byte	2
+ 920 04b3 00       		.byte	0
+ 921 04b4 FFFF     		.short	-1
+ 922 04b6 02       		.byte	2
+ 923 04b7 00       		.byte	0
+ 924 04b8 FFFF     		.short	-1
+ 925 04ba 02       		.byte	2
+ 926 04bb 00       		.byte	0
+ 927 04bc FFFF     		.short	-1
+ 928 04be 02       		.byte	2
+ 929 04bf 00       		.byte	0
+ 930 04c0 FFFF     		.short	-1
+ 931 04c2 02       		.byte	2
+ 932 04c3 00       		.byte	0
+ 933 04c4 FFFF     		.short	-1
+ 934 04c6 02       		.byte	2
+ 935 04c7 00       		.byte	0
+ 936 04c8 FFFF     		.short	-1
+ 937 04ca 02       		.byte	2
+ 938 04cb 00       		.byte	0
+ 939 04cc FFFF     		.short	-1
+ 940 04ce 02       		.byte	2
+ 941 04cf 00       		.byte	0
+ 942 04d0 FFFF     		.short	-1
+ 943 04d2 02       		.byte	2
+ 944 04d3 00       		.byte	0
+ 945 04d4 FFFF     		.short	-1
+ 946 04d6 02       		.byte	2
+ 947 04d7 00       		.byte	0
+ 948 04d8 FFFF     		.short	-1
+ 949 04da 02       		.byte	2
+ 950 04db 00       		.byte	0
+ 951 04dc FFFF     		.short	-1
+ 952 04de 02       		.byte	2
+ 953 04df 00       		.byte	0
+ 954 04e0 FFFF     		.short	-1
+ 955 04e2 02       		.byte	2
+ 956 04e3 00       		.byte	0
+ 957 04e4 FFFF     		.short	-1
+ 958 04e6 02       		.byte	2
+ 959 04e7 00       		.byte	0
+ 960 04e8 FFFF     		.short	-1
+ 961 04ea 02       		.byte	2
+ 962 04eb 00       		.byte	0
+ 963 04ec FFFF     		.short	-1
+ 964 04ee 02       		.byte	2
+ 965 04ef 00       		.byte	0
+ 966 04f0 FFFF     		.short	-1
+ 967 04f2 02       		.byte	2
+ 968 04f3 00       		.byte	0
+ 969 04f4 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 18
+
+
+ 970 04f6 02       		.byte	2
+ 971 04f7 00       		.byte	0
+ 972 04f8 FFFF     		.short	-1
+ 973 04fa 02       		.byte	2
+ 974 04fb 00       		.byte	0
+ 975 04fc FFFF     		.short	-1
+ 976 04fe 02       		.byte	2
+ 977 04ff 00       		.byte	0
+ 978 0500 FFFF     		.short	-1
+ 979 0502 02       		.byte	2
+ 980 0503 00       		.byte	0
+ 981 0504 FFFF     		.short	-1
+ 982 0506 02       		.byte	2
+ 983 0507 00       		.byte	0
+ 984 0508 FFFF     		.short	-1
+ 985 050a 02       		.byte	2
+ 986 050b 00       		.byte	0
+ 987 050c FFFF     		.short	-1
+ 988 050e 02       		.byte	2
+ 989 050f 00       		.byte	0
+ 990 0510 FFFF     		.short	-1
+ 991 0512 02       		.byte	2
+ 992 0513 00       		.byte	0
+ 993 0514 FFFF     		.short	-1
+ 994 0516 02       		.byte	2
+ 995 0517 00       		.byte	0
+ 996 0518 FFFF     		.short	-1
+ 997 051a 02       		.byte	2
+ 998 051b 00       		.byte	0
+ 999 051c FFFF     		.short	-1
+ 1000 051e 02       		.byte	2
+ 1001 051f 00       		.byte	0
+ 1002 0520 FFFF     		.short	-1
+ 1003 0522 02       		.byte	2
+ 1004 0523 00       		.byte	0
+ 1005 0524 FFFF     		.short	-1
+ 1006 0526 02       		.byte	2
+ 1007 0527 00       		.byte	0
+ 1008 0528 FFFF     		.short	-1
+ 1009 052a 02       		.byte	2
+ 1010 052b 00       		.byte	0
+ 1011 052c FFFF     		.short	-1
+ 1012 052e 02       		.byte	2
+ 1013 052f 00       		.byte	0
+ 1014 0530 FFFF     		.short	-1
+ 1015 0532 02       		.byte	2
+ 1016 0533 00       		.byte	0
+ 1017 0534 FFFF     		.short	-1
+ 1018 0536 02       		.byte	2
+ 1019 0537 00       		.byte	0
+ 1020 0538 FFFF     		.short	-1
+ 1021 053a 02       		.byte	2
+ 1022 053b 00       		.byte	0
+ 1023 053c FFFF     		.short	-1
+ 1024 053e 02       		.byte	2
+ 1025 053f 00       		.byte	0
+ 1026 0540 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 19
+
+
+ 1027 0542 02       		.byte	2
+ 1028 0543 00       		.byte	0
+ 1029 0544 FFFF     		.short	-1
+ 1030 0546 02       		.byte	2
+ 1031 0547 00       		.byte	0
+ 1032 0548 FFFF     		.short	-1
+ 1033 054a 02       		.byte	2
+ 1034 054b 00       		.byte	0
+ 1035 054c FFFF     		.short	-1
+ 1036 054e 02       		.byte	2
+ 1037 054f 00       		.byte	0
+ 1038 0550 FFFF     		.short	-1
+ 1039 0552 02       		.byte	2
+ 1040 0553 00       		.byte	0
+ 1041 0554 FFFF     		.short	-1
+ 1042 0556 02       		.byte	2
+ 1043 0557 00       		.byte	0
+ 1044 0558 FFFF     		.short	-1
+ 1045 055a 02       		.byte	2
+ 1046 055b 00       		.byte	0
+ 1047 055c FFFF     		.short	-1
+ 1048 055e 02       		.byte	2
+ 1049 055f 00       		.byte	0
+ 1050 0560 FFFF     		.short	-1
+ 1051 0562 02       		.byte	2
+ 1052 0563 00       		.byte	0
+ 1053 0564 FFFF     		.short	-1
+ 1054 0566 02       		.byte	2
+ 1055 0567 00       		.byte	0
+ 1056 0568 FFFF     		.short	-1
+ 1057 056a 02       		.byte	2
+ 1058 056b 00       		.byte	0
+ 1059 056c FFFF     		.short	-1
+ 1060 056e 02       		.byte	2
+ 1061 056f 00       		.byte	0
+ 1062 0570 FFFF     		.short	-1
+ 1063 0572 02       		.byte	2
+ 1064 0573 00       		.byte	0
+ 1065 0574 FFFF     		.short	-1
+ 1066 0576 02       		.byte	2
+ 1067 0577 00       		.byte	0
+ 1068 0578 FFFF     		.short	-1
+ 1069 057a 02       		.byte	2
+ 1070 057b 00       		.byte	0
+ 1071 057c FFFF     		.short	-1
+ 1072 057e 02       		.byte	2
+ 1073 057f 00       		.byte	0
+ 1074 0580 FFFF     		.short	-1
+ 1075 0582 02       		.byte	2
+ 1076 0583 00       		.byte	0
+ 1077 0584 FFFF     		.short	-1
+ 1078 0586 02       		.byte	2
+ 1079 0587 00       		.byte	0
+ 1080 0588 FFFF     		.short	-1
+ 1081 058a 02       		.byte	2
+ 1082 058b 00       		.byte	0
+ 1083 058c FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 20
+
+
+ 1084 058e 02       		.byte	2
+ 1085 058f 00       		.byte	0
+ 1086 0590 FFFF     		.short	-1
+ 1087 0592 02       		.byte	2
+ 1088 0593 00       		.byte	0
+ 1089 0594 FFFF     		.short	-1
+ 1090 0596 02       		.byte	2
+ 1091 0597 00       		.byte	0
+ 1092 0598 FFFF     		.short	-1
+ 1093 059a 02       		.byte	2
+ 1094 059b 00       		.byte	0
+ 1095 059c FFFF     		.short	-1
+ 1096 059e 02       		.byte	2
+ 1097 059f 00       		.byte	0
+ 1098 05a0 FFFF     		.short	-1
+ 1099 05a2 02       		.byte	2
+ 1100 05a3 00       		.byte	0
+ 1101 05a4 FFFF     		.short	-1
+ 1102 05a6 02       		.byte	2
+ 1103 05a7 00       		.byte	0
+ 1104 05a8 FFFF     		.short	-1
+ 1105 05aa 02       		.byte	2
+ 1106 05ab 00       		.byte	0
+ 1107 05ac FFFF     		.short	-1
+ 1108 05ae 02       		.byte	2
+ 1109 05af 00       		.byte	0
+ 1110 05b0 FFFF     		.short	-1
+ 1111 05b2 02       		.byte	2
+ 1112 05b3 00       		.byte	0
+ 1113 05b4 FFFF     		.short	-1
+ 1114 05b6 02       		.byte	2
+ 1115 05b7 00       		.byte	0
+ 1116 05b8 FFFF     		.short	-1
+ 1117 05ba 02       		.byte	2
+ 1118 05bb 00       		.byte	0
+ 1119 05bc FFFF     		.short	-1
+ 1120 05be 02       		.byte	2
+ 1121 05bf 00       		.byte	0
+ 1122 05c0 FFFF     		.short	-1
+ 1123 05c2 02       		.byte	2
+ 1124 05c3 00       		.byte	0
+ 1125 05c4 FFFF     		.short	-1
+ 1126 05c6 02       		.byte	2
+ 1127 05c7 00       		.byte	0
+ 1128 05c8 FFFF     		.short	-1
+ 1129 05ca 02       		.byte	2
+ 1130 05cb 00       		.byte	0
+ 1131 05cc FFFF     		.short	-1
+ 1132 05ce 02       		.byte	2
+ 1133 05cf 00       		.byte	0
+ 1134 05d0 FFFF     		.short	-1
+ 1135 05d2 02       		.byte	2
+ 1136 05d3 00       		.byte	0
+ 1137 05d4 FFFF     		.short	-1
+ 1138 05d6 02       		.byte	2
+ 1139 05d7 00       		.byte	0
+ 1140 05d8 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 21
+
+
+ 1141 05da 02       		.byte	2
+ 1142 05db 00       		.byte	0
+ 1143 05dc FFFF     		.short	-1
+ 1144 05de 02       		.byte	2
+ 1145 05df 00       		.byte	0
+ 1146 05e0 FFFF     		.short	-1
+ 1147 05e2 02       		.byte	2
+ 1148 05e3 00       		.byte	0
+ 1149 05e4 FFFF     		.short	-1
+ 1150 05e6 02       		.byte	2
+ 1151 05e7 00       		.byte	0
+ 1152 05e8 FFFF     		.short	-1
+ 1153 05ea 02       		.byte	2
+ 1154 05eb 00       		.byte	0
+ 1155 05ec FFFF     		.short	-1
+ 1156 05ee 02       		.byte	2
+ 1157 05ef 00       		.byte	0
+ 1158 05f0 FFFF     		.short	-1
+ 1159 05f2 02       		.byte	2
+ 1160 05f3 00       		.byte	0
+ 1161 05f4 FFFF     		.short	-1
+ 1162 05f6 02       		.byte	2
+ 1163 05f7 00       		.byte	0
+ 1164 05f8 FFFF     		.short	-1
+ 1165 05fa 02       		.byte	2
+ 1166 05fb 00       		.byte	0
+ 1167 05fc FFFF     		.short	-1
+ 1168 05fe 02       		.byte	2
+ 1169 05ff 00       		.byte	0
+ 1170 0600 FFFF     		.short	-1
+ 1171 0602 02       		.byte	2
+ 1172 0603 00       		.byte	0
+ 1173 0604 FFFF     		.short	-1
+ 1174 0606 02       		.byte	2
+ 1175 0607 00       		.byte	0
+ 1176 0608 FFFF     		.short	-1
+ 1177 060a 02       		.byte	2
+ 1178 060b 00       		.byte	0
+ 1179 060c FFFF     		.short	-1
+ 1180 060e 02       		.byte	2
+ 1181 060f 00       		.byte	0
+ 1182 0610 FFFF     		.short	-1
+ 1183 0612 02       		.byte	2
+ 1184 0613 00       		.byte	0
+ 1185 0614 FFFF     		.short	-1
+ 1186 0616 02       		.byte	2
+ 1187 0617 00       		.byte	0
+ 1188 0618 FFFF     		.short	-1
+ 1189 061a 02       		.byte	2
+ 1190 061b 00       		.byte	0
+ 1191 061c FFFF     		.short	-1
+ 1192 061e 02       		.byte	2
+ 1193 061f 00       		.byte	0
+ 1194 0620 FFFF     		.short	-1
+ 1195 0622 02       		.byte	2
+ 1196 0623 00       		.byte	0
+ 1197 0624 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 22
+
+
+ 1198 0626 02       		.byte	2
+ 1199 0627 00       		.byte	0
+ 1200 0628 FFFF     		.short	-1
+ 1201 062a 02       		.byte	2
+ 1202 062b 00       		.byte	0
+ 1203 062c 00FF     		.short	-256
+ 1204 062e 02       		.byte	2
+ 1205 062f 00       		.byte	0
+ 1206              		.type	MDIO_Interface_registerConfig_2, %object
+ 1207              		.size	MDIO_Interface_registerConfig_2, 1024
+ 1208              	MDIO_Interface_registerConfig_2:
+ 1209 0630 00000000 		.space	1024
+ 1209      00000000 
+ 1209      00000000 
+ 1209      00000000 
+ 1209      00000000 
+ 1210              		.type	MDIO_Interface_registerConfig_1, %object
+ 1211              		.size	MDIO_Interface_registerConfig_1, 2048
+ 1212              	MDIO_Interface_registerConfig_1:
+ 1213 0a30 00000000 		.space	2048
+ 1213      00000000 
+ 1213      00000000 
+ 1213      00000000 
+ 1213      00000000 
+ 1214              		.data
+ 1215              		.align	2
+ 1216              		.type	MDIO_Interface_registerConfig_6, %object
+ 1217              		.size	MDIO_Interface_registerConfig_6, 512
+ 1218              	MDIO_Interface_registerConfig_6:
+ 1219 0000 FFFF     		.short	-1
+ 1220 0002 02       		.byte	2
+ 1221 0003 00       		.byte	0
+ 1222 0004 FFFF     		.short	-1
+ 1223 0006 02       		.byte	2
+ 1224 0007 00       		.byte	0
+ 1225 0008 FFFF     		.short	-1
+ 1226 000a 02       		.byte	2
+ 1227 000b 00       		.byte	0
+ 1228 000c FFFF     		.short	-1
+ 1229 000e 02       		.byte	2
+ 1230 000f 00       		.byte	0
+ 1231 0010 FFFF     		.short	-1
+ 1232 0012 02       		.byte	2
+ 1233 0013 00       		.byte	0
+ 1234 0014 FFFF     		.short	-1
+ 1235 0016 02       		.byte	2
+ 1236 0017 00       		.byte	0
+ 1237 0018 FFFF     		.short	-1
+ 1238 001a 02       		.byte	2
+ 1239 001b 00       		.byte	0
+ 1240 001c FFFF     		.short	-1
+ 1241 001e 02       		.byte	2
+ 1242 001f 00       		.byte	0
+ 1243 0020 FFFF     		.short	-1
+ 1244 0022 02       		.byte	2
+ 1245 0023 00       		.byte	0
+ 1246 0024 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 23
+
+
+ 1247 0026 02       		.byte	2
+ 1248 0027 00       		.byte	0
+ 1249 0028 FFFF     		.short	-1
+ 1250 002a 02       		.byte	2
+ 1251 002b 00       		.byte	0
+ 1252 002c FFFF     		.short	-1
+ 1253 002e 02       		.byte	2
+ 1254 002f 00       		.byte	0
+ 1255 0030 FFFF     		.short	-1
+ 1256 0032 02       		.byte	2
+ 1257 0033 00       		.byte	0
+ 1258 0034 FFFF     		.short	-1
+ 1259 0036 02       		.byte	2
+ 1260 0037 00       		.byte	0
+ 1261 0038 FFFF     		.short	-1
+ 1262 003a 02       		.byte	2
+ 1263 003b 00       		.byte	0
+ 1264 003c FFFF     		.short	-1
+ 1265 003e 02       		.byte	2
+ 1266 003f 00       		.byte	0
+ 1267 0040 FFFF     		.short	-1
+ 1268 0042 02       		.byte	2
+ 1269 0043 00       		.byte	0
+ 1270 0044 FFFF     		.short	-1
+ 1271 0046 02       		.byte	2
+ 1272 0047 00       		.byte	0
+ 1273 0048 FFFF     		.short	-1
+ 1274 004a 02       		.byte	2
+ 1275 004b 00       		.byte	0
+ 1276 004c FFFF     		.short	-1
+ 1277 004e 02       		.byte	2
+ 1278 004f 00       		.byte	0
+ 1279 0050 FFFF     		.short	-1
+ 1280 0052 02       		.byte	2
+ 1281 0053 00       		.byte	0
+ 1282 0054 FFFF     		.short	-1
+ 1283 0056 02       		.byte	2
+ 1284 0057 00       		.byte	0
+ 1285 0058 FFFF     		.short	-1
+ 1286 005a 02       		.byte	2
+ 1287 005b 00       		.byte	0
+ 1288 005c FFFF     		.short	-1
+ 1289 005e 02       		.byte	2
+ 1290 005f 00       		.byte	0
+ 1291 0060 FFFF     		.short	-1
+ 1292 0062 02       		.byte	2
+ 1293 0063 00       		.byte	0
+ 1294 0064 FFFF     		.short	-1
+ 1295 0066 02       		.byte	2
+ 1296 0067 00       		.byte	0
+ 1297 0068 FFFF     		.short	-1
+ 1298 006a 02       		.byte	2
+ 1299 006b 00       		.byte	0
+ 1300 006c FFFF     		.short	-1
+ 1301 006e 02       		.byte	2
+ 1302 006f 00       		.byte	0
+ 1303 0070 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 24
+
+
+ 1304 0072 02       		.byte	2
+ 1305 0073 00       		.byte	0
+ 1306 0074 FFFF     		.short	-1
+ 1307 0076 02       		.byte	2
+ 1308 0077 00       		.byte	0
+ 1309 0078 FFFF     		.short	-1
+ 1310 007a 02       		.byte	2
+ 1311 007b 00       		.byte	0
+ 1312 007c FFFF     		.short	-1
+ 1313 007e 02       		.byte	2
+ 1314 007f 00       		.byte	0
+ 1315 0080 FFFF     		.short	-1
+ 1316 0082 02       		.byte	2
+ 1317 0083 00       		.byte	0
+ 1318 0084 FFFF     		.short	-1
+ 1319 0086 02       		.byte	2
+ 1320 0087 00       		.byte	0
+ 1321 0088 FFFF     		.short	-1
+ 1322 008a 02       		.byte	2
+ 1323 008b 00       		.byte	0
+ 1324 008c FFFF     		.short	-1
+ 1325 008e 02       		.byte	2
+ 1326 008f 00       		.byte	0
+ 1327 0090 FFFF     		.short	-1
+ 1328 0092 02       		.byte	2
+ 1329 0093 00       		.byte	0
+ 1330 0094 FFFF     		.short	-1
+ 1331 0096 02       		.byte	2
+ 1332 0097 00       		.byte	0
+ 1333 0098 FFFF     		.short	-1
+ 1334 009a 02       		.byte	2
+ 1335 009b 00       		.byte	0
+ 1336 009c FFFF     		.short	-1
+ 1337 009e 02       		.byte	2
+ 1338 009f 00       		.byte	0
+ 1339 00a0 FFFF     		.short	-1
+ 1340 00a2 02       		.byte	2
+ 1341 00a3 00       		.byte	0
+ 1342 00a4 FFFF     		.short	-1
+ 1343 00a6 02       		.byte	2
+ 1344 00a7 00       		.byte	0
+ 1345 00a8 FFFF     		.short	-1
+ 1346 00aa 02       		.byte	2
+ 1347 00ab 00       		.byte	0
+ 1348 00ac FFFF     		.short	-1
+ 1349 00ae 02       		.byte	2
+ 1350 00af 00       		.byte	0
+ 1351 00b0 FFFF     		.short	-1
+ 1352 00b2 02       		.byte	2
+ 1353 00b3 00       		.byte	0
+ 1354 00b4 FFFF     		.short	-1
+ 1355 00b6 02       		.byte	2
+ 1356 00b7 00       		.byte	0
+ 1357 00b8 FFFF     		.short	-1
+ 1358 00ba 02       		.byte	2
+ 1359 00bb 00       		.byte	0
+ 1360 00bc FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 25
+
+
+ 1361 00be 02       		.byte	2
+ 1362 00bf 00       		.byte	0
+ 1363 00c0 FFFF     		.short	-1
+ 1364 00c2 02       		.byte	2
+ 1365 00c3 00       		.byte	0
+ 1366 00c4 FFFF     		.short	-1
+ 1367 00c6 02       		.byte	2
+ 1368 00c7 00       		.byte	0
+ 1369 00c8 FFFF     		.short	-1
+ 1370 00ca 02       		.byte	2
+ 1371 00cb 00       		.byte	0
+ 1372 00cc FFFF     		.short	-1
+ 1373 00ce 02       		.byte	2
+ 1374 00cf 00       		.byte	0
+ 1375 00d0 FFFF     		.short	-1
+ 1376 00d2 02       		.byte	2
+ 1377 00d3 00       		.byte	0
+ 1378 00d4 FFFF     		.short	-1
+ 1379 00d6 02       		.byte	2
+ 1380 00d7 00       		.byte	0
+ 1381 00d8 FFFF     		.short	-1
+ 1382 00da 02       		.byte	2
+ 1383 00db 00       		.byte	0
+ 1384 00dc FFFF     		.short	-1
+ 1385 00de 02       		.byte	2
+ 1386 00df 00       		.byte	0
+ 1387 00e0 FFFF     		.short	-1
+ 1388 00e2 02       		.byte	2
+ 1389 00e3 00       		.byte	0
+ 1390 00e4 FFFF     		.short	-1
+ 1391 00e6 02       		.byte	2
+ 1392 00e7 00       		.byte	0
+ 1393 00e8 FFFF     		.short	-1
+ 1394 00ea 02       		.byte	2
+ 1395 00eb 00       		.byte	0
+ 1396 00ec FFFF     		.short	-1
+ 1397 00ee 02       		.byte	2
+ 1398 00ef 00       		.byte	0
+ 1399 00f0 FFFF     		.short	-1
+ 1400 00f2 02       		.byte	2
+ 1401 00f3 00       		.byte	0
+ 1402 00f4 FFFF     		.short	-1
+ 1403 00f6 02       		.byte	2
+ 1404 00f7 00       		.byte	0
+ 1405 00f8 FFFF     		.short	-1
+ 1406 00fa 02       		.byte	2
+ 1407 00fb 00       		.byte	0
+ 1408 00fc FFFF     		.short	-1
+ 1409 00fe 02       		.byte	2
+ 1410 00ff 00       		.byte	0
+ 1411 0100 FFFF     		.short	-1
+ 1412 0102 02       		.byte	2
+ 1413 0103 00       		.byte	0
+ 1414 0104 FFFF     		.short	-1
+ 1415 0106 02       		.byte	2
+ 1416 0107 00       		.byte	0
+ 1417 0108 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 26
+
+
+ 1418 010a 02       		.byte	2
+ 1419 010b 00       		.byte	0
+ 1420 010c FFFF     		.short	-1
+ 1421 010e 02       		.byte	2
+ 1422 010f 00       		.byte	0
+ 1423 0110 FFFF     		.short	-1
+ 1424 0112 02       		.byte	2
+ 1425 0113 00       		.byte	0
+ 1426 0114 FFFF     		.short	-1
+ 1427 0116 02       		.byte	2
+ 1428 0117 00       		.byte	0
+ 1429 0118 FFFF     		.short	-1
+ 1430 011a 02       		.byte	2
+ 1431 011b 00       		.byte	0
+ 1432 011c FFFF     		.short	-1
+ 1433 011e 02       		.byte	2
+ 1434 011f 00       		.byte	0
+ 1435 0120 FFFF     		.short	-1
+ 1436 0122 02       		.byte	2
+ 1437 0123 00       		.byte	0
+ 1438 0124 FFFF     		.short	-1
+ 1439 0126 02       		.byte	2
+ 1440 0127 00       		.byte	0
+ 1441 0128 FFFF     		.short	-1
+ 1442 012a 02       		.byte	2
+ 1443 012b 00       		.byte	0
+ 1444 012c FFFF     		.short	-1
+ 1445 012e 02       		.byte	2
+ 1446 012f 00       		.byte	0
+ 1447 0130 FFFF     		.short	-1
+ 1448 0132 02       		.byte	2
+ 1449 0133 00       		.byte	0
+ 1450 0134 FFFF     		.short	-1
+ 1451 0136 02       		.byte	2
+ 1452 0137 00       		.byte	0
+ 1453 0138 FFFF     		.short	-1
+ 1454 013a 02       		.byte	2
+ 1455 013b 00       		.byte	0
+ 1456 013c FFFF     		.short	-1
+ 1457 013e 02       		.byte	2
+ 1458 013f 00       		.byte	0
+ 1459 0140 FFFF     		.short	-1
+ 1460 0142 02       		.byte	2
+ 1461 0143 00       		.byte	0
+ 1462 0144 FFFF     		.short	-1
+ 1463 0146 02       		.byte	2
+ 1464 0147 00       		.byte	0
+ 1465 0148 FFFF     		.short	-1
+ 1466 014a 02       		.byte	2
+ 1467 014b 00       		.byte	0
+ 1468 014c FFFF     		.short	-1
+ 1469 014e 02       		.byte	2
+ 1470 014f 00       		.byte	0
+ 1471 0150 FFFF     		.short	-1
+ 1472 0152 02       		.byte	2
+ 1473 0153 00       		.byte	0
+ 1474 0154 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 27
+
+
+ 1475 0156 02       		.byte	2
+ 1476 0157 00       		.byte	0
+ 1477 0158 FFFF     		.short	-1
+ 1478 015a 02       		.byte	2
+ 1479 015b 00       		.byte	0
+ 1480 015c FFFF     		.short	-1
+ 1481 015e 02       		.byte	2
+ 1482 015f 00       		.byte	0
+ 1483 0160 FFFF     		.short	-1
+ 1484 0162 02       		.byte	2
+ 1485 0163 00       		.byte	0
+ 1486 0164 FFFF     		.short	-1
+ 1487 0166 02       		.byte	2
+ 1488 0167 00       		.byte	0
+ 1489 0168 FFFF     		.short	-1
+ 1490 016a 02       		.byte	2
+ 1491 016b 00       		.byte	0
+ 1492 016c FFFF     		.short	-1
+ 1493 016e 02       		.byte	2
+ 1494 016f 00       		.byte	0
+ 1495 0170 FFFF     		.short	-1
+ 1496 0172 02       		.byte	2
+ 1497 0173 00       		.byte	0
+ 1498 0174 FFFF     		.short	-1
+ 1499 0176 02       		.byte	2
+ 1500 0177 00       		.byte	0
+ 1501 0178 FFFF     		.short	-1
+ 1502 017a 02       		.byte	2
+ 1503 017b 00       		.byte	0
+ 1504 017c FFFF     		.short	-1
+ 1505 017e 02       		.byte	2
+ 1506 017f 00       		.byte	0
+ 1507 0180 FFFF     		.short	-1
+ 1508 0182 02       		.byte	2
+ 1509 0183 00       		.byte	0
+ 1510 0184 FFFF     		.short	-1
+ 1511 0186 02       		.byte	2
+ 1512 0187 00       		.byte	0
+ 1513 0188 FFFF     		.short	-1
+ 1514 018a 02       		.byte	2
+ 1515 018b 00       		.byte	0
+ 1516 018c FFFF     		.short	-1
+ 1517 018e 02       		.byte	2
+ 1518 018f 00       		.byte	0
+ 1519 0190 FFFF     		.short	-1
+ 1520 0192 02       		.byte	2
+ 1521 0193 00       		.byte	0
+ 1522 0194 FFFF     		.short	-1
+ 1523 0196 02       		.byte	2
+ 1524 0197 00       		.byte	0
+ 1525 0198 FFFF     		.short	-1
+ 1526 019a 02       		.byte	2
+ 1527 019b 00       		.byte	0
+ 1528 019c FFFF     		.short	-1
+ 1529 019e 02       		.byte	2
+ 1530 019f 00       		.byte	0
+ 1531 01a0 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 28
+
+
+ 1532 01a2 02       		.byte	2
+ 1533 01a3 00       		.byte	0
+ 1534 01a4 FFFF     		.short	-1
+ 1535 01a6 02       		.byte	2
+ 1536 01a7 00       		.byte	0
+ 1537 01a8 FFFF     		.short	-1
+ 1538 01aa 02       		.byte	2
+ 1539 01ab 00       		.byte	0
+ 1540 01ac FFFF     		.short	-1
+ 1541 01ae 02       		.byte	2
+ 1542 01af 00       		.byte	0
+ 1543 01b0 FFFF     		.short	-1
+ 1544 01b2 02       		.byte	2
+ 1545 01b3 00       		.byte	0
+ 1546 01b4 FFFF     		.short	-1
+ 1547 01b6 02       		.byte	2
+ 1548 01b7 00       		.byte	0
+ 1549 01b8 FFFF     		.short	-1
+ 1550 01ba 02       		.byte	2
+ 1551 01bb 00       		.byte	0
+ 1552 01bc FFFF     		.short	-1
+ 1553 01be 02       		.byte	2
+ 1554 01bf 00       		.byte	0
+ 1555 01c0 FFFF     		.short	-1
+ 1556 01c2 02       		.byte	2
+ 1557 01c3 00       		.byte	0
+ 1558 01c4 FFFF     		.short	-1
+ 1559 01c6 02       		.byte	2
+ 1560 01c7 00       		.byte	0
+ 1561 01c8 FFFF     		.short	-1
+ 1562 01ca 02       		.byte	2
+ 1563 01cb 00       		.byte	0
+ 1564 01cc FFFF     		.short	-1
+ 1565 01ce 02       		.byte	2
+ 1566 01cf 00       		.byte	0
+ 1567 01d0 FFFF     		.short	-1
+ 1568 01d2 02       		.byte	2
+ 1569 01d3 00       		.byte	0
+ 1570 01d4 FFFF     		.short	-1
+ 1571 01d6 02       		.byte	2
+ 1572 01d7 00       		.byte	0
+ 1573 01d8 FFFF     		.short	-1
+ 1574 01da 02       		.byte	2
+ 1575 01db 00       		.byte	0
+ 1576 01dc FFFF     		.short	-1
+ 1577 01de 02       		.byte	2
+ 1578 01df 00       		.byte	0
+ 1579 01e0 FFFF     		.short	-1
+ 1580 01e2 02       		.byte	2
+ 1581 01e3 00       		.byte	0
+ 1582 01e4 FFFF     		.short	-1
+ 1583 01e6 02       		.byte	2
+ 1584 01e7 00       		.byte	0
+ 1585 01e8 FFFF     		.short	-1
+ 1586 01ea 02       		.byte	2
+ 1587 01eb 00       		.byte	0
+ 1588 01ec FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 29
+
+
+ 1589 01ee 02       		.byte	2
+ 1590 01ef 00       		.byte	0
+ 1591 01f0 FFFF     		.short	-1
+ 1592 01f2 02       		.byte	2
+ 1593 01f3 00       		.byte	0
+ 1594 01f4 FFFF     		.short	-1
+ 1595 01f6 02       		.byte	2
+ 1596 01f7 00       		.byte	0
+ 1597 01f8 FFFF     		.short	-1
+ 1598 01fa 02       		.byte	2
+ 1599 01fb 00       		.byte	0
+ 1600 01fc FFFF     		.short	-1
+ 1601 01fe 02       		.byte	2
+ 1602 01ff 00       		.byte	0
+ 1603              		.type	MDIO_Interface_registerConfig_5, %object
+ 1604              		.size	MDIO_Interface_registerConfig_5, 1024
+ 1605              	MDIO_Interface_registerConfig_5:
+ 1606 0200 FFFF     		.short	-1
+ 1607 0202 02       		.byte	2
+ 1608 0203 00       		.byte	0
+ 1609 0204 FFFF     		.short	-1
+ 1610 0206 02       		.byte	2
+ 1611 0207 00       		.byte	0
+ 1612 0208 FFFF     		.short	-1
+ 1613 020a 02       		.byte	2
+ 1614 020b 00       		.byte	0
+ 1615 020c FFFF     		.short	-1
+ 1616 020e 02       		.byte	2
+ 1617 020f 00       		.byte	0
+ 1618 0210 FFFF     		.short	-1
+ 1619 0212 02       		.byte	2
+ 1620 0213 00       		.byte	0
+ 1621 0214 FFFF     		.short	-1
+ 1622 0216 02       		.byte	2
+ 1623 0217 00       		.byte	0
+ 1624 0218 FFFF     		.short	-1
+ 1625 021a 02       		.byte	2
+ 1626 021b 00       		.byte	0
+ 1627 021c FFFF     		.short	-1
+ 1628 021e 02       		.byte	2
+ 1629 021f 00       		.byte	0
+ 1630 0220 FFFF     		.short	-1
+ 1631 0222 02       		.byte	2
+ 1632 0223 00       		.byte	0
+ 1633 0224 FFFF     		.short	-1
+ 1634 0226 02       		.byte	2
+ 1635 0227 00       		.byte	0
+ 1636 0228 FFFF     		.short	-1
+ 1637 022a 02       		.byte	2
+ 1638 022b 00       		.byte	0
+ 1639 022c FFFF     		.short	-1
+ 1640 022e 02       		.byte	2
+ 1641 022f 00       		.byte	0
+ 1642 0230 FFFF     		.short	-1
+ 1643 0232 02       		.byte	2
+ 1644 0233 00       		.byte	0
+ 1645 0234 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 30
+
+
+ 1646 0236 02       		.byte	2
+ 1647 0237 00       		.byte	0
+ 1648 0238 FFFF     		.short	-1
+ 1649 023a 02       		.byte	2
+ 1650 023b 00       		.byte	0
+ 1651 023c FFFF     		.short	-1
+ 1652 023e 02       		.byte	2
+ 1653 023f 00       		.byte	0
+ 1654 0240 FFFF     		.short	-1
+ 1655 0242 02       		.byte	2
+ 1656 0243 00       		.byte	0
+ 1657 0244 FFFF     		.short	-1
+ 1658 0246 02       		.byte	2
+ 1659 0247 00       		.byte	0
+ 1660 0248 FFFF     		.short	-1
+ 1661 024a 02       		.byte	2
+ 1662 024b 00       		.byte	0
+ 1663 024c FFFF     		.short	-1
+ 1664 024e 02       		.byte	2
+ 1665 024f 00       		.byte	0
+ 1666 0250 FFFF     		.short	-1
+ 1667 0252 02       		.byte	2
+ 1668 0253 00       		.byte	0
+ 1669 0254 FFFF     		.short	-1
+ 1670 0256 02       		.byte	2
+ 1671 0257 00       		.byte	0
+ 1672 0258 FFFF     		.short	-1
+ 1673 025a 02       		.byte	2
+ 1674 025b 00       		.byte	0
+ 1675 025c FFFF     		.short	-1
+ 1676 025e 02       		.byte	2
+ 1677 025f 00       		.byte	0
+ 1678 0260 FFFF     		.short	-1
+ 1679 0262 02       		.byte	2
+ 1680 0263 00       		.byte	0
+ 1681 0264 FFFF     		.short	-1
+ 1682 0266 02       		.byte	2
+ 1683 0267 00       		.byte	0
+ 1684 0268 FFFF     		.short	-1
+ 1685 026a 02       		.byte	2
+ 1686 026b 00       		.byte	0
+ 1687 026c FFFF     		.short	-1
+ 1688 026e 02       		.byte	2
+ 1689 026f 00       		.byte	0
+ 1690 0270 FFFF     		.short	-1
+ 1691 0272 02       		.byte	2
+ 1692 0273 00       		.byte	0
+ 1693 0274 FFFF     		.short	-1
+ 1694 0276 02       		.byte	2
+ 1695 0277 00       		.byte	0
+ 1696 0278 FFFF     		.short	-1
+ 1697 027a 02       		.byte	2
+ 1698 027b 00       		.byte	0
+ 1699 027c FFFF     		.short	-1
+ 1700 027e 02       		.byte	2
+ 1701 027f 00       		.byte	0
+ 1702 0280 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 31
+
+
+ 1703 0282 02       		.byte	2
+ 1704 0283 00       		.byte	0
+ 1705 0284 FFFF     		.short	-1
+ 1706 0286 02       		.byte	2
+ 1707 0287 00       		.byte	0
+ 1708 0288 FFFF     		.short	-1
+ 1709 028a 02       		.byte	2
+ 1710 028b 00       		.byte	0
+ 1711 028c FFFF     		.short	-1
+ 1712 028e 02       		.byte	2
+ 1713 028f 00       		.byte	0
+ 1714 0290 FFFF     		.short	-1
+ 1715 0292 02       		.byte	2
+ 1716 0293 00       		.byte	0
+ 1717 0294 FFFF     		.short	-1
+ 1718 0296 02       		.byte	2
+ 1719 0297 00       		.byte	0
+ 1720 0298 FFFF     		.short	-1
+ 1721 029a 02       		.byte	2
+ 1722 029b 00       		.byte	0
+ 1723 029c FFFF     		.short	-1
+ 1724 029e 02       		.byte	2
+ 1725 029f 00       		.byte	0
+ 1726 02a0 FFFF     		.short	-1
+ 1727 02a2 02       		.byte	2
+ 1728 02a3 00       		.byte	0
+ 1729 02a4 FFFF     		.short	-1
+ 1730 02a6 02       		.byte	2
+ 1731 02a7 00       		.byte	0
+ 1732 02a8 FFFF     		.short	-1
+ 1733 02aa 02       		.byte	2
+ 1734 02ab 00       		.byte	0
+ 1735 02ac FFFF     		.short	-1
+ 1736 02ae 02       		.byte	2
+ 1737 02af 00       		.byte	0
+ 1738 02b0 FFFF     		.short	-1
+ 1739 02b2 02       		.byte	2
+ 1740 02b3 00       		.byte	0
+ 1741 02b4 FFFF     		.short	-1
+ 1742 02b6 02       		.byte	2
+ 1743 02b7 00       		.byte	0
+ 1744 02b8 FFFF     		.short	-1
+ 1745 02ba 02       		.byte	2
+ 1746 02bb 00       		.byte	0
+ 1747 02bc FFFF     		.short	-1
+ 1748 02be 02       		.byte	2
+ 1749 02bf 00       		.byte	0
+ 1750 02c0 FFFF     		.short	-1
+ 1751 02c2 02       		.byte	2
+ 1752 02c3 00       		.byte	0
+ 1753 02c4 FFFF     		.short	-1
+ 1754 02c6 02       		.byte	2
+ 1755 02c7 00       		.byte	0
+ 1756 02c8 FFFF     		.short	-1
+ 1757 02ca 02       		.byte	2
+ 1758 02cb 00       		.byte	0
+ 1759 02cc FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 32
+
+
+ 1760 02ce 02       		.byte	2
+ 1761 02cf 00       		.byte	0
+ 1762 02d0 FFFF     		.short	-1
+ 1763 02d2 02       		.byte	2
+ 1764 02d3 00       		.byte	0
+ 1765 02d4 FFFF     		.short	-1
+ 1766 02d6 02       		.byte	2
+ 1767 02d7 00       		.byte	0
+ 1768 02d8 FFFF     		.short	-1
+ 1769 02da 02       		.byte	2
+ 1770 02db 00       		.byte	0
+ 1771 02dc FFFF     		.short	-1
+ 1772 02de 02       		.byte	2
+ 1773 02df 00       		.byte	0
+ 1774 02e0 FFFF     		.short	-1
+ 1775 02e2 02       		.byte	2
+ 1776 02e3 00       		.byte	0
+ 1777 02e4 FFFF     		.short	-1
+ 1778 02e6 02       		.byte	2
+ 1779 02e7 00       		.byte	0
+ 1780 02e8 FFFF     		.short	-1
+ 1781 02ea 02       		.byte	2
+ 1782 02eb 00       		.byte	0
+ 1783 02ec FFFF     		.short	-1
+ 1784 02ee 02       		.byte	2
+ 1785 02ef 00       		.byte	0
+ 1786 02f0 FFFF     		.short	-1
+ 1787 02f2 02       		.byte	2
+ 1788 02f3 00       		.byte	0
+ 1789 02f4 FFFF     		.short	-1
+ 1790 02f6 02       		.byte	2
+ 1791 02f7 00       		.byte	0
+ 1792 02f8 FFFF     		.short	-1
+ 1793 02fa 02       		.byte	2
+ 1794 02fb 00       		.byte	0
+ 1795 02fc FFFF     		.short	-1
+ 1796 02fe 02       		.byte	2
+ 1797 02ff 00       		.byte	0
+ 1798 0300 FFFF     		.short	-1
+ 1799 0302 02       		.byte	2
+ 1800 0303 00       		.byte	0
+ 1801 0304 FFFF     		.short	-1
+ 1802 0306 02       		.byte	2
+ 1803 0307 00       		.byte	0
+ 1804 0308 FFFF     		.short	-1
+ 1805 030a 02       		.byte	2
+ 1806 030b 00       		.byte	0
+ 1807 030c FFFF     		.short	-1
+ 1808 030e 02       		.byte	2
+ 1809 030f 00       		.byte	0
+ 1810 0310 FFFF     		.short	-1
+ 1811 0312 02       		.byte	2
+ 1812 0313 00       		.byte	0
+ 1813 0314 FFFF     		.short	-1
+ 1814 0316 02       		.byte	2
+ 1815 0317 00       		.byte	0
+ 1816 0318 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 33
+
+
+ 1817 031a 02       		.byte	2
+ 1818 031b 00       		.byte	0
+ 1819 031c FFFF     		.short	-1
+ 1820 031e 02       		.byte	2
+ 1821 031f 00       		.byte	0
+ 1822 0320 FFFF     		.short	-1
+ 1823 0322 02       		.byte	2
+ 1824 0323 00       		.byte	0
+ 1825 0324 FFFF     		.short	-1
+ 1826 0326 02       		.byte	2
+ 1827 0327 00       		.byte	0
+ 1828 0328 FFFF     		.short	-1
+ 1829 032a 02       		.byte	2
+ 1830 032b 00       		.byte	0
+ 1831 032c FFFF     		.short	-1
+ 1832 032e 02       		.byte	2
+ 1833 032f 00       		.byte	0
+ 1834 0330 FFFF     		.short	-1
+ 1835 0332 02       		.byte	2
+ 1836 0333 00       		.byte	0
+ 1837 0334 FFFF     		.short	-1
+ 1838 0336 02       		.byte	2
+ 1839 0337 00       		.byte	0
+ 1840 0338 FFFF     		.short	-1
+ 1841 033a 02       		.byte	2
+ 1842 033b 00       		.byte	0
+ 1843 033c FFFF     		.short	-1
+ 1844 033e 02       		.byte	2
+ 1845 033f 00       		.byte	0
+ 1846 0340 FFFF     		.short	-1
+ 1847 0342 02       		.byte	2
+ 1848 0343 00       		.byte	0
+ 1849 0344 FFFF     		.short	-1
+ 1850 0346 02       		.byte	2
+ 1851 0347 00       		.byte	0
+ 1852 0348 FFFF     		.short	-1
+ 1853 034a 02       		.byte	2
+ 1854 034b 00       		.byte	0
+ 1855 034c FFFF     		.short	-1
+ 1856 034e 02       		.byte	2
+ 1857 034f 00       		.byte	0
+ 1858 0350 FFFF     		.short	-1
+ 1859 0352 02       		.byte	2
+ 1860 0353 00       		.byte	0
+ 1861 0354 FFFF     		.short	-1
+ 1862 0356 02       		.byte	2
+ 1863 0357 00       		.byte	0
+ 1864 0358 FFFF     		.short	-1
+ 1865 035a 02       		.byte	2
+ 1866 035b 00       		.byte	0
+ 1867 035c FFFF     		.short	-1
+ 1868 035e 02       		.byte	2
+ 1869 035f 00       		.byte	0
+ 1870 0360 FFFF     		.short	-1
+ 1871 0362 02       		.byte	2
+ 1872 0363 00       		.byte	0
+ 1873 0364 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 34
+
+
+ 1874 0366 02       		.byte	2
+ 1875 0367 00       		.byte	0
+ 1876 0368 FFFF     		.short	-1
+ 1877 036a 02       		.byte	2
+ 1878 036b 00       		.byte	0
+ 1879 036c FFFF     		.short	-1
+ 1880 036e 02       		.byte	2
+ 1881 036f 00       		.byte	0
+ 1882 0370 FFFF     		.short	-1
+ 1883 0372 02       		.byte	2
+ 1884 0373 00       		.byte	0
+ 1885 0374 FFFF     		.short	-1
+ 1886 0376 02       		.byte	2
+ 1887 0377 00       		.byte	0
+ 1888 0378 FFFF     		.short	-1
+ 1889 037a 02       		.byte	2
+ 1890 037b 00       		.byte	0
+ 1891 037c FFFF     		.short	-1
+ 1892 037e 02       		.byte	2
+ 1893 037f 00       		.byte	0
+ 1894 0380 FFFF     		.short	-1
+ 1895 0382 02       		.byte	2
+ 1896 0383 00       		.byte	0
+ 1897 0384 FFFF     		.short	-1
+ 1898 0386 02       		.byte	2
+ 1899 0387 00       		.byte	0
+ 1900 0388 FFFF     		.short	-1
+ 1901 038a 02       		.byte	2
+ 1902 038b 00       		.byte	0
+ 1903 038c FFFF     		.short	-1
+ 1904 038e 02       		.byte	2
+ 1905 038f 00       		.byte	0
+ 1906 0390 FFFF     		.short	-1
+ 1907 0392 02       		.byte	2
+ 1908 0393 00       		.byte	0
+ 1909 0394 FFFF     		.short	-1
+ 1910 0396 02       		.byte	2
+ 1911 0397 00       		.byte	0
+ 1912 0398 FFFF     		.short	-1
+ 1913 039a 02       		.byte	2
+ 1914 039b 00       		.byte	0
+ 1915 039c FFFF     		.short	-1
+ 1916 039e 02       		.byte	2
+ 1917 039f 00       		.byte	0
+ 1918 03a0 FFFF     		.short	-1
+ 1919 03a2 02       		.byte	2
+ 1920 03a3 00       		.byte	0
+ 1921 03a4 FFFF     		.short	-1
+ 1922 03a6 02       		.byte	2
+ 1923 03a7 00       		.byte	0
+ 1924 03a8 FFFF     		.short	-1
+ 1925 03aa 02       		.byte	2
+ 1926 03ab 00       		.byte	0
+ 1927 03ac FFFF     		.short	-1
+ 1928 03ae 02       		.byte	2
+ 1929 03af 00       		.byte	0
+ 1930 03b0 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 35
+
+
+ 1931 03b2 02       		.byte	2
+ 1932 03b3 00       		.byte	0
+ 1933 03b4 FFFF     		.short	-1
+ 1934 03b6 02       		.byte	2
+ 1935 03b7 00       		.byte	0
+ 1936 03b8 FFFF     		.short	-1
+ 1937 03ba 02       		.byte	2
+ 1938 03bb 00       		.byte	0
+ 1939 03bc FFFF     		.short	-1
+ 1940 03be 02       		.byte	2
+ 1941 03bf 00       		.byte	0
+ 1942 03c0 FFFF     		.short	-1
+ 1943 03c2 02       		.byte	2
+ 1944 03c3 00       		.byte	0
+ 1945 03c4 FFFF     		.short	-1
+ 1946 03c6 02       		.byte	2
+ 1947 03c7 00       		.byte	0
+ 1948 03c8 FFFF     		.short	-1
+ 1949 03ca 02       		.byte	2
+ 1950 03cb 00       		.byte	0
+ 1951 03cc FFFF     		.short	-1
+ 1952 03ce 02       		.byte	2
+ 1953 03cf 00       		.byte	0
+ 1954 03d0 FFFF     		.short	-1
+ 1955 03d2 02       		.byte	2
+ 1956 03d3 00       		.byte	0
+ 1957 03d4 FFFF     		.short	-1
+ 1958 03d6 02       		.byte	2
+ 1959 03d7 00       		.byte	0
+ 1960 03d8 FFFF     		.short	-1
+ 1961 03da 02       		.byte	2
+ 1962 03db 00       		.byte	0
+ 1963 03dc FFFF     		.short	-1
+ 1964 03de 02       		.byte	2
+ 1965 03df 00       		.byte	0
+ 1966 03e0 FFFF     		.short	-1
+ 1967 03e2 02       		.byte	2
+ 1968 03e3 00       		.byte	0
+ 1969 03e4 FFFF     		.short	-1
+ 1970 03e6 02       		.byte	2
+ 1971 03e7 00       		.byte	0
+ 1972 03e8 FFFF     		.short	-1
+ 1973 03ea 02       		.byte	2
+ 1974 03eb 00       		.byte	0
+ 1975 03ec FFFF     		.short	-1
+ 1976 03ee 02       		.byte	2
+ 1977 03ef 00       		.byte	0
+ 1978 03f0 FFFF     		.short	-1
+ 1979 03f2 02       		.byte	2
+ 1980 03f3 00       		.byte	0
+ 1981 03f4 FFFF     		.short	-1
+ 1982 03f6 02       		.byte	2
+ 1983 03f7 00       		.byte	0
+ 1984 03f8 FFFF     		.short	-1
+ 1985 03fa 02       		.byte	2
+ 1986 03fb 00       		.byte	0
+ 1987 03fc FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 36
+
+
+ 1988 03fe 02       		.byte	2
+ 1989 03ff 00       		.byte	0
+ 1990 0400 FFFF     		.short	-1
+ 1991 0402 02       		.byte	2
+ 1992 0403 00       		.byte	0
+ 1993 0404 FFFF     		.short	-1
+ 1994 0406 02       		.byte	2
+ 1995 0407 00       		.byte	0
+ 1996 0408 FFFF     		.short	-1
+ 1997 040a 02       		.byte	2
+ 1998 040b 00       		.byte	0
+ 1999 040c FFFF     		.short	-1
+ 2000 040e 02       		.byte	2
+ 2001 040f 00       		.byte	0
+ 2002 0410 FFFF     		.short	-1
+ 2003 0412 02       		.byte	2
+ 2004 0413 00       		.byte	0
+ 2005 0414 FFFF     		.short	-1
+ 2006 0416 02       		.byte	2
+ 2007 0417 00       		.byte	0
+ 2008 0418 FFFF     		.short	-1
+ 2009 041a 02       		.byte	2
+ 2010 041b 00       		.byte	0
+ 2011 041c FFFF     		.short	-1
+ 2012 041e 02       		.byte	2
+ 2013 041f 00       		.byte	0
+ 2014 0420 FFFF     		.short	-1
+ 2015 0422 02       		.byte	2
+ 2016 0423 00       		.byte	0
+ 2017 0424 FFFF     		.short	-1
+ 2018 0426 02       		.byte	2
+ 2019 0427 00       		.byte	0
+ 2020 0428 FFFF     		.short	-1
+ 2021 042a 02       		.byte	2
+ 2022 042b 00       		.byte	0
+ 2023 042c FFFF     		.short	-1
+ 2024 042e 02       		.byte	2
+ 2025 042f 00       		.byte	0
+ 2026 0430 FFFF     		.short	-1
+ 2027 0432 02       		.byte	2
+ 2028 0433 00       		.byte	0
+ 2029 0434 FFFF     		.short	-1
+ 2030 0436 02       		.byte	2
+ 2031 0437 00       		.byte	0
+ 2032 0438 FFFF     		.short	-1
+ 2033 043a 02       		.byte	2
+ 2034 043b 00       		.byte	0
+ 2035 043c FFFF     		.short	-1
+ 2036 043e 02       		.byte	2
+ 2037 043f 00       		.byte	0
+ 2038 0440 FFFF     		.short	-1
+ 2039 0442 02       		.byte	2
+ 2040 0443 00       		.byte	0
+ 2041 0444 FFFF     		.short	-1
+ 2042 0446 02       		.byte	2
+ 2043 0447 00       		.byte	0
+ 2044 0448 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 37
+
+
+ 2045 044a 02       		.byte	2
+ 2046 044b 00       		.byte	0
+ 2047 044c FFFF     		.short	-1
+ 2048 044e 02       		.byte	2
+ 2049 044f 00       		.byte	0
+ 2050 0450 FFFF     		.short	-1
+ 2051 0452 02       		.byte	2
+ 2052 0453 00       		.byte	0
+ 2053 0454 FFFF     		.short	-1
+ 2054 0456 02       		.byte	2
+ 2055 0457 00       		.byte	0
+ 2056 0458 FFFF     		.short	-1
+ 2057 045a 02       		.byte	2
+ 2058 045b 00       		.byte	0
+ 2059 045c FFFF     		.short	-1
+ 2060 045e 02       		.byte	2
+ 2061 045f 00       		.byte	0
+ 2062 0460 FFFF     		.short	-1
+ 2063 0462 02       		.byte	2
+ 2064 0463 00       		.byte	0
+ 2065 0464 FFFF     		.short	-1
+ 2066 0466 02       		.byte	2
+ 2067 0467 00       		.byte	0
+ 2068 0468 FFFF     		.short	-1
+ 2069 046a 02       		.byte	2
+ 2070 046b 00       		.byte	0
+ 2071 046c FFFF     		.short	-1
+ 2072 046e 02       		.byte	2
+ 2073 046f 00       		.byte	0
+ 2074 0470 FFFF     		.short	-1
+ 2075 0472 02       		.byte	2
+ 2076 0473 00       		.byte	0
+ 2077 0474 FFFF     		.short	-1
+ 2078 0476 02       		.byte	2
+ 2079 0477 00       		.byte	0
+ 2080 0478 FFFF     		.short	-1
+ 2081 047a 02       		.byte	2
+ 2082 047b 00       		.byte	0
+ 2083 047c FFFF     		.short	-1
+ 2084 047e 02       		.byte	2
+ 2085 047f 00       		.byte	0
+ 2086 0480 FFFF     		.short	-1
+ 2087 0482 02       		.byte	2
+ 2088 0483 00       		.byte	0
+ 2089 0484 FFFF     		.short	-1
+ 2090 0486 02       		.byte	2
+ 2091 0487 00       		.byte	0
+ 2092 0488 FFFF     		.short	-1
+ 2093 048a 02       		.byte	2
+ 2094 048b 00       		.byte	0
+ 2095 048c FFFF     		.short	-1
+ 2096 048e 02       		.byte	2
+ 2097 048f 00       		.byte	0
+ 2098 0490 FFFF     		.short	-1
+ 2099 0492 02       		.byte	2
+ 2100 0493 00       		.byte	0
+ 2101 0494 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 38
+
+
+ 2102 0496 02       		.byte	2
+ 2103 0497 00       		.byte	0
+ 2104 0498 FFFF     		.short	-1
+ 2105 049a 02       		.byte	2
+ 2106 049b 00       		.byte	0
+ 2107 049c FFFF     		.short	-1
+ 2108 049e 02       		.byte	2
+ 2109 049f 00       		.byte	0
+ 2110 04a0 FFFF     		.short	-1
+ 2111 04a2 02       		.byte	2
+ 2112 04a3 00       		.byte	0
+ 2113 04a4 FFFF     		.short	-1
+ 2114 04a6 02       		.byte	2
+ 2115 04a7 00       		.byte	0
+ 2116 04a8 FFFF     		.short	-1
+ 2117 04aa 02       		.byte	2
+ 2118 04ab 00       		.byte	0
+ 2119 04ac FFFF     		.short	-1
+ 2120 04ae 02       		.byte	2
+ 2121 04af 00       		.byte	0
+ 2122 04b0 FFFF     		.short	-1
+ 2123 04b2 02       		.byte	2
+ 2124 04b3 00       		.byte	0
+ 2125 04b4 FFFF     		.short	-1
+ 2126 04b6 02       		.byte	2
+ 2127 04b7 00       		.byte	0
+ 2128 04b8 FFFF     		.short	-1
+ 2129 04ba 02       		.byte	2
+ 2130 04bb 00       		.byte	0
+ 2131 04bc FFFF     		.short	-1
+ 2132 04be 02       		.byte	2
+ 2133 04bf 00       		.byte	0
+ 2134 04c0 FFFF     		.short	-1
+ 2135 04c2 02       		.byte	2
+ 2136 04c3 00       		.byte	0
+ 2137 04c4 FFFF     		.short	-1
+ 2138 04c6 02       		.byte	2
+ 2139 04c7 00       		.byte	0
+ 2140 04c8 FFFF     		.short	-1
+ 2141 04ca 02       		.byte	2
+ 2142 04cb 00       		.byte	0
+ 2143 04cc FFFF     		.short	-1
+ 2144 04ce 02       		.byte	2
+ 2145 04cf 00       		.byte	0
+ 2146 04d0 FFFF     		.short	-1
+ 2147 04d2 02       		.byte	2
+ 2148 04d3 00       		.byte	0
+ 2149 04d4 FFFF     		.short	-1
+ 2150 04d6 02       		.byte	2
+ 2151 04d7 00       		.byte	0
+ 2152 04d8 FFFF     		.short	-1
+ 2153 04da 02       		.byte	2
+ 2154 04db 00       		.byte	0
+ 2155 04dc FFFF     		.short	-1
+ 2156 04de 02       		.byte	2
+ 2157 04df 00       		.byte	0
+ 2158 04e0 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 39
+
+
+ 2159 04e2 02       		.byte	2
+ 2160 04e3 00       		.byte	0
+ 2161 04e4 FFFF     		.short	-1
+ 2162 04e6 02       		.byte	2
+ 2163 04e7 00       		.byte	0
+ 2164 04e8 FFFF     		.short	-1
+ 2165 04ea 02       		.byte	2
+ 2166 04eb 00       		.byte	0
+ 2167 04ec FFFF     		.short	-1
+ 2168 04ee 02       		.byte	2
+ 2169 04ef 00       		.byte	0
+ 2170 04f0 FFFF     		.short	-1
+ 2171 04f2 02       		.byte	2
+ 2172 04f3 00       		.byte	0
+ 2173 04f4 FFFF     		.short	-1
+ 2174 04f6 02       		.byte	2
+ 2175 04f7 00       		.byte	0
+ 2176 04f8 FFFF     		.short	-1
+ 2177 04fa 02       		.byte	2
+ 2178 04fb 00       		.byte	0
+ 2179 04fc FFFF     		.short	-1
+ 2180 04fe 02       		.byte	2
+ 2181 04ff 00       		.byte	0
+ 2182 0500 FFFF     		.short	-1
+ 2183 0502 02       		.byte	2
+ 2184 0503 00       		.byte	0
+ 2185 0504 FFFF     		.short	-1
+ 2186 0506 02       		.byte	2
+ 2187 0507 00       		.byte	0
+ 2188 0508 FFFF     		.short	-1
+ 2189 050a 02       		.byte	2
+ 2190 050b 00       		.byte	0
+ 2191 050c FFFF     		.short	-1
+ 2192 050e 02       		.byte	2
+ 2193 050f 00       		.byte	0
+ 2194 0510 FFFF     		.short	-1
+ 2195 0512 02       		.byte	2
+ 2196 0513 00       		.byte	0
+ 2197 0514 FFFF     		.short	-1
+ 2198 0516 02       		.byte	2
+ 2199 0517 00       		.byte	0
+ 2200 0518 FFFF     		.short	-1
+ 2201 051a 02       		.byte	2
+ 2202 051b 00       		.byte	0
+ 2203 051c FFFF     		.short	-1
+ 2204 051e 02       		.byte	2
+ 2205 051f 00       		.byte	0
+ 2206 0520 FFFF     		.short	-1
+ 2207 0522 02       		.byte	2
+ 2208 0523 00       		.byte	0
+ 2209 0524 FFFF     		.short	-1
+ 2210 0526 02       		.byte	2
+ 2211 0527 00       		.byte	0
+ 2212 0528 FFFF     		.short	-1
+ 2213 052a 02       		.byte	2
+ 2214 052b 00       		.byte	0
+ 2215 052c FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 40
+
+
+ 2216 052e 02       		.byte	2
+ 2217 052f 00       		.byte	0
+ 2218 0530 FFFF     		.short	-1
+ 2219 0532 02       		.byte	2
+ 2220 0533 00       		.byte	0
+ 2221 0534 FFFF     		.short	-1
+ 2222 0536 02       		.byte	2
+ 2223 0537 00       		.byte	0
+ 2224 0538 FFFF     		.short	-1
+ 2225 053a 02       		.byte	2
+ 2226 053b 00       		.byte	0
+ 2227 053c FFFF     		.short	-1
+ 2228 053e 02       		.byte	2
+ 2229 053f 00       		.byte	0
+ 2230 0540 FFFF     		.short	-1
+ 2231 0542 02       		.byte	2
+ 2232 0543 00       		.byte	0
+ 2233 0544 FFFF     		.short	-1
+ 2234 0546 02       		.byte	2
+ 2235 0547 00       		.byte	0
+ 2236 0548 FFFF     		.short	-1
+ 2237 054a 02       		.byte	2
+ 2238 054b 00       		.byte	0
+ 2239 054c FFFF     		.short	-1
+ 2240 054e 02       		.byte	2
+ 2241 054f 00       		.byte	0
+ 2242 0550 FFFF     		.short	-1
+ 2243 0552 02       		.byte	2
+ 2244 0553 00       		.byte	0
+ 2245 0554 FFFF     		.short	-1
+ 2246 0556 02       		.byte	2
+ 2247 0557 00       		.byte	0
+ 2248 0558 FFFF     		.short	-1
+ 2249 055a 02       		.byte	2
+ 2250 055b 00       		.byte	0
+ 2251 055c FFFF     		.short	-1
+ 2252 055e 02       		.byte	2
+ 2253 055f 00       		.byte	0
+ 2254 0560 FFFF     		.short	-1
+ 2255 0562 02       		.byte	2
+ 2256 0563 00       		.byte	0
+ 2257 0564 FFFF     		.short	-1
+ 2258 0566 02       		.byte	2
+ 2259 0567 00       		.byte	0
+ 2260 0568 FFFF     		.short	-1
+ 2261 056a 02       		.byte	2
+ 2262 056b 00       		.byte	0
+ 2263 056c FFFF     		.short	-1
+ 2264 056e 02       		.byte	2
+ 2265 056f 00       		.byte	0
+ 2266 0570 FFFF     		.short	-1
+ 2267 0572 02       		.byte	2
+ 2268 0573 00       		.byte	0
+ 2269 0574 FFFF     		.short	-1
+ 2270 0576 02       		.byte	2
+ 2271 0577 00       		.byte	0
+ 2272 0578 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 41
+
+
+ 2273 057a 02       		.byte	2
+ 2274 057b 00       		.byte	0
+ 2275 057c FFFF     		.short	-1
+ 2276 057e 02       		.byte	2
+ 2277 057f 00       		.byte	0
+ 2278 0580 FFFF     		.short	-1
+ 2279 0582 02       		.byte	2
+ 2280 0583 00       		.byte	0
+ 2281 0584 FFFF     		.short	-1
+ 2282 0586 02       		.byte	2
+ 2283 0587 00       		.byte	0
+ 2284 0588 FFFF     		.short	-1
+ 2285 058a 02       		.byte	2
+ 2286 058b 00       		.byte	0
+ 2287 058c FFFF     		.short	-1
+ 2288 058e 02       		.byte	2
+ 2289 058f 00       		.byte	0
+ 2290 0590 FFFF     		.short	-1
+ 2291 0592 02       		.byte	2
+ 2292 0593 00       		.byte	0
+ 2293 0594 FFFF     		.short	-1
+ 2294 0596 02       		.byte	2
+ 2295 0597 00       		.byte	0
+ 2296 0598 FFFF     		.short	-1
+ 2297 059a 02       		.byte	2
+ 2298 059b 00       		.byte	0
+ 2299 059c FFFF     		.short	-1
+ 2300 059e 02       		.byte	2
+ 2301 059f 00       		.byte	0
+ 2302 05a0 FFFF     		.short	-1
+ 2303 05a2 02       		.byte	2
+ 2304 05a3 00       		.byte	0
+ 2305 05a4 FFFF     		.short	-1
+ 2306 05a6 02       		.byte	2
+ 2307 05a7 00       		.byte	0
+ 2308 05a8 FFFF     		.short	-1
+ 2309 05aa 02       		.byte	2
+ 2310 05ab 00       		.byte	0
+ 2311 05ac FFFF     		.short	-1
+ 2312 05ae 02       		.byte	2
+ 2313 05af 00       		.byte	0
+ 2314 05b0 FFFF     		.short	-1
+ 2315 05b2 02       		.byte	2
+ 2316 05b3 00       		.byte	0
+ 2317 05b4 FFFF     		.short	-1
+ 2318 05b6 02       		.byte	2
+ 2319 05b7 00       		.byte	0
+ 2320 05b8 FFFF     		.short	-1
+ 2321 05ba 02       		.byte	2
+ 2322 05bb 00       		.byte	0
+ 2323 05bc FFFF     		.short	-1
+ 2324 05be 02       		.byte	2
+ 2325 05bf 00       		.byte	0
+ 2326 05c0 FFFF     		.short	-1
+ 2327 05c2 02       		.byte	2
+ 2328 05c3 00       		.byte	0
+ 2329 05c4 FFFF     		.short	-1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 42
+
+
+ 2330 05c6 02       		.byte	2
+ 2331 05c7 00       		.byte	0
+ 2332 05c8 FFFF     		.short	-1
+ 2333 05ca 02       		.byte	2
+ 2334 05cb 00       		.byte	0
+ 2335 05cc FFFF     		.short	-1
+ 2336 05ce 02       		.byte	2
+ 2337 05cf 00       		.byte	0
+ 2338 05d0 FFFF     		.short	-1
+ 2339 05d2 02       		.byte	2
+ 2340 05d3 00       		.byte	0
+ 2341 05d4 FFFF     		.short	-1
+ 2342 05d6 02       		.byte	2
+ 2343 05d7 00       		.byte	0
+ 2344 05d8 FFFF     		.short	-1
+ 2345 05da 02       		.byte	2
+ 2346 05db 00       		.byte	0
+ 2347 05dc FFFF     		.short	-1
+ 2348 05de 02       		.byte	2
+ 2349 05df 00       		.byte	0
+ 2350 05e0 FFFF     		.short	-1
+ 2351 05e2 02       		.byte	2
+ 2352 05e3 00       		.byte	0
+ 2353 05e4 FFFF     		.short	-1
+ 2354 05e6 02       		.byte	2
+ 2355 05e7 00       		.byte	0
+ 2356 05e8 FFFF     		.short	-1
+ 2357 05ea 02       		.byte	2
+ 2358 05eb 00       		.byte	0
+ 2359 05ec FFFF     		.short	-1
+ 2360 05ee 02       		.byte	2
+ 2361 05ef 00       		.byte	0
+ 2362 05f0 FFFF     		.short	-1
+ 2363 05f2 02       		.byte	2
+ 2364 05f3 00       		.byte	0
+ 2365 05f4 FFFF     		.short	-1
+ 2366 05f6 02       		.byte	2
+ 2367 05f7 00       		.byte	0
+ 2368 05f8 FFFF     		.short	-1
+ 2369 05fa 02       		.byte	2
+ 2370 05fb 00       		.byte	0
+ 2371 05fc FFFF     		.short	-1
+ 2372 05fe 02       		.byte	2
+ 2373 05ff 00       		.byte	0
+ 2374              		.text
+ 2375              	.Letext0:
+ 2376              		.file 1 "Generated_Source\\PSoC5\\cytypes.h"
+ 2377              		.file 2 "Generated_Source\\PSoC5\\MDIO_Interface.h"
+ 2378              		.file 3 "Generated_Source\\PSoC5\\MDIO_Interface_REG.c"
+ 2379              		.section	.debug_info,"",%progbits
+ 2380              	.Ldebug_info0:
+ 2381 0000 53020000 		.4byte	0x253
+ 2382 0004 0400     		.2byte	0x4
+ 2383 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 2384 000a 04       		.byte	0x4
+ 2385 000b 01       		.uleb128 0x1
+ 2386 000c 46010000 		.4byte	.LASF32
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 43
+
+
+ 2387 0010 01       		.byte	0x1
+ 2388 0011 14020000 		.4byte	.LASF33
+ 2389 0015 2C030000 		.4byte	.LASF34
+ 2390 0019 00000000 		.4byte	.Ldebug_line0
+ 2391 001d 02       		.uleb128 0x2
+ 2392 001e 01       		.byte	0x1
+ 2393 001f 06       		.byte	0x6
+ 2394 0020 20030000 		.4byte	.LASF0
+ 2395 0024 02       		.uleb128 0x2
+ 2396 0025 01       		.byte	0x1
+ 2397 0026 08       		.byte	0x8
+ 2398 0027 5B000000 		.4byte	.LASF1
+ 2399 002b 02       		.uleb128 0x2
+ 2400 002c 02       		.byte	0x2
+ 2401 002d 05       		.byte	0x5
+ 2402 002e 48020000 		.4byte	.LASF2
+ 2403 0032 02       		.uleb128 0x2
+ 2404 0033 02       		.byte	0x2
+ 2405 0034 07       		.byte	0x7
+ 2406 0035 24000000 		.4byte	.LASF3
+ 2407 0039 02       		.uleb128 0x2
+ 2408 003a 04       		.byte	0x4
+ 2409 003b 05       		.byte	0x5
+ 2410 003c 12030000 		.4byte	.LASF4
+ 2411 0040 02       		.uleb128 0x2
+ 2412 0041 04       		.byte	0x4
+ 2413 0042 07       		.byte	0x7
+ 2414 0043 69000000 		.4byte	.LASF5
+ 2415 0047 02       		.uleb128 0x2
+ 2416 0048 08       		.byte	0x8
+ 2417 0049 05       		.byte	0x5
+ 2418 004a 01020000 		.4byte	.LASF6
+ 2419 004e 02       		.uleb128 0x2
+ 2420 004f 08       		.byte	0x8
+ 2421 0050 07       		.byte	0x7
+ 2422 0051 E1010000 		.4byte	.LASF7
+ 2423 0055 03       		.uleb128 0x3
+ 2424 0056 04       		.byte	0x4
+ 2425 0057 05       		.byte	0x5
+ 2426 0058 696E7400 		.ascii	"int\000"
+ 2427 005c 02       		.uleb128 0x2
+ 2428 005d 04       		.byte	0x4
+ 2429 005e 07       		.byte	0x7
+ 2430 005f D4010000 		.4byte	.LASF8
+ 2431 0063 04       		.uleb128 0x4
+ 2432 0064 7B000000 		.4byte	.LASF9
+ 2433 0068 01       		.byte	0x1
+ 2434 0069 9201     		.2byte	0x192
+ 2435 006b 24000000 		.4byte	0x24
+ 2436 006f 04       		.uleb128 0x4
+ 2437 0070 03010000 		.4byte	.LASF10
+ 2438 0074 01       		.byte	0x1
+ 2439 0075 9301     		.2byte	0x193
+ 2440 0077 32000000 		.4byte	0x32
+ 2441 007b 02       		.uleb128 0x2
+ 2442 007c 04       		.byte	0x4
+ 2443 007d 04       		.byte	0x4
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 44
+
+
+ 2444 007e 37000000 		.4byte	.LASF11
+ 2445 0082 02       		.uleb128 0x2
+ 2446 0083 08       		.byte	0x8
+ 2447 0084 04       		.byte	0x4
+ 2448 0085 A2000000 		.4byte	.LASF12
+ 2449 0089 02       		.uleb128 0x2
+ 2450 008a 01       		.byte	0x1
+ 2451 008b 08       		.byte	0x8
+ 2452 008c 1B030000 		.4byte	.LASF13
+ 2453 0090 02       		.uleb128 0x2
+ 2454 0091 04       		.byte	0x4
+ 2455 0092 07       		.byte	0x7
+ 2456 0093 F8010000 		.4byte	.LASF14
+ 2457 0097 05       		.uleb128 0x5
+ 2458 0098 04       		.byte	0x4
+ 2459 0099 02       		.byte	0x2
+ 2460 009a 38       		.byte	0x38
+ 2461 009b C4000000 		.4byte	0xc4
+ 2462 009f 06       		.uleb128 0x6
+ 2463 00a0 0F020000 		.4byte	.LASF15
+ 2464 00a4 02       		.byte	0x2
+ 2465 00a5 3A       		.byte	0x3a
+ 2466 00a6 6F000000 		.4byte	0x6f
+ 2467 00aa 00       		.byte	0
+ 2468 00ab 06       		.uleb128 0x6
+ 2469 00ac 40020000 		.4byte	.LASF16
+ 2470 00b0 02       		.byte	0x2
+ 2471 00b1 3B       		.byte	0x3b
+ 2472 00b2 63000000 		.4byte	0x63
+ 2473 00b6 02       		.byte	0x2
+ 2474 00b7 06       		.uleb128 0x6
+ 2475 00b8 00000000 		.4byte	.LASF17
+ 2476 00bc 02       		.byte	0x2
+ 2477 00bd 3C       		.byte	0x3c
+ 2478 00be 63000000 		.4byte	0x63
+ 2479 00c2 03       		.byte	0x3
+ 2480 00c3 00       		.byte	0
+ 2481 00c4 07       		.uleb128 0x7
+ 2482 00c5 81000000 		.4byte	.LASF18
+ 2483 00c9 02       		.byte	0x2
+ 2484 00ca 3E       		.byte	0x3e
+ 2485 00cb 97000000 		.4byte	0x97
+ 2486 00cf 08       		.uleb128 0x8
+ 2487 00d0 63000000 		.4byte	0x63
+ 2488 00d4 E0000000 		.4byte	0xe0
+ 2489 00d8 09       		.uleb128 0x9
+ 2490 00d9 90000000 		.4byte	0x90
+ 2491 00dd FF01     		.2byte	0x1ff
+ 2492 00df 00       		.byte	0
+ 2493 00e0 0A       		.uleb128 0xa
+ 2494 00e1 A9000000 		.4byte	.LASF19
+ 2495 00e5 03       		.byte	0x3
+ 2496 00e6 1A       		.byte	0x1a
+ 2497 00e7 CF000000 		.4byte	0xcf
+ 2498 00eb 05       		.uleb128 0x5
+ 2499 00ec 03       		.byte	0x3
+ 2500 00ed 00000000 		.4byte	MDIO_Interface_registerPage_1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 45
+
+
+ 2501 00f1 08       		.uleb128 0x8
+ 2502 00f2 63000000 		.4byte	0x63
+ 2503 00f6 01010000 		.4byte	0x101
+ 2504 00fa 0B       		.uleb128 0xb
+ 2505 00fb 90000000 		.4byte	0x90
+ 2506 00ff FF       		.byte	0xff
+ 2507 0100 00       		.byte	0
+ 2508 0101 0A       		.uleb128 0xa
+ 2509 0102 C7000000 		.4byte	.LASF20
+ 2510 0106 03       		.byte	0x3
+ 2511 0107 1D       		.byte	0x1d
+ 2512 0108 F1000000 		.4byte	0xf1
+ 2513 010c 05       		.uleb128 0x5
+ 2514 010d 03       		.byte	0x3
+ 2515 010e 00000000 		.4byte	MDIO_Interface_registerPage_2
+ 2516 0112 0A       		.uleb128 0xa
+ 2517 0113 E5000000 		.4byte	.LASF21
+ 2518 0117 03       		.byte	0x3
+ 2519 0118 20       		.byte	0x20
+ 2520 0119 F1000000 		.4byte	0xf1
+ 2521 011d 05       		.uleb128 0x5
+ 2522 011e 03       		.byte	0x3
+ 2523 011f 00000000 		.4byte	MDIO_Interface_registerPage_3
+ 2524 0123 08       		.uleb128 0x8
+ 2525 0124 6F000000 		.4byte	0x6f
+ 2526 0128 33010000 		.4byte	0x133
+ 2527 012c 0B       		.uleb128 0xb
+ 2528 012d 90000000 		.4byte	0x90
+ 2529 0131 7F       		.byte	0x7f
+ 2530 0132 00       		.byte	0
+ 2531 0133 0A       		.uleb128 0xa
+ 2532 0134 3D000000 		.4byte	.LASF22
+ 2533 0138 03       		.byte	0x3
+ 2534 0139 23       		.byte	0x23
+ 2535 013a 23010000 		.4byte	0x123
+ 2536 013e 05       		.uleb128 0x5
+ 2537 013f 03       		.byte	0x3
+ 2538 0140 00000000 		.4byte	MDIO_Interface_registerPage_4
+ 2539 0144 08       		.uleb128 0x8
+ 2540 0145 6F000000 		.4byte	0x6f
+ 2541 0149 54010000 		.4byte	0x154
+ 2542 014d 0B       		.uleb128 0xb
+ 2543 014e 90000000 		.4byte	0x90
+ 2544 0152 FF       		.byte	0xff
+ 2545 0153 00       		.byte	0
+ 2546 0154 0A       		.uleb128 0xa
+ 2547 0155 0A010000 		.4byte	.LASF23
+ 2548 0159 03       		.byte	0x3
+ 2549 015a 26       		.byte	0x26
+ 2550 015b 44010000 		.4byte	0x144
+ 2551 015f 05       		.uleb128 0x5
+ 2552 0160 03       		.byte	0x3
+ 2553 0161 00000000 		.4byte	MDIO_Interface_registerPage_5
+ 2554 0165 0A       		.uleb128 0xa
+ 2555 0166 28010000 		.4byte	.LASF24
+ 2556 016a 03       		.byte	0x3
+ 2557 016b 29       		.byte	0x29
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 46
+
+
+ 2558 016c 23010000 		.4byte	0x123
+ 2559 0170 05       		.uleb128 0x5
+ 2560 0171 03       		.byte	0x3
+ 2561 0172 00000000 		.4byte	MDIO_Interface_registerPage_6
+ 2562 0176 08       		.uleb128 0x8
+ 2563 0177 C4000000 		.4byte	0xc4
+ 2564 017b 87010000 		.4byte	0x187
+ 2565 017f 09       		.uleb128 0x9
+ 2566 0180 90000000 		.4byte	0x90
+ 2567 0184 FF01     		.2byte	0x1ff
+ 2568 0186 00       		.byte	0
+ 2569 0187 0A       		.uleb128 0xa
+ 2570 0188 52020000 		.4byte	.LASF25
+ 2571 018c 03       		.byte	0x3
+ 2572 018d 2C       		.byte	0x2c
+ 2573 018e 98010000 		.4byte	0x198
+ 2574 0192 05       		.uleb128 0x5
+ 2575 0193 03       		.byte	0x3
+ 2576 0194 00000000 		.4byte	MDIO_Interface_registerConfig_1
+ 2577 0198 0C       		.uleb128 0xc
+ 2578 0199 76010000 		.4byte	0x176
+ 2579 019d 08       		.uleb128 0x8
+ 2580 019e C4000000 		.4byte	0xc4
+ 2581 01a2 AD010000 		.4byte	0x1ad
+ 2582 01a6 0B       		.uleb128 0xb
+ 2583 01a7 90000000 		.4byte	0x90
+ 2584 01ab FF       		.byte	0xff
+ 2585 01ac 00       		.byte	0
+ 2586 01ad 0A       		.uleb128 0xa
+ 2587 01ae 72020000 		.4byte	.LASF26
+ 2588 01b2 03       		.byte	0x3
+ 2589 01b3 B0       		.byte	0xb0
+ 2590 01b4 BE010000 		.4byte	0x1be
+ 2591 01b8 05       		.uleb128 0x5
+ 2592 01b9 03       		.byte	0x3
+ 2593 01ba 00000000 		.4byte	MDIO_Interface_registerConfig_2
+ 2594 01be 0C       		.uleb128 0xc
+ 2595 01bf 9D010000 		.4byte	0x19d
+ 2596 01c3 0A       		.uleb128 0xa
+ 2597 01c4 92020000 		.4byte	.LASF27
+ 2598 01c8 03       		.byte	0x3
+ 2599 01c9 F4       		.byte	0xf4
+ 2600 01ca D4010000 		.4byte	0x1d4
+ 2601 01ce 05       		.uleb128 0x5
+ 2602 01cf 03       		.byte	0x3
+ 2603 01d0 00000000 		.4byte	MDIO_Interface_registerConfig_3
+ 2604 01d4 0C       		.uleb128 0xc
+ 2605 01d5 9D010000 		.4byte	0x19d
+ 2606 01d9 08       		.uleb128 0x8
+ 2607 01da C4000000 		.4byte	0xc4
+ 2608 01de E9010000 		.4byte	0x1e9
+ 2609 01e2 0B       		.uleb128 0xb
+ 2610 01e3 90000000 		.4byte	0x90
+ 2611 01e7 7F       		.byte	0x7f
+ 2612 01e8 00       		.byte	0
+ 2613 01e9 0D       		.uleb128 0xd
+ 2614 01ea B2020000 		.4byte	.LASF28
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 47
+
+
+ 2615 01ee 03       		.byte	0x3
+ 2616 01ef 3801     		.2byte	0x138
+ 2617 01f1 FB010000 		.4byte	0x1fb
+ 2618 01f5 05       		.uleb128 0x5
+ 2619 01f6 03       		.byte	0x3
+ 2620 01f7 00000000 		.4byte	MDIO_Interface_registerConfig_4
+ 2621 01fb 0C       		.uleb128 0xc
+ 2622 01fc D9010000 		.4byte	0x1d9
+ 2623 0200 0D       		.uleb128 0xd
+ 2624 0201 D2020000 		.4byte	.LASF29
+ 2625 0205 03       		.byte	0x3
+ 2626 0206 5C01     		.2byte	0x15c
+ 2627 0208 9D010000 		.4byte	0x19d
+ 2628 020c 05       		.uleb128 0x5
+ 2629 020d 03       		.byte	0x3
+ 2630 020e 00000000 		.4byte	MDIO_Interface_registerConfig_5
+ 2631 0212 0D       		.uleb128 0xd
+ 2632 0213 F2020000 		.4byte	.LASF30
+ 2633 0217 03       		.byte	0x3
+ 2634 0218 A001     		.2byte	0x1a0
+ 2635 021a D9010000 		.4byte	0x1d9
+ 2636 021e 05       		.uleb128 0x5
+ 2637 021f 03       		.byte	0x3
+ 2638 0220 00000000 		.4byte	MDIO_Interface_registerConfig_6
+ 2639 0224 08       		.uleb128 0x8
+ 2640 0225 34020000 		.4byte	0x234
+ 2641 0229 34020000 		.4byte	0x234
+ 2642 022d 0B       		.uleb128 0xb
+ 2643 022e 90000000 		.4byte	0x90
+ 2644 0232 0B       		.byte	0xb
+ 2645 0233 00       		.byte	0
+ 2646 0234 0E       		.uleb128 0xe
+ 2647 0235 04       		.byte	0x4
+ 2648 0236 3A020000 		.4byte	0x23a
+ 2649 023a 0C       		.uleb128 0xc
+ 2650 023b 6F000000 		.4byte	0x6f
+ 2651 023f 0D       		.uleb128 0xd
+ 2652 0240 09000000 		.4byte	.LASF31
+ 2653 0244 03       		.byte	0x3
+ 2654 0245 C301     		.2byte	0x1c3
+ 2655 0247 51020000 		.4byte	0x251
+ 2656 024b 05       		.uleb128 0x5
+ 2657 024c 03       		.byte	0x3
+ 2658 024d 00000000 		.4byte	MDIO_Interface_pageInfoPtr
+ 2659 0251 0C       		.uleb128 0xc
+ 2660 0252 24020000 		.4byte	0x224
+ 2661 0256 00       		.byte	0
+ 2662              		.section	.debug_abbrev,"",%progbits
+ 2663              	.Ldebug_abbrev0:
+ 2664 0000 01       		.uleb128 0x1
+ 2665 0001 11       		.uleb128 0x11
+ 2666 0002 01       		.byte	0x1
+ 2667 0003 25       		.uleb128 0x25
+ 2668 0004 0E       		.uleb128 0xe
+ 2669 0005 13       		.uleb128 0x13
+ 2670 0006 0B       		.uleb128 0xb
+ 2671 0007 03       		.uleb128 0x3
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 48
+
+
+ 2672 0008 0E       		.uleb128 0xe
+ 2673 0009 1B       		.uleb128 0x1b
+ 2674 000a 0E       		.uleb128 0xe
+ 2675 000b 10       		.uleb128 0x10
+ 2676 000c 17       		.uleb128 0x17
+ 2677 000d 00       		.byte	0
+ 2678 000e 00       		.byte	0
+ 2679 000f 02       		.uleb128 0x2
+ 2680 0010 24       		.uleb128 0x24
+ 2681 0011 00       		.byte	0
+ 2682 0012 0B       		.uleb128 0xb
+ 2683 0013 0B       		.uleb128 0xb
+ 2684 0014 3E       		.uleb128 0x3e
+ 2685 0015 0B       		.uleb128 0xb
+ 2686 0016 03       		.uleb128 0x3
+ 2687 0017 0E       		.uleb128 0xe
+ 2688 0018 00       		.byte	0
+ 2689 0019 00       		.byte	0
+ 2690 001a 03       		.uleb128 0x3
+ 2691 001b 24       		.uleb128 0x24
+ 2692 001c 00       		.byte	0
+ 2693 001d 0B       		.uleb128 0xb
+ 2694 001e 0B       		.uleb128 0xb
+ 2695 001f 3E       		.uleb128 0x3e
+ 2696 0020 0B       		.uleb128 0xb
+ 2697 0021 03       		.uleb128 0x3
+ 2698 0022 08       		.uleb128 0x8
+ 2699 0023 00       		.byte	0
+ 2700 0024 00       		.byte	0
+ 2701 0025 04       		.uleb128 0x4
+ 2702 0026 16       		.uleb128 0x16
+ 2703 0027 00       		.byte	0
+ 2704 0028 03       		.uleb128 0x3
+ 2705 0029 0E       		.uleb128 0xe
+ 2706 002a 3A       		.uleb128 0x3a
+ 2707 002b 0B       		.uleb128 0xb
+ 2708 002c 3B       		.uleb128 0x3b
+ 2709 002d 05       		.uleb128 0x5
+ 2710 002e 49       		.uleb128 0x49
+ 2711 002f 13       		.uleb128 0x13
+ 2712 0030 00       		.byte	0
+ 2713 0031 00       		.byte	0
+ 2714 0032 05       		.uleb128 0x5
+ 2715 0033 13       		.uleb128 0x13
+ 2716 0034 01       		.byte	0x1
+ 2717 0035 0B       		.uleb128 0xb
+ 2718 0036 0B       		.uleb128 0xb
+ 2719 0037 3A       		.uleb128 0x3a
+ 2720 0038 0B       		.uleb128 0xb
+ 2721 0039 3B       		.uleb128 0x3b
+ 2722 003a 0B       		.uleb128 0xb
+ 2723 003b 01       		.uleb128 0x1
+ 2724 003c 13       		.uleb128 0x13
+ 2725 003d 00       		.byte	0
+ 2726 003e 00       		.byte	0
+ 2727 003f 06       		.uleb128 0x6
+ 2728 0040 0D       		.uleb128 0xd
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 49
+
+
+ 2729 0041 00       		.byte	0
+ 2730 0042 03       		.uleb128 0x3
+ 2731 0043 0E       		.uleb128 0xe
+ 2732 0044 3A       		.uleb128 0x3a
+ 2733 0045 0B       		.uleb128 0xb
+ 2734 0046 3B       		.uleb128 0x3b
+ 2735 0047 0B       		.uleb128 0xb
+ 2736 0048 49       		.uleb128 0x49
+ 2737 0049 13       		.uleb128 0x13
+ 2738 004a 38       		.uleb128 0x38
+ 2739 004b 0B       		.uleb128 0xb
+ 2740 004c 00       		.byte	0
+ 2741 004d 00       		.byte	0
+ 2742 004e 07       		.uleb128 0x7
+ 2743 004f 16       		.uleb128 0x16
+ 2744 0050 00       		.byte	0
+ 2745 0051 03       		.uleb128 0x3
+ 2746 0052 0E       		.uleb128 0xe
+ 2747 0053 3A       		.uleb128 0x3a
+ 2748 0054 0B       		.uleb128 0xb
+ 2749 0055 3B       		.uleb128 0x3b
+ 2750 0056 0B       		.uleb128 0xb
+ 2751 0057 49       		.uleb128 0x49
+ 2752 0058 13       		.uleb128 0x13
+ 2753 0059 00       		.byte	0
+ 2754 005a 00       		.byte	0
+ 2755 005b 08       		.uleb128 0x8
+ 2756 005c 01       		.uleb128 0x1
+ 2757 005d 01       		.byte	0x1
+ 2758 005e 49       		.uleb128 0x49
+ 2759 005f 13       		.uleb128 0x13
+ 2760 0060 01       		.uleb128 0x1
+ 2761 0061 13       		.uleb128 0x13
+ 2762 0062 00       		.byte	0
+ 2763 0063 00       		.byte	0
+ 2764 0064 09       		.uleb128 0x9
+ 2765 0065 21       		.uleb128 0x21
+ 2766 0066 00       		.byte	0
+ 2767 0067 49       		.uleb128 0x49
+ 2768 0068 13       		.uleb128 0x13
+ 2769 0069 2F       		.uleb128 0x2f
+ 2770 006a 05       		.uleb128 0x5
+ 2771 006b 00       		.byte	0
+ 2772 006c 00       		.byte	0
+ 2773 006d 0A       		.uleb128 0xa
+ 2774 006e 34       		.uleb128 0x34
+ 2775 006f 00       		.byte	0
+ 2776 0070 03       		.uleb128 0x3
+ 2777 0071 0E       		.uleb128 0xe
+ 2778 0072 3A       		.uleb128 0x3a
+ 2779 0073 0B       		.uleb128 0xb
+ 2780 0074 3B       		.uleb128 0x3b
+ 2781 0075 0B       		.uleb128 0xb
+ 2782 0076 49       		.uleb128 0x49
+ 2783 0077 13       		.uleb128 0x13
+ 2784 0078 3F       		.uleb128 0x3f
+ 2785 0079 19       		.uleb128 0x19
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 50
+
+
+ 2786 007a 02       		.uleb128 0x2
+ 2787 007b 18       		.uleb128 0x18
+ 2788 007c 00       		.byte	0
+ 2789 007d 00       		.byte	0
+ 2790 007e 0B       		.uleb128 0xb
+ 2791 007f 21       		.uleb128 0x21
+ 2792 0080 00       		.byte	0
+ 2793 0081 49       		.uleb128 0x49
+ 2794 0082 13       		.uleb128 0x13
+ 2795 0083 2F       		.uleb128 0x2f
+ 2796 0084 0B       		.uleb128 0xb
+ 2797 0085 00       		.byte	0
+ 2798 0086 00       		.byte	0
+ 2799 0087 0C       		.uleb128 0xc
+ 2800 0088 26       		.uleb128 0x26
+ 2801 0089 00       		.byte	0
+ 2802 008a 49       		.uleb128 0x49
+ 2803 008b 13       		.uleb128 0x13
+ 2804 008c 00       		.byte	0
+ 2805 008d 00       		.byte	0
+ 2806 008e 0D       		.uleb128 0xd
+ 2807 008f 34       		.uleb128 0x34
+ 2808 0090 00       		.byte	0
+ 2809 0091 03       		.uleb128 0x3
+ 2810 0092 0E       		.uleb128 0xe
+ 2811 0093 3A       		.uleb128 0x3a
+ 2812 0094 0B       		.uleb128 0xb
+ 2813 0095 3B       		.uleb128 0x3b
+ 2814 0096 05       		.uleb128 0x5
+ 2815 0097 49       		.uleb128 0x49
+ 2816 0098 13       		.uleb128 0x13
+ 2817 0099 3F       		.uleb128 0x3f
+ 2818 009a 19       		.uleb128 0x19
+ 2819 009b 02       		.uleb128 0x2
+ 2820 009c 18       		.uleb128 0x18
+ 2821 009d 00       		.byte	0
+ 2822 009e 00       		.byte	0
+ 2823 009f 0E       		.uleb128 0xe
+ 2824 00a0 0F       		.uleb128 0xf
+ 2825 00a1 00       		.byte	0
+ 2826 00a2 0B       		.uleb128 0xb
+ 2827 00a3 0B       		.uleb128 0xb
+ 2828 00a4 49       		.uleb128 0x49
+ 2829 00a5 13       		.uleb128 0x13
+ 2830 00a6 00       		.byte	0
+ 2831 00a7 00       		.byte	0
+ 2832 00a8 00       		.byte	0
+ 2833              		.section	.debug_aranges,"",%progbits
+ 2834 0000 14000000 		.4byte	0x14
+ 2835 0004 0200     		.2byte	0x2
+ 2836 0006 00000000 		.4byte	.Ldebug_info0
+ 2837 000a 04       		.byte	0x4
+ 2838 000b 00       		.byte	0
+ 2839 000c 0000     		.2byte	0
+ 2840 000e 0000     		.2byte	0
+ 2841 0010 00000000 		.4byte	0
+ 2842 0014 00000000 		.4byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 51
+
+
+ 2843              		.section	.debug_line,"",%progbits
+ 2844              	.Ldebug_line0:
+ 2845 0000 69000000 		.section	.debug_str,"MS",%progbits,1
+ 2845      02006300 
+ 2845      00000201 
+ 2845      FB0E0D00 
+ 2845      01010101 
+ 2846              	.LASF17:
+ 2847 0000 72657365 		.ascii	"reserved\000"
+ 2847      72766564 
+ 2847      00
+ 2848              	.LASF31:
+ 2849 0009 4D44494F 		.ascii	"MDIO_Interface_pageInfoPtr\000"
+ 2849      5F496E74 
+ 2849      65726661 
+ 2849      63655F70 
+ 2849      61676549 
+ 2850              	.LASF3:
+ 2851 0024 73686F72 		.ascii	"short unsigned int\000"
+ 2851      7420756E 
+ 2851      7369676E 
+ 2851      65642069 
+ 2851      6E7400
+ 2852              	.LASF11:
+ 2853 0037 666C6F61 		.ascii	"float\000"
+ 2853      7400
+ 2854              	.LASF22:
+ 2855 003d 4D44494F 		.ascii	"MDIO_Interface_registerPage_4\000"
+ 2855      5F496E74 
+ 2855      65726661 
+ 2855      63655F72 
+ 2855      65676973 
+ 2856              	.LASF1:
+ 2857 005b 756E7369 		.ascii	"unsigned char\000"
+ 2857      676E6564 
+ 2857      20636861 
+ 2857      7200
+ 2858              	.LASF5:
+ 2859 0069 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2859      20756E73 
+ 2859      69676E65 
+ 2859      6420696E 
+ 2859      7400
+ 2860              	.LASF9:
+ 2861 007b 75696E74 		.ascii	"uint8\000"
+ 2861      3800
+ 2862              	.LASF18:
+ 2863 0081 4D44494F 		.ascii	"MDIO_Interface_REG_CONFIG_STRUCT\000"
+ 2863      5F496E74 
+ 2863      65726661 
+ 2863      63655F52 
+ 2863      45475F43 
+ 2864              	.LASF12:
+ 2865 00a2 646F7562 		.ascii	"double\000"
+ 2865      6C6500
+ 2866              	.LASF19:
+ 2867 00a9 4D44494F 		.ascii	"MDIO_Interface_registerPage_1\000"
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 52
+
+
+ 2867      5F496E74 
+ 2867      65726661 
+ 2867      63655F72 
+ 2867      65676973 
+ 2868              	.LASF20:
+ 2869 00c7 4D44494F 		.ascii	"MDIO_Interface_registerPage_2\000"
+ 2869      5F496E74 
+ 2869      65726661 
+ 2869      63655F72 
+ 2869      65676973 
+ 2870              	.LASF21:
+ 2871 00e5 4D44494F 		.ascii	"MDIO_Interface_registerPage_3\000"
+ 2871      5F496E74 
+ 2871      65726661 
+ 2871      63655F72 
+ 2871      65676973 
+ 2872              	.LASF10:
+ 2873 0103 75696E74 		.ascii	"uint16\000"
+ 2873      313600
+ 2874              	.LASF23:
+ 2875 010a 4D44494F 		.ascii	"MDIO_Interface_registerPage_5\000"
+ 2875      5F496E74 
+ 2875      65726661 
+ 2875      63655F72 
+ 2875      65676973 
+ 2876              	.LASF24:
+ 2877 0128 4D44494F 		.ascii	"MDIO_Interface_registerPage_6\000"
+ 2877      5F496E74 
+ 2877      65726661 
+ 2877      63655F72 
+ 2877      65676973 
+ 2878              	.LASF32:
+ 2879 0146 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 2879      4320342E 
+ 2879      392E3320 
+ 2879      32303135 
+ 2879      30333033 
+ 2880 0179 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 2880      20726576 
+ 2880      6973696F 
+ 2880      6E203232 
+ 2880      31323230 
+ 2881 01ac 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2881      66756E63 
+ 2881      74696F6E 
+ 2881      2D736563 
+ 2881      74696F6E 
+ 2882              	.LASF8:
+ 2883 01d4 756E7369 		.ascii	"unsigned int\000"
+ 2883      676E6564 
+ 2883      20696E74 
+ 2883      00
+ 2884              	.LASF7:
+ 2885 01e1 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2885      206C6F6E 
+ 2885      6720756E 
+ 2885      7369676E 
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 53
+
+
+ 2885      65642069 
+ 2886              	.LASF14:
+ 2887 01f8 73697A65 		.ascii	"sizetype\000"
+ 2887      74797065 
+ 2887      00
+ 2888              	.LASF6:
+ 2889 0201 6C6F6E67 		.ascii	"long long int\000"
+ 2889      206C6F6E 
+ 2889      6720696E 
+ 2889      7400
+ 2890              	.LASF15:
+ 2891 020f 6D61736B 		.ascii	"mask\000"
+ 2891      00
+ 2892              	.LASF33:
+ 2893 0214 47656E65 		.ascii	"Generated_Source\\PSoC5\\MDIO_Interface_REG.c\000"
+ 2893      72617465 
+ 2893      645F536F 
+ 2893      75726365 
+ 2893      5C50536F 
+ 2894              	.LASF16:
+ 2895 0240 6374726C 		.ascii	"ctrlReg\000"
+ 2895      52656700 
+ 2896              	.LASF2:
+ 2897 0248 73686F72 		.ascii	"short int\000"
+ 2897      7420696E 
+ 2897      7400
+ 2898              	.LASF25:
+ 2899 0252 4D44494F 		.ascii	"MDIO_Interface_registerConfig_1\000"
+ 2899      5F496E74 
+ 2899      65726661 
+ 2899      63655F72 
+ 2899      65676973 
+ 2900              	.LASF26:
+ 2901 0272 4D44494F 		.ascii	"MDIO_Interface_registerConfig_2\000"
+ 2901      5F496E74 
+ 2901      65726661 
+ 2901      63655F72 
+ 2901      65676973 
+ 2902              	.LASF27:
+ 2903 0292 4D44494F 		.ascii	"MDIO_Interface_registerConfig_3\000"
+ 2903      5F496E74 
+ 2903      65726661 
+ 2903      63655F72 
+ 2903      65676973 
+ 2904              	.LASF28:
+ 2905 02b2 4D44494F 		.ascii	"MDIO_Interface_registerConfig_4\000"
+ 2905      5F496E74 
+ 2905      65726661 
+ 2905      63655F72 
+ 2905      65676973 
+ 2906              	.LASF29:
+ 2907 02d2 4D44494F 		.ascii	"MDIO_Interface_registerConfig_5\000"
+ 2907      5F496E74 
+ 2907      65726661 
+ 2907      63655F72 
+ 2907      65676973 
+ 2908              	.LASF30:
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccL4OU2S.s 			page 54
+
+
+ 2909 02f2 4D44494F 		.ascii	"MDIO_Interface_registerConfig_6\000"
+ 2909      5F496E74 
+ 2909      65726661 
+ 2909      63655F72 
+ 2909      65676973 
+ 2910              	.LASF4:
+ 2911 0312 6C6F6E67 		.ascii	"long int\000"
+ 2911      20696E74 
+ 2911      00
+ 2912              	.LASF13:
+ 2913 031b 63686172 		.ascii	"char\000"
+ 2913      00
+ 2914              	.LASF0:
+ 2915 0320 7369676E 		.ascii	"signed char\000"
+ 2915      65642063 
+ 2915      68617200 
+ 2916              	.LASF34:
+ 2917 032c 443A5C70 		.ascii	"D:\\pgm\\Cypress_dem_board\\CFP_reader\\cfp_reader\\"
+ 2917      676D5C43 
+ 2917      79707265 
+ 2917      73735F64 
+ 2917      656D5F62 
+ 2918 035b 575F6366 		.ascii	"W_cfp_reader\\cfp_reader.cydsn\000"
+ 2918      705F7265 
+ 2918      61646572 
+ 2918      5C636670 
+ 2918      5F726561 
+ 2919              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

@@ -61,6 +61,8 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\VRef_1V2_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\VRef_1V2.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\VRef_1V2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_3.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_3.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_M_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_M.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_M.h</File>
@@ -166,6 +168,43 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_3_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_3.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_3.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\DAT_ISR.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\DAT_ISR.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADDR_ISR.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADDR_ISR.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\COR_ISR.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\COR_ISR.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_REG.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_REG.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_S_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_S.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_S.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_AddrDMA_dma.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_AddrDMA_dma.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_InfoDMA_dma.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_InfoDMA_dma.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_StartAddrDMA_dma.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_StartAddrDMA_dma.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_EndAddrDMA_dma.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_EndAddrDMA_dma.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_WrDMA_dma.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_WrDMA_dma.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_RdDMA_dma.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_RdDMA_dma.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_CfgDMA1_dma.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_CfgDMA1_dma.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_CfgDMA2_dma.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_CfgDMA2_dma.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_FwDMA1_dma.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_FwDMA1_dma.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_FwDMA2_dma.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDIO_Interface_FwDMA2_dma.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDC_S_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDC_S.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDC_S.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="D:\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\MDIO_host_my_v\API">

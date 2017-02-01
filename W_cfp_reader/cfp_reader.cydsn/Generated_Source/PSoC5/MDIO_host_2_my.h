@@ -36,7 +36,8 @@
 ***************************************/
 #define MDIO_host_2_NOT_FULL   (0x01u)
 #define MDIO_host_2_IDLE       (0x02u)
-#define MDIO_host_2_SEND_16    (0x03u)
+#define MDIO_host_2_SEND_16    (0x04u)
+#define MDIO_host_2_CMPLT      (0x08u)
 
 /* Bit field definitions for the UDB registers */
 #define MDIO_host_2_F0_CLR         	(0x0101u)
@@ -44,7 +45,7 @@
 #define MDIO_host_2_COUNT7_EN          (0x20u)
 
 /* Definition for Write/Read bits */
-#define	MDIO_host_2_READ				(0x04u)
+#define	MDIO_host_2_READ				(0x01u)
 #define	MDIO_host_2_WRITE				(0x00u)
 
 #define MDIO_host_2_POS_READ_PATTERN	(0x02u)
@@ -65,8 +66,8 @@
 /***************************************************** 
 * UDB Registers
 ******************************************************/
-//#define MDIO_host_2_CONTROL_REG                (*(reg8 *) 	MDIO_host_2_MdioControlReg__CONTROL_REG)
-//#define MDIO_host_2_CONTROL_PTR                ( (reg8 *) 	MDIO_host_2_MdioControlReg__CONTROL_REG)
+#define MDIO_host_2_CONTROL_REG                (*(reg8 *) 	MDIO_host_2_MdioControlReg__CONTROL_REG)
+#define MDIO_host_2_CONTROL_PTR                ( (reg8 *) 	MDIO_host_2_MdioControlReg__CONTROL_REG)
 #define MDIO_host_2_STATUS_REG                 (*(reg8 *) 	MDIO_host_2_MdioStatusReg__STATUS_REG)
 #define MDIO_host_2_STATUS_PTR                 ( (reg8 *) 	MDIO_host_2_MdioStatusReg__STATUS_REG)
 #define MDIO_host_2_CNT7_AUX_CTL_REG   		(*(reg8 *)  MDIO_host_2_MdioCounter__CONTROL_AUX_CTL_REG)
@@ -93,10 +94,9 @@ void    MDIO_host_2_EnableInt(void);
 void    MDIO_host_2_DisableInt(void);
 uint8  	MDIO_host_2_GetStatus(void) CYREENTRANT;
 void 	MDIO_host_2_ClearInternalFIFOs(void);
-uint8 	MDIO_host_2_WriteDataC45(uint8 op_mode, uint8 phy_addr, uint8 dev_addr, uint16 reg_data); // Writes data to the bus (C45)
-uint8 	MDIO_host_2_ReadDataC45(uint8 op_mode, uint8 phy_addr, uint8 dev_addr, uint16 *regData);  // Reads data from the bus (C45)
-void 	MDIO_host_2_WriteDataC22(uint8 phy_addr, uint8 dev_addr, uint16 reg_data); // Writes data to the bus (C22)
-uint16 	MDIO_host_2_ReadDataC22(uint8 phy_addr, uint8 dev_addr); // Read data from the bus (C22)
+uint8   MDIO_host_2_SetAddrC45(uint8 phy_addr, uint8 dev_addr, uint16 reg_data); // Set Addr reg
+uint8 	MDIO_host_2_WriteDataC45(uint8 phy_addr, uint8 dev_addr, uint16 reg_data); // Writes data to the bus (C45)
+uint8 	MDIO_host_2_ReadDataC45(uint8 phy_addr, uint8 dev_addr, uint16 *regData);  // Reads data from the bus (C45)
 void  	MDIO_host_2_ClearStatus(void);	
 
 /* Interrupt prototype */
