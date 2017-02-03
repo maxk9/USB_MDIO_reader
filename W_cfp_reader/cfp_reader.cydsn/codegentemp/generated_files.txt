@@ -81,9 +81,9 @@
   <file name="D:\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\codegentemp\MDIO_host_2_my.h" value="HEADER;;;;;MDIO_host_2" />
   <file name="D:\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\codegentemp\ISR.c" value="SOURCE_C;CortexM3;;;;ISR" />
   <file name="D:\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\codegentemp\ISR.h" value="HEADER;;;;;ISR" />
-  <file name="D:\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\codegentemp\interrupt_MDIO_aliases.h" value="HEADER;;;;;interrupt_MDIO" />
-  <file name="D:\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\codegentemp\interrupt_MDIO.c" value="SOURCE_C;CortexM3;;;;interrupt_MDIO" />
-  <file name="D:\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\codegentemp\interrupt_MDIO.h" value="HEADER;;;;;interrupt_MDIO" />
+  <file name="D:\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\codegentemp\Debug_MDIO_1_aliases.h" value="HEADER;;;;;Debug_MDIO_1" />
+  <file name="D:\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\codegentemp\Debug_MDIO_1.c" value="SOURCE_C;CortexM3;;;;Debug_MDIO_1" />
+  <file name="D:\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\codegentemp\Debug_MDIO_1.h" value="HEADER;;;;;Debug_MDIO_1" />
   <file name="D:\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\codegentemp\Debug_MDIO_aliases.h" value="HEADER;;;;;Debug_MDIO" />
   <file name="D:\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\codegentemp\Debug_MDIO.c" value="SOURCE_C;CortexM3;;;;Debug_MDIO" />
   <file name="D:\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\codegentemp\Debug_MDIO.h" value="HEADER;;;;;Debug_MDIO" />

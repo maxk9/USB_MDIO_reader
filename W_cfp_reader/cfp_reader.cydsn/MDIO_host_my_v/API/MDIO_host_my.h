@@ -82,6 +82,10 @@
 #define `$INSTANCE_NAME`_PERIOD_REG                 (*(reg8 *) 	`$INSTANCE_NAME`_MdioCounter__PERIOD_REG)
 #define `$INSTANCE_NAME`_COUNT_PTR                  ( (reg8 *) 	`$INSTANCE_NAME`_MdioCounter__COUNT_REG)
 #define `$INSTANCE_NAME`_COUNT_REG                  (*(reg8 *) 	`$INSTANCE_NAME`_MdioCounter__COUNT_REG)
+#define `$INSTANCE_NAME`_A0_REG                     (*(reg16 *) `$INSTANCE_NAME`_cntrl16_u0__A0_REG)
+#define `$INSTANCE_NAME`_A0_PTR                     ( (reg16 *) `$INSTANCE_NAME`_cntrl16_u0__A0_REG)
+#define `$INSTANCE_NAME`_A1_REG                     (*(reg16 *) `$INSTANCE_NAME`_cntrl16_u0__A1_REG)
+#define `$INSTANCE_NAME`_A1_PTR                     ( (reg16 *) `$INSTANCE_NAME`_cntrl16_u0__A1_REG)
 
 /***************************************************** 
 * API Function Prototypes 

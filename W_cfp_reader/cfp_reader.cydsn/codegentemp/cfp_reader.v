@@ -1,6 +1,6 @@
 // ======================================================================
 // cfp_reader.v generated from TopDesign.cysch
-// 01/31/2017 at 17:35
+// 02/03/2017 at 17:53
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1149,11 +1149,10 @@ module top ;
 
           wire [4:1] Net_1961;
           wire  Net_1960;
-          wire  Net_1959;
     electrical  Vref;
+          wire  Net_1959;
           wire  Net_1958;
           wire [4:0] Net_1963;
-          wire  Net_2033;
           wire [5:0] Net_1956;
           wire  Net_1955;
           wire  Net_2023;
@@ -1161,11 +1160,10 @@ module top ;
           wire  Net_1952;
           wire  Net_1951;
           wire  Net_1950;
-          wire  Net_1902;
+          wire  Net_2054;
           wire  Net_1877;
           wire  Net_1876;
           wire  Net_1874;
-          wire  w_mdio;
           wire  Net_1873;
           wire  Net_1872;
           wire  Net_1871;
@@ -1190,21 +1188,22 @@ module top ;
           wire  Net_1843;
           wire  Net_1842;
           wire  Net_1841;
-          wire  Net_13;
-          wire  Net_618;
-          wire  Net_5;
+          wire  Net_2058;
           wire  Net_1924;
+          wire  Net_2033;
     electrical  Net_988;
-    electrical  Net_1927;
+    electrical  Net_2089;
+          wire  Net_618;
+          wire  Net_2071;
+          wire  Net_2069;
+          wire  Net_2086;
+    electrical  Net_954;
     electrical  Net_1929;
     electrical  Net_1930;
-          wire  Net_1901;
-    electrical  Net_989;
-          wire  Net_1898;
-          wire  Net_1900;
+    electrical  Net_1927;
+          wire  Net_2056;
           wire  Net_1866;
     electrical  Net_605;
-          wire  mdc;
           wire  Net_785;
     electrical  Net_628;
     electrical  Net_1887;
@@ -1215,7 +1214,6 @@ module top ;
     electrical  Net_652;
           wire  Net_758;
           wire  Net_548;
-    electrical  Net_954;
     electrical  Net_64;
 
 	wire [0:0] tmpOE__VRef_1V2_net;
@@ -1299,11 +1297,11 @@ module top ;
 		#(.id("d6ea1ea9-8e91-44e7-92b5-e30c87bc4254"),
 		  .source_clock_id(""),
 		  .divisor(0),
-		  .period("1000000000"),
+		  .period("125000000"),
 		  .is_direct(0),
 		  .is_digital(1))
 		Clock_1
-		 (.clock_out(Net_5));
+		 (.clock_out(Net_2056));
 
 
     PWM_v3_30_0 PWM_1 (
@@ -1326,7 +1324,7 @@ module top ;
     assign Net_1957 = 1'h1;
 
 	wire [0:0] tmpOE__MDIO_M_net;
-	wire [0:0] tmpFB_0__MDIO_M_net;
+	wire [0:0] tmpIO_0__MDIO_M_net;
 	wire [0:0] tmpINTERRUPT_0__MDIO_M_net;
 
 	cy_psoc3_pins_v1_10
@@ -1351,7 +1349,7 @@ module top ;
 		  .oe_sync(1'b0),
 		  .output_clk_en(0),
 		  .output_clock_mode(1'b0),
-		  .output_conn(1'b0),
+		  .output_conn(1'b1),
 		  .output_mode(1'b0),
 		  .output_reset(0),
 		  .output_sync(1'b0),
@@ -1365,18 +1363,18 @@ module top ;
 		  .pin_mode("B"),
 		  .por_state(4),
 		  .sio_group_cnt(1),
-		  .sio_hyst(1'b1),
-		  .sio_ibuf(1'b0),
+		  .sio_hyst(1'b0),
+		  .sio_ibuf(1'b1),
 		  .sio_info(2'b01),
 		  .sio_obuf(1'b1),
 		  .sio_refsel(1'b1),
-		  .sio_vtrip(1'b1),
+		  .sio_vtrip(1'b0),
 		  .sio_hifreq(1'b1),
 		  .sio_vohsel(3'b000),
 		  .slew_rate(1'b0),
 		  .spanning(0),
 		  .use_annotation(1'b1),
-		  .vtrip(2'b10),
+		  .vtrip(2'b00),
 		  .width(1),
 		  .ovt_hyst_trim(1'b0),
 		  .ovt_needed(1'b0),
@@ -1384,12 +1382,12 @@ module top ;
 		  .input_buffer_sel(2'b00))
 		MDIO_M
 		 (.oe(tmpOE__MDIO_M_net),
-		  .y({1'b0}),
-		  .fb({tmpFB_0__MDIO_M_net[0:0]}),
-		  .io({w_mdio}),
+		  .y({Net_2086}),
+		  .fb({Net_2071}),
+		  .io({tmpIO_0__MDIO_M_net[0:0]}),
 		  .siovref({Vref}),
 		  .interrupt({tmpINTERRUPT_0__MDIO_M_net[0:0]}),
-		  .annotation({Net_989}),
+		  .annotation({Net_954}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -1454,18 +1452,18 @@ module top ;
 		  .pin_mode("B"),
 		  .por_state(4),
 		  .sio_group_cnt(1),
-		  .sio_hyst(1'b1),
-		  .sio_ibuf(1'b0),
+		  .sio_hyst(1'b0),
+		  .sio_ibuf(1'b1),
 		  .sio_info(2'b01),
 		  .sio_obuf(1'b1),
 		  .sio_refsel(1'b1),
-		  .sio_vtrip(1'b1),
+		  .sio_vtrip(1'b0),
 		  .sio_hifreq(1'b1),
 		  .sio_vohsel(3'b000),
 		  .slew_rate(1'b0),
 		  .spanning(0),
 		  .use_annotation(1'b1),
-		  .vtrip(2'b10),
+		  .vtrip(2'b00),
 		  .width(1),
 		  .ovt_hyst_trim(1'b0),
 		  .ovt_needed(1'b0),
@@ -1473,12 +1471,12 @@ module top ;
 		  .input_buffer_sel(2'b00))
 		MDC_M
 		 (.oe(tmpOE__MDC_M_net),
-		  .y({mdc}),
+		  .y({Net_2069}),
 		  .fb({tmpFB_0__MDC_M_net[0:0]}),
 		  .io({tmpIO_0__MDC_M_net[0:0]}),
 		  .siovref({Vref}),
 		  .interrupt({tmpINTERRUPT_0__MDC_M_net[0:0]}),
-		  .annotation({Net_954}),
+		  .annotation({Net_2089}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -1706,7 +1704,7 @@ module top ;
     cy_annotation_universal_v1_0 R_4 (
         .connect({
             Net_988,
-            Net_989
+            Net_2089
         })
     );
     defparam R_4.comp_name = "Resistor_v1_0";
@@ -1755,41 +1753,28 @@ module top ;
     assign Net_1866 = 1'h0;
 
     MDIO_host_my_v MDIO_host_2 (
-        .clock(Net_5),
-        .mdio_out(Net_1900),
-        .mdc(mdc),
-        .mdio_in(Net_1901),
-        .interrupt(Net_1898),
-        .debug(Net_1924));
-
-	wire [0:0] tmpOE__bufoe_1_net;
-
-	cy_bufoe
-		bufoe_1
-		 (.x(Net_1900),
-		  .y(w_mdio),
-		  .oe(tmpOE__bufoe_1_net),
-		  .yfb(Net_1901));
-
-	assign tmpOE__bufoe_1_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{Net_1902} : {Net_1902};
-
-    assign Net_1902 = 1'h1;
+        .clock(Net_2056),
+        .mdio_out(Net_2086),
+        .mdc(Net_2069),
+        .mdio_in(Net_2071),
+        .debug(Net_2054),
+        .Interrupt(Net_1924));
 
 
 	cy_isr_v1_0
 		#(.int_type(2'b00))
 		ISR
-		 (.int_signal(Net_1898));
+		 (.int_signal(Net_1924));
 
 
-	wire [0:0] tmpOE__interrupt_MDIO_net;
-	wire [0:0] tmpFB_0__interrupt_MDIO_net;
-	wire [0:0] tmpIO_0__interrupt_MDIO_net;
-	wire [0:0] tmpINTERRUPT_0__interrupt_MDIO_net;
-	electrical [0:0] tmpSIOVREF__interrupt_MDIO_net;
+	wire [0:0] tmpOE__Debug_MDIO_1_net;
+	wire [0:0] tmpFB_0__Debug_MDIO_1_net;
+	wire [0:0] tmpIO_0__Debug_MDIO_1_net;
+	wire [0:0] tmpINTERRUPT_0__Debug_MDIO_1_net;
+	electrical [0:0] tmpSIOVREF__Debug_MDIO_1_net;
 
 	cy_psoc3_pins_v1_10
-		#(.id("cb74865b-1b1e-4b2a-94ed-63cff99f064c"),
+		#(.id("8784ae01-7af6-4a97-a63a-ad0f860e1064"),
 		  .drive_mode(3'b110),
 		  .ibuf_enabled(1'b1),
 		  .init_dr_st(1'b0),
@@ -1841,13 +1826,13 @@ module top ;
 		  .ovt_needed(1'b0),
 		  .ovt_slew_control(2'b00),
 		  .input_buffer_sel(2'b00))
-		interrupt_MDIO
-		 (.oe(tmpOE__interrupt_MDIO_net),
-		  .y({Net_1898}),
-		  .fb({tmpFB_0__interrupt_MDIO_net[0:0]}),
-		  .io({tmpIO_0__interrupt_MDIO_net[0:0]}),
-		  .siovref(tmpSIOVREF__interrupt_MDIO_net),
-		  .interrupt({tmpINTERRUPT_0__interrupt_MDIO_net[0:0]}),
+		Debug_MDIO_1
+		 (.oe(tmpOE__Debug_MDIO_1_net),
+		  .y({Net_1924}),
+		  .fb({tmpFB_0__Debug_MDIO_1_net[0:0]}),
+		  .io({tmpIO_0__Debug_MDIO_1_net[0:0]}),
+		  .siovref(tmpSIOVREF__Debug_MDIO_1_net),
+		  .interrupt({tmpINTERRUPT_0__Debug_MDIO_1_net[0:0]}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -1855,7 +1840,7 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__interrupt_MDIO_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__Debug_MDIO_1_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
 	wire [0:0] tmpOE__Debug_MDIO_net;
 	wire [0:0] tmpFB_0__Debug_MDIO_net;
@@ -1918,7 +1903,7 @@ module top ;
 		  .input_buffer_sel(2'b00))
 		Debug_MDIO
 		 (.oe(tmpOE__Debug_MDIO_net),
-		  .y({Net_1924}),
+		  .y({Net_2054}),
 		  .fb({tmpFB_0__Debug_MDIO_net[0:0]}),
 		  .io({tmpIO_0__Debug_MDIO_net[0:0]}),
 		  .siovref(tmpSIOVREF__Debug_MDIO_net),
@@ -2063,7 +2048,7 @@ module top ;
 		#(.id("cee74fd7-4f2d-4fd3-be5d-2d462983fc12"),
 		  .source_clock_id(""),
 		  .divisor(0),
-		  .period("2000000000"),
+		  .period("23809523.8095238"),
 		  .is_direct(0),
 		  .is_digital(1))
 		Clock_3
@@ -2093,7 +2078,6 @@ module top ;
 	wire [0:0] tmpOE__MDC_S_net;
 	wire [0:0] tmpIO_0__MDC_S_net;
 	wire [0:0] tmpINTERRUPT_0__MDC_S_net;
-	electrical [0:0] tmpSIOVREF__MDC_S_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("e330ad8c-7cec-408a-be41-c01a11cd4261"),
@@ -2130,19 +2114,19 @@ module top ;
 		  .pin_aliases(""),
 		  .pin_mode("I"),
 		  .por_state(4),
-		  .sio_group_cnt(0),
-		  .sio_hyst(1'b1),
-		  .sio_ibuf(""),
-		  .sio_info(2'b00),
-		  .sio_obuf(""),
-		  .sio_refsel(""),
-		  .sio_vtrip(""),
-		  .sio_hifreq(""),
-		  .sio_vohsel(""),
+		  .sio_group_cnt(1),
+		  .sio_hyst(1'b0),
+		  .sio_ibuf(1'b1),
+		  .sio_info(2'b01),
+		  .sio_obuf(1'b0),
+		  .sio_refsel(1'b1),
+		  .sio_vtrip(1'b0),
+		  .sio_hifreq(1'b1),
+		  .sio_vohsel(3'b000),
 		  .slew_rate(1'b0),
 		  .spanning(0),
-		  .use_annotation(1'b0),
-		  .vtrip(2'b10),
+		  .use_annotation(1'b1),
+		  .vtrip(2'b00),
 		  .width(1),
 		  .ovt_hyst_trim(1'b0),
 		  .ovt_needed(1'b0),
@@ -2153,8 +2137,9 @@ module top ;
 		  .y({1'b0}),
 		  .fb({Net_2033}),
 		  .io({tmpIO_0__MDC_S_net[0:0]}),
-		  .siovref(tmpSIOVREF__MDC_S_net),
+		  .siovref({Vref}),
 		  .interrupt({tmpINTERRUPT_0__MDC_S_net[0:0]}),
+		  .annotation({Net_954}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -2204,18 +2189,18 @@ module top ;
 		  .pin_mode("B"),
 		  .por_state(4),
 		  .sio_group_cnt(1),
-		  .sio_hyst(1'b1),
-		  .sio_ibuf(1'b0),
+		  .sio_hyst(1'b0),
+		  .sio_ibuf(1'b1),
 		  .sio_info(2'b01),
 		  .sio_obuf(1'b1),
 		  .sio_refsel(1'b1),
-		  .sio_vtrip(1'b1),
+		  .sio_vtrip(1'b0),
 		  .sio_hifreq(1'b1),
 		  .sio_vohsel(3'b000),
 		  .slew_rate(1'b0),
 		  .spanning(0),
-		  .use_annotation(1'b0),
-		  .vtrip(2'b10),
+		  .use_annotation(1'b1),
+		  .vtrip(2'b00),
 		  .width(1),
 		  .ovt_hyst_trim(1'b0),
 		  .ovt_needed(1'b0),
@@ -2228,6 +2213,7 @@ module top ;
 		  .io({Net_618}),
 		  .siovref({Vref}),
 		  .interrupt({tmpINTERRUPT_0__MDIO_S_net[0:0]}),
+		  .annotation({Net_2089}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),

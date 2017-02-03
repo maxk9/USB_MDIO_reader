@@ -82,6 +82,10 @@
 #define MDIO_host_2_PERIOD_REG                 (*(reg8 *) 	MDIO_host_2_MdioCounter__PERIOD_REG)
 #define MDIO_host_2_COUNT_PTR                  ( (reg8 *) 	MDIO_host_2_MdioCounter__COUNT_REG)
 #define MDIO_host_2_COUNT_REG                  (*(reg8 *) 	MDIO_host_2_MdioCounter__COUNT_REG)
+#define MDIO_host_2_A0_REG                     (*(reg16 *) MDIO_host_2_cntrl16_u0__A0_REG)
+#define MDIO_host_2_A0_PTR                     ( (reg16 *) MDIO_host_2_cntrl16_u0__A0_REG)
+#define MDIO_host_2_A1_REG                     (*(reg16 *) MDIO_host_2_cntrl16_u0__A1_REG)
+#define MDIO_host_2_A1_PTR                     ( (reg16 *) MDIO_host_2_cntrl16_u0__A1_REG)
 
 /***************************************************** 
 * API Function Prototypes 

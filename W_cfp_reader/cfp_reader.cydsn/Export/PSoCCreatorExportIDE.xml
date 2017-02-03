@@ -162,9 +162,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Debug_MDIO_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Debug_MDIO.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Debug_MDIO.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\interrupt_MDIO_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\interrupt_MDIO.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\interrupt_MDIO.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_3_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_3.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_3.h</File>
@@ -205,6 +202,9 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDC_S_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDC_S.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MDC_S.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Debug_MDIO_1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Debug_MDIO_1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Debug_MDIO_1.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="D:\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\MDIO_host_my_v\API">

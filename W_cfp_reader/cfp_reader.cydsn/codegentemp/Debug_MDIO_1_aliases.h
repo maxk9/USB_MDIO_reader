@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: interrupt_MDIO.h  
+* File Name: Debug_MDIO_1.h  
 * Version 2.20
 *
 * Description:
@@ -15,8 +15,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_interrupt_MDIO_ALIASES_H) /* Pins interrupt_MDIO_ALIASES_H */
-#define CY_PINS_interrupt_MDIO_ALIASES_H
+#if !defined(CY_PINS_Debug_MDIO_1_ALIASES_H) /* Pins Debug_MDIO_1_ALIASES_H */
+#define CY_PINS_Debug_MDIO_1_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -25,12 +25,12 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define interrupt_MDIO_0			(interrupt_MDIO__0__PC)
-#define interrupt_MDIO_0_INTR	((uint16)((uint16)0x0001u << interrupt_MDIO__0__SHIFT))
+#define Debug_MDIO_1_0			(Debug_MDIO_1__0__PC)
+#define Debug_MDIO_1_0_INTR	((uint16)((uint16)0x0001u << Debug_MDIO_1__0__SHIFT))
 
-#define interrupt_MDIO_INTR_ALL	 ((uint16)(interrupt_MDIO_0_INTR))
+#define Debug_MDIO_1_INTR_ALL	 ((uint16)(Debug_MDIO_1_0_INTR))
 
-#endif /* End Pins interrupt_MDIO_ALIASES_H */
+#endif /* End Pins Debug_MDIO_1_ALIASES_H */
 
 
 /* [] END OF FILE */

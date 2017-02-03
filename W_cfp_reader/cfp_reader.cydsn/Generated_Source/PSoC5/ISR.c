@@ -174,13 +174,11 @@ CY_ISR(ISR_Interrupt)
     /* `#START ISR_Interrupt` */
 
     /* Get Data from FIFO f1 */
-	MDIO_host_2_data_bits = CY_GET_REG16(MDIO_host_2_FIFO_F1_PTR);
+//	MDIO_host_2_data_bits = CY_GET_REG16(MDIO_host_2_FIFO_F1_PTR);
+  //  LED_3_Write(1);
+    MDIO_host_2_StatusRegister |= 1;
+//	LED_3_Write(0);
 	
-	/* Clear control register */
-	MDIO_host_2_CONTROL_REG &= MDIO_host_2_ENABLE;
-	
-	/* Set complete status bit */
-	MDIO_host_2_StatusRegister = MDIO_host_2_MDIO_STS_CMPLT;
     
     /* `#END` */
 }

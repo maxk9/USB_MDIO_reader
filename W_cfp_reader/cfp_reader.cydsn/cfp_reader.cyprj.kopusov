@@ -175,6 +175,19 @@
 <file name=".\Generated_Source\PSoC5\Debug_MDIO.h" />
 <file name=".\Generated_Source\PSoC5\Debug_MDIO_aliases.h" />
 <file name=".\Generated_Source\PSoC5\cypins.h" />
+<file name=".\CortexM3\ARM_GCC_493\Debug\Debug_MDIO_1.o">
+<dep name=".\Generated_Source\PSoC5\Debug_MDIO_1.c" />
+<dep name=".\Generated_Source\PSoC5\Debug_MDIO_1.h" />
+<dep name=".\Generated_Source\PSoC5\Debug_MDIO_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\Debug_MDIO_1.c" />
+<file name=".\Generated_Source\PSoC5\Debug_MDIO_1.h" />
+<file name=".\Generated_Source\PSoC5\Debug_MDIO_1_aliases.h" />
 <file name=".\CortexM3\ARM_GCC_493\Debug\ISR.o">
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
@@ -560,6 +573,8 @@
 <dep name=".\Generated_Source\PSoC5\CySpc.h" />
 <dep name=".\Generated_Source\PSoC5\DAT_ISR.h" />
 <dep name=".\Generated_Source\PSoC5\Debug_MDIO.h" />
+<dep name=".\Generated_Source\PSoC5\Debug_MDIO_1.h" />
+<dep name=".\Generated_Source\PSoC5\Debug_MDIO_1_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Debug_MDIO_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\ISR.h" />
 <dep name=".\Generated_Source\PSoC5\LCD.h" />
@@ -626,8 +641,6 @@
 <dep name=".\Generated_Source\PSoC5\cylib.h" />
 <dep name=".\Generated_Source\PSoC5\cypins.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
-<dep name=".\Generated_Source\PSoC5\interrupt_MDIO.h" />
-<dep name=".\Generated_Source\PSoC5\interrupt_MDIO_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\project.h" />
 <dep name=".\cyapicallbacks.h" />
 </file>
@@ -657,8 +670,6 @@
 <file name=".\Generated_Source\PSoC5\core_cmFunc.h" />
 <file name=".\Generated_Source\PSoC5\core_cmInstr.h" />
 <file name=".\Generated_Source\PSoC5\cydisabledsheets.h" />
-<file name=".\Generated_Source\PSoC5\interrupt_MDIO.h" />
-<file name=".\Generated_Source\PSoC5\interrupt_MDIO_aliases.h" />
 <file name=".\Generated_Source\PSoC5\project.h" />
 <file name=".\CortexM3\ARM_GCC_493\Debug\Opamp_1.o">
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
@@ -1126,17 +1137,6 @@
 <dep name=".\Generated_Source\PSoC5\cyutils.c" />
 </file>
 <file name=".\Generated_Source\PSoC5\cyutils.c" />
-<file name=".\CortexM3\ARM_GCC_493\Debug\interrupt_MDIO.o">
-<dep name=".\Generated_Source\PSoC5\cydevice.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC5\cypins.h" />
-<dep name=".\Generated_Source\PSoC5\cytypes.h" />
-<dep name=".\Generated_Source\PSoC5\interrupt_MDIO.c" />
-<dep name=".\Generated_Source\PSoC5\interrupt_MDIO.h" />
-<dep name=".\Generated_Source\PSoC5\interrupt_MDIO_aliases.h" />
-</file>
-<file name=".\Generated_Source\PSoC5\interrupt_MDIO.c" />
 <file name=".\CortexM3\ARM_GCC_493\Debug\main.o">
 <dep name=".\Generated_Source\PSoC5\ADDR_ISR.h" />
 <dep name=".\Generated_Source\PSoC5\COR_ISR.h" />
@@ -1151,6 +1151,8 @@
 <dep name=".\Generated_Source\PSoC5\CySpc.h" />
 <dep name=".\Generated_Source\PSoC5\DAT_ISR.h" />
 <dep name=".\Generated_Source\PSoC5\Debug_MDIO.h" />
+<dep name=".\Generated_Source\PSoC5\Debug_MDIO_1.h" />
+<dep name=".\Generated_Source\PSoC5\Debug_MDIO_1_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Debug_MDIO_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\ISR.h" />
 <dep name=".\Generated_Source\PSoC5\LCD.h" />
@@ -1216,8 +1218,6 @@
 <dep name=".\Generated_Source\PSoC5\cylib.h" />
 <dep name=".\Generated_Source\PSoC5\cypins.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
-<dep name=".\Generated_Source\PSoC5\interrupt_MDIO.h" />
-<dep name=".\Generated_Source\PSoC5\interrupt_MDIO_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\project.h" />
 <dep name=".\cyapicallbacks.h" />
 <dep name=".\main.c" />
@@ -1233,6 +1233,19 @@
 <file name=".\Generated_Source\PSoC5\cydevicegnu.inc" />
 <file name=".\Generated_Source\PSoC5\cydevicegnu_trm.inc" />
 <file name=".\Generated_Source\PSoC5\cyfittergnu.inc" />
+<file name=".\Generated_Source\PSoC5\interrupt_MDIO.h" />
+<file name=".\Generated_Source\PSoC5\interrupt_MDIO_aliases.h" />
+<file name=".\CortexM3\ARM_GCC_493\Debug\interrupt_MDIO.o">
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\interrupt_MDIO.c" />
+<dep name=".\Generated_Source\PSoC5\interrupt_MDIO.h" />
+<dep name=".\Generated_Source\PSoC5\interrupt_MDIO_aliases.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\interrupt_MDIO.c" />
 <file name=".\CortexM3\ARM_GCC_493\Debug\MDIO_Host_1.o">
 <dep name=".\Generated_Source\PSoC5\Clock_2.h" />
 <dep name=".\Generated_Source\PSoC5\Clock_3.h" />
@@ -1449,7 +1462,6 @@
 <dep name=".\CortexM3\ARM_GCC_493\Debug\ISR.o" />
 <dep name=".\CortexM3\ARM_GCC_493\Debug\Clock_1.o" />
 <dep name=".\CortexM3\ARM_GCC_493\Debug\Debug_MDIO.o" />
-<dep name=".\CortexM3\ARM_GCC_493\Debug\interrupt_MDIO.o" />
 <dep name=".\CortexM3\ARM_GCC_493\Debug\LED_3.o" />
 <dep name=".\CortexM3\ARM_GCC_493\Debug\DAT_ISR.o" />
 <dep name=".\CortexM3\ARM_GCC_493\Debug\ADDR_ISR.o" />
@@ -1469,6 +1481,7 @@
 <dep name=".\CortexM3\ARM_GCC_493\Debug\MDIO_Interface_FwDMA1_dma.o" />
 <dep name=".\CortexM3\ARM_GCC_493\Debug\MDIO_Interface_FwDMA2_dma.o" />
 <dep name=".\CortexM3\ARM_GCC_493\Debug\MDC_S.o" />
+<dep name=".\CortexM3\ARM_GCC_493\Debug\Debug_MDIO_1.o" />
 <dep name=".\CortexM3\ARM_GCC_493\Debug\cfp_reader.a" />
 <dep name="${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_493\Debug\CyComponentLibrary.a" />
 </file>
@@ -1558,6 +1571,7 @@
 <name_val_pair name="Generated_Source\PSoC5\MDIO_Interface_FwDMA1_dma.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects" />
 <name_val_pair name="Generated_Source\PSoC5\MDIO_Interface_FwDMA2_dma.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects" />
 <name_val_pair name="Generated_Source\PSoC5\MDC_S.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects" />
+<name_val_pair name="Generated_Source\PSoC5\Debug_MDIO_1.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects" />
 </name>
 </genericCmdLineData>
 <codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\kopusov.FT\AppData\Local\Cypress Semiconductor\PSoC Creator\4.0&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p D:\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\cfp_reader.cyprj -d CY8C5868AXI-LP035 -s D:\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
@@ -2422,16 +2436,6 @@
 <v>.\MDIO_host_my_v\MDIO_host_my_v.v</v>
 <v>.\MDIO_host_my_v\API\MDIO_host_my.c</v>
 <v>.\MDIO_host_my_v\API\MDIO_host_my.h</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_bufoe_v1_10\cy_bufoe_v1_10.cyprimitive</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_bufoe_v1_10\cy_bufoe_v1_10.cysym</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_bufoe_v1_10\cy_bufoe_v1_10.pdf</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_bufoe_v1_10\Custom\custom.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.cysym</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.cystate</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\Custom\custom.cs</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.cysym</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.primitive</v>
@@ -3020,6 +3024,9 @@
 <v>Generated_Source\PSoC5\MDC_S_aliases.h</v>
 <v>Generated_Source\PSoC5\MDC_S.c</v>
 <v>Generated_Source\PSoC5\MDC_S.h</v>
+<v>Generated_Source\PSoC5\Debug_MDIO_1_aliases.h</v>
+<v>Generated_Source\PSoC5\Debug_MDIO_1.c</v>
+<v>Generated_Source\PSoC5\Debug_MDIO_1.h</v>
 </gen_list>
 <warp_dep>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\ieee\work\stdlogic.vif</v>
@@ -3029,15 +3036,15 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="131303325368588023" />
+<deps_time v="131305927959902134" />
 <top_block v="TopDesign" />
-<last_generation v="3" />
+<last_generation v="5" />
 <pdl_path v="C:\Users\kopusov.FT\Documents\Cypress\PDL\2.1.0" />
 </CyGuid_925cc1e1-309e-4e08-b0a1-09a83c35b157>
 </dataGuid>
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
-<deps_time v="131303325545692723" />
+<deps_time v="131305928067425651" />
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>
 <dataGuid v="237c8ed1-e161-4c9d-af97-582eda6d6952">
@@ -3051,7 +3058,11 @@
 </dataGuid>
 <dataGuid v="504337dd-7d07-4bc7-9057-90e60cf6c469">
 <CyGuid_504337dd-7d07-4bc7-9057-90e60cf6c469 type_name="CyDesigner.Common.Debugger.CyBreakpointList" version="1">
-<debugger_breakpoint_list />
+<debugger_breakpoint_list>
+<CyGuid_76464711-0ae1-4583-b869-f07a0403fc6e type_name="CyDesigner.Common.Debugger.CyFileLineBreakpoint" version="1" hitcount="0" condition="" enabled="True" hardware="True" temparary="False" filename=".\main.c" linenumber="469" />
+<CyGuid_76464711-0ae1-4583-b869-f07a0403fc6e type_name="CyDesigner.Common.Debugger.CyFileLineBreakpoint" version="1" hitcount="0" condition="" enabled="True" hardware="True" temparary="False" filename=".\main.c" linenumber="451" />
+<CyGuid_76464711-0ae1-4583-b869-f07a0403fc6e type_name="CyDesigner.Common.Debugger.CyFileLineBreakpoint" version="1" hitcount="0" condition="" enabled="True" hardware="True" temparary="False" filename=".\main.c" linenumber="432" />
+</debugger_breakpoint_list>
 </CyGuid_504337dd-7d07-4bc7-9057-90e60cf6c469>
 </dataGuid>
 </userData>

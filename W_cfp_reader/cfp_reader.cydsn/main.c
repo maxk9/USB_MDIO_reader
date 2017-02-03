@@ -17,7 +17,7 @@
 /* Firmware Constants */
 #define SPECIAL_COR_REGISTER    0xA000  /* Special COR Register address */
 #define SPECIAL_COR_MODIFIER    0xA200  /* Special address to modify the COR Register */
-#define BASE_MDIO_ADDRESS       0x8000  /* Start address for the incremental address variable */
+#define BASE_MDIO_ADDRESS       0x8201  /* Start address for the incremental address variable */
 #define MAX_MDIO_ADDRESS        0xA500  /* Maximum address supported in this firmware */
 #define INC_ADDRESS             0x0100  /* Incremental value for the adddress */
 #define RANDOM_CONST            0xDEAD  /* Random value to generate write/read data */
@@ -30,8 +30,6 @@
 */
 #define USBUART_BUFFER_SIZE (64u)
 #define LINE_STR_LENGTH     (20u)
-
-#define BASE_MDIO_ADDRESS       0x8000  /* Start address for the incremental address variable */
 
 volatile uint16 myAddress = 0;          /* Current address variable */
          uint16 myData = 0;             /* Register value in current address */
@@ -47,7 +45,6 @@ uint16 HostData       = 0x0000;               /* Read data for the MDIO frames *
 /* This might be disable in case an external MDIO Host is used */
 #define MDIO_HOST_ENABLE 1
 
-#define RANDOM_CONST            0xDEAD  /* Random value to generate write/read data */
 /* State Constants */
 #define STATE_WRITE 0
 #define STATE_READ  1
@@ -60,7 +57,19 @@ static const uint8  MdioPhyAddr = 0x04;
 /* Local prototypes */
 void fillUpReadOnlyRegisters(void);
 
+/* Internal Status Register */
+extern uint8  MDIO_host_2_StatusRegister;
+
 uint16 read_MDIO_data=0;
+
+
+
+/* Interrupt Prototypes */
+CY_ISR_PROTO(DAT_ISR_Handler);
+CY_ISR_PROTO(ADDR_ISR_Handler);
+CY_ISR_PROTO(COR_ISR_Handler);
+
+
 
 int main(void)
 {
@@ -96,23 +105,29 @@ int main(void)
     Clock_3_Enable();
     PWM_1_Start();
     PWM_2_Start();
-   LCD_PrintString("TEST");
-    LCD_Position(1u, 0u);
-    LCD_PrintString("MDIO host");
-//   ISR_Start();
+//   LCD_PrintString("TEST");
+//    LCD_Position(1u, 0u);
+//    LCD_PrintString("MDIO host");
+     ISR_Start();
     
     /* Start MDIO Components */
     MDIO_Interface_Start();
 
 
     /* Start ISRs */
-//    DAT_ISR_StartEx (DAT_ISR_Handler);
-//    ADDR_ISR_StartEx(ADDR_ISR_Handler);
-//    COR_ISR_StartEx (COR_ISR_Handler);
+    DAT_ISR_StartEx (DAT_ISR_Handler);
+    ADDR_ISR_StartEx(ADDR_ISR_Handler);
+    COR_ISR_StartEx (COR_ISR_Handler);
 
     /* Set read only registers */
     fillUpReadOnlyRegisters();
     
+    
+    /* Display Information on LCD*/
+    LCD_ClearDisplay(); 
+    LCD_PrintString("A:0000  T:(N/A)");
+    LCD_Position(1,0);
+	LCD_PrintString("R:0000");
     
     for(;;)
     {
@@ -123,6 +138,43 @@ int main(void)
         {   /* Invalid data or address not supported */
             myData = 0x0000;
         }  
+        
+        
+        /* Print info on LCD [REG: XXXX] */
+        LCD_Position(1,2);
+        LCD_PrintInt16(myData);     
+    
+        /* Print info about access type [T:(XXX)] */
+        LCD_Position(0,11);
+        
+        /* CFP NVR/Vendor NVR Register Space */
+        if ((myAddress & ~(MDIO_Interface_REG_PAGE_1_SIZE-1)) == MDIO_Interface_CFP_NVR_START ||
+            (myAddress & ~(MDIO_Interface_REG_PAGE_2_SIZE-1)) == MDIO_Interface_VENDOR_NVR_START)
+        {
+            LCD_PrintString("RO) ");
+        }
+        /* Other Register spaces */
+        else if ((myAddress & ~(MDIO_Interface_REG_PAGE_3_SIZE-1)) == MDIO_Interface_USER_NVR_START ||
+                 (myAddress & ~(MDIO_Interface_REG_PAGE_4_SIZE-1)) == MDIO_Interface_CFP_MODULE_VR_START ||
+                 (myAddress & ~(MDIO_Interface_REG_PAGE_5_SIZE-1)) == MDIO_Interface_NETWORK_LANE_VR_START ||
+                 (myAddress & ~(MDIO_Interface_REG_PAGE_6_SIZE-1)) == MDIO_Interface_HOST_LANE_VR_START)
+        {
+            /* Special COR case */
+            if (myAddress == SPECIAL_COR_REGISTER)
+            {
+                LCD_PrintString("COR)");
+            }
+            else
+            {
+                LCD_PrintString("R/W)");
+            }
+        }
+        else /* Not Available Register */
+        {
+            LCD_PrintString("N/A)");
+        }
+        
+        
         
         /* Host can send double SET_INTERFACE request. */
         if (0u != USBUART_1_IsConfigurationChanged())
@@ -154,23 +206,31 @@ int main(void)
                     
                     /* Send data back to host. */
    //                 USBUART_1_PutData( buffer, count);
-                    
-                    if(buffer[0] == 'q')/* Send address frame */                    
+                    if(buffer[0] == 'a')/* Send address frame */                    
                     {
                          USBUART_1_PutString("SET MDIO address: 0x8000\n\r");
-                        MDIO_host_2_SetAddrC45( MdioPhyAddr, MdioDevAddr, BASE_MDIO_ADDRESS );
-                        LCD_Position(0,0);
-                        LCD_PrintString("ADR:");
-                        LCD_PrintInt16(BASE_MDIO_ADDRESS);
+                        MDIO_host_2_SetAddrC45( MdioPhyAddr, MdioDevAddr, 0x8000u );
+//                        LCD_Position(0,0);
+//                        LCD_PrintString("ADR:");
+//                        LCD_PrintInt16(BASE_MDIO_ADDRESS);
+                    }
+                    else
+                    if(buffer[0] == 'q')/* Send address frame */                    
+                    {
+                         USBUART_1_PutString("SET MDIO address: 0x8201\n\r");
+                        MDIO_host_2_SetAddrC45( MdioPhyAddr, MdioDevAddr, 0x8201u );
+//                        LCD_Position(0,0);
+//                        LCD_PrintString("ADR:");
+//                        LCD_PrintInt16(BASE_MDIO_ADDRESS);
                     }
                     else
                     if(buffer[0] == 'w')/* Send address frame */                    
                     {
                          USBUART_1_PutString("Read MDIO:");
                         MDIO_host_2_ReadDataC45( MdioPhyAddr, MdioDevAddr, &read_MDIO_data );
-                        LCD_Position(1,0);
-                        LCD_PrintString("RD:");
-                        LCD_PrintInt16(read_MDIO_data);
+//                        LCD_Position(1,0);
+//                        LCD_PrintString("RD: ");
+//                        LCD_PrintInt16(read_MDIO_data);
                         sprintf((char *)strk,"0x%04X\n\r",read_MDIO_data);
                          USBUART_1_PutString((const char *)strk);
                     }
@@ -234,7 +294,37 @@ int main(void)
                 }
             }
         }
-        
+        /******* ISR Flags instructions ********/
+
+        /* If flag set, update special COR register */
+        if (dataFlag)
+        {
+            /* Clear flag */
+            dataFlag = 0;          
+            
+            /* Add condition to set special COR register */
+            if (myAddress == SPECIAL_COR_MODIFIER)
+            {
+                /* Get data from current address */
+                status = MDIO_Interface_GetData(myAddress, &myData, 1);
+            
+                /* Write in special COR register with current data */
+                MDIO_Interface_SetBits(SPECIAL_COR_REGISTER, myData);
+            }
+        }
+          
+        /* If COR is detected, wait a moment to update value on LCD */
+        if (corFlag)
+        {
+            /* Clear Flag */
+            corFlag = 0;
+
+            CyDelay(250);
+        }
+                    
+        /* Print current address */
+        LCD_Position(0,2);
+        LCD_PrintInt16(myAddress);
         /******* Host Handler Frames ********/
 //#if MDIO_HOST_ENABLE
 //        /* Send write frames in this state */
@@ -378,6 +468,7 @@ CY_ISR(COR_ISR_Handler)
 {
     corFlag = 1;
 }
+
 
 
 /* [] END OF FILE */

@@ -6,14 +6,14 @@
 <CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
 <userData>
 <dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
-<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Components">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
 <TreeKeys>
 <v>Source</v>
 <v>Components</v>
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDIO_host_2\MDIO_host_2_my.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>W_cfp_reader</v>
 <v>W_cfp_reader\cfp_reader</v>
@@ -75,9 +75,11 @@
 <v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Debug_MDIO\Debug_MDIO.c</v>
 <v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Debug_MDIO\Debug_MDIO.h</v>
 <v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Debug_MDIO\Debug_MDIO_aliases.h</v>
-<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\interrupt_MDIO\interrupt_MDIO.c</v>
-<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\interrupt_MDIO\interrupt_MDIO.h</v>
-<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\interrupt_MDIO\interrupt_MDIO_aliases.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Debug_MDIO_1</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Debug_MDIO_1\Debug_MDIO_1.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Debug_MDIO_1\Debug_MDIO_1.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Debug_MDIO_1\Debug_MDIO_1_aliases.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\ISR</v>
 <v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\ISR\ISR.c</v>
 <v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\ISR\ISR.h</v>
 <v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LCD\LCD.c</v>
@@ -228,8 +230,13 @@
 <v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\cy_boot</v>
 <v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\DAT_ISR</v>
 <v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Debug_MDIO</v>
-<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\interrupt_MDIO</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Debug_MDIO_1</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Debug_MDIO_1\Debug_MDIO_1.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Debug_MDIO_1\Debug_MDIO_1.h</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\Debug_MDIO_1\Debug_MDIO_1_aliases.h</v>
 <v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\ISR</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\ISR\ISR.c</v>
+<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\ISR\ISR.h</v>
 <v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LCD</v>
 <v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LCD_LCDPort</v>
 <v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\LED_1</v>
@@ -242,20 +249,12 @@
 <v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDIO_host_2\MDIO_host_2_my.h</v>
 <v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDIO_Interface</v>
 <v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDIO_Interface_AddrDMA</v>
-<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDIO_Interface_CfgDMA1</v>
-<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDIO_Interface_CfgDMA2</v>
-<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDIO_Interface_EndAddrDMA</v>
-<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDIO_Interface_FwDMA1</v>
-<v>W_cfp_reader\cfp_reader\Generated_Source\PSoC5\MDIO_Interface_FwDMA2</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="W_cfp_reader\cfp_reader\MDIO_host_my_v\API\MDIO_host_my.h">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="W_cfp_reader\cfp_reader\MDIO_host_my_v\MDIO_host_my_v.cysym">
 <ExpandedNodeIds>
 <v>W_cfp_reader</v>
 <v>W_cfp_reader\cfp_reader</v>
-<v>W_cfp_reader\cfp_reader\MDIO_Host</v>
-<v>W_cfp_reader\cfp_reader\MDIO_Host\MDIO_Host.cysym</v>
-<v>W_cfp_reader\cfp_reader\MDIO_Host\MDIO_Host.cyudb</v>
 <v>W_cfp_reader\cfp_reader\MDIO_host_my_v</v>
 <v>W_cfp_reader\cfp_reader\MDIO_host_my_v\API</v>
 <v>W_cfp_reader\cfp_reader\MDIO_host_my_v\API\MDIO_host_my.c</v>
@@ -269,9 +268,6 @@
 <VisibleNodeIds>
 <v>W_cfp_reader</v>
 <v>W_cfp_reader\cfp_reader</v>
-<v>W_cfp_reader\cfp_reader\MDIO_Host</v>
-<v>W_cfp_reader\cfp_reader\MDIO_Host\MDIO_Host.cysym</v>
-<v>W_cfp_reader\cfp_reader\MDIO_Host\MDIO_Host.cyudb</v>
 <v>W_cfp_reader\cfp_reader\MDIO_host_my_v</v>
 <v>W_cfp_reader\cfp_reader\MDIO_host_my_v\API</v>
 <v>W_cfp_reader\cfp_reader\MDIO_host_my_v\API\MDIO_host_my.c</v>
@@ -308,7 +304,7 @@
 <v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
 <v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\DAT_ISR.lst</v>
 <v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\Debug_MDIO.lst</v>
-<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\interrupt_MDIO.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\Debug_MDIO_1.lst</v>
 <v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\ISR.lst</v>
 <v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD.lst</v>
 <v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_LCDPort.lst</v>
@@ -391,7 +387,7 @@
 <v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
 <v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\DAT_ISR.lst</v>
 <v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\Debug_MDIO.lst</v>
-<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\interrupt_MDIO.lst</v>
+<v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\Debug_MDIO_1.lst</v>
 <v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\ISR.lst</v>
 <v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD.lst</v>
 <v>W_cfp_reader\cfp_reader\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_LCDPort.lst</v>
@@ -430,7 +426,6 @@
 <v>W_cfp_reader\cfp_reader\System Reference Guides</v>
 <v>W_cfp_reader\cfp_reader\System Reference Guides\cy_boot_v5_50</v>
 <v>W_cfp_reader\cfp_reader\CharLCD_v2_20.pdf</v>
-<v>W_cfp_reader\cfp_reader\cy_bufoe_v1_10.pdf</v>
 <v>W_cfp_reader\cfp_reader\cy_clock_v2_20</v>
 <v>W_cfp_reader\cfp_reader\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
 <v>W_cfp_reader\cfp_reader\cy_constant_v1_0</v>
@@ -463,7 +458,6 @@
 <v>W_cfp_reader\cfp_reader\System Reference Guides</v>
 <v>W_cfp_reader\cfp_reader\System Reference Guides\cy_boot_v5_50</v>
 <v>W_cfp_reader\cfp_reader\CharLCD_v2_20.pdf</v>
-<v>W_cfp_reader\cfp_reader\cy_bufoe_v1_10.pdf</v>
 <v>W_cfp_reader\cfp_reader\cy_clock_v2_20</v>
 <v>W_cfp_reader\cfp_reader\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
 <v>W_cfp_reader\cfp_reader\cy_constant_v1_0</v>
@@ -510,14 +504,13 @@
 <OpenDocs>
 <name v=".\cfp_reader.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\cfp_reader.cydsn\main.c" />
-<name v=".\cfp_reader.cydsn\Generated_Source\PSoC5\MDIO_host_2_my.h" />
-<name v=".\cfp_reader.cydsn\Generated_Source\PSoC5\MDIO_host_2_my.c" />
 <name v=".\cfp_reader.cydsn\MDIO_host_my_v\API\MDIO_host_my.c" />
 <name v=".\cfp_reader.cydsn\MDIO_host_my_v\API\MDIO_host_my.h" />
-<name v=".\cfp_reader.cydsn\MDIO_host_my_v\MDIO_host_my_v.v" />
-<name v=".\cfp_reader.cydsn\cfp_reader.cydwr" />
+<name v=".\cfp_reader.cydsn\Generated_Source\PSoC5\MDIO_host_2_my.h" />
 <name v=".\cfp_reader.cydsn\Generated_Source\PSoC5\cyfitter.h" />
-<name v=".\cfp_reader.cydsn\codegentemp\cfp_reader.rpt" />
+<name v=".\cfp_reader.cydsn\Generated_Source\PSoC5\ISR.c" />
+<name v=".\cfp_reader.cydsn\Generated_Source\PSoC5\USBUART_1_episr.c" />
+<name v=".\cfp_reader.cydsn\MDIO_host_my_v\MDIO_host_my_v.v" />
 <name v=".\cfp_reader.cydsn\codegentemp\cfp_reader.v" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
@@ -526,7 +519,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1346, 678" SelectedTabbedMdiWindow="ccb89de3-ae09-47b8-87c6-a532a5e141e3"><DocumentWindow Key="3237fd2a-e88f-4240-8bbd-866432d531d4" Guid="ccb89de3-ae09-47b8-87c6-a532a5e141e3" /><DocumentWindow Key="4e03f523-3a49-4d42-a723-390f4d60fa79" Guid="c6a2d42f-9480-4059-82d0-f98df9aef927" /><DocumentWindow Key="cec6067c-2f02-4d37-a320-675112542a93" Guid="60a0963a-e260-4160-b1ad-1a6d35a6ce1e" /><DocumentWindow Key="66a53c52-16a4-4500-98f6-4b83f3d13aa7" Guid="60714b56-c453-44e8-8dcc-6dbd51326fcf" /><DocumentWindow Key="f68aa63e-b0eb-4180-854d-677563e5cb88" Guid="ac2eb117-4ed0-41f6-a68d-48ef7152db3e" /><DocumentWindow Key="d1cf4bb8-5747-46ce-810b-feaf4b35dc79" Guid="d10089d4-320f-4763-b4ab-4052d6a22bc5" /><DocumentWindow Key="038a9b05-8aaa-4ba2-8d86-e239db599016" Guid="ca77e36e-d81e-4f4a-8edd-dd1557b7a1ec" /><DocumentWindow Key="4c4c6c40-5e7f-4ddd-9b75-762bb8b94e33" Guid="6d05092d-ee16-486d-b9a4-e8bc14c847fd" /><DocumentWindow Key="4514e71c-ce54-4040-ac59-563968531c69" Guid="9b34620a-7ffa-4278-ab18-cb8714489067" /><DocumentWindow Key="b734abd8-1e86-42a6-bb3a-95277f6e1b23" Guid="bd2b745b-00bd-482b-bc1c-55f1403ccad4" /><DocumentWindow Key="5e6031cb-8d97-4e4d-87aa-b439eb82aa5a" Guid="32b24a70-f203-452c-9062-62509e2ab539" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1346, 678" SelectedTabbedMdiWindow="da62a830-7e11-4ae1-8934-27814ca9689c"><DocumentWindow Key="cb2adba9-ecd0-43a6-ab3d-c536500eb3d1" Guid="35817202-36c1-43db-b2c4-5d8bc641dc03" /><DocumentWindow Key="a9064dcf-f312-4f9f-9d25-bb82c1dff937" Guid="4724423c-c646-4633-9506-639ce20b20c1" /><DocumentWindow Key="c3432781-34a4-42bc-94af-6543317fdeb5" Guid="108b6819-9db1-4d1b-b8aa-b967fea972bc" /><DocumentWindow Key="63667590-b506-4a06-9887-092fcb710c36" Guid="714ee819-cf16-4127-b771-320d62883d0b" /><DocumentWindow Key="6fb58d0e-a4ae-4cc7-9e77-ab71345221b6" Guid="0d33782b-f4b9-4953-8382-0e763866cae4" /><DocumentWindow Key="ffe96407-3041-4c28-abb6-eee4c2365c6e" Guid="866505ff-1c9e-4e9f-840f-5bc260601073" /><DocumentWindow Key="09df25c3-724a-40f0-9395-4c68eb799810" Guid="88cc0128-f091-47bb-9b0a-7a3639a0c84a" /><DocumentWindow Key="79f84a6d-595e-4255-97d1-ef5307713c24" Guid="eeec4960-2e5f-41a5-9039-cd14a0ff8d6d" /><DocumentWindow Key="ef578fb9-1544-43f6-a60d-813e0bc0bc1c" Guid="2a7ae38b-6abb-4d5c-bdcd-892e0222a85b" /><DocumentWindow Key="d6c5d05d-3f80-479b-9cbe-1dcc5806a3bd" Guid="da62a830-7e11-4ae1-8934-27814ca9689c" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

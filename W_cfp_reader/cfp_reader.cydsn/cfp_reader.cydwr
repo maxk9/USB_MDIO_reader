@@ -305,6 +305,7 @@
       <Data key="0d445b96-2213-4639-bfca-610de5cd02a9" value="LED_2" />
       <Data key="5a697358-0c3a-4c83-a844-51eee02b847f" value="MDIO_M" />
       <Data key="4168ca87-9765-4bdb-99df-40f964603acd" value="MDIO_S" />
+      <Data key="8784ae01-7af6-4a97-a63a-ad0f860e1064" value="Debug_MDIO_1" />
       <Data key="445336e6-c6e8-4d2e-8640-e37c911afafe" value="Debug_MDIO" />
       <Data key="ac8fb70c-7191-4547-91f8-16d96c1410fe/ed092b9b-d398-4703-be89-cebf998501f6" value="LCD_LCDPort" />
       <Data key="b1fda75a-1ad6-4f57-b174-5bdd4593f1ee" value="MDC_M" />
@@ -3414,6 +3415,11 @@
     <Group key="4168ca87-9765-4bdb-99df-40f964603acd">
       <Group key="0">
         <Data key="Port Format" value="12,2" />
+      </Group>
+    </Group>
+    <Group key="8784ae01-7af6-4a97-a63a-ad0f860e1064">
+      <Group key="0">
+        <Data key="Port Format" value="0,6" />
       </Group>
     </Group>
     <Group key="445336e6-c6e8-4d2e-8640-e37c911afafe">
