@@ -251,8 +251,8 @@ uint8 `$INSTANCE_NAME`_SetAddrC45(uint8 phy_addr, uint8 dev_addr, uint16 reg_dat
      control_bits = 0x0002+(((uint16)phy_addr)<<7)+(((uint16)dev_addr)<<2);
     `$INSTANCE_NAME`_FIFO_F0_REG = control_bits;
     `$INSTANCE_NAME`_FIFO_F0_REG = reg_data;
-//    `$INSTANCE_NAME`_FIFO_F0_REG = 0xAAAA;
-//    `$INSTANCE_NAME`_FIFO_F0_REG = 0xFFFF;
+//    `$INSTANCE_NAME`_FIFO_F0_REG = 0x4002;
+//    `$INSTANCE_NAME`_FIFO_F0_REG = 0x8002;
    
 	/* Clear hardware status register */
 	status_reg = `$INSTANCE_NAME`_STATUS_REG;

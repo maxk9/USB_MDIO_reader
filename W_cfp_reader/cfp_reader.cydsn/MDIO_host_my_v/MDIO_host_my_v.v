@@ -45,7 +45,7 @@ module MDIO_host_my_v (
     /* Internal Signals                                                       */
     /**************************************************************************/
     reg [2:0] 	State;				/* 8 states requires 3-bits */
-    reg         f1_load;            /* Loads FIFO F1 from the datapath ALU */
+   // reg         f1_load;            /* Loads FIFO F1 from the datapath ALU */
 	wire		stop_frame;		/* Stop frame pulse */
     reg         start_frame_d;      /* Delay start_frame */
   //  wire      rising_mdc;	        /* MDC rising edge detected */
@@ -145,7 +145,7 @@ module MDIO_host_my_v (
 	localparam MDIO_CONFIG_SHIFT 	= 3'd2;		/* Shift a bit out (also used when idle) */
 	localparam MDIO_CONFIG_READ 	= 3'd3;		/* Shift a bit in (also used when idle) */
 	
-	assign debug = tc;
+	assign debug = ((counter < 7'd49) ? 1'b1 : 1'b0);
 	
 	
 	/**************************************************************************/
@@ -162,6 +162,9 @@ module MDIO_host_my_v (
 					State <= MDIO_STATE_START;
 					cfg <= MDIO_CONFIG_LOAD;
 				end
+				else
+					cfg <= MDIO_CONFIG_IDLE;
+				
 				
 			MDIO_STATE_START:
 				begin
@@ -182,11 +185,9 @@ module MDIO_host_my_v (
 					if( counter == 7'd32 )
 						cfg <= MDIO_CONFIG_LOAD;
 					else
-						cfg <= ( counter[0] )? MDIO_CONFIG_IDLE : MDIO_CONFIG_SHIFT;
-						
-					//f1_load <= counter[0];
-					if(mdc)
-						f1_load <= 1'b1;
+						begin
+							cfg <= ( mdc )? MDIO_CONFIG_SHIFT : MDIO_CONFIG_IDLE;
+						end
 					
 					if(tc)//32 bits
 						State <= MDIO_STATE_STOP;
@@ -197,20 +198,24 @@ module MDIO_host_my_v (
 			if(counter == 7'd32)
 					cfg <= MDIO_CONFIG_LOAD;
 				else
-					cfg <= (mdc)? MDIO_CONFIG_IDLE : MDIO_CONFIG_SHIFT;
-					//cfg <= (counter[0])? MDIO_CONFIG_SHIFT : MDIO_CONFIG_READ;
+					begin
+						if(counter < 7'd49)
+							cfg <= ( mdc )? MDIO_CONFIG_SHIFT : MDIO_CONFIG_IDLE;
+						else
+							cfg <= ( mdc )? MDIO_CONFIG_IDLE : MDIO_CONFIG_SHIFT;
+					end
 				if(tc)	//32 bits
 					State <= MDIO_STATE_STOP;
 			end
 				
 			MDIO_STATE_STOP:
 				begin
+					cfg <= MDIO_CONFIG_IDLE;
 					if (~f0_blk_stat) 
 						State <= MDIO_STATE_START;
 					else 
 						begin
 						State <= MDIO_STATE_IDLE;
-						cfg <= MDIO_CONFIG_IDLE;
 						end
 				end
 			
@@ -239,7 +244,7 @@ module MDIO_host_my_v (
 					mdio_out <= 1'b1;
 					mdc <= ~mdc;
 				end
-
+			
 			MDIO_STATE_READ_DATA,
 			MDIO_STATE_SEND_DATA:
 				begin
@@ -367,7 +372,7 @@ cy_psoc3_dp16 #(.cy_dpconfig_a(
 		/*  input                   */  .route_si(mdio_in),/* MDIO input to the shift register */
         /*  input                   */  .route_ci(1'b0),
         /*  input                   */  .f0_load(1'b0),
-        /*  input                   */  .f1_load(f1_load),/* Loads FIFO 1 from A0 */
+        /*  input                   */  .f1_load(1'b0),/* Loads FIFO 1 from A0 */
         /*  input                   */  .d0_load(1'b0),
         /*  input                   */  .d1_load(1'b0),
         /*  output  [01:00]         */  .ce0(),   /*Accumulator 0 = Data register 0 */

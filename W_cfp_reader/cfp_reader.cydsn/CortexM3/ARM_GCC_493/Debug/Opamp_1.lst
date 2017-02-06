@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccG6z256.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 1
   29:Generated_Source\PSoC5/Opamp_1.c **** *  customizer of the component placed onto schematic. Usually called in 
   30:Generated_Source\PSoC5/Opamp_1.c **** *  Opamp_1_Start().
   31:Generated_Source\PSoC5/Opamp_1.c **** *
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccG6z256.s 			page 2
 
 
   32:Generated_Source\PSoC5/Opamp_1.c **** * Parameters:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 1
   44 0018 1032     		adds	r2, r2, #16
   45 001a 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
   46 001c 43F00803 		orr	r3, r3, #8
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 3
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccG6z256.s 			page 3
 
 
   47 0020 1370     		strb	r3, [r2]
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 1
  106:Generated_Source\PSoC5/Opamp_1.c **** ********************************************************************************
  107:Generated_Source\PSoC5/Opamp_1.c **** *
  108:Generated_Source\PSoC5/Opamp_1.c **** * Summary:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 4
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccG6z256.s 			page 4
 
 
  109:Generated_Source\PSoC5/Opamp_1.c **** *  Powers down amplifier to lowest power state.
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 1
   97              	.LFE3:
   98              		.size	Opamp_1_Stop, .-Opamp_1_Stop
   99              		.section	.text.Opamp_1_SetPower,"ax",%progbits
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 5
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccG6z256.s 			page 5
 
 
  100              		.align	2
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 1
  130              	.LFE4:
  131              		.size	Opamp_1_SetPower, .-Opamp_1_SetPower
  132              		.section	.text.Opamp_1_Init,"ax",%progbits
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 6
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccG6z256.s 			page 6
 
 
  133              		.align	2
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 1
  181 000e FFF7FEFF 		bl	Opamp_1_Init
  182              	.LVL3:
  183              	.L14:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 7
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccG6z256.s 			page 7
 
 
  100:Generated_Source\PSoC5/Opamp_1.c **** }
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 1
  237 0043 05       		.byte	0x5
  238 0044 36010000 		.4byte	.LASF4
  239 0048 02       		.uleb128 0x2
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 8
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccG6z256.s 			page 8
 
 
  240 0049 04       		.byte	0x4
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 1
  294 00b4 9C       		.byte	0x9c
  295 00b5 06       		.uleb128 0x6
  296 00b6 1B000000 		.4byte	.LASF16
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 9
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccG6z256.s 			page 9
 
 
  297 00ba 01       		.byte	0x1
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 1
  351 012f 16000000 		.4byte	.LVL4
  352 0133 A4000000 		.4byte	0xa4
  353 0137 00       		.byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 10
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccG6z256.s 			page 10
 
 
  354 0138 0C       		.uleb128 0xc
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 1
  408 002b 00       		.byte	0
  409 002c 03       		.uleb128 0x3
  410 002d 0E       		.uleb128 0xe
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 11
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccG6z256.s 			page 11
 
 
  411 002e 3A       		.uleb128 0x3a
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 1
  465 0065 06       		.uleb128 0x6
  466 0066 40       		.uleb128 0x40
  467 0067 18       		.uleb128 0x18
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 12
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccG6z256.s 			page 12
 
 
  468 0068 9742     		.uleb128 0x2117
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 1
  522 00a6 0B       		.uleb128 0xb
  523 00a7 3B       		.uleb128 0x3b
  524 00a8 0B       		.uleb128 0xb
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 13
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccG6z256.s 			page 13
 
 
  525 00a9 49       		.uleb128 0x49
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 1
  579 001c 0A000000 		.4byte	.LFE0
  580 0020 00000000 		.4byte	.LFB2
  581 0024 1C000000 		.4byte	.LFE2
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 14
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccG6z256.s 			page 14
 
 
  582 0028 00000000 		.4byte	0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 1
  602      74696F6E 
  603              	.LASF24:
  604 00e5 4F70616D 		.ascii	"Opamp_1_initVar\000"
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 15
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccG6z256.s 			page 15
 
 
  604      705F315F 
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 1
  628 018a 73686F72 		.ascii	"short int\000"
  628      7420696E 
  628      7400
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLM7caJ.s 			page 16
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccG6z256.s 			page 16
 
 
  629              	.LASF13:

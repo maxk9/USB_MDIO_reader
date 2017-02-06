@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccUlggVc.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 1
   29:Generated_Source\PSoC5/MDIO_Interface_PM.c **** };
   30:Generated_Source\PSoC5/MDIO_Interface_PM.c **** 
   31:Generated_Source\PSoC5/MDIO_Interface_PM.c **** 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccUlggVc.s 			page 2
 
 
   32:Generated_Source\PSoC5/MDIO_Interface_PM.c **** /*******************************************************************************
@@ -99,7 +99,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 1
   39              	.L3:
   40 000e 00BF     		.align	2
   41              	.L2:
-  42 0010 79650040 		.word	1073767801
+  42 0010 79640040 		.word	1073767545
   43 0014 00000000 		.word	.LANCHOR0
   44              		.cfi_endproc
   45              	.LFE0:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 1
   58:Generated_Source\PSoC5/MDIO_Interface_PM.c **** /*******************************************************************************
   59:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Function Name: MDIO_Interface_RestoreConfig
   60:Generated_Source\PSoC5/MDIO_Interface_PM.c **** ********************************************************************************
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 3
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccUlggVc.s 			page 3
 
 
   61:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
@@ -156,7 +156,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 1
   84:Generated_Source\PSoC5/MDIO_Interface_PM.c ****         MDIO_Interface_PAGE_WIDTH_REG = MDIO_Interface_PAGE_DATA_WIDTH;
   64              		.loc 1 84 0
   65 0006 3822     		movs	r2, #56
-  66 0008 043B     		subs	r3, r3, #4
+  66 0008 0733     		adds	r3, r3, #7
   67 000a 1A70     		strb	r2, [r3]
   85:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     #endif /* MDIO_Interface_ADVANCED_MODE */
   86:Generated_Source\PSoC5/MDIO_Interface_PM.c **** 
@@ -171,14 +171,14 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 1
   74              	.L6:
   75 0016 00BF     		.align	2
   76              	.L5:
-  77 0018 77640040 		.word	1073767543
+  77 0018 71640040 		.word	1073767537
   78 001c 00000000 		.word	.LANCHOR0
-  79 0020 79650040 		.word	1073767801
+  79 0020 79640040 		.word	1073767545
   80              		.cfi_endproc
   81              	.LFE1:
   82              		.size	MDIO_Interface_RestoreConfig, .-MDIO_Interface_RestoreConfig
   83              		.section	.text.MDIO_Interface_Sleep,"ax",%progbits
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 4
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccUlggVc.s 			page 4
 
 
   84              		.align	2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 1
  109              	.L8:
  118:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     }
  119:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     else /* Component is disabled */
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 5
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccUlggVc.s 			page 5
 
 
  120:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     {
@@ -265,7 +265,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 1
  122              	.L12:
  123              		.align	2
  124              	.L11:
- 125 0024 79650040 		.word	1073767801
+ 125 0024 79640040 		.word	1073767545
  126 0028 00000000 		.word	.LANCHOR0
  127              		.cfi_endproc
  128              	.LFE2:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 1
  146:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Global Variables:
  147:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  MDIO_Interface_backup - used when non-retention registers are restored.
  148:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 6
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccUlggVc.s 			page 6
 
 
  149:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Reentrant:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 1
  179 0004 0400     		.2byte	0x4
  180 0006 00000000 		.4byte	.Ldebug_abbrev0
  181 000a 04       		.byte	0x4
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 7
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccUlggVc.s 			page 7
 
 
  182 000b 01       		.uleb128 0x1
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 1
  236 0078 04       		.byte	0x4
  237 0079 04       		.byte	0x4
  238 007a 10020000 		.4byte	.LASF9
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 8
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccUlggVc.s 			page 8
 
 
  239 007e 02       		.uleb128 0x2
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 1
  293 00e8 00000000 		.4byte	.LFB1
  294 00ec 24000000 		.4byte	.LFE1-.LFB1
  295 00f0 01       		.uleb128 0x1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 9
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccUlggVc.s 			page 9
 
 
  296 00f1 9C       		.byte	0x9c
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 1
  350 0002 01       		.byte	0x1
  351 0003 25       		.uleb128 0x25
  352 0004 0E       		.uleb128 0xe
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 10
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccUlggVc.s 			page 10
 
 
  353 0005 13       		.uleb128 0x13
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 1
  407 003b 00       		.byte	0
  408 003c 00       		.byte	0
  409 003d 06       		.uleb128 0x6
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 11
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccUlggVc.s 			page 11
 
 
  410 003e 13       		.uleb128 0x13
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 1
  464 0074 01       		.uleb128 0x1
  465 0075 12       		.uleb128 0x12
  466 0076 06       		.uleb128 0x6
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 12
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccUlggVc.s 			page 12
 
 
  467 0077 40       		.uleb128 0x40
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 1
  521 00b1 00       		.byte	0
  522 00b2 0D       		.uleb128 0xd
  523 00b3 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 13
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccUlggVc.s 			page 13
 
 
  524 00b4 00       		.byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 1
  574 0000 6C6F6E67 		.ascii	"long long int\000"
  574      206C6F6E 
  574      6720696E 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 14
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccUlggVc.s 			page 14
 
 
  574      7400
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 1
  594      746F7000 
  595              	.LASF24:
  596 00e2 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 15
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccUlggVc.s 			page 15
 
 
  596      4320342E 
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 1
  616 01e7 7369676E 		.ascii	"signed char\000"
  616      65642063 
  616      68617200 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc0wArEN.s 			page 16
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccUlggVc.s 			page 16
 
 
  617              	.LASF19:

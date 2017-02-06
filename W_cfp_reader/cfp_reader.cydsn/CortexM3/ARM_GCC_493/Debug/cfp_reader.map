@@ -734,7 +734,7 @@ Discarded input sections
  .text.MDIO_Interface_DisableInt
                 0x00000000       0x10 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_Interface.o)
  .text.MDIO_Interface_Stop
-                0x00000000       0x7c .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_Interface.o)
+                0x00000000       0x80 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_Interface.o)
  .text.MDIO_Interface_GetConfiguration
                 0x00000000       0x24 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_Interface.o)
  .text          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\cfp_reader.a(MDIO_Interface_REG.o)
@@ -1855,9 +1855,9 @@ END GROUP
 .cyloadablemeta
  *(.cyloadablemeta)
 
-.cyconfigecc    0x80000000      0xf0c
+.cyconfigecc    0x80000000      0xf00
  *(.cyconfigecc)
- .cyconfigecc   0x80000000      0xf0c .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
+ .cyconfigecc   0x80000000      0xf00 .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
                 0x80000000                cy_meta_configecc
 
 .cycustnvl      0x90000000        0x4

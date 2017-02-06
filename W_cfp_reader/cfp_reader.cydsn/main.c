@@ -111,16 +111,16 @@ int main(void)
      ISR_Start();
     
     /* Start MDIO Components */
-    MDIO_Interface_Start();
-
+   MDIO_Interface_Start();
+  /* Set read only registers */
+  fillUpReadOnlyRegisters();
 
     /* Start ISRs */
     DAT_ISR_StartEx (DAT_ISR_Handler);
     ADDR_ISR_StartEx(ADDR_ISR_Handler);
     COR_ISR_StartEx (COR_ISR_Handler);
 
-    /* Set read only registers */
-    fillUpReadOnlyRegisters();
+  
     
     
     /* Display Information on LCD*/

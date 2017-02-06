@@ -26,14 +26,14 @@
     <block name="OneTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="bMDIO" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="bufoe_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="AddressAnalyzer_ADDR_CALC_A0" address="0x40006405" bitWidth="16" desc="Address of the register page info/16 bits (LSB/MSB) address" hidden="false" />
-    <register name="AddressAnalyzer_ADDR_COMP_A0" address="0x40006409" bitWidth="16" desc="Current address/Register offset" hidden="false" />
-    <register name="AddressAnalyzer_ADDR_CALC_A1" address="0x40006415" bitWidth="16" desc="Register Info INC/Register offset" hidden="false" />
-    <register name="AddressAnalyzer_ADDR_COMP_A1" address="0x40006419" bitWidth="16" desc="Last received address" hidden="false" />
-    <register name="AddressAnalyzer_PAGE_WIDTH" address="0x40006473" bitWidth="8" desc="Bitmap that specifies whether the register page has 8-bit or 16-bit data width" hidden="false" />
-    <register name="AddressAnalyzer_PAGE_MEMORY_TYPE" address="0x40006477" bitWidth="8" desc="Bitmap that specifies whether the register page is located in Flash or SRAM" hidden="false" />
-    <register name="AddressAnalyzer_REG_ATTRIBUTE" address="0x4000647B" bitWidth="8" desc="Bitmap that specifies the register attributes" hidden="false" />
-    <register name="AddressAnalyzer_REG_MASK" address="0x40006538" bitWidth="16" desc="Register writable bit mask" hidden="false" />
+    <register name="AddressAnalyzer_ADDR_COMP_A0" address="0x40006404" bitWidth="16" desc="Current address/Register offset" hidden="false" />
+    <register name="AddressAnalyzer_ADDR_CALC_A0" address="0x40006409" bitWidth="16" desc="Address of the register page info/16 bits (LSB/MSB) address" hidden="false" />
+    <register name="AddressAnalyzer_ADDR_COMP_A1" address="0x40006414" bitWidth="16" desc="Last received address" hidden="false" />
+    <register name="AddressAnalyzer_ADDR_CALC_A1" address="0x40006419" bitWidth="16" desc="Register Info INC/Register offset" hidden="false" />
+    <register name="AddressAnalyzer_PAGE_MEMORY_TYPE" address="0x40006471" bitWidth="8" desc="Bitmap that specifies whether the register page is located in Flash or SRAM" hidden="false" />
+    <register name="AddressAnalyzer_PAGE_WIDTH" address="0x40006478" bitWidth="8" desc="Bitmap that specifies whether the register page has 8-bit or 16-bit data width" hidden="false" />
+    <register name="AddressAnalyzer_REG_MASK" address="0x4000653A" bitWidth="16" desc="Register writable bit mask" hidden="false" />
+    <register name="AddressAnalyzer_REG_ATTRIBUTE" address="0x4000657B" bitWidth="8" desc="Bitmap that specifies the register attributes" hidden="false" />
   </block>
   <block name="cy_constant_5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="MDC_S" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -52,8 +52,8 @@
     <block name="vmIRQ" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="PWMUDB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="vmCompare" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="PWM_2_COMPARE_Reg_" address="0x40006524" bitWidth="8" desc="UDB.D0 - Assigned Compare Value" hidden="false" />
-    <register name="PWM_2_STATUS_AUX_CTRL" address="0x40006594" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
+    <register name="PWM_2_COMPARE_Reg_" address="0x40006426" bitWidth="8" desc="UDB.D0 - Assigned Compare Value" hidden="false" />
+    <register name="PWM_2_STATUS_AUX_CTRL" address="0x40006496" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
       <field name="FIFO0_CLR" from="0" to="0" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="E_FIFO_CLR_0" value="0" desc="Normal FIFO operation" />
         <value name="E_FIFO_CLR_1" value="1" desc="Clear FIFO state" />
@@ -271,8 +271,8 @@
     <block name="vmIRQ" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="PWMUDB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="vmCompare" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="PWM_1_COMPARE_Reg_" address="0x40006420" bitWidth="8" desc="UDB.D0 - Assigned Compare Value" hidden="false" />
-    <register name="PWM_1_STATUS_AUX_CTRL" address="0x40006490" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
+    <register name="PWM_1_COMPARE_Reg_" address="0x4000642B" bitWidth="8" desc="UDB.D0 - Assigned Compare Value" hidden="false" />
+    <register name="PWM_1_STATUS_AUX_CTRL" address="0x4000649B" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
       <field name="FIFO0_CLR" from="0" to="0" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="E_FIFO_CLR_0" value="0" desc="Normal FIFO operation" />
         <value name="E_FIFO_CLR_1" value="1" desc="Clear FIFO state" />

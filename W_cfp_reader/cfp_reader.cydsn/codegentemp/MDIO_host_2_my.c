@@ -251,8 +251,8 @@ uint8 MDIO_host_2_SetAddrC45(uint8 phy_addr, uint8 dev_addr, uint16 reg_data) //
      control_bits = 0x0002+(((uint16)phy_addr)<<7)+(((uint16)dev_addr)<<2);
     MDIO_host_2_FIFO_F0_REG = control_bits;
     MDIO_host_2_FIFO_F0_REG = reg_data;
-//    MDIO_host_2_FIFO_F0_REG = 0xAAAA;
-//    MDIO_host_2_FIFO_F0_REG = 0xFFFF;
+//    MDIO_host_2_FIFO_F0_REG = 0x4002;
+//    MDIO_host_2_FIFO_F0_REG = 0x8002;
    
 	/* Clear hardware status register */
 	status_reg = MDIO_host_2_STATUS_REG;

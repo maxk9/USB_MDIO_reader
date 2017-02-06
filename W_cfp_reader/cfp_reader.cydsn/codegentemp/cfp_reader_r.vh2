@@ -1,5 +1,5 @@
 -- Project:   cfp_reader
--- Generated: 02/03/2017 17:53:06
+-- Generated: 02/06/2017 15:38:41
 -- PSoC Creator  4.0
 
 ENTITY cfp_reader IS
@@ -59,37 +59,39 @@ ARCHITECTURE __DEFAULT__ OF cfp_reader IS
     SIGNAL Net_1121_local : bit;
     SIGNAL Net_1243 : bit;
     SIGNAL Net_1881 : bit;
-    ATTRIBUTE placement_force OF Net_1881 : SIGNAL IS "U(2,5,B)0";
+    ATTRIBUTE placement_force OF Net_1881 : SIGNAL IS "U(3,2,A)3";
     SIGNAL Net_1882 : bit;
-    ATTRIBUTE placement_force OF Net_1882 : SIGNAL IS "U(2,5,B)2";
+    ATTRIBUTE placement_force OF Net_1882 : SIGNAL IS "U(3,2,A)2";
     SIGNAL Net_1924 : bit;
-    ATTRIBUTE placement_force OF Net_1924 : SIGNAL IS "U(3,1,A)1";
+    ATTRIBUTE placement_force OF Net_1924 : SIGNAL IS "U(3,4,B)2";
     SIGNAL Net_1950 : bit;
-    ATTRIBUTE placement_force OF Net_1950 : SIGNAL IS "U(0,3,A)1";
+    ATTRIBUTE placement_force OF Net_1950 : SIGNAL IS "U(1,0,A)2";
     SIGNAL Net_1951 : bit;
-    ATTRIBUTE placement_force OF Net_1951 : SIGNAL IS "U(2,3,A)0";
+    ATTRIBUTE placement_force OF Net_1951 : SIGNAL IS "U(2,2,A)0";
     SIGNAL Net_1952 : bit;
-    ATTRIBUTE placement_force OF Net_1952 : SIGNAL IS "U(0,3,A)0";
+    ATTRIBUTE placement_force OF Net_1952 : SIGNAL IS "U(1,0,B)1";
     SIGNAL Net_2033 : bit;
     ATTRIBUTE udbclken_assigned OF Net_2033 : SIGNAL IS "False";
     SIGNAL Net_2054 : bit;
+    ATTRIBUTE placement_force OF Net_2054 : SIGNAL IS "U(2,4,A)3";
+    ATTRIBUTE soft OF Net_2054 : SIGNAL IS 1;
     SIGNAL Net_2056 : bit;
     ATTRIBUTE udbclken_assigned OF Net_2056 : SIGNAL IS "True";
     ATTRIBUTE global_signal OF Net_2056 : SIGNAL IS true;
     SIGNAL Net_2056_local : bit;
     SIGNAL Net_2069 : bit;
-    ATTRIBUTE placement_force OF Net_2069 : SIGNAL IS "U(3,5,A)1";
+    ATTRIBUTE placement_force OF Net_2069 : SIGNAL IS "U(2,0,B)1";
     SIGNAL Net_2071 : bit;
     SIGNAL Net_2086 : bit;
-    ATTRIBUTE placement_force OF Net_2086 : SIGNAL IS "U(3,1,A)0";
+    ATTRIBUTE placement_force OF Net_2086 : SIGNAL IS "U(2,0,B)0";
     SIGNAL Net_548 : bit;
     ATTRIBUTE udbclken_assigned OF Net_548 : SIGNAL IS "True";
     ATTRIBUTE global_signal OF Net_548 : SIGNAL IS true;
     SIGNAL Net_548_local : bit;
     SIGNAL Net_785 : bit;
-    ATTRIBUTE placement_force OF Net_785 : SIGNAL IS "U(2,5,A)3";
+    ATTRIBUTE placement_force OF Net_785 : SIGNAL IS "U(3,4,A)0";
     SIGNAL Net_789 : bit;
-    ATTRIBUTE placement_force OF Net_789 : SIGNAL IS "U(3,0,A)2";
+    ATTRIBUTE placement_force OF Net_789 : SIGNAL IS "U(3,4,B)0";
     SIGNAL VRef_1V2(0)__PA : bit;
     SIGNAL \\\LCD:LCDPort(0)\\__PA\ : bit;
     SIGNAL \\\LCD:LCDPort(1)\\__PA\ : bit;
@@ -105,7 +107,7 @@ ARCHITECTURE __DEFAULT__ OF cfp_reader IS
     SIGNAL \MDIO_Interface:Net_846\ : bit;
     SIGNAL \MDIO_Interface:Net_849\ : bit;
     SIGNAL \MDIO_Interface:addr_dma\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:addr_dma\ : SIGNAL IS "U(2,4,A)1";
+    ATTRIBUTE placement_force OF \MDIO_Interface:addr_dma\ : SIGNAL IS "U(3,2,B)1";
     SIGNAL \MDIO_Interface:addr_nrq\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:Advanced:FwAlu:u0.ce0__sig\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:Advanced:AddrCalc:u0.ce0__sig\ : bit;
@@ -113,34 +115,34 @@ ARCHITECTURE __DEFAULT__ OF cfp_reader IS
     SIGNAL \MDIO_Interface:bMDIO:ac_f0_empty_0\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:ac_f1_empty_0\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:addr_in_range\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:addr_in_range\ : SIGNAL IS "U(0,3,B)1";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:addr_in_range\ : SIGNAL IS "U(3,3,B)2";
     SIGNAL \MDIO_Interface:bMDIO:addr_is_valid\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:addr_is_valid\ : SIGNAL IS "U(2,0,B)2";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:addr_is_valid\ : SIGNAL IS "U(1,3,B)2";
     SIGNAL \MDIO_Interface:bMDIO:addr_match\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:addr_match\ : SIGNAL IS "U(1,1,A)1";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:addr_match\ : SIGNAL IS "U(1,1,A)3";
     SIGNAL \MDIO_Interface:bMDIO:addr_match_dly\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:addr_match_dly\ : SIGNAL IS "U(1,1,A)2";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:addr_match_dly\ : SIGNAL IS "U(1,0,A)3";
     SIGNAL \MDIO_Interface:bMDIO:address_msb\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:ba_state_0\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:ba_state_0\ : SIGNAL IS "U(2,1,A)0";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:ba_state_0\ : SIGNAL IS "U(1,1,B)0";
     SIGNAL \MDIO_Interface:bMDIO:ba_state_1\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:ba_state_1\ : SIGNAL IS "U(2,4,A)0";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:ba_state_1\ : SIGNAL IS "U(2,3,B)2";
     SIGNAL \MDIO_Interface:bMDIO:ba_state_2\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:ba_state_2\ : SIGNAL IS "U(2,0,B)1";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:ba_state_2\ : SIGNAL IS "U(3,2,B)0";
     SIGNAL \MDIO_Interface:bMDIO:ba_state_3\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:ba_state_3\ : SIGNAL IS "U(3,2,B)0";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:ba_state_3\ : SIGNAL IS "U(3,1,B)0";
     SIGNAL \MDIO_Interface:bMDIO:capture\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:capture\ : SIGNAL IS "U(1,0,A)0";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:capture\ : SIGNAL IS "U(2,0,A)1";
     SIGNAL \MDIO_Interface:bMDIO:carry\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:carry\ : SIGNAL IS "U(3,4,B)2";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:carry\ : SIGNAL IS "U(0,1,B)0";
     SIGNAL \MDIO_Interface:bMDIO:ce0_1\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:cfg_done\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:cfg_done\ : SIGNAL IS "U(3,2,B)1";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:cfg_done\ : SIGNAL IS "U(3,1,B)1";
     SIGNAL \MDIO_Interface:bMDIO:cfp_addr\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:cfp_addr\ : SIGNAL IS "U(1,3,B)3";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:cfp_addr\ : SIGNAL IS "U(2,2,A)1";
     SIGNAL \MDIO_Interface:bMDIO:co_reg_1\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:cor_reg\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:cor_reg\ : SIGNAL IS "U(1,0,A)3";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:cor_reg\ : SIGNAL IS "U(1,0,A)0";
     SIGNAL \MDIO_Interface:bMDIO:count_0\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:count_1\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:count_2\ : bit;
@@ -157,11 +159,11 @@ ARCHITECTURE __DEFAULT__ OF cfp_reader IS
     SIGNAL \MDIO_Interface:bMDIO:ctrl_6\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:ctrl_7\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:current_page_0\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:current_page_0\ : SIGNAL IS "U(3,0,B)2";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:current_page_0\ : SIGNAL IS "U(2,3,A)1";
     SIGNAL \MDIO_Interface:bMDIO:current_page_1\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:current_page_1\ : SIGNAL IS "U(3,3,B)2";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:current_page_1\ : SIGNAL IS "U(2,5,A)2";
     SIGNAL \MDIO_Interface:bMDIO:current_page_2\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:current_page_2\ : SIGNAL IS "U(3,3,B)1";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:current_page_2\ : SIGNAL IS "U(2,3,A)3";
     SIGNAL \MDIO_Interface:bMDIO:data_width_0\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:data_width_1\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:data_width_2\ : bit;
@@ -171,36 +173,36 @@ ARCHITECTURE __DEFAULT__ OF cfp_reader IS
     SIGNAL \MDIO_Interface:bMDIO:data_width_6\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:data_width_7\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:fp_state_0\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:fp_state_0\ : SIGNAL IS "U(0,0,B)0";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:fp_state_0\ : SIGNAL IS "U(0,1,A)0";
     SIGNAL \MDIO_Interface:bMDIO:fp_state_1\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:fp_state_1\ : SIGNAL IS "U(1,1,B)0";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:fp_state_1\ : SIGNAL IS "U(1,0,B)0";
     SIGNAL \MDIO_Interface:bMDIO:fp_state_2\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:fp_state_2\ : SIGNAL IS "U(0,0,A)2";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:fp_state_2\ : SIGNAL IS "U(0,2,B)0";
     SIGNAL \MDIO_Interface:bMDIO:fw_req\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:fw_req\ : SIGNAL IS "U(1,0,A)1";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:fw_req\ : SIGNAL IS "U(0,0,B)2";
     SIGNAL \MDIO_Interface:bMDIO:fw_req_dly\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:fw_req_dly\ : SIGNAL IS "U(1,3,A)2";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:fw_req_dly\ : SIGNAL IS "U(0,0,B)1";
     SIGNAL \MDIO_Interface:bMDIO:fw_state_0\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:fw_state_0\ : SIGNAL IS "U(1,3,B)2";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:fw_state_0\ : SIGNAL IS "U(0,1,B)3";
     SIGNAL \MDIO_Interface:bMDIO:fw_state_1\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:fw_state_1\ : SIGNAL IS "U(1,2,A)2";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:fw_state_1\ : SIGNAL IS "U(2,1,A)1";
     SIGNAL \MDIO_Interface:bMDIO:is_16bit\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:is_16bit\ : SIGNAL IS "U(2,4,B)0";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:is_16bit\ : SIGNAL IS "U(1,2,A)0";
     SIGNAL \MDIO_Interface:bMDIO:is_page_en\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:is_page_en\ : SIGNAL IS "U(2,1,B)0";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:is_page_en\ : SIGNAL IS "U(3,4,B)1";
     SIGNAL \MDIO_Interface:bMDIO:is_sram\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:is_sram\ : SIGNAL IS "U(2,2,A)0";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:is_sram\ : SIGNAL IS "U(3,5,A)0";
     SIGNAL \MDIO_Interface:bMDIO:keep_high\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:keep_high\ : SIGNAL IS "U(1,3,A)0";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:keep_high\ : SIGNAL IS "U(2,0,A)0";
     SIGNAL \MDIO_Interface:bMDIO:ld_count\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:ld_count\ : SIGNAL IS "U(1,2,A)0";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:ld_count\ : SIGNAL IS "U(0,3,B)1";
     SIGNAL \MDIO_Interface:bMDIO:mdc_dly\ : bit;
     ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:mdc_dly\ : SIGNAL IS "U(0,2,B)1";
     SIGNAL \MDIO_Interface:bMDIO:mdc_sync\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:mdio_enable\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:mdio_enable\ : SIGNAL IS "U(0,1,B)1";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:mdio_enable\ : SIGNAL IS "U(0,2,A)0";
     SIGNAL \MDIO_Interface:bMDIO:mdio_reg\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:mdio_reg\ : SIGNAL IS "U(3,0,A)0";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:mdio_reg\ : SIGNAL IS "U(3,3,A)3";
     SIGNAL \MDIO_Interface:bMDIO:mdio_sync\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:mem_type_0\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:mem_type_1\ : bit;
@@ -211,17 +213,17 @@ ARCHITECTURE __DEFAULT__ OF cfp_reader IS
     SIGNAL \MDIO_Interface:bMDIO:mem_type_6\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:mem_type_7\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:next_page\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:next_page\ : SIGNAL IS "U(1,3,B)0";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:next_page\ : SIGNAL IS "U(2,2,A)2";
     SIGNAL \MDIO_Interface:bMDIO:op_address\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:op_address\ : SIGNAL IS "U(2,3,A)2";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:op_address\ : SIGNAL IS "U(1,3,A)2";
     SIGNAL \MDIO_Interface:bMDIO:op_pos_read\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:op_pos_read\ : SIGNAL IS "U(2,3,A)1";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:op_pos_read\ : SIGNAL IS "U(1,3,A)3";
     SIGNAL \MDIO_Interface:bMDIO:op_write\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:op_write\ : SIGNAL IS "U(1,2,B)1";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:op_write\ : SIGNAL IS "U(1,3,A)0";
     SIGNAL \MDIO_Interface:bMDIO:opcode_0\ : bit;
     ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:opcode_0\ : SIGNAL IS "U(1,2,B)2";
     SIGNAL \MDIO_Interface:bMDIO:opcode_1\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:opcode_1\ : SIGNAL IS "U(1,2,B)0";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:opcode_1\ : SIGNAL IS "U(1,1,A)2";
     SIGNAL \MDIO_Interface:bMDIO:reg_cfg_0\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:reg_cfg_1\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:reg_cfg_2\ : bit;
@@ -231,21 +233,21 @@ ARCHITECTURE __DEFAULT__ OF cfp_reader IS
     SIGNAL \MDIO_Interface:bMDIO:reg_cfg_6\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:reg_cfg_7\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:rising_mdc\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:rising_mdc\ : SIGNAL IS "U(1,1,B)1";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:rising_mdc\ : SIGNAL IS "U(0,2,B)2";
     SIGNAL \MDIO_Interface:bMDIO:rs_count_0\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:rs_count_0\ : SIGNAL IS "U(1,0,B)1";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:rs_count_0\ : SIGNAL IS "U(1,3,A)1";
     SIGNAL \MDIO_Interface:bMDIO:rs_count_1\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:rs_count_1\ : SIGNAL IS "U(3,0,B)0";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:rs_count_1\ : SIGNAL IS "U(2,5,A)0";
     SIGNAL \MDIO_Interface:bMDIO:rs_count_2\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:rs_count_2\ : SIGNAL IS "U(3,0,B)1";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:rs_count_2\ : SIGNAL IS "U(2,5,A)1";
     SIGNAL \MDIO_Interface:bMDIO:rs_load\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:rs_load\ : SIGNAL IS "U(2,0,A)0";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:rs_load\ : SIGNAL IS "U(2,5,B)0";
     SIGNAL \MDIO_Interface:bMDIO:rs_state_0\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:rs_state_0\ : SIGNAL IS "U(2,3,B)0";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:rs_state_0\ : SIGNAL IS "U(2,2,B)0";
     SIGNAL \MDIO_Interface:bMDIO:rs_state_1\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:rs_state_1\ : SIGNAL IS "U(1,0,B)0";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:rs_state_1\ : SIGNAL IS "U(2,1,B)1";
     SIGNAL \MDIO_Interface:bMDIO:rs_state_2\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:rs_state_2\ : SIGNAL IS "U(2,2,B)2";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:rs_state_2\ : SIGNAL IS "U(2,1,B)0";
     SIGNAL \MDIO_Interface:bMDIO:rs_update\ : bit;
     ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:rs_update\ : SIGNAL IS "U(2,3,B)1";
     SIGNAL \MDIO_Interface:bMDIO:rsce0_1\ : bit;
@@ -253,46 +255,46 @@ ARCHITECTURE __DEFAULT__ OF cfp_reader IS
     SIGNAL \MDIO_Interface:bMDIO:rscl0_1\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:rscl1_1\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:sample_carry\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:sample_carry\ : SIGNAL IS "U(3,2,A)1";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:sample_carry\ : SIGNAL IS "U(0,0,A)1";
     SIGNAL \MDIO_Interface:bMDIO:so\ : bit;
     SIGNAL \MDIO_Interface:bMDIO:start_detect\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:start_detect\ : SIGNAL IS "U(1,1,B)2";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:start_detect\ : SIGNAL IS "U(0,1,A)1";
     SIGNAL \MDIO_Interface:bMDIO:ta_bits\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:ta_bits\ : SIGNAL IS "U(1,2,B)3";
+    ATTRIBUTE placement_force OF \MDIO_Interface:bMDIO:ta_bits\ : SIGNAL IS "U(1,1,A)0";
     SIGNAL \MDIO_Interface:bMDIO:tc\ : bit;
     SIGNAL \MDIO_Interface:cfg_dma\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:cfg_dma\ : SIGNAL IS "U(2,5,A)2";
+    ATTRIBUTE placement_force OF \MDIO_Interface:cfg_dma\ : SIGNAL IS "U(1,3,B)1";
     SIGNAL \MDIO_Interface:fw_dma1\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:fw_dma1\ : SIGNAL IS "U(1,3,A)1";
+    ATTRIBUTE placement_force OF \MDIO_Interface:fw_dma1\ : SIGNAL IS "U(0,1,B)1";
     SIGNAL \MDIO_Interface:fw_dma2\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:fw_dma2\ : SIGNAL IS "U(1,2,A)3";
+    ATTRIBUTE placement_force OF \MDIO_Interface:fw_dma2\ : SIGNAL IS "U(0,1,B)2";
     SIGNAL \MDIO_Interface:fw_nrq1\ : bit;
     SIGNAL \MDIO_Interface:fw_nrq2\ : bit;
     SIGNAL \MDIO_Interface:info_dma\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:info_dma\ : SIGNAL IS "U(2,5,A)1";
+    ATTRIBUTE placement_force OF \MDIO_Interface:info_dma\ : SIGNAL IS "U(2,3,B)0";
     SIGNAL \MDIO_Interface:info_nrq\ : bit;
     SIGNAL \MDIO_Interface:mdio_o\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:mdio_o\ : SIGNAL IS "U(1,2,A)1";
+    ATTRIBUTE placement_force OF \MDIO_Interface:mdio_o\ : SIGNAL IS "U(2,1,A)0";
     SIGNAL \MDIO_Interface:rd_dma\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_Interface:rd_dma\ : SIGNAL IS "U(1,1,A)0";
+    ATTRIBUTE placement_force OF \MDIO_Interface:rd_dma\ : SIGNAL IS "U(0,3,B)0";
     SIGNAL \MDIO_Interface:rs_dma0\ : bit;
     SIGNAL \MDIO_Interface:rs_dma1\ : bit;
     SIGNAL \MDIO_Interface:wr_dma\ : bit;
     SIGNAL \MDIO_Interface:wr_nrq\ : bit;
     SIGNAL \MDIO_host_2:State_0\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_host_2:State_0\ : SIGNAL IS "U(3,1,B)1";
+    ATTRIBUTE placement_force OF \MDIO_host_2:State_0\ : SIGNAL IS "U(3,0,B)0";
     SIGNAL \MDIO_host_2:State_1\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_host_2:State_1\ : SIGNAL IS "U(3,1,A)3";
+    ATTRIBUTE placement_force OF \MDIO_host_2:State_1\ : SIGNAL IS "U(3,0,B)1";
     SIGNAL \MDIO_host_2:State_2\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_host_2:State_2\ : SIGNAL IS "U(3,1,B)0";
+    ATTRIBUTE placement_force OF \MDIO_host_2:State_2\ : SIGNAL IS "U(3,5,B)0";
     SIGNAL \MDIO_host_2:cfg_0\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_host_2:cfg_0\ : SIGNAL IS "U(3,3,A)0";
+    ATTRIBUTE placement_force OF \MDIO_host_2:cfg_0\ : SIGNAL IS "U(3,0,A)0";
     SIGNAL \MDIO_host_2:cfg_1\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_host_2:cfg_1\ : SIGNAL IS "U(3,4,A)0";
+    ATTRIBUTE placement_force OF \MDIO_host_2:cfg_1\ : SIGNAL IS "U(2,4,A)1";
     SIGNAL \MDIO_host_2:cfg_1_split\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_host_2:cfg_1_split\ : SIGNAL IS "U(3,5,B)0";
+    ATTRIBUTE placement_force OF \MDIO_host_2:cfg_1_split\ : SIGNAL IS "U(2,4,B)0";
     SIGNAL \MDIO_host_2:cfg_2\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_host_2:cfg_2\ : SIGNAL IS "U(3,4,A)2";
+    ATTRIBUTE placement_force OF \MDIO_host_2:cfg_2\ : SIGNAL IS "U(3,5,B)2";
     SIGNAL \MDIO_Interface:bMDIO:Advanced:AddrComp:u0.ce0__sig\ : bit;
     SIGNAL \MDIO_host_2:control_0\ : bit;
     SIGNAL \MDIO_host_2:control_1\ : bit;
@@ -310,20 +312,19 @@ ARCHITECTURE __DEFAULT__ OF cfp_reader IS
     SIGNAL \MDIO_host_2:counter_5\ : bit;
     SIGNAL \MDIO_host_2:counter_6\ : bit;
     SIGNAL \MDIO_host_2:en_count\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_host_2:en_count\ : SIGNAL IS "U(3,5,A)3";
+    ATTRIBUTE placement_force OF \MDIO_host_2:en_count\ : SIGNAL IS "U(3,4,B)3";
     SIGNAL \MDIO_host_2:f0_blk_stat\ : bit;
-    SIGNAL \MDIO_host_2:f1_load\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_host_2:f1_load\ : SIGNAL IS "U(3,4,A)1";
     SIGNAL \MDIO_host_2:so\ : bit;
     SIGNAL \MDIO_host_2:status_val_0\ : bit;
     SIGNAL \MDIO_host_2:status_val_1\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_host_2:status_val_1\ : SIGNAL IS "U(3,1,A)2";
+    ATTRIBUTE placement_force OF \MDIO_host_2:status_val_1\ : SIGNAL IS "U(3,0,A)3";
     SIGNAL \MDIO_host_2:status_val_2\ : bit;
-    ATTRIBUTE placement_force OF \MDIO_host_2:status_val_2\ : SIGNAL IS "U(3,3,A)1";
+    ATTRIBUTE placement_force OF \MDIO_host_2:status_val_2\ : SIGNAL IS "U(2,0,B)3";
     SIGNAL \MDIO_host_2:status_val_3\ : bit;
+    SIGNAL \MDIO_host_2:tc\ : bit;
     SIGNAL \PWM_1:PWMUDB:cmp1_less\ : bit;
     SIGNAL \PWM_1:PWMUDB:runmode_enable\ : bit;
-    ATTRIBUTE placement_force OF \PWM_1:PWMUDB:runmode_enable\ : SIGNAL IS "U(2,5,B)1";
+    ATTRIBUTE placement_force OF \PWM_1:PWMUDB:runmode_enable\ : SIGNAL IS "U(3,2,A)0";
     SIGNAL \PWM_1:PWMUDB:tc_i\ : bit;
     SIGNAL \PWM_2:PWMUDB:cmp1_less\ : bit;
     SIGNAL \PWM_2:PWMUDB:tc_i\ : bit;
@@ -461,23 +462,25 @@ ARCHITECTURE __DEFAULT__ OF cfp_reader IS
     ATTRIBUTE lib_model OF MDIO_S(0) : LABEL IS "iocell19";
     ATTRIBUTE Location OF MDIO_S(0) : LABEL IS "P12[2]";
     ATTRIBUTE lib_model OF Net_785 : LABEL IS "macrocell1";
-    ATTRIBUTE Location OF Net_785 : LABEL IS "U(2,5)";
+    ATTRIBUTE Location OF Net_785 : LABEL IS "U(3,4)";
     ATTRIBUTE lib_model OF Net_789 : LABEL IS "macrocell2";
-    ATTRIBUTE Location OF Net_789 : LABEL IS "U(3,0)";
+    ATTRIBUTE Location OF Net_789 : LABEL IS "U(3,4)";
     ATTRIBUTE lib_model OF \MDIO_host_2:status_val_1\ : LABEL IS "macrocell3";
-    ATTRIBUTE Location OF \MDIO_host_2:status_val_1\ : LABEL IS "U(3,1)";
+    ATTRIBUTE Location OF \MDIO_host_2:status_val_1\ : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF \MDIO_host_2:status_val_2\ : LABEL IS "macrocell4";
-    ATTRIBUTE Location OF \MDIO_host_2:status_val_2\ : LABEL IS "U(3,3)";
+    ATTRIBUTE Location OF \MDIO_host_2:status_val_2\ : LABEL IS "U(2,0)";
     ATTRIBUTE lib_model OF \MDIO_host_2:en_count\ : LABEL IS "macrocell5";
-    ATTRIBUTE Location OF \MDIO_host_2:en_count\ : LABEL IS "U(3,5)";
-    ATTRIBUTE lib_model OF Net_1924 : LABEL IS "macrocell6";
-    ATTRIBUTE Location OF Net_1924 : LABEL IS "U(3,1)";
-    ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:rising_mdc\ : LABEL IS "macrocell7";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:rising_mdc\ : LABEL IS "U(1,1)";
-    ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:ld_count\ : LABEL IS "macrocell8";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:ld_count\ : LABEL IS "U(1,2)";
+    ATTRIBUTE Location OF \MDIO_host_2:en_count\ : LABEL IS "U(3,4)";
+    ATTRIBUTE lib_model OF Net_2054 : LABEL IS "macrocell6";
+    ATTRIBUTE Location OF Net_2054 : LABEL IS "U(2,4)";
+    ATTRIBUTE lib_model OF Net_1924 : LABEL IS "macrocell7";
+    ATTRIBUTE Location OF Net_1924 : LABEL IS "U(3,4)";
+    ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:rising_mdc\ : LABEL IS "macrocell8";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:rising_mdc\ : LABEL IS "U(0,2)";
+    ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:ld_count\ : LABEL IS "macrocell9";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:ld_count\ : LABEL IS "U(0,3)";
     ATTRIBUTE lib_model OF \PWM_1:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "datapathcell1";
-    ATTRIBUTE Location OF \PWM_1:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "U(2,5)";
+    ATTRIBUTE Location OF \PWM_1:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "U(1,3)";
     ATTRIBUTE Location OF \VDAC8_1:viDAC8\ : LABEL IS "F(VIDAC,3)";
     ATTRIBUTE Location OF \Opamp_1:ABuf\ : LABEL IS "F(OpAmp,3)";
     ATTRIBUTE Location OF \USBUART_1:dp_int\ : LABEL IS "[IntrContainer=(0)][IntrId=(12)]";
@@ -490,12 +493,12 @@ ARCHITECTURE __DEFAULT__ OF cfp_reader IS
     ATTRIBUTE Location OF \USBUART_1:arb_int\ : LABEL IS "[IntrContainer=(0)][IntrId=(22)]";
     ATTRIBUTE Location OF \USBUART_1:sof_int\ : LABEL IS "[IntrContainer=(0)][IntrId=(21)]";
     ATTRIBUTE lib_model OF \PWM_2:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "datapathcell2";
-    ATTRIBUTE Location OF \PWM_2:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "U(2,0)";
+    ATTRIBUTE Location OF \PWM_2:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "U(3,2)";
     ATTRIBUTE lib_model OF \MDIO_host_2:MdioStatusReg\ : LABEL IS "statuscell1";
     ATTRIBUTE Location OF \MDIO_host_2:MdioStatusReg\ : LABEL IS "U(2,1)";
     ATTRIBUTE lib_model OF \MDIO_host_2:MdioControlReg\ : LABEL IS "controlcell1";
-    ATTRIBUTE Location OF \MDIO_host_2:MdioControlReg\ : LABEL IS "U(3,2)";
-    ATTRIBUTE Location OF \MDIO_host_2:MdioCounter\ : LABEL IS "U(3,5)";
+    ATTRIBUTE Location OF \MDIO_host_2:MdioControlReg\ : LABEL IS "U(3,3)";
+    ATTRIBUTE Location OF \MDIO_host_2:MdioCounter\ : LABEL IS "U(3,4)";
     ATTRIBUTE lib_model OF \MDIO_host_2:cntrl16:u0\ : LABEL IS "datapathcell3";
     ATTRIBUTE Location OF \MDIO_host_2:cntrl16:u0\ : LABEL IS "U(3,1)";
     ATTRIBUTE lib_model OF \MDIO_host_2:cntrl16:u1\ : LABEL IS "datapathcell4";
@@ -504,35 +507,35 @@ ARCHITECTURE __DEFAULT__ OF cfp_reader IS
     ATTRIBUTE Location OF DAT_ISR : LABEL IS "[IntrContainer=(0)][IntrId=(2)]";
     ATTRIBUTE Location OF ADDR_ISR : LABEL IS "[IntrContainer=(0)][IntrId=(0)]";
     ATTRIBUTE Location OF COR_ISR : LABEL IS "[IntrContainer=(0)][IntrId=(1)]";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:genblk1:MdcSync\ : LABEL IS "U(3,0)";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:genblk1:MdioSync\ : LABEL IS "U(2,0)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:genblk1:MdcSync\ : LABEL IS "U(0,3)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:genblk1:MdioSync\ : LABEL IS "U(3,1)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:CtlReg\ : LABEL IS "controlcell2";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:CtlReg\ : LABEL IS "U(0,1)";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:BitCounter\ : LABEL IS "U(1,2)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:CtlReg\ : LABEL IS "U(0,2)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:BitCounter\ : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:Advanced:CfgReg\ : LABEL IS "controlcell3";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:Advanced:CfgReg\ : LABEL IS "U(1,3)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:Advanced:CfgReg\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:Advanced:DataWidthCfg\ : LABEL IS "controlcell4";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:Advanced:DataWidthCfg\ : LABEL IS "U(2,4)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:Advanced:DataWidthCfg\ : LABEL IS "U(1,2)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:Advanced:MemTypeCfg\ : LABEL IS "controlcell5";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:Advanced:MemTypeCfg\ : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:Advanced:MemTypeCfg\ : LABEL IS "U(3,5)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:Advanced:FwDmaStatus\ : LABEL IS "statuscell2";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:Advanced:FwDmaStatus\ : LABEL IS "U(1,1)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:Advanced:FwDmaStatus\ : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:Advanced:AddrComp:u0\ : LABEL IS "datapathcell5";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:Advanced:AddrComp:u0\ : LABEL IS "U(0,2)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:Advanced:AddrComp:u0\ : LABEL IS "U(2,3)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:Advanced:AddrComp:u1\ : LABEL IS "datapathcell6";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:Advanced:AddrComp:u1\ : LABEL IS "U(0,3)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:Advanced:AddrComp:u1\ : LABEL IS "U(3,3)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:Advanced:AddrCalc:u0\ : LABEL IS "datapathcell7";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:Advanced:AddrCalc:u0\ : LABEL IS "U(3,3)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:Advanced:AddrCalc:u0\ : LABEL IS "U(0,2)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:Advanced:AddrCalc:u1\ : LABEL IS "datapathcell8";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:Advanced:AddrCalc:u1\ : LABEL IS "U(3,2)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:Advanced:AddrCalc:u1\ : LABEL IS "U(0,3)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:Advanced:FwAlu:u0\ : LABEL IS "datapathcell9";
     ATTRIBUTE Location OF \MDIO_Interface:bMDIO:Advanced:FwAlu:u0\ : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:Advanced:FwAlu:u1\ : LABEL IS "datapathcell10";
     ATTRIBUTE Location OF \MDIO_Interface:bMDIO:Advanced:FwAlu:u1\ : LABEL IS "U(1,2)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:MdioDp:u0\ : LABEL IS "datapathcell11";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:MdioDp:u0\ : LABEL IS "U(1,1)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:MdioDp:u0\ : LABEL IS "U(0,0)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:MdioDp:u1\ : LABEL IS "datapathcell12";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:MdioDp:u1\ : LABEL IS "U(0,1)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:MdioDp:u1\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \MDIO_Interface:AddrDMA\ : LABEL IS "drqcell1";
     ATTRIBUTE Location OF \MDIO_Interface:AddrDMA\ : LABEL IS "[DrqContainer=(0)][DrqId=(0)]";
     ATTRIBUTE lib_model OF \MDIO_Interface:InfoDMA\ : LABEL IS "drqcell2";
@@ -553,148 +556,146 @@ ARCHITECTURE __DEFAULT__ OF cfp_reader IS
     ATTRIBUTE Location OF \MDIO_Interface:FwDMA1\ : LABEL IS "[DrqContainer=(0)][DrqId=(4)]";
     ATTRIBUTE lib_model OF \MDIO_Interface:FwDMA2\ : LABEL IS "drqcell10";
     ATTRIBUTE Location OF \MDIO_Interface:FwDMA2\ : LABEL IS "[DrqContainer=(0)][DrqId=(5)]";
-    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:runmode_enable\ : LABEL IS "macrocell9";
-    ATTRIBUTE Location OF \PWM_1:PWMUDB:runmode_enable\ : LABEL IS "U(2,5)";
-    ATTRIBUTE lib_model OF Net_1881 : LABEL IS "macrocell10";
-    ATTRIBUTE Location OF Net_1881 : LABEL IS "U(2,5)";
-    ATTRIBUTE lib_model OF Net_2086 : LABEL IS "macrocell11";
-    ATTRIBUTE Location OF Net_2086 : LABEL IS "U(3,1)";
-    ATTRIBUTE lib_model OF Net_2069 : LABEL IS "macrocell12";
-    ATTRIBUTE Location OF Net_2069 : LABEL IS "U(3,5)";
-    ATTRIBUTE lib_model OF \MDIO_host_2:cfg_1_split\ : LABEL IS "macrocell13";
-    ATTRIBUTE Location OF \MDIO_host_2:cfg_1_split\ : LABEL IS "U(3,5)";
+    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:runmode_enable\ : LABEL IS "macrocell10";
+    ATTRIBUTE Location OF \PWM_1:PWMUDB:runmode_enable\ : LABEL IS "U(3,2)";
+    ATTRIBUTE lib_model OF Net_1881 : LABEL IS "macrocell11";
+    ATTRIBUTE Location OF Net_1881 : LABEL IS "U(3,2)";
+    ATTRIBUTE lib_model OF Net_2086 : LABEL IS "macrocell12";
+    ATTRIBUTE Location OF Net_2086 : LABEL IS "U(2,0)";
+    ATTRIBUTE lib_model OF Net_2069 : LABEL IS "macrocell13";
+    ATTRIBUTE Location OF Net_2069 : LABEL IS "U(2,0)";
+    ATTRIBUTE lib_model OF \MDIO_host_2:cfg_1_split\ : LABEL IS "macrocell14";
+    ATTRIBUTE Location OF \MDIO_host_2:cfg_1_split\ : LABEL IS "U(2,4)";
     ATTRIBUTE lib_model OF Dedicated_Output : LABEL IS "iocell20";
     ATTRIBUTE Location OF Dedicated_Output : LABEL IS "P3[7]";
-    ATTRIBUTE lib_model OF Net_1882 : LABEL IS "macrocell14";
-    ATTRIBUTE Location OF Net_1882 : LABEL IS "U(2,5)";
-    ATTRIBUTE lib_model OF \MDIO_host_2:State_2\ : LABEL IS "macrocell15";
-    ATTRIBUTE Location OF \MDIO_host_2:State_2\ : LABEL IS "U(3,1)";
-    ATTRIBUTE lib_model OF \MDIO_host_2:State_1\ : LABEL IS "macrocell16";
-    ATTRIBUTE Location OF \MDIO_host_2:State_1\ : LABEL IS "U(3,1)";
-    ATTRIBUTE lib_model OF \MDIO_host_2:State_0\ : LABEL IS "macrocell17";
-    ATTRIBUTE Location OF \MDIO_host_2:State_0\ : LABEL IS "U(3,1)";
-    ATTRIBUTE lib_model OF \MDIO_host_2:cfg_2\ : LABEL IS "macrocell18";
-    ATTRIBUTE Location OF \MDIO_host_2:cfg_2\ : LABEL IS "U(3,4)";
-    ATTRIBUTE lib_model OF \MDIO_host_2:cfg_1\ : LABEL IS "macrocell19";
-    ATTRIBUTE Location OF \MDIO_host_2:cfg_1\ : LABEL IS "U(3,4)";
-    ATTRIBUTE lib_model OF \MDIO_host_2:cfg_0\ : LABEL IS "macrocell20";
-    ATTRIBUTE Location OF \MDIO_host_2:cfg_0\ : LABEL IS "U(3,3)";
-    ATTRIBUTE lib_model OF \MDIO_host_2:f1_load\ : LABEL IS "macrocell21";
-    ATTRIBUTE Location OF \MDIO_host_2:f1_load\ : LABEL IS "U(3,4)";
+    ATTRIBUTE lib_model OF Net_1882 : LABEL IS "macrocell15";
+    ATTRIBUTE Location OF Net_1882 : LABEL IS "U(3,2)";
+    ATTRIBUTE lib_model OF \MDIO_host_2:State_2\ : LABEL IS "macrocell16";
+    ATTRIBUTE Location OF \MDIO_host_2:State_2\ : LABEL IS "U(3,5)";
+    ATTRIBUTE lib_model OF \MDIO_host_2:State_1\ : LABEL IS "macrocell17";
+    ATTRIBUTE Location OF \MDIO_host_2:State_1\ : LABEL IS "U(3,0)";
+    ATTRIBUTE lib_model OF \MDIO_host_2:State_0\ : LABEL IS "macrocell18";
+    ATTRIBUTE Location OF \MDIO_host_2:State_0\ : LABEL IS "U(3,0)";
+    ATTRIBUTE lib_model OF \MDIO_host_2:cfg_2\ : LABEL IS "macrocell19";
+    ATTRIBUTE Location OF \MDIO_host_2:cfg_2\ : LABEL IS "U(3,5)";
+    ATTRIBUTE lib_model OF \MDIO_host_2:cfg_1\ : LABEL IS "macrocell20";
+    ATTRIBUTE Location OF \MDIO_host_2:cfg_1\ : LABEL IS "U(2,4)";
+    ATTRIBUTE lib_model OF \MDIO_host_2:cfg_0\ : LABEL IS "macrocell21";
+    ATTRIBUTE Location OF \MDIO_host_2:cfg_0\ : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF Net_1950 : LABEL IS "macrocell22";
-    ATTRIBUTE Location OF Net_1950 : LABEL IS "U(0,3)";
+    ATTRIBUTE Location OF Net_1950 : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF Net_1951 : LABEL IS "macrocell23";
-    ATTRIBUTE Location OF Net_1951 : LABEL IS "U(2,3)";
+    ATTRIBUTE Location OF Net_1951 : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF Net_1952 : LABEL IS "macrocell24";
-    ATTRIBUTE Location OF Net_1952 : LABEL IS "U(0,3)";
+    ATTRIBUTE Location OF Net_1952 : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:mdio_reg\ : LABEL IS "macrocell25";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:mdio_reg\ : LABEL IS "U(3,0)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:mdio_reg\ : LABEL IS "U(3,3)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:mdio_enable\ : LABEL IS "macrocell26";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:mdio_enable\ : LABEL IS "U(0,1)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:mdio_enable\ : LABEL IS "U(0,2)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:start_detect\ : LABEL IS "macrocell27";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:start_detect\ : LABEL IS "U(1,1)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:start_detect\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \MDIO_Interface:rd_dma\ : LABEL IS "macrocell28";
-    ATTRIBUTE Location OF \MDIO_Interface:rd_dma\ : LABEL IS "U(1,1)";
+    ATTRIBUTE Location OF \MDIO_Interface:rd_dma\ : LABEL IS "U(0,3)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:mdc_dly\ : LABEL IS "macrocell29";
     ATTRIBUTE Location OF \MDIO_Interface:bMDIO:mdc_dly\ : LABEL IS "U(0,2)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:opcode_1\ : LABEL IS "macrocell30";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:opcode_1\ : LABEL IS "U(1,2)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:opcode_1\ : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:opcode_0\ : LABEL IS "macrocell31";
     ATTRIBUTE Location OF \MDIO_Interface:bMDIO:opcode_0\ : LABEL IS "U(1,2)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:ta_bits\ : LABEL IS "macrocell32";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:ta_bits\ : LABEL IS "U(1,2)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:ta_bits\ : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:addr_match\ : LABEL IS "macrocell33";
     ATTRIBUTE Location OF \MDIO_Interface:bMDIO:addr_match\ : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:addr_match_dly\ : LABEL IS "macrocell34";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:addr_match_dly\ : LABEL IS "U(1,1)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:addr_match_dly\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:op_write\ : LABEL IS "macrocell35";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:op_write\ : LABEL IS "U(1,2)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:op_write\ : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:op_address\ : LABEL IS "macrocell36";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:op_address\ : LABEL IS "U(2,3)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:op_address\ : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:op_pos_read\ : LABEL IS "macrocell37";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:op_pos_read\ : LABEL IS "U(2,3)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:op_pos_read\ : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:cor_reg\ : LABEL IS "macrocell38";
     ATTRIBUTE Location OF \MDIO_Interface:bMDIO:cor_reg\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:capture\ : LABEL IS "macrocell39";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:capture\ : LABEL IS "U(1,0)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:capture\ : LABEL IS "U(2,0)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:fp_state_2\ : LABEL IS "macrocell40";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:fp_state_2\ : LABEL IS "U(0,0)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:fp_state_2\ : LABEL IS "U(0,2)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:fp_state_1\ : LABEL IS "macrocell41";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:fp_state_1\ : LABEL IS "U(1,1)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:fp_state_1\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:is_sram\ : LABEL IS "macrocell42";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:is_sram\ : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:is_sram\ : LABEL IS "U(3,5)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:addr_is_valid\ : LABEL IS "macrocell43";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:addr_is_valid\ : LABEL IS "U(2,0)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:addr_is_valid\ : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:is_page_en\ : LABEL IS "macrocell44";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:is_page_en\ : LABEL IS "U(2,1)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:is_page_en\ : LABEL IS "U(3,4)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:keep_high\ : LABEL IS "macrocell45";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:keep_high\ : LABEL IS "U(1,3)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:keep_high\ : LABEL IS "U(2,0)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:cfp_addr\ : LABEL IS "macrocell46";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:cfp_addr\ : LABEL IS "U(1,3)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:cfp_addr\ : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF \MDIO_Interface:mdio_o\ : LABEL IS "macrocell47";
-    ATTRIBUTE Location OF \MDIO_Interface:mdio_o\ : LABEL IS "U(1,2)";
+    ATTRIBUTE Location OF \MDIO_Interface:mdio_o\ : LABEL IS "U(2,1)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:fp_state_0\ : LABEL IS "macrocell48";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:fp_state_0\ : LABEL IS "U(0,0)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:fp_state_0\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:addr_in_range\ : LABEL IS "macrocell49";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:addr_in_range\ : LABEL IS "U(0,3)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:addr_in_range\ : LABEL IS "U(3,3)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:rs_count_2\ : LABEL IS "macrocell50";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:rs_count_2\ : LABEL IS "U(3,0)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:rs_count_2\ : LABEL IS "U(2,5)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:rs_count_1\ : LABEL IS "macrocell51";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:rs_count_1\ : LABEL IS "U(3,0)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:rs_count_1\ : LABEL IS "U(2,5)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:rs_count_0\ : LABEL IS "macrocell52";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:rs_count_0\ : LABEL IS "U(1,0)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:rs_count_0\ : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:rs_state_2\ : LABEL IS "macrocell53";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:rs_state_2\ : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:rs_state_2\ : LABEL IS "U(2,1)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:rs_state_1\ : LABEL IS "macrocell54";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:rs_state_1\ : LABEL IS "U(1,0)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:rs_state_1\ : LABEL IS "U(2,1)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:rs_state_0\ : LABEL IS "macrocell55";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:rs_state_0\ : LABEL IS "U(2,3)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:rs_state_0\ : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:rs_load\ : LABEL IS "macrocell56";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:rs_load\ : LABEL IS "U(2,0)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:rs_load\ : LABEL IS "U(2,5)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:rs_update\ : LABEL IS "macrocell57";
     ATTRIBUTE Location OF \MDIO_Interface:bMDIO:rs_update\ : LABEL IS "U(2,3)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:next_page\ : LABEL IS "macrocell58";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:next_page\ : LABEL IS "U(1,3)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:next_page\ : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:is_16bit\ : LABEL IS "macrocell59";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:is_16bit\ : LABEL IS "U(2,4)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:is_16bit\ : LABEL IS "U(1,2)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:current_page_2\ : LABEL IS "macrocell60";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:current_page_2\ : LABEL IS "U(3,3)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:current_page_2\ : LABEL IS "U(2,3)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:current_page_1\ : LABEL IS "macrocell61";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:current_page_1\ : LABEL IS "U(3,3)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:current_page_1\ : LABEL IS "U(2,5)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:current_page_0\ : LABEL IS "macrocell62";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:current_page_0\ : LABEL IS "U(3,0)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:current_page_0\ : LABEL IS "U(2,3)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:sample_carry\ : LABEL IS "macrocell63";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:sample_carry\ : LABEL IS "U(3,2)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:sample_carry\ : LABEL IS "U(0,0)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:ba_state_2\ : LABEL IS "macrocell64";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:ba_state_2\ : LABEL IS "U(2,0)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:ba_state_2\ : LABEL IS "U(3,2)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:ba_state_1\ : LABEL IS "macrocell65";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:ba_state_1\ : LABEL IS "U(2,4)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:ba_state_1\ : LABEL IS "U(2,3)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:ba_state_0\ : LABEL IS "macrocell66";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:ba_state_0\ : LABEL IS "U(2,1)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:ba_state_0\ : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:carry\ : LABEL IS "macrocell67";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:carry\ : LABEL IS "U(3,4)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:carry\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:cfg_done\ : LABEL IS "macrocell68";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:cfg_done\ : LABEL IS "U(3,2)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:cfg_done\ : LABEL IS "U(3,1)";
     ATTRIBUTE lib_model OF \MDIO_Interface:addr_dma\ : LABEL IS "macrocell69";
-    ATTRIBUTE Location OF \MDIO_Interface:addr_dma\ : LABEL IS "U(2,4)";
+    ATTRIBUTE Location OF \MDIO_Interface:addr_dma\ : LABEL IS "U(3,2)";
     ATTRIBUTE lib_model OF \MDIO_Interface:info_dma\ : LABEL IS "macrocell70";
-    ATTRIBUTE Location OF \MDIO_Interface:info_dma\ : LABEL IS "U(2,5)";
+    ATTRIBUTE Location OF \MDIO_Interface:info_dma\ : LABEL IS "U(2,3)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:ba_state_3\ : LABEL IS "macrocell71";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:ba_state_3\ : LABEL IS "U(3,2)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:ba_state_3\ : LABEL IS "U(3,1)";
     ATTRIBUTE lib_model OF \MDIO_Interface:cfg_dma\ : LABEL IS "macrocell72";
-    ATTRIBUTE Location OF \MDIO_Interface:cfg_dma\ : LABEL IS "U(2,5)";
+    ATTRIBUTE Location OF \MDIO_Interface:cfg_dma\ : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:fw_state_1\ : LABEL IS "macrocell73";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:fw_state_1\ : LABEL IS "U(1,2)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:fw_state_1\ : LABEL IS "U(2,1)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:fw_state_0\ : LABEL IS "macrocell74";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:fw_state_0\ : LABEL IS "U(1,3)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:fw_state_0\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \MDIO_Interface:fw_dma1\ : LABEL IS "macrocell75";
-    ATTRIBUTE Location OF \MDIO_Interface:fw_dma1\ : LABEL IS "U(1,3)";
+    ATTRIBUTE Location OF \MDIO_Interface:fw_dma1\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:fw_req\ : LABEL IS "macrocell76";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:fw_req\ : LABEL IS "U(1,0)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:fw_req\ : LABEL IS "U(0,0)";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:fw_req_dly\ : LABEL IS "macrocell77";
-    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:fw_req_dly\ : LABEL IS "U(1,3)";
+    ATTRIBUTE Location OF \MDIO_Interface:bMDIO:fw_req_dly\ : LABEL IS "U(0,0)";
     ATTRIBUTE lib_model OF \MDIO_Interface:fw_dma2\ : LABEL IS "macrocell78";
-    ATTRIBUTE Location OF \MDIO_Interface:fw_dma2\ : LABEL IS "U(1,2)";
+    ATTRIBUTE Location OF \MDIO_Interface:fw_dma2\ : LABEL IS "U(0,1)";
     COMPONENT abufcell
     END COMPONENT;
     COMPONENT clockblockcell
@@ -2443,6 +2444,22 @@ BEGIN
             main_1 => \MDIO_host_2:State_1\,
             main_2 => \MDIO_host_2:State_0\);
 
+    Net_2054:macrocell
+        GENERIC MAP(
+            soft => 1,
+            eqn_main => "(!main_0 * !main_1) + (!main_0 * !main_2) + (!main_0 * !main_3 * !main_4 * !main_5 * !main_6)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_2054,
+            main_0 => \MDIO_host_2:counter_6\,
+            main_1 => \MDIO_host_2:counter_5\,
+            main_2 => \MDIO_host_2:counter_4\,
+            main_3 => \MDIO_host_2:counter_3\,
+            main_4 => \MDIO_host_2:counter_2\,
+            main_5 => \MDIO_host_2:counter_1\,
+            main_6 => \MDIO_host_2:counter_0\);
+
     Net_1924:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * main_2)",
@@ -2706,7 +2723,7 @@ BEGIN
             count_2 => \MDIO_host_2:counter_2\,
             count_1 => \MDIO_host_2:counter_1\,
             count_0 => \MDIO_host_2:counter_0\,
-            tc => Net_2054);
+            tc => \MDIO_host_2:tc\);
 
     \MDIO_host_2:cntrl16:u0\:datapathcell
         GENERIC MAP(
@@ -2741,7 +2758,6 @@ BEGIN
             cs_addr_1 => \MDIO_host_2:cfg_1\,
             cs_addr_0 => \MDIO_host_2:cfg_0\,
             route_si => Net_2071,
-            f1_load => \MDIO_host_2:f1_load\,
             busclk => ClockBlock_BUS_CLK,
             ce0 => \MDIO_host_2:cntrl16:u0.ce0__sig\,
             cl0 => \MDIO_host_2:cntrl16:u0.cl0__sig\,
@@ -2790,7 +2806,6 @@ BEGIN
             cs_addr_1 => \MDIO_host_2:cfg_1\,
             cs_addr_0 => \MDIO_host_2:cfg_0\,
             route_si => Net_2071,
-            f1_load => \MDIO_host_2:f1_load\,
             so_comb => \MDIO_host_2:so\,
             f0_bus_stat_comb => \MDIO_host_2:status_val_0\,
             f0_blk_stat_comb => \MDIO_host_2:f0_blk_stat\,
@@ -3532,13 +3547,13 @@ BEGIN
 
     \MDIO_host_2:cfg_1_split\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * !main_10) + (!main_0 * !main_2 * !main_11) + (!main_0 * main_2 * !main_3 * main_4 * !main_5 * !main_6 * !main_7 * !main_8) + (!main_0 * main_2 * main_9) + (main_0 * !main_1 * !main_3 * main_4 * !main_5 * !main_6 * !main_7 * !main_8 * !main_9) + (main_0 * main_1 * !main_2) + (main_0 * main_1 * main_10) + (main_0 * main_1 * !main_11)",
+            eqn_main => "(!main_0 * main_1 * main_10) + (!main_0 * main_2) + (main_0 * main_1 * !main_10) + (!main_1 * !main_2 * !main_11) + (main_1 * main_2) + (main_1 * !main_3 * main_4 * !main_5 * !main_6 * !main_7 * !main_8 * !main_9) + (main_2 * !main_3 * main_4 * !main_5 * !main_6 * !main_7 * !main_8 * !main_9)",
             regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => \MDIO_host_2:cfg_1_split\,
-            main_0 => \MDIO_host_2:State_2\,
-            main_1 => \MDIO_host_2:State_1\,
+            main_0 => Net_2069,
+            main_1 => \MDIO_host_2:State_2\,
             main_2 => \MDIO_host_2:State_0\,
             main_3 => \MDIO_host_2:counter_6\,
             main_4 => \MDIO_host_2:counter_5\,
@@ -3547,7 +3562,7 @@ BEGIN
             main_7 => \MDIO_host_2:counter_2\,
             main_8 => \MDIO_host_2:counter_1\,
             main_9 => \MDIO_host_2:counter_0\,
-            main_10 => \MDIO_host_2:f0_blk_stat\,
+            main_10 => Net_2054,
             main_11 => \MDIO_host_2:cfg_1\);
 
     Dedicated_Output:iocell
@@ -3590,7 +3605,7 @@ BEGIN
             main_1 => \MDIO_host_2:State_1\,
             main_2 => \MDIO_host_2:State_0\,
             main_3 => \MDIO_host_2:control_0\,
-            main_4 => Net_2054);
+            main_4 => \MDIO_host_2:tc\);
 
     \MDIO_host_2:State_1\:macrocell
         GENERIC MAP(
@@ -3605,7 +3620,7 @@ BEGIN
             main_1 => \MDIO_host_2:State_1\,
             main_2 => \MDIO_host_2:State_0\,
             main_3 => \MDIO_host_2:control_0\,
-            main_4 => Net_2054);
+            main_4 => \MDIO_host_2:tc\);
 
     \MDIO_host_2:State_0\:macrocell
         GENERIC MAP(
@@ -3620,12 +3635,12 @@ BEGIN
             main_1 => \MDIO_host_2:State_1\,
             main_2 => \MDIO_host_2:State_0\,
             main_3 => \MDIO_host_2:control_0\,
-            main_4 => Net_2054,
+            main_4 => \MDIO_host_2:tc\,
             main_5 => \MDIO_host_2:f0_blk_stat\);
 
     \MDIO_host_2:cfg_2\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * main_1 * !main_2 * main_4) + (!main_0 * !main_2 * main_3 * main_4) + (main_0 * main_1 * main_2 * !main_3 * main_4)",
+            eqn_main => "(!main_0 * main_1 * !main_2 * main_3)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
@@ -3635,27 +3650,24 @@ BEGIN
             main_0 => \MDIO_host_2:State_2\,
             main_1 => \MDIO_host_2:State_1\,
             main_2 => \MDIO_host_2:State_0\,
-            main_3 => \MDIO_host_2:f0_blk_stat\,
-            main_4 => \MDIO_host_2:cfg_2\);
+            main_3 => \MDIO_host_2:cfg_2\);
 
     \MDIO_host_2:cfg_1\:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0 * main_1 * !main_2) + (!main_2 * main_3) + (main_4)",
+            eqn_main => "(!main_0 * main_1 * !main_2) + (main_0 * !main_1 * !main_2)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
             q => \MDIO_host_2:cfg_1\,
             clock_0 => Net_2056,
-            main_0 => Net_2069,
-            main_1 => \MDIO_host_2:State_2\,
-            main_2 => \MDIO_host_2:State_1\,
-            main_3 => \MDIO_host_2:State_0\,
-            main_4 => \MDIO_host_2:cfg_1_split\);
+            main_0 => \MDIO_host_2:State_2\,
+            main_1 => \MDIO_host_2:State_1\,
+            main_2 => \MDIO_host_2:cfg_1_split\);
 
     \MDIO_host_2:cfg_0\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * !main_2 * !main_10) + (!main_0 * main_1 * main_2 * !main_3 * main_4 * !main_5 * !main_6 * !main_7 * !main_8 * !main_9) + (!main_0 * !main_2 * main_11) + (main_0 * !main_1 * !main_2 * !main_3 * main_4 * !main_5 * !main_6 * !main_7 * !main_8 * !main_9) + (main_0 * main_1 * main_2 * !main_10 * main_11)",
+            eqn_main => "(!main_0 * !main_1 * !main_2 * !main_10) + (!main_0 * main_1 * !main_2 * main_11) + (!main_0 * main_1 * main_2 * !main_3 * main_4 * !main_5 * !main_6 * !main_7 * !main_8 * !main_9) + (main_0 * !main_1 * !main_2 * !main_3 * main_4 * !main_5 * !main_6 * !main_7 * !main_8 * !main_9)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
@@ -3674,21 +3686,6 @@ BEGIN
             main_9 => \MDIO_host_2:counter_0\,
             main_10 => \MDIO_host_2:f0_blk_stat\,
             main_11 => \MDIO_host_2:cfg_0\);
-
-    \MDIO_host_2:f1_load\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * !main_1 * main_2 * main_3 * !main_4)",
-            regmode => 2,
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => \MDIO_host_2:f1_load\,
-            clock_0 => Net_2056,
-            main_0 => Net_2069,
-            main_1 => \MDIO_host_2:State_2\,
-            main_2 => \MDIO_host_2:State_1\,
-            main_3 => \MDIO_host_2:State_0\,
-            main_4 => \MDIO_host_2:f1_load\);
 
     Net_1950:macrocell
         GENERIC MAP(
