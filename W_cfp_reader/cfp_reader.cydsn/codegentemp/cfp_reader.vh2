@@ -2,7 +2,7 @@
 --	Conversion of cfp_reader.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Feb 06 15:38:37 2017
+--	Mon Feb 13 15:48:45 2017
 --
 
 USE cypress.cypress.all;
@@ -832,7 +832,7 @@ SIGNAL \MDIO_host_2:tc\ : bit;
 SIGNAL Net_2054 : bit;
 ATTRIBUTE soft of Net_2054:SIGNAL IS '1';
 SIGNAL \MDIO_host_2:cmp_vv_vv_MODGEN_1\ : bit;
-SIGNAL Net_1924 : bit;
+SIGNAL Net_2098 : bit;
 SIGNAL \MDIO_host_2:f0_blk_stat\ : bit;
 SIGNAL \MDIO_host_2:cfg_2\ : bit;
 SIGNAL \MDIO_host_2:cfg_1\ : bit;
@@ -1022,6 +1022,7 @@ SIGNAL tmpOE__Debug_MDIO_1_net_0 : bit;
 SIGNAL tmpFB_0__Debug_MDIO_1_net_0 : bit;
 SIGNAL tmpIO_0__Debug_MDIO_1_net_0 : bit;
 TERMINAL tmpSIOVREF__Debug_MDIO_1_net_0 : bit;
+TERMINAL Net_2099 : bit;
 SIGNAL tmpINTERRUPT_0__Debug_MDIO_1_net_0 : bit;
 SIGNAL tmpOE__Debug_MDIO_net_0 : bit;
 SIGNAL tmpFB_0__Debug_MDIO_net_0 : bit;
@@ -1910,7 +1911,7 @@ Net_2054 <= ((not \MDIO_host_2:counter_6\ and not \MDIO_host_2:counter_3\ and no
 	OR (not \MDIO_host_2:counter_6\ and not \MDIO_host_2:counter_4\)
 	OR (not \MDIO_host_2:counter_6\ and not \MDIO_host_2:counter_5\));
 
-Net_1924 <= ((\MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\));
+Net_2098 <= ((\MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\));
 
 \MDIO_host_2:State_2\\D\ <= ((not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and \MDIO_host_2:State_2\)
 	OR (not \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:control_0\ and \MDIO_host_2:tc\)
@@ -3296,7 +3297,7 @@ PWR_1:cy_annotation_universal_v1_0
 ISR:cy_isr_v1_0
 	GENERIC MAP(int_type=>"00",
 		is_nmi=>'0')
-	PORT MAP(int_signal=>Net_1924);
+	PORT MAP(int_signal=>Net_2098);
 Debug_MDIO_1:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"8784ae01-7af6-4a97-a63a-ad0f860e1064",
 		drive_mode=>"110",
@@ -3314,7 +3315,7 @@ Debug_MDIO_1:cy_psoc3_pins_v1_10
 		invert_out_reset=>'0',
 		io_voltage=>"",
 		layout_mode=>"CONTIGUOUS",
-		output_conn=>"1",
+		output_conn=>"0",
 		output_sync=>"0",
 		output_clk_en=>'0',
 		output_mode=>"0",
@@ -3342,7 +3343,7 @@ Debug_MDIO_1:cy_psoc3_pins_v1_10
 		width=>1,
 		port_alias_required=>'0',
 		port_alias_group=>"",
-		use_annotation=>"0",
+		use_annotation=>"1",
 		pa_in_clock=>-1,
 		pa_in_clock_en=>-1,
 		pa_in_reset=>-1,
@@ -3354,12 +3355,12 @@ Debug_MDIO_1:cy_psoc3_pins_v1_10
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__VRef_1V2_net_0),
-		y=>Net_1924,
+		y=>(zero),
 		fb=>(tmpFB_0__Debug_MDIO_1_net_0),
 		analog=>(open),
 		io=>(tmpIO_0__Debug_MDIO_1_net_0),
 		siovref=>(tmpSIOVREF__Debug_MDIO_1_net_0),
-		annotation=>(open),
+		annotation=>Net_2099,
 		in_clock=>zero,
 		in_clock_en=>tmpOE__VRef_1V2_net_0,
 		in_reset=>zero,

@@ -310,9 +310,41 @@ uint8 MDIO_host_2_ReadDataC45(uint8 phy_addr, uint8 dev_addr, uint16 *regData) /
 	while( !MDIO_host_2_StatusRegister );
     
    /* Get Data from FIFO f1 */
-    LED_3_Write(1);
+    //LED_3_Write(1);
 	*regData = CY_GET_REG16(MDIO_host_2_A0_PTR);
-	LED_3_Write(0);
+	//LED_3_Write(0);
+    /* Clear hardware status register */
+	status_reg = MDIO_host_2_STATUS_REG;
+	return ((status_reg)? 0 : 1);
+    
+}
+/*******************************************************************************
+*
+* MDIO_host_2_PosReadData_C45()
+*
+*******************************************************************************/
+uint8 MDIO_host_2_PosReadDataC45(uint8 phy_addr, uint8 dev_addr, uint16 *regData) // Post Read Inc Add 
+{
+   	uint16	control_bits;
+	uint8 status_reg;
+
+	/* Clear and Set the control register for reading */
+	MDIO_host_2_CONTROL_REG = MDIO_host_2_READ;
+	
+   	/* Set the control bits and write in the fifo f0 */
+   	control_bits = 0x0002+((uint16)2<<12)+(((uint16)phy_addr)<<7)+(((uint16)dev_addr)<<2);
+   	MDIO_host_2_FIFO_F0_REG = control_bits;
+    MDIO_host_2_FIFO_F0_REG = 0xFFFF;
+    
+    /* Wait till the transmission is completed */
+    MDIO_host_2_StatusRegister=0u;
+    
+	while( !MDIO_host_2_StatusRegister );
+    
+   /* Get Data from FIFO f1 */
+   // LED_3_Write(1);
+	*regData = CY_GET_REG16(MDIO_host_2_A0_PTR);
+	//LED_3_Write(0);
     /* Clear hardware status register */
 	status_reg = MDIO_host_2_STATUS_REG;
 	return ((status_reg)? 0 : 1);

@@ -17,10 +17,11 @@
 /* Firmware Constants */
 #define SPECIAL_COR_REGISTER    0xA000  /* Special COR Register address */
 #define SPECIAL_COR_MODIFIER    0xA200  /* Special address to modify the COR Register */
-#define BASE_MDIO_ADDRESS       0x8201  /* Start address for the incremental address variable */
+#define BASE_MDIO_ADDRESS       0x8000  /* Start address for the incremental address variable */
 #define MAX_MDIO_ADDRESS        0xA500  /* Maximum address supported in this firmware */
 #define INC_ADDRESS             0x0100  /* Incremental value for the adddress */
 #define RANDOM_CONST            0xDEAD  /* Random value to generate write/read data */
+//#define RANDOM_CONST            0x1  /* Random value to generate write/read data */
 #define ENABLE_MDIO             0x20    /* Enable bit for the MDIO Component */
 
 
@@ -37,6 +38,8 @@ volatile uint8 dataFlag = 0;           /* Internal data flag for ISR*/
 volatile uint8 corFlag = 0;            /* Internal COR flag for ISR */
 static   uint8 status = 0;                 /* Status of API calls */
 
+uint16 cur_psw[2];//,read_MDIO[133];
+
 /* MDIO Host Variables */
 uint16 HostAddress    = BASE_MDIO_ADDRESS;    /* Address data for the MDIO frames */
 uint16 HostData       = 0x0000;               /* Read data for the MDIO frames */
@@ -52,10 +55,13 @@ uint16 HostData       = 0x0000;               /* Read data for the MDIO frames *
 //static   uint16 myCounter = 0;          /* Global counter incremented in main loop */
 //static   uint8  myState = STATE_READ;  /* State variable. Default state is WRITE */
 /* Device Address of MDIO Interface (constant) */
-static const uint8  MdioDevAddr = 0x01; //PMA/PMD
-static const uint8  MdioPhyAddr = 0x04;
+static uint8  MdioDevAddr = 0x01; //PMA/PMD
+static uint8  MdioPhyAddr = 0x04;
 /* Local prototypes */
 void fillUpReadOnlyRegisters(void);
+uint8_t analiz_rx_data(uint8_t *rx_buffer);
+
+
 
 /* Internal Status Register */
 extern uint8  MDIO_host_2_StatusRegister;
@@ -74,12 +80,12 @@ CY_ISR_PROTO(COR_ISR_Handler);
 int main(void)
 {
     CYBIT  first_enter = 0;
-    CYBIT test=0;
+    //CYBIT test=0;
     
     CyGlobalIntEnable; /* Enable global interrupts. */
 
-    uint16 count;
-    uint8 buffer[USBUART_BUFFER_SIZE], strk[10];
+    uint16 count=0,count_rx=0;
+    uint8 buffer[USBUART_BUFFER_SIZE];//, strk[10];
     
 
     uint8 state;
@@ -113,7 +119,7 @@ int main(void)
     /* Start MDIO Components */
    MDIO_Interface_Start();
   /* Set read only registers */
-  fillUpReadOnlyRegisters();
+     fillUpReadOnlyRegisters();
 
     /* Start ISRs */
     DAT_ISR_StartEx (DAT_ISR_Handler);
@@ -131,21 +137,21 @@ int main(void)
     
     for(;;)
     {
-        /* Get the data from the current address */
+         /* Get data from current address */
         status = MDIO_Interface_GetData(myAddress, &myData, 1);
     
         if (status)
         {   /* Invalid data or address not supported */
             myData = 0x0000;
-        }  
-        
-        
+        }     
+    
         /* Print info on LCD [REG: XXXX] */
         LCD_Position(1,2);
         LCD_PrintInt16(myData);     
     
         /* Print info about access type [T:(XXX)] */
         LCD_Position(0,11);
+        
         
         /* CFP NVR/Vendor NVR Register Space */
         if ((myAddress & ~(MDIO_Interface_REG_PAGE_1_SIZE-1)) == MDIO_Interface_CFP_NVR_START ||
@@ -197,47 +203,24 @@ int main(void)
                 /* Read received data and re-enable OUT endpoint. */
                 count = USBUART_1_GetAll(buffer);
 
-                if (0u != count)
+               // if (0u != count)
+                 if (count)
                 {
                     /* Wait until component is ready to send data to host. */
                     while (0u == USBUART_1_CDCIsReady())
                     {
                     }
                     
-                    /* Send data back to host. */
-   //                 USBUART_1_PutData( buffer, count);
-                    if(buffer[0] == 'a')/* Send address frame */                    
+                    count_rx += count;
+                    
+                    if(count_rx>2)
                     {
-                         USBUART_1_PutString("SET MDIO address: 0x8000\n\r");
-                        MDIO_host_2_SetAddrC45( MdioPhyAddr, MdioDevAddr, 0x8000u );
-//                        LCD_Position(0,0);
-//                        LCD_PrintString("ADR:");
-//                        LCD_PrintInt16(BASE_MDIO_ADDRESS);
+                        count_rx=0;
+                        /* Send data back to host. */
+                        analiz_rx_data(buffer);
                     }
-                    else
-                    if(buffer[0] == 'q')/* Send address frame */                    
-                    {
-                         USBUART_1_PutString("SET MDIO address: 0x8201\n\r");
-                        MDIO_host_2_SetAddrC45( MdioPhyAddr, MdioDevAddr, 0x8201u );
-//                        LCD_Position(0,0);
-//                        LCD_PrintString("ADR:");
-//                        LCD_PrintInt16(BASE_MDIO_ADDRESS);
-                    }
-                    else
-                    if(buffer[0] == 'w')/* Send address frame */                    
-                    {
-                         USBUART_1_PutString("Read MDIO:");
-                        MDIO_host_2_ReadDataC45( MdioPhyAddr, MdioDevAddr, &read_MDIO_data );
-//                        LCD_Position(1,0);
-//                        LCD_PrintString("RD: ");
-//                        LCD_PrintInt16(read_MDIO_data);
-                        sprintf((char *)strk,"0x%04X\n\r",read_MDIO_data);
-                         USBUART_1_PutString((const char *)strk);
-                    }
-                    else
-                    {
-                         USBUART_1_PutString("unknown data (only 'q', 'w' implemented)\n\r");
-                    }
+                        
+                    
                     /* If the last sent packet is exactly the maximum packet 
                     *  size, it is followed by a zero-length packet to assure
                     *  that the end of the segment is properly identified by 
@@ -261,7 +244,6 @@ int main(void)
             state = USBUART_1_IsLineChanged();
             if (0u != state)
             {
-
                 /* Output on LCD Line Control settings. */
                 if (0u != (state & USBUART_1_LINE_CONTROL_CHANGED))
                 {                   
@@ -273,24 +255,15 @@ int main(void)
                        if(!first_enter)
                         {
                           first_enter = 1;  
-                          USBUART_1_PutString("\r\nHello from Cypress!\r\n");
-                        } 
+                          USBUART_1_PutString("Hello from Cypress!");
+                          LED_3_Write(1);
+                        }
                     }
                     else    //disconnect terminal
                     {
                         first_enter = 0;
+                        LED_3_Write(0);
                     }
-                    
-//                    sprintf(lineStr,"DTR:%s,RTS:%s",  (0u != (state & USBUART_1_LINE_CONTROL_DTR)) ? "ON" : "OFF",
-//                                                      (0u != (state & USBUART_1_LINE_CONTROL_RTS)) ? "ON" : "OFF");
-//
-//                    /* Clear LCD line. */
-//                    LCD_Position(1u, 0u);
-//                    LCD_PrintString("                    ");
-//
-//                    /* Output string on LCD. */
-//                    LCD_Position(1u, 0u);
-//                    LCD_PrintString(lineStr);
                 }
             }
         }
@@ -325,56 +298,6 @@ int main(void)
         /* Print current address */
         LCD_Position(0,2);
         LCD_PrintInt16(myAddress);
-        /******* Host Handler Frames ********/
-//#if MDIO_HOST_ENABLE
-//        /* Send write frames in this state */
-//        if (myState == STATE_WRITE )
-//        {
-//            /* Send address frame */
-//            MDIO_Host_1_WriteDataC45( MDIO_Host_1_C45_ADDR, MdioPhyAddr, MdioDevAddr, HostAddress );
-//            
-//            CyDelay(1);
-//            
-//            /* Generate random data periodically */
-//            if ((myCounter % 200) == 0)
-//            {
-//                HostData = (HostData + RANDOM_CONST)*(myCounter + 1);
-//            }
-//            
-//            /* Send write frame */
-//            MDIO_Host_1_WriteDataC45(MDIO_Host_1_C45_WRITE, MdioPhyAddr, MdioDevAddr, HostData);
-//            
-//            /* Print LCD info [WR:XXXX] */
-//            LCD_Position(0,4);
-//            LCD_PrintInt16(HostAddress);
-//            LCD_PrintString(" WR:");
-//            LCD_PrintInt16(HostData);
-//            
-//        }
-//        else /* Send read frames in this state */
-//        {
-//            /* Send address frame */
-//            MDIO_Host_1_WriteDataC45(MDIO_Host_1_C45_ADDR, MdioPhyAddr, MdioDevAddr, HostAddress);
-//            
-//            CyDelay(1);
-//            
-//            /* Send read frame */
-//            MDIO_Host_1_ReadDataC45(MDIO_Host_1_C45_READ, MdioPhyAddr, MdioDevAddr, &HostData);
-//            
-//            /* Print LCD info [@:XXXX RD:XXXX]*/
-//            LCD_Position(1,4);
-//            LCD_PrintInt16(HostAddress);
-//            LCD_PrintString(" RD:");
-//            LCD_PrintInt16(HostData);
-//        }
-//        
-//#else
-//        /* Print current address */
-//        LCD_Position(0,12);
-//        LCD_PrintInt16(myAddress);
-//#endif
-        
-       // myState = !myState;
     }
 }
 
@@ -413,6 +336,143 @@ void fillUpReadOnlyRegisters(void)
         CyDelayUs(10);
     }   
 }
+/*******************************************************************************
+* Function Name: analiz_rx_data
+********************************************************************************
+* Summary:
+*  Analiz rx packet and send acknowledg
+*  
+* 
+* Parameters:
+*  None
+*
+* Return:
+*  None
+*
+********************************************************************************/
+uint8_t analiz_rx_data(uint8_t *rx_buffer)
+{
+    uint8_t tx_data[3],strk[10],tmp_byte=0;
+    uint16_t count_word =0;
+    CYBIT is_word=1;
+    
+    
+    switch(rx_buffer[0])
+    {
+        case 'D'://set MdioDevAddr
+             Debug_MDIO_1_Write(1);
+            MdioDevAddr = rx_buffer[2];
+            USBUART_1_PutString("DOK");
+             Debug_MDIO_1_Write(0);
+            break;
+        
+        case 'H'://set MdioPhyAddr
+            Debug_MDIO_1_Write(1);
+            MdioPhyAddr = rx_buffer[2];
+            USBUART_1_PutString("HOK");
+            Debug_MDIO_1_Write(0);
+            break;
+            
+        case 'A'://set addr reg
+            Debug_MDIO_1_Write(1);
+            HostAddress = (rx_buffer[1]<<8)|rx_buffer[2];
+            MDIO_host_2_SetAddrC45( MdioPhyAddr, MdioDevAddr, HostAddress );
+            USBUART_1_PutString("AOK");
+            Debug_MDIO_1_Write(0);
+            break;
+            
+        case 'W'://write one word
+            HostData = (rx_buffer[1]<<8)|rx_buffer[2];
+            MDIO_host_2_WriteDataC45(MdioPhyAddr, MdioDevAddr, HostData);
+            USBUART_1_PutString("WOK");
+             break;
+            
+        case 'R'://read one word
+                MDIO_host_2_ReadDataC45( MdioPhyAddr, MdioDevAddr, &read_MDIO_data );
+                tx_data[0]=(read_MDIO_data>>8)&0xFF;
+                tx_data[1]=(read_MDIO_data)&0xFF;
+                USBUART_1_PutData(tx_data,2);
+            break;
+            
+        case 'C'://read one word with increment
+                count_word = ((rx_buffer[1]<<8)|rx_buffer[2])+1;
+                //count_word = 132;
+            //    MDIO_host_2_SetAddrC45( MdioPhyAddr, MdioDevAddr, 0x8000 );
+                while(count_word)
+                {
+                    MDIO_host_2_PosReadDataC45( MdioPhyAddr, MdioDevAddr, &read_MDIO_data );
+                    if(is_word)
+                    {
+                        is_word = 0;
+                        tx_data[0]=(read_MDIO_data>>8)&0xFF;
+                        tx_data[1]=(read_MDIO_data)&0xFF;
+                         
+                        USBUART_1_PutData(tx_data,2);
+                        --count_word;
+                         
+                        /* Wait until component is ready to send data to PC. */
+                        while (0u == USBUART_1_CDCIsReady())
+                        {
+                        }
+                    }
+                    else
+                    {
+                        is_word = 1;
+                    }
+                    
+                     //sprintf((char *)strk,"%d 0x%04X\n\r",count_byte,read_MDIO_data);
+                     //USBUART_1_PutString((const char *)strk);
+                    
+                   
+                }
+             break;
+            
+        case 'P'://set paswd
+             break;
+            
+        default:
+            USBUART_1_PutString("RX:unknown data");
+             return 0;
+            break;
+    }
+    
+    
+    
+  
+//     if(rx_buffer[0] == 'a')/* Send address frame */                    
+//        {
+//            USBUART_1_PutString("SET MDIO address: 0x8000\n\r");
+//            MDIO_host_2_SetAddrC45( MdioPhyAddr, MdioDevAddr, 0x8000u );
+//        }
+//        else
+//        if(rx_buffer[0] == 'a')/* Send address frame */                    
+//        {
+//            USBUART_1_PutString("SET MDIO address: 0x8000\n\r");
+//            MDIO_host_2_SetAddrC45( MdioPhyAddr, MdioDevAddr, 0x8000u );
+//        }
+//        else
+//        if(rx_buffer[0] == 'q')/* Send address frame */                    
+//        {
+//            USBUART_1_PutString("SET MDIO address: 0x8201\n\r");
+//            MDIO_host_2_SetAddrC45( MdioPhyAddr, MdioDevAddr, 0x8201u );
+//        }
+//        else
+//        if(rx_buffer[0] == 'w')/* Send address frame */                    
+//        {
+//            USBUART_1_PutString("Read MDIO:");
+//            MDIO_host_2_ReadDataC45( MdioPhyAddr, MdioDevAddr, &read_MDIO_data );
+//
+//            sprintf((char *)strk,"0x%04X\n\r",read_MDIO_data);
+//            USBUART_1_PutString((const char *)strk);
+//        }
+//        else
+//        {
+//             USBUART_1_PutString("RX:unknown data");
+//        }
+               
+    return 1;
+}
+
 
 /*******************************************************************************
 * Function Name: DAT_ISR_Handler

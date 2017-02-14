@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 1
 
 
    1              		.syntax unified
@@ -30,7 +30,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
   27              		.comm	MDIO_Interface_registerPage_4,256,4
   28              		.comm	MDIO_Interface_registerPage_3,256,4
   29              		.comm	MDIO_Interface_registerPage_2,256,4
-  30              		.comm	MDIO_Interface_registerPage_1,512,4
+  30              		.global	MDIO_Interface_registerPage_1
   31              		.section	.rodata
   32              		.align	2
   33              		.type	MDIO_Interface_pageInfoPtr, %object
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
   55 0036 02       		.byte	2
   56 0037 00       		.byte	0
   57 0038 FF00     		.short	255
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 2
 
 
   58 003a 02       		.byte	2
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  112 0082 02       		.byte	2
  113 0083 00       		.byte	0
  114 0084 FF00     		.short	255
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 3
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 3
 
 
  115 0086 02       		.byte	2
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  169 00ce 02       		.byte	2
  170 00cf 00       		.byte	0
  171 00d0 FF00     		.short	255
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 4
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 4
 
 
  172 00d2 02       		.byte	2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  226 011a 02       		.byte	2
  227 011b 00       		.byte	0
  228 011c FF00     		.short	255
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 5
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 5
 
 
  229 011e 02       		.byte	2
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  283 0166 02       		.byte	2
  284 0167 00       		.byte	0
  285 0168 FF00     		.short	255
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 6
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 6
 
 
  286 016a 02       		.byte	2
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  340 01b2 02       		.byte	2
  341 01b3 00       		.byte	0
  342 01b4 FF00     		.short	255
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 7
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 7
 
 
  343 01b6 02       		.byte	2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  397 01fe 02       		.byte	2
  398 01ff 00       		.byte	0
  399 0200 FF00     		.short	255
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 8
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 8
 
 
  400 0202 02       		.byte	2
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  454 0246 02       		.byte	2
  455 0247 00       		.byte	0
  456 0248 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 9
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 9
 
 
  457 024a 02       		.byte	2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  511 0292 02       		.byte	2
  512 0293 00       		.byte	0
  513 0294 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 10
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 10
 
 
  514 0296 02       		.byte	2
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  568 02de 02       		.byte	2
  569 02df 00       		.byte	0
  570 02e0 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 11
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 11
 
 
  571 02e2 02       		.byte	2
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  625 032a 02       		.byte	2
  626 032b 00       		.byte	0
  627 032c FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 12
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 12
 
 
  628 032e 02       		.byte	2
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  682 0376 02       		.byte	2
  683 0377 00       		.byte	0
  684 0378 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 13
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 13
 
 
  685 037a 02       		.byte	2
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  739 03c2 02       		.byte	2
  740 03c3 00       		.byte	0
  741 03c4 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 14
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 14
 
 
  742 03c6 02       		.byte	2
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  796 040e 02       		.byte	2
  797 040f 00       		.byte	0
  798 0410 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 15
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 15
 
 
  799 0412 02       		.byte	2
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  853 045a 02       		.byte	2
  854 045b 00       		.byte	0
  855 045c FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 16
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 16
 
 
  856 045e 02       		.byte	2
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  910 04a6 02       		.byte	2
  911 04a7 00       		.byte	0
  912 04a8 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 17
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 17
 
 
  913 04aa 02       		.byte	2
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  967 04f2 02       		.byte	2
  968 04f3 00       		.byte	0
  969 04f4 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 18
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 18
 
 
  970 04f6 02       		.byte	2
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  1024 053e 02       		.byte	2
  1025 053f 00       		.byte	0
  1026 0540 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 19
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 19
 
 
  1027 0542 02       		.byte	2
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  1081 058a 02       		.byte	2
  1082 058b 00       		.byte	0
  1083 058c FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 20
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 20
 
 
  1084 058e 02       		.byte	2
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  1138 05d6 02       		.byte	2
  1139 05d7 00       		.byte	0
  1140 05d8 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 21
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 21
 
 
  1141 05da 02       		.byte	2
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  1195 0622 02       		.byte	2
  1196 0623 00       		.byte	0
  1197 0624 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 22
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 22
 
 
  1198 0626 02       		.byte	2
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  1244 0022 02       		.byte	2
  1245 0023 00       		.byte	0
  1246 0024 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 23
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 23
 
 
  1247 0026 02       		.byte	2
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  1301 006e 02       		.byte	2
  1302 006f 00       		.byte	0
  1303 0070 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 24
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 24
 
 
  1304 0072 02       		.byte	2
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  1358 00ba 02       		.byte	2
  1359 00bb 00       		.byte	0
  1360 00bc FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 25
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 25
 
 
  1361 00be 02       		.byte	2
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  1415 0106 02       		.byte	2
  1416 0107 00       		.byte	0
  1417 0108 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 26
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 26
 
 
  1418 010a 02       		.byte	2
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  1472 0152 02       		.byte	2
  1473 0153 00       		.byte	0
  1474 0154 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 27
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 27
 
 
  1475 0156 02       		.byte	2
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  1529 019e 02       		.byte	2
  1530 019f 00       		.byte	0
  1531 01a0 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 28
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 28
 
 
  1532 01a2 02       		.byte	2
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  1586 01ea 02       		.byte	2
  1587 01eb 00       		.byte	0
  1588 01ec FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 29
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 29
 
 
  1589 01ee 02       		.byte	2
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  1643 0232 02       		.byte	2
  1644 0233 00       		.byte	0
  1645 0234 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 30
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 30
 
 
  1646 0236 02       		.byte	2
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  1700 027e 02       		.byte	2
  1701 027f 00       		.byte	0
  1702 0280 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 31
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 31
 
 
  1703 0282 02       		.byte	2
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  1757 02ca 02       		.byte	2
  1758 02cb 00       		.byte	0
  1759 02cc FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 32
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 32
 
 
  1760 02ce 02       		.byte	2
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  1814 0316 02       		.byte	2
  1815 0317 00       		.byte	0
  1816 0318 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 33
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 33
 
 
  1817 031a 02       		.byte	2
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  1871 0362 02       		.byte	2
  1872 0363 00       		.byte	0
  1873 0364 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 34
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 34
 
 
  1874 0366 02       		.byte	2
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  1928 03ae 02       		.byte	2
  1929 03af 00       		.byte	0
  1930 03b0 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 35
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 35
 
 
  1931 03b2 02       		.byte	2
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  1985 03fa 02       		.byte	2
  1986 03fb 00       		.byte	0
  1987 03fc FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 36
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 36
 
 
  1988 03fe 02       		.byte	2
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  2042 0446 02       		.byte	2
  2043 0447 00       		.byte	0
  2044 0448 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 37
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 37
 
 
  2045 044a 02       		.byte	2
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  2099 0492 02       		.byte	2
  2100 0493 00       		.byte	0
  2101 0494 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 38
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 38
 
 
  2102 0496 02       		.byte	2
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  2156 04de 02       		.byte	2
  2157 04df 00       		.byte	0
  2158 04e0 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 39
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 39
 
 
  2159 04e2 02       		.byte	2
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  2213 052a 02       		.byte	2
  2214 052b 00       		.byte	0
  2215 052c FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 40
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 40
 
 
  2216 052e 02       		.byte	2
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  2270 0576 02       		.byte	2
  2271 0577 00       		.byte	0
  2272 0578 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 41
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 41
 
 
  2273 057a 02       		.byte	2
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  2327 05c2 02       		.byte	2
  2328 05c3 00       		.byte	0
  2329 05c4 FFFF     		.short	-1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 42
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 42
 
 
  2330 05c6 02       		.byte	2
@@ -2505,707 +2505,1249 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 1
  2371 05fc FFFF     		.short	-1
  2372 05fe 02       		.byte	2
  2373 05ff 00       		.byte	0
- 2374              		.text
- 2375              	.Letext0:
- 2376              		.file 1 "Generated_Source\\PSoC5\\cytypes.h"
- 2377              		.file 2 "Generated_Source\\PSoC5\\MDIO_Interface.h"
- 2378              		.file 3 "Generated_Source\\PSoC5\\MDIO_Interface_REG.c"
- 2379              		.section	.debug_info,"",%progbits
- 2380              	.Ldebug_info0:
- 2381 0000 53020000 		.4byte	0x253
- 2382 0004 0400     		.2byte	0x4
- 2383 0006 00000000 		.4byte	.Ldebug_abbrev0
- 2384 000a 04       		.byte	0x4
- 2385 000b 01       		.uleb128 0x1
- 2386 000c 46010000 		.4byte	.LASF32
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 43
+ 2374              		.type	MDIO_Interface_registerPage_1, %object
+ 2375              		.size	MDIO_Interface_registerPage_1, 512
+ 2376              	MDIO_Interface_registerPage_1:
+ 2377 0600 01       		.byte	1
+ 2378 0601 02       		.byte	2
+ 2379 0602 03       		.byte	3
+ 2380 0603 04       		.byte	4
+ 2381 0604 05       		.byte	5
+ 2382 0605 06       		.byte	6
+ 2383 0606 07       		.byte	7
+ 2384 0607 08       		.byte	8
+ 2385 0608 09       		.byte	9
+ 2386 0609 0A       		.byte	10
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 43
 
 
- 2387 0010 01       		.byte	0x1
- 2388 0011 14020000 		.4byte	.LASF33
- 2389 0015 2C030000 		.4byte	.LASF34
- 2390 0019 00000000 		.4byte	.Ldebug_line0
- 2391 001d 02       		.uleb128 0x2
- 2392 001e 01       		.byte	0x1
- 2393 001f 06       		.byte	0x6
- 2394 0020 20030000 		.4byte	.LASF0
- 2395 0024 02       		.uleb128 0x2
- 2396 0025 01       		.byte	0x1
- 2397 0026 08       		.byte	0x8
- 2398 0027 5B000000 		.4byte	.LASF1
- 2399 002b 02       		.uleb128 0x2
- 2400 002c 02       		.byte	0x2
- 2401 002d 05       		.byte	0x5
- 2402 002e 48020000 		.4byte	.LASF2
- 2403 0032 02       		.uleb128 0x2
- 2404 0033 02       		.byte	0x2
- 2405 0034 07       		.byte	0x7
- 2406 0035 24000000 		.4byte	.LASF3
- 2407 0039 02       		.uleb128 0x2
- 2408 003a 04       		.byte	0x4
- 2409 003b 05       		.byte	0x5
- 2410 003c 12030000 		.4byte	.LASF4
- 2411 0040 02       		.uleb128 0x2
- 2412 0041 04       		.byte	0x4
- 2413 0042 07       		.byte	0x7
- 2414 0043 69000000 		.4byte	.LASF5
- 2415 0047 02       		.uleb128 0x2
- 2416 0048 08       		.byte	0x8
- 2417 0049 05       		.byte	0x5
- 2418 004a 01020000 		.4byte	.LASF6
- 2419 004e 02       		.uleb128 0x2
- 2420 004f 08       		.byte	0x8
- 2421 0050 07       		.byte	0x7
- 2422 0051 E1010000 		.4byte	.LASF7
- 2423 0055 03       		.uleb128 0x3
- 2424 0056 04       		.byte	0x4
- 2425 0057 05       		.byte	0x5
- 2426 0058 696E7400 		.ascii	"int\000"
- 2427 005c 02       		.uleb128 0x2
- 2428 005d 04       		.byte	0x4
- 2429 005e 07       		.byte	0x7
- 2430 005f D4010000 		.4byte	.LASF8
- 2431 0063 04       		.uleb128 0x4
- 2432 0064 7B000000 		.4byte	.LASF9
- 2433 0068 01       		.byte	0x1
- 2434 0069 9201     		.2byte	0x192
- 2435 006b 24000000 		.4byte	0x24
- 2436 006f 04       		.uleb128 0x4
- 2437 0070 03010000 		.4byte	.LASF10
- 2438 0074 01       		.byte	0x1
- 2439 0075 9301     		.2byte	0x193
- 2440 0077 32000000 		.4byte	0x32
- 2441 007b 02       		.uleb128 0x2
- 2442 007c 04       		.byte	0x4
- 2443 007d 04       		.byte	0x4
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 44
+ 2387 060a 0B       		.byte	11
+ 2388 060b 0C       		.byte	12
+ 2389 060c 0D       		.byte	13
+ 2390 060d 0E       		.byte	14
+ 2391 060e 0F       		.byte	15
+ 2392 060f 10       		.byte	16
+ 2393 0610 20       		.byte	32
+ 2394 0611 30       		.byte	48
+ 2395 0612 40       		.byte	64
+ 2396 0613 50       		.byte	80
+ 2397 0614 60       		.byte	96
+ 2398 0615 70       		.byte	112
+ 2399 0616 80       		.byte	-128
+ 2400 0617 90       		.byte	-112
+ 2401 0618 10       		.byte	16
+ 2402 0619 00       		.byte	0
+ 2403 061a 10       		.byte	16
+ 2404 061b 01       		.byte	1
+ 2405 061c 10       		.byte	16
+ 2406 061d 02       		.byte	2
+ 2407 061e 10       		.byte	16
+ 2408 061f 03       		.byte	3
+ 2409 0620 10       		.byte	16
+ 2410 0621 04       		.byte	4
+ 2411 0622 10       		.byte	16
+ 2412 0623 05       		.byte	5
+ 2413 0624 10       		.byte	16
+ 2414 0625 06       		.byte	6
+ 2415 0626 10       		.byte	16
+ 2416 0627 07       		.byte	7
+ 2417 0628 10       		.byte	16
+ 2418 0629 08       		.byte	8
+ 2419 062a 10       		.byte	16
+ 2420 062b 09       		.byte	9
+ 2421 062c 10       		.byte	16
+ 2422 062d 0A       		.byte	10
+ 2423 062e 10       		.byte	16
+ 2424 062f 0B       		.byte	11
+ 2425 0630 00       		.byte	0
+ 2426 0631 00       		.byte	0
+ 2427 0632 00       		.byte	0
+ 2428 0633 00       		.byte	0
+ 2429 0634 00       		.byte	0
+ 2430 0635 00       		.byte	0
+ 2431 0636 00       		.byte	0
+ 2432 0637 00       		.byte	0
+ 2433 0638 00       		.byte	0
+ 2434 0639 00       		.byte	0
+ 2435 063a 00       		.byte	0
+ 2436 063b 00       		.byte	0
+ 2437 063c 00       		.byte	0
+ 2438 063d 00       		.byte	0
+ 2439 063e 00       		.byte	0
+ 2440 063f 00       		.byte	0
+ 2441 0640 00       		.byte	0
+ 2442 0641 00       		.byte	0
+ 2443 0642 00       		.byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 44
 
 
- 2444 007e 37000000 		.4byte	.LASF11
- 2445 0082 02       		.uleb128 0x2
- 2446 0083 08       		.byte	0x8
- 2447 0084 04       		.byte	0x4
- 2448 0085 A2000000 		.4byte	.LASF12
- 2449 0089 02       		.uleb128 0x2
- 2450 008a 01       		.byte	0x1
- 2451 008b 08       		.byte	0x8
- 2452 008c 1B030000 		.4byte	.LASF13
- 2453 0090 02       		.uleb128 0x2
- 2454 0091 04       		.byte	0x4
- 2455 0092 07       		.byte	0x7
- 2456 0093 F8010000 		.4byte	.LASF14
- 2457 0097 05       		.uleb128 0x5
- 2458 0098 04       		.byte	0x4
- 2459 0099 02       		.byte	0x2
- 2460 009a 38       		.byte	0x38
- 2461 009b C4000000 		.4byte	0xc4
- 2462 009f 06       		.uleb128 0x6
- 2463 00a0 0F020000 		.4byte	.LASF15
- 2464 00a4 02       		.byte	0x2
- 2465 00a5 3A       		.byte	0x3a
- 2466 00a6 6F000000 		.4byte	0x6f
- 2467 00aa 00       		.byte	0
- 2468 00ab 06       		.uleb128 0x6
- 2469 00ac 40020000 		.4byte	.LASF16
- 2470 00b0 02       		.byte	0x2
- 2471 00b1 3B       		.byte	0x3b
- 2472 00b2 63000000 		.4byte	0x63
- 2473 00b6 02       		.byte	0x2
- 2474 00b7 06       		.uleb128 0x6
- 2475 00b8 00000000 		.4byte	.LASF17
- 2476 00bc 02       		.byte	0x2
- 2477 00bd 3C       		.byte	0x3c
- 2478 00be 63000000 		.4byte	0x63
- 2479 00c2 03       		.byte	0x3
- 2480 00c3 00       		.byte	0
- 2481 00c4 07       		.uleb128 0x7
- 2482 00c5 81000000 		.4byte	.LASF18
- 2483 00c9 02       		.byte	0x2
- 2484 00ca 3E       		.byte	0x3e
- 2485 00cb 97000000 		.4byte	0x97
- 2486 00cf 08       		.uleb128 0x8
- 2487 00d0 63000000 		.4byte	0x63
- 2488 00d4 E0000000 		.4byte	0xe0
- 2489 00d8 09       		.uleb128 0x9
- 2490 00d9 90000000 		.4byte	0x90
- 2491 00dd FF01     		.2byte	0x1ff
- 2492 00df 00       		.byte	0
- 2493 00e0 0A       		.uleb128 0xa
- 2494 00e1 A9000000 		.4byte	.LASF19
- 2495 00e5 03       		.byte	0x3
- 2496 00e6 1A       		.byte	0x1a
- 2497 00e7 CF000000 		.4byte	0xcf
- 2498 00eb 05       		.uleb128 0x5
- 2499 00ec 03       		.byte	0x3
- 2500 00ed 00000000 		.4byte	MDIO_Interface_registerPage_1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 45
+ 2444 0643 00       		.byte	0
+ 2445 0644 00       		.byte	0
+ 2446 0645 00       		.byte	0
+ 2447 0646 00       		.byte	0
+ 2448 0647 00       		.byte	0
+ 2449 0648 00       		.byte	0
+ 2450 0649 00       		.byte	0
+ 2451 064a 00       		.byte	0
+ 2452 064b 00       		.byte	0
+ 2453 064c 00       		.byte	0
+ 2454 064d 00       		.byte	0
+ 2455 064e 00       		.byte	0
+ 2456 064f 00       		.byte	0
+ 2457 0650 00       		.byte	0
+ 2458 0651 00       		.byte	0
+ 2459 0652 00       		.byte	0
+ 2460 0653 00       		.byte	0
+ 2461 0654 00       		.byte	0
+ 2462 0655 00       		.byte	0
+ 2463 0656 00       		.byte	0
+ 2464 0657 00       		.byte	0
+ 2465 0658 00       		.byte	0
+ 2466 0659 00       		.byte	0
+ 2467 065a 00       		.byte	0
+ 2468 065b 00       		.byte	0
+ 2469 065c 00       		.byte	0
+ 2470 065d 00       		.byte	0
+ 2471 065e 00       		.byte	0
+ 2472 065f 00       		.byte	0
+ 2473 0660 00       		.byte	0
+ 2474 0661 00       		.byte	0
+ 2475 0662 00       		.byte	0
+ 2476 0663 00       		.byte	0
+ 2477 0664 00       		.byte	0
+ 2478 0665 00       		.byte	0
+ 2479 0666 00       		.byte	0
+ 2480 0667 00       		.byte	0
+ 2481 0668 00       		.byte	0
+ 2482 0669 00       		.byte	0
+ 2483 066a 00       		.byte	0
+ 2484 066b 00       		.byte	0
+ 2485 066c 00       		.byte	0
+ 2486 066d 00       		.byte	0
+ 2487 066e 00       		.byte	0
+ 2488 066f 00       		.byte	0
+ 2489 0670 00       		.byte	0
+ 2490 0671 00       		.byte	0
+ 2491 0672 00       		.byte	0
+ 2492 0673 00       		.byte	0
+ 2493 0674 00       		.byte	0
+ 2494 0675 00       		.byte	0
+ 2495 0676 00       		.byte	0
+ 2496 0677 00       		.byte	0
+ 2497 0678 00       		.byte	0
+ 2498 0679 00       		.byte	0
+ 2499 067a 00       		.byte	0
+ 2500 067b 00       		.byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 45
 
 
- 2501 00f1 08       		.uleb128 0x8
- 2502 00f2 63000000 		.4byte	0x63
- 2503 00f6 01010000 		.4byte	0x101
- 2504 00fa 0B       		.uleb128 0xb
- 2505 00fb 90000000 		.4byte	0x90
- 2506 00ff FF       		.byte	0xff
- 2507 0100 00       		.byte	0
- 2508 0101 0A       		.uleb128 0xa
- 2509 0102 C7000000 		.4byte	.LASF20
- 2510 0106 03       		.byte	0x3
- 2511 0107 1D       		.byte	0x1d
- 2512 0108 F1000000 		.4byte	0xf1
- 2513 010c 05       		.uleb128 0x5
- 2514 010d 03       		.byte	0x3
- 2515 010e 00000000 		.4byte	MDIO_Interface_registerPage_2
- 2516 0112 0A       		.uleb128 0xa
- 2517 0113 E5000000 		.4byte	.LASF21
- 2518 0117 03       		.byte	0x3
- 2519 0118 20       		.byte	0x20
- 2520 0119 F1000000 		.4byte	0xf1
- 2521 011d 05       		.uleb128 0x5
- 2522 011e 03       		.byte	0x3
- 2523 011f 00000000 		.4byte	MDIO_Interface_registerPage_3
- 2524 0123 08       		.uleb128 0x8
- 2525 0124 6F000000 		.4byte	0x6f
- 2526 0128 33010000 		.4byte	0x133
- 2527 012c 0B       		.uleb128 0xb
- 2528 012d 90000000 		.4byte	0x90
- 2529 0131 7F       		.byte	0x7f
- 2530 0132 00       		.byte	0
- 2531 0133 0A       		.uleb128 0xa
- 2532 0134 3D000000 		.4byte	.LASF22
- 2533 0138 03       		.byte	0x3
- 2534 0139 23       		.byte	0x23
- 2535 013a 23010000 		.4byte	0x123
- 2536 013e 05       		.uleb128 0x5
- 2537 013f 03       		.byte	0x3
- 2538 0140 00000000 		.4byte	MDIO_Interface_registerPage_4
- 2539 0144 08       		.uleb128 0x8
- 2540 0145 6F000000 		.4byte	0x6f
- 2541 0149 54010000 		.4byte	0x154
- 2542 014d 0B       		.uleb128 0xb
- 2543 014e 90000000 		.4byte	0x90
- 2544 0152 FF       		.byte	0xff
- 2545 0153 00       		.byte	0
- 2546 0154 0A       		.uleb128 0xa
- 2547 0155 0A010000 		.4byte	.LASF23
- 2548 0159 03       		.byte	0x3
- 2549 015a 26       		.byte	0x26
- 2550 015b 44010000 		.4byte	0x144
- 2551 015f 05       		.uleb128 0x5
- 2552 0160 03       		.byte	0x3
- 2553 0161 00000000 		.4byte	MDIO_Interface_registerPage_5
- 2554 0165 0A       		.uleb128 0xa
- 2555 0166 28010000 		.4byte	.LASF24
- 2556 016a 03       		.byte	0x3
- 2557 016b 29       		.byte	0x29
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 46
+ 2501 067c 00       		.byte	0
+ 2502 067d 00       		.byte	0
+ 2503 067e 00       		.byte	0
+ 2504 067f 00       		.byte	0
+ 2505 0680 00       		.byte	0
+ 2506 0681 00       		.byte	0
+ 2507 0682 00       		.byte	0
+ 2508 0683 00       		.byte	0
+ 2509 0684 00       		.byte	0
+ 2510 0685 00       		.byte	0
+ 2511 0686 00       		.byte	0
+ 2512 0687 00       		.byte	0
+ 2513 0688 00       		.byte	0
+ 2514 0689 00       		.byte	0
+ 2515 068a 00       		.byte	0
+ 2516 068b 00       		.byte	0
+ 2517 068c 00       		.byte	0
+ 2518 068d 00       		.byte	0
+ 2519 068e 00       		.byte	0
+ 2520 068f 00       		.byte	0
+ 2521 0690 00       		.byte	0
+ 2522 0691 00       		.byte	0
+ 2523 0692 00       		.byte	0
+ 2524 0693 00       		.byte	0
+ 2525 0694 00       		.byte	0
+ 2526 0695 00       		.byte	0
+ 2527 0696 00       		.byte	0
+ 2528 0697 00       		.byte	0
+ 2529 0698 00       		.byte	0
+ 2530 0699 00       		.byte	0
+ 2531 069a 00       		.byte	0
+ 2532 069b 00       		.byte	0
+ 2533 069c 00       		.byte	0
+ 2534 069d 00       		.byte	0
+ 2535 069e 00       		.byte	0
+ 2536 069f 00       		.byte	0
+ 2537 06a0 00       		.byte	0
+ 2538 06a1 00       		.byte	0
+ 2539 06a2 00       		.byte	0
+ 2540 06a3 00       		.byte	0
+ 2541 06a4 00       		.byte	0
+ 2542 06a5 00       		.byte	0
+ 2543 06a6 00       		.byte	0
+ 2544 06a7 00       		.byte	0
+ 2545 06a8 00       		.byte	0
+ 2546 06a9 00       		.byte	0
+ 2547 06aa 00       		.byte	0
+ 2548 06ab 00       		.byte	0
+ 2549 06ac 00       		.byte	0
+ 2550 06ad 00       		.byte	0
+ 2551 06ae 00       		.byte	0
+ 2552 06af 00       		.byte	0
+ 2553 06b0 00       		.byte	0
+ 2554 06b1 00       		.byte	0
+ 2555 06b2 00       		.byte	0
+ 2556 06b3 00       		.byte	0
+ 2557 06b4 00       		.byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 46
 
 
- 2558 016c 23010000 		.4byte	0x123
- 2559 0170 05       		.uleb128 0x5
- 2560 0171 03       		.byte	0x3
- 2561 0172 00000000 		.4byte	MDIO_Interface_registerPage_6
- 2562 0176 08       		.uleb128 0x8
- 2563 0177 C4000000 		.4byte	0xc4
- 2564 017b 87010000 		.4byte	0x187
- 2565 017f 09       		.uleb128 0x9
- 2566 0180 90000000 		.4byte	0x90
- 2567 0184 FF01     		.2byte	0x1ff
- 2568 0186 00       		.byte	0
- 2569 0187 0A       		.uleb128 0xa
- 2570 0188 52020000 		.4byte	.LASF25
- 2571 018c 03       		.byte	0x3
- 2572 018d 2C       		.byte	0x2c
- 2573 018e 98010000 		.4byte	0x198
- 2574 0192 05       		.uleb128 0x5
- 2575 0193 03       		.byte	0x3
- 2576 0194 00000000 		.4byte	MDIO_Interface_registerConfig_1
- 2577 0198 0C       		.uleb128 0xc
- 2578 0199 76010000 		.4byte	0x176
- 2579 019d 08       		.uleb128 0x8
- 2580 019e C4000000 		.4byte	0xc4
- 2581 01a2 AD010000 		.4byte	0x1ad
- 2582 01a6 0B       		.uleb128 0xb
- 2583 01a7 90000000 		.4byte	0x90
- 2584 01ab FF       		.byte	0xff
- 2585 01ac 00       		.byte	0
- 2586 01ad 0A       		.uleb128 0xa
- 2587 01ae 72020000 		.4byte	.LASF26
- 2588 01b2 03       		.byte	0x3
- 2589 01b3 B0       		.byte	0xb0
- 2590 01b4 BE010000 		.4byte	0x1be
- 2591 01b8 05       		.uleb128 0x5
- 2592 01b9 03       		.byte	0x3
- 2593 01ba 00000000 		.4byte	MDIO_Interface_registerConfig_2
- 2594 01be 0C       		.uleb128 0xc
- 2595 01bf 9D010000 		.4byte	0x19d
- 2596 01c3 0A       		.uleb128 0xa
- 2597 01c4 92020000 		.4byte	.LASF27
- 2598 01c8 03       		.byte	0x3
- 2599 01c9 F4       		.byte	0xf4
- 2600 01ca D4010000 		.4byte	0x1d4
- 2601 01ce 05       		.uleb128 0x5
- 2602 01cf 03       		.byte	0x3
- 2603 01d0 00000000 		.4byte	MDIO_Interface_registerConfig_3
- 2604 01d4 0C       		.uleb128 0xc
- 2605 01d5 9D010000 		.4byte	0x19d
- 2606 01d9 08       		.uleb128 0x8
- 2607 01da C4000000 		.4byte	0xc4
- 2608 01de E9010000 		.4byte	0x1e9
- 2609 01e2 0B       		.uleb128 0xb
- 2610 01e3 90000000 		.4byte	0x90
- 2611 01e7 7F       		.byte	0x7f
- 2612 01e8 00       		.byte	0
- 2613 01e9 0D       		.uleb128 0xd
- 2614 01ea B2020000 		.4byte	.LASF28
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 47
+ 2558 06b5 00       		.byte	0
+ 2559 06b6 00       		.byte	0
+ 2560 06b7 00       		.byte	0
+ 2561 06b8 00       		.byte	0
+ 2562 06b9 00       		.byte	0
+ 2563 06ba 00       		.byte	0
+ 2564 06bb 00       		.byte	0
+ 2565 06bc 00       		.byte	0
+ 2566 06bd 00       		.byte	0
+ 2567 06be 00       		.byte	0
+ 2568 06bf 00       		.byte	0
+ 2569 06c0 00       		.byte	0
+ 2570 06c1 00       		.byte	0
+ 2571 06c2 00       		.byte	0
+ 2572 06c3 00       		.byte	0
+ 2573 06c4 00       		.byte	0
+ 2574 06c5 00       		.byte	0
+ 2575 06c6 00       		.byte	0
+ 2576 06c7 00       		.byte	0
+ 2577 06c8 00       		.byte	0
+ 2578 06c9 00       		.byte	0
+ 2579 06ca 00       		.byte	0
+ 2580 06cb 00       		.byte	0
+ 2581 06cc 00       		.byte	0
+ 2582 06cd 00       		.byte	0
+ 2583 06ce 00       		.byte	0
+ 2584 06cf 00       		.byte	0
+ 2585 06d0 00       		.byte	0
+ 2586 06d1 00       		.byte	0
+ 2587 06d2 00       		.byte	0
+ 2588 06d3 00       		.byte	0
+ 2589 06d4 00       		.byte	0
+ 2590 06d5 00       		.byte	0
+ 2591 06d6 00       		.byte	0
+ 2592 06d7 00       		.byte	0
+ 2593 06d8 00       		.byte	0
+ 2594 06d9 00       		.byte	0
+ 2595 06da 00       		.byte	0
+ 2596 06db 00       		.byte	0
+ 2597 06dc 00       		.byte	0
+ 2598 06dd 00       		.byte	0
+ 2599 06de 00       		.byte	0
+ 2600 06df 00       		.byte	0
+ 2601 06e0 00       		.byte	0
+ 2602 06e1 00       		.byte	0
+ 2603 06e2 00       		.byte	0
+ 2604 06e3 00       		.byte	0
+ 2605 06e4 00       		.byte	0
+ 2606 06e5 00       		.byte	0
+ 2607 06e6 00       		.byte	0
+ 2608 06e7 00       		.byte	0
+ 2609 06e8 00       		.byte	0
+ 2610 06e9 00       		.byte	0
+ 2611 06ea 00       		.byte	0
+ 2612 06eb 00       		.byte	0
+ 2613 06ec 00       		.byte	0
+ 2614 06ed 00       		.byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 47
 
 
- 2615 01ee 03       		.byte	0x3
- 2616 01ef 3801     		.2byte	0x138
- 2617 01f1 FB010000 		.4byte	0x1fb
- 2618 01f5 05       		.uleb128 0x5
- 2619 01f6 03       		.byte	0x3
- 2620 01f7 00000000 		.4byte	MDIO_Interface_registerConfig_4
- 2621 01fb 0C       		.uleb128 0xc
- 2622 01fc D9010000 		.4byte	0x1d9
- 2623 0200 0D       		.uleb128 0xd
- 2624 0201 D2020000 		.4byte	.LASF29
- 2625 0205 03       		.byte	0x3
- 2626 0206 5C01     		.2byte	0x15c
- 2627 0208 9D010000 		.4byte	0x19d
- 2628 020c 05       		.uleb128 0x5
- 2629 020d 03       		.byte	0x3
- 2630 020e 00000000 		.4byte	MDIO_Interface_registerConfig_5
- 2631 0212 0D       		.uleb128 0xd
- 2632 0213 F2020000 		.4byte	.LASF30
- 2633 0217 03       		.byte	0x3
- 2634 0218 A001     		.2byte	0x1a0
- 2635 021a D9010000 		.4byte	0x1d9
- 2636 021e 05       		.uleb128 0x5
- 2637 021f 03       		.byte	0x3
- 2638 0220 00000000 		.4byte	MDIO_Interface_registerConfig_6
- 2639 0224 08       		.uleb128 0x8
- 2640 0225 34020000 		.4byte	0x234
- 2641 0229 34020000 		.4byte	0x234
- 2642 022d 0B       		.uleb128 0xb
- 2643 022e 90000000 		.4byte	0x90
- 2644 0232 0B       		.byte	0xb
- 2645 0233 00       		.byte	0
- 2646 0234 0E       		.uleb128 0xe
- 2647 0235 04       		.byte	0x4
- 2648 0236 3A020000 		.4byte	0x23a
- 2649 023a 0C       		.uleb128 0xc
- 2650 023b 6F000000 		.4byte	0x6f
- 2651 023f 0D       		.uleb128 0xd
- 2652 0240 09000000 		.4byte	.LASF31
- 2653 0244 03       		.byte	0x3
- 2654 0245 C301     		.2byte	0x1c3
- 2655 0247 51020000 		.4byte	0x251
- 2656 024b 05       		.uleb128 0x5
- 2657 024c 03       		.byte	0x3
- 2658 024d 00000000 		.4byte	MDIO_Interface_pageInfoPtr
- 2659 0251 0C       		.uleb128 0xc
- 2660 0252 24020000 		.4byte	0x224
- 2661 0256 00       		.byte	0
- 2662              		.section	.debug_abbrev,"",%progbits
- 2663              	.Ldebug_abbrev0:
- 2664 0000 01       		.uleb128 0x1
- 2665 0001 11       		.uleb128 0x11
- 2666 0002 01       		.byte	0x1
- 2667 0003 25       		.uleb128 0x25
- 2668 0004 0E       		.uleb128 0xe
- 2669 0005 13       		.uleb128 0x13
- 2670 0006 0B       		.uleb128 0xb
- 2671 0007 03       		.uleb128 0x3
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 48
+ 2615 06ee 00       		.byte	0
+ 2616 06ef 00       		.byte	0
+ 2617 06f0 00       		.byte	0
+ 2618 06f1 00       		.byte	0
+ 2619 06f2 00       		.byte	0
+ 2620 06f3 00       		.byte	0
+ 2621 06f4 00       		.byte	0
+ 2622 06f5 00       		.byte	0
+ 2623 06f6 00       		.byte	0
+ 2624 06f7 00       		.byte	0
+ 2625 06f8 00       		.byte	0
+ 2626 06f9 00       		.byte	0
+ 2627 06fa 00       		.byte	0
+ 2628 06fb 00       		.byte	0
+ 2629 06fc 00       		.byte	0
+ 2630 06fd 00       		.byte	0
+ 2631 06fe 00       		.byte	0
+ 2632 06ff 00       		.byte	0
+ 2633 0700 00       		.byte	0
+ 2634 0701 00       		.byte	0
+ 2635 0702 00       		.byte	0
+ 2636 0703 00       		.byte	0
+ 2637 0704 00       		.byte	0
+ 2638 0705 00       		.byte	0
+ 2639 0706 00       		.byte	0
+ 2640 0707 00       		.byte	0
+ 2641 0708 00       		.byte	0
+ 2642 0709 00       		.byte	0
+ 2643 070a 00       		.byte	0
+ 2644 070b 00       		.byte	0
+ 2645 070c 00       		.byte	0
+ 2646 070d 00       		.byte	0
+ 2647 070e 00       		.byte	0
+ 2648 070f 00       		.byte	0
+ 2649 0710 00       		.byte	0
+ 2650 0711 00       		.byte	0
+ 2651 0712 00       		.byte	0
+ 2652 0713 00       		.byte	0
+ 2653 0714 00       		.byte	0
+ 2654 0715 00       		.byte	0
+ 2655 0716 00       		.byte	0
+ 2656 0717 00       		.byte	0
+ 2657 0718 00       		.byte	0
+ 2658 0719 00       		.byte	0
+ 2659 071a 00       		.byte	0
+ 2660 071b 00       		.byte	0
+ 2661 071c 00       		.byte	0
+ 2662 071d 00       		.byte	0
+ 2663 071e 00       		.byte	0
+ 2664 071f 00       		.byte	0
+ 2665 0720 00       		.byte	0
+ 2666 0721 00       		.byte	0
+ 2667 0722 00       		.byte	0
+ 2668 0723 00       		.byte	0
+ 2669 0724 00       		.byte	0
+ 2670 0725 00       		.byte	0
+ 2671 0726 00       		.byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 48
 
 
- 2672 0008 0E       		.uleb128 0xe
- 2673 0009 1B       		.uleb128 0x1b
- 2674 000a 0E       		.uleb128 0xe
- 2675 000b 10       		.uleb128 0x10
- 2676 000c 17       		.uleb128 0x17
- 2677 000d 00       		.byte	0
- 2678 000e 00       		.byte	0
- 2679 000f 02       		.uleb128 0x2
- 2680 0010 24       		.uleb128 0x24
- 2681 0011 00       		.byte	0
- 2682 0012 0B       		.uleb128 0xb
- 2683 0013 0B       		.uleb128 0xb
- 2684 0014 3E       		.uleb128 0x3e
- 2685 0015 0B       		.uleb128 0xb
- 2686 0016 03       		.uleb128 0x3
- 2687 0017 0E       		.uleb128 0xe
- 2688 0018 00       		.byte	0
- 2689 0019 00       		.byte	0
- 2690 001a 03       		.uleb128 0x3
- 2691 001b 24       		.uleb128 0x24
- 2692 001c 00       		.byte	0
- 2693 001d 0B       		.uleb128 0xb
- 2694 001e 0B       		.uleb128 0xb
- 2695 001f 3E       		.uleb128 0x3e
- 2696 0020 0B       		.uleb128 0xb
- 2697 0021 03       		.uleb128 0x3
- 2698 0022 08       		.uleb128 0x8
- 2699 0023 00       		.byte	0
- 2700 0024 00       		.byte	0
- 2701 0025 04       		.uleb128 0x4
- 2702 0026 16       		.uleb128 0x16
- 2703 0027 00       		.byte	0
- 2704 0028 03       		.uleb128 0x3
- 2705 0029 0E       		.uleb128 0xe
- 2706 002a 3A       		.uleb128 0x3a
- 2707 002b 0B       		.uleb128 0xb
- 2708 002c 3B       		.uleb128 0x3b
- 2709 002d 05       		.uleb128 0x5
- 2710 002e 49       		.uleb128 0x49
- 2711 002f 13       		.uleb128 0x13
- 2712 0030 00       		.byte	0
- 2713 0031 00       		.byte	0
- 2714 0032 05       		.uleb128 0x5
- 2715 0033 13       		.uleb128 0x13
- 2716 0034 01       		.byte	0x1
- 2717 0035 0B       		.uleb128 0xb
- 2718 0036 0B       		.uleb128 0xb
- 2719 0037 3A       		.uleb128 0x3a
- 2720 0038 0B       		.uleb128 0xb
- 2721 0039 3B       		.uleb128 0x3b
- 2722 003a 0B       		.uleb128 0xb
- 2723 003b 01       		.uleb128 0x1
- 2724 003c 13       		.uleb128 0x13
- 2725 003d 00       		.byte	0
- 2726 003e 00       		.byte	0
- 2727 003f 06       		.uleb128 0x6
- 2728 0040 0D       		.uleb128 0xd
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 49
+ 2672 0727 00       		.byte	0
+ 2673 0728 00       		.byte	0
+ 2674 0729 00       		.byte	0
+ 2675 072a 00       		.byte	0
+ 2676 072b 00       		.byte	0
+ 2677 072c 00       		.byte	0
+ 2678 072d 00       		.byte	0
+ 2679 072e 00       		.byte	0
+ 2680 072f 00       		.byte	0
+ 2681 0730 00       		.byte	0
+ 2682 0731 00       		.byte	0
+ 2683 0732 00       		.byte	0
+ 2684 0733 00       		.byte	0
+ 2685 0734 00       		.byte	0
+ 2686 0735 00       		.byte	0
+ 2687 0736 00       		.byte	0
+ 2688 0737 00       		.byte	0
+ 2689 0738 00       		.byte	0
+ 2690 0739 00       		.byte	0
+ 2691 073a 00       		.byte	0
+ 2692 073b 00       		.byte	0
+ 2693 073c 00       		.byte	0
+ 2694 073d 00       		.byte	0
+ 2695 073e 00       		.byte	0
+ 2696 073f 00       		.byte	0
+ 2697 0740 00       		.byte	0
+ 2698 0741 00       		.byte	0
+ 2699 0742 00       		.byte	0
+ 2700 0743 00       		.byte	0
+ 2701 0744 00       		.byte	0
+ 2702 0745 00       		.byte	0
+ 2703 0746 00       		.byte	0
+ 2704 0747 00       		.byte	0
+ 2705 0748 00       		.byte	0
+ 2706 0749 00       		.byte	0
+ 2707 074a 00       		.byte	0
+ 2708 074b 00       		.byte	0
+ 2709 074c 00       		.byte	0
+ 2710 074d 00       		.byte	0
+ 2711 074e 00       		.byte	0
+ 2712 074f 00       		.byte	0
+ 2713 0750 00       		.byte	0
+ 2714 0751 00       		.byte	0
+ 2715 0752 00       		.byte	0
+ 2716 0753 00       		.byte	0
+ 2717 0754 00       		.byte	0
+ 2718 0755 00       		.byte	0
+ 2719 0756 00       		.byte	0
+ 2720 0757 00       		.byte	0
+ 2721 0758 00       		.byte	0
+ 2722 0759 00       		.byte	0
+ 2723 075a 00       		.byte	0
+ 2724 075b 00       		.byte	0
+ 2725 075c 00       		.byte	0
+ 2726 075d 00       		.byte	0
+ 2727 075e 00       		.byte	0
+ 2728 075f 00       		.byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 49
 
 
- 2729 0041 00       		.byte	0
- 2730 0042 03       		.uleb128 0x3
- 2731 0043 0E       		.uleb128 0xe
- 2732 0044 3A       		.uleb128 0x3a
- 2733 0045 0B       		.uleb128 0xb
- 2734 0046 3B       		.uleb128 0x3b
- 2735 0047 0B       		.uleb128 0xb
- 2736 0048 49       		.uleb128 0x49
- 2737 0049 13       		.uleb128 0x13
- 2738 004a 38       		.uleb128 0x38
- 2739 004b 0B       		.uleb128 0xb
- 2740 004c 00       		.byte	0
- 2741 004d 00       		.byte	0
- 2742 004e 07       		.uleb128 0x7
- 2743 004f 16       		.uleb128 0x16
- 2744 0050 00       		.byte	0
- 2745 0051 03       		.uleb128 0x3
- 2746 0052 0E       		.uleb128 0xe
- 2747 0053 3A       		.uleb128 0x3a
- 2748 0054 0B       		.uleb128 0xb
- 2749 0055 3B       		.uleb128 0x3b
- 2750 0056 0B       		.uleb128 0xb
- 2751 0057 49       		.uleb128 0x49
- 2752 0058 13       		.uleb128 0x13
- 2753 0059 00       		.byte	0
- 2754 005a 00       		.byte	0
- 2755 005b 08       		.uleb128 0x8
- 2756 005c 01       		.uleb128 0x1
- 2757 005d 01       		.byte	0x1
- 2758 005e 49       		.uleb128 0x49
- 2759 005f 13       		.uleb128 0x13
- 2760 0060 01       		.uleb128 0x1
- 2761 0061 13       		.uleb128 0x13
- 2762 0062 00       		.byte	0
- 2763 0063 00       		.byte	0
- 2764 0064 09       		.uleb128 0x9
- 2765 0065 21       		.uleb128 0x21
- 2766 0066 00       		.byte	0
- 2767 0067 49       		.uleb128 0x49
- 2768 0068 13       		.uleb128 0x13
- 2769 0069 2F       		.uleb128 0x2f
- 2770 006a 05       		.uleb128 0x5
- 2771 006b 00       		.byte	0
- 2772 006c 00       		.byte	0
- 2773 006d 0A       		.uleb128 0xa
- 2774 006e 34       		.uleb128 0x34
- 2775 006f 00       		.byte	0
- 2776 0070 03       		.uleb128 0x3
- 2777 0071 0E       		.uleb128 0xe
- 2778 0072 3A       		.uleb128 0x3a
- 2779 0073 0B       		.uleb128 0xb
- 2780 0074 3B       		.uleb128 0x3b
- 2781 0075 0B       		.uleb128 0xb
- 2782 0076 49       		.uleb128 0x49
- 2783 0077 13       		.uleb128 0x13
- 2784 0078 3F       		.uleb128 0x3f
- 2785 0079 19       		.uleb128 0x19
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 50
+ 2729 0760 00       		.byte	0
+ 2730 0761 00       		.byte	0
+ 2731 0762 00       		.byte	0
+ 2732 0763 00       		.byte	0
+ 2733 0764 00       		.byte	0
+ 2734 0765 00       		.byte	0
+ 2735 0766 00       		.byte	0
+ 2736 0767 00       		.byte	0
+ 2737 0768 00       		.byte	0
+ 2738 0769 00       		.byte	0
+ 2739 076a 00       		.byte	0
+ 2740 076b 00       		.byte	0
+ 2741 076c 00       		.byte	0
+ 2742 076d 00       		.byte	0
+ 2743 076e 00       		.byte	0
+ 2744 076f 00       		.byte	0
+ 2745 0770 00       		.byte	0
+ 2746 0771 00       		.byte	0
+ 2747 0772 00       		.byte	0
+ 2748 0773 00       		.byte	0
+ 2749 0774 00       		.byte	0
+ 2750 0775 00       		.byte	0
+ 2751 0776 00       		.byte	0
+ 2752 0777 00       		.byte	0
+ 2753 0778 00       		.byte	0
+ 2754 0779 00       		.byte	0
+ 2755 077a 00       		.byte	0
+ 2756 077b 00       		.byte	0
+ 2757 077c 00       		.byte	0
+ 2758 077d 00       		.byte	0
+ 2759 077e 00       		.byte	0
+ 2760 077f 00       		.byte	0
+ 2761 0780 00       		.byte	0
+ 2762 0781 00       		.byte	0
+ 2763 0782 00       		.byte	0
+ 2764 0783 00       		.byte	0
+ 2765 0784 00       		.byte	0
+ 2766 0785 00       		.byte	0
+ 2767 0786 00       		.byte	0
+ 2768 0787 00       		.byte	0
+ 2769 0788 00       		.byte	0
+ 2770 0789 00       		.byte	0
+ 2771 078a 00       		.byte	0
+ 2772 078b 00       		.byte	0
+ 2773 078c 00       		.byte	0
+ 2774 078d 00       		.byte	0
+ 2775 078e 00       		.byte	0
+ 2776 078f 00       		.byte	0
+ 2777 0790 00       		.byte	0
+ 2778 0791 00       		.byte	0
+ 2779 0792 00       		.byte	0
+ 2780 0793 00       		.byte	0
+ 2781 0794 00       		.byte	0
+ 2782 0795 00       		.byte	0
+ 2783 0796 00       		.byte	0
+ 2784 0797 00       		.byte	0
+ 2785 0798 00       		.byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 50
 
 
- 2786 007a 02       		.uleb128 0x2
- 2787 007b 18       		.uleb128 0x18
- 2788 007c 00       		.byte	0
- 2789 007d 00       		.byte	0
- 2790 007e 0B       		.uleb128 0xb
- 2791 007f 21       		.uleb128 0x21
- 2792 0080 00       		.byte	0
- 2793 0081 49       		.uleb128 0x49
- 2794 0082 13       		.uleb128 0x13
- 2795 0083 2F       		.uleb128 0x2f
- 2796 0084 0B       		.uleb128 0xb
- 2797 0085 00       		.byte	0
- 2798 0086 00       		.byte	0
- 2799 0087 0C       		.uleb128 0xc
- 2800 0088 26       		.uleb128 0x26
- 2801 0089 00       		.byte	0
- 2802 008a 49       		.uleb128 0x49
- 2803 008b 13       		.uleb128 0x13
- 2804 008c 00       		.byte	0
- 2805 008d 00       		.byte	0
- 2806 008e 0D       		.uleb128 0xd
- 2807 008f 34       		.uleb128 0x34
- 2808 0090 00       		.byte	0
- 2809 0091 03       		.uleb128 0x3
- 2810 0092 0E       		.uleb128 0xe
- 2811 0093 3A       		.uleb128 0x3a
- 2812 0094 0B       		.uleb128 0xb
- 2813 0095 3B       		.uleb128 0x3b
- 2814 0096 05       		.uleb128 0x5
- 2815 0097 49       		.uleb128 0x49
- 2816 0098 13       		.uleb128 0x13
- 2817 0099 3F       		.uleb128 0x3f
- 2818 009a 19       		.uleb128 0x19
- 2819 009b 02       		.uleb128 0x2
- 2820 009c 18       		.uleb128 0x18
- 2821 009d 00       		.byte	0
- 2822 009e 00       		.byte	0
- 2823 009f 0E       		.uleb128 0xe
- 2824 00a0 0F       		.uleb128 0xf
- 2825 00a1 00       		.byte	0
- 2826 00a2 0B       		.uleb128 0xb
- 2827 00a3 0B       		.uleb128 0xb
- 2828 00a4 49       		.uleb128 0x49
- 2829 00a5 13       		.uleb128 0x13
- 2830 00a6 00       		.byte	0
- 2831 00a7 00       		.byte	0
- 2832 00a8 00       		.byte	0
- 2833              		.section	.debug_aranges,"",%progbits
- 2834 0000 14000000 		.4byte	0x14
- 2835 0004 0200     		.2byte	0x2
- 2836 0006 00000000 		.4byte	.Ldebug_info0
- 2837 000a 04       		.byte	0x4
- 2838 000b 00       		.byte	0
- 2839 000c 0000     		.2byte	0
- 2840 000e 0000     		.2byte	0
- 2841 0010 00000000 		.4byte	0
- 2842 0014 00000000 		.4byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 51
+ 2786 0799 00       		.byte	0
+ 2787 079a 00       		.byte	0
+ 2788 079b 00       		.byte	0
+ 2789 079c 00       		.byte	0
+ 2790 079d 00       		.byte	0
+ 2791 079e 00       		.byte	0
+ 2792 079f 00       		.byte	0
+ 2793 07a0 00       		.byte	0
+ 2794 07a1 00       		.byte	0
+ 2795 07a2 00       		.byte	0
+ 2796 07a3 00       		.byte	0
+ 2797 07a4 00       		.byte	0
+ 2798 07a5 00       		.byte	0
+ 2799 07a6 00       		.byte	0
+ 2800 07a7 00       		.byte	0
+ 2801 07a8 00       		.byte	0
+ 2802 07a9 00       		.byte	0
+ 2803 07aa 00       		.byte	0
+ 2804 07ab 00       		.byte	0
+ 2805 07ac 00       		.byte	0
+ 2806 07ad 00       		.byte	0
+ 2807 07ae 00       		.byte	0
+ 2808 07af 00       		.byte	0
+ 2809 07b0 00       		.byte	0
+ 2810 07b1 00       		.byte	0
+ 2811 07b2 00       		.byte	0
+ 2812 07b3 00       		.byte	0
+ 2813 07b4 00       		.byte	0
+ 2814 07b5 00       		.byte	0
+ 2815 07b6 00       		.byte	0
+ 2816 07b7 00       		.byte	0
+ 2817 07b8 00       		.byte	0
+ 2818 07b9 00       		.byte	0
+ 2819 07ba 00       		.byte	0
+ 2820 07bb 00       		.byte	0
+ 2821 07bc 00       		.byte	0
+ 2822 07bd 00       		.byte	0
+ 2823 07be 00       		.byte	0
+ 2824 07bf 00       		.byte	0
+ 2825 07c0 00       		.byte	0
+ 2826 07c1 00       		.byte	0
+ 2827 07c2 00       		.byte	0
+ 2828 07c3 00       		.byte	0
+ 2829 07c4 00       		.byte	0
+ 2830 07c5 00       		.byte	0
+ 2831 07c6 00       		.byte	0
+ 2832 07c7 00       		.byte	0
+ 2833 07c8 00       		.byte	0
+ 2834 07c9 00       		.byte	0
+ 2835 07ca 00       		.byte	0
+ 2836 07cb 00       		.byte	0
+ 2837 07cc 00       		.byte	0
+ 2838 07cd 00       		.byte	0
+ 2839 07ce 00       		.byte	0
+ 2840 07cf 00       		.byte	0
+ 2841 07d0 00       		.byte	0
+ 2842 07d1 00       		.byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 51
 
 
- 2843              		.section	.debug_line,"",%progbits
- 2844              	.Ldebug_line0:
- 2845 0000 69000000 		.section	.debug_str,"MS",%progbits,1
- 2845      02006300 
- 2845      00000201 
- 2845      FB0E0D00 
- 2845      01010101 
- 2846              	.LASF17:
- 2847 0000 72657365 		.ascii	"reserved\000"
- 2847      72766564 
- 2847      00
- 2848              	.LASF31:
- 2849 0009 4D44494F 		.ascii	"MDIO_Interface_pageInfoPtr\000"
- 2849      5F496E74 
- 2849      65726661 
- 2849      63655F70 
- 2849      61676549 
- 2850              	.LASF3:
- 2851 0024 73686F72 		.ascii	"short unsigned int\000"
- 2851      7420756E 
- 2851      7369676E 
- 2851      65642069 
- 2851      6E7400
- 2852              	.LASF11:
- 2853 0037 666C6F61 		.ascii	"float\000"
- 2853      7400
- 2854              	.LASF22:
- 2855 003d 4D44494F 		.ascii	"MDIO_Interface_registerPage_4\000"
- 2855      5F496E74 
- 2855      65726661 
- 2855      63655F72 
- 2855      65676973 
- 2856              	.LASF1:
- 2857 005b 756E7369 		.ascii	"unsigned char\000"
- 2857      676E6564 
- 2857      20636861 
- 2857      7200
- 2858              	.LASF5:
- 2859 0069 6C6F6E67 		.ascii	"long unsigned int\000"
- 2859      20756E73 
- 2859      69676E65 
- 2859      6420696E 
- 2859      7400
- 2860              	.LASF9:
- 2861 007b 75696E74 		.ascii	"uint8\000"
- 2861      3800
- 2862              	.LASF18:
- 2863 0081 4D44494F 		.ascii	"MDIO_Interface_REG_CONFIG_STRUCT\000"
- 2863      5F496E74 
- 2863      65726661 
- 2863      63655F52 
- 2863      45475F43 
- 2864              	.LASF12:
- 2865 00a2 646F7562 		.ascii	"double\000"
- 2865      6C6500
- 2866              	.LASF19:
- 2867 00a9 4D44494F 		.ascii	"MDIO_Interface_registerPage_1\000"
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 52
+ 2843 07d2 00       		.byte	0
+ 2844 07d3 00       		.byte	0
+ 2845 07d4 00       		.byte	0
+ 2846 07d5 00       		.byte	0
+ 2847 07d6 00       		.byte	0
+ 2848 07d7 00       		.byte	0
+ 2849 07d8 00       		.byte	0
+ 2850 07d9 00       		.byte	0
+ 2851 07da 00       		.byte	0
+ 2852 07db 00       		.byte	0
+ 2853 07dc 00       		.byte	0
+ 2854 07dd 00       		.byte	0
+ 2855 07de 00       		.byte	0
+ 2856 07df 00       		.byte	0
+ 2857 07e0 00       		.byte	0
+ 2858 07e1 00       		.byte	0
+ 2859 07e2 00       		.byte	0
+ 2860 07e3 00       		.byte	0
+ 2861 07e4 00       		.byte	0
+ 2862 07e5 00       		.byte	0
+ 2863 07e6 00       		.byte	0
+ 2864 07e7 00       		.byte	0
+ 2865 07e8 00       		.byte	0
+ 2866 07e9 00       		.byte	0
+ 2867 07ea 00       		.byte	0
+ 2868 07eb 00       		.byte	0
+ 2869 07ec 00       		.byte	0
+ 2870 07ed 00       		.byte	0
+ 2871 07ee 00       		.byte	0
+ 2872 07ef 00       		.byte	0
+ 2873 07f0 00       		.byte	0
+ 2874 07f1 00       		.byte	0
+ 2875 07f2 00       		.byte	0
+ 2876 07f3 00       		.byte	0
+ 2877 07f4 00       		.byte	0
+ 2878 07f5 00       		.byte	0
+ 2879 07f6 00       		.byte	0
+ 2880 07f7 00       		.byte	0
+ 2881 07f8 00       		.byte	0
+ 2882 07f9 00       		.byte	0
+ 2883 07fa FF       		.byte	-1
+ 2884 07fb FD       		.byte	-3
+ 2885 07fc FF       		.byte	-1
+ 2886 07fd FE       		.byte	-2
+ 2887 07fe FF       		.byte	-1
+ 2888 07ff FF       		.byte	-1
+ 2889              		.text
+ 2890              	.Letext0:
+ 2891              		.file 1 "Generated_Source\\PSoC5\\cytypes.h"
+ 2892              		.file 2 "Generated_Source\\PSoC5\\MDIO_Interface.h"
+ 2893              		.file 3 "Generated_Source\\PSoC5\\MDIO_Interface_REG.c"
+ 2894              		.section	.debug_info,"",%progbits
+ 2895              	.Ldebug_info0:
+ 2896 0000 54020000 		.4byte	0x254
+ 2897 0004 0400     		.2byte	0x4
+ 2898 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 2899 000a 04       		.byte	0x4
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 52
 
 
- 2867      5F496E74 
- 2867      65726661 
- 2867      63655F72 
- 2867      65676973 
- 2868              	.LASF20:
- 2869 00c7 4D44494F 		.ascii	"MDIO_Interface_registerPage_2\000"
- 2869      5F496E74 
- 2869      65726661 
- 2869      63655F72 
- 2869      65676973 
- 2870              	.LASF21:
- 2871 00e5 4D44494F 		.ascii	"MDIO_Interface_registerPage_3\000"
- 2871      5F496E74 
- 2871      65726661 
- 2871      63655F72 
- 2871      65676973 
- 2872              	.LASF10:
- 2873 0103 75696E74 		.ascii	"uint16\000"
- 2873      313600
- 2874              	.LASF23:
- 2875 010a 4D44494F 		.ascii	"MDIO_Interface_registerPage_5\000"
- 2875      5F496E74 
- 2875      65726661 
- 2875      63655F72 
- 2875      65676973 
- 2876              	.LASF24:
- 2877 0128 4D44494F 		.ascii	"MDIO_Interface_registerPage_6\000"
- 2877      5F496E74 
- 2877      65726661 
- 2877      63655F72 
- 2877      65676973 
- 2878              	.LASF32:
- 2879 0146 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 2879      4320342E 
- 2879      392E3320 
- 2879      32303135 
- 2879      30333033 
- 2880 0179 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 2880      20726576 
- 2880      6973696F 
- 2880      6E203232 
- 2880      31323230 
- 2881 01ac 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 2881      66756E63 
- 2881      74696F6E 
- 2881      2D736563 
- 2881      74696F6E 
- 2882              	.LASF8:
- 2883 01d4 756E7369 		.ascii	"unsigned int\000"
- 2883      676E6564 
- 2883      20696E74 
- 2883      00
- 2884              	.LASF7:
- 2885 01e1 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2885      206C6F6E 
- 2885      6720756E 
- 2885      7369676E 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 53
+ 2900 000b 01       		.uleb128 0x1
+ 2901 000c 46010000 		.4byte	.LASF32
+ 2902 0010 01       		.byte	0x1
+ 2903 0011 14020000 		.4byte	.LASF33
+ 2904 0015 2C030000 		.4byte	.LASF34
+ 2905 0019 00000000 		.4byte	.Ldebug_line0
+ 2906 001d 02       		.uleb128 0x2
+ 2907 001e 01       		.byte	0x1
+ 2908 001f 06       		.byte	0x6
+ 2909 0020 20030000 		.4byte	.LASF0
+ 2910 0024 02       		.uleb128 0x2
+ 2911 0025 01       		.byte	0x1
+ 2912 0026 08       		.byte	0x8
+ 2913 0027 5B000000 		.4byte	.LASF1
+ 2914 002b 02       		.uleb128 0x2
+ 2915 002c 02       		.byte	0x2
+ 2916 002d 05       		.byte	0x5
+ 2917 002e 48020000 		.4byte	.LASF2
+ 2918 0032 02       		.uleb128 0x2
+ 2919 0033 02       		.byte	0x2
+ 2920 0034 07       		.byte	0x7
+ 2921 0035 24000000 		.4byte	.LASF3
+ 2922 0039 02       		.uleb128 0x2
+ 2923 003a 04       		.byte	0x4
+ 2924 003b 05       		.byte	0x5
+ 2925 003c 12030000 		.4byte	.LASF4
+ 2926 0040 02       		.uleb128 0x2
+ 2927 0041 04       		.byte	0x4
+ 2928 0042 07       		.byte	0x7
+ 2929 0043 69000000 		.4byte	.LASF5
+ 2930 0047 02       		.uleb128 0x2
+ 2931 0048 08       		.byte	0x8
+ 2932 0049 05       		.byte	0x5
+ 2933 004a 01020000 		.4byte	.LASF6
+ 2934 004e 02       		.uleb128 0x2
+ 2935 004f 08       		.byte	0x8
+ 2936 0050 07       		.byte	0x7
+ 2937 0051 E1010000 		.4byte	.LASF7
+ 2938 0055 03       		.uleb128 0x3
+ 2939 0056 04       		.byte	0x4
+ 2940 0057 05       		.byte	0x5
+ 2941 0058 696E7400 		.ascii	"int\000"
+ 2942 005c 02       		.uleb128 0x2
+ 2943 005d 04       		.byte	0x4
+ 2944 005e 07       		.byte	0x7
+ 2945 005f D4010000 		.4byte	.LASF8
+ 2946 0063 04       		.uleb128 0x4
+ 2947 0064 7B000000 		.4byte	.LASF9
+ 2948 0068 01       		.byte	0x1
+ 2949 0069 9201     		.2byte	0x192
+ 2950 006b 24000000 		.4byte	0x24
+ 2951 006f 04       		.uleb128 0x4
+ 2952 0070 03010000 		.4byte	.LASF10
+ 2953 0074 01       		.byte	0x1
+ 2954 0075 9301     		.2byte	0x193
+ 2955 0077 32000000 		.4byte	0x32
+ 2956 007b 02       		.uleb128 0x2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 53
 
 
- 2885      65642069 
- 2886              	.LASF14:
- 2887 01f8 73697A65 		.ascii	"sizetype\000"
- 2887      74797065 
- 2887      00
- 2888              	.LASF6:
- 2889 0201 6C6F6E67 		.ascii	"long long int\000"
- 2889      206C6F6E 
- 2889      6720696E 
- 2889      7400
- 2890              	.LASF15:
- 2891 020f 6D61736B 		.ascii	"mask\000"
- 2891      00
- 2892              	.LASF33:
- 2893 0214 47656E65 		.ascii	"Generated_Source\\PSoC5\\MDIO_Interface_REG.c\000"
- 2893      72617465 
- 2893      645F536F 
- 2893      75726365 
- 2893      5C50536F 
- 2894              	.LASF16:
- 2895 0240 6374726C 		.ascii	"ctrlReg\000"
- 2895      52656700 
- 2896              	.LASF2:
- 2897 0248 73686F72 		.ascii	"short int\000"
- 2897      7420696E 
- 2897      7400
- 2898              	.LASF25:
- 2899 0252 4D44494F 		.ascii	"MDIO_Interface_registerConfig_1\000"
- 2899      5F496E74 
- 2899      65726661 
- 2899      63655F72 
- 2899      65676973 
- 2900              	.LASF26:
- 2901 0272 4D44494F 		.ascii	"MDIO_Interface_registerConfig_2\000"
- 2901      5F496E74 
- 2901      65726661 
- 2901      63655F72 
- 2901      65676973 
- 2902              	.LASF27:
- 2903 0292 4D44494F 		.ascii	"MDIO_Interface_registerConfig_3\000"
- 2903      5F496E74 
- 2903      65726661 
- 2903      63655F72 
- 2903      65676973 
- 2904              	.LASF28:
- 2905 02b2 4D44494F 		.ascii	"MDIO_Interface_registerConfig_4\000"
- 2905      5F496E74 
- 2905      65726661 
- 2905      63655F72 
- 2905      65676973 
- 2906              	.LASF29:
- 2907 02d2 4D44494F 		.ascii	"MDIO_Interface_registerConfig_5\000"
- 2907      5F496E74 
- 2907      65726661 
- 2907      63655F72 
- 2907      65676973 
- 2908              	.LASF30:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccgpTui0.s 			page 54
+ 2957 007c 04       		.byte	0x4
+ 2958 007d 04       		.byte	0x4
+ 2959 007e 37000000 		.4byte	.LASF11
+ 2960 0082 02       		.uleb128 0x2
+ 2961 0083 08       		.byte	0x8
+ 2962 0084 04       		.byte	0x4
+ 2963 0085 A2000000 		.4byte	.LASF12
+ 2964 0089 02       		.uleb128 0x2
+ 2965 008a 01       		.byte	0x1
+ 2966 008b 08       		.byte	0x8
+ 2967 008c 1B030000 		.4byte	.LASF13
+ 2968 0090 02       		.uleb128 0x2
+ 2969 0091 04       		.byte	0x4
+ 2970 0092 07       		.byte	0x7
+ 2971 0093 F8010000 		.4byte	.LASF14
+ 2972 0097 05       		.uleb128 0x5
+ 2973 0098 04       		.byte	0x4
+ 2974 0099 02       		.byte	0x2
+ 2975 009a 38       		.byte	0x38
+ 2976 009b C4000000 		.4byte	0xc4
+ 2977 009f 06       		.uleb128 0x6
+ 2978 00a0 0F020000 		.4byte	.LASF15
+ 2979 00a4 02       		.byte	0x2
+ 2980 00a5 3A       		.byte	0x3a
+ 2981 00a6 6F000000 		.4byte	0x6f
+ 2982 00aa 00       		.byte	0
+ 2983 00ab 06       		.uleb128 0x6
+ 2984 00ac 40020000 		.4byte	.LASF16
+ 2985 00b0 02       		.byte	0x2
+ 2986 00b1 3B       		.byte	0x3b
+ 2987 00b2 63000000 		.4byte	0x63
+ 2988 00b6 02       		.byte	0x2
+ 2989 00b7 06       		.uleb128 0x6
+ 2990 00b8 00000000 		.4byte	.LASF17
+ 2991 00bc 02       		.byte	0x2
+ 2992 00bd 3C       		.byte	0x3c
+ 2993 00be 63000000 		.4byte	0x63
+ 2994 00c2 03       		.byte	0x3
+ 2995 00c3 00       		.byte	0
+ 2996 00c4 07       		.uleb128 0x7
+ 2997 00c5 81000000 		.4byte	.LASF18
+ 2998 00c9 02       		.byte	0x2
+ 2999 00ca 3E       		.byte	0x3e
+ 3000 00cb 97000000 		.4byte	0x97
+ 3001 00cf 08       		.uleb128 0x8
+ 3002 00d0 63000000 		.4byte	0x63
+ 3003 00d4 E0000000 		.4byte	0xe0
+ 3004 00d8 09       		.uleb128 0x9
+ 3005 00d9 90000000 		.4byte	0x90
+ 3006 00dd FF01     		.2byte	0x1ff
+ 3007 00df 00       		.byte	0
+ 3008 00e0 0A       		.uleb128 0xa
+ 3009 00e1 A9000000 		.4byte	.LASF19
+ 3010 00e5 03       		.byte	0x3
+ 3011 00e6 1A       		.byte	0x1a
+ 3012 00e7 CF000000 		.4byte	0xcf
+ 3013 00eb 05       		.uleb128 0x5
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 54
 
 
- 2909 02f2 4D44494F 		.ascii	"MDIO_Interface_registerConfig_6\000"
- 2909      5F496E74 
- 2909      65726661 
- 2909      63655F72 
- 2909      65676973 
- 2910              	.LASF4:
- 2911 0312 6C6F6E67 		.ascii	"long int\000"
- 2911      20696E74 
- 2911      00
- 2912              	.LASF13:
- 2913 031b 63686172 		.ascii	"char\000"
- 2913      00
- 2914              	.LASF0:
- 2915 0320 7369676E 		.ascii	"signed char\000"
- 2915      65642063 
- 2915      68617200 
- 2916              	.LASF34:
- 2917 032c 443A5C70 		.ascii	"D:\\pgm\\Cypress_dem_board\\CFP_reader\\cfp_reader\\"
- 2917      676D5C43 
- 2917      79707265 
- 2917      73735F64 
- 2917      656D5F62 
- 2918 035b 575F6366 		.ascii	"W_cfp_reader\\cfp_reader.cydsn\000"
- 2918      705F7265 
- 2918      61646572 
- 2918      5C636670 
- 2918      5F726561 
- 2919              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 3014 00ec 03       		.byte	0x3
+ 3015 00ed 00000000 		.4byte	MDIO_Interface_registerPage_1
+ 3016 00f1 08       		.uleb128 0x8
+ 3017 00f2 63000000 		.4byte	0x63
+ 3018 00f6 01010000 		.4byte	0x101
+ 3019 00fa 0B       		.uleb128 0xb
+ 3020 00fb 90000000 		.4byte	0x90
+ 3021 00ff FF       		.byte	0xff
+ 3022 0100 00       		.byte	0
+ 3023 0101 0A       		.uleb128 0xa
+ 3024 0102 C7000000 		.4byte	.LASF20
+ 3025 0106 03       		.byte	0x3
+ 3026 0107 3F       		.byte	0x3f
+ 3027 0108 F1000000 		.4byte	0xf1
+ 3028 010c 05       		.uleb128 0x5
+ 3029 010d 03       		.byte	0x3
+ 3030 010e 00000000 		.4byte	MDIO_Interface_registerPage_2
+ 3031 0112 0A       		.uleb128 0xa
+ 3032 0113 E5000000 		.4byte	.LASF21
+ 3033 0117 03       		.byte	0x3
+ 3034 0118 42       		.byte	0x42
+ 3035 0119 F1000000 		.4byte	0xf1
+ 3036 011d 05       		.uleb128 0x5
+ 3037 011e 03       		.byte	0x3
+ 3038 011f 00000000 		.4byte	MDIO_Interface_registerPage_3
+ 3039 0123 08       		.uleb128 0x8
+ 3040 0124 6F000000 		.4byte	0x6f
+ 3041 0128 33010000 		.4byte	0x133
+ 3042 012c 0B       		.uleb128 0xb
+ 3043 012d 90000000 		.4byte	0x90
+ 3044 0131 7F       		.byte	0x7f
+ 3045 0132 00       		.byte	0
+ 3046 0133 0A       		.uleb128 0xa
+ 3047 0134 3D000000 		.4byte	.LASF22
+ 3048 0138 03       		.byte	0x3
+ 3049 0139 45       		.byte	0x45
+ 3050 013a 23010000 		.4byte	0x123
+ 3051 013e 05       		.uleb128 0x5
+ 3052 013f 03       		.byte	0x3
+ 3053 0140 00000000 		.4byte	MDIO_Interface_registerPage_4
+ 3054 0144 08       		.uleb128 0x8
+ 3055 0145 6F000000 		.4byte	0x6f
+ 3056 0149 54010000 		.4byte	0x154
+ 3057 014d 0B       		.uleb128 0xb
+ 3058 014e 90000000 		.4byte	0x90
+ 3059 0152 FF       		.byte	0xff
+ 3060 0153 00       		.byte	0
+ 3061 0154 0A       		.uleb128 0xa
+ 3062 0155 0A010000 		.4byte	.LASF23
+ 3063 0159 03       		.byte	0x3
+ 3064 015a 48       		.byte	0x48
+ 3065 015b 44010000 		.4byte	0x144
+ 3066 015f 05       		.uleb128 0x5
+ 3067 0160 03       		.byte	0x3
+ 3068 0161 00000000 		.4byte	MDIO_Interface_registerPage_5
+ 3069 0165 0A       		.uleb128 0xa
+ 3070 0166 28010000 		.4byte	.LASF24
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 55
+
+
+ 3071 016a 03       		.byte	0x3
+ 3072 016b 4B       		.byte	0x4b
+ 3073 016c 23010000 		.4byte	0x123
+ 3074 0170 05       		.uleb128 0x5
+ 3075 0171 03       		.byte	0x3
+ 3076 0172 00000000 		.4byte	MDIO_Interface_registerPage_6
+ 3077 0176 08       		.uleb128 0x8
+ 3078 0177 C4000000 		.4byte	0xc4
+ 3079 017b 87010000 		.4byte	0x187
+ 3080 017f 09       		.uleb128 0x9
+ 3081 0180 90000000 		.4byte	0x90
+ 3082 0184 FF01     		.2byte	0x1ff
+ 3083 0186 00       		.byte	0
+ 3084 0187 0A       		.uleb128 0xa
+ 3085 0188 52020000 		.4byte	.LASF25
+ 3086 018c 03       		.byte	0x3
+ 3087 018d 4E       		.byte	0x4e
+ 3088 018e 98010000 		.4byte	0x198
+ 3089 0192 05       		.uleb128 0x5
+ 3090 0193 03       		.byte	0x3
+ 3091 0194 00000000 		.4byte	MDIO_Interface_registerConfig_1
+ 3092 0198 0C       		.uleb128 0xc
+ 3093 0199 76010000 		.4byte	0x176
+ 3094 019d 08       		.uleb128 0x8
+ 3095 019e C4000000 		.4byte	0xc4
+ 3096 01a2 AD010000 		.4byte	0x1ad
+ 3097 01a6 0B       		.uleb128 0xb
+ 3098 01a7 90000000 		.4byte	0x90
+ 3099 01ab FF       		.byte	0xff
+ 3100 01ac 00       		.byte	0
+ 3101 01ad 0A       		.uleb128 0xa
+ 3102 01ae 72020000 		.4byte	.LASF26
+ 3103 01b2 03       		.byte	0x3
+ 3104 01b3 D2       		.byte	0xd2
+ 3105 01b4 BE010000 		.4byte	0x1be
+ 3106 01b8 05       		.uleb128 0x5
+ 3107 01b9 03       		.byte	0x3
+ 3108 01ba 00000000 		.4byte	MDIO_Interface_registerConfig_2
+ 3109 01be 0C       		.uleb128 0xc
+ 3110 01bf 9D010000 		.4byte	0x19d
+ 3111 01c3 0D       		.uleb128 0xd
+ 3112 01c4 92020000 		.4byte	.LASF27
+ 3113 01c8 03       		.byte	0x3
+ 3114 01c9 1601     		.2byte	0x116
+ 3115 01cb D5010000 		.4byte	0x1d5
+ 3116 01cf 05       		.uleb128 0x5
+ 3117 01d0 03       		.byte	0x3
+ 3118 01d1 00000000 		.4byte	MDIO_Interface_registerConfig_3
+ 3119 01d5 0C       		.uleb128 0xc
+ 3120 01d6 9D010000 		.4byte	0x19d
+ 3121 01da 08       		.uleb128 0x8
+ 3122 01db C4000000 		.4byte	0xc4
+ 3123 01df EA010000 		.4byte	0x1ea
+ 3124 01e3 0B       		.uleb128 0xb
+ 3125 01e4 90000000 		.4byte	0x90
+ 3126 01e8 7F       		.byte	0x7f
+ 3127 01e9 00       		.byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 56
+
+
+ 3128 01ea 0D       		.uleb128 0xd
+ 3129 01eb B2020000 		.4byte	.LASF28
+ 3130 01ef 03       		.byte	0x3
+ 3131 01f0 5A01     		.2byte	0x15a
+ 3132 01f2 FC010000 		.4byte	0x1fc
+ 3133 01f6 05       		.uleb128 0x5
+ 3134 01f7 03       		.byte	0x3
+ 3135 01f8 00000000 		.4byte	MDIO_Interface_registerConfig_4
+ 3136 01fc 0C       		.uleb128 0xc
+ 3137 01fd DA010000 		.4byte	0x1da
+ 3138 0201 0D       		.uleb128 0xd
+ 3139 0202 D2020000 		.4byte	.LASF29
+ 3140 0206 03       		.byte	0x3
+ 3141 0207 7E01     		.2byte	0x17e
+ 3142 0209 9D010000 		.4byte	0x19d
+ 3143 020d 05       		.uleb128 0x5
+ 3144 020e 03       		.byte	0x3
+ 3145 020f 00000000 		.4byte	MDIO_Interface_registerConfig_5
+ 3146 0213 0D       		.uleb128 0xd
+ 3147 0214 F2020000 		.4byte	.LASF30
+ 3148 0218 03       		.byte	0x3
+ 3149 0219 C201     		.2byte	0x1c2
+ 3150 021b DA010000 		.4byte	0x1da
+ 3151 021f 05       		.uleb128 0x5
+ 3152 0220 03       		.byte	0x3
+ 3153 0221 00000000 		.4byte	MDIO_Interface_registerConfig_6
+ 3154 0225 08       		.uleb128 0x8
+ 3155 0226 35020000 		.4byte	0x235
+ 3156 022a 35020000 		.4byte	0x235
+ 3157 022e 0B       		.uleb128 0xb
+ 3158 022f 90000000 		.4byte	0x90
+ 3159 0233 0B       		.byte	0xb
+ 3160 0234 00       		.byte	0
+ 3161 0235 0E       		.uleb128 0xe
+ 3162 0236 04       		.byte	0x4
+ 3163 0237 3B020000 		.4byte	0x23b
+ 3164 023b 0C       		.uleb128 0xc
+ 3165 023c 6F000000 		.4byte	0x6f
+ 3166 0240 0D       		.uleb128 0xd
+ 3167 0241 09000000 		.4byte	.LASF31
+ 3168 0245 03       		.byte	0x3
+ 3169 0246 E501     		.2byte	0x1e5
+ 3170 0248 52020000 		.4byte	0x252
+ 3171 024c 05       		.uleb128 0x5
+ 3172 024d 03       		.byte	0x3
+ 3173 024e 00000000 		.4byte	MDIO_Interface_pageInfoPtr
+ 3174 0252 0C       		.uleb128 0xc
+ 3175 0253 25020000 		.4byte	0x225
+ 3176 0257 00       		.byte	0
+ 3177              		.section	.debug_abbrev,"",%progbits
+ 3178              	.Ldebug_abbrev0:
+ 3179 0000 01       		.uleb128 0x1
+ 3180 0001 11       		.uleb128 0x11
+ 3181 0002 01       		.byte	0x1
+ 3182 0003 25       		.uleb128 0x25
+ 3183 0004 0E       		.uleb128 0xe
+ 3184 0005 13       		.uleb128 0x13
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 57
+
+
+ 3185 0006 0B       		.uleb128 0xb
+ 3186 0007 03       		.uleb128 0x3
+ 3187 0008 0E       		.uleb128 0xe
+ 3188 0009 1B       		.uleb128 0x1b
+ 3189 000a 0E       		.uleb128 0xe
+ 3190 000b 10       		.uleb128 0x10
+ 3191 000c 17       		.uleb128 0x17
+ 3192 000d 00       		.byte	0
+ 3193 000e 00       		.byte	0
+ 3194 000f 02       		.uleb128 0x2
+ 3195 0010 24       		.uleb128 0x24
+ 3196 0011 00       		.byte	0
+ 3197 0012 0B       		.uleb128 0xb
+ 3198 0013 0B       		.uleb128 0xb
+ 3199 0014 3E       		.uleb128 0x3e
+ 3200 0015 0B       		.uleb128 0xb
+ 3201 0016 03       		.uleb128 0x3
+ 3202 0017 0E       		.uleb128 0xe
+ 3203 0018 00       		.byte	0
+ 3204 0019 00       		.byte	0
+ 3205 001a 03       		.uleb128 0x3
+ 3206 001b 24       		.uleb128 0x24
+ 3207 001c 00       		.byte	0
+ 3208 001d 0B       		.uleb128 0xb
+ 3209 001e 0B       		.uleb128 0xb
+ 3210 001f 3E       		.uleb128 0x3e
+ 3211 0020 0B       		.uleb128 0xb
+ 3212 0021 03       		.uleb128 0x3
+ 3213 0022 08       		.uleb128 0x8
+ 3214 0023 00       		.byte	0
+ 3215 0024 00       		.byte	0
+ 3216 0025 04       		.uleb128 0x4
+ 3217 0026 16       		.uleb128 0x16
+ 3218 0027 00       		.byte	0
+ 3219 0028 03       		.uleb128 0x3
+ 3220 0029 0E       		.uleb128 0xe
+ 3221 002a 3A       		.uleb128 0x3a
+ 3222 002b 0B       		.uleb128 0xb
+ 3223 002c 3B       		.uleb128 0x3b
+ 3224 002d 05       		.uleb128 0x5
+ 3225 002e 49       		.uleb128 0x49
+ 3226 002f 13       		.uleb128 0x13
+ 3227 0030 00       		.byte	0
+ 3228 0031 00       		.byte	0
+ 3229 0032 05       		.uleb128 0x5
+ 3230 0033 13       		.uleb128 0x13
+ 3231 0034 01       		.byte	0x1
+ 3232 0035 0B       		.uleb128 0xb
+ 3233 0036 0B       		.uleb128 0xb
+ 3234 0037 3A       		.uleb128 0x3a
+ 3235 0038 0B       		.uleb128 0xb
+ 3236 0039 3B       		.uleb128 0x3b
+ 3237 003a 0B       		.uleb128 0xb
+ 3238 003b 01       		.uleb128 0x1
+ 3239 003c 13       		.uleb128 0x13
+ 3240 003d 00       		.byte	0
+ 3241 003e 00       		.byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 58
+
+
+ 3242 003f 06       		.uleb128 0x6
+ 3243 0040 0D       		.uleb128 0xd
+ 3244 0041 00       		.byte	0
+ 3245 0042 03       		.uleb128 0x3
+ 3246 0043 0E       		.uleb128 0xe
+ 3247 0044 3A       		.uleb128 0x3a
+ 3248 0045 0B       		.uleb128 0xb
+ 3249 0046 3B       		.uleb128 0x3b
+ 3250 0047 0B       		.uleb128 0xb
+ 3251 0048 49       		.uleb128 0x49
+ 3252 0049 13       		.uleb128 0x13
+ 3253 004a 38       		.uleb128 0x38
+ 3254 004b 0B       		.uleb128 0xb
+ 3255 004c 00       		.byte	0
+ 3256 004d 00       		.byte	0
+ 3257 004e 07       		.uleb128 0x7
+ 3258 004f 16       		.uleb128 0x16
+ 3259 0050 00       		.byte	0
+ 3260 0051 03       		.uleb128 0x3
+ 3261 0052 0E       		.uleb128 0xe
+ 3262 0053 3A       		.uleb128 0x3a
+ 3263 0054 0B       		.uleb128 0xb
+ 3264 0055 3B       		.uleb128 0x3b
+ 3265 0056 0B       		.uleb128 0xb
+ 3266 0057 49       		.uleb128 0x49
+ 3267 0058 13       		.uleb128 0x13
+ 3268 0059 00       		.byte	0
+ 3269 005a 00       		.byte	0
+ 3270 005b 08       		.uleb128 0x8
+ 3271 005c 01       		.uleb128 0x1
+ 3272 005d 01       		.byte	0x1
+ 3273 005e 49       		.uleb128 0x49
+ 3274 005f 13       		.uleb128 0x13
+ 3275 0060 01       		.uleb128 0x1
+ 3276 0061 13       		.uleb128 0x13
+ 3277 0062 00       		.byte	0
+ 3278 0063 00       		.byte	0
+ 3279 0064 09       		.uleb128 0x9
+ 3280 0065 21       		.uleb128 0x21
+ 3281 0066 00       		.byte	0
+ 3282 0067 49       		.uleb128 0x49
+ 3283 0068 13       		.uleb128 0x13
+ 3284 0069 2F       		.uleb128 0x2f
+ 3285 006a 05       		.uleb128 0x5
+ 3286 006b 00       		.byte	0
+ 3287 006c 00       		.byte	0
+ 3288 006d 0A       		.uleb128 0xa
+ 3289 006e 34       		.uleb128 0x34
+ 3290 006f 00       		.byte	0
+ 3291 0070 03       		.uleb128 0x3
+ 3292 0071 0E       		.uleb128 0xe
+ 3293 0072 3A       		.uleb128 0x3a
+ 3294 0073 0B       		.uleb128 0xb
+ 3295 0074 3B       		.uleb128 0x3b
+ 3296 0075 0B       		.uleb128 0xb
+ 3297 0076 49       		.uleb128 0x49
+ 3298 0077 13       		.uleb128 0x13
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 59
+
+
+ 3299 0078 3F       		.uleb128 0x3f
+ 3300 0079 19       		.uleb128 0x19
+ 3301 007a 02       		.uleb128 0x2
+ 3302 007b 18       		.uleb128 0x18
+ 3303 007c 00       		.byte	0
+ 3304 007d 00       		.byte	0
+ 3305 007e 0B       		.uleb128 0xb
+ 3306 007f 21       		.uleb128 0x21
+ 3307 0080 00       		.byte	0
+ 3308 0081 49       		.uleb128 0x49
+ 3309 0082 13       		.uleb128 0x13
+ 3310 0083 2F       		.uleb128 0x2f
+ 3311 0084 0B       		.uleb128 0xb
+ 3312 0085 00       		.byte	0
+ 3313 0086 00       		.byte	0
+ 3314 0087 0C       		.uleb128 0xc
+ 3315 0088 26       		.uleb128 0x26
+ 3316 0089 00       		.byte	0
+ 3317 008a 49       		.uleb128 0x49
+ 3318 008b 13       		.uleb128 0x13
+ 3319 008c 00       		.byte	0
+ 3320 008d 00       		.byte	0
+ 3321 008e 0D       		.uleb128 0xd
+ 3322 008f 34       		.uleb128 0x34
+ 3323 0090 00       		.byte	0
+ 3324 0091 03       		.uleb128 0x3
+ 3325 0092 0E       		.uleb128 0xe
+ 3326 0093 3A       		.uleb128 0x3a
+ 3327 0094 0B       		.uleb128 0xb
+ 3328 0095 3B       		.uleb128 0x3b
+ 3329 0096 05       		.uleb128 0x5
+ 3330 0097 49       		.uleb128 0x49
+ 3331 0098 13       		.uleb128 0x13
+ 3332 0099 3F       		.uleb128 0x3f
+ 3333 009a 19       		.uleb128 0x19
+ 3334 009b 02       		.uleb128 0x2
+ 3335 009c 18       		.uleb128 0x18
+ 3336 009d 00       		.byte	0
+ 3337 009e 00       		.byte	0
+ 3338 009f 0E       		.uleb128 0xe
+ 3339 00a0 0F       		.uleb128 0xf
+ 3340 00a1 00       		.byte	0
+ 3341 00a2 0B       		.uleb128 0xb
+ 3342 00a3 0B       		.uleb128 0xb
+ 3343 00a4 49       		.uleb128 0x49
+ 3344 00a5 13       		.uleb128 0x13
+ 3345 00a6 00       		.byte	0
+ 3346 00a7 00       		.byte	0
+ 3347 00a8 00       		.byte	0
+ 3348              		.section	.debug_aranges,"",%progbits
+ 3349 0000 14000000 		.4byte	0x14
+ 3350 0004 0200     		.2byte	0x2
+ 3351 0006 00000000 		.4byte	.Ldebug_info0
+ 3352 000a 04       		.byte	0x4
+ 3353 000b 00       		.byte	0
+ 3354 000c 0000     		.2byte	0
+ 3355 000e 0000     		.2byte	0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 60
+
+
+ 3356 0010 00000000 		.4byte	0
+ 3357 0014 00000000 		.4byte	0
+ 3358              		.section	.debug_line,"",%progbits
+ 3359              	.Ldebug_line0:
+ 3360 0000 69000000 		.section	.debug_str,"MS",%progbits,1
+ 3360      02006300 
+ 3360      00000201 
+ 3360      FB0E0D00 
+ 3360      01010101 
+ 3361              	.LASF17:
+ 3362 0000 72657365 		.ascii	"reserved\000"
+ 3362      72766564 
+ 3362      00
+ 3363              	.LASF31:
+ 3364 0009 4D44494F 		.ascii	"MDIO_Interface_pageInfoPtr\000"
+ 3364      5F496E74 
+ 3364      65726661 
+ 3364      63655F70 
+ 3364      61676549 
+ 3365              	.LASF3:
+ 3366 0024 73686F72 		.ascii	"short unsigned int\000"
+ 3366      7420756E 
+ 3366      7369676E 
+ 3366      65642069 
+ 3366      6E7400
+ 3367              	.LASF11:
+ 3368 0037 666C6F61 		.ascii	"float\000"
+ 3368      7400
+ 3369              	.LASF22:
+ 3370 003d 4D44494F 		.ascii	"MDIO_Interface_registerPage_4\000"
+ 3370      5F496E74 
+ 3370      65726661 
+ 3370      63655F72 
+ 3370      65676973 
+ 3371              	.LASF1:
+ 3372 005b 756E7369 		.ascii	"unsigned char\000"
+ 3372      676E6564 
+ 3372      20636861 
+ 3372      7200
+ 3373              	.LASF5:
+ 3374 0069 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3374      20756E73 
+ 3374      69676E65 
+ 3374      6420696E 
+ 3374      7400
+ 3375              	.LASF9:
+ 3376 007b 75696E74 		.ascii	"uint8\000"
+ 3376      3800
+ 3377              	.LASF18:
+ 3378 0081 4D44494F 		.ascii	"MDIO_Interface_REG_CONFIG_STRUCT\000"
+ 3378      5F496E74 
+ 3378      65726661 
+ 3378      63655F52 
+ 3378      45475F43 
+ 3379              	.LASF12:
+ 3380 00a2 646F7562 		.ascii	"double\000"
+ 3380      6C6500
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 61
+
+
+ 3381              	.LASF19:
+ 3382 00a9 4D44494F 		.ascii	"MDIO_Interface_registerPage_1\000"
+ 3382      5F496E74 
+ 3382      65726661 
+ 3382      63655F72 
+ 3382      65676973 
+ 3383              	.LASF20:
+ 3384 00c7 4D44494F 		.ascii	"MDIO_Interface_registerPage_2\000"
+ 3384      5F496E74 
+ 3384      65726661 
+ 3384      63655F72 
+ 3384      65676973 
+ 3385              	.LASF21:
+ 3386 00e5 4D44494F 		.ascii	"MDIO_Interface_registerPage_3\000"
+ 3386      5F496E74 
+ 3386      65726661 
+ 3386      63655F72 
+ 3386      65676973 
+ 3387              	.LASF10:
+ 3388 0103 75696E74 		.ascii	"uint16\000"
+ 3388      313600
+ 3389              	.LASF23:
+ 3390 010a 4D44494F 		.ascii	"MDIO_Interface_registerPage_5\000"
+ 3390      5F496E74 
+ 3390      65726661 
+ 3390      63655F72 
+ 3390      65676973 
+ 3391              	.LASF24:
+ 3392 0128 4D44494F 		.ascii	"MDIO_Interface_registerPage_6\000"
+ 3392      5F496E74 
+ 3392      65726661 
+ 3392      63655F72 
+ 3392      65676973 
+ 3393              	.LASF32:
+ 3394 0146 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 3394      4320342E 
+ 3394      392E3320 
+ 3394      32303135 
+ 3394      30333033 
+ 3395 0179 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 3395      20726576 
+ 3395      6973696F 
+ 3395      6E203232 
+ 3395      31323230 
+ 3396 01ac 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 3396      66756E63 
+ 3396      74696F6E 
+ 3396      2D736563 
+ 3396      74696F6E 
+ 3397              	.LASF8:
+ 3398 01d4 756E7369 		.ascii	"unsigned int\000"
+ 3398      676E6564 
+ 3398      20696E74 
+ 3398      00
+ 3399              	.LASF7:
+ 3400 01e1 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3400      206C6F6E 
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 62
+
+
+ 3400      6720756E 
+ 3400      7369676E 
+ 3400      65642069 
+ 3401              	.LASF14:
+ 3402 01f8 73697A65 		.ascii	"sizetype\000"
+ 3402      74797065 
+ 3402      00
+ 3403              	.LASF6:
+ 3404 0201 6C6F6E67 		.ascii	"long long int\000"
+ 3404      206C6F6E 
+ 3404      6720696E 
+ 3404      7400
+ 3405              	.LASF15:
+ 3406 020f 6D61736B 		.ascii	"mask\000"
+ 3406      00
+ 3407              	.LASF33:
+ 3408 0214 47656E65 		.ascii	"Generated_Source\\PSoC5\\MDIO_Interface_REG.c\000"
+ 3408      72617465 
+ 3408      645F536F 
+ 3408      75726365 
+ 3408      5C50536F 
+ 3409              	.LASF16:
+ 3410 0240 6374726C 		.ascii	"ctrlReg\000"
+ 3410      52656700 
+ 3411              	.LASF2:
+ 3412 0248 73686F72 		.ascii	"short int\000"
+ 3412      7420696E 
+ 3412      7400
+ 3413              	.LASF25:
+ 3414 0252 4D44494F 		.ascii	"MDIO_Interface_registerConfig_1\000"
+ 3414      5F496E74 
+ 3414      65726661 
+ 3414      63655F72 
+ 3414      65676973 
+ 3415              	.LASF26:
+ 3416 0272 4D44494F 		.ascii	"MDIO_Interface_registerConfig_2\000"
+ 3416      5F496E74 
+ 3416      65726661 
+ 3416      63655F72 
+ 3416      65676973 
+ 3417              	.LASF27:
+ 3418 0292 4D44494F 		.ascii	"MDIO_Interface_registerConfig_3\000"
+ 3418      5F496E74 
+ 3418      65726661 
+ 3418      63655F72 
+ 3418      65676973 
+ 3419              	.LASF28:
+ 3420 02b2 4D44494F 		.ascii	"MDIO_Interface_registerConfig_4\000"
+ 3420      5F496E74 
+ 3420      65726661 
+ 3420      63655F72 
+ 3420      65676973 
+ 3421              	.LASF29:
+ 3422 02d2 4D44494F 		.ascii	"MDIO_Interface_registerConfig_5\000"
+ 3422      5F496E74 
+ 3422      65726661 
+ 3422      63655F72 
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjz00jc.s 			page 63
+
+
+ 3422      65676973 
+ 3423              	.LASF30:
+ 3424 02f2 4D44494F 		.ascii	"MDIO_Interface_registerConfig_6\000"
+ 3424      5F496E74 
+ 3424      65726661 
+ 3424      63655F72 
+ 3424      65676973 
+ 3425              	.LASF4:
+ 3426 0312 6C6F6E67 		.ascii	"long int\000"
+ 3426      20696E74 
+ 3426      00
+ 3427              	.LASF13:
+ 3428 031b 63686172 		.ascii	"char\000"
+ 3428      00
+ 3429              	.LASF0:
+ 3430 0320 7369676E 		.ascii	"signed char\000"
+ 3430      65642063 
+ 3430      68617200 
+ 3431              	.LASF34:
+ 3432 032c 443A5C70 		.ascii	"D:\\pgm\\Cypress_dem_board\\CFP_reader\\cfp_reader\\"
+ 3432      676D5C43 
+ 3432      79707265 
+ 3432      73735F64 
+ 3432      656D5F62 
+ 3433 035b 575F6366 		.ascii	"W_cfp_reader\\cfp_reader.cydsn\000"
+ 3433      705F7265 
+ 3433      61646572 
+ 3433      5C636670 
+ 3433      5F726561 
+ 3434              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

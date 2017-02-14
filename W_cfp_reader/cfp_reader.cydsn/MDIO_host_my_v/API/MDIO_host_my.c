@@ -310,9 +310,41 @@ uint8 `$INSTANCE_NAME`_ReadDataC45(uint8 phy_addr, uint8 dev_addr, uint16 *regDa
 	while( !`$INSTANCE_NAME`_StatusRegister );
     
    /* Get Data from FIFO f1 */
-    LED_3_Write(1);
+    //LED_3_Write(1);
 	*regData = CY_GET_REG16(`$INSTANCE_NAME`_A0_PTR);
-	LED_3_Write(0);
+	//LED_3_Write(0);
+    /* Clear hardware status register */
+	status_reg = `$INSTANCE_NAME`_STATUS_REG;
+	return ((status_reg)? 0 : 1);
+    
+}
+/*******************************************************************************
+*
+* `$INSTANCE_NAME`_PosReadData_C45()
+*
+*******************************************************************************/
+uint8 `$INSTANCE_NAME`_PosReadDataC45(uint8 phy_addr, uint8 dev_addr, uint16 *regData) // Post Read Inc Add 
+{
+   	uint16	control_bits;
+	uint8 status_reg;
+
+	/* Clear and Set the control register for reading */
+	`$INSTANCE_NAME`_CONTROL_REG = `$INSTANCE_NAME`_READ;
+	
+   	/* Set the control bits and write in the fifo f0 */
+   	control_bits = 0x0002+((uint16)2<<12)+(((uint16)phy_addr)<<7)+(((uint16)dev_addr)<<2);
+   	`$INSTANCE_NAME`_FIFO_F0_REG = control_bits;
+    `$INSTANCE_NAME`_FIFO_F0_REG = 0xFFFF;
+    
+    /* Wait till the transmission is completed */
+    `$INSTANCE_NAME`_StatusRegister=0u;
+    
+	while( !`$INSTANCE_NAME`_StatusRegister );
+    
+   /* Get Data from FIFO f1 */
+   // LED_3_Write(1);
+	*regData = CY_GET_REG16(`$INSTANCE_NAME`_A0_PTR);
+	//LED_3_Write(0);
     /* Clear hardware status register */
 	status_reg = `$INSTANCE_NAME`_STATUS_REG;
 	return ((status_reg)? 0 : 1);

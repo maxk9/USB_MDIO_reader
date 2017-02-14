@@ -6,7 +6,7 @@
 
 #Build Date:         Apr 29 2016 09:00:55
 
-#File Generated:     Feb 6 2017 15:38:39
+#File Generated:     Feb 13 2017 15:48:47
 
 #Purpose:            
 
@@ -81,8 +81,8 @@ analysis after routing.
 ======================================================================
 Number of clocks: 10
 Clock: Clock_1              | Frequency:  25.2 MHz | Target:   8.0 MHz
-Clock: Clock_2              | Frequency:  66.1 MHz | Target:   0.0 MHz
-Clock: Clock_3              | Frequency:  53.8 MHz | Target:  24.0 MHz
+Clock: Clock_2              | Frequency:  79.1 MHz | Target:   0.0 MHz
+Clock: Clock_3              | Frequency:  57.7 MHz | Target:  24.0 MHz
 Clock: CyBUS_CLK            | Frequency:  62.1 MHz | Target:  24.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.1 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  24.0 MHz
@@ -130,8 +130,8 @@ analysis after routing.
 ======================================================================
 Number of clocks: 10
 Clock: Clock_1              | Frequency:  25.2 MHz | Target:   8.0 MHz
-Clock: Clock_2              | Frequency:  66.1 MHz | Target:   0.0 MHz
-Clock: Clock_3              | Frequency:  53.8 MHz | Target:  24.0 MHz
+Clock: Clock_2              | Frequency:  79.1 MHz | Target:   0.0 MHz
+Clock: Clock_3              | Frequency:  57.7 MHz | Target:  24.0 MHz
 Clock: CyBUS_CLK            | Frequency:  62.1 MHz | Target:  24.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.1 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  24.0 MHz
@@ -159,8 +159,8 @@ analysis after routing.
 ======================================================================
 Number of clocks: 10
 Clock: Clock_1              | Frequency:  25.2 MHz | Target:   8.0 MHz
-Clock: Clock_2              | Frequency:  74.2 MHz | Target:   0.0 MHz
-Clock: Clock_3              | Frequency:  55.4 MHz | Target:  24.0 MHz
+Clock: Clock_2              | Frequency:  79.1 MHz | Target:   0.0 MHz
+Clock: Clock_3              | Frequency:  57.2 MHz | Target:  24.0 MHz
 Clock: CyBUS_CLK            | Frequency:  62.1 MHz | Target:  24.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.1 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  24.0 MHz
@@ -181,8 +181,8 @@ Phase 7
 ======================================================================
 Number of clocks: 10
 Clock: Clock_1              | Frequency:   4.1 MHz | Target:   8.8 MHz
-Clock: Clock_2              | Frequency:  74.2 MHz | Target:   0.0 MHz
-Clock: Clock_3              | Frequency:  51.3 MHz | Target:  26.3 MHz
+Clock: Clock_2              | Frequency:  79.1 MHz | Target:   0.0 MHz
+Clock: Clock_3              | Frequency:  57.2 MHz | Target:  26.3 MHz
 Clock: CyBUS_CLK            | Frequency:   4.1 MHz | Target:  26.3 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.1 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  24.0 MHz
@@ -226,8 +226,8 @@ analysis after routing.
 ======================================================================
 Number of clocks: 10
 Clock: Clock_1              | Frequency:   4.1 MHz | Target:   8.8 MHz
-Clock: Clock_2              | Frequency:  63.9 MHz | Target:   0.0 MHz
-Clock: Clock_3              | Frequency:  53.1 MHz | Target:  26.3 MHz
+Clock: Clock_2              | Frequency:  71.5 MHz | Target:   0.0 MHz
+Clock: Clock_3              | Frequency:  59.0 MHz | Target:  26.3 MHz
 Clock: CyBUS_CLK            | Frequency:   4.1 MHz | Target:  26.3 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.1 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  24.0 MHz

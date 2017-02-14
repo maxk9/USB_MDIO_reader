@@ -1,5 +1,5 @@
 -- Project:   cfp_reader
--- Generated: 02/06/2017 15:38:39
+-- Generated: 02/13/2017 15:48:47
 -- PSoC Creator  4.0
 
 ENTITY cfp_reader IS
@@ -60,7 +60,6 @@ ARCHITECTURE __DEFAULT__ OF cfp_reader IS
     SIGNAL Net_1243 : bit;
     SIGNAL Net_1881 : bit;
     SIGNAL Net_1882 : bit;
-    SIGNAL Net_1924 : bit;
     SIGNAL Net_1950 : bit;
     SIGNAL Net_1951 : bit;
     SIGNAL Net_1952 : bit;
@@ -75,6 +74,7 @@ ARCHITECTURE __DEFAULT__ OF cfp_reader IS
     SIGNAL Net_2069 : bit;
     SIGNAL Net_2071 : bit;
     SIGNAL Net_2086 : bit;
+    SIGNAL Net_2098 : bit;
     SIGNAL Net_548 : bit;
     ATTRIBUTE udbclken_assigned OF Net_548 : SIGNAL IS "True";
     ATTRIBUTE global_signal OF Net_548 : SIGNAL IS true;
@@ -373,7 +373,7 @@ ARCHITECTURE __DEFAULT__ OF cfp_reader IS
     ATTRIBUTE lib_model OF \MDIO_host_2:status_val_2\ : LABEL IS "macrocell4";
     ATTRIBUTE lib_model OF \MDIO_host_2:en_count\ : LABEL IS "macrocell5";
     ATTRIBUTE lib_model OF Net_2054 : LABEL IS "macrocell6";
-    ATTRIBUTE lib_model OF Net_1924 : LABEL IS "macrocell7";
+    ATTRIBUTE lib_model OF Net_2098 : LABEL IS "macrocell7";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:rising_mdc\ : LABEL IS "macrocell8";
     ATTRIBUTE lib_model OF \MDIO_Interface:bMDIO:ld_count\ : LABEL IS "macrocell9";
     ATTRIBUTE lib_model OF \PWM_1:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "datapathcell1";
@@ -1756,7 +1756,7 @@ BEGIN
             oe_sync => "0",
             output_clk_en => 0,
             output_clock_mode => "0",
-            output_conn => "1",
+            output_conn => "0",
             output_mode => "0",
             output_reset => 0,
             output_sync => "0",
@@ -1786,7 +1786,7 @@ BEGIN
             slew_rate => "0",
             spanning => 0,
             sw_only => 0,
-            use_annotation => "0",
+            use_annotation => "1",
             vtrip => "10",
             width => 1,
             in_clk_inv => 0,
@@ -1810,12 +1810,10 @@ BEGIN
             oe_sync_mode => 0,
             logicalport => "Debug_MDIO_1",
             logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
         PORT MAP(
             pa_out => Debug_MDIO_1(0)__PA,
             oe => open,
-            pin_input => Net_1924,
-            pad_out => Debug_MDIO_1(0)_PAD,
             pad_in => Debug_MDIO_1(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
@@ -2267,13 +2265,13 @@ BEGIN
             main_5 => \MDIO_host_2:counter_1\,
             main_6 => \MDIO_host_2:counter_0\);
 
-    Net_1924:macrocell
+    Net_2098:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1 * main_2)",
             regmode => 0,
             clken_mode => 1)
         PORT MAP(
-            q => Net_1924,
+            q => Net_2098,
             main_0 => \MDIO_host_2:State_2\,
             main_1 => \MDIO_host_2:State_1\,
             main_2 => \MDIO_host_2:State_0\);
@@ -2637,7 +2635,7 @@ BEGIN
             int_type => "00",
             is_nmi => 0)
         PORT MAP(
-            interrupt => Net_1924,
+            interrupt => Net_2098,
             clock => ClockBlock_BUS_CLK);
 
     DAT_ISR:interrupt

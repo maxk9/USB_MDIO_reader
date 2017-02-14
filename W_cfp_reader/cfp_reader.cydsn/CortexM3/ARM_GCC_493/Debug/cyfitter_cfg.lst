@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
   30:Generated_Source\PSoC5/cyfitter_cfg.c ****     #define CYPACKED 
   31:Generated_Source\PSoC5/cyfitter_cfg.c ****     #define CYPACKED_ATTR __attribute__ ((packed))
   32:Generated_Source\PSoC5/cyfitter_cfg.c ****     #define CYALIGNED __attribute__ ((aligned))
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 2
 
 
   33:Generated_Source\PSoC5/cyfitter_cfg.c ****     #define CY_CFG_UNUSED __attribute__ ((unused))
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
   87:Generated_Source\PSoC5/cyfitter_cfg.c **** #define CYCLOCKSTART_XTAL_ERROR  1u
   88:Generated_Source\PSoC5/cyfitter_cfg.c **** #define CYCLOCKSTART_32KHZ_ERROR 2u
   89:Generated_Source\PSoC5/cyfitter_cfg.c **** #define CYCLOCKSTART_PLL_ERROR   3u
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 3
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 3
 
 
   90:Generated_Source\PSoC5/cyfitter_cfg.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
   37              	.LFE3:
   38              		.size	CyClockStartupError, .-CyClockStartupError
   39 0002 00BF     		.section	.text.cfg_write_bytes32,"ax",%progbits
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 4
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 4
 
 
   40              		.align	2
@@ -191,7 +191,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  134:Generated_Source\PSoC5/cyfitter_cfg.c **** }
  135:Generated_Source\PSoC5/cyfitter_cfg.c **** #endif
  136:Generated_Source\PSoC5/cyfitter_cfg.c **** 
- 137:Generated_Source\PSoC5/cyfitter_cfg.c **** #define CY_CFG_BASE_ADDR_COUNT 38u
+ 137:Generated_Source\PSoC5/cyfitter_cfg.c **** #define CY_CFG_BASE_ADDR_COUNT 39u
  138:Generated_Source\PSoC5/cyfitter_cfg.c **** CYPACKED typedef struct
  139:Generated_Source\PSoC5/cyfitter_cfg.c **** {
  140:Generated_Source\PSoC5/cyfitter_cfg.c **** 	uint8 offset;
@@ -199,55 +199,55 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  142:Generated_Source\PSoC5/cyfitter_cfg.c **** } CYPACKED_ATTR cy_cfg_addrvalue_t;
  143:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  144:Generated_Source\PSoC5/cyfitter_cfg.c **** #define cy_cfg_addr_table ((const uint32 CYFAR *)0x48000000u)
- 145:Generated_Source\PSoC5/cyfitter_cfg.c **** #define cy_cfg_data_table ((const cy_cfg_addrvalue_t CYFAR *)0x48000098u)
+ 145:Generated_Source\PSoC5/cyfitter_cfg.c **** #define cy_cfg_data_table ((const cy_cfg_addrvalue_t CYFAR *)0x4800009Cu)
  146:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  147:Generated_Source\PSoC5/cyfitter_cfg.c **** /* IDMUX Address: CYREG_IDMUX_DRQ_CTL0 Size (bytes): 6 */
- 148:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_IDMUX_VAL ((const uint8 CYFAR *)0x48000E94u)
+ 148:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_IDMUX_VAL ((const uint8 CYFAR *)0x48000EC4u)
  149:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  150:Generated_Source\PSoC5/cyfitter_cfg.c **** /* IOPORT_7 Address: CYDEV_PRTDSI_PRT12_BASE Size (bytes): 6 */
- 151:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_IOPORT_7_VAL ((const uint8 CYFAR *)0x48000E9Cu)
+ 151:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_IOPORT_7_VAL ((const uint8 CYFAR *)0x48000ECCu)
  152:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  153:Generated_Source\PSoC5/cyfitter_cfg.c **** /* IOPINS0_0 Address: CYREG_PRT0_DM0 Size (bytes): 8 */
- 154:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_IOPINS0_0_VAL ((const uint8 CYFAR *)0x48000EA4u)
+ 154:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_IOPINS0_0_VAL ((const uint8 CYFAR *)0x48000ED4u)
  155:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  156:Generated_Source\PSoC5/cyfitter_cfg.c **** /* IOPINS0_7 Address: CYREG_PRT12_DR Size (bytes): 10 */
- 157:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_IOPINS0_7_VAL ((const uint8 CYFAR *)0x48000EACu)
+ 157:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_IOPINS0_7_VAL ((const uint8 CYFAR *)0x48000EDCu)
  158:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  159:Generated_Source\PSoC5/cyfitter_cfg.c **** /* IOPINS1_7 Address: CYREG_PRT12_DR + 0x0000000Bu Size (bytes): 5 */
- 160:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_IOPINS1_7_VAL ((const uint8 CYFAR *)0x48000EB8u)
+ 160:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_IOPINS1_7_VAL ((const uint8 CYFAR *)0x48000EE8u)
  161:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  162:Generated_Source\PSoC5/cyfitter_cfg.c **** /* IOPINS0_8 Address: CYREG_PRT15_DR Size (bytes): 10 */
- 163:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_IOPINS0_8_VAL ((const uint8 CYFAR *)0x48000EC0u)
+ 163:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_IOPINS0_8_VAL ((const uint8 CYFAR *)0x48000EF0u)
  164:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  165:Generated_Source\PSoC5/cyfitter_cfg.c **** /* IOPINS0_1 Address: CYREG_PRT1_DM0 Size (bytes): 8 */
- 166:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_IOPINS0_1_VAL ((const uint8 CYFAR *)0x48000ECCu)
+ 166:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_IOPINS0_1_VAL ((const uint8 CYFAR *)0x48000EFCu)
  167:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  168:Generated_Source\PSoC5/cyfitter_cfg.c **** /* IOPINS0_2 Address: CYREG_PRT2_DM0 Size (bytes): 8 */
- 169:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_IOPINS0_2_VAL ((const uint8 CYFAR *)0x48000ED4u)
+ 169:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_IOPINS0_2_VAL ((const uint8 CYFAR *)0x48000F04u)
  170:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  171:Generated_Source\PSoC5/cyfitter_cfg.c **** /* IOPINS0_3 Address: CYREG_PRT3_DM0 Size (bytes): 8 */
- 172:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_IOPINS0_3_VAL ((const uint8 CYFAR *)0x48000EDCu)
+ 172:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_IOPINS0_3_VAL ((const uint8 CYFAR *)0x48000F0Cu)
  173:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  174:Generated_Source\PSoC5/cyfitter_cfg.c **** /* IOPINS0_6 Address: CYREG_PRT6_DM0 Size (bytes): 8 */
- 175:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_IOPINS0_6_VAL ((const uint8 CYFAR *)0x48000EE4u)
+ 175:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_IOPINS0_6_VAL ((const uint8 CYFAR *)0x48000F14u)
  176:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  177:Generated_Source\PSoC5/cyfitter_cfg.c **** /* PHUB_CFGMEM1 Address: CYREG_PHUB_CFGMEM1_CFG0 Size (bytes): 4 */
- 178:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_PHUB_CFGMEM1_VAL ((const uint8 CYFAR *)0x48000EECu)
+ 178:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_PHUB_CFGMEM1_VAL ((const uint8 CYFAR *)0x48000F1Cu)
  179:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  180:Generated_Source\PSoC5/cyfitter_cfg.c **** /* PHUB_CFGMEM4 Address: CYREG_PHUB_CFGMEM4_CFG0 Size (bytes): 4 */
- 181:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_PHUB_CFGMEM4_VAL ((const uint8 CYFAR *)0x48000EF0u)
+ 181:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_PHUB_CFGMEM4_VAL ((const uint8 CYFAR *)0x48000F20u)
  182:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  183:Generated_Source\PSoC5/cyfitter_cfg.c **** /* PHUB_CFGMEM5 Address: CYREG_PHUB_CFGMEM5_CFG0 Size (bytes): 4 */
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 5
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 5
 
 
- 184:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_PHUB_CFGMEM5_VAL ((const uint8 CYFAR *)0x48000EF4u)
+ 184:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_PHUB_CFGMEM5_VAL ((const uint8 CYFAR *)0x48000F24u)
  185:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  186:Generated_Source\PSoC5/cyfitter_cfg.c **** /* PHUB_CFGMEM6 Address: CYREG_PHUB_CFGMEM6_CFG0 Size (bytes): 4 */
- 187:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_PHUB_CFGMEM6_VAL ((const uint8 CYFAR *)0x48000EF8u)
+ 187:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_PHUB_CFGMEM6_VAL ((const uint8 CYFAR *)0x48000F28u)
  188:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  189:Generated_Source\PSoC5/cyfitter_cfg.c **** /* PHUB_CFGMEM9 Address: CYREG_PHUB_CFGMEM9_CFG0 Size (bytes): 4 */
- 190:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_PHUB_CFGMEM9_VAL ((const uint8 CYFAR *)0x48000EFCu)
+ 190:Generated_Source\PSoC5/cyfitter_cfg.c **** #define BS_PHUB_CFGMEM9_VAL ((const uint8 CYFAR *)0x48000F2Cu)
  191:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  192:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  193:Generated_Source\PSoC5/cyfitter_cfg.c **** /*******************************************************************************
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
   69              	.LVL4:
  215:Generated_Source\PSoC5/cyfitter_cfg.c **** 		uint8 count = (uint8)baseAddr;
   70              		.loc 1 215 0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 6
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 6
 
 
   71 000c F3B2     		uxtb	r3, r6
@@ -341,7 +341,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  100              	.L4:
  212:Generated_Source\PSoC5/cyfitter_cfg.c **** 	{
  101              		.loc 1 212 0 is_stmt 0 discriminator 1
- 102 002c 252F     		cmp	r7, #37
+ 102 002c 262F     		cmp	r7, #38
  103 002e EBD9     		bls	.L7
  222:Generated_Source\PSoC5/cyfitter_cfg.c **** 		}
  223:Generated_Source\PSoC5/cyfitter_cfg.c **** 	}
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  113              		.cfi_endproc
  114              	.LFE4:
  115              		.size	cfg_write_bytes32, .-cfg_write_bytes32
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 7
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 7
 
 
  116              		.section	.text.AnalogSetDefault,"ax",%progbits
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  272:Generated_Source\PSoC5/cyfitter_cfg.c **** 		CyClockStartupError(CYCLOCKSTART_XTAL_ERROR);
  273:Generated_Source\PSoC5/cyfitter_cfg.c **** 	}
  274:Generated_Source\PSoC5/cyfitter_cfg.c **** 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 8
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 8
 
 
  275:Generated_Source\PSoC5/cyfitter_cfg.c **** 	/* Configure Bus/Master Clock based on settings from Clock DWR */
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  125              		@ args = 0, pretend = 0, frame = 0
  126              		@ frame_needed = 0, uses_anonymous_args = 0
  127              		@ link register save eliminated.
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 9
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 9
 
 
  327:Generated_Source\PSoC5/cyfitter_cfg.c **** 	uint8 bg_xover_inl_trim = CY_GET_XTND_REG8((void CYFAR *)(CYREG_FLSHID_MFG_CFG_BG_XOVER_INL_TRIM +
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  172              	.L10:
  173 0044 CF010049 		.word	1224737231
  174 0048 6E580040 		.word	1073764462
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 10
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 10
 
 
  175 004c 3D510040 		.word	1073762621
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  225 0002 0022     		movs	r2, #0
  226 0004 374B     		ldr	r3, .L23
  227 0006 1A80     		strh	r2, [r3]	@ movhi
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 11
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 11
 
 
  251:Generated_Source\PSoC5/cyfitter_cfg.c **** 	CY_SET_XTND_REG16((void CYFAR *)(CYREG_CLKDIST_DCFG1_CFG0), 0x0002u);
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  265:Generated_Source\PSoC5/cyfitter_cfg.c **** 	{ 
  271              		.loc 1 265 0 discriminator 4
  272 004a 013C     		subs	r4, r4, #1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 12
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 12
 
 
  273              	.LVL20:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  316 008c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  317 008e 03F00103 		and	r3, r3, #1
  318 0092 43EA4404 		orr	r4, r3, r4, lsl #1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 13
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 13
 
 
  319              	.LVL24:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  361              		.loc 1 300 0
  362 00d2 0222     		movs	r2, #2
  363 00d4 0A4B     		ldr	r3, .L23+28
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 14
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 14
 
 
  364 00d6 1A70     		strb	r2, [r3]
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  415              		.type	SetAnalogRoutingPumps, %function
  416              	SetAnalogRoutingPumps:
  417              	.LFB7:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 15
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 15
 
 
  337:Generated_Source\PSoC5/cyfitter_cfg.c **** }
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  440              		.loc 1 368 0
  441 0012 014A     		ldr	r2, .L30
  442 0014 1370     		strb	r3, [r2]
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 16
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 16
 
 
  443 0016 7047     		bx	lr
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  470              	@ 395 "Generated_Source\PSoC5\cyfitter_cfg.c" 1
  471 0002 72B6     		CPSID   i
  472              	@ 0 "" 2
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 17
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 17
 
 
  396:Generated_Source\PSoC5/cyfitter_cfg.c **** #endif
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  436:Generated_Source\PSoC5/cyfitter_cfg.c **** 			const cfg_memset_t CYCODE * CYDATA ms = &cfg_memset_list[i];
  437:Generated_Source\PSoC5/cyfitter_cfg.c **** 			CYMEMZERO(ms->address, (size_t)(uint32)(ms->size));
  487              		.loc 1 437 0 discriminator 3
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 18
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 18
 
 
  488 0012 5449     		ldr	r1, .L38+4
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  530              	.LVL44:
  531 004a 9A8D     		ldrh	r2, [r3, #44]
  532 004c FFF7FEFF 		bl	CYCONFIGCPY
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 19
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 19
 
 
  533              	.LVL45:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  575              	.LVL53:
  458:Generated_Source\PSoC5/cyfitter_cfg.c **** 		CYCONFIGCPY((void CYFAR *)(CYREG_PHUB_CFGMEM5_CFG0), (const void CYFAR *)(BS_PHUB_CFGMEM5_VAL), 4
  576              		.loc 1 458 0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 20
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 20
 
 
  577 008e 3E48     		ldr	r0, .L38+40
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  470:Generated_Source\PSoC5/cyfitter_cfg.c **** 		CY_SET_XTND_REG8((void CYFAR *)CYREG_PM_AVAIL_CR2, CY_GET_XTND_REG8((void CYFAR *)CYREG_PM_AVAIL_
  620              		.loc 1 470 0
  621 00da A2F58632 		sub	r2, r2, #68608
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 21
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 21
 
 
  622 00de 513A     		subs	r2, r2, #81
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  665 0126 2F49     		ldr	r1, .L38+132
  666 0128 0822     		movs	r2, #8
  667 012a FFF7FEFF 		bl	CYCONFIGCPY
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 22
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 22
 
 
  668              	.LVL66:
@@ -1314,43 +1314,43 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  702              	.L38:
  703 0160 E8460040 		.word	1073759976
  704 0164 00000000 		.word	.LANCHOR0
- 705 0168 98000048 		.word	1207959704
+ 705 0168 9C000048 		.word	1207959708
  706 016c 00760040 		.word	1073772032
  707 0170 08760040 		.word	1073772040
- 708 0174 EC0E0048 		.word	1207963372
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 23
+ 708 0174 1C0F0048 		.word	1207963420
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 23
 
 
  709 0178 10760040 		.word	1073772048
  710 017c 18760040 		.word	1073772056
  711 0180 20760040 		.word	1073772064
- 712 0184 F00E0048 		.word	1207963376
+ 712 0184 200F0048 		.word	1207963424
  713 0188 28760040 		.word	1073772072
- 714 018c F40E0048 		.word	1207963380
+ 714 018c 240F0048 		.word	1207963428
  715 0190 30760040 		.word	1073772080
- 716 0194 F80E0048 		.word	1207963384
+ 716 0194 280F0048 		.word	1207963432
  717 0198 38760040 		.word	1073772088
  718 019c 40760040 		.word	1073772096
  719 01a0 48760040 		.word	1073772104
- 720 01a4 FC0E0048 		.word	1207963388
+ 720 01a4 2C0F0048 		.word	1207963436
  721 01a8 03500140 		.word	1073827843
  722 01ac A0430040 		.word	1073759136
  723 01b0 02510040 		.word	1073762562
- 724 01b4 A40E0048 		.word	1207963300
+ 724 01b4 D40E0048 		.word	1207963348
  725 01b8 C0510040 		.word	1073762752
- 726 01bc AC0E0048 		.word	1207963308
+ 726 01bc DC0E0048 		.word	1207963356
  727 01c0 CB510040 		.word	1073762763
- 728 01c4 B80E0048 		.word	1207963320
+ 728 01c4 E80E0048 		.word	1207963368
  729 01c8 F0510040 		.word	1073762800
- 730 01cc C00E0048 		.word	1207963328
+ 730 01cc F00E0048 		.word	1207963376
  731 01d0 12510040 		.word	1073762578
- 732 01d4 CC0E0048 		.word	1207963340
+ 732 01d4 FC0E0048 		.word	1207963388
  733 01d8 22510040 		.word	1073762594
- 734 01dc D40E0048 		.word	1207963348
+ 734 01dc 040F0048 		.word	1207963396
  735 01e0 32510040 		.word	1073762610
- 736 01e4 DC0E0048 		.word	1207963356
+ 736 01e4 0C0F0048 		.word	1207963404
  737 01e8 62510040 		.word	1073762658
- 738 01ec E40E0048 		.word	1207963364
+ 738 01ec 140F0048 		.word	1207963412
  739 01f0 22430040 		.word	1073759010
  740 01f4 00480040 		.word	1073760256
  741 01f8 B0430040 		.word	1073759152
@@ -1378,14 +1378,14 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  763              		.type	cfg_memcpy_list.4889, %object
  764              		.size	cfg_memcpy_list.4889, 20
  765              	cfg_memcpy_list.4889:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 24
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 24
 
 
  766 0024 10510140 		.word	1073828112
- 767 0028 940E0048 		.word	1207963284
+ 767 0028 C40E0048 		.word	1207963332
  768 002c 0600     		.short	6
  769 002e 60520040 		.4byte	1073762912
- 770 0032 9C0E0048 		.4byte	1207963292
+ 770 0032 CC0E0048 		.4byte	1207963340
  771 0036 0600     		.short	6
  772              		.text
  773              	.Letext0:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  820 005a 04       		.uleb128 0x4
  821 005b 04       		.byte	0x4
  822 005c 05       		.byte	0x5
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 25
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 25
 
 
  823 005d B0000000 		.4byte	.LASF5
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  877 00ca B9000000 		.4byte	.LASF18
  878 00ce 03       		.byte	0x3
  879 00cf 3D02     		.2byte	0x23d
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 26
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 26
 
 
  880 00d1 D5000000 		.4byte	0xd5
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  934 0143 01       		.byte	0x1
  935 0144 D0       		.byte	0xd0
  936 0145 9B010000 		.4byte	0x19b
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 27
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 27
 
 
  937 0149 01       		.uleb128 0x1
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  991 01c1 01       		.uleb128 0x1
  992 01c2 9C       		.byte	0x9c
  993 01c3 D8010000 		.4byte	0x1d8
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 28
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 28
 
 
  994 01c7 12       		.uleb128 0x12
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1048 022a 01       		.byte	0x1
  1049 022b F3       		.byte	0xf3
  1050 022c 00000000 		.4byte	.LFB5
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 29
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 29
 
 
  1051 0230 08010000 		.4byte	.LFE5-.LFB5
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1105 02a1 01       		.uleb128 0x1
  1106 02a2 9C       		.byte	0x9c
  1107 02a3 F2020000 		.4byte	0x2f2
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 30
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 30
 
 
  1108 02a7 17       		.uleb128 0x17
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1162 0309 01       		.uleb128 0x1
  1163 030a 9C       		.byte	0x9c
  1164 030b 2C030000 		.4byte	0x32c
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 31
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 31
 
 
  1165 030f 1A       		.uleb128 0x1a
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1219 0382 9901     		.2byte	0x199
  1220 0384 B0030000 		.4byte	0x3b0
  1221 0388 1E       		.uleb128 0x1e
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 32
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 32
 
 
  1222 0389 80010000 		.4byte	.LASF36
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1276 0401 24000000 		.4byte	cfg_memcpy_list.4889
  1277 0405 10       		.uleb128 0x10
  1278 0406 E3030000 		.4byte	0x3e3
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 33
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 33
 
 
  1279 040a 22       		.uleb128 0x22
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1333 0495 01       		.byte	0x1
  1334 0496 BE01     		.2byte	0x1be
  1335 0498 92000000 		.4byte	0x92
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 34
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 34
 
 
  1336 049c 5E020000 		.4byte	.LLST17
@@ -2017,7 +2017,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1369 04d3 51       		.byte	0x51
  1370 04d4 05       		.uleb128 0x5
  1371 04d5 0C       		.byte	0xc
- 1372 04d6 98000048 		.4byte	0x48000098
+ 1372 04d6 9C000048 		.4byte	0x4800009c
  1373 04da 15       		.uleb128 0x15
  1374 04db 01       		.uleb128 0x1
  1375 04dc 50       		.byte	0x50
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1390 04f4 15       		.uleb128 0x15
  1391 04f5 01       		.uleb128 0x1
  1392 04f6 50       		.byte	0x50
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 35
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 35
 
 
  1393 04f7 05       		.uleb128 0x5
@@ -2059,7 +2059,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1408 0512 51       		.byte	0x51
  1409 0513 05       		.uleb128 0x5
  1410 0514 0C       		.byte	0xc
- 1411 0515 EC0E0048 		.4byte	0x48000eec
+ 1411 0515 1C0F0048 		.4byte	0x48000f1c
  1412 0519 15       		.uleb128 0x15
  1413 051a 01       		.uleb128 0x1
  1414 051b 50       		.byte	0x50
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1447 0554 05       		.uleb128 0x5
  1448 0555 0C       		.byte	0xc
  1449 0556 18760040 		.4byte	0x40007618
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 36
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 36
 
 
  1450 055a 00       		.byte	0
@@ -2116,7 +2116,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1462 056f 51       		.byte	0x51
  1463 0570 05       		.uleb128 0x5
  1464 0571 0C       		.byte	0xc
- 1465 0572 F00E0048 		.4byte	0x48000ef0
+ 1465 0572 200F0048 		.4byte	0x48000f20
  1466 0576 15       		.uleb128 0x15
  1467 0577 01       		.uleb128 0x1
  1468 0578 50       		.byte	0x50
@@ -2138,7 +2138,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1484 0594 51       		.byte	0x51
  1485 0595 05       		.uleb128 0x5
  1486 0596 0C       		.byte	0xc
- 1487 0597 F40E0048 		.4byte	0x48000ef4
+ 1487 0597 240F0048 		.4byte	0x48000f24
  1488 059b 15       		.uleb128 0x15
  1489 059c 01       		.uleb128 0x1
  1490 059d 50       		.byte	0x50
@@ -2158,12 +2158,12 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1504 05b7 15       		.uleb128 0x15
  1505 05b8 01       		.uleb128 0x1
  1506 05b9 51       		.byte	0x51
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 37
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 37
 
 
  1507 05ba 05       		.uleb128 0x5
  1508 05bb 0C       		.byte	0xc
- 1509 05bc F80E0048 		.4byte	0x48000ef8
+ 1509 05bc 280F0048 		.4byte	0x48000f28
  1510 05c0 15       		.uleb128 0x15
  1511 05c1 01       		.uleb128 0x1
  1512 05c2 50       		.byte	0x50
@@ -2216,9 +2216,9 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1559 0612 51       		.byte	0x51
  1560 0613 05       		.uleb128 0x5
  1561 0614 0C       		.byte	0xc
- 1562 0615 FC0E0048 		.4byte	0x48000efc
+ 1562 0615 2C0F0048 		.4byte	0x48000f2c
  1563 0619 15       		.uleb128 0x15
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 38
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 38
 
 
  1564 061a 01       		.uleb128 0x1
@@ -2242,7 +2242,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1582 0638 51       		.byte	0x51
  1583 0639 05       		.uleb128 0x5
  1584 063a 0C       		.byte	0xc
- 1585 063b A40E0048 		.4byte	0x48000ea4
+ 1585 063b D40E0048 		.4byte	0x48000ed4
  1586 063f 15       		.uleb128 0x15
  1587 0640 01       		.uleb128 0x1
  1588 0641 50       		.byte	0x50
@@ -2264,7 +2264,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1604 065d 51       		.byte	0x51
  1605 065e 05       		.uleb128 0x5
  1606 065f 0C       		.byte	0xc
- 1607 0660 AC0E0048 		.4byte	0x48000eac
+ 1607 0660 DC0E0048 		.4byte	0x48000edc
  1608 0664 15       		.uleb128 0x15
  1609 0665 01       		.uleb128 0x1
  1610 0666 50       		.byte	0x50
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1618 0677 93060000 		.4byte	0x693
  1619 067b 15       		.uleb128 0x15
  1620 067c 01       		.uleb128 0x1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 39
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 39
 
 
  1621 067d 52       		.byte	0x52
@@ -2289,7 +2289,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1626 0682 51       		.byte	0x51
  1627 0683 05       		.uleb128 0x5
  1628 0684 0C       		.byte	0xc
- 1629 0685 B80E0048 		.4byte	0x48000eb8
+ 1629 0685 E80E0048 		.4byte	0x48000ee8
  1630 0689 15       		.uleb128 0x15
  1631 068a 01       		.uleb128 0x1
  1632 068b 50       		.byte	0x50
@@ -2311,7 +2311,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1648 06a7 51       		.byte	0x51
  1649 06a8 05       		.uleb128 0x5
  1650 06a9 0C       		.byte	0xc
- 1651 06aa C00E0048 		.4byte	0x48000ec0
+ 1651 06aa F00E0048 		.4byte	0x48000ef0
  1652 06ae 15       		.uleb128 0x15
  1653 06af 01       		.uleb128 0x1
  1654 06b0 50       		.byte	0x50
@@ -2333,12 +2333,12 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1670 06cc 51       		.byte	0x51
  1671 06cd 05       		.uleb128 0x5
  1672 06ce 0C       		.byte	0xc
- 1673 06cf CC0E0048 		.4byte	0x48000ecc
+ 1673 06cf FC0E0048 		.4byte	0x48000efc
  1674 06d3 15       		.uleb128 0x15
  1675 06d4 01       		.uleb128 0x1
  1676 06d5 50       		.byte	0x50
  1677 06d6 05       		.uleb128 0x5
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 40
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 40
 
 
  1678 06d7 0C       		.byte	0xc
@@ -2358,7 +2358,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1692 06f1 51       		.byte	0x51
  1693 06f2 05       		.uleb128 0x5
  1694 06f3 0C       		.byte	0xc
- 1695 06f4 D40E0048 		.4byte	0x48000ed4
+ 1695 06f4 040F0048 		.4byte	0x48000f04
  1696 06f8 15       		.uleb128 0x15
  1697 06f9 01       		.uleb128 0x1
  1698 06fa 50       		.byte	0x50
@@ -2380,7 +2380,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1714 0716 51       		.byte	0x51
  1715 0717 05       		.uleb128 0x5
  1716 0718 0C       		.byte	0xc
- 1717 0719 DC0E0048 		.4byte	0x48000edc
+ 1717 0719 0C0F0048 		.4byte	0x48000f0c
  1718 071d 15       		.uleb128 0x15
  1719 071e 01       		.uleb128 0x1
  1720 071f 50       		.byte	0x50
@@ -2398,14 +2398,14 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1732 0737 01       		.uleb128 0x1
  1733 0738 38       		.byte	0x38
  1734 0739 15       		.uleb128 0x15
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 41
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 41
 
 
  1735 073a 01       		.uleb128 0x1
  1736 073b 51       		.byte	0x51
  1737 073c 05       		.uleb128 0x5
  1738 073d 0C       		.byte	0xc
- 1739 073e E40E0048 		.4byte	0x48000ee4
+ 1739 073e 140F0048 		.4byte	0x48000f14
  1740 0742 15       		.uleb128 0x15
  1741 0743 01       		.uleb128 0x1
  1742 0744 50       		.byte	0x50
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1789 07a0 79       		.byte	0x79
  1790 07a1 AB070000 		.4byte	0x7ab
  1791 07a5 25       		.uleb128 0x25
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 42
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 42
 
 
  1792 07a6 9E000000 		.4byte	0x9e
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1846 0027 49       		.uleb128 0x49
  1847 0028 13       		.uleb128 0x13
  1848 0029 00       		.byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 43
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 43
 
 
  1849 002a 00       		.byte	0
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1903 0060 00       		.byte	0
  1904 0061 03       		.uleb128 0x3
  1905 0062 0E       		.uleb128 0xe
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 44
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 44
 
 
  1906 0063 3A       		.uleb128 0x3a
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  1960 009a 0B       		.uleb128 0xb
  1961 009b 3B       		.uleb128 0x3b
  1962 009c 0B       		.uleb128 0xb
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 45
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 45
 
 
  1963 009d 49       		.uleb128 0x49
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  2017 00d3 05       		.uleb128 0x5
  2018 00d4 27       		.uleb128 0x27
  2019 00d5 19       		.uleb128 0x19
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 46
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 46
 
 
  2020 00d6 11       		.uleb128 0x11
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  2074 0111 02       		.uleb128 0x2
  2075 0112 18       		.uleb128 0x18
  2076 0113 9142     		.uleb128 0x2111
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 47
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 47
 
 
  2077 0115 18       		.uleb128 0x18
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  2131 014e 19       		.uleb128 0x19
  2132 014f 01       		.uleb128 0x1
  2133 0150 13       		.uleb128 0x13
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 48
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 48
 
 
  2134 0151 00       		.byte	0
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  2188 0187 00       		.byte	0
  2189 0188 00       		.byte	0
  2190 0189 1E       		.uleb128 0x1e
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 49
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 49
 
 
  2191 018a 0D       		.uleb128 0xd
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  2245 01c0 3B       		.uleb128 0x3b
  2246 01c1 05       		.uleb128 0x5
  2247 01c2 49       		.uleb128 0x49
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 50
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 50
 
 
  2248 01c3 13       		.uleb128 0x13
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  2302 01fb 19       		.uleb128 0x19
  2303 01fc 01       		.uleb128 0x1
  2304 01fd 13       		.uleb128 0x13
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 51
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 51
 
 
  2305 01fe 00       		.byte	0
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  2359 0051 0E000000 		.4byte	.LVL5
  2360 0055 24000000 		.4byte	.LVL8
  2361 0059 0100     		.2byte	0x1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 52
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 52
 
 
  2362 005b 53       		.byte	0x53
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  2416 00e1 84000000 		.4byte	.LVL22
  2417 00e5 0100     		.2byte	0x1
  2418 00e7 54       		.byte	0x54
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 53
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 53
 
 
  2419 00e8 84000000 		.4byte	.LVL22
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  2473 016f 00000000 		.4byte	0
  2474              	.LLST11:
  2475 0173 00000000 		.4byte	.LVL29
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 54
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 54
 
 
  2476 0177 05000000 		.4byte	.LVL30-1
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  2530 01f6 1E       		.byte	0x1e
  2531 01f7 03       		.byte	0x3
  2532 01f8 00000000 		.4byte	cfg_memset_list.4888
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 55
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 55
 
 
  2533 01fc 22       		.byte	0x22
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  2587 0276 32       		.byte	0x32
  2588 0277 24       		.byte	0x24
  2589 0278 74       		.byte	0x74
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 56
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 56
 
 
  2590 0279 00       		.sleb128 0
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  2644 0014 58000000 		.4byte	.LFE6
  2645 0018 00000000 		.4byte	.LFB0
  2646 001c 0C000000 		.4byte	.LFE0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 57
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 57
 
 
  2647 0020 00000000 		.4byte	.LFB5
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  2677      61756C74 
  2677      00
  2678              	.LASF7:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 58
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 58
 
 
  2679 006f 6C6F6E67 		.ascii	"long long int\000"
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  2707      676E6564 
  2707      20696E74 
  2707      00
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 59
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 59
 
 
  2708              	.LASF49:
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  2733 018b 43794465 		.ascii	"CyDelayCycles\000"
  2733      6C617943 
  2733      79636C65 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 60
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 60
 
 
  2733      7300
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 1
  2759              	.LASF50:
  2760 0257 6D656D73 		.ascii	"memset\000"
  2760      657400
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccTPLo6X.s 			page 61
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccC60lPJ.s 			page 61
 
 
  2761              	.LASF35:

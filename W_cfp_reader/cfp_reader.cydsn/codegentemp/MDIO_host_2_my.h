@@ -101,6 +101,7 @@ void 	MDIO_host_2_ClearInternalFIFOs(void);
 uint8   MDIO_host_2_SetAddrC45(uint8 phy_addr, uint8 dev_addr, uint16 reg_data); // Set Addr reg
 uint8 	MDIO_host_2_WriteDataC45(uint8 phy_addr, uint8 dev_addr, uint16 reg_data); // Writes data to the bus (C45)
 uint8 	MDIO_host_2_ReadDataC45(uint8 phy_addr, uint8 dev_addr, uint16 *regData);  // Reads data from the bus (C45)
+uint8 	MDIO_host_2_PosReadDataC45(uint8 phy_addr, uint8 dev_addr, uint16 *regData);  // Reads data from the bus witch increment add(C45)
 void  	MDIO_host_2_ClearStatus(void);	
 
 /* Interrupt prototype */

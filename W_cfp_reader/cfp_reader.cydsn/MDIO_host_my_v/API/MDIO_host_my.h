@@ -101,6 +101,7 @@ void 	`$INSTANCE_NAME`_ClearInternalFIFOs(void);
 uint8   `$INSTANCE_NAME`_SetAddrC45(uint8 phy_addr, uint8 dev_addr, uint16 reg_data); // Set Addr reg
 uint8 	`$INSTANCE_NAME`_WriteDataC45(uint8 phy_addr, uint8 dev_addr, uint16 reg_data); // Writes data to the bus (C45)
 uint8 	`$INSTANCE_NAME`_ReadDataC45(uint8 phy_addr, uint8 dev_addr, uint16 *regData);  // Reads data from the bus (C45)
+uint8 	`$INSTANCE_NAME`_PosReadDataC45(uint8 phy_addr, uint8 dev_addr, uint16 *regData);  // Reads data from the bus witch increment add(C45)
 void  	`$INSTANCE_NAME`_ClearStatus(void);	
 
 /* Interrupt prototype */
