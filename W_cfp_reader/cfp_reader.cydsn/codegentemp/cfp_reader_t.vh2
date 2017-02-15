@@ -1,5 +1,5 @@
 -- Project:   D:\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\cfp_reader.cyprj
--- Generated: 02/13/2017 15:48:58
+-- Generated: 02/15/2017 09:43:36
 -- PSoC Creator  4.0
 
 ENTITY cfp_reader IS

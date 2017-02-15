@@ -352,7 +352,7 @@ void fillUpReadOnlyRegisters(void)
 ********************************************************************************/
 uint8_t analiz_rx_data(uint8_t *rx_buffer)
 {
-    uint8_t tx_data[3],strk[10],tmp_byte=0;
+    uint8_t tx_data[3],strk[10];//,tmp_byte=0;
     uint16_t count_word =0;
     CYBIT is_word=1;
     
@@ -394,7 +394,7 @@ uint8_t analiz_rx_data(uint8_t *rx_buffer)
                 USBUART_1_PutData(tx_data,2);
             break;
             
-        case 'C'://read one word with increment
+        case 'C'://read one BYTE with increment
                 count_word = ((rx_buffer[1]<<8)|rx_buffer[2])+1;
                 //count_word = 132;
             //    MDIO_host_2_SetAddrC45( MdioPhyAddr, MdioDevAddr, 0x8000 );
@@ -424,6 +424,24 @@ uint8_t analiz_rx_data(uint8_t *rx_buffer)
                      //USBUART_1_PutString((const char *)strk);
                     
                    
+                }
+             break;
+                
+            case 'V'://read one WORD with increment
+                count_word = ((rx_buffer[1]<<8)|rx_buffer[2])+1;
+                //count_word = 132;
+            //    MDIO_host_2_SetAddrC45( MdioPhyAddr, MdioDevAddr, 0x8000 );
+                while(count_word)
+                {
+                    MDIO_host_2_PosReadDataC45( MdioPhyAddr, MdioDevAddr, &read_MDIO_data );
+                    tx_data[0]=(read_MDIO_data>>8)&0xFF;
+                    tx_data[1]=(read_MDIO_data)&0xFF;
+                    USBUART_1_PutData(tx_data,2);
+                    --count_word;
+                     /* Wait until component is ready to send data to PC. */
+                    while (0u == USBUART_1_CDCIsReady())
+                    {
+                    }
                 }
              break;
             

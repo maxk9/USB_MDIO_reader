@@ -1,5 +1,5 @@
 -- Project:   cfp_reader
--- Generated: 02/13/2017 15:48:47
+-- Generated: 02/15/2017 09:43:26
 -- PSoC Creator  4.0
 
 ENTITY cfp_reader IS
