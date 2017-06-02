@@ -2,7 +2,7 @@
 --	Conversion of cfp_reader.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed Feb 15 09:43:24 2017
+--	Fri Jun 02 10:12:49 2017
 --
 
 USE cypress.cypress.all;
@@ -13,11 +13,11 @@ END top_RTL;
 --------------------------------------------------------
 ARCHITECTURE R_T_L OF top_RTL IS
 SIGNAL tmpOE__VRef_1V2_net_0 : bit;
-SIGNAL zero : bit;
+SIGNAL Net_2112 : bit;
 SIGNAL tmpFB_0__VRef_1V2_net_0 : bit;
-TERMINAL Vref : bit;
 SIGNAL tmpIO_0__VRef_1V2_net_0 : bit;
 TERMINAL tmpSIOVREF__VRef_1V2_net_0 : bit;
+SIGNAL zero : bit;
 SIGNAL one : bit;
 SIGNAL tmpINTERRUPT_0__VRef_1V2_net_0 : bit;
 SIGNAL Net_2056 : bit;
@@ -358,8 +358,9 @@ SIGNAL \PWM_1:Net_114\ : bit;
 SIGNAL Net_1957 : bit;
 SIGNAL tmpOE__MDIO_M_net_0 : bit;
 SIGNAL Net_2086 : bit;
-SIGNAL Net_2071 : bit;
+SIGNAL Net_2119 : bit;
 SIGNAL tmpIO_0__MDIO_M_net_0 : bit;
+TERMINAL tmpSIOVREF__MDIO_M_net_0 : bit;
 TERMINAL Net_954 : bit;
 SIGNAL tmpINTERRUPT_0__MDIO_M_net_0 : bit;
 SIGNAL \VDAC8_1:Net_83\ : bit;
@@ -368,11 +369,13 @@ SIGNAL \VDAC8_1:Net_82\ : bit;
 TERMINAL Net_64 : bit;
 TERMINAL \VDAC8_1:Net_77\ : bit;
 TERMINAL \Opamp_1:Net_29\ : bit;
+TERMINAL Vref : bit;
 SIGNAL tmpOE__MDC_M_net_0 : bit;
-SIGNAL Net_2069 : bit;
+SIGNAL Net_2120 : bit;
 SIGNAL tmpFB_0__MDC_M_net_0 : bit;
 SIGNAL tmpIO_0__MDC_M_net_0 : bit;
-TERMINAL Net_2089 : bit;
+TERMINAL tmpSIOVREF__MDC_M_net_0 : bit;
+TERMINAL Net_2110 : bit;
 SIGNAL tmpINTERRUPT_0__MDC_M_net_0 : bit;
 TERMINAL Net_628 : bit;
 TERMINAL Net_652 : bit;
@@ -392,6 +395,7 @@ SIGNAL tmpIO_0__LED_1_net_0 : bit;
 TERMINAL tmpSIOVREF__LED_1_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__LED_1_net_0 : bit;
 TERMINAL Net_988 : bit;
+TERMINAL Net_2089 : bit;
 SIGNAL \USBUART_1:Net_1010\ : bit;
 SIGNAL \USBUART_1:tmpOE__Dm_net_0\ : bit;
 SIGNAL \USBUART_1:tmpFB_0__Dm_net_0\ : bit;
@@ -826,13 +830,12 @@ SIGNAL \MDIO_host_2:control_2\ : bit;
 SIGNAL \MDIO_host_2:control_1\ : bit;
 SIGNAL \MDIO_host_2:control_0\ : bit;
 SIGNAL \MDIO_host_2:mdio_rw\ : bit;
+SIGNAL Net_2098 : bit;
 SIGNAL \MDIO_host_2:ld_count\ : bit;
 SIGNAL \MDIO_host_2:en_count\ : bit;
 SIGNAL \MDIO_host_2:tc\ : bit;
 SIGNAL Net_2054 : bit;
-ATTRIBUTE soft of Net_2054:SIGNAL IS '1';
 SIGNAL \MDIO_host_2:cmp_vv_vv_MODGEN_1\ : bit;
-SIGNAL Net_2098 : bit;
 SIGNAL \MDIO_host_2:f0_blk_stat\ : bit;
 SIGNAL \MDIO_host_2:cfg_2\ : bit;
 SIGNAL \MDIO_host_2:cfg_1\ : bit;
@@ -1049,7 +1052,7 @@ SIGNAL Net_1956_2 : bit;
 SIGNAL Net_1956_1 : bit;
 SIGNAL Net_1956_0 : bit;
 SIGNAL \MDIO_Interface:bMDIO:op_clock\ : bit;
-SIGNAL Net_2033 : bit;
+SIGNAL Net_2069 : bit;
 SIGNAL \MDIO_Interface:bMDIO:mdc_direct\ : bit;
 SIGNAL \MDIO_Interface:bMDIO:mdio_reg\ : bit;
 SIGNAL \MDIO_Interface:Net_461\ : bit;
@@ -1750,7 +1753,7 @@ ATTRIBUTE port_state_att of \MDIO_Interface:bMDIO:MdioDp:f1_bus_stat_reg_1\:SIGN
 SIGNAL \MDIO_Interface:bMDIO:MdioDp:f1_blk_stat_reg_1\ : bit;
 ATTRIBUTE port_state_att of \MDIO_Interface:bMDIO:MdioDp:f1_blk_stat_reg_1\:SIGNAL IS 2;
 SIGNAL \MDIO_Interface:tmpOE__bufoe_1_net_0\ : bit;
-SIGNAL Net_618 : bit;
+SIGNAL Net_2071 : bit;
 SIGNAL \MDIO_Interface:Net_332\ : bit;
 SIGNAL \MDIO_Interface:Net_837\ : bit;
 SIGNAL \MDIO_Interface:Net_841\ : bit;
@@ -1766,9 +1769,13 @@ SIGNAL \MDIO_Interface:phyaddr_0\ : bit;
 SIGNAL Net_1959 : bit;
 SIGNAL tmpOE__MDC_S_net_0 : bit;
 SIGNAL tmpIO_0__MDC_S_net_0 : bit;
+TERMINAL tmpSIOVREF__MDC_S_net_0 : bit;
+TERMINAL Net_2124 : bit;
 SIGNAL tmpINTERRUPT_0__MDC_S_net_0 : bit;
 SIGNAL tmpOE__MDIO_S_net_0 : bit;
 SIGNAL tmpFB_0__MDIO_S_net_0 : bit;
+TERMINAL tmpSIOVREF__MDIO_S_net_0 : bit;
+TERMINAL Net_2123 : bit;
 SIGNAL tmpINTERRUPT_0__MDIO_S_net_0 : bit;
 SIGNAL \PWM_1:PWMUDB:min_kill_reg\\D\ : bit;
 SIGNAL \PWM_1:PWMUDB:prevCapture\\D\ : bit;
@@ -1783,7 +1790,7 @@ SIGNAL \PWM_1:PWMUDB:pwm1_i_reg\\D\ : bit;
 SIGNAL \PWM_1:PWMUDB:pwm2_i_reg\\D\ : bit;
 SIGNAL \PWM_1:PWMUDB:tc_i_reg\\D\ : bit;
 SIGNAL Net_2086D : bit;
-SIGNAL Net_2069D : bit;
+SIGNAL Net_2120D : bit;
 SIGNAL \PWM_2:PWMUDB:min_kill_reg\\D\ : bit;
 SIGNAL \PWM_2:PWMUDB:prevCapture\\D\ : bit;
 SIGNAL \PWM_2:PWMUDB:trig_last\\D\ : bit;
@@ -1903,58 +1910,50 @@ Net_789 <= ((not Net_1882 and Net_1881)
 
 \MDIO_host_2:status_val_2\ <= ((not \MDIO_host_2:State_2\ and not \MDIO_host_2:counter_6\ and not \MDIO_host_2:counter_5\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:counter_4\ and \MDIO_host_2:counter_3\ and \MDIO_host_2:counter_2\ and \MDIO_host_2:counter_1\ and \MDIO_host_2:counter_0\));
 
-\MDIO_host_2:en_count\ <= (\MDIO_host_2:State_0\
-	OR \MDIO_host_2:State_1\
-	OR \MDIO_host_2:State_2\);
-
-Net_2054 <= ((not \MDIO_host_2:counter_6\ and not \MDIO_host_2:counter_3\ and not \MDIO_host_2:counter_2\ and not \MDIO_host_2:counter_1\ and not \MDIO_host_2:counter_0\)
-	OR (not \MDIO_host_2:counter_6\ and not \MDIO_host_2:counter_4\)
-	OR (not \MDIO_host_2:counter_6\ and not \MDIO_host_2:counter_5\));
-
 Net_2098 <= ((\MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\));
 
-\MDIO_host_2:State_2\\D\ <= ((not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and \MDIO_host_2:State_2\)
-	OR (not \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:control_0\ and \MDIO_host_2:tc\)
-	OR (not \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:tc\));
+Net_2054 <= ((not \MDIO_host_2:counter_6\ and not \MDIO_host_2:counter_4\ and not \MDIO_host_2:counter_3\ and not \MDIO_host_2:counter_2\ and not \MDIO_host_2:counter_1\ and not \MDIO_host_2:counter_0\)
+	OR (not \MDIO_host_2:counter_6\ and not \MDIO_host_2:counter_5\));
 
-\MDIO_host_2:State_1\\D\ <= ((not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and \MDIO_host_2:State_2\ and \MDIO_host_2:tc\)
-	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:tc\ and \MDIO_host_2:State_1\)
+\MDIO_host_2:State_2\\D\ <= ((not \MDIO_host_2:State_2\ and not \MDIO_host_2:State_0\ and not \MDIO_host_2:counter_5\ and not \MDIO_host_2:counter_4\ and not \MDIO_host_2:counter_3\ and not \MDIO_host_2:counter_2\ and not \MDIO_host_2:counter_1\ and not \MDIO_host_2:counter_0\ and \MDIO_host_2:State_1\ and \MDIO_host_2:counter_6\ and \MDIO_host_2:control_0\)
+	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:counter_6\ and not \MDIO_host_2:counter_5\ and not \MDIO_host_2:counter_4\ and not \MDIO_host_2:counter_3\ and not \MDIO_host_2:counter_2\ and not \MDIO_host_2:counter_1\ and not \MDIO_host_2:counter_0\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\)
+	OR (not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and \MDIO_host_2:State_2\));
+
+\MDIO_host_2:State_1\\D\ <= ((not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and not \MDIO_host_2:counter_6\ and not \MDIO_host_2:counter_5\ and not \MDIO_host_2:counter_4\ and not \MDIO_host_2:counter_3\ and not \MDIO_host_2:counter_2\ and not \MDIO_host_2:counter_1\ and not \MDIO_host_2:counter_0\ and \MDIO_host_2:State_2\)
 	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:control_0\ and \MDIO_host_2:State_1\)
+	OR (not \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:counter_0\)
+	OR (not \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:counter_1\)
+	OR (not \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:counter_2\)
+	OR (not \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:counter_3\)
+	OR (not \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:counter_4\)
+	OR (not \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:counter_5\)
+	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:counter_6\ and \MDIO_host_2:State_1\)
 	OR (not \MDIO_host_2:State_2\ and \MDIO_host_2:State_0\));
 
-\MDIO_host_2:State_0\\D\ <= ((not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and \MDIO_host_2:State_2\ and \MDIO_host_2:tc\)
+\MDIO_host_2:State_0\\D\ <= ((not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and not \MDIO_host_2:counter_6\ and not \MDIO_host_2:counter_5\ and not \MDIO_host_2:counter_4\ and not \MDIO_host_2:counter_3\ and not \MDIO_host_2:counter_2\ and not \MDIO_host_2:counter_1\ and not \MDIO_host_2:counter_0\ and \MDIO_host_2:State_2\)
+	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:counter_5\ and not \MDIO_host_2:counter_4\ and not \MDIO_host_2:counter_3\ and not \MDIO_host_2:counter_2\ and not \MDIO_host_2:counter_1\ and not \MDIO_host_2:counter_0\ and not \MDIO_host_2:control_0\ and \MDIO_host_2:State_1\ and \MDIO_host_2:counter_6\)
 	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and not \MDIO_host_2:f0_blk_stat\)
-	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:control_0\ and \MDIO_host_2:State_1\ and \MDIO_host_2:tc\)
 	OR (not \MDIO_host_2:f0_blk_stat\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\)
 	OR (not \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\));
 
 \MDIO_host_2:cfg_2\\D\ <= ((not \MDIO_host_2:State_2\ and not \MDIO_host_2:State_0\ and \MDIO_host_2:State_1\ and \MDIO_host_2:cfg_2\));
 
-\MDIO_host_2:cfg_1\\D\ <= ((not Net_2069 and not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and not Net_2054 and \MDIO_host_2:State_2\ and \MDIO_host_2:counter_0\)
-	OR (not Net_2069 and not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and not Net_2054 and \MDIO_host_2:State_2\ and \MDIO_host_2:counter_1\)
-	OR (not Net_2069 and not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and not Net_2054 and \MDIO_host_2:State_2\ and \MDIO_host_2:counter_2\)
-	OR (not Net_2069 and not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and not Net_2054 and \MDIO_host_2:State_2\ and \MDIO_host_2:counter_3\)
-	OR (not Net_2069 and not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and not Net_2054 and \MDIO_host_2:State_2\ and \MDIO_host_2:counter_4\)
-	OR (not Net_2069 and not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and not \MDIO_host_2:counter_5\ and not Net_2054 and \MDIO_host_2:State_2\)
-	OR (not Net_2069 and not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and not Net_2054 and \MDIO_host_2:State_2\ and \MDIO_host_2:counter_6\)
-	OR (not \MDIO_host_2:State_2\ and Net_2069 and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:counter_0\)
-	OR (not \MDIO_host_2:State_2\ and Net_2069 and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:counter_1\)
-	OR (not \MDIO_host_2:State_2\ and Net_2069 and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:counter_2\)
-	OR (not \MDIO_host_2:State_2\ and Net_2069 and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:counter_3\)
-	OR (not \MDIO_host_2:State_2\ and Net_2069 and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:counter_4\)
-	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:counter_5\ and Net_2069 and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\)
-	OR (not \MDIO_host_2:State_2\ and Net_2069 and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:counter_6\)
-	OR (not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and Net_2069 and \MDIO_host_2:State_2\ and \MDIO_host_2:counter_0\ and Net_2054)
-	OR (not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and Net_2069 and \MDIO_host_2:State_2\ and \MDIO_host_2:counter_1\ and Net_2054)
-	OR (not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and Net_2069 and \MDIO_host_2:State_2\ and \MDIO_host_2:counter_2\ and Net_2054)
-	OR (not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and Net_2069 and \MDIO_host_2:State_2\ and \MDIO_host_2:counter_3\ and Net_2054)
-	OR (not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and Net_2069 and \MDIO_host_2:State_2\ and \MDIO_host_2:counter_4\ and Net_2054)
-	OR (not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and not \MDIO_host_2:counter_5\ and Net_2069 and \MDIO_host_2:State_2\ and Net_2054)
-	OR (not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and Net_2069 and \MDIO_host_2:State_2\ and \MDIO_host_2:counter_6\ and Net_2054)
+\MDIO_host_2:cfg_1\\D\ <= ((not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and \MDIO_host_2:State_2\ and \MDIO_host_2:counter_1\ and \MDIO_host_2:counter_0\)
+	OR (not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and \MDIO_host_2:State_2\ and \MDIO_host_2:counter_2\ and \MDIO_host_2:counter_0\)
+	OR (not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and \MDIO_host_2:State_2\ and \MDIO_host_2:counter_3\ and \MDIO_host_2:counter_0\)
+	OR (not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and \MDIO_host_2:State_2\ and \MDIO_host_2:counter_4\ and \MDIO_host_2:counter_0\)
+	OR (not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and not \MDIO_host_2:counter_5\ and \MDIO_host_2:State_2\ and \MDIO_host_2:counter_0\)
+	OR (not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and \MDIO_host_2:State_2\ and \MDIO_host_2:counter_6\ and \MDIO_host_2:counter_0\)
+	OR (not \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:counter_1\ and \MDIO_host_2:counter_0\)
+	OR (not \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:counter_2\ and \MDIO_host_2:counter_0\)
+	OR (not \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:counter_3\ and \MDIO_host_2:counter_0\)
+	OR (not \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:counter_4\ and \MDIO_host_2:counter_0\)
+	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:counter_5\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:counter_0\)
+	OR (not \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:counter_6\ and \MDIO_host_2:counter_0\)
 	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:State_0\ and \MDIO_host_2:State_1\ and \MDIO_host_2:cfg_1\));
 
-\MDIO_host_2:cfg_0\\D\ <= ((not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and not \MDIO_host_2:counter_6\ and not \MDIO_host_2:counter_4\ and not \MDIO_host_2:counter_3\ and not \MDIO_host_2:counter_2\ and not \MDIO_host_2:counter_1\ and not \MDIO_host_2:counter_0\ and \MDIO_host_2:State_2\ and \MDIO_host_2:counter_5\)
-	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:counter_6\ and not \MDIO_host_2:counter_4\ and not \MDIO_host_2:counter_3\ and not \MDIO_host_2:counter_2\ and not \MDIO_host_2:counter_1\ and not \MDIO_host_2:counter_0\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:counter_5\)
+\MDIO_host_2:cfg_0\\D\ <= ((not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and not \MDIO_host_2:counter_6\ and not \MDIO_host_2:counter_4\ and not \MDIO_host_2:counter_3\ and not \MDIO_host_2:counter_2\ and not \MDIO_host_2:counter_1\ and \MDIO_host_2:State_2\ and \MDIO_host_2:counter_5\ and \MDIO_host_2:counter_0\)
+	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:counter_6\ and not \MDIO_host_2:counter_4\ and not \MDIO_host_2:counter_3\ and not \MDIO_host_2:counter_2\ and not \MDIO_host_2:counter_1\ and \MDIO_host_2:State_1\ and \MDIO_host_2:State_0\ and \MDIO_host_2:counter_5\ and \MDIO_host_2:counter_0\)
 	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:State_0\ and \MDIO_host_2:State_1\ and \MDIO_host_2:cfg_0\)
 	OR (not \MDIO_host_2:State_2\ and not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and not \MDIO_host_2:f0_blk_stat\));
 
@@ -1963,9 +1962,10 @@ Net_2086D <= ((not \MDIO_host_2:State_2\ and not \MDIO_host_2:State_0\)
 	OR (\MDIO_host_2:State_2\ and \MDIO_host_2:State_1\)
 	OR \MDIO_host_2:so\);
 
-Net_2069D <= ((not Net_2069 and not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\ and \MDIO_host_2:State_2\)
-	OR (not Net_2069 and not \MDIO_host_2:State_2\ and \MDIO_host_2:State_0\)
-	OR (not Net_2069 and not \MDIO_host_2:State_2\ and \MDIO_host_2:State_1\));
+Net_2120D <= ((not \MDIO_host_2:State_2\ and not \MDIO_host_2:State_1\ and not \MDIO_host_2:State_0\)
+	OR (\MDIO_host_2:State_2\ and \MDIO_host_2:State_0\)
+	OR (\MDIO_host_2:State_2\ and \MDIO_host_2:State_1\)
+	OR not Net_2120);
 
 \MDIO_Interface:bMDIO:busy\\D\ <= ((not \MDIO_Interface:bMDIO:mdio_sync\ and not \MDIO_Interface:bMDIO:tc\ and \MDIO_Interface:bMDIO:mdio_enable\ and \MDIO_Interface:bMDIO:start_detect\)
 	OR (not \MDIO_Interface:bMDIO:tc\ and \MDIO_Interface:bMDIO:mdio_enable\ and \MDIO_Interface:rd_dma\));
@@ -2197,9 +2197,9 @@ Net_1951D <= ((not \MDIO_Interface:bMDIO:opcode_1\ and not \MDIO_Interface:bMDIO
 
 VRef_1V2:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"cc3bcd7e-5dc0-48ea-9bf6-6aa082be1ada",
-		drive_mode=>"000",
-		ibuf_enabled=>"0",
-		init_dr_st=>"0",
+		drive_mode=>"110",
+		ibuf_enabled=>"1",
+		init_dr_st=>"1",
 		input_sync=>"1",
 		input_clk_en=>'0',
 		input_sync_mode=>"0",
@@ -2212,7 +2212,7 @@ VRef_1V2:cy_psoc3_pins_v1_10
 		invert_out_reset=>'0',
 		io_voltage=>"",
 		layout_mode=>"NONCONTIGUOUS",
-		output_conn=>"0",
+		output_conn=>"1",
 		output_sync=>"0",
 		output_clk_en=>'0',
 		output_mode=>"0",
@@ -2222,7 +2222,7 @@ VRef_1V2:cy_psoc3_pins_v1_10
 		oe_conn=>"0",
 		oe_reset=>'0',
 		pin_aliases=>"",
-		pin_mode=>"A",
+		pin_mode=>"O",
 		por_state=>4,
 		sio_group_cnt=>0,
 		sio_hifreq=>"00000000",
@@ -2252,9 +2252,9 @@ VRef_1V2:cy_psoc3_pins_v1_10
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__VRef_1V2_net_0),
-		y=>(zero),
+		y=>tmpOE__VRef_1V2_net_0,
 		fb=>(tmpFB_0__VRef_1V2_net_0),
-		analog=>Vref,
+		analog=>(open),
 		io=>(tmpIO_0__VRef_1V2_net_0),
 		siovref=>(tmpSIOVREF__VRef_1V2_net_0),
 		annotation=>(open),
@@ -2409,9 +2409,9 @@ MDIO_M:cy_psoc3_pins_v1_10
 		sio_hyst=>"0",
 		sio_ibuf=>"1",
 		sio_info=>"01",
-		sio_obuf=>"1",
-		sio_refsel=>"1",
-		sio_vtrip=>"0",
+		sio_obuf=>"0",
+		sio_refsel=>"0",
+		sio_vtrip=>"1",
 		sio_vohsel=>"000",
 		slew_rate=>"0",
 		spanning=>'0',
@@ -2433,10 +2433,10 @@ MDIO_M:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__VRef_1V2_net_0),
 		y=>Net_2086,
-		fb=>Net_2071,
+		fb=>Net_2119,
 		analog=>(open),
 		io=>(tmpIO_0__MDIO_M_net_0),
-		siovref=>Vref,
+		siovref=>(tmpSIOVREF__MDIO_M_net_0),
 		annotation=>Net_954,
 		in_clock=>zero,
 		in_clock_en=>tmpOE__VRef_1V2_net_0,
@@ -2504,9 +2504,9 @@ MDC_M:cy_psoc3_pins_v1_10
 		sio_hyst=>"0",
 		sio_ibuf=>"1",
 		sio_info=>"01",
-		sio_obuf=>"1",
-		sio_refsel=>"1",
-		sio_vtrip=>"0",
+		sio_obuf=>"0",
+		sio_refsel=>"0",
+		sio_vtrip=>"1",
 		sio_vohsel=>"000",
 		slew_rate=>"0",
 		spanning=>'0',
@@ -2527,12 +2527,12 @@ MDC_M:cy_psoc3_pins_v1_10
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__VRef_1V2_net_0),
-		y=>Net_2069,
+		y=>Net_2120,
 		fb=>(tmpFB_0__MDC_M_net_0),
 		analog=>(open),
 		io=>(tmpIO_0__MDC_M_net_0),
-		siovref=>Vref,
-		annotation=>Net_2089,
+		siovref=>(tmpSIOVREF__MDC_M_net_0),
+		annotation=>Net_2110,
 		in_clock=>zero,
 		in_clock_en=>tmpOE__VRef_1V2_net_0,
 		in_reset=>zero,
@@ -3110,7 +3110,7 @@ PWR_1:cy_annotation_universal_v1_0
 		control=>(\MDIO_host_2:control_7\, \MDIO_host_2:control_6\, \MDIO_host_2:control_5\, \MDIO_host_2:control_4\,
 			\MDIO_host_2:control_3\, \MDIO_host_2:control_2\, \MDIO_host_2:control_1\, \MDIO_host_2:control_0\));
 \MDIO_host_2:MdioCounter\:cy_psoc3_count7
-	GENERIC MAP(cy_period=>"0111111",
+	GENERIC MAP(cy_period=>"1111111",
 		cy_init_value=>"0000000",
 		cy_route_ld=>'1',
 		cy_route_en=>'1',
@@ -3118,7 +3118,7 @@ PWR_1:cy_annotation_universal_v1_0
 	PORT MAP(clock=>\MDIO_host_2:synced_clock\,
 		reset=>zero,
 		load=>\MDIO_host_2:status_val_1\,
-		enable=>\MDIO_host_2:en_count\,
+		enable=>tmpOE__VRef_1V2_net_0,
 		count=>(\MDIO_host_2:counter_6\, \MDIO_host_2:counter_5\, \MDIO_host_2:counter_4\, \MDIO_host_2:counter_3\,
 			\MDIO_host_2:counter_2\, \MDIO_host_2:counter_1\, \MDIO_host_2:counter_0\),
 		tc=>\MDIO_host_2:tc\);
@@ -3147,7 +3147,7 @@ PWR_1:cy_annotation_universal_v1_0
 	PORT MAP(reset=>zero,
 		clk=>\MDIO_host_2:synced_clock\,
 		cs_addr=>(\MDIO_host_2:cfg_2\, \MDIO_host_2:cfg_1\, \MDIO_host_2:cfg_0\),
-		route_si=>Net_2071,
+		route_si=>Net_2119,
 		route_ci=>zero,
 		f0_load=>zero,
 		f1_load=>zero,
@@ -3233,7 +3233,7 @@ PWR_1:cy_annotation_universal_v1_0
 	PORT MAP(reset=>zero,
 		clk=>\MDIO_host_2:synced_clock\,
 		cs_addr=>(\MDIO_host_2:cfg_2\, \MDIO_host_2:cfg_1\, \MDIO_host_2:cfg_0\),
-		route_si=>Net_2071,
+		route_si=>Net_2119,
 		route_ci=>zero,
 		f0_load=>zero,
 		f1_load=>zero,
@@ -3552,12 +3552,12 @@ Clock_3:cy_clock_v1_0
 		clock_out=>\MDIO_Interface:bMDIO:op_clock\);
 \MDIO_Interface:bMDIO:genblk1:MdcClkEn\:cy_psoc3_udb_clock_enable_v1_0
 	GENERIC MAP(sync_mode=>'0')
-	PORT MAP(clock_in=>Net_2033,
+	PORT MAP(clock_in=>Net_2069,
 		enable=>tmpOE__VRef_1V2_net_0,
 		clock_out=>\MDIO_Interface:bMDIO:mdc_direct\);
 \MDIO_Interface:bMDIO:genblk1:MdcSync\:cy_psoc3_sync
 	PORT MAP(clock=>\MDIO_Interface:bMDIO:op_clock\,
-		sc_in=>Net_2033,
+		sc_in=>Net_2069,
 		sc_out=>\MDIO_Interface:bMDIO:mdc_sync\);
 \MDIO_Interface:bMDIO:genblk1:MdioSync\:cy_psoc3_sync
 	PORT MAP(clock=>\MDIO_Interface:bMDIO:op_clock\,
@@ -4314,7 +4314,7 @@ Clock_3:cy_clock_v1_0
 \MDIO_Interface:bufoe_1\:cy_bufoe
 	PORT MAP(x=>\MDIO_Interface:mdio_o\,
 		oe=>tmpOE__VRef_1V2_net_0,
-		y=>Net_618,
+		y=>Net_2071,
 		yfb=>\MDIO_Interface:Net_461\);
 \MDIO_Interface:AddrDMA\:cy_dma_v1_0
 	GENERIC MAP(drq_type=>"00",
@@ -4381,7 +4381,7 @@ MDC_S:cy_psoc3_pins_v1_10
 		drive_mode=>"100",
 		ibuf_enabled=>"1",
 		init_dr_st=>"1",
-		input_sync=>"1",
+		input_sync=>"0",
 		input_clk_en=>'0',
 		input_sync_mode=>"0",
 		intr_mode=>"00",
@@ -4411,8 +4411,8 @@ MDC_S:cy_psoc3_pins_v1_10
 		sio_ibuf=>"1",
 		sio_info=>"01",
 		sio_obuf=>"0",
-		sio_refsel=>"1",
-		sio_vtrip=>"0",
+		sio_refsel=>"0",
+		sio_vtrip=>"1",
 		sio_vohsel=>"000",
 		slew_rate=>"0",
 		spanning=>'0',
@@ -4434,11 +4434,11 @@ MDC_S:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__VRef_1V2_net_0),
 		y=>(zero),
-		fb=>Net_2033,
+		fb=>Net_2069,
 		analog=>(open),
 		io=>(tmpIO_0__MDC_S_net_0),
-		siovref=>Vref,
-		annotation=>Net_954,
+		siovref=>(tmpSIOVREF__MDC_S_net_0),
+		annotation=>Net_2124,
 		in_clock=>zero,
 		in_clock_en=>tmpOE__VRef_1V2_net_0,
 		in_reset=>zero,
@@ -4480,9 +4480,9 @@ MDIO_S:cy_psoc3_pins_v1_10
 		sio_hyst=>"0",
 		sio_ibuf=>"1",
 		sio_info=>"01",
-		sio_obuf=>"1",
-		sio_refsel=>"1",
-		sio_vtrip=>"0",
+		sio_obuf=>"0",
+		sio_refsel=>"0",
+		sio_vtrip=>"1",
 		sio_vohsel=>"000",
 		slew_rate=>"0",
 		spanning=>'0',
@@ -4506,9 +4506,9 @@ MDIO_S:cy_psoc3_pins_v1_10
 		y=>(zero),
 		fb=>(tmpFB_0__MDIO_S_net_0),
 		analog=>(open),
-		io=>Net_618,
-		siovref=>Vref,
-		annotation=>Net_2089,
+		io=>Net_2071,
+		siovref=>(tmpSIOVREF__MDIO_S_net_0),
+		annotation=>Net_2123,
 		in_clock=>zero,
 		in_clock_en=>tmpOE__VRef_1V2_net_0,
 		in_reset=>zero,
@@ -4578,10 +4578,10 @@ Net_2086:cy_dff
 	PORT MAP(d=>Net_2086D,
 		clk=>\MDIO_host_2:synced_clock\,
 		q=>Net_2086);
-Net_2069:cy_dff
-	PORT MAP(d=>Net_2069D,
+Net_2120:cy_dff
+	PORT MAP(d=>Net_2120D,
 		clk=>\MDIO_host_2:synced_clock\,
-		q=>Net_2069);
+		q=>Net_2120);
 \PWM_2:PWMUDB:min_kill_reg\:cy_dsrff
 	PORT MAP(d=>tmpOE__VRef_1V2_net_0,
 		s=>zero,

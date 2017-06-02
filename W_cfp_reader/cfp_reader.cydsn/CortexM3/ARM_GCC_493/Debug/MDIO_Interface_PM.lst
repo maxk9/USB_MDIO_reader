@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccf04ZIq.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
   29:Generated_Source\PSoC5/MDIO_Interface_PM.c **** };
   30:Generated_Source\PSoC5/MDIO_Interface_PM.c **** 
   31:Generated_Source\PSoC5/MDIO_Interface_PM.c **** 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccf04ZIq.s 			page 2
 
 
   32:Generated_Source\PSoC5/MDIO_Interface_PM.c **** /*******************************************************************************
@@ -99,7 +99,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
   39              	.L3:
   40 000e 00BF     		.align	2
   41              	.L2:
-  42 0010 78650040 		.word	1073767800
+  42 0010 75650040 		.word	1073767797
   43 0014 00000000 		.word	.LANCHOR0
   44              		.cfi_endproc
   45              	.LFE0:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
   58:Generated_Source\PSoC5/MDIO_Interface_PM.c **** /*******************************************************************************
   59:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Function Name: MDIO_Interface_RestoreConfig
   60:Generated_Source\PSoC5/MDIO_Interface_PM.c **** ********************************************************************************
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 3
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccf04ZIq.s 			page 3
 
 
   61:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
@@ -156,7 +156,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
   84:Generated_Source\PSoC5/MDIO_Interface_PM.c ****         MDIO_Interface_PAGE_WIDTH_REG = MDIO_Interface_PAGE_DATA_WIDTH;
   64              		.loc 1 84 0
   65 0006 3822     		movs	r2, #56
-  66 0008 0A33     		adds	r3, r3, #10
+  66 0008 023B     		subs	r3, r3, #2
   67 000a 1A70     		strb	r2, [r3]
   85:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     #endif /* MDIO_Interface_ADVANCED_MODE */
   86:Generated_Source\PSoC5/MDIO_Interface_PM.c **** 
@@ -171,14 +171,14 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
   74              	.L6:
   75 0016 00BF     		.align	2
   76              	.L5:
-  77 0018 71640040 		.word	1073767537
+  77 0018 7A640040 		.word	1073767546
   78 001c 00000000 		.word	.LANCHOR0
-  79 0020 78650040 		.word	1073767800
+  79 0020 75650040 		.word	1073767797
   80              		.cfi_endproc
   81              	.LFE1:
   82              		.size	MDIO_Interface_RestoreConfig, .-MDIO_Interface_RestoreConfig
   83              		.section	.text.MDIO_Interface_Sleep,"ax",%progbits
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 4
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccf04ZIq.s 			page 4
 
 
   84              		.align	2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
  109              	.L8:
  118:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     }
  119:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     else /* Component is disabled */
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 5
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccf04ZIq.s 			page 5
 
 
  120:Generated_Source\PSoC5/MDIO_Interface_PM.c ****     {
@@ -265,7 +265,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
  122              	.L12:
  123              		.align	2
  124              	.L11:
- 125 0024 78650040 		.word	1073767800
+ 125 0024 75650040 		.word	1073767797
  126 0028 00000000 		.word	.LANCHOR0
  127              		.cfi_endproc
  128              	.LFE2:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
  146:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Global Variables:
  147:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *  MDIO_Interface_backup - used when non-retention registers are restored.
  148:Generated_Source\PSoC5/MDIO_Interface_PM.c **** *
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 6
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccf04ZIq.s 			page 6
 
 
  149:Generated_Source\PSoC5/MDIO_Interface_PM.c **** * Reentrant:
@@ -358,41 +358,41 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
  179 0004 0400     		.2byte	0x4
  180 0006 00000000 		.4byte	.Ldebug_abbrev0
  181 000a 04       		.byte	0x4
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 7
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccf04ZIq.s 			page 7
 
 
  182 000b 01       		.uleb128 0x1
- 183 000c E2000000 		.4byte	.LASF24
+ 183 000c 37010000 		.4byte	.LASF24
  184 0010 01       		.byte	0x1
  185 0011 0E000000 		.4byte	.LASF25
- 186 0015 25020000 		.4byte	.LASF26
+ 186 0015 6F000000 		.4byte	.LASF26
  187 0019 00000000 		.4byte	.Ldebug_ranges0+0
  188 001d 00000000 		.4byte	0
  189 0021 00000000 		.4byte	.Ldebug_line0
  190 0025 02       		.uleb128 0x2
  191 0026 01       		.byte	0x1
  192 0027 06       		.byte	0x6
- 193 0028 E7010000 		.4byte	.LASF0
+ 193 0028 3C020000 		.4byte	.LASF0
  194 002c 02       		.uleb128 0x2
  195 002d 01       		.byte	0x1
  196 002e 08       		.byte	0x8
- 197 002f 70010000 		.4byte	.LASF1
+ 197 002f C5010000 		.4byte	.LASF1
  198 0033 02       		.uleb128 0x2
  199 0034 02       		.byte	0x2
  200 0035 05       		.byte	0x5
- 201 0036 16020000 		.4byte	.LASF2
+ 201 0036 6B020000 		.4byte	.LASF2
  202 003a 02       		.uleb128 0x2
  203 003b 02       		.byte	0x2
  204 003c 07       		.byte	0x7
- 205 003d D4010000 		.4byte	.LASF3
+ 205 003d 29020000 		.4byte	.LASF3
  206 0041 02       		.uleb128 0x2
  207 0042 04       		.byte	0x4
  208 0043 05       		.byte	0x5
- 209 0044 98010000 		.4byte	.LASF4
+ 209 0044 ED010000 		.4byte	.LASF4
  210 0048 02       		.uleb128 0x2
  211 0049 04       		.byte	0x4
  212 004a 07       		.byte	0x7
- 213 004b 8F000000 		.4byte	.LASF5
+ 213 004b E4000000 		.4byte	.LASF5
  214 004f 02       		.uleb128 0x2
  215 0050 08       		.byte	0x8
  216 0051 05       		.byte	0x5
@@ -400,7 +400,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
  218 0056 02       		.uleb128 0x2
  219 0057 08       		.byte	0x8
  220 0058 07       		.byte	0x7
- 221 0059 A1000000 		.4byte	.LASF7
+ 221 0059 F6000000 		.4byte	.LASF7
  222 005d 03       		.uleb128 0x3
  223 005e 04       		.byte	0x4
  224 005f 05       		.byte	0x5
@@ -410,27 +410,27 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
  228 0066 07       		.byte	0x7
  229 0067 45000000 		.4byte	.LASF8
  230 006b 04       		.uleb128 0x4
- 231 006c 89000000 		.4byte	.LASF12
+ 231 006c DE000000 		.4byte	.LASF12
  232 0070 02       		.byte	0x2
  233 0071 9201     		.2byte	0x192
  234 0073 2C000000 		.4byte	0x2c
  235 0077 02       		.uleb128 0x2
  236 0078 04       		.byte	0x4
  237 0079 04       		.byte	0x4
- 238 007a 10020000 		.4byte	.LASF9
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 8
+ 238 007a 65020000 		.4byte	.LASF9
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccf04ZIq.s 			page 8
 
 
  239 007e 02       		.uleb128 0x2
  240 007f 08       		.byte	0x8
  241 0080 04       		.byte	0x4
- 242 0081 A1010000 		.4byte	.LASF10
+ 242 0081 F6010000 		.4byte	.LASF10
  243 0085 02       		.uleb128 0x2
  244 0086 01       		.byte	0x1
  245 0087 08       		.byte	0x8
- 246 0088 7E010000 		.4byte	.LASF11
+ 246 0088 D3010000 		.4byte	.LASF11
  247 008c 04       		.uleb128 0x4
- 248 008d 20020000 		.4byte	.LASF13
+ 248 008d 75020000 		.4byte	.LASF13
  249 0091 02       		.byte	0x2
  250 0092 3C02     		.2byte	0x23c
  251 0094 98000000 		.4byte	0x98
@@ -439,7 +439,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
  254 009d 02       		.uleb128 0x2
  255 009e 04       		.byte	0x4
  256 009f 07       		.byte	0x7
- 257 00a0 72020000 		.4byte	.LASF14
+ 257 00a0 7A020000 		.4byte	.LASF14
  258 00a4 06       		.uleb128 0x6
  259 00a5 02       		.byte	0x2
  260 00a6 03       		.byte	0x3
@@ -452,7 +452,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
  267 00b3 6B000000 		.4byte	0x6b
  268 00b7 00       		.byte	0
  269 00b8 07       		.uleb128 0x7
- 270 00b9 7B020000 		.4byte	.LASF16
+ 270 00b9 83020000 		.4byte	.LASF16
  271 00bd 03       		.byte	0x3
  272 00be 34       		.byte	0x34
  273 00bf 6B000000 		.4byte	0x6b
@@ -464,7 +464,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
  279 00cb 35       		.byte	0x35
  280 00cc A4000000 		.4byte	0xa4
  281 00d0 09       		.uleb128 0x9
- 282 00d1 6F000000 		.4byte	.LASF18
+ 282 00d1 C4000000 		.4byte	.LASF18
  283 00d5 01       		.byte	0x1
  284 00d6 34       		.byte	0x34
  285 00d7 00000000 		.4byte	.LFB0
@@ -472,18 +472,18 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
  287 00df 01       		.uleb128 0x1
  288 00e0 9C       		.byte	0x9c
  289 00e1 09       		.uleb128 0x9
- 290 00e2 F3010000 		.4byte	.LASF19
+ 290 00e2 48020000 		.4byte	.LASF19
  291 00e6 01       		.byte	0x1
  292 00e7 4E       		.byte	0x4e
  293 00e8 00000000 		.4byte	.LFB1
  294 00ec 24000000 		.4byte	.LFE1-.LFB1
  295 00f0 01       		.uleb128 0x1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 9
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccf04ZIq.s 			page 9
 
 
  296 00f1 9C       		.byte	0x9c
  297 00f2 0A       		.uleb128 0xa
- 298 00f3 83010000 		.4byte	.LASF20
+ 298 00f3 D8010000 		.4byte	.LASF20
  299 00f7 01       		.byte	0x1
  300 00f8 71       		.byte	0x71
  301 00f9 00000000 		.4byte	.LFB2
@@ -499,7 +499,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
  311 0115 53010000 		.4byte	0x153
  312 0119 00       		.byte	0
  313 011a 0A       		.uleb128 0xa
- 314 011b A8010000 		.4byte	.LASF21
+ 314 011b FD010000 		.4byte	.LASF21
  315 011f 01       		.byte	0x1
  316 0120 99       		.byte	0x99
  317 0121 00000000 		.4byte	.LFB3
@@ -515,7 +515,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
  327 013d 5A010000 		.4byte	0x15a
  328 0141 00       		.byte	0
  329 0142 0C       		.uleb128 0xc
- 330 0143 B8000000 		.4byte	.LASF27
+ 330 0143 0D010000 		.4byte	.LASF27
  331 0147 01       		.byte	0x1
  332 0148 18       		.byte	0x18
  333 0149 C5000000 		.4byte	0xc5
@@ -523,11 +523,11 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
  335 014e 03       		.byte	0x3
  336 014f 00000000 		.4byte	MDIO_Interface_backup
  337 0153 0D       		.uleb128 0xd
- 338 0154 CE000000 		.4byte	.LASF22
+ 338 0154 23010000 		.4byte	.LASF22
  339 0158 03       		.byte	0x3
  340 0159 48       		.byte	0x48
  341 015a 0D       		.uleb128 0xd
- 342 015b BE010000 		.4byte	.LASF23
+ 342 015b 13020000 		.4byte	.LASF23
  343 015f 03       		.byte	0x3
  344 0160 47       		.byte	0x47
  345 0161 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
  350 0002 01       		.byte	0x1
  351 0003 25       		.uleb128 0x25
  352 0004 0E       		.uleb128 0xe
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 10
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccf04ZIq.s 			page 10
 
 
  353 0005 13       		.uleb128 0x13
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
  407 003b 00       		.byte	0
  408 003c 00       		.byte	0
  409 003d 06       		.uleb128 0x6
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 11
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccf04ZIq.s 			page 11
 
 
  410 003e 13       		.uleb128 0x13
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
  464 0074 01       		.uleb128 0x1
  465 0075 12       		.uleb128 0x12
  466 0076 06       		.uleb128 0x6
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 12
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccf04ZIq.s 			page 12
 
 
  467 0077 40       		.uleb128 0x40
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
  521 00b1 00       		.byte	0
  522 00b2 0D       		.uleb128 0xd
  523 00b3 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 13
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccf04ZIq.s 			page 13
 
 
  524 00b4 00       		.byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
  574 0000 6C6F6E67 		.ascii	"long long int\000"
  574      206C6F6E 
  574      6720696E 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 14
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccf04ZIq.s 			page 14
 
 
  574      7400
@@ -803,137 +803,137 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 1
  582      65726661 
  582      63655F42 
  582      41434B55 
- 583              	.LASF18:
- 584 006f 4D44494F 		.ascii	"MDIO_Interface_SaveConfig\000"
- 584      5F496E74 
- 584      65726661 
- 584      63655F53 
- 584      61766543 
- 585              	.LASF12:
- 586 0089 75696E74 		.ascii	"uint8\000"
- 586      3800
- 587              	.LASF5:
- 588 008f 6C6F6E67 		.ascii	"long unsigned int\000"
- 588      20756E73 
- 588      69676E65 
- 588      6420696E 
- 588      7400
- 589              	.LASF7:
- 590 00a1 6C6F6E67 		.ascii	"long long unsigned int\000"
- 590      206C6F6E 
- 590      6720756E 
- 590      7369676E 
- 590      65642069 
- 591              	.LASF27:
- 592 00b8 4D44494F 		.ascii	"MDIO_Interface_backup\000"
- 592      5F496E74 
- 592      65726661 
- 592      63655F62 
- 592      61636B75 
- 593              	.LASF22:
- 594 00ce 4D44494F 		.ascii	"MDIO_Interface_Stop\000"
- 594      5F496E74 
- 594      65726661 
- 594      63655F53 
- 594      746F7000 
- 595              	.LASF24:
- 596 00e2 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 15
+ 583              	.LASF26:
+ 584 006f 443A5C50 		.ascii	"D:\\PROJECT\\pgm\\Cypress_dem_board\\CFP_reader\\cf"
+ 584      524F4A45 
+ 584      43545C70 
+ 584      676D5C43 
+ 584      79707265 
+ 585 009d 705F7265 		.ascii	"p_reader\\W_cfp_reader\\cfp_reader.cydsn\000"
+ 585      61646572 
+ 585      5C575F63 
+ 585      66705F72 
+ 585      65616465 
+ 586              	.LASF18:
+ 587 00c4 4D44494F 		.ascii	"MDIO_Interface_SaveConfig\000"
+ 587      5F496E74 
+ 587      65726661 
+ 587      63655F53 
+ 587      61766543 
+ 588              	.LASF12:
+ 589 00de 75696E74 		.ascii	"uint8\000"
+ 589      3800
+ 590              	.LASF5:
+ 591 00e4 6C6F6E67 		.ascii	"long unsigned int\000"
+ 591      20756E73 
+ 591      69676E65 
+ 591      6420696E 
+ 591      7400
+ 592              	.LASF7:
+ 593 00f6 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 593      206C6F6E 
+ 593      6720756E 
+ 593      7369676E 
+ 593      65642069 
+ 594              	.LASF27:
+ 595 010d 4D44494F 		.ascii	"MDIO_Interface_backup\000"
+ 595      5F496E74 
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccf04ZIq.s 			page 15
 
 
- 596      4320342E 
- 596      392E3320 
- 596      32303135 
- 596      30333033 
- 597 0115 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 597      20726576 
- 597      6973696F 
- 597      6E203232 
- 597      31323230 
- 598 0148 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 598      66756E63 
- 598      74696F6E 
- 598      2D736563 
- 598      74696F6E 
- 599              	.LASF1:
- 600 0170 756E7369 		.ascii	"unsigned char\000"
- 600      676E6564 
- 600      20636861 
- 600      7200
- 601              	.LASF11:
- 602 017e 63686172 		.ascii	"char\000"
- 602      00
- 603              	.LASF20:
- 604 0183 4D44494F 		.ascii	"MDIO_Interface_Sleep\000"
- 604      5F496E74 
- 604      65726661 
- 604      63655F53 
- 604      6C656570 
- 605              	.LASF4:
- 606 0198 6C6F6E67 		.ascii	"long int\000"
- 606      20696E74 
- 606      00
- 607              	.LASF10:
- 608 01a1 646F7562 		.ascii	"double\000"
- 608      6C6500
- 609              	.LASF21:
- 610 01a8 4D44494F 		.ascii	"MDIO_Interface_Wakeup\000"
- 610      5F496E74 
- 610      65726661 
- 610      63655F57 
- 610      616B6575 
- 611              	.LASF23:
- 612 01be 4D44494F 		.ascii	"MDIO_Interface_Enable\000"
- 612      5F496E74 
- 612      65726661 
- 612      63655F45 
- 612      6E61626C 
- 613              	.LASF3:
- 614 01d4 73686F72 		.ascii	"short unsigned int\000"
- 614      7420756E 
- 614      7369676E 
- 614      65642069 
- 614      6E7400
- 615              	.LASF0:
- 616 01e7 7369676E 		.ascii	"signed char\000"
- 616      65642063 
- 616      68617200 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cczWPovX.s 			page 16
+ 595      65726661 
+ 595      63655F62 
+ 595      61636B75 
+ 596              	.LASF22:
+ 597 0123 4D44494F 		.ascii	"MDIO_Interface_Stop\000"
+ 597      5F496E74 
+ 597      65726661 
+ 597      63655F53 
+ 597      746F7000 
+ 598              	.LASF24:
+ 599 0137 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 599      4320342E 
+ 599      392E3320 
+ 599      32303135 
+ 599      30333033 
+ 600 016a 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 600      20726576 
+ 600      6973696F 
+ 600      6E203232 
+ 600      31323230 
+ 601 019d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 601      66756E63 
+ 601      74696F6E 
+ 601      2D736563 
+ 601      74696F6E 
+ 602              	.LASF1:
+ 603 01c5 756E7369 		.ascii	"unsigned char\000"
+ 603      676E6564 
+ 603      20636861 
+ 603      7200
+ 604              	.LASF11:
+ 605 01d3 63686172 		.ascii	"char\000"
+ 605      00
+ 606              	.LASF20:
+ 607 01d8 4D44494F 		.ascii	"MDIO_Interface_Sleep\000"
+ 607      5F496E74 
+ 607      65726661 
+ 607      63655F53 
+ 607      6C656570 
+ 608              	.LASF4:
+ 609 01ed 6C6F6E67 		.ascii	"long int\000"
+ 609      20696E74 
+ 609      00
+ 610              	.LASF10:
+ 611 01f6 646F7562 		.ascii	"double\000"
+ 611      6C6500
+ 612              	.LASF21:
+ 613 01fd 4D44494F 		.ascii	"MDIO_Interface_Wakeup\000"
+ 613      5F496E74 
+ 613      65726661 
+ 613      63655F57 
+ 613      616B6575 
+ 614              	.LASF23:
+ 615 0213 4D44494F 		.ascii	"MDIO_Interface_Enable\000"
+ 615      5F496E74 
+ 615      65726661 
+ 615      63655F45 
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccf04ZIq.s 			page 16
 
 
- 617              	.LASF19:
- 618 01f3 4D44494F 		.ascii	"MDIO_Interface_RestoreConfig\000"
- 618      5F496E74 
- 618      65726661 
- 618      63655F52 
- 618      6573746F 
- 619              	.LASF9:
- 620 0210 666C6F61 		.ascii	"float\000"
- 620      7400
- 621              	.LASF2:
- 622 0216 73686F72 		.ascii	"short int\000"
- 622      7420696E 
- 622      7400
- 623              	.LASF13:
- 624 0220 72656738 		.ascii	"reg8\000"
- 624      00
- 625              	.LASF26:
- 626 0225 443A5C70 		.ascii	"D:\\pgm\\Cypress_dem_board\\CFP_reader\\cfp_reader\\"
- 626      676D5C43 
- 626      79707265 
- 626      73735F64 
- 626      656D5F62 
- 627 0254 575F6366 		.ascii	"W_cfp_reader\\cfp_reader.cydsn\000"
- 627      705F7265 
- 627      61646572 
- 627      5C636670 
- 627      5F726561 
+ 615      6E61626C 
+ 616              	.LASF3:
+ 617 0229 73686F72 		.ascii	"short unsigned int\000"
+ 617      7420756E 
+ 617      7369676E 
+ 617      65642069 
+ 617      6E7400
+ 618              	.LASF0:
+ 619 023c 7369676E 		.ascii	"signed char\000"
+ 619      65642063 
+ 619      68617200 
+ 620              	.LASF19:
+ 621 0248 4D44494F 		.ascii	"MDIO_Interface_RestoreConfig\000"
+ 621      5F496E74 
+ 621      65726661 
+ 621      63655F52 
+ 621      6573746F 
+ 622              	.LASF9:
+ 623 0265 666C6F61 		.ascii	"float\000"
+ 623      7400
+ 624              	.LASF2:
+ 625 026b 73686F72 		.ascii	"short int\000"
+ 625      7420696E 
+ 625      7400
+ 626              	.LASF13:
+ 627 0275 72656738 		.ascii	"reg8\000"
+ 627      00
  628              	.LASF14:
- 629 0272 73697A65 		.ascii	"sizetype\000"
+ 629 027a 73697A65 		.ascii	"sizetype\000"
  629      74797065 
  629      00
  630              	.LASF16:
- 631 027b 696E7465 		.ascii	"interruptState\000"
+ 631 0283 696E7465 		.ascii	"interruptState\000"
  631      72727570 
  631      74537461 
  631      746500

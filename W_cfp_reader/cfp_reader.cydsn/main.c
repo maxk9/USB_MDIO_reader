@@ -56,7 +56,7 @@ uint16 HostData       = 0x0000;               /* Read data for the MDIO frames *
 //static   uint8  myState = STATE_READ;  /* State variable. Default state is WRITE */
 /* Device Address of MDIO Interface (constant) */
 static uint8  MdioDevAddr = 0x01; //PMA/PMD
-static uint8  MdioPhyAddr = 0x04;
+static uint8  MdioPhyAddr = 0x00;
 /* Local prototypes */
 void fillUpReadOnlyRegisters(void);
 uint8_t analiz_rx_data(uint8_t *rx_buffer);
@@ -135,52 +135,88 @@ int main(void)
     LCD_Position(1,0);
 	LCD_PrintString("R:0000");
     
+    
+  
     for(;;)
     {
+        
          /* Get data from current address */
         status = MDIO_Interface_GetData(myAddress, &myData, 1);
     
         if (status)
         {   /* Invalid data or address not supported */
             myData = 0x0000;
-        }     
-    
-        /* Print info on LCD [REG: XXXX] */
-        LCD_Position(1,2);
-        LCD_PrintInt16(myData);     
-    
-        /* Print info about access type [T:(XXX)] */
-        LCD_Position(0,11);
+        }  
         
         
-        /* CFP NVR/Vendor NVR Register Space */
-        if ((myAddress & ~(MDIO_Interface_REG_PAGE_1_SIZE-1)) == MDIO_Interface_CFP_NVR_START ||
-            (myAddress & ~(MDIO_Interface_REG_PAGE_2_SIZE-1)) == MDIO_Interface_VENDOR_NVR_START)
-        {
-            LCD_PrintString("RO) ");
-        }
-        /* Other Register spaces */
-        else if ((myAddress & ~(MDIO_Interface_REG_PAGE_3_SIZE-1)) == MDIO_Interface_USER_NVR_START ||
-                 (myAddress & ~(MDIO_Interface_REG_PAGE_4_SIZE-1)) == MDIO_Interface_CFP_MODULE_VR_START ||
-                 (myAddress & ~(MDIO_Interface_REG_PAGE_5_SIZE-1)) == MDIO_Interface_NETWORK_LANE_VR_START ||
-                 (myAddress & ~(MDIO_Interface_REG_PAGE_6_SIZE-1)) == MDIO_Interface_HOST_LANE_VR_START)
-        {
-            /* Special COR case */
-            if (myAddress == SPECIAL_COR_REGISTER)
+        
+            /* Print info on LCD [REG: XXXX] */
+            LCD_Position(1,2);
+            LCD_PrintInt16(myData);     
+        
+            /* Print info about access type [T:(XXX)] */
+            LCD_Position(0,11);
+            
+            
+            /* CFP NVR/Vendor NVR Register Space */
+            if ((myAddress & ~(MDIO_Interface_REG_PAGE_1_SIZE-1)) == MDIO_Interface_CFP_NVR_START ||
+                (myAddress & ~(MDIO_Interface_REG_PAGE_2_SIZE-1)) == MDIO_Interface_VENDOR_NVR_START)
             {
-                LCD_PrintString("COR)");
+                LCD_PrintString("RO) ");
             }
-            else
+            /* Other Register spaces */
+            else if ((myAddress & ~(MDIO_Interface_REG_PAGE_3_SIZE-1)) == MDIO_Interface_USER_NVR_START ||
+                     (myAddress & ~(MDIO_Interface_REG_PAGE_4_SIZE-1)) == MDIO_Interface_CFP_MODULE_VR_START ||
+                     (myAddress & ~(MDIO_Interface_REG_PAGE_5_SIZE-1)) == MDIO_Interface_NETWORK_LANE_VR_START ||
+                     (myAddress & ~(MDIO_Interface_REG_PAGE_6_SIZE-1)) == MDIO_Interface_HOST_LANE_VR_START)
             {
-                LCD_PrintString("R/W)");
+                /* Special COR case */
+                if (myAddress == SPECIAL_COR_REGISTER)
+                {
+                    LCD_PrintString("COR)");
+                }
+                else
+                {
+                    LCD_PrintString("R/W)");
+                }
             }
-        }
-        else /* Not Available Register */
-        {
-            LCD_PrintString("N/A)");
-        }
+            else /* Not Available Register */
+            {
+                LCD_PrintString("N/A)");
+            }
         
-        
+                    /******* ISR Flags instructions ********/
+            /* If flag set, update special COR register */
+            if (dataFlag)
+            {
+                /* Clear flag */
+                dataFlag = 0;          
+                
+                /* Add condition to set special COR register */
+                if (myAddress == SPECIAL_COR_MODIFIER)
+                {
+                    /* Get data from current address */
+                    status = MDIO_Interface_GetData(myAddress, &myData, 1);
+                
+                    /* Write in special COR register with current data */
+                    MDIO_Interface_SetBits(SPECIAL_COR_REGISTER, myData);
+                }
+            }
+              
+            /* If COR is detected, wait a moment to update value on LCD */
+            if (corFlag)
+            {
+                /* Clear Flag */
+                corFlag = 0;
+
+                CyDelay(250);
+            }
+                        
+            /* Print current address */
+            LCD_Position(0,2);
+            LCD_PrintInt16(myAddress);
+            
+      
         
         /* Host can send double SET_INTERFACE request. */
         if (0u != USBUART_1_IsConfigurationChanged())
@@ -267,37 +303,7 @@ int main(void)
                 }
             }
         }
-        /******* ISR Flags instructions ********/
 
-        /* If flag set, update special COR register */
-        if (dataFlag)
-        {
-            /* Clear flag */
-            dataFlag = 0;          
-            
-            /* Add condition to set special COR register */
-            if (myAddress == SPECIAL_COR_MODIFIER)
-            {
-                /* Get data from current address */
-                status = MDIO_Interface_GetData(myAddress, &myData, 1);
-            
-                /* Write in special COR register with current data */
-                MDIO_Interface_SetBits(SPECIAL_COR_REGISTER, myData);
-            }
-        }
-          
-        /* If COR is detected, wait a moment to update value on LCD */
-        if (corFlag)
-        {
-            /* Clear Flag */
-            corFlag = 0;
-
-            CyDelay(250);
-        }
-                    
-        /* Print current address */
-        LCD_Position(0,2);
-        LCD_PrintInt16(myAddress);
     }
 }
 
@@ -359,19 +365,19 @@ uint8_t analiz_rx_data(uint8_t *rx_buffer)
     
     switch(rx_buffer[0])
     {
-        case 'D'://set MdioDevAddr
-             Debug_MDIO_1_Write(1);
-            MdioDevAddr = rx_buffer[2];
-            USBUART_1_PutString("DOK");
-             Debug_MDIO_1_Write(0);
-            break;
-        
-        case 'H'://set MdioPhyAddr
-            Debug_MDIO_1_Write(1);
-            MdioPhyAddr = rx_buffer[2];
-            USBUART_1_PutString("HOK");
-            Debug_MDIO_1_Write(0);
-            break;
+//        case 'D'://set MdioDevAddr
+//             Debug_MDIO_1_Write(1);
+//            MdioDevAddr = rx_buffer[2];
+//            USBUART_1_PutString("DOK");
+//             Debug_MDIO_1_Write(0);
+//            break;
+//        
+//        case 'H'://set MdioPhyAddr
+//            Debug_MDIO_1_Write(1);
+//            MdioPhyAddr = rx_buffer[2];
+//            USBUART_1_PutString("HOK");
+//            Debug_MDIO_1_Write(0);
+//            break;
             
         case 'A'://set addr reg
             Debug_MDIO_1_Write(1);
@@ -385,7 +391,7 @@ uint8_t analiz_rx_data(uint8_t *rx_buffer)
             HostData = (rx_buffer[1]<<8)|rx_buffer[2];
             MDIO_host_2_WriteDataC45(MdioPhyAddr, MdioDevAddr, HostData);
             USBUART_1_PutString("WOK");
-             break;
+            break;
             
         case 'R'://read one word
                 MDIO_host_2_ReadDataC45( MdioPhyAddr, MdioDevAddr, &read_MDIO_data );

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccmWAimT.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 1
   29:Generated_Source\PSoC5/Opamp_1_PM.c **** * 
   30:Generated_Source\PSoC5/Opamp_1_PM.c **** * Parameters:
   31:Generated_Source\PSoC5/Opamp_1_PM.c **** *  void
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccmWAimT.s 			page 2
 
 
   32:Generated_Source\PSoC5/Opamp_1_PM.c **** * 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 1
   54              		.align	2
   55              		.global	Opamp_1_Sleep
   56              		.thumb
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 3
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccmWAimT.s 			page 3
 
 
   57              		.thumb_func
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 1
   79              		.loc 1 90 0
   80 0012 FFF7FEFF 		bl	Opamp_1_Stop
   81              	.LVL0:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 4
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccmWAimT.s 			page 4
 
 
   82 0016 08BD     		pop	{r3, pc}
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 1
  122:Generated_Source\PSoC5/Opamp_1_PM.c **** {
  105              		.loc 1 122 0
  106              		.cfi_startproc
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 5
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccmWAimT.s 			page 5
 
 
  107              		@ args = 0, pretend = 0, frame = 0
@@ -289,40 +289,40 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 1
  145 0006 00000000 		.4byte	.Ldebug_abbrev0
  146 000a 04       		.byte	0x4
  147 000b 01       		.uleb128 0x1
- 148 000c 77000000 		.4byte	.LASF22
+ 148 000c CC000000 		.4byte	.LASF22
  149 0010 01       		.byte	0x1
- 150 0011 18010000 		.4byte	.LASF23
- 151 0015 BB010000 		.4byte	.LASF24
+ 150 0011 6D010000 		.4byte	.LASF23
+ 151 0015 42000000 		.4byte	.LASF24
  152 0019 00000000 		.4byte	.Ldebug_ranges0+0
  153 001d 00000000 		.4byte	0
  154 0021 00000000 		.4byte	.Ldebug_line0
  155 0025 02       		.uleb128 0x2
  156 0026 01       		.byte	0x1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 6
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccmWAimT.s 			page 6
 
 
  157 0027 06       		.byte	0x6
- 158 0028 81010000 		.4byte	.LASF0
+ 158 0028 D6010000 		.4byte	.LASF0
  159 002c 02       		.uleb128 0x2
  160 002d 01       		.byte	0x1
  161 002e 08       		.byte	0x8
- 162 002f 05010000 		.4byte	.LASF1
+ 162 002f 5A010000 		.4byte	.LASF1
  163 0033 02       		.uleb128 0x2
  164 0034 02       		.byte	0x2
  165 0035 05       		.byte	0x5
- 166 0036 AC010000 		.4byte	.LASF2
+ 166 0036 01020000 		.4byte	.LASF2
  167 003a 02       		.uleb128 0x2
  168 003b 02       		.byte	0x2
  169 003c 07       		.byte	0x7
- 170 003d 6E010000 		.4byte	.LASF3
+ 170 003d C3010000 		.4byte	.LASF3
  171 0041 02       		.uleb128 0x2
  172 0042 04       		.byte	0x4
  173 0043 05       		.byte	0x5
- 174 0044 3C010000 		.4byte	.LASF4
+ 174 0044 91010000 		.4byte	.LASF4
  175 0048 02       		.uleb128 0x2
  176 0049 04       		.byte	0x4
  177 004a 07       		.byte	0x7
- 178 004b 48000000 		.4byte	.LASF5
+ 178 004b 9D000000 		.4byte	.LASF5
  179 004f 02       		.uleb128 0x2
  180 0050 08       		.byte	0x8
  181 0051 05       		.byte	0x5
@@ -330,7 +330,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 1
  183 0056 02       		.uleb128 0x2
  184 0057 08       		.byte	0x8
  185 0058 07       		.byte	0x7
- 186 0059 5A000000 		.4byte	.LASF7
+ 186 0059 AF000000 		.4byte	.LASF7
  187 005d 03       		.uleb128 0x3
  188 005e 04       		.byte	0x4
  189 005f 05       		.byte	0x5
@@ -340,25 +340,25 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 1
  193 0066 07       		.byte	0x7
  194 0067 1A000000 		.4byte	.LASF8
  195 006b 04       		.uleb128 0x4
- 196 006c 42000000 		.4byte	.LASF12
+ 196 006c 97000000 		.4byte	.LASF12
  197 0070 02       		.byte	0x2
  198 0071 9201     		.2byte	0x192
  199 0073 2C000000 		.4byte	0x2c
  200 0077 02       		.uleb128 0x2
  201 0078 04       		.byte	0x4
  202 0079 04       		.byte	0x4
- 203 007a 71000000 		.4byte	.LASF9
+ 203 007a C6000000 		.4byte	.LASF9
  204 007e 02       		.uleb128 0x2
  205 007f 08       		.byte	0x8
  206 0080 04       		.byte	0x4
- 207 0081 54010000 		.4byte	.LASF10
+ 207 0081 A9010000 		.4byte	.LASF10
  208 0085 02       		.uleb128 0x2
  209 0086 01       		.byte	0x1
  210 0087 08       		.byte	0x8
- 211 0088 13010000 		.4byte	.LASF11
+ 211 0088 68010000 		.4byte	.LASF11
  212 008c 04       		.uleb128 0x4
- 213 008d B6010000 		.4byte	.LASF13
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 7
+ 213 008d 0B020000 		.4byte	.LASF13
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccmWAimT.s 			page 7
 
 
  214 0091 02       		.byte	0x2
@@ -369,7 +369,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 1
  219 009d 02       		.uleb128 0x2
  220 009e 04       		.byte	0x4
  221 009f 07       		.byte	0x7
- 222 00a0 8D010000 		.4byte	.LASF14
+ 222 00a0 E2010000 		.4byte	.LASF14
  223 00a4 06       		.uleb128 0x6
  224 00a5 01       		.byte	0x1
  225 00a6 03       		.byte	0x3
@@ -383,12 +383,12 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 1
  233 00b7 00       		.byte	0
  234 00b8 00       		.byte	0
  235 00b9 08       		.uleb128 0x8
- 236 00ba 17020000 		.4byte	.LASF15
+ 236 00ba 1F020000 		.4byte	.LASF15
  237 00be 03       		.byte	0x3
  238 00bf 29       		.byte	0x29
  239 00c0 A4000000 		.4byte	0xa4
  240 00c4 09       		.uleb128 0x9
- 241 00c5 5B010000 		.4byte	.LASF16
+ 241 00c5 B0010000 		.4byte	.LASF16
  242 00c9 01       		.byte	0x1
  243 00ca 25       		.byte	0x25
  244 00cb 00000000 		.4byte	.LFB0
@@ -396,7 +396,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 1
  246 00d3 01       		.uleb128 0x1
  247 00d4 9C       		.byte	0x9c
  248 00d5 09       		.uleb128 0x9
- 249 00d6 96010000 		.4byte	.LASF17
+ 249 00d6 EB010000 		.4byte	.LASF17
  250 00da 01       		.byte	0x1
  251 00db 39       		.byte	0x39
  252 00dc 00000000 		.4byte	.LFB1
@@ -417,8 +417,8 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 1
  267 0100 35010000 		.4byte	0x135
  268 0104 00       		.byte	0
  269 0105 0A       		.uleb128 0xa
- 270 0106 08020000 		.4byte	.LASF19
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 8
+ 270 0106 10020000 		.4byte	.LASF19
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccmWAimT.s 			page 8
 
 
  271 010a 01       		.byte	0x1
@@ -433,7 +433,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 1
  280 011f 3C010000 		.4byte	0x13c
  281 0123 00       		.byte	0
  282 0124 0C       		.uleb128 0xc
- 283 0125 45010000 		.4byte	.LASF26
+ 283 0125 9A010000 		.4byte	.LASF26
  284 0129 01       		.byte	0x1
  285 012a 14       		.byte	0x14
  286 012b B9000000 		.4byte	0xb9
@@ -445,7 +445,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 1
  292 013a 03       		.byte	0x3
  293 013b 34       		.byte	0x34
  294 013c 0D       		.uleb128 0xd
- 295 013d 2D020000 		.4byte	.LASF21
+ 295 013d 35020000 		.4byte	.LASF21
  296 0141 03       		.byte	0x3
  297 0142 3B       		.byte	0x3b
  298 0143 00       		.byte	0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 1
  325 0018 3E       		.uleb128 0x3e
  326 0019 0B       		.uleb128 0xb
  327 001a 03       		.uleb128 0x3
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 9
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccmWAimT.s 			page 9
 
 
  328 001b 0E       		.uleb128 0xe
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 1
  382 0051 3B       		.uleb128 0x3b
  383 0052 0B       		.uleb128 0xb
  384 0053 49       		.uleb128 0x49
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 10
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccmWAimT.s 			page 10
 
 
  385 0054 13       		.uleb128 0x13
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 1
  439 008b 11       		.uleb128 0x11
  440 008c 01       		.uleb128 0x1
  441 008d 12       		.uleb128 0x12
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 11
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccmWAimT.s 			page 11
 
 
  442 008e 06       		.uleb128 0x6
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 1
  496 0006 00000000 		.4byte	.Ldebug_info0
  497 000a 04       		.byte	0x4
  498 000b 00       		.byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 12
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccmWAimT.s 			page 12
 
 
  499 000c 0000     		.2byte	0
@@ -716,132 +716,132 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 1
  535      705F315F 
  535      536C6565 
  535      7000
- 536              	.LASF12:
- 537 0042 75696E74 		.ascii	"uint8\000"
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 13
+ 536              	.LASF24:
+ 537 0042 443A5C50 		.ascii	"D:\\PROJECT\\pgm\\Cypress_dem_board\\CFP_reader\\cf"
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccmWAimT.s 			page 13
 
 
- 537      3800
- 538              	.LASF5:
- 539 0048 6C6F6E67 		.ascii	"long unsigned int\000"
- 539      20756E73 
- 539      69676E65 
- 539      6420696E 
- 539      7400
- 540              	.LASF7:
- 541 005a 6C6F6E67 		.ascii	"long long unsigned int\000"
- 541      206C6F6E 
- 541      6720756E 
- 541      7369676E 
- 541      65642069 
- 542              	.LASF9:
- 543 0071 666C6F61 		.ascii	"float\000"
- 543      7400
- 544              	.LASF22:
- 545 0077 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 545      4320342E 
- 545      392E3320 
- 545      32303135 
- 545      30333033 
- 546 00aa 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 546      20726576 
- 546      6973696F 
- 546      6E203232 
- 546      31323230 
- 547 00dd 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 547      66756E63 
- 547      74696F6E 
- 547      2D736563 
- 547      74696F6E 
- 548              	.LASF1:
- 549 0105 756E7369 		.ascii	"unsigned char\000"
- 549      676E6564 
- 549      20636861 
- 549      7200
- 550              	.LASF11:
- 551 0113 63686172 		.ascii	"char\000"
- 551      00
- 552              	.LASF23:
- 553 0118 47656E65 		.ascii	"Generated_Source\\PSoC5\\Opamp_1_PM.c\000"
- 553      72617465 
- 553      645F536F 
- 553      75726365 
- 553      5C50536F 
- 554              	.LASF4:
- 555 013c 6C6F6E67 		.ascii	"long int\000"
- 555      20696E74 
- 555      00
- 556              	.LASF26:
- 557 0145 4F70616D 		.ascii	"Opamp_1_backup\000"
- 557      705F315F 
- 557      6261636B 
- 557      757000
- 558              	.LASF10:
- 559 0154 646F7562 		.ascii	"double\000"
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 14
+ 537      524F4A45 
+ 537      43545C70 
+ 537      676D5C43 
+ 537      79707265 
+ 538 0070 705F7265 		.ascii	"p_reader\\W_cfp_reader\\cfp_reader.cydsn\000"
+ 538      61646572 
+ 538      5C575F63 
+ 538      66705F72 
+ 538      65616465 
+ 539              	.LASF12:
+ 540 0097 75696E74 		.ascii	"uint8\000"
+ 540      3800
+ 541              	.LASF5:
+ 542 009d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 542      20756E73 
+ 542      69676E65 
+ 542      6420696E 
+ 542      7400
+ 543              	.LASF7:
+ 544 00af 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 544      206C6F6E 
+ 544      6720756E 
+ 544      7369676E 
+ 544      65642069 
+ 545              	.LASF9:
+ 546 00c6 666C6F61 		.ascii	"float\000"
+ 546      7400
+ 547              	.LASF22:
+ 548 00cc 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 548      4320342E 
+ 548      392E3320 
+ 548      32303135 
+ 548      30333033 
+ 549 00ff 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 549      20726576 
+ 549      6973696F 
+ 549      6E203232 
+ 549      31323230 
+ 550 0132 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 550      66756E63 
+ 550      74696F6E 
+ 550      2D736563 
+ 550      74696F6E 
+ 551              	.LASF1:
+ 552 015a 756E7369 		.ascii	"unsigned char\000"
+ 552      676E6564 
+ 552      20636861 
+ 552      7200
+ 553              	.LASF11:
+ 554 0168 63686172 		.ascii	"char\000"
+ 554      00
+ 555              	.LASF23:
+ 556 016d 47656E65 		.ascii	"Generated_Source\\PSoC5\\Opamp_1_PM.c\000"
+ 556      72617465 
+ 556      645F536F 
+ 556      75726365 
+ 556      5C50536F 
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccmWAimT.s 			page 14
 
 
- 559      6C6500
- 560              	.LASF16:
- 561 015b 4F70616D 		.ascii	"Opamp_1_SaveConfig\000"
- 561      705F315F 
- 561      53617665 
- 561      436F6E66 
- 561      696700
- 562              	.LASF3:
- 563 016e 73686F72 		.ascii	"short unsigned int\000"
- 563      7420756E 
- 563      7369676E 
- 563      65642069 
- 563      6E7400
- 564              	.LASF0:
- 565 0181 7369676E 		.ascii	"signed char\000"
- 565      65642063 
- 565      68617200 
- 566              	.LASF14:
- 567 018d 73697A65 		.ascii	"sizetype\000"
- 567      74797065 
- 567      00
- 568              	.LASF17:
- 569 0196 4F70616D 		.ascii	"Opamp_1_RestoreConfig\000"
- 569      705F315F 
- 569      52657374 
- 569      6F726543 
- 569      6F6E6669 
- 570              	.LASF2:
- 571 01ac 73686F72 		.ascii	"short int\000"
- 571      7420696E 
- 571      7400
- 572              	.LASF13:
- 573 01b6 72656738 		.ascii	"reg8\000"
- 573      00
- 574              	.LASF24:
- 575 01bb 443A5C70 		.ascii	"D:\\pgm\\Cypress_dem_board\\CFP_reader\\cfp_reader\\"
- 575      676D5C43 
- 575      79707265 
- 575      73735F64 
- 575      656D5F62 
- 576 01ea 575F6366 		.ascii	"W_cfp_reader\\cfp_reader.cydsn\000"
- 576      705F7265 
- 576      61646572 
- 576      5C636670 
- 576      5F726561 
+ 557              	.LASF4:
+ 558 0191 6C6F6E67 		.ascii	"long int\000"
+ 558      20696E74 
+ 558      00
+ 559              	.LASF26:
+ 560 019a 4F70616D 		.ascii	"Opamp_1_backup\000"
+ 560      705F315F 
+ 560      6261636B 
+ 560      757000
+ 561              	.LASF10:
+ 562 01a9 646F7562 		.ascii	"double\000"
+ 562      6C6500
+ 563              	.LASF16:
+ 564 01b0 4F70616D 		.ascii	"Opamp_1_SaveConfig\000"
+ 564      705F315F 
+ 564      53617665 
+ 564      436F6E66 
+ 564      696700
+ 565              	.LASF3:
+ 566 01c3 73686F72 		.ascii	"short unsigned int\000"
+ 566      7420756E 
+ 566      7369676E 
+ 566      65642069 
+ 566      6E7400
+ 567              	.LASF0:
+ 568 01d6 7369676E 		.ascii	"signed char\000"
+ 568      65642063 
+ 568      68617200 
+ 569              	.LASF14:
+ 570 01e2 73697A65 		.ascii	"sizetype\000"
+ 570      74797065 
+ 570      00
+ 571              	.LASF17:
+ 572 01eb 4F70616D 		.ascii	"Opamp_1_RestoreConfig\000"
+ 572      705F315F 
+ 572      52657374 
+ 572      6F726543 
+ 572      6F6E6669 
+ 573              	.LASF2:
+ 574 0201 73686F72 		.ascii	"short int\000"
+ 574      7420696E 
+ 574      7400
+ 575              	.LASF13:
+ 576 020b 72656738 		.ascii	"reg8\000"
+ 576      00
  577              	.LASF19:
- 578 0208 4F70616D 		.ascii	"Opamp_1_Wakeup\000"
+ 578 0210 4F70616D 		.ascii	"Opamp_1_Wakeup\000"
  578      705F315F 
  578      57616B65 
  578      757000
  579              	.LASF15:
- 580 0217 4F70616D 		.ascii	"Opamp_1_BACKUP_STRUCT\000"
+ 580 021f 4F70616D 		.ascii	"Opamp_1_BACKUP_STRUCT\000"
  580      705F315F 
  580      4241434B 
  580      55505F53 
  580      54525543 
  581              	.LASF21:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccphGn10.s 			page 15
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccmWAimT.s 			page 15
 
 
- 582 022d 4F70616D 		.ascii	"Opamp_1_Enable\000"
+ 582 0235 4F70616D 		.ascii	"Opamp_1_Enable\000"
  582      705F315F 
  582      456E6162 
  582      6C6500

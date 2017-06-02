@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
   30:Generated_Source\PSoC5/LCD.c **** 
   31:Generated_Source\PSoC5/LCD.c **** 
   32:Generated_Source\PSoC5/LCD.c **** /*******************************************************************************
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 2
 
 
   33:Generated_Source\PSoC5/LCD.c **** * Function Name: LCD_Init
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
   87:Generated_Source\PSoC5/LCD.c **** * Summary:
   88:Generated_Source\PSoC5/LCD.c **** *  Turns on the display.
   89:Generated_Source\PSoC5/LCD.c **** *
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 3
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 3
 
 
   90:Generated_Source\PSoC5/LCD.c **** * Parameters:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  144:Generated_Source\PSoC5/LCD.c ****     }
  145:Generated_Source\PSoC5/LCD.c **** 
  146:Generated_Source\PSoC5/LCD.c ****     /* Turn on the LCD */
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 4
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 4
 
 
  147:Generated_Source\PSoC5/LCD.c ****     LCD_Enable();
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  201:Generated_Source\PSoC5/LCD.c ****             LCD_WriteControl(LCD_ROW_0_START + column);
  202:Generated_Source\PSoC5/LCD.c ****             break;
  203:Generated_Source\PSoC5/LCD.c ****         case (uint8) 1:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 5
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 5
 
 
  204:Generated_Source\PSoC5/LCD.c ****             LCD_WriteControl(LCD_ROW_1_START + column);
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  258:Generated_Source\PSoC5/LCD.c **** *  character: Character to be written to LCD
  259:Generated_Source\PSoC5/LCD.c **** *
  260:Generated_Source\PSoC5/LCD.c **** * Return:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 6
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 6
 
 
  261:Generated_Source\PSoC5/LCD.c **** *  None.
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  315:Generated_Source\PSoC5/LCD.c **** {
  316:Generated_Source\PSoC5/LCD.c ****     uint8 nibble;
  317:Generated_Source\PSoC5/LCD.c **** 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 7
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 7
 
 
  318:Generated_Source\PSoC5/LCD.c ****     LCD_IsReady();
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  372:Generated_Source\PSoC5/LCD.c ****         value = LCD_PORT_DM0_REG & ((uint8)(~LCD_DATA_MASK));
  373:Generated_Source\PSoC5/LCD.c ****         /* Load in high Z values for data pins, others unchanged */
  374:Generated_Source\PSoC5/LCD.c ****         LCD_PORT_DM0_REG = value | (LCD_HIGH_Z_DM0 & LCD_DATA_MASK);
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 8
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 8
 
 
  375:Generated_Source\PSoC5/LCD.c **** 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  429:Generated_Source\PSoC5/LCD.c ****             CyDelayUs(10u);
  430:Generated_Source\PSoC5/LCD.c ****         }
  431:Generated_Source\PSoC5/LCD.c **** 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 9
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 9
 
 
  432:Generated_Source\PSoC5/LCD.c ****         /* Repeat until bit 4 is not zero or until timeout. */
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  486:Generated_Source\PSoC5/LCD.c **** static void LCD_WrDatNib(uint8 nibble) 
  487:Generated_Source\PSoC5/LCD.c **** {
  488:Generated_Source\PSoC5/LCD.c ****     /* RS should be low to select data register */
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 10
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 10
 
 
  489:Generated_Source\PSoC5/LCD.c ****     LCD_PORT_DR_REG |= LCD_RS;
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
   37 0004 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
   38 0006 03F09F03 		and	r3, r3, #159
   39 000a 2370     		strb	r3, [r4]
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 11
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 11
 
 
  532:Generated_Source\PSoC5/LCD.c **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
   76              		@ frame_needed = 0, uses_anonymous_args = 0
   77              	.LVL3:
   78 0000 38B5     		push	{r3, r4, r5, lr}
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 12
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 12
 
 
   79              		.cfi_def_cfa_offset 16
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  126              		.global	LCD_IsReady
  127              		.thumb
  128              		.thumb_func
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 13
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 13
 
 
  129              		.type	LCD_IsReady, %function
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  174 0030 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
  175              	.LVL13:
  176 0032 02F0DF02 		and	r2, r2, #223
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 14
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 14
 
 
  177 0036 1A70     		strb	r2, [r3]
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  221 007a 2B70     		strb	r3, [r5]
  421:Generated_Source\PSoC5/LCD.c **** 
  222              		.loc 1 421 0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 15
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 15
 
 
  223 007c 0120     		movs	r0, #1
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  266              		.loc 1 460 0
  267 00c0 43F00F03 		orr	r3, r3, #15
  268              	.LVL26:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 16
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 16
 
 
  269 00c4 1370     		strb	r3, [r2]
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  317 0012 FFF7FEFF 		bl	LCD_WrDatNib
  318              	.LVL33:
  319 0016 10BD     		pop	{r4, pc}
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 17
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 17
 
 
  320              		.cfi_endproc
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  366 0014 0028     		cmp	r0, #0
  367 0016 F8D1     		bne	.L20
  245:Generated_Source\PSoC5/LCD.c **** 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 18
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 18
 
 
  368              		.loc 1 245 0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  323:Generated_Source\PSoC5/LCD.c ****     nibble = cByte & LCD_NIBBLE_MASK;
  418              		.loc 1 323 0
  419 0008 2009     		lsrs	r0, r4, #4
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 19
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 19
 
 
  420 000a FFF7FEFF 		bl	LCD_WrCntrlNib
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  466              		.loc 1 63 0
  467 0020 0320     		movs	r0, #3
  468 0022 FFF7FEFF 		bl	LCD_WrCntrlNib
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 20
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 20
 
 
  469              	.LVL53:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  512 0064 FFF7FEFF 		bl	CyDelay
  513              	.LVL64:
  514 0068 08BD     		pop	{r3, pc}
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 21
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 21
 
 
  515              		.cfi_endproc
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  565              		.cfi_offset 14, -4
  140:Generated_Source\PSoC5/LCD.c ****     {
  566              		.loc 1 140 0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 22
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 22
 
 
  567 0002 054B     		ldr	r3, .L35
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  615              		.align	2
  616              	.L39:
  617 0010 00000000 		.word	.LANCHOR0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 23
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 23
 
 
  618              		.cfi_endproc
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  666              	.LVL75:
  667              	.L46:
  207:Generated_Source\PSoC5/LCD.c ****             break;
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 24
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 24
 
 
  668              		.loc 1 207 0
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  699              		@ args = 0, pretend = 0, frame = 0
  700              		@ frame_needed = 0, uses_anonymous_args = 0
  701              	.LVL81:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 25
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 25
 
 
  702 0000 38B5     		push	{r3, r4, r5, lr}
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  589:Generated_Source\PSoC5/LCD.c ****     *
  590:Generated_Source\PSoC5/LCD.c ****     *******************************************************************************/
  591:Generated_Source\PSoC5/LCD.c ****     void LCD_PrintInt16(uint16 value) 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 26
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 26
 
 
  592:Generated_Source\PSoC5/LCD.c ****     {
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  769              		.cfi_startproc
  770              		@ args = 0, pretend = 0, frame = 0
  771              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 27
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 27
 
 
  772              	.LVL89:
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  812              	LCD_PrintU32Number:
  813              	.LFB15:
  627:Generated_Source\PSoC5/LCD.c ****     
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 28
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 28
 
 
  628:Generated_Source\PSoC5/LCD.c ****     
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  671:Generated_Source\PSoC5/LCD.c ****         number[digIndex] = (char8) '\0';
  825              		.loc 1 671 0
  826 0004 0023     		movs	r3, #0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 29
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 29
 
 
  827 0006 8DF80E30 		strb	r3, [sp, #14]
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  690:Generated_Source\PSoC5/LCD.c ****         /* Extract last decimal digit 'digIndex', from the 'value' and convert it
  691:Generated_Source\PSoC5/LCD.c ****         * to ASCII character.
  692:Generated_Source\PSoC5/LCD.c ****         */
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 30
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 30
 
 
  693:Generated_Source\PSoC5/LCD.c ****         tmpDigit = (uint8) (((uint8)(value % LCD_TEN)) + (uint8) LCD_ZERO_CHAR_ASCII);
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  907              	LCD_enableState:
  908 0000 00       		.space	1
  909              		.type	LCD_initVar, %object
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 31
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 31
 
 
  910              		.size	LCD_initVar, 1
@@ -1815,10 +1815,10 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  921 0006 00000000 		.4byte	.Ldebug_abbrev0
  922 000a 04       		.byte	0x4
  923 000b 01       		.uleb128 0x1
- 924 000c 2C010000 		.4byte	.LASF51
+ 924 000c 7B010000 		.4byte	.LASF51
  925 0010 01       		.byte	0x1
- 926 0011 21020000 		.4byte	.LASF52
- 927 0015 C8020000 		.4byte	.LASF53
+ 926 0011 70020000 		.4byte	.LASF52
+ 927 0015 A6000000 		.4byte	.LASF53
  928 0019 00000000 		.4byte	.Ldebug_ranges0+0
  929 001d 00000000 		.4byte	0
  930 0021 00000000 		.4byte	.Ldebug_line0
@@ -1829,19 +1829,19 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  935 002c 03       		.uleb128 0x3
  936 002d 04       		.byte	0x4
  937 002e 07       		.byte	0x7
- 938 002f C3010000 		.4byte	.LASF0
+ 938 002f 12020000 		.4byte	.LASF0
  939 0033 03       		.uleb128 0x3
  940 0034 01       		.byte	0x1
  941 0035 06       		.byte	0x6
- 942 0036 B6020000 		.4byte	.LASF1
+ 942 0036 0B030000 		.4byte	.LASF1
  943 003a 03       		.uleb128 0x3
  944 003b 01       		.byte	0x1
  945 003c 08       		.byte	0x8
- 946 003d B6000000 		.4byte	.LASF2
+ 946 003d 05010000 		.4byte	.LASF2
  947 0041 03       		.uleb128 0x3
  948 0042 02       		.byte	0x2
  949 0043 05       		.byte	0x5
- 950 0044 96020000 		.4byte	.LASF3
+ 950 0044 E5020000 		.4byte	.LASF3
  951 0048 03       		.uleb128 0x3
  952 0049 02       		.byte	0x2
  953 004a 07       		.byte	0x7
@@ -1849,67 +1849,67 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  955 004f 03       		.uleb128 0x3
  956 0050 04       		.byte	0x4
  957 0051 05       		.byte	0x5
- 958 0052 A8020000 		.4byte	.LASF5
+ 958 0052 F7020000 		.4byte	.LASF5
  959 0056 03       		.uleb128 0x3
  960 0057 04       		.byte	0x4
  961 0058 07       		.byte	0x7
- 962 0059 C9000000 		.4byte	.LASF6
+ 962 0059 18010000 		.4byte	.LASF6
  963 005d 03       		.uleb128 0x3
  964 005e 08       		.byte	0x8
  965 005f 05       		.byte	0x5
- 966 0060 54020000 		.4byte	.LASF7
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 32
+ 966 0060 A3020000 		.4byte	.LASF7
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 32
 
 
  967 0064 03       		.uleb128 0x3
  968 0065 08       		.byte	0x8
  969 0066 07       		.byte	0x7
- 970 0067 D0010000 		.4byte	.LASF8
+ 970 0067 1F020000 		.4byte	.LASF8
  971 006b 03       		.uleb128 0x3
  972 006c 04       		.byte	0x4
  973 006d 07       		.byte	0x7
- 974 006e 45020000 		.4byte	.LASF9
+ 974 006e 94020000 		.4byte	.LASF9
  975 0072 03       		.uleb128 0x3
  976 0073 01       		.byte	0x1
  977 0074 08       		.byte	0x8
- 978 0075 B1020000 		.4byte	.LASF10
+ 978 0075 00030000 		.4byte	.LASF10
  979 0079 04       		.uleb128 0x4
- 980 007a DB000000 		.4byte	.LASF11
+ 980 007a 2A010000 		.4byte	.LASF11
  981 007e 02       		.byte	0x2
  982 007f 9201     		.2byte	0x192
  983 0081 3A000000 		.4byte	0x3a
  984 0085 04       		.uleb128 0x4
- 985 0086 12010000 		.4byte	.LASF12
+ 985 0086 61010000 		.4byte	.LASF12
  986 008a 02       		.byte	0x2
  987 008b 9301     		.2byte	0x193
  988 008d 48000000 		.4byte	0x48
  989 0091 04       		.uleb128 0x4
- 990 0092 25010000 		.4byte	.LASF13
+ 990 0092 74010000 		.4byte	.LASF13
  991 0096 02       		.byte	0x2
  992 0097 9401     		.2byte	0x194
  993 0099 56000000 		.4byte	0x56
  994 009d 03       		.uleb128 0x3
  995 009e 04       		.byte	0x4
  996 009f 04       		.byte	0x4
- 997 00a0 A6000000 		.4byte	.LASF14
+ 997 00a0 05030000 		.4byte	.LASF14
  998 00a4 03       		.uleb128 0x3
  999 00a5 08       		.byte	0x8
  1000 00a6 04       		.byte	0x4
- 1001 00a7 F0000000 		.4byte	.LASF15
+ 1001 00a7 3F010000 		.4byte	.LASF15
  1002 00ab 04       		.uleb128 0x4
- 1003 00ac 4E020000 		.4byte	.LASF16
+ 1003 00ac 9D020000 		.4byte	.LASF16
  1004 00b0 02       		.byte	0x2
  1005 00b1 A301     		.2byte	0x1a3
  1006 00b3 72000000 		.4byte	0x72
  1007 00b7 04       		.uleb128 0x4
- 1008 00b8 C4000000 		.4byte	.LASF17
+ 1008 00b8 13010000 		.4byte	.LASF17
  1009 00bc 02       		.byte	0x2
  1010 00bd 3C02     		.2byte	0x23c
  1011 00bf C3000000 		.4byte	0xc3
  1012 00c3 05       		.uleb128 0x5
  1013 00c4 79000000 		.4byte	0x79
  1014 00c8 06       		.uleb128 0x6
- 1015 00c9 E1000000 		.4byte	.LASF18
+ 1015 00c9 30010000 		.4byte	.LASF18
  1016 00cd 01       		.byte	0x1
  1017 00ce 1002     		.2byte	0x210
  1018 00d0 00000000 		.4byte	.LFB11
@@ -1918,10 +1918,10 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1021 00d9 9C       		.byte	0x9c
  1022 00da FE000000 		.4byte	0xfe
  1023 00de 07       		.uleb128 0x7
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 33
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 33
 
 
- 1024 00df 23030000 		.4byte	.LASF20
+ 1024 00df 2B030000 		.4byte	.LASF20
  1025 00e3 01       		.byte	0x1
  1026 00e4 1002     		.2byte	0x210
  1027 00e6 79000000 		.4byte	0x79
@@ -1946,7 +1946,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1046 010f 9C       		.byte	0x9c
  1047 0110 47010000 		.4byte	0x147
  1048 0114 07       		.uleb128 0x7
- 1049 0115 23030000 		.4byte	.LASF20
+ 1049 0115 2B030000 		.4byte	.LASF20
  1050 0119 01       		.byte	0x1
  1051 011a E601     		.2byte	0x1e6
  1052 011c 79000000 		.4byte	0x79
@@ -1972,13 +1972,13 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1072 0145 00       		.byte	0
  1073 0146 00       		.byte	0
  1074 0147 0B       		.uleb128 0xb
- 1075 0148 19010000 		.4byte	.LASF23
+ 1075 0148 68010000 		.4byte	.LASF23
  1076 014c 01       		.byte	0x1
  1077 014d 5C01     		.2byte	0x15c
  1078 014f 00000000 		.4byte	.LFB9
  1079 0153 E4000000 		.4byte	.LFE9-.LFB9
  1080 0157 01       		.uleb128 0x1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 34
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 34
 
 
  1081 0158 9C       		.byte	0x9c
@@ -1990,7 +1990,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1087 0165 79000000 		.4byte	0x79
  1088 0169 42000000 		.4byte	.LLST2
  1089 016d 0C       		.uleb128 0xc
- 1090 016e 6C020000 		.4byte	.LASF22
+ 1090 016e BB020000 		.4byte	.LASF22
  1091 0172 01       		.byte	0x1
  1092 0173 5F01     		.2byte	0x15f
  1093 0175 91000000 		.4byte	0x91
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1135 01c9 08       		.uleb128 0x8
  1136 01ca 92000000 		.4byte	.LVL23
  1137 01ce F7060000 		.4byte	0x6f7
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 35
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 35
 
 
  1138 01d2 09       		.uleb128 0x9
@@ -2058,13 +2058,13 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1152 01ea 9C       		.byte	0x9c
  1153 01eb 41020000 		.4byte	0x241
  1154 01ef 07       		.uleb128 0x7
- 1155 01f0 C2020000 		.4byte	.LASF25
+ 1155 01f0 17030000 		.4byte	.LASF25
  1156 01f4 01       		.byte	0x1
  1157 01f5 1C01     		.2byte	0x11c
  1158 01f7 79000000 		.4byte	0x79
  1159 01fb D0000000 		.4byte	.LLST4
  1160 01ff 0C       		.uleb128 0xc
- 1161 0200 23030000 		.4byte	.LASF20
+ 1161 0200 2B030000 		.4byte	.LASF20
  1162 0204 01       		.byte	0x1
  1163 0205 1E01     		.2byte	0x11e
  1164 0207 79000000 		.4byte	0x79
@@ -2098,11 +2098,11 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1192 023e 1A       		.byte	0x1a
  1193 023f 00       		.byte	0
  1194 0240 00       		.byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 36
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 36
 
 
  1195 0241 0E       		.uleb128 0xe
- 1196 0242 02010000 		.4byte	.LASF26
+ 1196 0242 51010000 		.4byte	.LASF26
  1197 0246 01       		.byte	0x1
  1198 0247 E9       		.byte	0xe9
  1199 0248 00000000 		.4byte	.LFB5
@@ -2123,7 +2123,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1214 026c 79000000 		.4byte	0x79
  1215 0270 35010000 		.4byte	.LLST7
  1216 0274 10       		.uleb128 0x10
- 1217 0275 A0020000 		.4byte	.LASF29
+ 1217 0275 EF020000 		.4byte	.LASF29
  1218 0279 01       		.byte	0x1
  1219 027a EC       		.byte	0xec
  1220 027b AB000000 		.4byte	0xab
@@ -2138,7 +2138,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1229 0293 12       		.uleb128 0x12
  1230 0294 AB000000 		.4byte	0xab
  1231 0298 0B       		.uleb128 0xb
- 1232 0299 15020000 		.4byte	.LASF30
+ 1232 0299 64020000 		.4byte	.LASF30
  1233 029d 01       		.byte	0x1
  1234 029e 0801     		.2byte	0x108
  1235 02a0 00000000 		.4byte	.LFB6
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1249 02c7 00       		.byte	0
  1250 02c8 0B       		.uleb128 0xb
  1251 02c9 15000000 		.4byte	.LASF32
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 37
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 37
 
 
  1252 02cd 01       		.byte	0x1
@@ -2169,13 +2169,13 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1257 02d9 9C       		.byte	0x9c
  1258 02da 30030000 		.4byte	0x330
  1259 02de 07       		.uleb128 0x7
- 1260 02df 1D030000 		.4byte	.LASF33
+ 1260 02df 25030000 		.4byte	.LASF33
  1261 02e3 01       		.byte	0x1
  1262 02e4 3A01     		.2byte	0x13a
  1263 02e6 79000000 		.4byte	0x79
  1264 02ea 9E010000 		.4byte	.LLST10
  1265 02ee 0C       		.uleb128 0xc
- 1266 02ef 23030000 		.4byte	.LASF20
+ 1266 02ef 2B030000 		.4byte	.LASF20
  1267 02f3 01       		.byte	0x1
  1268 02f4 3C01     		.2byte	0x13c
  1269 02f6 79000000 		.4byte	0x79
@@ -2210,7 +2210,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1298 032e 00       		.byte	0
  1299 032f 00       		.byte	0
  1300 0330 0E       		.uleb128 0xe
- 1301 0331 84020000 		.4byte	.LASF34
+ 1301 0331 D3020000 		.4byte	.LASF34
  1302 0335 01       		.byte	0x1
  1303 0336 37       		.byte	0x37
  1304 0337 00000000 		.4byte	.LFB0
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1306 033f 01       		.uleb128 0x1
  1307 0340 9C       		.byte	0x9c
  1308 0341 87040000 		.4byte	0x487
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 38
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 38
 
 
  1309 0345 0A       		.uleb128 0xa
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1363 03ae B8030000 		.4byte	0x3b8
  1364 03b2 09       		.uleb128 0x9
  1365 03b3 01       		.uleb128 0x1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 39
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 39
 
 
  1366 03b4 50       		.byte	0x50
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1420 0417 0A       		.uleb128 0xa
  1421 0418 4A000000 		.4byte	.LVL59
  1422 041c C8020000 		.4byte	0x2c8
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 40
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 40
 
 
  1423 0420 2B040000 		.4byte	0x42b
@@ -2398,12 +2398,12 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1477 0483 01       		.uleb128 0x1
  1478 0484 35       		.byte	0x35
  1479 0485 00       		.byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 41
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 41
 
 
  1480 0486 00       		.byte	0
  1481 0487 0E       		.uleb128 0xe
- 1482 0488 F7000000 		.4byte	.LASF35
+ 1482 0488 46010000 		.4byte	.LASF35
  1483 048c 01       		.byte	0x1
  1484 048d 68       		.byte	0x68
  1485 048e 00000000 		.4byte	.LFB1
@@ -2422,7 +2422,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1498 04aa 00       		.byte	0
  1499 04ab 00       		.byte	0
  1500 04ac 0E       		.uleb128 0xe
- 1501 04ad AC000000 		.4byte	.LASF36
+ 1501 04ad FB000000 		.4byte	.LASF36
  1502 04b1 01       		.byte	0x1
  1503 04b2 89       		.byte	0x89
  1504 04b3 00000000 		.4byte	.LFB2
@@ -2457,8 +2457,8 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1533 04f7 00       		.byte	0
  1534 04f8 00       		.byte	0
  1535 04f9 0E       		.uleb128 0xe
- 1536 04fa F5010000 		.4byte	.LASF38
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 42
+ 1536 04fa 44020000 		.4byte	.LASF38
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 42
 
 
  1537 04fe 01       		.byte	0x1
@@ -2494,7 +2494,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1567 054c C8020000 		.4byte	0x2c8
  1568 0550 00       		.byte	0
  1569 0551 0B       		.uleb128 0xb
- 1570 0552 E7010000 		.4byte	.LASF40
+ 1570 0552 36020000 		.4byte	.LASF40
  1571 0556 01       		.byte	0x1
  1572 0557 3802     		.2byte	0x238
  1573 0559 00000000 		.4byte	.LFB12
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1591 0585 00000000 		.4byte	LCD_hex.4905
  1592 0589 0A       		.uleb128 0xa
  1593 058a 0E000000 		.4byte	.LVL83
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 43
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 43
 
 
  1594 058e 98020000 		.4byte	0x298
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1648 05ed 85000000 		.4byte	0x85
  1649 05f1 DE020000 		.4byte	.LLST15
  1650 05f5 0A       		.uleb128 0xa
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 44
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 44
 
 
  1651 05f6 0A000000 		.4byte	.LVL87
@@ -2638,12 +2638,12 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1705 0662 00       		.sleb128 0
  1706 0663 25       		.byte	0x25
  1707 0664 00       		.byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 45
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 45
 
 
  1708 0665 00       		.byte	0
  1709 0666 0B       		.uleb128 0xb
- 1710 0667 02020000 		.4byte	.LASF45
+ 1710 0667 51020000 		.4byte	.LASF45
  1711 066b 01       		.byte	0x1
  1712 066c 9602     		.2byte	0x296
  1713 066e 00000000 		.4byte	.LFB15
@@ -2658,13 +2658,13 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1722 0684 91000000 		.4byte	0x91
  1723 0688 48030000 		.4byte	.LLST18
  1724 068c 0C       		.uleb128 0xc
- 1725 068d 8D020000 		.4byte	.LASF46
+ 1725 068d DC020000 		.4byte	.LASF46
  1726 0691 01       		.byte	0x1
  1727 0692 9802     		.2byte	0x298
  1728 0694 79000000 		.4byte	0x79
  1729 0698 66030000 		.4byte	.LLST19
  1730 069c 14       		.uleb128 0x14
- 1731 069d 3E020000 		.4byte	.LASF47
+ 1731 069d 8D020000 		.4byte	.LASF47
  1732 06a1 01       		.byte	0x1
  1733 06a2 9902     		.2byte	0x299
  1734 06a4 C5060000 		.4byte	0x6c5
@@ -2672,7 +2672,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1736 06a9 91       		.byte	0x91
  1737 06aa 6C       		.sleb128 -20
  1738 06ab 0C       		.uleb128 0xc
- 1739 06ac BA010000 		.4byte	.LASF48
+ 1739 06ac 09020000 		.4byte	.LASF48
  1740 06b0 01       		.byte	0x1
  1741 06b1 9A02     		.2byte	0x29a
  1742 06b3 79000000 		.4byte	0x79
@@ -2697,8 +2697,8 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1761 06e1 03       		.byte	0x3
  1762 06e2 00000000 		.4byte	LCD_initVar
  1763 06e6 17       		.uleb128 0x17
- 1764 06e7 74020000 		.4byte	.LASF50
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 46
+ 1764 06e7 C3020000 		.4byte	.LASF50
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 46
 
 
  1765 06eb 01       		.byte	0x1
@@ -2708,7 +2708,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1769 06f2 03       		.byte	0x3
  1770 06f3 00000000 		.4byte	LCD_enableState
  1771 06f7 18       		.uleb128 0x18
- 1772 06f8 62020000 		.4byte	.LASF54
+ 1772 06f8 B1020000 		.4byte	.LASF54
  1773 06fc 03       		.byte	0x3
  1774 06fd 77       		.byte	0x77
  1775 06fe 08070000 		.4byte	0x708
@@ -2716,7 +2716,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1777 0703 85000000 		.4byte	0x85
  1778 0707 00       		.byte	0
  1779 0708 1A       		.uleb128 0x1a
- 1780 0709 15030000 		.4byte	.LASF55
+ 1780 0709 1D030000 		.4byte	.LASF55
  1781 070d 03       		.byte	0x3
  1782 070e 76       		.byte	0x76
  1783 070f 19       		.uleb128 0x19
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1819 001e 03       		.uleb128 0x3
  1820 001f 24       		.uleb128 0x24
  1821 0020 00       		.byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 47
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 47
 
 
  1822 0021 0B       		.uleb128 0xb
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1876 0058 03       		.uleb128 0x3
  1877 0059 0E       		.uleb128 0xe
  1878 005a 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 48
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 48
 
 
  1879 005b 0B       		.uleb128 0xb
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1933 0098 06       		.uleb128 0x6
  1934 0099 40       		.uleb128 0x40
  1935 009a 18       		.uleb128 0x18
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 49
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 49
 
 
  1936 009b 9742     		.uleb128 0x2117
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  1990 00d5 00       		.byte	0
  1991 00d6 0F       		.uleb128 0xf
  1992 00d7 05       		.uleb128 0x5
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 50
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 50
 
 
  1993 00d8 00       		.byte	0
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  2047 010e 13       		.uleb128 0x13
  2048 010f 02       		.uleb128 0x2
  2049 0110 17       		.uleb128 0x17
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 51
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 51
 
 
  2050 0111 00       		.byte	0
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  2104 0147 01       		.byte	0x1
  2105 0148 3F       		.uleb128 0x3f
  2106 0149 19       		.uleb128 0x19
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 52
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 52
 
 
  2107 014a 03       		.uleb128 0x3
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  2161 001d 00000000 		.4byte	0
  2162              	.LLST1:
  2163 0021 00000000 		.4byte	.LVL3
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 53
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 53
 
 
  2164 0025 18000000 		.4byte	.LVL4
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  2218 00af 02000000 		.4byte	.LVL7
  2219 00b3 44000000 		.4byte	.LVL15
  2220 00b7 0400     		.2byte	0x4
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 54
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 54
 
 
  2221 00b9 0A       		.byte	0xa
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  2275 0135 04000000 		.4byte	.LVL35
  2276 0139 0A000000 		.4byte	.LVL37
  2277 013d 0200     		.2byte	0x2
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 55
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 55
 
 
  2278 013f 31       		.byte	0x31
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  2332 01c7 0500     		.2byte	0x5
  2333 01c9 74       		.byte	0x74
  2334 01ca 00       		.sleb128 0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 56
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 56
 
 
  2335 01cb 34       		.byte	0x34
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  2389 0245 F3       		.byte	0xf3
  2390 0246 01       		.uleb128 0x1
  2391 0247 50       		.byte	0x50
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 57
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 57
 
 
  2392 0248 9F       		.byte	0x9f
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  2446 02c7 50       		.byte	0x50
  2447 02c8 0A000000 		.4byte	.LVL82
  2448 02cc 20000000 		.4byte	.LFE12
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 58
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 58
 
 
  2449 02d0 0400     		.2byte	0x4
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  2503 0353 2C000000 		.4byte	.LVL101
  2504 0357 52000000 		.4byte	.LVL106
  2505 035b 0100     		.2byte	0x1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 59
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 59
 
 
  2506 035d 50       		.byte	0x50
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  2560 0028 00000000 		.4byte	.LFB7
  2561 002c 18000000 		.4byte	.LFE7-.LFB7
  2562 0030 00000000 		.4byte	.LFB5
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 60
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 60
 
 
  2563 0034 1A000000 		.4byte	.LFE5-.LFB5
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  2617 006c 12000000 		.4byte	.LFE13
  2618 0070 00000000 		.4byte	.LFB14
  2619 0074 1C000000 		.4byte	.LFE14
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 61
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 61
 
 
  2620 0078 00000000 		.4byte	.LFB15
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  2647              	.LASF28:
  2648 0075 696E6465 		.ascii	"indexU8\000"
  2648      78553800 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 62
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 62
 
 
  2649              	.LASF27:
@@ -3677,197 +3677,197 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 1
  2656      57726974 
  2656      65446174 
  2656      6100
- 2657              	.LASF14:
- 2658 00a6 666C6F61 		.ascii	"float\000"
- 2658      7400
- 2659              	.LASF36:
- 2660 00ac 4C43445F 		.ascii	"LCD_Start\000"
- 2660      53746172 
- 2660      7400
- 2661              	.LASF2:
- 2662 00b6 756E7369 		.ascii	"unsigned char\000"
- 2662      676E6564 
- 2662      20636861 
- 2662      7200
- 2663              	.LASF17:
- 2664 00c4 72656738 		.ascii	"reg8\000"
- 2664      00
- 2665              	.LASF6:
- 2666 00c9 6C6F6E67 		.ascii	"long unsigned int\000"
- 2666      20756E73 
- 2666      69676E65 
- 2666      6420696E 
- 2666      7400
- 2667              	.LASF11:
- 2668 00db 75696E74 		.ascii	"uint8\000"
- 2668      3800
- 2669              	.LASF18:
- 2670 00e1 4C43445F 		.ascii	"LCD_WrCntrlNib\000"
- 2670      5772436E 
- 2670      74726C4E 
- 2670      696200
- 2671              	.LASF15:
- 2672 00f0 646F7562 		.ascii	"double\000"
- 2672      6C6500
- 2673              	.LASF35:
- 2674 00f7 4C43445F 		.ascii	"LCD_Enable\000"
- 2674      456E6162 
- 2674      6C6500
- 2675              	.LASF26:
- 2676 0102 4C43445F 		.ascii	"LCD_PrintString\000"
- 2676      5072696E 
- 2676      74537472 
- 2676      696E6700 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 63
+ 2657              	.LASF53:
+ 2658 00a6 443A5C50 		.ascii	"D:\\PROJECT\\pgm\\Cypress_dem_board\\CFP_reader\\cf"
+ 2658      524F4A45 
+ 2658      43545C70 
+ 2658      676D5C43 
+ 2658      79707265 
+ 2659 00d4 705F7265 		.ascii	"p_reader\\W_cfp_reader\\cfp_reader.cydsn\000"
+ 2659      61646572 
+ 2659      5C575F63 
+ 2659      66705F72 
+ 2659      65616465 
+ 2660              	.LASF36:
+ 2661 00fb 4C43445F 		.ascii	"LCD_Start\000"
+ 2661      53746172 
+ 2661      7400
+ 2662              	.LASF2:
+ 2663 0105 756E7369 		.ascii	"unsigned char\000"
+ 2663      676E6564 
+ 2663      20636861 
+ 2663      7200
+ 2664              	.LASF17:
+ 2665 0113 72656738 		.ascii	"reg8\000"
+ 2665      00
+ 2666              	.LASF6:
+ 2667 0118 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2667      20756E73 
+ 2667      69676E65 
+ 2667      6420696E 
+ 2667      7400
+ 2668              	.LASF11:
+ 2669 012a 75696E74 		.ascii	"uint8\000"
+ 2669      3800
+ 2670              	.LASF18:
+ 2671 0130 4C43445F 		.ascii	"LCD_WrCntrlNib\000"
+ 2671      5772436E 
+ 2671      74726C4E 
+ 2671      696200
+ 2672              	.LASF15:
+ 2673 013f 646F7562 		.ascii	"double\000"
+ 2673      6C6500
+ 2674              	.LASF35:
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 63
 
 
- 2677              	.LASF12:
- 2678 0112 75696E74 		.ascii	"uint16\000"
- 2678      313600
- 2679              	.LASF23:
- 2680 0119 4C43445F 		.ascii	"LCD_IsReady\000"
- 2680      49735265 
- 2680      61647900 
- 2681              	.LASF13:
- 2682 0125 75696E74 		.ascii	"uint32\000"
- 2682      333200
- 2683              	.LASF51:
- 2684 012c 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 2684      4320342E 
- 2684      392E3320 
- 2684      32303135 
- 2684      30333033 
- 2685 015f 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 2685      20726576 
- 2685      6973696F 
- 2685      6E203232 
- 2685      31323230 
- 2686 0192 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 2686      66756E63 
- 2686      74696F6E 
- 2686      2D736563 
- 2686      74696F6E 
- 2687              	.LASF48:
- 2688 01ba 64696749 		.ascii	"digIndex\000"
- 2688      6E646578 
- 2688      00
- 2689              	.LASF0:
- 2690 01c3 756E7369 		.ascii	"unsigned int\000"
- 2690      676E6564 
- 2690      20696E74 
- 2690      00
- 2691              	.LASF8:
- 2692 01d0 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2692      206C6F6E 
- 2692      6720756E 
- 2692      7369676E 
- 2692      65642069 
- 2693              	.LASF40:
- 2694 01e7 4C43445F 		.ascii	"LCD_PrintInt8\000"
- 2694      5072696E 
- 2694      74496E74 
- 2694      3800
- 2695              	.LASF38:
- 2696 01f5 4C43445F 		.ascii	"LCD_Position\000"
- 2696      506F7369 
- 2696      74696F6E 
- 2696      00
- 2697              	.LASF45:
- 2698 0202 4C43445F 		.ascii	"LCD_PrintU32Number\000"
- 2698      5072696E 
- 2698      74553332 
- 2698      4E756D62 
- 2698      657200
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 64
+ 2675 0146 4C43445F 		.ascii	"LCD_Enable\000"
+ 2675      456E6162 
+ 2675      6C6500
+ 2676              	.LASF26:
+ 2677 0151 4C43445F 		.ascii	"LCD_PrintString\000"
+ 2677      5072696E 
+ 2677      74537472 
+ 2677      696E6700 
+ 2678              	.LASF12:
+ 2679 0161 75696E74 		.ascii	"uint16\000"
+ 2679      313600
+ 2680              	.LASF23:
+ 2681 0168 4C43445F 		.ascii	"LCD_IsReady\000"
+ 2681      49735265 
+ 2681      61647900 
+ 2682              	.LASF13:
+ 2683 0174 75696E74 		.ascii	"uint32\000"
+ 2683      333200
+ 2684              	.LASF51:
+ 2685 017b 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 2685      4320342E 
+ 2685      392E3320 
+ 2685      32303135 
+ 2685      30333033 
+ 2686 01ae 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 2686      20726576 
+ 2686      6973696F 
+ 2686      6E203232 
+ 2686      31323230 
+ 2687 01e1 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2687      66756E63 
+ 2687      74696F6E 
+ 2687      2D736563 
+ 2687      74696F6E 
+ 2688              	.LASF48:
+ 2689 0209 64696749 		.ascii	"digIndex\000"
+ 2689      6E646578 
+ 2689      00
+ 2690              	.LASF0:
+ 2691 0212 756E7369 		.ascii	"unsigned int\000"
+ 2691      676E6564 
+ 2691      20696E74 
+ 2691      00
+ 2692              	.LASF8:
+ 2693 021f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2693      206C6F6E 
+ 2693      6720756E 
+ 2693      7369676E 
+ 2693      65642069 
+ 2694              	.LASF40:
+ 2695 0236 4C43445F 		.ascii	"LCD_PrintInt8\000"
+ 2695      5072696E 
+ 2695      74496E74 
+ 2695      3800
+ 2696              	.LASF38:
+ 2697 0244 4C43445F 		.ascii	"LCD_Position\000"
+ 2697      506F7369 
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 64
 
 
- 2699              	.LASF30:
- 2700 0215 4C43445F 		.ascii	"LCD_PutChar\000"
- 2700      50757443 
- 2700      68617200 
- 2701              	.LASF52:
- 2702 0221 47656E65 		.ascii	"Generated_Source\\PSoC5\\LCD.c\000"
- 2702      72617465 
- 2702      645F536F 
- 2702      75726365 
- 2702      5C50536F 
- 2703              	.LASF47:
- 2704 023e 6E756D62 		.ascii	"number\000"
- 2704      657200
- 2705              	.LASF9:
- 2706 0245 73697A65 		.ascii	"sizetype\000"
- 2706      74797065 
- 2706      00
- 2707              	.LASF16:
- 2708 024e 63686172 		.ascii	"char8\000"
- 2708      3800
- 2709              	.LASF7:
- 2710 0254 6C6F6E67 		.ascii	"long long int\000"
- 2710      206C6F6E 
- 2710      6720696E 
- 2710      7400
- 2711              	.LASF54:
- 2712 0262 43794465 		.ascii	"CyDelayUs\000"
- 2712      6C617955 
- 2712      7300
- 2713              	.LASF22:
- 2714 026c 74696D65 		.ascii	"timeout\000"
- 2714      6F757400 
- 2715              	.LASF50:
- 2716 0274 4C43445F 		.ascii	"LCD_enableState\000"
- 2716      656E6162 
- 2716      6C655374 
- 2716      61746500 
- 2717              	.LASF34:
- 2718 0284 4C43445F 		.ascii	"LCD_Init\000"
- 2718      496E6974 
- 2718      00
- 2719              	.LASF46:
- 2720 028d 746D7044 		.ascii	"tmpDigit\000"
- 2720      69676974 
- 2720      00
- 2721              	.LASF3:
- 2722 0296 73686F72 		.ascii	"short int\000"
- 2722      7420696E 
- 2722      7400
- 2723              	.LASF29:
- 2724 02a0 63757272 		.ascii	"current\000"
- 2724      656E7400 
- 2725              	.LASF5:
- 2726 02a8 6C6F6E67 		.ascii	"long int\000"
- 2726      20696E74 
- 2726      00
- 2727              	.LASF10:
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccZ48HKu.s 			page 65
+ 2697      74696F6E 
+ 2697      00
+ 2698              	.LASF45:
+ 2699 0251 4C43445F 		.ascii	"LCD_PrintU32Number\000"
+ 2699      5072696E 
+ 2699      74553332 
+ 2699      4E756D62 
+ 2699      657200
+ 2700              	.LASF30:
+ 2701 0264 4C43445F 		.ascii	"LCD_PutChar\000"
+ 2701      50757443 
+ 2701      68617200 
+ 2702              	.LASF52:
+ 2703 0270 47656E65 		.ascii	"Generated_Source\\PSoC5\\LCD.c\000"
+ 2703      72617465 
+ 2703      645F536F 
+ 2703      75726365 
+ 2703      5C50536F 
+ 2704              	.LASF47:
+ 2705 028d 6E756D62 		.ascii	"number\000"
+ 2705      657200
+ 2706              	.LASF9:
+ 2707 0294 73697A65 		.ascii	"sizetype\000"
+ 2707      74797065 
+ 2707      00
+ 2708              	.LASF16:
+ 2709 029d 63686172 		.ascii	"char8\000"
+ 2709      3800
+ 2710              	.LASF7:
+ 2711 02a3 6C6F6E67 		.ascii	"long long int\000"
+ 2711      206C6F6E 
+ 2711      6720696E 
+ 2711      7400
+ 2712              	.LASF54:
+ 2713 02b1 43794465 		.ascii	"CyDelayUs\000"
+ 2713      6C617955 
+ 2713      7300
+ 2714              	.LASF22:
+ 2715 02bb 74696D65 		.ascii	"timeout\000"
+ 2715      6F757400 
+ 2716              	.LASF50:
+ 2717 02c3 4C43445F 		.ascii	"LCD_enableState\000"
+ 2717      656E6162 
+ 2717      6C655374 
+ 2717      61746500 
+ 2718              	.LASF34:
+ 2719 02d3 4C43445F 		.ascii	"LCD_Init\000"
+ 2719      496E6974 
+ 2719      00
+ 2720              	.LASF46:
+ 2721 02dc 746D7044 		.ascii	"tmpDigit\000"
+ 2721      69676974 
+ 2721      00
+ 2722              	.LASF3:
+ 2723 02e5 73686F72 		.ascii	"short int\000"
+ 2723      7420696E 
+ 2723      7400
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cccO03z1.s 			page 65
 
 
- 2728 02b1 63686172 		.ascii	"char\000"
- 2728      00
- 2729              	.LASF1:
- 2730 02b6 7369676E 		.ascii	"signed char\000"
- 2730      65642063 
- 2730      68617200 
- 2731              	.LASF25:
- 2732 02c2 64427974 		.ascii	"dByte\000"
- 2732      6500
- 2733              	.LASF53:
- 2734 02c8 443A5C70 		.ascii	"D:\\pgm\\Cypress_dem_board\\CFP_reader\\cfp_reader\\"
- 2734      676D5C43 
- 2734      79707265 
- 2734      73735F64 
- 2734      656D5F62 
- 2735 02f7 575F6366 		.ascii	"W_cfp_reader\\cfp_reader.cydsn\000"
- 2735      705F7265 
- 2735      61646572 
- 2735      5C636670 
- 2735      5F726561 
+ 2724              	.LASF29:
+ 2725 02ef 63757272 		.ascii	"current\000"
+ 2725      656E7400 
+ 2726              	.LASF5:
+ 2727 02f7 6C6F6E67 		.ascii	"long int\000"
+ 2727      20696E74 
+ 2727      00
+ 2728              	.LASF10:
+ 2729 0300 63686172 		.ascii	"char\000"
+ 2729      00
+ 2730              	.LASF14:
+ 2731 0305 666C6F61 		.ascii	"float\000"
+ 2731      7400
+ 2732              	.LASF1:
+ 2733 030b 7369676E 		.ascii	"signed char\000"
+ 2733      65642063 
+ 2733      68617200 
+ 2734              	.LASF25:
+ 2735 0317 64427974 		.ascii	"dByte\000"
+ 2735      6500
  2736              	.LASF55:
- 2737 0315 43794465 		.ascii	"CyDelay\000"
+ 2737 031d 43794465 		.ascii	"CyDelay\000"
  2737      6C617900 
  2738              	.LASF33:
- 2739 031d 63427974 		.ascii	"cByte\000"
+ 2739 0325 63427974 		.ascii	"cByte\000"
  2739      6500
  2740              	.LASF20:
- 2741 0323 6E696262 		.ascii	"nibble\000"
+ 2741 032b 6E696262 		.ascii	"nibble\000"
  2741      6C6500
  2742              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

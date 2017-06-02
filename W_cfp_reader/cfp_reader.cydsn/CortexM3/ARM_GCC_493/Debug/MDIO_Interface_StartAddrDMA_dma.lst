@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjfylEh.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 1
   29:Generated_Source\PSoC5/MDIO_Interface_StartAddrDMA_dma.c **** * 
   30:Generated_Source\PSoC5/MDIO_Interface_StartAddrDMA_dma.c **** * 
   31:Generated_Source\PSoC5/MDIO_Interface_StartAddrDMA_dma.c **** * 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjfylEh.s 			page 2
 
 
   32:Generated_Source\PSoC5/MDIO_Interface_StartAddrDMA_dma.c **** * MDIO_Interface_StartAddrDMA__DRQ_CTL_REG
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 1
   86:Generated_Source\PSoC5/MDIO_Interface_StartAddrDMA_dma.c **** *       
   87:Generated_Source\PSoC5/MDIO_Interface_StartAddrDMA_dma.c **** *       
   88:Generated_Source\PSoC5/MDIO_Interface_StartAddrDMA_dma.c **** *   UpperDestAddress.
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 3
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjfylEh.s 			page 3
 
 
   89:Generated_Source\PSoC5/MDIO_Interface_StartAddrDMA_dma.c **** *       
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 1
  109:Generated_Source\PSoC5/MDIO_Interface_StartAddrDMA_dma.c ****                                   (uint8)MDIO_Interface_StartAddrDMA__TERMIN_SEL);
  110:Generated_Source\PSoC5/MDIO_Interface_StartAddrDMA_dma.c **** 
  111:Generated_Source\PSoC5/MDIO_Interface_StartAddrDMA_dma.c ****     /* Set the extended address for the transfers */
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 4
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjfylEh.s 			page 4
 
 
  112:Generated_Source\PSoC5/MDIO_Interface_StartAddrDMA_dma.c ****     (void)CyDmaChSetExtendedAddress(MDIO_Interface_StartAddrDMA_DmaHandle, UpperSrcAddress, UpperDe
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 1
  134:Generated_Source\PSoC5/MDIO_Interface_StartAddrDMA_dma.c **** *
  135:Generated_Source\PSoC5/MDIO_Interface_StartAddrDMA_dma.c **** *******************************************************************/
  136:Generated_Source\PSoC5/MDIO_Interface_StartAddrDMA_dma.c **** void MDIO_Interface_StartAddrDMA_DmaRelease(void) 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 5
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjfylEh.s 			page 5
 
 
  137:Generated_Source\PSoC5/MDIO_Interface_StartAddrDMA_dma.c **** {
@@ -283,10 +283,10 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 1
  129 0006 00000000 		.4byte	.Ldebug_abbrev0
  130 000a 04       		.byte	0x4
  131 000b 01       		.uleb128 0x1
- 132 000c EF000000 		.4byte	.LASF23
+ 132 000c 44010000 		.4byte	.LASF23
  133 0010 01       		.byte	0x1
  134 0011 09000000 		.4byte	.LASF24
- 135 0015 67020000 		.4byte	.LASF25
+ 135 0015 B0000000 		.4byte	.LASF25
  136 0019 00000000 		.4byte	.Ldebug_ranges0+0
  137 001d 00000000 		.4byte	0
  138 0021 00000000 		.4byte	.Ldebug_line0
@@ -297,78 +297,78 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 1
  143 002c 03       		.uleb128 0x3
  144 002d 04       		.byte	0x4
  145 002e 07       		.byte	0x7
- 146 002f 7D010000 		.4byte	.LASF0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 6
+ 146 002f D2010000 		.4byte	.LASF0
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjfylEh.s 			page 6
 
 
  147 0033 03       		.uleb128 0x3
  148 0034 01       		.byte	0x1
  149 0035 06       		.byte	0x6
- 150 0036 4C020000 		.4byte	.LASF1
+ 150 0036 A1020000 		.4byte	.LASF1
  151 003a 03       		.uleb128 0x3
  152 003b 01       		.byte	0x1
  153 003c 08       		.byte	0x8
- 154 003d B0000000 		.4byte	.LASF2
+ 154 003d 05010000 		.4byte	.LASF2
  155 0041 03       		.uleb128 0x3
  156 0042 02       		.byte	0x2
  157 0043 05       		.byte	0x5
- 158 0044 39020000 		.4byte	.LASF3
+ 158 0044 8E020000 		.4byte	.LASF3
  159 0048 03       		.uleb128 0x3
  160 0049 02       		.byte	0x2
  161 004a 07       		.byte	0x7
- 162 004b 97000000 		.4byte	.LASF4
+ 162 004b 9D000000 		.4byte	.LASF4
  163 004f 03       		.uleb128 0x3
  164 0050 04       		.byte	0x4
  165 0051 05       		.byte	0x5
- 166 0052 43020000 		.4byte	.LASF5
+ 166 0052 98020000 		.4byte	.LASF5
  167 0056 03       		.uleb128 0x3
  168 0057 04       		.byte	0x4
  169 0058 07       		.byte	0x7
- 170 0059 C9000000 		.4byte	.LASF6
+ 170 0059 1E010000 		.4byte	.LASF6
  171 005d 03       		.uleb128 0x3
  172 005e 08       		.byte	0x8
  173 005f 05       		.byte	0x5
- 174 0060 BB010000 		.4byte	.LASF7
+ 174 0060 10020000 		.4byte	.LASF7
  175 0064 03       		.uleb128 0x3
  176 0065 08       		.byte	0x8
  177 0066 07       		.byte	0x7
- 178 0067 8A010000 		.4byte	.LASF8
+ 178 0067 DF010000 		.4byte	.LASF8
  179 006b 03       		.uleb128 0x3
  180 006c 04       		.byte	0x4
  181 006d 07       		.byte	0x7
- 182 006e B2010000 		.4byte	.LASF9
+ 182 006e 07020000 		.4byte	.LASF9
  183 0072 03       		.uleb128 0x3
  184 0073 01       		.byte	0x1
  185 0074 08       		.byte	0x8
- 186 0075 E3010000 		.4byte	.LASF10
+ 186 0075 38020000 		.4byte	.LASF10
  187 0079 04       		.uleb128 0x4
- 188 007a DB000000 		.4byte	.LASF11
+ 188 007a 30010000 		.4byte	.LASF11
  189 007e 02       		.byte	0x2
  190 007f 9201     		.2byte	0x192
  191 0081 3A000000 		.4byte	0x3a
  192 0085 04       		.uleb128 0x4
- 193 0086 E8000000 		.4byte	.LASF12
+ 193 0086 3D010000 		.4byte	.LASF12
  194 008a 02       		.byte	0x2
  195 008b 9301     		.2byte	0x193
  196 008d 48000000 		.4byte	0x48
  197 0091 03       		.uleb128 0x3
  198 0092 04       		.byte	0x4
  199 0093 04       		.byte	0x4
- 200 0094 AA000000 		.4byte	.LASF13
+ 200 0094 78000000 		.4byte	.LASF13
  201 0098 03       		.uleb128 0x3
  202 0099 08       		.byte	0x8
  203 009a 04       		.byte	0x4
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 7
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjfylEh.s 			page 7
 
 
- 204 009b E1000000 		.4byte	.LASF14
+ 204 009b 36010000 		.4byte	.LASF14
  205 009f 04       		.uleb128 0x4
  206 00a0 00000000 		.4byte	.LASF15
  207 00a4 02       		.byte	0x2
  208 00a5 3402     		.2byte	0x234
  209 00a7 56000000 		.4byte	0x56
  210 00ab 05       		.uleb128 0x5
- 211 00ac E8010000 		.4byte	.LASF26
+ 211 00ac 3D020000 		.4byte	.LASF26
  212 00b0 01       		.byte	0x1
  213 00b1 61       		.byte	0x61
  214 00b2 79000000 		.4byte	0x79
@@ -378,13 +378,13 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 1
  218 00bf 9C       		.byte	0x9c
  219 00c0 54010000 		.4byte	0x154
  220 00c4 06       		.uleb128 0x6
- 221 00c5 BE000000 		.4byte	.LASF16
+ 221 00c5 13010000 		.4byte	.LASF16
  222 00c9 01       		.byte	0x1
  223 00ca 61       		.byte	0x61
  224 00cb 79000000 		.4byte	0x79
  225 00cf 00000000 		.4byte	.LLST0
  226 00d3 06       		.uleb128 0x6
- 227 00d4 88000000 		.4byte	.LASF17
+ 227 00d4 8E000000 		.4byte	.LASF17
  228 00d8 01       		.byte	0x1
  229 00d9 61       		.byte	0x61
  230 00da 79000000 		.4byte	0x79
@@ -396,7 +396,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 1
  236 00e9 85000000 		.4byte	0x85
  237 00ed 42000000 		.4byte	.LLST2
  238 00f1 06       		.uleb128 0x6
- 239 00f2 A1010000 		.4byte	.LASF19
+ 239 00f2 F6010000 		.4byte	.LASF19
  240 00f6 01       		.byte	0x1
  241 00f7 61       		.byte	0x61
  242 00f8 85000000 		.4byte	0x85
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 1
  258 0117 00       		.sleb128 0
  259 0118 08       		.uleb128 0x8
  260 0119 01       		.uleb128 0x1
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 8
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjfylEh.s 			page 8
 
 
  261 011a 50       		.byte	0x50
@@ -465,7 +465,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 1
  302 0152 00       		.byte	0
  303 0153 00       		.byte	0
  304 0154 0A       		.uleb128 0xa
- 305 0155 12020000 		.4byte	.LASF27
+ 305 0155 67020000 		.4byte	.LASF27
  306 0159 01       		.byte	0x1
  307 015a 88       		.byte	0x88
  308 015b 00000000 		.4byte	.LFB1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 1
  315 016e EB010000 		.4byte	0x1eb
  316 0172 00       		.byte	0
  317 0173 0C       		.uleb128 0xc
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 9
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjfylEh.s 			page 9
 
 
  318 0174 52000000 		.4byte	.LASF28
@@ -489,7 +489,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 1
  323 017f 03       		.byte	0x3
  324 0180 00000000 		.4byte	MDIO_Interface_StartAddrDMA_DmaHandle
  325 0184 0D       		.uleb128 0xd
- 326 0185 B4020000 		.4byte	.LASF20
+ 326 0185 BC020000 		.4byte	.LASF20
  327 0189 03       		.byte	0x3
  328 018a 33       		.byte	0x33
  329 018b 9F000000 		.4byte	0x9f
@@ -508,7 +508,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 1
  342 01ad 79000000 		.4byte	0x79
  343 01b1 00       		.byte	0
  344 01b2 0D       		.uleb128 0xd
- 345 01b3 C9010000 		.4byte	.LASF21
+ 345 01b3 1E020000 		.4byte	.LASF21
  346 01b7 03       		.byte	0x3
  347 01b8 2D       		.byte	0x2d
  348 01b9 9F000000 		.4byte	0x9f
@@ -521,7 +521,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 1
  355 01cc 85000000 		.4byte	0x85
  356 01d0 00       		.byte	0
  357 01d1 0D       		.uleb128 0xd
- 358 01d2 78000000 		.4byte	.LASF22
+ 358 01d2 7E000000 		.4byte	.LASF22
  359 01d6 03       		.byte	0x3
  360 01d7 2C       		.byte	0x2c
  361 01d8 9F000000 		.4byte	0x9f
@@ -532,13 +532,13 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 1
  366 01e6 79000000 		.4byte	0x79
  367 01ea 00       		.byte	0
  368 01eb 0F       		.uleb128 0xf
- 369 01ec 58020000 		.4byte	.LASF29
+ 369 01ec AD020000 		.4byte	.LASF29
  370 01f0 03       		.byte	0x3
  371 01f1 2A       		.byte	0x2a
  372 01f2 9F000000 		.4byte	0x9f
  373 01f6 0E       		.uleb128 0xe
  374 01f7 79000000 		.4byte	0x79
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 10
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjfylEh.s 			page 10
 
 
  375 01fb 00       		.byte	0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 1
  429 0032 49       		.uleb128 0x49
  430 0033 13       		.uleb128 0x13
  431 0034 00       		.byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 11
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjfylEh.s 			page 11
 
 
  432 0035 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 1
  486 006e 08       		.uleb128 0x8
  487 006f 8A8201   		.uleb128 0x410a
  488 0072 00       		.byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 12
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjfylEh.s 			page 12
 
 
  489 0073 02       		.uleb128 0x2
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 1
  543 00af 3A       		.uleb128 0x3a
  544 00b0 0B       		.uleb128 0xb
  545 00b1 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 13
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjfylEh.s 			page 13
 
 
  546 00b2 0B       		.uleb128 0xb
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 1
  600 00e8 00       		.byte	0
  601 00e9 00       		.byte	0
  602 00ea 00       		.byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 14
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjfylEh.s 			page 14
 
 
  603              		.section	.debug_loc,"",%progbits
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 1
  657 007a 53       		.byte	0x53
  658 007b 9F       		.byte	0x9f
  659 007c 00000000 		.4byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 15
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjfylEh.s 			page 15
 
 
  660 0080 00000000 		.4byte	0
@@ -894,151 +894,151 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 1
  694      65726661 
  694      63655F53 
  694      74617274 
- 695              	.LASF22:
- 696 0078 4379446D 		.ascii	"CyDmaChPriority\000"
- 696      61436850 
- 696      72696F72 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 16
+ 695              	.LASF13:
+ 696 0078 666C6F61 		.ascii	"float\000"
+ 696      7400
+ 697              	.LASF22:
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjfylEh.s 			page 16
 
 
- 696      69747900 
- 697              	.LASF17:
- 698 0088 52657165 		.ascii	"ReqestPerBurst\000"
- 698      73745065 
- 698      72427572 
- 698      737400
- 699              	.LASF4:
- 700 0097 73686F72 		.ascii	"short unsigned int\000"
- 700      7420756E 
- 700      7369676E 
- 700      65642069 
- 700      6E7400
- 701              	.LASF13:
- 702 00aa 666C6F61 		.ascii	"float\000"
- 702      7400
- 703              	.LASF2:
- 704 00b0 756E7369 		.ascii	"unsigned char\000"
- 704      676E6564 
- 704      20636861 
- 704      7200
- 705              	.LASF16:
- 706 00be 42757273 		.ascii	"BurstCount\000"
- 706      74436F75 
- 706      6E7400
- 707              	.LASF6:
- 708 00c9 6C6F6E67 		.ascii	"long unsigned int\000"
- 708      20756E73 
- 708      69676E65 
- 708      6420696E 
- 708      7400
- 709              	.LASF11:
- 710 00db 75696E74 		.ascii	"uint8\000"
- 710      3800
- 711              	.LASF14:
- 712 00e1 646F7562 		.ascii	"double\000"
- 712      6C6500
- 713              	.LASF12:
- 714 00e8 75696E74 		.ascii	"uint16\000"
- 714      313600
- 715              	.LASF23:
- 716 00ef 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 716      4320342E 
- 716      392E3320 
- 716      32303135 
- 716      30333033 
- 717 0122 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 717      20726576 
- 717      6973696F 
- 717      6E203232 
- 717      31323230 
- 718 0155 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 718      66756E63 
- 718      74696F6E 
- 718      2D736563 
- 718      74696F6E 
- 719              	.LASF0:
- 720 017d 756E7369 		.ascii	"unsigned int\000"
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 17
+ 698 007e 4379446D 		.ascii	"CyDmaChPriority\000"
+ 698      61436850 
+ 698      72696F72 
+ 698      69747900 
+ 699              	.LASF17:
+ 700 008e 52657165 		.ascii	"ReqestPerBurst\000"
+ 700      73745065 
+ 700      72427572 
+ 700      737400
+ 701              	.LASF4:
+ 702 009d 73686F72 		.ascii	"short unsigned int\000"
+ 702      7420756E 
+ 702      7369676E 
+ 702      65642069 
+ 702      6E7400
+ 703              	.LASF25:
+ 704 00b0 443A5C50 		.ascii	"D:\\PROJECT\\pgm\\Cypress_dem_board\\CFP_reader\\cf"
+ 704      524F4A45 
+ 704      43545C70 
+ 704      676D5C43 
+ 704      79707265 
+ 705 00de 705F7265 		.ascii	"p_reader\\W_cfp_reader\\cfp_reader.cydsn\000"
+ 705      61646572 
+ 705      5C575F63 
+ 705      66705F72 
+ 705      65616465 
+ 706              	.LASF2:
+ 707 0105 756E7369 		.ascii	"unsigned char\000"
+ 707      676E6564 
+ 707      20636861 
+ 707      7200
+ 708              	.LASF16:
+ 709 0113 42757273 		.ascii	"BurstCount\000"
+ 709      74436F75 
+ 709      6E7400
+ 710              	.LASF6:
+ 711 011e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 711      20756E73 
+ 711      69676E65 
+ 711      6420696E 
+ 711      7400
+ 712              	.LASF11:
+ 713 0130 75696E74 		.ascii	"uint8\000"
+ 713      3800
+ 714              	.LASF14:
+ 715 0136 646F7562 		.ascii	"double\000"
+ 715      6C6500
+ 716              	.LASF12:
+ 717 013d 75696E74 		.ascii	"uint16\000"
+ 717      313600
+ 718              	.LASF23:
+ 719 0144 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 719      4320342E 
+ 719      392E3320 
+ 719      32303135 
+ 719      30333033 
+ 720 0177 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjfylEh.s 			page 17
 
 
- 720      676E6564 
- 720      20696E74 
- 720      00
- 721              	.LASF8:
- 722 018a 6C6F6E67 		.ascii	"long long unsigned int\000"
- 722      206C6F6E 
- 722      6720756E 
- 722      7369676E 
- 722      65642069 
- 723              	.LASF19:
- 724 01a1 55707065 		.ascii	"UpperDestAddress\000"
- 724      72446573 
- 724      74416464 
- 724      72657373 
- 724      00
- 725              	.LASF9:
- 726 01b2 73697A65 		.ascii	"sizetype\000"
- 726      74797065 
- 726      00
- 727              	.LASF7:
- 728 01bb 6C6F6E67 		.ascii	"long long int\000"
- 728      206C6F6E 
- 728      6720696E 
- 728      7400
- 729              	.LASF21:
- 730 01c9 4379446D 		.ascii	"CyDmaChSetExtendedAddress\000"
- 730      61436853 
- 730      65744578 
- 730      74656E64 
- 730      65644164 
- 731              	.LASF10:
- 732 01e3 63686172 		.ascii	"char\000"
- 732      00
- 733              	.LASF26:
- 734 01e8 4D44494F 		.ascii	"MDIO_Interface_StartAddrDMA_DmaInitialize\000"
- 734      5F496E74 
- 734      65726661 
- 734      63655F53 
- 734      74617274 
- 735              	.LASF27:
- 736 0212 4D44494F 		.ascii	"MDIO_Interface_StartAddrDMA_DmaRelease\000"
- 736      5F496E74 
- 736      65726661 
- 736      63655F53 
- 736      74617274 
- 737              	.LASF3:
- 738 0239 73686F72 		.ascii	"short int\000"
- 738      7420696E 
- 738      7400
- 739              	.LASF5:
- 740 0243 6C6F6E67 		.ascii	"long int\000"
- 740      20696E74 
- 740      00
- 741              	.LASF1:
- 742 024c 7369676E 		.ascii	"signed char\000"
- 742      65642063 
- 742      68617200 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccYmywUo.s 			page 18
+ 720      20726576 
+ 720      6973696F 
+ 720      6E203232 
+ 720      31323230 
+ 721 01aa 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 721      66756E63 
+ 721      74696F6E 
+ 721      2D736563 
+ 721      74696F6E 
+ 722              	.LASF0:
+ 723 01d2 756E7369 		.ascii	"unsigned int\000"
+ 723      676E6564 
+ 723      20696E74 
+ 723      00
+ 724              	.LASF8:
+ 725 01df 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 725      206C6F6E 
+ 725      6720756E 
+ 725      7369676E 
+ 725      65642069 
+ 726              	.LASF19:
+ 727 01f6 55707065 		.ascii	"UpperDestAddress\000"
+ 727      72446573 
+ 727      74416464 
+ 727      72657373 
+ 727      00
+ 728              	.LASF9:
+ 729 0207 73697A65 		.ascii	"sizetype\000"
+ 729      74797065 
+ 729      00
+ 730              	.LASF7:
+ 731 0210 6C6F6E67 		.ascii	"long long int\000"
+ 731      206C6F6E 
+ 731      6720696E 
+ 731      7400
+ 732              	.LASF21:
+ 733 021e 4379446D 		.ascii	"CyDmaChSetExtendedAddress\000"
+ 733      61436853 
+ 733      65744578 
+ 733      74656E64 
+ 733      65644164 
+ 734              	.LASF10:
+ 735 0238 63686172 		.ascii	"char\000"
+ 735      00
+ 736              	.LASF26:
+ 737 023d 4D44494F 		.ascii	"MDIO_Interface_StartAddrDMA_DmaInitialize\000"
+ 737      5F496E74 
+ 737      65726661 
+ 737      63655F53 
+ 737      74617274 
+ 738              	.LASF27:
+ 739 0267 4D44494F 		.ascii	"MDIO_Interface_StartAddrDMA_DmaRelease\000"
+ 739      5F496E74 
+ 739      65726661 
+ 739      63655F53 
+ 739      74617274 
+ 740              	.LASF3:
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccjfylEh.s 			page 18
 
 
- 743              	.LASF29:
- 744 0258 4379446D 		.ascii	"CyDmaChDisable\000"
- 744      61436844 
- 744      69736162 
- 744      6C6500
- 745              	.LASF25:
- 746 0267 443A5C70 		.ascii	"D:\\pgm\\Cypress_dem_board\\CFP_reader\\cfp_reader\\"
- 746      676D5C43 
- 746      79707265 
- 746      73735F64 
- 746      656D5F62 
- 747 0296 575F6366 		.ascii	"W_cfp_reader\\cfp_reader.cydsn\000"
- 747      705F7265 
- 747      61646572 
- 747      5C636670 
- 747      5F726561 
+ 741 028e 73686F72 		.ascii	"short int\000"
+ 741      7420696E 
+ 741      7400
+ 742              	.LASF5:
+ 743 0298 6C6F6E67 		.ascii	"long int\000"
+ 743      20696E74 
+ 743      00
+ 744              	.LASF1:
+ 745 02a1 7369676E 		.ascii	"signed char\000"
+ 745      65642063 
+ 745      68617200 
+ 746              	.LASF29:
+ 747 02ad 4379446D 		.ascii	"CyDmaChDisable\000"
+ 747      61436844 
+ 747      69736162 
+ 747      6C6500
  748              	.LASF20:
- 749 02b4 4379446D 		.ascii	"CyDmaChSetConfiguration\000"
+ 749 02bc 4379446D 		.ascii	"CyDmaChSetConfiguration\000"
  749      61436853 
  749      6574436F 
  749      6E666967 

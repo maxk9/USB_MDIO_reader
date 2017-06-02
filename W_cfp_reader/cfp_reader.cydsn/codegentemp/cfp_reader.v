@@ -1,6 +1,6 @@
 // ======================================================================
 // cfp_reader.v generated from TopDesign.cysch
-// 02/15/2017 at 09:43
+// 06/02/2017 at 10:12
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -269,7 +269,7 @@ endmodule
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v"
 `endif
 
-// VDAC8_v1_90(Data_Source=0, Initial_Value=75, Strobe_Mode=0, VDAC_Range=4, VDAC_Speed=0, Voltage=1200, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=VDAC8_v1_90, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=VDAC8_1, CY_INSTANCE_SHORT_NAME=VDAC8_1, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=90, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.0, INSTANCE_NAME=VDAC8_1, )
+// VDAC8_v1_90(Data_Source=0, Initial_Value=75, Strobe_Mode=0, VDAC_Range=4, VDAC_Speed=2, Voltage=1200, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=VDAC8_v1_90, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=VDAC8_1, CY_INSTANCE_SHORT_NAME=VDAC8_1, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=90, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.0, INSTANCE_NAME=VDAC8_1, )
 module VDAC8_v1_90_1 (
     strobe,
     data,
@@ -905,11 +905,11 @@ endmodule
 `endif
 
 `ifdef WARP
-`define CY_BLK_DIR "D:\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\MDIO_host_my_v"
-`include "D:\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\MDIO_host_my_v\MDIO_host_my_v.v"
+`define CY_BLK_DIR "D:\PROJECT\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\MDIO_host_my_v"
+`include "D:\PROJECT\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\MDIO_host_my_v\MDIO_host_my_v.v"
 `else
-`define CY_BLK_DIR "D:\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\MDIO_host_my_v"
-`include "D:\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\MDIO_host_my_v\MDIO_host_my_v.v"
+`define CY_BLK_DIR "D:\PROJECT\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\MDIO_host_my_v"
+`include "D:\PROJECT\pgm\Cypress_dem_board\CFP_reader\cfp_reader\W_cfp_reader\cfp_reader.cydsn\MDIO_host_my_v\MDIO_host_my_v.v"
 `endif
 
 // Component: bMDIO_Interface_v1_20
@@ -925,7 +925,7 @@ endmodule
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\bMDIO_Interface_v1_20\bMDIO_Interface_v1_20.v"
 `endif
 
-// MDIO_Interface_v1_20(DevAddress=1, EnableAuxBits=false, EnableExternOE=false, NumRegSpaces=6, OperationMode=1, PhyAddress=4, PhyAddressMask=31, PhyAddressMode=0, RegSpace1=CaAAAO3XzW7aQBiF4VuxZt/aQMJPNThynKBGKiGyESyRiweCEgzCbgV3XysLQtb1WSC9Xs18nnl0Fl4c27vj9t376w7lZlcMTet7YDxXLHf5plgPzZ9q9a3VNXehjU+JW6f7bOm8+kJR/pidryzagQntc7Z1YTx6WTzPEut/7GxaZYcqyvODK8uw0+51+9b/MrOPRX5+Xx8YWP9iYh+yKptv8uo1vH+aLurLnwM7dtvd4TQ97V2YJtHY+hcDG++K1Wb9sR79itKf1r+Y2Cj2nmZDExyDIGgZb1y+1RvjxZNkaFbZe+mMN5+cl9PJ/GL9eSS6r+pr9WM8/6vZFpgdgXkjMG8FZldg9gRmX2AOBGYmMH8LzKXAzAWmE5ir5s1W0LzZFpgdgXkjMG8FZldg9gRmX2AOBGbj3/wVRBTVGklOQVWS5BTUL0lOQaWT5BTURElOQfWU5BTUWUlOQUWW5BTUbklOQZWX5Gz69wAODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4O7v+4YxCMRgLz4UpyPl5JzqZMPz4lbp3us6UL/wE=, RegSpace2=AlEAAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Hu8WZXqZ101RLT/7aHe881GaL6fVrFhefPbRuj3f3v30o9/j6PHJ9av84vUqm+YpvbBsHv2kfeX33/no6PGLbJEf/eTpi6dfvvr9X/zkq8d3+YPHr9usbo9nszpvmqN79x483Ht8N/js8elyZr/f39l/8Piu98njp1mbfbeYtfOjJ2dvfv+Dx3fdB4+/yBdVff3mepUfvX51/MXju94Hj0+q5Xlxwb8/e378+tuP73qfPD4+SY9n9WcfMUYfpWc/+dlHNO4vmrf88+TLV599dJ6VTf5R+t0v7a9vvvyu97trcjeEd+8bhrf/DcO7/w3D+/QbhvfgG4Z38A3De/iNwjvY2fmG4e1+w/C+Wfk42Plm5eNg55uVj4Od+98wvG9WPg52vln5ONj5ZuXjYOcblo/db1g+dr9h+dj9huVj9xuWj91vWD5273/D8L5h+dj9huVj9xuWj91vWD72vmH52PuG5WPvG5aPvW9YPva+YfnYu/8Nw/uG5WPvG5aPvW9YPva+Yfm49w3Lx71vWD7ufcPyce8blo9737B83Lv/DcP7huXj3jcsH/e+Yfm49w3Lx/43LB/737B87H/D8rH/DcvH/jcsH/v3v2F437B87H/D8rH/DcvH/jcsH/e/Yfm4/w3Lx/1vWD7uf8Pycf8blo/7979heN+wfNz/huXj/jcsH/e/Yfn49BuWj0+/Yfn49BuWj0+/Yfn49BuWj0/vf8PwvmH5+PQblo9Pv2H5+PQblo8H37B8PPiG5ePBNywfD75h+XjwDcvHg/vfMLxvWD4efMPy8eAblo8H37B8HHzD8nHwDcvHwTcsHwffsHwcfMPycXD/G4b3DcvHwTcsHwffsHwcfMPy8fAblo+HoXx8OLxvWD6+4fXzg294/fzgG14/P/iG188PvuH184NveP384BteP3/4Da+fP/yG188ffsPr5w+/4fXzh9/w+vnDb3j9/OE3vH7+8BteP3/4Da+fP/yG188ffsPr5w+/4fXzh9/w+vnDb3j9/OE3vH7+8BteP3/4Da+fP/yG188ffsPr5w+/4fXzh3vfsHx8w+vnD7/h9fOH3/D6+cNveP384Te8fv7wG14/f/gNr58//IbXzx9+w+vnD7/h9fOH3/D6+cNveP384Te8fv7wG14/f/gNr58//IbXzx9+w+vnD+99w/LxDa+fP/yG188f7n/D8vENr58//IbXzx9+w+vnD7/h9fOH3/D6+cNveP384f43LB/f8Pr5w294/fzhN7x+/vAbXj9/+A2vnz/8htfPH37D6+cPv+H184ff8Pr5w294/fzhN7x+/vAbXj9/+A2vnz/8htfPH37D6+cPv+H184ef3v+G4X3D8vENr58//IbXzx9+w+vnD7/h9fOH3/D6+cNveP384Te8fv7wG14/f/gNr58//IbXzx9+w+vnD7/h9fOH3/D6+cNveP384Te8fv7wG14/f/gNr58//IbXzx9+w+vnD7/h9fOH3/D6+cNveP384Te8fv7wG14/f/gNr58//IbXzx++5/r5zfC+Yfn4htfPH37D6+cPv+H184ff8Pr5w292/Xx/55tdPyd436h8ELxvVD4I3jdqPwjeNyofBO/+NwzvG5UPgveNygfB+0blg+B9w/Lxza6fE7xvWD6+2fVzgvcNy8c3u35O8O5/w/C+Yfn4ZtfPCd43LB/f7Pr5/s7eNywf3+z6OcH7huXjm10/J3jfsHx8s+vnBO8blo9vdv2c4H3D8vHNrp/v73yz6+cE7xuWj292/ZzgfcPy8c2unxO8+98wvG9YPr7Z9XOC9w3Lxze7fr6/882unxO8b1g+vtn1c4L3DcvHN7t+TvDuf8PwvmH5+EbWz++eXL/KL16vsml+9P8A, RegSpace3=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, RegSpace4=AysAAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Hu8WZXqZ101RLT/7aHe881GaL6fVrFhefPbRuj3f3v30o9/j6PHJ9av84vUqm+YpvbBsHv2kfeX33/no6PGLbJEfnTx7+ft/8eXTr56f/v4/+erxXf7s8es2q9vj2azOm+Zof+fhpzuP7wafPT5dzuz3uzsHDx7f9T55/DRrs+8Ws3Z+9OTsze+/++nju+6Tx1/ki6q+fnO9yo9evzr+4vFd74PHJ9XyvLjg3589P3797cd3vU8eH5+kx7P6s48YpY/Ss5/87CP68UXzln6+o99Ovnz12Udtvc4/Sr/75WcfnWdlQ7+++fK73u+v7O93Q4C7PYDvnj1TmPpGF6h0tQHm3s8CzHs/CzD3fxZg3v9ZgPnpzwLMBz8LMA9+FmA+/OZhPugL0YfD/FmQowc/C3L04GdBjh78LMjRg/s/CzB/FuTowc+CHD34WZCjBz8LcnTwsyBHBz8LcnTwsyBHBz8LcnTwsyBHB/d/FmD+LMjRwc+CHB38LMjRwc+CHD38WZCjhz8LcvTwZ0GOHv4syNHDnwU5enj/ZwHmz4IcPfxZkKOHPwty9PAbl6PdnZ1vXI4I5jcuRwTzG5cjgvmNyxHB/MbliGDe/1mA+Y3LEcH8xuWIYH7jckQwfxbkaPdnQY52fxbkaPdnQY52fxbkaPdnQY527/8swPxZkKPdnwU52v1ZkKPdnwU52vtZkKO9nwU52vtZkKO9nwU52vtZkKO9+z8LMH8W5GjvZ0GO9n4W5GjvZ0GO7v0syNG9nwU5uvezIEf3fhbk6N7Pghzdu/+zAPNnQY7u/SzI0b2fBTm697MgR/s/C3K0/7MgR/s/C3K0/7MgR/s/C3K0f/9nAebPghzt/yzI0f7Pghzt/yzI0f2fBTm6/7MgR/d/FuTo/s+CHN2/lRy9J8z7Pwt4/izI0f2fBTm6/7MgR/d/FuTo058FOfr0Z0GOPv1ZkKNPfxbk6NOfBTn69P7PAsyfBTn69GdBjj79WZCjT38W5OjBz4IcPfhZkKMHPwty9OBnQY4e/CzI0YP7Pwswfxbk6MHPghw9+FmQowc/C3J08LMgRwc/C3J08LMgRwc/C3J08LMgRwf3fxZg/izI0cE3JUd3T65f5RevV9k0P/p/AA==, RegSpace5=ElYAAO3cz26CQBDH8VfZ7L3lT600zYJBahPTKgkSORIiqyVVMICNvn2pB6EP0EOT75xmf7PzeYRRk/NhL7503RRV6Urr3pRCl5sqL8qdK0/t9s4ay4mngkukd6tjttGiWyib5/VtJbVN6alldtDechYnYfSWvvvLWbqOlHFN1arN6tbP81o3jTeyRo6tjF+ZmpV5P3dsRxmDRL1kbZYUefvhTedxao2V0SdqoQ9VfYkvR+2tIn+hjEGggqrcFrvBcBAoPxDztSvNs2U/jKRYNJ8/D/P82pUUQRi5cpvtGy1FEt7aOExc2dana9v/8Kdtt9yVFMZAfhw7T38ig4KCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoL+F9Toz7t63w==, RegSpace6=BCwAAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Hu8WZXqZ101RLT/7aHe881GaL6fVrFhefPbRuj3f3v30o9/j6PHJ9av84vUqm+YpvbBsHv2kfeX33/no6PGLbJEfffvL129+/+fHL05//5989fguf/T4dZvV7fFsVudNc7S/+/Bg//Hd4LPHp8uZ/X5vd3f38V3vk8dPszb7bjFr50dPzt78/rufPr7rPnn8Rb6o6us316v86PWr4y8e3/U+eHxSLc+LC+9L74PHxyfp8az+7CPG6KP07Cc/+4hG/kXzln6+23n3jJ6P0pMvX3320XlWNvlH6Xe/tL+++fK7n33U1mv+1bW4G0K9/7MC9dOfFagPflagHvysQH34swH14c7PCtTdnxWoez8rUO/9rED9WZGth/d/VqD+rMjWw58V2Xr4syJbD38WZGtvZ+dnQbYI6s+CbBHUnwXZIqg/C7JFUH8WZIug3v9ZgfqzIFsE9WdBtgjqz4JsEdSfFdna/VmRrd2fFdna/VmRrd2fFdna/VmRrd37PytQf1Zka/dnRbZ2f1Zka/dnRbb2flZka+9nRbb2flZka+9nRbb2flZka+/+zwrUnxXZ2vtZka29nxXZ2vtZka17Pyuyde9nRbbu/azI1r2fFdm697MiW/fu/6xA/VmRrXs/K7J172dFtu79rMjW/s+KbO3/rMjW/s+KbO3/rMjW/s+KbO3f/1mB+rMiW/s/K7K1/7MiW/s/K7J1/2dFtu7/rMjW/Z8V2br/syJb939WZOv+/Z8VqD8rsnX/Z0W27v+syNb9nxXZ+vRnRbY+/VmRrU9/VmTr058V2fr0Z0W2Pr3/swL1Z0W2Pv1Zka1Pf1Zk69OfFdl68LMiWw9+VmTrwc+KbD34WZGtBz8rsvXg/s8K1JhsfTjUnxXZevCzIlsPflZk6+BnRbYOflZk6+BnRbYOflZk6+BnRbYO7v+sQP1Zka2DnxXZOvhZka2DnxXZevizIlsPf1Zk6+HPimw9/FmRrYc/K7L18P7PCtSfFdl6+LMiWw9/VmTr4c+GbO3u/GzI1u7Oz4Zs7e78bMjW7s7Phmzt7vxsyNbuzv2fFag/G7K1u/OzIVu7Oz8bsrW787MiW7s/K7K1+83J1t2T61f5xetVNs2P/h8=, RegSpace7=, RegSpace8=, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=MDIO_Interface_v1_20, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=MDIO_Interface, CY_INSTANCE_SHORT_NAME=MDIO_Interface, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=20, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.0, INSTANCE_NAME=MDIO_Interface, )
+// MDIO_Interface_v1_20(DevAddress=1, EnableAuxBits=false, EnableExternOE=false, NumRegSpaces=6, OperationMode=1, PhyAddress=0, PhyAddressMask=31, PhyAddressMode=0, RegSpace1=CaAAAO3XzW7aQBiF4VuxZt/aQMJPNThynKBGKiGyESyRiweCEgzCbgV3XysLQtb1WSC9Xs18nnl0Fl4c27vj9t376w7lZlcMTet7YDxXLHf5plgPzZ9q9a3VNXehjU+JW6f7bOm8+kJR/pidryzagQntc7Z1YTx6WTzPEut/7GxaZYcqyvODK8uw0+51+9b/MrOPRX5+Xx8YWP9iYh+yKptv8uo1vH+aLurLnwM7dtvd4TQ97V2YJtHY+hcDG++K1Wb9sR79itKf1r+Y2Cj2nmZDExyDIGgZb1y+1RvjxZNkaFbZe+mMN5+cl9PJ/GL9eSS6r+pr9WM8/6vZFpgdgXkjMG8FZldg9gRmX2AOBGYmMH8LzKXAzAWmE5ir5s1W0LzZFpgdgXkjMG8FZldg9gRmX2AOBGbj3/wVRBTVGklOQVWS5BTUL0lOQaWT5BTURElOQfWU5BTUWUlOQUWW5BTUbklOQZWX5Gz69wAODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4O7v+4YxCMRgLz4UpyPl5JzqZMPz4lbp3us6UL/wE=, RegSpace2=AlEAAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Hu8WZXqZ101RLT/7aHe881GaL6fVrFhefPbRuj3f3v30o9/j6PHJ9av84vUqm+YpvbBsHv2kfeX33/no6PGLbJEf/eTpi6dfvvr9X/zkq8d3+YPHr9usbo9nszpvmqN79x483Ht8N/js8elyZr/f39l/8Piu98njp1mbfbeYtfOjJ2dvfv+Dx3fdB4+/yBdVff3mepUfvX51/MXju94Hj0+q5Xlxwb8/e378+tuP73qfPD4+SY9n9WcfMUYfpWc/+dlHNO4vmrf88+TLV599dJ6VTf5R+t0v7a9vvvyu97trcjeEd+8bhrf/DcO7/w3D+/QbhvfgG4Z38A3De/iNwjvY2fmG4e1+w/C+Wfk42Plm5eNg55uVj4Od+98wvG9WPg52vln5ONj5ZuXjYOcblo/db1g+dr9h+dj9huVj9xuWj91vWD5273/D8L5h+dj9huVj9xuWj91vWD72vmH52PuG5WPvG5aPvW9YPva+YfnYu/8Nw/uG5WPvG5aPvW9YPva+Yfm49w3Lx71vWD7ufcPyce8blo9737B83Lv/DcP7huXj3jcsH/e+Yfm49w3Lx/43LB/737B87H/D8rH/DcvH/jcsH/v3v2F437B87H/D8rH/DcvH/jcsH/e/Yfm4/w3Lx/1vWD7uf8Pycf8blo/7979heN+wfNz/huXj/jcsH/e/Yfn49BuWj0+/Yfn49BuWj0+/Yfn49BuWj0/vf8PwvmH5+PQblo9Pv2H5+PQblo8H37B8PPiG5ePBNywfD75h+XjwDcvHg/vfMLxvWD4efMPy8eAblo8H37B8HHzD8nHwDcvHwTcsHwffsHwcfMPycXD/G4b3DcvHwTcsHwffsHwcfMPy8fAblo+HoXx8OLxvWD6+4fXzg294/fzgG14/P/iG188PvuH184NveP384BteP3/4Da+fP/yG188ffsPr5w+/4fXzh9/w+vnDb3j9/OE3vH7+8BteP3/4Da+fP/yG188ffsPr5w+/4fXzh9/w+vnDb3j9/OE3vH7+8BteP3/4Da+fP/yG188ffsPr5w+/4fXzh3vfsHx8w+vnD7/h9fOH3/D6+cNveP384Te8fv7wG14/f/gNr58//IbXzx9+w+vnD7/h9fOH3/D6+cNveP384Te8fv7wG14/f/gNr58//IbXzx9+w+vnD+99w/LxDa+fP/yG188f7n/D8vENr58//IbXzx9+w+vnD7/h9fOH3/D6+cNveP384f43LB/f8Pr5w294/fzhN7x+/vAbXj9/+A2vnz/8htfPH37D6+cPv+H184ff8Pr5w294/fzhN7x+/vAbXj9/+A2vnz/8htfPH37D6+cPv+H184ef3v+G4X3D8vENr58//IbXzx9+w+vnD7/h9fOH3/D6+cNveP384Te8fv7wG14/f/gNr58//IbXzx9+w+vnD7/h9fOH3/D6+cNveP384Te8fv7wG14/f/gNr58//IbXzx9+w+vnD7/h9fOH3/D6+cNveP384Te8fv7wG14/f/gNr58//IbXzx++5/r5zfC+Yfn4htfPH37D6+cPv+H184ff8Pr5w292/Xx/55tdPyd436h8ELxvVD4I3jdqPwjeNyofBO/+NwzvG5UPgveNygfB+0blg+B9w/Lxza6fE7xvWD6+2fVzgvcNy8c3u35O8O5/w/C+Yfn4ZtfPCd43LB/f7Pr5/s7eNywf3+z6OcH7huXjm10/J3jfsHx8s+vnBO8blo9vdv2c4H3D8vHNrp/v73yz6+cE7xuWj292/ZzgfcPy8c2unxO8+98wvG9YPr7Z9XOC9w3Lxze7fr6/882unxO8b1g+vtn1c4L3DcvHN7t+TvDuf8PwvmH5+EbWz++eXL/KL16vsml+9P8A, RegSpace3=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, RegSpace4=AysAAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Hu8WZXqZ101RLT/7aHe881GaL6fVrFhefPbRuj3f3v30o9/j6PHJ9av84vUqm+YpvbBsHv2kfeX33/no6PGLbJEfnTx7+ft/8eXTr56f/v4/+erxXf7s8es2q9vj2azOm+Zof+fhpzuP7wafPT5dzuz3uzsHDx7f9T55/DRrs+8Ws3Z+9OTsze+/++nju+6Tx1/ki6q+fnO9yo9evzr+4vFd74PHJ9XyvLjg3589P3797cd3vU8eH5+kx7P6s48YpY/Ss5/87CP68UXzln6+o99Ovnz12Udtvc4/Sr/75WcfnWdlQ7+++fK73u+v7O93Q4C7PYDvnj1TmPpGF6h0tQHm3s8CzHs/CzD3fxZg3v9ZgPnpzwLMBz8LMA9+FmA+/OZhPugL0YfD/FmQowc/C3L04GdBjh78LMjRg/s/CzB/FuTowc+CHD34WZCjBz8LcnTwsyBHBz8LcnTwsyBHBz8LcnTwsyBHB/d/FmD+LMjRwc+CHB38LMjRwc+CHD38WZCjhz8LcvTwZ0GOHv4syNHDnwU5enj/ZwHmz4IcPfxZkKOHPwty9PAbl6PdnZ1vXI4I5jcuRwTzG5cjgvmNyxHB/MbliGDe/1mA+Y3LEcH8xuWIYH7jckQwfxbkaPdnQY52fxbkaPdnQY52fxbkaPdnQY527/8swPxZkKPdnwU52v1ZkKPdnwU52vtZkKO9nwU52vtZkKO9nwU52vtZkKO9+z8LMH8W5GjvZ0GO9n4W5GjvZ0GO7v0syNG9nwU5uvezIEf3fhbk6N7Pghzdu/+zAPNnQY7u/SzI0b2fBTm697MgR/s/C3K0/7MgR/s/C3K0/7MgR/s/C3K0f/9nAebPghzt/yzI0f7Pghzt/yzI0f2fBTm6/7MgR/d/FuTo/s+CHN2/lRy9J8z7Pwt4/izI0f2fBTm6/7MgR/d/FuTo058FOfr0Z0GOPv1ZkKNPfxbk6NOfBTn69P7PAsyfBTn69GdBjj79WZCjT38W5OjBz4IcPfhZkKMHPwty9OBnQY4e/CzI0YP7Pwswfxbk6MHPghw9+FmQowc/C3J08LMgRwc/C3J08LMgRwc/C3J08LMgRwf3fxZg/izI0cE3JUd3T65f5RevV9k0P/p/AA==, RegSpace5=ElYAAO3cz26CQBDH8VfZ7L3lT600zYJBahPTKgkSORIiqyVVMICNvn2pB6EP0EOT75xmf7PzeYRRk/NhL7503RRV6Urr3pRCl5sqL8qdK0/t9s4ay4mngkukd6tjttGiWyib5/VtJbVN6alldtDechYnYfSWvvvLWbqOlHFN1arN6tbP81o3jTeyRo6tjF+ZmpV5P3dsRxmDRL1kbZYUefvhTedxao2V0SdqoQ9VfYkvR+2tIn+hjEGggqrcFrvBcBAoPxDztSvNs2U/jKRYNJ8/D/P82pUUQRi5cpvtGy1FEt7aOExc2dana9v/8Kdtt9yVFMZAfhw7T38ig4KCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoL+F9Toz7t63w==, RegSpace6=BCwAAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Hu8WZXqZ101RLT/7aHe881GaL6fVrFhefPbRuj3f3v30o9/j6PHJ9av84vUqm+YpvbBsHv2kfeX33/no6PGLbJEfffvL129+/+fHL05//5989fguf/T4dZvV7fFsVudNc7S/+/Bg//Hd4LPHp8uZ/X5vd3f38V3vk8dPszb7bjFr50dPzt78/rufPr7rPnn8Rb6o6us316v86PWr4y8e3/U+eHxSLc+LC+9L74PHxyfp8az+7CPG6KP07Cc/+4hG/kXzln6+23n3jJ6P0pMvX3320XlWNvlH6Xe/tL+++fK7n33U1mv+1bW4G0K9/7MC9dOfFagPflagHvysQH34swH14c7PCtTdnxWoez8rUO/9rED9WZGth/d/VqD+rMjWw58V2Xr4syJbD38WZGtvZ+dnQbYI6s+CbBHUnwXZIqg/C7JFUH8WZIug3v9ZgfqzIFsE9WdBtgjqz4JsEdSfFdna/VmRrd2fFdna/VmRrd2fFdna/VmRrd37PytQf1Zka/dnRbZ2f1Zka/dnRbb2flZka+9nRbb2flZka+9nRbb2flZka+/+zwrUnxXZ2vtZka29nxXZ2vtZka17Pyuyde9nRbbu/azI1r2fFdm697MiW/fu/6xA/VmRrXs/K7J172dFtu79rMjW/s+KbO3/rMjW/s+KbO3/rMjW/s+KbO3f/1mB+rMiW/s/K7K1/7MiW/s/K7J1/2dFtu7/rMjW/Z8V2br/syJb939WZOv+/Z8VqD8rsnX/Z0W27v+syNb9nxXZ+vRnRbY+/VmRrU9/VmTr058V2fr0Z0W2Pr3/swL1Z0W2Pv1Zka1Pf1Zk69OfFdl68LMiWw9+VmTrwc+KbD34WZGtBz8rsvXg/s8K1JhsfTjUnxXZevCzIlsPflZk6+BnRbYOflZk6+BnRbYOflZk6+BnRbYO7v+sQP1Zka2DnxXZOvhZka2DnxXZevizIlsPf1Zk6+HPimw9/FmRrYc/K7L18P7PCtSfFdl6+LMiWw9/VmTr4c+GbO3u/GzI1u7Oz4Zs7e78bMjW7s7Phmzt7vxsyNbuzv2fFag/G7K1u/OzIVu7Oz8bsrW787MiW7s/K7K1+83J1t2T61f5xetVNs2P/h8=, RegSpace7=, RegSpace8=, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=MDIO_Interface_v1_20, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=MDIO_Interface, CY_INSTANCE_SHORT_NAME=MDIO_Interface, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=20, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.0, INSTANCE_NAME=MDIO_Interface, )
 module MDIO_Interface_v1_20_6 (
     mdc,
     interrupt,
@@ -1147,9 +1147,11 @@ endmodule
 // top
 module top ;
 
+    electrical  Net_2123;
+    electrical  Net_2124;
+    electrical  Vref;
           wire [4:1] Net_1961;
           wire  Net_1960;
-    electrical  Vref;
           wire  Net_1959;
           wire  Net_1958;
           wire [4:0] Net_1963;
@@ -1175,6 +1177,7 @@ module top ;
           wire  Net_1244;
           wire  Net_1243;
           wire  Net_1880;
+    electrical  Net_2110;
     electrical  Net_16;
           wire [7:0] Net_15;
           wire  Net_14;
@@ -1190,13 +1193,14 @@ module top ;
           wire  Net_1842;
           wire  Net_1841;
           wire  Net_2058;
-          wire  Net_2098;
-          wire  Net_2033;
-    electrical  Net_988;
-    electrical  Net_2089;
-          wire  Net_618;
-          wire  Net_2071;
+          wire  Net_2112;
           wire  Net_2069;
+          wire  Net_2071;
+    electrical  Net_2089;
+          wire  Net_2098;
+    electrical  Net_988;
+          wire  Net_2119;
+          wire  Net_2120;
           wire  Net_2086;
     electrical  Net_954;
     electrical  Net_1929;
@@ -1225,9 +1229,9 @@ module top ;
 
 	cy_psoc3_pins_v1_10
 		#(.id("cc3bcd7e-5dc0-48ea-9bf6-6aa082be1ada"),
-		  .drive_mode(3'b000),
-		  .ibuf_enabled(1'b0),
-		  .init_dr_st(1'b0),
+		  .drive_mode(3'b110),
+		  .ibuf_enabled(1'b1),
+		  .init_dr_st(1'b1),
 		  .input_clk_en(0),
 		  .input_sync(1'b1),
 		  .input_sync_mode(1'b0),
@@ -1245,7 +1249,7 @@ module top ;
 		  .oe_sync(1'b0),
 		  .output_clk_en(0),
 		  .output_clock_mode(1'b0),
-		  .output_conn(1'b0),
+		  .output_conn(1'b1),
 		  .output_mode(1'b0),
 		  .output_reset(0),
 		  .output_sync(1'b0),
@@ -1256,7 +1260,7 @@ module top ;
 		  .pa_out_clock_en(-1),
 		  .pa_out_reset(-1),
 		  .pin_aliases(""),
-		  .pin_mode("A"),
+		  .pin_mode("O"),
 		  .por_state(4),
 		  .sio_group_cnt(0),
 		  .sio_hyst(1'b1),
@@ -1278,9 +1282,8 @@ module top ;
 		  .input_buffer_sel(2'b00))
 		VRef_1V2
 		 (.oe(tmpOE__VRef_1V2_net),
-		  .y({1'b0}),
+		  .y({Net_2112}),
 		  .fb({tmpFB_0__VRef_1V2_net[0:0]}),
-		  .analog({Vref}),
 		  .io({tmpIO_0__VRef_1V2_net[0:0]}),
 		  .siovref(tmpSIOVREF__VRef_1V2_net),
 		  .interrupt({tmpINTERRUPT_0__VRef_1V2_net[0:0]}),
@@ -1327,6 +1330,7 @@ module top ;
 	wire [0:0] tmpOE__MDIO_M_net;
 	wire [0:0] tmpIO_0__MDIO_M_net;
 	wire [0:0] tmpINTERRUPT_0__MDIO_M_net;
+	electrical [0:0] tmpSIOVREF__MDIO_M_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("5a697358-0c3a-4c83-a844-51eee02b847f"),
@@ -1367,9 +1371,9 @@ module top ;
 		  .sio_hyst(1'b0),
 		  .sio_ibuf(1'b1),
 		  .sio_info(2'b01),
-		  .sio_obuf(1'b1),
-		  .sio_refsel(1'b1),
-		  .sio_vtrip(1'b0),
+		  .sio_obuf(1'b0),
+		  .sio_refsel(1'b0),
+		  .sio_vtrip(1'b1),
 		  .sio_hifreq(1'b1),
 		  .sio_vohsel(3'b000),
 		  .slew_rate(1'b0),
@@ -1384,9 +1388,9 @@ module top ;
 		MDIO_M
 		 (.oe(tmpOE__MDIO_M_net),
 		  .y({Net_2086}),
-		  .fb({Net_2071}),
+		  .fb({Net_2119}),
 		  .io({tmpIO_0__MDIO_M_net[0:0]}),
-		  .siovref({Vref}),
+		  .siovref(tmpSIOVREF__MDIO_M_net),
 		  .interrupt({tmpINTERRUPT_0__MDIO_M_net[0:0]}),
 		  .annotation({Net_954}),
 		  .in_clock({1'b0}),
@@ -1416,6 +1420,7 @@ module top ;
 	wire [0:0] tmpFB_0__MDC_M_net;
 	wire [0:0] tmpIO_0__MDC_M_net;
 	wire [0:0] tmpINTERRUPT_0__MDC_M_net;
+	electrical [0:0] tmpSIOVREF__MDC_M_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("b1fda75a-1ad6-4f57-b174-5bdd4593f1ee"),
@@ -1456,9 +1461,9 @@ module top ;
 		  .sio_hyst(1'b0),
 		  .sio_ibuf(1'b1),
 		  .sio_info(2'b01),
-		  .sio_obuf(1'b1),
-		  .sio_refsel(1'b1),
-		  .sio_vtrip(1'b0),
+		  .sio_obuf(1'b0),
+		  .sio_refsel(1'b0),
+		  .sio_vtrip(1'b1),
 		  .sio_hifreq(1'b1),
 		  .sio_vohsel(3'b000),
 		  .slew_rate(1'b0),
@@ -1472,12 +1477,12 @@ module top ;
 		  .input_buffer_sel(2'b00))
 		MDC_M
 		 (.oe(tmpOE__MDC_M_net),
-		  .y({Net_2069}),
+		  .y({Net_2120}),
 		  .fb({tmpFB_0__MDC_M_net[0:0]}),
 		  .io({tmpIO_0__MDC_M_net[0:0]}),
-		  .siovref({Vref}),
+		  .siovref(tmpSIOVREF__MDC_M_net),
 		  .interrupt({tmpINTERRUPT_0__MDC_M_net[0:0]}),
-		  .annotation({Net_2089}),
+		  .annotation({Net_2110}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -1756,8 +1761,8 @@ module top ;
     MDIO_host_my_v MDIO_host_2 (
         .clock(Net_2056),
         .mdio_out(Net_2086),
-        .mdc(Net_2069),
-        .mdio_in(Net_2071),
+        .mdc(Net_2120),
+        .mdio_in(Net_2119),
         .debug(Net_2054),
         .Interrupt(Net_2098));
 
@@ -2062,7 +2067,7 @@ module top ;
     assign Net_1956[5:0] = 6'h3F;
 
     MDIO_Interface_v1_20_6 MDIO_Interface (
-        .mdc(Net_2033),
+        .mdc(Net_2069),
         .interrupt(Net_1950),
         .enable(Net_1957),
         .phy_addr(5'b0),
@@ -2070,7 +2075,7 @@ module top ;
         .address(Net_1951),
         .force_cor(Net_1955),
         .cor(Net_1952),
-        .mdio(Net_618),
+        .mdio(Net_2071),
         .en_page(Net_1956[5:0]),
         .mdio_in(1'b0),
         .mdio_out(Net_1959),
@@ -2080,6 +2085,7 @@ module top ;
 	wire [0:0] tmpOE__MDC_S_net;
 	wire [0:0] tmpIO_0__MDC_S_net;
 	wire [0:0] tmpINTERRUPT_0__MDC_S_net;
+	electrical [0:0] tmpSIOVREF__MDC_S_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("e330ad8c-7cec-408a-be41-c01a11cd4261"),
@@ -2087,7 +2093,7 @@ module top ;
 		  .ibuf_enabled(1'b1),
 		  .init_dr_st(1'b1),
 		  .input_clk_en(0),
-		  .input_sync(1'b1),
+		  .input_sync(1'b0),
 		  .input_sync_mode(1'b0),
 		  .intr_mode(2'b00),
 		  .invert_in_clock(0),
@@ -2121,8 +2127,8 @@ module top ;
 		  .sio_ibuf(1'b1),
 		  .sio_info(2'b01),
 		  .sio_obuf(1'b0),
-		  .sio_refsel(1'b1),
-		  .sio_vtrip(1'b0),
+		  .sio_refsel(1'b0),
+		  .sio_vtrip(1'b1),
 		  .sio_hifreq(1'b1),
 		  .sio_vohsel(3'b000),
 		  .slew_rate(1'b0),
@@ -2137,11 +2143,11 @@ module top ;
 		MDC_S
 		 (.oe(tmpOE__MDC_S_net),
 		  .y({1'b0}),
-		  .fb({Net_2033}),
+		  .fb({Net_2069}),
 		  .io({tmpIO_0__MDC_S_net[0:0]}),
-		  .siovref({Vref}),
+		  .siovref(tmpSIOVREF__MDC_S_net),
 		  .interrupt({tmpINTERRUPT_0__MDC_S_net[0:0]}),
-		  .annotation({Net_954}),
+		  .annotation({Net_2124}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -2154,6 +2160,7 @@ module top ;
 	wire [0:0] tmpOE__MDIO_S_net;
 	wire [0:0] tmpFB_0__MDIO_S_net;
 	wire [0:0] tmpINTERRUPT_0__MDIO_S_net;
+	electrical [0:0] tmpSIOVREF__MDIO_S_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("4168ca87-9765-4bdb-99df-40f964603acd"),
@@ -2194,9 +2201,9 @@ module top ;
 		  .sio_hyst(1'b0),
 		  .sio_ibuf(1'b1),
 		  .sio_info(2'b01),
-		  .sio_obuf(1'b1),
-		  .sio_refsel(1'b1),
-		  .sio_vtrip(1'b0),
+		  .sio_obuf(1'b0),
+		  .sio_refsel(1'b0),
+		  .sio_vtrip(1'b1),
 		  .sio_hifreq(1'b1),
 		  .sio_vohsel(3'b000),
 		  .slew_rate(1'b0),
@@ -2212,10 +2219,10 @@ module top ;
 		 (.oe(tmpOE__MDIO_S_net),
 		  .y({1'b0}),
 		  .fb({tmpFB_0__MDIO_S_net[0:0]}),
-		  .io({Net_618}),
-		  .siovref({Vref}),
+		  .io({Net_2071}),
+		  .siovref(tmpSIOVREF__MDIO_S_net),
 		  .interrupt({tmpINTERRUPT_0__MDIO_S_net[0:0]}),
-		  .annotation({Net_2089}),
+		  .annotation({Net_2123}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -2224,6 +2231,8 @@ module top ;
 		  .out_reset({1'b0}));
 
 	assign tmpOE__MDIO_S_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+    assign Net_2112 = 1'h1;
 
 
 

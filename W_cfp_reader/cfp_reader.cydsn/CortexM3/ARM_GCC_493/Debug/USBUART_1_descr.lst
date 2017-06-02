@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLRAEcc.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
   55 0029 000000   		.space	3
   56 002c 00000000 		.word	USBUART_1_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
   57 0030 00       		.byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 2
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLRAEcc.s 			page 2
 
 
   58 0031 000000   		.space	3
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  112 006f 00       		.byte	0
  113 0070 69       		.byte	105
  114 0071 00       		.byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 3
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLRAEcc.s 			page 3
 
 
  115 0072 62       		.byte	98
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  169 00a8 75       		.byte	117
  170 00a9 00       		.byte	0
  171 00aa 6E       		.byte	110
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 4
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLRAEcc.s 			page 4
 
 
  172 00ab 00       		.byte	0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  226 00e1 00       		.byte	0
  227 00e2 49       		.byte	73
  228 00e3 00       		.byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 5
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLRAEcc.s 			page 5
 
 
  229 00e4 6E       		.byte	110
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  283 0119 24       		.byte	36
  284 011a 01       		.byte	1
  285 011b 00       		.byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 6
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLRAEcc.s 			page 6
 
 
  286 011c 01       		.byte	1
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  340              	.Letext0:
  341              		.file 1 "Generated_Source\\PSoC5\\cytypes.h"
  342              		.file 2 "Generated_Source\\PSoC5\\USBUART_1.h"
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 7
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLRAEcc.s 			page 7
 
 
  343              		.file 3 "Generated_Source\\PSoC5\\USBUART_1_descr.c"
@@ -369,43 +369,43 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  348 0006 00000000 		.4byte	.Ldebug_abbrev0
  349 000a 04       		.byte	0x4
  350 000b 01       		.uleb128 0x1
- 351 000c 65010000 		.4byte	.LASF34
+ 351 000c BA010000 		.4byte	.LASF34
  352 0010 01       		.byte	0x1
- 353 0011 49030000 		.4byte	.LASF35
- 354 0015 FC020000 		.4byte	.LASF36
+ 353 0011 51030000 		.4byte	.LASF35
+ 354 0015 BA000000 		.4byte	.LASF36
  355 0019 00000000 		.4byte	.Ldebug_line0
  356 001d 02       		.uleb128 0x2
  357 001e 01       		.byte	0x1
  358 001f 06       		.byte	0x6
- 359 0020 F0020000 		.4byte	.LASF0
+ 359 0020 45030000 		.4byte	.LASF0
  360 0024 02       		.uleb128 0x2
  361 0025 01       		.byte	0x1
  362 0026 08       		.byte	0x8
- 363 0027 EC000000 		.4byte	.LASF1
+ 363 0027 41010000 		.4byte	.LASF1
  364 002b 02       		.uleb128 0x2
  365 002c 02       		.byte	0x2
  366 002d 05       		.byte	0x5
- 367 002e 54010000 		.4byte	.LASF2
+ 367 002e A9010000 		.4byte	.LASF2
  368 0032 02       		.uleb128 0x2
  369 0033 02       		.byte	0x2
  370 0034 07       		.byte	0x7
- 371 0035 73000000 		.4byte	.LASF3
+ 371 0035 79000000 		.4byte	.LASF3
  372 0039 02       		.uleb128 0x2
  373 003a 04       		.byte	0x4
  374 003b 05       		.byte	0x5
- 375 003c E7020000 		.4byte	.LASF4
+ 375 003c 3C030000 		.4byte	.LASF4
  376 0040 02       		.uleb128 0x2
  377 0041 04       		.byte	0x4
  378 0042 07       		.byte	0x7
- 379 0043 05010000 		.4byte	.LASF5
+ 379 0043 5A010000 		.4byte	.LASF5
  380 0047 02       		.uleb128 0x2
  381 0048 08       		.byte	0x8
  382 0049 05       		.byte	0x5
- 383 004a 3F020000 		.4byte	.LASF6
+ 383 004a 94020000 		.4byte	.LASF6
  384 004e 02       		.uleb128 0x2
  385 004f 08       		.byte	0x8
  386 0050 07       		.byte	0x7
- 387 0051 00020000 		.4byte	.LASF7
+ 387 0051 55020000 		.4byte	.LASF7
  388 0055 03       		.uleb128 0x3
  389 0056 04       		.byte	0x4
  390 0057 05       		.byte	0x5
@@ -413,83 +413,83 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  392 005c 02       		.uleb128 0x2
  393 005d 04       		.byte	0x4
  394 005e 07       		.byte	0x7
- 395 005f F3010000 		.4byte	.LASF8
+ 395 005f 48020000 		.4byte	.LASF8
  396 0063 04       		.uleb128 0x4
- 397 0064 A4020000 		.4byte	.LASF9
+ 397 0064 F9020000 		.4byte	.LASF9
  398 0068 01       		.byte	0x1
  399 0069 9201     		.2byte	0x192
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 8
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLRAEcc.s 			page 8
 
 
  400 006b 24000000 		.4byte	0x24
  401 006f 04       		.uleb128 0x4
- 402 0070 5E010000 		.4byte	.LASF10
+ 402 0070 B3010000 		.4byte	.LASF10
  403 0074 01       		.byte	0x1
  404 0075 9301     		.2byte	0x193
  405 0077 32000000 		.4byte	0x32
  406 007b 02       		.uleb128 0x2
  407 007c 04       		.byte	0x4
  408 007d 04       		.byte	0x4
- 409 007e B4000000 		.4byte	.LASF11
+ 409 007e 3C000000 		.4byte	.LASF11
  410 0082 02       		.uleb128 0x2
  411 0083 08       		.byte	0x8
  412 0084 04       		.byte	0x4
- 413 0085 4D010000 		.4byte	.LASF12
+ 413 0085 A2010000 		.4byte	.LASF12
  414 0089 02       		.uleb128 0x2
  415 008a 01       		.byte	0x1
  416 008b 08       		.byte	0x8
- 417 008c 4D020000 		.4byte	.LASF13
+ 417 008c A2020000 		.4byte	.LASF13
  418 0090 02       		.uleb128 0x2
  419 0091 04       		.byte	0x4
  420 0092 07       		.byte	0x7
- 421 0093 36020000 		.4byte	.LASF14
+ 421 0093 8B020000 		.4byte	.LASF14
  422 0097 05       		.uleb128 0x5
  423 0098 08       		.byte	0x8
  424 0099 02       		.byte	0x2
  425 009a 9A       		.byte	0x9a
  426 009b E8000000 		.4byte	0xe8
  427 009f 06       		.uleb128 0x6
- 428 00a0 AA020000 		.4byte	.LASF15
+ 428 00a0 FF020000 		.4byte	.LASF15
  429 00a4 02       		.byte	0x2
  430 00a5 9C       		.byte	0x9c
  431 00a6 63000000 		.4byte	0x63
  432 00aa 00       		.byte	0
  433 00ab 06       		.uleb128 0x6
- 434 00ac E1000000 		.4byte	.LASF16
+ 434 00ac 36010000 		.4byte	.LASF16
  435 00b0 02       		.byte	0x2
  436 00b1 9D       		.byte	0x9d
  437 00b2 63000000 		.4byte	0x63
  438 00b6 01       		.byte	0x1
  439 00b7 06       		.uleb128 0x6
- 440 00b8 17010000 		.4byte	.LASF17
+ 440 00b8 6C010000 		.4byte	.LASF17
  441 00bc 02       		.byte	0x2
  442 00bd 9E       		.byte	0x9e
  443 00be 63000000 		.4byte	0x63
  444 00c2 02       		.byte	0x2
  445 00c3 06       		.uleb128 0x6
- 446 00c4 FA000000 		.4byte	.LASF18
+ 446 00c4 4F010000 		.4byte	.LASF18
  447 00c8 02       		.byte	0x2
  448 00c9 9F       		.byte	0x9f
  449 00ca 63000000 		.4byte	0x63
  450 00ce 03       		.byte	0x3
  451 00cf 06       		.uleb128 0x6
- 452 00d0 58020000 		.4byte	.LASF19
+ 452 00d0 AD020000 		.4byte	.LASF19
  453 00d4 02       		.byte	0x2
  454 00d5 A0       		.byte	0xa0
  455 00d6 6F000000 		.4byte	0x6f
  456 00da 04       		.byte	0x4
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 9
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLRAEcc.s 			page 9
 
 
  457 00db 06       		.uleb128 0x6
- 458 00dc 52020000 		.4byte	.LASF20
+ 458 00dc A7020000 		.4byte	.LASF20
  459 00e0 02       		.byte	0x2
  460 00e1 A1       		.byte	0xa1
  461 00e2 63000000 		.4byte	0x63
  462 00e6 06       		.byte	0x6
  463 00e7 00       		.byte	0
  464 00e8 07       		.uleb128 0x7
- 465 00e9 96000000 		.4byte	.LASF21
+ 465 00e9 9C000000 		.4byte	.LASF21
  466 00ed 02       		.byte	0x2
  467 00ee A2       		.byte	0xa2
  468 00ef 97000000 		.4byte	0x97
@@ -505,7 +505,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  478 0100 63000000 		.4byte	0x63
  479 0104 00       		.byte	0
  480 0105 06       		.uleb128 0x6
- 481 0106 2F020000 		.4byte	.LASF22
+ 481 0106 84020000 		.4byte	.LASF22
  482 010a 02       		.byte	0x2
  483 010b B4       		.byte	0xb4
  484 010c 12010000 		.4byte	0x112
@@ -516,7 +516,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  489 0114 18010000 		.4byte	0x118
  490 0118 0A       		.uleb128 0xa
  491 0119 07       		.uleb128 0x7
- 492 011a 86000000 		.4byte	.LASF23
+ 492 011a 8C000000 		.4byte	.LASF23
  493 011e 02       		.byte	0x2
  494 011f B5       		.byte	0xb5
  495 0120 F3000000 		.4byte	0xf3
@@ -528,7 +528,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  501 0132 11       		.byte	0x11
  502 0133 00       		.byte	0
  503 0134 0D       		.uleb128 0xd
- 504 0135 8C020000 		.4byte	.LASF24
+ 504 0135 E1020000 		.4byte	.LASF24
  505 0139 03       		.byte	0x3
  506 013a 24       		.byte	0x24
  507 013b 45010000 		.4byte	0x145
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  511 0145 0E       		.uleb128 0xe
  512 0146 24010000 		.4byte	0x124
  513 014a 0B       		.uleb128 0xb
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 10
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLRAEcc.s 			page 10
 
 
  514 014b 63000000 		.4byte	0x63
@@ -548,7 +548,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  518 0158 42       		.byte	0x42
  519 0159 00       		.byte	0
  520 015a 0D       		.uleb128 0xd
- 521 015b BA000000 		.4byte	.LASF25
+ 521 015b 0F010000 		.4byte	.LASF25
  522 015f 03       		.byte	0x3
  523 0160 37       		.byte	0x37
  524 0161 6B010000 		.4byte	0x16b
@@ -565,7 +565,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  535 017e 02       		.byte	0x2
  536 017f 00       		.byte	0
  537 0180 0D       		.uleb128 0xd
- 538 0181 B4020000 		.4byte	.LASF26
+ 538 0181 09030000 		.4byte	.LASF26
  539 0185 03       		.byte	0x3
  540 0186 D5       		.byte	0xd5
  541 0187 91010000 		.4byte	0x191
@@ -582,7 +582,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  552 01a4 01       		.byte	0x1
  553 01a5 00       		.byte	0
  554 01a6 0D       		.uleb128 0xd
- 555 01a7 1C010000 		.4byte	.LASF27
+ 555 01a7 71010000 		.4byte	.LASF27
  556 01ab 03       		.byte	0x3
  557 01ac DB       		.byte	0xdb
  558 01ad B7010000 		.4byte	0x1b7
@@ -598,11 +598,11 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  568 01c6 90000000 		.4byte	0x90
  569 01ca 04       		.byte	0x4
  570 01cb 00       		.byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 11
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLRAEcc.s 			page 11
 
 
  571 01cc 0D       		.uleb128 0xd
- 572 01cd 4C000000 		.4byte	.LASF28
+ 572 01cd 52000000 		.4byte	.LASF28
  573 01d1 03       		.byte	0x3
  574 01d2 E3       		.byte	0xe3
  575 01d3 DD010000 		.4byte	0x1dd
@@ -619,7 +619,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  586 01f0 02       		.byte	0x2
  587 01f1 00       		.byte	0
  588 01f2 0D       		.uleb128 0xd
- 589 01f3 17020000 		.4byte	.LASF29
+ 589 01f3 6C020000 		.4byte	.LASF29
  590 01f7 03       		.byte	0x3
  591 01f8 EE       		.byte	0xee
  592 01f9 03020000 		.4byte	0x203
@@ -636,7 +636,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  603 0216 00       		.byte	0
  604 0217 00       		.byte	0
  605 0218 0D       		.uleb128 0xd
- 606 0219 3C000000 		.4byte	.LASF30
+ 606 0219 42000000 		.4byte	.LASF30
  607 021d 03       		.byte	0x3
  608 021e F6       		.byte	0xf6
  609 021f 29020000 		.4byte	0x229
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  625 0244 0B       		.uleb128 0xb
  626 0245 63000000 		.4byte	0x63
  627 0249 54020000 		.4byte	0x254
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 12
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLRAEcc.s 			page 12
 
 
  628 024d 0C       		.uleb128 0xc
@@ -683,7 +683,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  647 0278 21       		.byte	0x21
  648 0279 00       		.byte	0
  649 027a 0F       		.uleb128 0xf
- 650 027b 63020000 		.4byte	.LASF33
+ 650 027b B8020000 		.4byte	.LASF33
  651 027f 03       		.byte	0x3
  652 0280 2401     		.2byte	0x124
  653 0282 6A020000 		.4byte	0x26a
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  682 0016 03       		.uleb128 0x3
  683 0017 0E       		.uleb128 0xe
  684 0018 00       		.byte	0
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 13
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLRAEcc.s 			page 13
 
 
  685 0019 00       		.byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  739 004f 16       		.uleb128 0x16
  740 0050 00       		.byte	0
  741 0051 03       		.uleb128 0x3
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 14
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLRAEcc.s 			page 14
 
 
  742 0052 0E       		.uleb128 0xe
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  796 0088 00       		.byte	0
  797 0089 00       		.byte	0
  798 008a 0D       		.uleb128 0xd
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 15
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLRAEcc.s 			page 15
 
 
  799 008b 34       		.uleb128 0x34
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  852      02005B00 
  852      00000201 
  852      FB0E0D00 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 16
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLRAEcc.s 			page 16
 
 
  852      01010101 
@@ -914,191 +914,191 @@ ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 1
  856      315F5354 
  856      52494E47 
  856      5F444553 
- 857              	.LASF30:
- 858 003c 55534255 		.ascii	"USBUART_1_TABLE\000"
- 858      4152545F 
- 858      315F5441 
- 858      424C4500 
- 859              	.LASF28:
- 860 004c 55534255 		.ascii	"USBUART_1_DEVICE0_CONFIGURATION0_TABLE\000"
+ 857              	.LASF11:
+ 858 003c 666C6F61 		.ascii	"float\000"
+ 858      7400
+ 859              	.LASF30:
+ 860 0042 55534255 		.ascii	"USBUART_1_TABLE\000"
  860      4152545F 
- 860      315F4445 
- 860      56494345 
- 860      305F434F 
- 861              	.LASF3:
- 862 0073 73686F72 		.ascii	"short unsigned int\000"
- 862      7420756E 
- 862      7369676E 
- 862      65642069 
- 862      6E7400
- 863              	.LASF23:
- 864 0086 545F5553 		.ascii	"T_USBUART_1_LUT\000"
- 864      42554152 
- 864      545F315F 
- 864      4C555400 
- 865              	.LASF21:
- 866 0096 545F5553 		.ascii	"T_USBUART_1_EP_SETTINGS_BLOCK\000"
+ 860      315F5441 
+ 860      424C4500 
+ 861              	.LASF28:
+ 862 0052 55534255 		.ascii	"USBUART_1_DEVICE0_CONFIGURATION0_TABLE\000"
+ 862      4152545F 
+ 862      315F4445 
+ 862      56494345 
+ 862      305F434F 
+ 863              	.LASF3:
+ 864 0079 73686F72 		.ascii	"short unsigned int\000"
+ 864      7420756E 
+ 864      7369676E 
+ 864      65642069 
+ 864      6E7400
+ 865              	.LASF23:
+ 866 008c 545F5553 		.ascii	"T_USBUART_1_LUT\000"
  866      42554152 
  866      545F315F 
- 866      45505F53 
- 866      45545449 
- 867              	.LASF11:
- 868 00b4 666C6F61 		.ascii	"float\000"
- 868      7400
- 869              	.LASF25:
- 870 00ba 55534255 		.ascii	"USBUART_1_DEVICE0_CONFIGURATION0_DESCR\000"
- 870      4152545F 
- 870      315F4445 
- 870      56494345 
- 870      305F434F 
- 871              	.LASF16:
- 872 00e1 616C7453 		.ascii	"altSetting\000"
- 872      65747469 
- 872      6E6700
- 873              	.LASF1:
- 874 00ec 756E7369 		.ascii	"unsigned char\000"
- 874      676E6564 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 17
+ 866      4C555400 
+ 867              	.LASF21:
+ 868 009c 545F5553 		.ascii	"T_USBUART_1_EP_SETTINGS_BLOCK\000"
+ 868      42554152 
+ 868      545F315F 
+ 868      45505F53 
+ 868      45545449 
+ 869              	.LASF36:
+ 870 00ba 443A5C50 		.ascii	"D:\\PROJECT\\pgm\\Cypress_dem_board\\CFP_reader\\cf"
+ 870      524F4A45 
+ 870      43545C70 
+ 870      676D5C43 
+ 870      79707265 
+ 871 00e8 705F7265 		.ascii	"p_reader\\W_cfp_reader\\cfp_reader.cydsn\000"
+ 871      61646572 
+ 871      5C575F63 
+ 871      66705F72 
+ 871      65616465 
+ 872              	.LASF25:
+ 873 010f 55534255 		.ascii	"USBUART_1_DEVICE0_CONFIGURATION0_DESCR\000"
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLRAEcc.s 			page 17
 
 
- 874      20636861 
- 874      7200
- 875              	.LASF18:
- 876 00fa 61747472 		.ascii	"attributes\000"
- 876      69627574 
- 876      657300
- 877              	.LASF5:
- 878 0105 6C6F6E67 		.ascii	"long unsigned int\000"
- 878      20756E73 
- 878      69676E65 
- 878      6420696E 
- 878      7400
- 879              	.LASF17:
- 880 0117 61646472 		.ascii	"addr\000"
- 880      00
- 881              	.LASF27:
- 882 011c 55534255 		.ascii	"USBUART_1_DEVICE0_CONFIGURATION0_INTERFACE_CLASS\000"
- 882      4152545F 
- 882      315F4445 
- 882      56494345 
- 882      305F434F 
- 883              	.LASF12:
- 884 014d 646F7562 		.ascii	"double\000"
- 884      6C6500
- 885              	.LASF2:
- 886 0154 73686F72 		.ascii	"short int\000"
- 886      7420696E 
- 886      7400
- 887              	.LASF10:
- 888 015e 75696E74 		.ascii	"uint16\000"
- 888      313600
- 889              	.LASF34:
- 890 0165 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 890      4320342E 
- 890      392E3320 
- 890      32303135 
- 890      30333033 
- 891 0198 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 891      20726576 
- 891      6973696F 
- 891      6E203232 
- 891      31323230 
- 892 01cb 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 892      66756E63 
- 892      74696F6E 
- 892      2D736563 
- 892      74696F6E 
- 893              	.LASF8:
- 894 01f3 756E7369 		.ascii	"unsigned int\000"
- 894      676E6564 
- 894      20696E74 
- 894      00
- 895              	.LASF7:
- 896 0200 6C6F6E67 		.ascii	"long long unsigned int\000"
- 896      206C6F6E 
- 896      6720756E 
- 896      7369676E 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 18
+ 873      4152545F 
+ 873      315F4445 
+ 873      56494345 
+ 873      305F434F 
+ 874              	.LASF16:
+ 875 0136 616C7453 		.ascii	"altSetting\000"
+ 875      65747469 
+ 875      6E6700
+ 876              	.LASF1:
+ 877 0141 756E7369 		.ascii	"unsigned char\000"
+ 877      676E6564 
+ 877      20636861 
+ 877      7200
+ 878              	.LASF18:
+ 879 014f 61747472 		.ascii	"attributes\000"
+ 879      69627574 
+ 879      657300
+ 880              	.LASF5:
+ 881 015a 6C6F6E67 		.ascii	"long unsigned int\000"
+ 881      20756E73 
+ 881      69676E65 
+ 881      6420696E 
+ 881      7400
+ 882              	.LASF17:
+ 883 016c 61646472 		.ascii	"addr\000"
+ 883      00
+ 884              	.LASF27:
+ 885 0171 55534255 		.ascii	"USBUART_1_DEVICE0_CONFIGURATION0_INTERFACE_CLASS\000"
+ 885      4152545F 
+ 885      315F4445 
+ 885      56494345 
+ 885      305F434F 
+ 886              	.LASF12:
+ 887 01a2 646F7562 		.ascii	"double\000"
+ 887      6C6500
+ 888              	.LASF2:
+ 889 01a9 73686F72 		.ascii	"short int\000"
+ 889      7420696E 
+ 889      7400
+ 890              	.LASF10:
+ 891 01b3 75696E74 		.ascii	"uint16\000"
+ 891      313600
+ 892              	.LASF34:
+ 893 01ba 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 893      4320342E 
+ 893      392E3320 
+ 893      32303135 
+ 893      30333033 
+ 894 01ed 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 894      20726576 
+ 894      6973696F 
+ 894      6E203232 
+ 894      31323230 
+ 895 0220 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 895      66756E63 
+ 895      74696F6E 
+ 895      2D736563 
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLRAEcc.s 			page 18
 
 
- 896      65642069 
- 897              	.LASF29:
- 898 0217 55534255 		.ascii	"USBUART_1_DEVICE0_TABLE\000"
- 898      4152545F 
- 898      315F4445 
- 898      56494345 
- 898      305F5441 
- 899              	.LASF22:
- 900 022f 705F6C69 		.ascii	"p_list\000"
- 900      737400
- 901              	.LASF14:
- 902 0236 73697A65 		.ascii	"sizetype\000"
- 902      74797065 
- 902      00
- 903              	.LASF6:
- 904 023f 6C6F6E67 		.ascii	"long long int\000"
- 904      206C6F6E 
- 904      6720696E 
- 904      7400
- 905              	.LASF13:
- 906 024d 63686172 		.ascii	"char\000"
- 906      00
- 907              	.LASF20:
- 908 0252 624D6973 		.ascii	"bMisc\000"
- 908      6300
- 909              	.LASF19:
- 910 0258 62756666 		.ascii	"bufferSize\000"
- 910      65725369 
- 910      7A6500
- 911              	.LASF33:
- 912 0263 55534255 		.ascii	"USBUART_1_idSerialNumberStringDescriptor\000"
- 912      4152545F 
- 912      315F6964 
- 912      53657269 
- 912      616C4E75 
- 913              	.LASF24:
- 914 028c 55534255 		.ascii	"USBUART_1_DEVICE0_DESCR\000"
- 914      4152545F 
- 914      315F4445 
- 914      56494345 
- 914      305F4445 
- 915              	.LASF9:
- 916 02a4 75696E74 		.ascii	"uint8\000"
- 916      3800
- 917              	.LASF15:
- 918 02aa 696E7465 		.ascii	"interface\000"
- 918      72666163 
- 918      6500
- 919              	.LASF26:
- 920 02b4 55534255 		.ascii	"USBUART_1_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE\000"
- 920      4152545F 
- 920      315F4445 
- 920      56494345 
- 920      305F434F 
- 921              	.LASF4:
- 922 02e7 6C6F6E67 		.ascii	"long int\000"
- 922      20696E74 
-ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\cc7FjrhH.s 			page 19
+ 895      74696F6E 
+ 896              	.LASF8:
+ 897 0248 756E7369 		.ascii	"unsigned int\000"
+ 897      676E6564 
+ 897      20696E74 
+ 897      00
+ 898              	.LASF7:
+ 899 0255 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 899      206C6F6E 
+ 899      6720756E 
+ 899      7369676E 
+ 899      65642069 
+ 900              	.LASF29:
+ 901 026c 55534255 		.ascii	"USBUART_1_DEVICE0_TABLE\000"
+ 901      4152545F 
+ 901      315F4445 
+ 901      56494345 
+ 901      305F5441 
+ 902              	.LASF22:
+ 903 0284 705F6C69 		.ascii	"p_list\000"
+ 903      737400
+ 904              	.LASF14:
+ 905 028b 73697A65 		.ascii	"sizetype\000"
+ 905      74797065 
+ 905      00
+ 906              	.LASF6:
+ 907 0294 6C6F6E67 		.ascii	"long long int\000"
+ 907      206C6F6E 
+ 907      6720696E 
+ 907      7400
+ 908              	.LASF13:
+ 909 02a2 63686172 		.ascii	"char\000"
+ 909      00
+ 910              	.LASF20:
+ 911 02a7 624D6973 		.ascii	"bMisc\000"
+ 911      6300
+ 912              	.LASF19:
+ 913 02ad 62756666 		.ascii	"bufferSize\000"
+ 913      65725369 
+ 913      7A6500
+ 914              	.LASF33:
+ 915 02b8 55534255 		.ascii	"USBUART_1_idSerialNumberStringDescriptor\000"
+ 915      4152545F 
+ 915      315F6964 
+ 915      53657269 
+ 915      616C4E75 
+ 916              	.LASF24:
+ 917 02e1 55534255 		.ascii	"USBUART_1_DEVICE0_DESCR\000"
+ 917      4152545F 
+ 917      315F4445 
+ 917      56494345 
+ 917      305F4445 
+ 918              	.LASF9:
+ 919 02f9 75696E74 		.ascii	"uint8\000"
+ 919      3800
+ 920              	.LASF15:
+ 921 02ff 696E7465 		.ascii	"interface\000"
+ARM GAS  C:\Users\kopusov.FT\AppData\Local\Temp\ccLRAEcc.s 			page 19
 
 
- 922      00
- 923              	.LASF0:
- 924 02f0 7369676E 		.ascii	"signed char\000"
- 924      65642063 
- 924      68617200 
- 925              	.LASF36:
- 926 02fc 443A5C70 		.ascii	"D:\\pgm\\Cypress_dem_board\\CFP_reader\\cfp_reader\\"
- 926      676D5C43 
- 926      79707265 
- 926      73735F64 
- 926      656D5F62 
- 927 032b 575F6366 		.ascii	"W_cfp_reader\\cfp_reader.cydsn\000"
- 927      705F7265 
- 927      61646572 
- 927      5C636670 
- 927      5F726561 
+ 921      72666163 
+ 921      6500
+ 922              	.LASF26:
+ 923 0309 55534255 		.ascii	"USBUART_1_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE\000"
+ 923      4152545F 
+ 923      315F4445 
+ 923      56494345 
+ 923      305F434F 
+ 924              	.LASF4:
+ 925 033c 6C6F6E67 		.ascii	"long int\000"
+ 925      20696E74 
+ 925      00
+ 926              	.LASF0:
+ 927 0345 7369676E 		.ascii	"signed char\000"
+ 927      65642063 
+ 927      68617200 
  928              	.LASF35:
- 929 0349 47656E65 		.ascii	"Generated_Source\\PSoC5\\USBUART_1_descr.c\000"
+ 929 0351 47656E65 		.ascii	"Generated_Source\\PSoC5\\USBUART_1_descr.c\000"
  929      72617465 
  929      645F536F 
  929      75726365 

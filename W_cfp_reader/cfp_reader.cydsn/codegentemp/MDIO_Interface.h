@@ -295,7 +295,7 @@ extern uint8 MDIO_Interface_initVar;
 *    Initial Parameter Constants
 ***************************************/
 
-#define MDIO_Interface_INIT_PHYADDR           (4u)
+#define MDIO_Interface_INIT_PHYADDR           (0u)
 #define MDIO_Interface_INIT_DEVADDR           (1u)
 
 
